@@ -1,0 +1,68 @@
+
+<div class="hero-scroll-down fix">
+  <mat-icon
+    class="display shake-vertical"
+    (click)="scrollDown()"
+    (dblclick)="scroll2Bottom()">expand_more</mat-icon>
+  <mat-icon
+    class="display-else"
+    (click)="scroll2Top()">expand_less</mat-icon>
+</div>
+
+<div class="hero-text ge-display-none-lt-sm" [ngClass]="{sideMenuNeedsSpace:sideMenuNeedsSpace}">
+  <div class="headline-hero-super"></div>
+</div>
+
+<div class="hero-action ge-display-none-lt-sm" [ngClass]="{sideMenuNeedsSpace:sideMenuNeedsSpace}">
+  <button
+    mat-flat-button
+    class="getstarted-button"
+    color="primary"
+    (click)="scrollTo('#getstarted')">Get Started</button>
+</div>
+
+<div class="progress-circle-container ge-display-none-lt-sm">
+  <svg class="progress-circle" viewBox="0 0 100 100">
+    <circle class="progress-background" cx="50" cy="50" r="45"></circle>
+    <circle class="progress-circle-bar" cx="50" cy="50" r="45"></circle>
+  </svg>
+</div>
+
+
+
+
+
+
+<section appSectionHero></section>
+
+<section class="transparent ge-display-none-lt-sm">
+  <div class="scene" [ngClass]="{sideMenuNeedsSpace:sideMenuNeedsSpace}">
+    <div class="cube">
+      <div class="side back"></div>
+      <div class="side left"></div>
+      <div class="side front"></div>
+      <div class="side right"></div>
+    </div>
+  </div>
+</section>
+<section class="transparent ge-display-none-lt-sm"></section>
+<section class="transparent ge-display-none-lt-sm"></section>
+<section class="transparent ge-display-none-lt-sm"></section>
+
+<section appSectionFeatures class="ge-padding ge-main-background-semi-transparent"></section>
+
+<section appSectionInteraction class="ge-padding center-all ge-main-background"></section>
+
+<section appSectionUsebility class="ge-padding center-all ge-main-background"></section>
+
+<section appSectionCellStyle class="ge-padding center-all ge-main-background"></section>
+
+<section appSectionSummarize class="ge-padding center-all ge-main-background"></section>
+
+<section appWelcomeDemo class="ge-table-header-bg min-height-100vh ge-main-background ge-display-none-lt-sm"></section>
+
+<a id="getstarted"></a>
+<section appGetStarted class="ge-padding center-all ge-main-background"></section>
+
+<section appSectionLicense class="ge-padding center-all ge-main-background"></section>
+

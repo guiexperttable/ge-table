@@ -1,0 +1,12 @@
+
+<pre><code
+  [ngClass]="language">{{text}}</code></pre>
+
+<button
+  class="copy-button"
+  title="Copy code snippet"
+  mat-icon-button
+  [cdkCopyToClipboard]="text"
+>
+  <mat-icon>content_copy</mat-icon>
+</button>

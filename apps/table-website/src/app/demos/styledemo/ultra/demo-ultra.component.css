@@ -1,0 +1,19 @@
+
+.table-div {
+  display: block;
+  margin-left: 100px;
+  margin-top: 100px;
+  width: 400px;
+  height: 200px;
+}
+
+::ng-deep demo-ultra .ge-table-col-div {
+  line-height: 0 !important;
+  color: transparent;
+}
+
+::ng-deep demo-ultra .ge-table-row-border,
+::ng-deep demo-ultra .ge-table-column-border {
+  display: none;
+}
+

@@ -1,0 +1,48 @@
+<section class="">
+  <div class="header-height"></div>
+
+
+  <mat-stepper orientation="vertical" labelPosition="bottom" #stepper>
+
+    <mat-step [stepControl]="firstFormGroup">
+      <ng-template matStepLabel>
+        <span [ngClass]="{error:error!==''}">
+          {{error ? error : 'Insert JSON data'}}
+        </span>
+      </ng-template>
+      <textarea [(ngModel)]="text" rows="5" cols="60" class="step-height"></textarea>
+      <!--      <button mat-button matStepperPrevious>Back</button>-->
+      <!--      <button mat-button matStepperNext>Next</button>-->
+    </mat-step>
+
+    <mat-step>
+      <ng-template matStepLabel>Configure</ng-template>
+      <div class="step-height" style="background-color: yellow">
+        Conf
+      </div>
+    </mat-step>
+
+
+    <mat-step>
+      <ng-template matStepLabel>Resulting Table</ng-template>
+      <div class="step-height" style="background-color: lightcyan">
+        <p>TABLE</p>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button (click)="stepper.reset()">Reset</button>
+        </div>
+      </div>
+
+
+    </mat-step>
+
+
+    <mat-step>
+      <ng-template matStepLabel>Export Code</ng-template>
+      <source-code *ngIf="out" [text]="out" class="step-height"></source-code>
+    </mat-step>
+  </mat-stepper>
+
+
+</section>
+

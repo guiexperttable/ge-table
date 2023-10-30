@@ -1,0 +1,11 @@
+{
+  "name": "@guiexpert/table-style",
+  "version": "1.0.6",
+  "scripts": {
+    "publish": "npm publish --access=public"
+  },
+  "private": false,
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

@@ -1,0 +1,62 @@
+.ge-header {
+  padding: 0 16px var(--ge-header-height) 16px;
+}
+
+h1 {
+  display: flex;
+  column-gap: 40px;
+  align-items: center;
+  justify-content: center;
+
+  > div {
+    display: inline-block;
+  }
+
+  .logo {
+    display: inline-block;
+    width: 40px;
+
+    .logo-fill-color-2 {
+      fill: rgba(0, 0, 0, 0.5)
+    }
+  }
+
+  .title {
+    font-size: 44px;
+  }
+}
+
+h2 {
+  font-size: 22px;
+  margin: 40px 0 20px 0;
+}
+
+.gap {
+  height: 40px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+
+  > * {
+    display: block;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: calc(960px * 999 - 100% * 999);
+
+    > * {
+      width: 100%;
+    }
+  }
+}
+
+.initial-letter::first-letter {
+  initial-letter: 1.2;
+}
+
+a {
+  color: var(--ge-table-doc-doc-color);
+}

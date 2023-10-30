@@ -1,0 +1,103 @@
+
+# guiexpert-table (Web Component)
+
+This is the Web Component of the GuiExpert Table Project.
+
+## Become a master at creating web applications with large tables
+
+This is the UI-agnostic table component for your next web app. 😊
+
+<img src="https://raw.githubusercontent.com/guiexperttable/table-website/main/src/assets/screens/heatmap.png" width="50%">
+
+### Features
+- Handle large datasets easily
+- Excellent performance for large tables by vertical and horizontal virtual scrolling
+- Fully-featured (advanced sorting and filtering)
+- Highly customizable data grid
+- Outstanding performance
+- No third-party dependencies
+- UI-agnostic
+- Column Interactions (resize, reorder)
+- Sorting Rows
+- Row, Column, and Range Selection
+- Single and Multi Selection
+- UI-agnostic
+- Row and Column Spanning
+- Fixed Columns (Left and Right)
+- Tree table (Hierarchical View)
+- Accessibility support: Keyboard Shortcuts
+- Custom Filtering
+- In-place Cell Editing
+- Userdefined Key and Mouse Events
+- Customizable Look & Feel (via CSS variables)
+- Row sorting
+- Column Reordering (Drag and Drop)
+- State Persistence (Row Sorting, Column Order, Selection)
+- Customizable Cell Contents via Renderer for Header, Body and Footer
+- Full control over the HTML structure and style
+
+
+## Links
+
+- [Demos](https://gui.expert/demos)
+- [Documentation](https://gui.expert/doc)
+- [API](https://gui.expert/api)
+
+## Get Started
+
+Add the following two NPM packages to your existing preact project (run this in your project root directory):
+
+```
+npm install --save @guiexpert/table @guiexpert/webcomponent-table
+```
+
+Add guiexpert-table component to your page:
+
+```
+this.innerHTML = `
+  <guiexpert-table
+    style="width:100%;height:100%;background:transparent;margin:0;padding:0;"></guiexpert-table>`;
+```
+
+Import the following classes in your component:
+```
+import { TableComponent } from "@guiexpert/webcomponent-table";
+import {
+  GeMouseEvent,
+  TableApi
+  TableModelFactory,
+  TableModelIf,
+  TableOptions,
+  TableOptionsIf
+} from "@guiexpert/table";
+```
+
+
+Add a tableModel and tableOption property and a onTableReady method to the component. Set model and option via setData(tableModel, tableOptions):
+
+```
+const tableModel: TableModelIf = TableModelFactory
+  .createByArrayOfArraysParams<any>(param: {
+    columnLabels: [
+      ['Header 1', 'Header 2']
+    ],
+    data: [
+      ['Text 1a', 'Text 2a'],
+      ['Text 1b', 'Text 2b'],
+    ]
+  };
+
+function onTableReady(api: TableApi) {
+  console.info("onTableReady API:", api);
+}
+
+const table = this.querySelector("guiexpert-table") as TableComponent;
+table.addEventListener("tableReady", (e) => console.info("table api:", (e as CustomEvent).detail));
+const tableOptions = new TableOptions();
+
+table.setData(tableModel, tableOptions);
+```
+
+There are numerous possibilities to create table models.
+Please refer to the [Documentation](https://gui.expert/doc) for further information or the [Demo](https://gui.expert/demos) section for examples.
+

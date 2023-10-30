@@ -1,0 +1,19 @@
+
+:host {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+:host > * {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+::ng-deep demo-objectarray .ge-table-row-even .ge-table-col-div {
+  background-color: rgba(250, 250, 250, 0.3);
+}
+
+::ng-deep demo-objectarray .table-div .ge-table-row-odd .ge-table-col-div {
+  background-color: rgba(255, 255, 255, 0.3);;
+}

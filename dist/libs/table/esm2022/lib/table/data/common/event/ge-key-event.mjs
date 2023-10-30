@@ -1,0 +1,9 @@
+export class GeKeyEvent {
+    status;
+    originalEvent;
+    constructor(status = "down", originalEvent) {
+        this.status = status;
+        this.originalEvent = originalEvent;
+    }
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ2Uta2V5LWV2ZW50LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vbGlicy90YWJsZS9zcmMvbGliL3RhYmxlL2RhdGEvY29tbW9uL2V2ZW50L2dlLWtleS1ldmVudC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxNQUFNLE9BQU8sVUFBVTtJQUdaO0lBQ0E7SUFGVCxZQUNTLFNBQXdCLE1BQU0sRUFDOUIsYUFBNkI7UUFEN0IsV0FBTSxHQUFOLE1BQU0sQ0FBd0I7UUFDOUIsa0JBQWEsR0FBYixhQUFhLENBQWdCO0lBRXRDLENBQUM7Q0FHRiIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBjbGFzcyBHZUtleUV2ZW50IHtcblxuICBjb25zdHJ1Y3RvcihcbiAgICBwdWJsaWMgc3RhdHVzOiBcImRvd25cIiB8IFwidXBcIiA9IFwiZG93blwiLFxuICAgIHB1YmxpYyBvcmlnaW5hbEV2ZW50PzogS2V5Ym9hcmRFdmVudFxuICApIHtcbiAgfVxuXG5cbn1cbiJdfQ==

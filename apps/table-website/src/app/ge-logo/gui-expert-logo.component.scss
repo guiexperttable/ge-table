@@ -1,0 +1,70 @@
+
+svg > * {
+  stroke-miterlimit: 10;
+}
+
+.colored {
+  .logo-fill-color-1 {
+    fill: none;
+    stroke: rgba(0, 0, 0, 0.5);;
+  }
+
+  .logo-fill-color-2 {
+    fill: #05ED4D;
+    stroke: #1d1d1b;
+  }
+
+  .logo-fill-color-3 {
+    fill: #006c29;
+    stroke: #000000;
+  }
+
+  .logo-fill-color-0 {
+    fill: #006c29;
+    stroke: #1d1d1b;
+  }
+}
+
+.monocolor-white {
+  .logo-fill-color-1 {
+    fill: rgba(255, 255, 255, 1);
+    stroke: rgba(255, 255, 255, 0.5);
+  }
+
+  .logo-fill-color-2 {
+    fill: rgba(255, 255, 255, 0.8);
+    stroke: rgba(255, 255, 255, 0.8);
+  }
+
+  .logo-fill-color-3 {
+    fill: rgba(255, 255, 255, 0.3);
+    stroke: rgba(255, 255, 255, 0.3);
+  }
+
+  .logo-fill-color-0 {
+    fill: rgba(255, 255, 255, 0.3);
+    stroke: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.monocolor-black {
+  .logo-fill-color-1 {
+    fill: none;
+    stroke: rgba(0, 0, 0, 0.3);
+  }
+
+  .logo-fill-color-2 {
+    fill: rgba(0, 0, 0, 0.5);
+    stroke: rgba(0, 0, 0, 0.8);
+  }
+
+  .logo-fill-color-3 {
+    fill: rgba(0, 0, 0, 0.9);
+    stroke: rgba(0, 0, 0, 0.8);
+  }
+
+  .logo-fill-color-0 {
+    fill: rgba(0, 0, 0, 0.9);
+    stroke: rgba(0, 0, 0, 0.8);
+  }
+}

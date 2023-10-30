@@ -1,0 +1,125 @@
+:host {
+  margin: 0;
+  overflow-y: scroll;
+  overflow-x: clip;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  min-height: 50vh;
+  scroll-snap-align: start;
+
+  &.xxx {
+    min-height: 0;
+  }
+}
+
+.hero {
+  height: calc(50vh - 80px);
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+}
+
+
+.demos-content {
+  /* first breakpoint*/
+  --w1: 1600px;
+  --n: 4;
+  /* second breakpoint*/
+  --w2: 800px;
+  --m: 2;
+  /* third breakpoint*/
+  --w3: 400px;
+  --p: 1;
+
+  display: grid;
+  //noinspection CssInvalidFunction
+  grid-template-columns:
+    repeat(auto-fill,
+      minmax(
+          clamp(
+            clamp(
+              clamp(
+                100% / (var(--n) + 1) + 0.1%,
+                (var(--w1) - 100vw) * 1000,
+                100% / (var(--m) + 1) + 0.1%
+              ),
+              (var(--w2) - 100vw) * 1000,
+              100% / (var(--p) + 1) + 0.1%
+            ),
+            (var(--w3) - 100vw) * 1000,
+            100%
+          ),
+          1fr
+      )
+    );
+  gap: 0;
+
+  > div.box {
+    scroll-snap-align: start;
+    min-height: 50vh;
+    padding: 0;
+
+    .text-div {
+      padding: 0 16px;
+      min-height: 25vh;
+    }
+    .img-div {
+      padding: 0 16px 16px 0;
+      height: 25vh;
+      overflow: clip;
+      > div {
+        height: min(25vh, 100%);
+        width: 100%;
+      }
+
+      img {
+        aspect-ratio: 1;
+        border-radius: 50%;
+        max-width: min(25vh, 100%);
+      }
+    }
+
+    h2 {
+      margin-top: 16px;
+    }
+
+    ul {
+      padding-left: 12px;
+    }
+  }
+
+  //> :nth-child(2n+1) {
+  //  background-color: lighten(#f9ed06, 50%);
+  //}
+
+
+  //> :nth-child(8n+1) {background-color: lighten(#f9ed06, 50%); }
+  //> :nth-child(8n+2) { background-color: lighten(#f9ed06, 45%); }
+  //> :nth-child(8n+3) {  background-color: lighten(#f9ed06, 40%); }
+  //> :nth-child(8n+4) {background-color: lighten(#f9ed06, 35%); }
+  //> :nth-child(8n+5) { background-color: lighten(#f9ed06, 30%); }
+  //> :nth-child(8n+6) {  background-color: lighten(#f9ed06, 25%); }
+  //> :nth-child(8n+7) {background-color: lighten(#f9ed06, 20%); }
+
+
+
+}
+
+.run-link {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+/*
+.circle-animated:hover {
+  clip-path: circle(30% at 0%);
+  animation: look 5s infinite;
+}
+@keyframes look {
+  0% {clip-path: circle(30% at 0%)}
+  50% {clip-path: circle(30% at 100%)}
+}
+*/

@@ -1,0 +1,14 @@
+:host {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+:host > * {
+  margin: 0;
+  width: calc(100% - 32px);
+  height: 100%;
+}
+
+source-code {
+  margin-bottom: 16px;
+}

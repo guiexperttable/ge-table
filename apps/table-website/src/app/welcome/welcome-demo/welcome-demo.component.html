@@ -1,0 +1,36 @@
+<div class="header-height"></div>
+<div class="ge-padding">
+  <h2 class="feature no-margin">Demo</h2>
+  <div class="demo-grid">
+
+    <!--button mat-flat-button (click)="openCustomThemePicker()">
+      Custom Theme
+    </button-->
+
+    <mat-form-field appearance="outline" class="filter-field">
+      <mat-label>Filter</mat-label>
+      <input (keyup)="onKeyup()" [(ngModel)]="filterText" matInput>
+    </mat-form-field>
+
+  </div>
+</div>
+
+<div class="ge-padding height-50-vh">
+  <order-top-100-demo
+    [filter]="sentFilterText"
+    class="height-50-vh timetable ge-table-default"></order-top-100-demo>
+</div>
+
+
+<div class="ge-padding">
+  <div class="header-height"></div>
+  <p>
+    In this demo, you can observe the column resize and re-order feature, and a cell renderer.
+    Here, you can find additional
+    <button
+      [routerLink]="['/demos']"
+      color="primary"
+      mat-flat-button>Demos
+    </button>
+  </p>
+</div>

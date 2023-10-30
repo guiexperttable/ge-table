@@ -1,0 +1,48 @@
+
+
+<div class="header-height"></div>
+<div class="ge-padding">
+  <h2 class="feature">Get Started</h2>
+  <h3>Plain JS</h3>
+  <div class="gap"></div>
+</div>
+
+<div class="ge-padding content">
+  <p> Add the following NPM package to your existing plain js project
+    (run this in your project root directory):
+  </p>
+  <source-code [language]="'language-shell'" [text]="text1"></source-code>
+
+  <p> Add an empty <b>&lt;div></b> element to your html code:
+  </p>
+  <source-code [language]="'language-markup'" [text]="text2"></source-code>
+
+  <p>
+    If you are working with plain JS, you don't need to do this.
+    If you are using TypeScript as a language, please import the following classes:
+  </p>
+  <source-code [text]="text3"></source-code>
+
+  <p>
+    Create a table model. Select ('querySelector') the <b>&lt;div></b> element and create a table scope.
+    Finally, call <b>firstInit()</b> at least once.
+    On the right side, you will see the plain TS version.
+    For plain JS, remove <b>': TableModelIf'</b>.
+  </p>
+  <source-code [text]="text4"></source-code>
+</div>
+
+<div class="ge-padding">
+  <p>
+    There are numerous possibilities to create table models.
+    Please refer to the <a href="/doc">Documentation</a> for further information or the <a href="/demos">Demo</a> section
+    for examples.
+  </p>
+
+  <div>
+    <button [routerLink]="['/getstarted']" color="primary" mat-flat-button>
+      <mat-icon>arrow_back_ios_new</mat-icon>
+      Back
+    </button>
+  </div>
+</div>

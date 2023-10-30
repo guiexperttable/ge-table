@@ -1,0 +1,116 @@
+<section class="ge-padding padding-top radial-circle dark">
+  <div class="header-height"></div>
+
+  <h2 class="feature">Pricing</h2>
+
+  <div class="center-all">
+    <div class="flex-container">
+
+      <mat-card class="app-card perpetual single light free glow-effect">
+        <mat-card-header>
+          <div mat-card-avatar>
+            <mat-icon>gavel</mat-icon>
+          </div>
+          <mat-card-title>Non-Commercial License</mat-card-title>
+          <mat-card-subtitle></mat-card-subtitle>
+        </mat-card-header>
+        <div class="center-all logo-div">
+          <guiexpert-logo [mode]="'monocolor-black'" [size]="250"></guiexpert-logo>
+        </div>
+        <mat-card-content>
+          <div class="two-columns price-info-div">
+            <div class="price center" title="999 USD plus VAT">Free</div>
+
+            <div>
+              <p>All features</p>
+              <p>Source available</p>
+              <p>Community support</p>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <div class="action-row">
+            <div></div>
+            <a href="javascript:void(0)"><del></del></a>
+          </div>
+        </mat-card-actions>
+
+        <svg class="glow-container">
+          <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
+          <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
+        </svg>
+      </mat-card>
+
+      <mat-card class="app-card perpetual single light commercial glow-effect">
+        <mat-card-header>
+          <div mat-card-avatar>
+            <mat-icon>gavel</mat-icon>
+          </div>
+          <mat-card-title>Commercial License</mat-card-title>
+          <mat-card-subtitle>Single Application</mat-card-subtitle>
+        </mat-card-header>
+        <div class="center-all logo-div">
+          <guiexpert-logo [mode]="'monocolor-black'" [size]="250"></guiexpert-logo>
+        </div>
+        <mat-card-content>
+          <div class="two-columns price-info-div">
+            <div class="price center-all" title="999 USD plus VAT">999 $</div>
+            <div>
+              <p>Single Application</p>
+              <p>One App<span class="ge-display-none-lt-lg"> (one subdomain)</span></p>
+              <p>Perpetual license</p>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <div class="action-row">
+            <div>It will be free in 2023.</div>
+            <a href="javascript:void(0)"><del>ORDER NOW</del></a>
+          </div>
+        </mat-card-actions>
+
+        <svg class="glow-container">
+          <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
+          <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
+        </svg>
+      </mat-card>
+
+    </div>
+  </div>
+</section>
+<div class="hero-scroll-down">
+  <mat-icon class="shake-vertical" (click)="scrollDown()">expand_more</mat-icon>
+</div>
+
+
+
+<section class="ge-padding padding-top dark">
+  <br>
+  <br>
+  <br>
+  <h2>Non-commercial</h2>
+  <p>
+    Individuals and non-commercial users can freely use and modify this software library under the terms of the open
+    source license. See <a href="#" routerLink="/license">License</a>.
+  </p>
+
+  <br>
+  <br>
+  <br>
+  <h2>Commercial License</h2>
+  <h3>Single Application</h3>
+  <p>
+    One 'Single Application' Deployment License covers one production environment for a single project (application).
+  </p>
+  <p>
+    You do not need an additional Deployment License for environments such as testing, user acceptance testing (UAT),
+    pre-production, production failover, and others.
+  </p>
+  <p>
+    You do not need an additional Deployment License for multiple server instances.
+  </p>
+  <p>
+    Deploying an application to a cloud service only requires one Deployment License.
+  </p>
+</section>
+

@@ -1,0 +1,9 @@
+export class SortItem {
+    columnIndex;
+    sortState;
+    constructor(columnIndex, sortState) {
+        this.columnIndex = columnIndex;
+        this.sortState = sortState;
+    }
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic29ydC1pdGVtLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vbGlicy90YWJsZS9zcmMvbGliL3RhYmxlL2RhdGEvY29tbW9uL3NvcnQtaXRlbS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQSxNQUFNLE9BQU8sUUFBUTtJQUdWO0lBQ0E7SUFGVCxZQUNTLFdBQW1CLEVBQ25CLFNBQW9CO1FBRHBCLGdCQUFXLEdBQVgsV0FBVyxDQUFRO1FBQ25CLGNBQVMsR0FBVCxTQUFTLENBQVc7SUFFN0IsQ0FBQztDQUVGIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgU29ydFN0YXRlIH0gZnJvbSBcIi4vc29ydC1zdGF0ZS50eXBlXCI7XG5cbmV4cG9ydCBjbGFzcyBTb3J0SXRlbSB7XG5cbiAgY29uc3RydWN0b3IoXG4gICAgcHVibGljIGNvbHVtbkluZGV4OiBudW1iZXIsXG4gICAgcHVibGljIHNvcnRTdGF0ZTogU29ydFN0YXRlXG4gICkge1xuICB9XG5cbn1cbiJdfQ==

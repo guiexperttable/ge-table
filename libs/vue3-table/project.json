@@ -1,0 +1,36 @@
+{
+  "name": "@guiexpert/vue3-table",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/vue3-table/src",
+  "targets": {
+    "build": {
+      "executor": "nx-vue3-vite:build-app",
+      "options": {
+        "dist": "dist/libs/vue3-table"
+      }
+    },
+    "e2e": {
+      "executor": "nx-vue3-vite:cypress",
+      "options": {
+        "cypressConfig": "libs/vue3-table/cypress.json",
+        "testingType": "component"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/vue3-table/**/*.{js,jsx,ts,tsx,vue}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/vite:test",
+      "outputs": ["{workspaceRoot}/coverage/libs/e2e/apps"],
+      "options": {
+        "config": "vite.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

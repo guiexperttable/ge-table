@@ -1,0 +1,8 @@
+
+iframe {
+  border: 0;
+  margin: var(--ge-header-height) 0 0 0;
+  padding: 0;
+  width: 100%;
+  height: calc(100vh - var(--ge-header-height));
+}

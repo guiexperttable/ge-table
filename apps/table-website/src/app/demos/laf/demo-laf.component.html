@@ -1,0 +1,21 @@
+<div class="header">
+  <button
+    (click)="openCustomThemePicker()"
+    title="Custom Theme"
+    mat-stroked-button>
+    Custom Theme Creator
+  </button>
+
+  <button
+    *ngFor="let theme of themes"
+    (click)="setTheme(theme)"
+    title="Custom Theme"
+    mat-button
+    [innerText]="theme"></button>
+
+</div>
+
+<guiexpert-table
+  *ngIf="tableModel"
+  [tableModel]="tableModel"
+  (tableReady)="onTableReady($event)"></guiexpert-table>

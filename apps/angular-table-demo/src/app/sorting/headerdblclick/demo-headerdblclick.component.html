@@ -1,0 +1,11 @@
+<div class="filter-div">
+
+</div>
+
+<guiexpert-table
+  (tableReady)="onTableReady($event)"
+  [tableModel]="tableModel"
+  *ngIf="tableModel"
+  [tableOptions]="tableOptions"
+  class="table-div"
+></guiexpert-table>

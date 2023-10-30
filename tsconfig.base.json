@@ -1,0 +1,59 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "noUnusedLocals": false,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@guiexpert/angular-table": [
+        "libs/angular-table/src/index.ts"
+      ],
+      "@guiexpert/table-style": [
+        "apps/table-style/src"
+      ],
+      "@guiexpert/demo-table-models": [
+        "libs/demo-table-models/src/index.ts"
+      ],
+      "@guiexpert/preact-table": [
+        "libs/preact-table/src/index.ts"
+      ],
+      "@guiexpert/react-table": [
+        "libs/react-table/src/index.ts"
+      ],
+      "@guiexpert/solid-table": [
+        "libs/solid-table/src/index.ts"
+      ],
+      "@guiexpert/svelte-table": [
+        "libs/svelte-table/src/index.ts"
+      ],
+      "@guiexpert/table": [
+        "libs/table/src/index.ts"
+      ],
+      "@guiexpert/vue3-table": [
+        "libs/vue3-table/src/index.ts"
+      ],
+      "@guiexpert/webcomponent-table": [
+        "libs/webcomponent-table/src/index.ts"
+      ]
+    },
+    "resolveJsonModule": true
+  },
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
+}

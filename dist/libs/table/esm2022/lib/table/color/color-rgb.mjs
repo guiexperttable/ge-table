@@ -1,0 +1,11 @@
+export class ColorRgb {
+    r;
+    g;
+    b;
+    constructor(r, g, b) {
+        this.r = r;
+        this.g = g;
+        this.b = b;
+    }
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29sb3ItcmdiLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vbGlicy90YWJsZS9zcmMvbGliL3RhYmxlL2NvbG9yL2NvbG9yLXJnYi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQSxNQUFNLE9BQU8sUUFBUTtJQUVWO0lBQ0E7SUFDQTtJQUhULFlBQ1MsQ0FBUyxFQUNULENBQVMsRUFDVCxDQUFTO1FBRlQsTUFBQyxHQUFELENBQUMsQ0FBUTtRQUNULE1BQUMsR0FBRCxDQUFDLENBQVE7UUFDVCxNQUFDLEdBQUQsQ0FBQyxDQUFRO0lBRWxCLENBQUM7Q0FDRiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENvbG9yUmdiSWYgfSBmcm9tIFwiLi9jb2xvci1yZ2IuaWZcIjtcblxuZXhwb3J0IGNsYXNzIENvbG9yUmdiIGltcGxlbWVudHMgQ29sb3JSZ2JJZiB7XG4gIGNvbnN0cnVjdG9yKFxuICAgIHB1YmxpYyByOiBudW1iZXIsXG4gICAgcHVibGljIGc6IG51bWJlcixcbiAgICBwdWJsaWMgYjogbnVtYmVyXG4gICkge1xuICB9XG59XG4iXX0=

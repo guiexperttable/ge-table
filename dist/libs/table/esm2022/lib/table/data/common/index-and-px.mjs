@@ -1,0 +1,9 @@
+export class IndexAndPx {
+    index;
+    px;
+    constructor(index, px) {
+        this.index = index;
+        this.px = px;
+    }
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXgtYW5kLXB4LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vbGlicy90YWJsZS9zcmMvbGliL3RhYmxlL2RhdGEvY29tbW9uL2luZGV4LWFuZC1weC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxNQUFNLE9BQU8sVUFBVTtJQUdaO0lBQ0E7SUFGVCxZQUNTLEtBQWEsRUFDYixFQUFVO1FBRFYsVUFBSyxHQUFMLEtBQUssQ0FBUTtRQUNiLE9BQUUsR0FBRixFQUFFLENBQVE7SUFFbkIsQ0FBQztDQUVGIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGNsYXNzIEluZGV4QW5kUHgge1xuXG4gIGNvbnN0cnVjdG9yKFxuICAgIHB1YmxpYyBpbmRleDogbnVtYmVyLFxuICAgIHB1YmxpYyBweDogbnVtYmVyXG4gICkge1xuICB9XG5cbn1cbiJdfQ==

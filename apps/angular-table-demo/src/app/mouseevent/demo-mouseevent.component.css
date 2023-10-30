@@ -1,0 +1,16 @@
+
+.table-div {
+  display: block;
+  margin: 100px 0 0 0;
+  width: 100%;
+  height: calc(100% - 110px);
+}
+
+.debug-div {
+  position: fixed;
+  left: 20px;
+  top: 80px;
+  width: calc(100% - 100px);
+  height: 60px;
+  font-family: sans-serif;
+}

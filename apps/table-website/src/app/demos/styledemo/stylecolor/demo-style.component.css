@@ -1,0 +1,29 @@
+
+:host {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+:host > * {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+::ng-deep demo-style .ge-table-col-div {
+  line-height: 1.3 !important;
+  color: #fff;
+}
+
+::ng-deep demo-style .ge-table-row-border,
+::ng-deep demo-style .ge-table-column-border {
+  display: none;
+}
+
+::ng-deep demo-style .ge-table-col-div.text-color-red {
+  color: #ff3400;
+}
+
+::ng-deep demo-style .ge-table-col-div.text-color-yellow {
+  color: yellow;
+}

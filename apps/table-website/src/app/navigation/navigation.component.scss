@@ -1,0 +1,117 @@
+header {
+  padding-left: 16px;
+  left: var(--ge-sidenav-width);
+  width: calc(100% - var(--ge-sidenav-width));
+
+  height: var(--ge-header-height);
+  background: transparent;
+  backdrop-filter: blur(23px);
+  position: fixed;
+  top: 0;
+  z-index: 4;
+
+  display: grid;
+  place-items: center;
+  gap: 16px;
+  grid-template-columns: auto auto auto 1fr auto auto auto auto auto auto 50px  auto auto auto;
+  font-size: 16px;
+
+
+
+  color: var(--ge-main-color);
+  a {
+    color: var(--ge-main-color);
+  }
+  border-bottom: solid 1px var(--ge-header-border-bottom);
+
+  &.menu-closed {
+    left: 0;
+    width: 100%;
+  }
+
+  .hidden {
+    visibility: hidden;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  .guiexpert-table-title {
+    font-size: 24px;
+    font-weight: normal;
+    font-family: 'Roboto Condensed','Helvetica Neue',Helvetica,Arial,sans-serif;
+  }
+}
+
+.side-nav-toggle-fab-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.sidenav-container {
+  height: 100%;
+
+  .sidenav {
+    width: var(--ge-sidenav-width);
+    background-color: var(--ge-main-background);
+
+    .mat-toolbar {
+      background: inherit;
+    }
+
+    guiexpert-logo {
+      margin-top: 6px;
+      margin-right: 16px;
+    }
+
+    mat-nav-list {
+      padding-top: 0;
+      .fixed-at-bottom-left {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+      }
+
+      a {
+        mat-icon {
+          display: inline-flex;
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+
+  .mat-sidenav-content {
+    overflow-x: clip;
+
+
+    .mat-toolbar.mat-primary {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+
+    .doc-content {
+      min-height: calc(100vh - 127px);
+    }
+
+    .ge-action-bar {
+      width: 100%;
+      display: inline-flex;
+      padding: 8px 16px 16px 16px;
+
+      .mat-primary.mat-mdc-button-base {
+        background: #eee;
+        color: var(--ge-table-doc-dark-color);
+        margin-left: 22px;
+      }
+      .ge-back-button {
+        margin-left: 40px;
+      }
+    }
+  }
+
+}

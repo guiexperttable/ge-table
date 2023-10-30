@@ -1,0 +1,14 @@
+<div [innerHTML]="debugHtml" class="debug-div"></div>
+
+<guiexpert-table
+  (contextmenu)="onContextmenu($event)"
+  (mouseClicked)="onMouseClick($event)"
+  (mouseMoved)="onMouseMoved($event)"
+  (tableReady)="onTableReady($event)"
+  [debounceMouseClickDelay]="166"
+  *ngIf="tableModel"
+  [tableModel]="tableModel"
+  class="table-div"></guiexpert-table>
+
+
+

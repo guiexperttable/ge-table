@@ -1,0 +1,9 @@
+export class Size {
+    value;
+    unit;
+    constructor(value = 100, unit = "px") {
+        this.value = value;
+        this.unit = unit;
+    }
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2l6ZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uL2xpYnMvdGFibGUvc3JjL2xpYi90YWJsZS9kYXRhL2NvbW1vbi9zaXplLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBLE1BQU0sT0FBTyxJQUFJO0lBRU47SUFDQTtJQUZULFlBQ1MsUUFBZ0IsR0FBRyxFQUNuQixPQUFtQixJQUFJO1FBRHZCLFVBQUssR0FBTCxLQUFLLENBQWM7UUFDbkIsU0FBSSxHQUFKLElBQUksQ0FBbUI7SUFFaEMsQ0FBQztDQUNGIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgU2l6ZUlmIH0gZnJvbSBcIi4vc2l6ZS5pZlwiO1xuXG5leHBvcnQgY2xhc3MgU2l6ZSBpbXBsZW1lbnRzIFNpemVJZiB7XG4gIGNvbnN0cnVjdG9yKFxuICAgIHB1YmxpYyB2YWx1ZTogbnVtYmVyID0gMTAwLFxuICAgIHB1YmxpYyB1bml0OiBcInB4XCIgfCBcIiVcIiA9IFwicHhcIlxuICApIHtcbiAgfVxufVxuIl19

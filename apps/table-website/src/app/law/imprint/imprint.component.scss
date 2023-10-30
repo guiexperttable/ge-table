@@ -1,0 +1,12 @@
+@media only screen and (min-width: 600px) {
+  :host-context > section {
+    column-count: 1;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  :host-context > section {
+    column-count: 2;
+  }
+}
+

@@ -1,0 +1,11 @@
+
+.error {
+  color: var(--ge-error, #e00034);
+}
+.step-height {
+  height: calc(100vh - 400px);
+}
+
+textarea {
+  width: 100%;
+}

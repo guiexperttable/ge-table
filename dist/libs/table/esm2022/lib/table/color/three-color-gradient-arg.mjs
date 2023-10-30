@@ -1,0 +1,17 @@
+export class ThreeColorGradientArg {
+    minValue;
+    minColor;
+    middleValue;
+    middleColor;
+    maxValue;
+    maxColor;
+    constructor(minValue, minColor, middleValue, middleColor, maxValue, maxColor) {
+        this.minValue = minValue;
+        this.minColor = minColor;
+        this.middleValue = middleValue;
+        this.middleColor = middleColor;
+        this.maxValue = maxValue;
+        this.maxColor = maxColor;
+    }
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidGhyZWUtY29sb3ItZ3JhZGllbnQtYXJnLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vbGlicy90YWJsZS9zcmMvbGliL3RhYmxlL2NvbG9yL3RocmVlLWNvbG9yLWdyYWRpZW50LWFyZy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFHQSxNQUFNLE9BQU8scUJBQXFCO0lBRXZCO0lBQ0E7SUFDQTtJQUNBO0lBQ0E7SUFDQTtJQU5ULFlBQ1MsUUFBZ0IsRUFDaEIsUUFBb0IsRUFDcEIsV0FBbUIsRUFDbkIsV0FBdUIsRUFDdkIsUUFBZ0IsRUFDaEIsUUFBb0I7UUFMcEIsYUFBUSxHQUFSLFFBQVEsQ0FBUTtRQUNoQixhQUFRLEdBQVIsUUFBUSxDQUFZO1FBQ3BCLGdCQUFXLEdBQVgsV0FBVyxDQUFRO1FBQ25CLGdCQUFXLEdBQVgsV0FBVyxDQUFZO1FBQ3ZCLGFBQVEsR0FBUixRQUFRLENBQVE7UUFDaEIsYUFBUSxHQUFSLFFBQVEsQ0FBWTtJQUU3QixDQUFDO0NBQ0YiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBDb2xvclJnYklmIH0gZnJvbSBcIi4vY29sb3ItcmdiLmlmXCI7XG5pbXBvcnQgeyBUaHJlZUNvbG9yR3JhZGllbnRBcmdJZiB9IGZyb20gXCIuL3RocmVlLWNvbG9yLWdyYWRpZW50LWFyZy5pZlwiO1xuXG5leHBvcnQgY2xhc3MgVGhyZWVDb2xvckdyYWRpZW50QXJnIGltcGxlbWVudHMgVGhyZWVDb2xvckdyYWRpZW50QXJnSWYge1xuICBjb25zdHJ1Y3RvcihcbiAgICBwdWJsaWMgbWluVmFsdWU6IG51bWJlcixcbiAgICBwdWJsaWMgbWluQ29sb3I6IENvbG9yUmdiSWYsXG4gICAgcHVibGljIG1pZGRsZVZhbHVlOiBudW1iZXIsXG4gICAgcHVibGljIG1pZGRsZUNvbG9yOiBDb2xvclJnYklmLFxuICAgIHB1YmxpYyBtYXhWYWx1ZTogbnVtYmVyLFxuICAgIHB1YmxpYyBtYXhDb2xvcjogQ29sb3JSZ2JJZlxuICApIHtcbiAgfVxufVxuIl19

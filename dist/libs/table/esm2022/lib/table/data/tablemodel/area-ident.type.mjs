@@ -1,0 +1,14 @@
+/**
+ * Converts a string to the identifier of type AreaIdent.
+ * @param s should be "header"|"body"|"footer". The fallback return value is 'body'
+ */
+export const getAreaIdentByString = (s) => {
+    if (s === "header") {
+        return "header";
+    }
+    if (s === "footer") {
+        return "footer";
+    }
+    return "body";
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXJlYS1pZGVudC50eXBlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vbGlicy90YWJsZS9zcmMvbGliL3RhYmxlL2RhdGEvdGFibGVtb2RlbC9hcmVhLWlkZW50LnR5cGUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBS0E7OztHQUdHO0FBQ0gsTUFBTSxDQUFDLE1BQU0sb0JBQW9CLEdBQUcsQ0FBQyxDQUFnQixFQUFhLEVBQUU7SUFDbEUsSUFBSSxDQUFDLEtBQUssUUFBUSxFQUFFO1FBQ2xCLE9BQU8sUUFBUSxDQUFDO0tBQ2pCO0lBQ0QsSUFBSSxDQUFDLEtBQUssUUFBUSxFQUFFO1FBQ2xCLE9BQU8sUUFBUSxDQUFDO0tBQ2pCO0lBQ0QsT0FBTyxNQUFNLENBQUM7QUFDaEIsQ0FBQyxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBUaGUgQXJlYUlkZW50IGlzIGFuIGlkZW50aWZpZXIgZm9yIHRoZSB0aHJlZSBhcmVhcyA6IGhlYWRlciwgYm9kZXIsIGFuZCBmb290ZXIuXG4gKi9cbmV4cG9ydCB0eXBlIEFyZWFJZGVudCA9IFwiaGVhZGVyXCIgfCBcImJvZHlcIiB8IFwiZm9vdGVyXCI7XG5cbi8qKlxuICogQ29udmVydHMgYSBzdHJpbmcgdG8gdGhlIGlkZW50aWZpZXIgb2YgdHlwZSBBcmVhSWRlbnQuXG4gKiBAcGFyYW0gcyBzaG91bGQgYmUgXCJoZWFkZXJcInxcImJvZHlcInxcImZvb3RlclwiLiBUaGUgZmFsbGJhY2sgcmV0dXJuIHZhbHVlIGlzICdib2R5J1xuICovXG5leHBvcnQgY29uc3QgZ2V0QXJlYUlkZW50QnlTdHJpbmcgPSAoczogc3RyaW5nIHwgbnVsbCk6IEFyZWFJZGVudCA9PiB7XG4gIGlmIChzID09PSBcImhlYWRlclwiKSB7XG4gICAgcmV0dXJuIFwiaGVhZGVyXCI7XG4gIH1cbiAgaWYgKHMgPT09IFwiZm9vdGVyXCIpIHtcbiAgICByZXR1cm4gXCJmb290ZXJcIjtcbiAgfVxuICByZXR1cm4gXCJib2R5XCI7XG59O1xuIl19
