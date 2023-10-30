@@ -4,17 +4,17 @@
 
 This is the UI-agnostic table component for your next web app. 😊
 
-<img src="https://raw.githubusercontent.com/guiexperttable/table-website/main/src/assets/screens/heatmap.png" width="50%">
+<img src="https://raw.githubusercontent.com/guiexperttable/ge-table/main/apps/table-website/src/assets/screens/heatmap.png" width="50%">
 
 ### This is a mono repo
-- [Plain JS](https://github.com/guiexperttable/tree/main/libs/table)
-- [Angular](https://github.com/guiexperttable/angular-table)
-- [Vue3](https://github.com/guiexperttable/vue3-table)
-- [React](https://github.com/guiexperttable/react-table)
-- [Preact](https://github.com/guiexperttable/preact-table)
-- [Solid](https://github.com/guiexperttable/solid-table)
-- [Svelte](https://github.com/guiexperttable/svelte-table)
-- [Web Component](https://github.com/guiexperttable/webcomponent-table)
+- [Plain JS](https://github.com/guiexperttable/ge-table/tree/main/libs/table)
+- [Angular](https://github.com/guiexperttable/ge-table/tree/main/libs/angular-table)
+- [Vue3](https://github.com/guiexperttable/ge-table/tree/main/libs/vue3-table)
+- [React](https://github.com/guiexperttable/ge-table/tree/main/libs/react-table)
+- [Preact](https://github.com/guiexperttable/ge-table/tree/main/libs/preact-table)
+- [Solid](https://github.com/guiexperttable/ge-table/tree/main/libs/solid-table)
+- [Svelte](https://github.com/guiexperttable/ge-table/tree/main/libs/svelte-table)
+- [Web Component](https://github.com/guiexperttable/ge-table/tree/main/libs/webcomponent-table)
 
 
 ### Features
