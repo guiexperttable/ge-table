@@ -1,7 +1,7 @@
-import { ChangeDetectionStrategy, Component, ElementRef, Input, OnDestroy, OnInit } from "@angular/core";
-import { TableApi, TableModelIf, TableOptionsIf } from "@guiexpert/table";
-import { COL_IDX_UPDATED_AT, createTimeTableModel, tableOptions } from "@guiexpert/demo-table-models";
-import { SyncCssService } from "../../common/syncdata/sync-css.service";
+import {ChangeDetectionStrategy, Component, ElementRef, Input, NgZone, OnDestroy, OnInit} from "@angular/core";
+import {TableApi, TableModelIf, TableOptionsIf} from "@guiexpert/table";
+import {COL_IDX_UPDATED_AT, createTimeTableModel, tableOptions} from "@guiexpert/demo-table-models";
+import {SyncCssService} from "../../common/syncdata/sync-css.service";
 
 @Component({
   selector: "timetable-demo",
@@ -23,7 +23,8 @@ export class TimetableDemoComponent implements OnInit, OnDestroy {
 
 
   constructor(
-    private readonly elementRef: ElementRef
+    private readonly elementRef: ElementRef,
+    private readonly ngZone: NgZone
   ) {
   }
 
@@ -33,7 +34,9 @@ export class TimetableDemoComponent implements OnInit, OnDestroy {
 
   onTableReady(api: TableApi) {
     this.tableApi = api;
-    this.sendUpdateTableModelEvents();
+    this.ngZone.runOutsideAngular(() => {
+      this.sendUpdateTableModelEvents();
+    });
   }
 
 
