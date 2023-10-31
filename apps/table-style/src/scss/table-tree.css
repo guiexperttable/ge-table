@@ -46,3 +46,8 @@
 .ge-table-col-tree.ge-table-tree-deep-5 {
   padding-left: 136px;
 }
+
+.ge-table-col-div.ge-table-col-tree.ge-table-tree-cell {
+  display: grid;
+  grid-template-columns: 16px 1fr;
+}
