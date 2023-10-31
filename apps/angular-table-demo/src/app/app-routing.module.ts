@@ -46,6 +46,10 @@ const routes: Routes = [
   },
   {
     path: "demo",
+    loadChildren: () => import("./chunksocket/chunk-socket.module").then(m => m.ChunkSocketModule)
+  },
+  {
+    path: "demo",
     loadChildren: () => import("./sorting/headerdblclick/demo-headerdblclick.module").then(m => m.DemoHeaderdblclickModule)
   },
   {
@@ -59,9 +63,11 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, {
-      enableTracing: false
-    })
+    RouterModule.forRoot(
+      routes,
+      {
+        enableTracing: false
+      })
   ],
   exports: [RouterModule]
 })

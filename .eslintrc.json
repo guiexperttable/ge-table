@@ -1,0 +1,223 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "**/*"
+  ],
+  "plugins": [
+    "@nrwl/nx"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx",
+        "*.js",
+        "*.jsx"
+      ],
+      "rules": {
+        "@nrwl/nx/enforce-module-boundaries": [
+          "error",
+          {
+            "enforceBuildableLibDependency": true,
+            "allow": [],
+            "depConstraints": [
+              {
+                "sourceTag": "scope:demo-table-models",
+                "onlyDependOnLibsWithTags": []
+              },
+              {
+                "sourceTag": "scope:table-website",
+                "onlyDependOnLibsWithTags": [
+                  "scope:table-website",
+                  "scope:table-style",
+                  "scope:demo-table-models"
+                ]
+              },
+              {
+                "sourceTag": "scope:table-style",
+                "onlyDependOnLibsWithTags": [
+                  "scope:table-style"
+                ]
+              },
+              {
+                "sourceTag": "scope:angular-table-demo",
+                "onlyDependOnLibsWithTags": [
+                  "scope:angular-table",
+                  "scope:table",
+                  "scope:demo-table-models",
+                  "scope:table-style"
+                ]
+              },
+             {
+                "sourceTag": "scope:async-server-demo",
+                "onlyDependOnLibsWithTags": [
+                  "scope:demo-table-models"
+                ]
+              },
+              {
+                "sourceTag": "scope:svelte-table",
+                "onlyDependOnLibsWithTags": [
+                  "scope:table",
+                  "scope:table-style"
+                ]
+              },
+              {
+                "sourceTag": "scope:svelte-table-demo",
+                "onlyDependOnLibsWithTags": [
+                  "scope:svelte-table-demo",
+                  "scope:svelte-table",
+                  "scope:table",
+                  "scope:demo-table-models",
+                  "scope:table-style"
+                ]
+              },
+              {
+                "sourceTag": "scope:solid-table",
+                "onlyDependOnLibsWithTags": [
+                  "scope:table",
+                  "scope:table-style"
+                ]
+              },
+              {
+                "sourceTag": "scope:webcomponent-table-demo",
+                "onlyDependOnLibsWithTags": [
+                  "scope:webcomponent-table-demo",
+                  "scope:webcomponent-table",
+                  "scope:table",
+                  "scope:demo-table-models",
+                  "scope:table-style"
+                ]
+              },
+              {
+                "sourceTag": "scope:webcomponent-table",
+                "onlyDependOnLibsWithTags": [
+                  "scope:table",
+                  "scope:table-style"
+                ]
+              },
+              {
+                "sourceTag": "scope:solid-table-demo",
+                "onlyDependOnLibsWithTags": [
+                  "scope:solid-table-demo",
+                  "scope:solid-table",
+                  "scope:table",
+                  "scope:demo-table-models",
+                  "scope:table-style"
+                ]
+              },
+              {
+                "sourceTag": "scope:react-table",
+                "onlyDependOnLibsWithTags": [
+                  "scope:table",
+                  "scope:table-style"
+                ]
+              },
+              {
+                "sourceTag": "scope:react-table-demo",
+                "onlyDependOnLibsWithTags": [
+                  "scope:react-table-demo",
+                  "scope:react-table",
+                  "scope:table",
+                  "scope:demo-table-models",
+                  "scope:table-style"
+                ]
+              },
+              {
+                "sourceTag": "scope:preact-table",
+                "onlyDependOnLibsWithTags": [
+                  "scope:table",
+                  "scope:table-style"
+                ]
+              },
+              {
+                "sourceTag": "scope:preact-table-demo",
+                "onlyDependOnLibsWithTags": [
+                  "scope:preact-table-demo",
+                  "scope:preact-table",
+                  "scope:table",
+                  "scope:demo-table-models",
+                  "scope:table-style"
+                ]
+              },
+              {
+                "sourceTag": "scope:vue3-table",
+                "onlyDependOnLibsWithTags": [
+                  "scope:table",
+                  "scope:table-style"
+                ]
+              },
+              {
+                "sourceTag": "scope:vue3-table-demo",
+                "onlyDependOnLibsWithTags": [
+                  "scope:vue3-table-demo",
+                  "scope:vue3-table",
+                  "scope:table",
+                  "scope:demo-table-models",
+                  "scope:table-style"
+                ]
+              },
+              {
+                "sourceTag": "scope:html5-table-demo",
+                "onlyDependOnLibsWithTags": [
+                  "scope:table",
+                  "scope:demo-table-models",
+                  "scope:table-style"
+                ]
+              },
+              {
+                "sourceTag": "scope:angular-table",
+                "onlyDependOnLibsWithTags": [
+                  "scope:table",
+                  "scope:table-style"
+                ]
+              },
+              {
+                "sourceTag": "scope:webcomponent-table",
+                "onlyDependOnLibsWithTags": [
+                  "scope:table",
+                  "scope:table-style"
+                ]
+              },
+              {
+                "sourceTag": "scope:table",
+                "onlyDependOnLibsWithTags": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
+      "extends": [
+        "plugin:@nrwl/nx/typescript"
+      ],
+      "rules": {}
+    },
+    {
+      "files": [
+        "*.js",
+        "*.jsx"
+      ],
+      "extends": [
+        "plugin:@nrwl/nx/javascript"
+      ],
+      "rules": {}
+    },
+    {
+      "files": [
+        "*.spec.ts",
+        "*.spec.tsx",
+        "*.spec.js",
+        "*.spec.jsx"
+      ],
+      "env": {
+        "jest": true
+      },
+      "rules": {}
+    }
+  ]
+}

@@ -25,6 +25,10 @@ export * from './lib/table/data/div-scope.type';
 export * from './lib/table/data/geo-data';
 export * from './lib/table/data/table-model-and-options.if';
 export * from './lib/table/data/table-model-and-options';
+export * from './lib/table/data/chunk/chunk.data-event';
+export * from './lib/table/data/chunk/chunk.data-event.if';
+export * from './lib/table/data/chunk/request-chunk';
+export * from './lib/table/data/chunk/request-chunk.if';
 
 export * from './lib/table/data/common/get-t';
 export * from './lib/table/data/common/value-label.if';

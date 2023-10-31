@@ -14,6 +14,16 @@ import {OverlayModule} from "@angular/cdk/overlay";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatMenuModule} from "@angular/material/menu";
+import {SocketIoConfig, SocketIoModule} from "ngx-socket-io";
+
+
+const config: SocketIoConfig = {
+  url: "http://localhost:3334",
+  options: {
+    reconnection: true,
+    autoConnect: true
+  }
+};
 
 @NgModule({
   declarations: [
@@ -22,6 +32,7 @@ import {MatMenuModule} from "@angular/material/menu";
   imports: [
     BrowserModule,
     HttpClientModule,
+    SocketIoModule.forRoot(config),
     BrowserAnimationsModule,
     AppRoutingModule,
     TableComponent,
