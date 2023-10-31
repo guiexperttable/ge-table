@@ -19,7 +19,8 @@
           "apps/table-website/src/assets",
           "apps/table-website/src/sitemap.txt",
           "apps/table-website/src/sitemap.xml",
-          "apps/table-website/src/robots.txt"
+          "apps/table-website/src/robots.txt",
+          "apps/table-website/src/BingSiteAuth.xml"
         ],
         "styles": [
           "node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
