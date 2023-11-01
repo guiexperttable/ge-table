@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <meta name="generator" content="Astro v3.3.0">
+    <title>GUI Expert Table</title>
+    <meta name="description" content="Build fast and fancy data grids. GUI Expert Table is the UI-agnostic fancy table component for your next web app.">
+    <!-- social media -->
+    <meta property="og:title" content="GUI Expert Table">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Build fast and fancy data grids. GUI Expert Table is the UI-agnostic fancy table component for your next web app.">
+    <meta property="og:image" content="https:/gui.expert/assets/screens/heatmap.png">
+    <meta property="og:url" content="https:/gui.gmbh/">
+    <meta name="twitter:card" content="summary_large_image"><!-- initialize theme -->
+    <link rel="stylesheet" href="main.css" />
+</head>
+
+<body class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white">
+
+<header
+        id="page-header"
+        class="absolute bottom-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white"
+        data-astro-cid-hpnw4vwy><a class="flex items-center gap-3 hover:!text-default" href="#" data-astro-cid-hpnw4vwy>
+    <h1 class="sr-only" data-astro-cid-hpnw4vwy>G</h1>
+
+    <!--   G-Logo-->
+    <svg fill="none" height="32" viewBox="0 0 140 160" width="28" xmlns="http://www.w3.org/2000/svg">
+        <path class="logo-fill-color-0" d="M68.74,136.99l-0.6,0.34 M119.74,87.93v-0.8"/>
+        <polygon class="logo-fill-color-0" points="137.45,77.7 136.14,117.03 68.74,156.63 68.74,136.99 119.74,107.55 119.74,87.92 "/>
+        <line class="logo-fill-color-1" x1="98.95" x2="98.95" y1="95.12" y2="95.12"/>
+        <line class="logo-fill-color-1" x1="102.74" x2="86.43" y1="58.48" y2="67.89"/>
+        <line class="logo-fill-color-1" x1="137.45" x2="102.74" y1="77.69" y2="58.48"/>
+        <line class="logo-fill-color-1" x1="68.74" x2="102.17" y1="117.37" y2="97.74"/>
+        <line class="logo-fill-color-1" x1="34.74" x2="68.74" y1="97.74" y2="117.37"/>
+        <line class="logo-fill-color-1" x1="69.92" x2="0.74" y1="0.52" y2="38.73"/>
+        <line class="logo-fill-color-1" x1="103.44" x2="69.92" y1="19.48" y2="0.94"/>
+        <polygon class="logo-fill-color-2" points="85.89,29.11 85.74,48.65 69.34,38.49 69.18,19.13 "/>
+        <path class="logo-fill-color-3" d="M86.22,49L85.9,29.64l0.48,0.01l17.04-10.01l-0.32-0.02l-0.36,20.03l0.35-0.18l-17.34,9.81"/>
+        <polyline class="logo-fill-color-3" points="34.52,97.74 34.58,58.65 69.18,38.68 68.96,19.14 68.56,18.81 16.89,48.66 17.55,48.88 17.52,107.55 33.89,98.1 "/>
+        <path class="logo-fill-color-2" d="M119.74,87.13l0,20.43l0,0l-17.57-9.81l-15.83-8.84l0.09-21l33.31,20.03"/>
+        <polygon class="logo-fill-color-2" points="17.74,106.29 17.76,48.88 0.74,38.7 0.74,117.37 68.74,156.63 68.14,137.34 17.74,107.55 "/>
+    </svg>
+
+    GUI Expert Table
+</a>
+    <div data-astro-cid-hpnw4vwy>
+        <div class="flex items-center gap-6" data-astro-cid-hpnw4vwy>
+            <nav class="hidden sm:block" data-astro-cid-hpnw4vwy>
+                <ul class="flex items-center gap-6" data-astro-cid-hpnw4vwy>
+                    <li data-astro-cid-hpnw4vwy><a class="text-sm" href="#features" data-astro-cid-hpnw4vwy>Features</a>
+                    </li>
+                    <li data-astro-cid-hpnw4vwy><a class="text-sm" href="#compatibility" data-astro-cid-hpnw4vwy>Compatibility</a>
+                    </li>
+                    <li data-astro-cid-hpnw4vwy><a class="text-sm" href="#showcase" data-astro-cid-hpnw4vwy>Showcase</a>
+                    </li>
+                </ul>
+            </nav>
+            <button id="open-nav-button" type="button" class="btn sm:hidden" aria-label="Navigation"
+                    data-astro-cid-hpnw4vwy>
+                <svg viewBox="0 0 24 24" data-astro-cid-hpnw4vwy class="h-8" astro-icon="mdi:menu">
+                    <path fill="currentColor" d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/>
+                </svg>
+            </button>
+
+            <button id="theme-switcher" type="button"
+                    class="-ml-14 origin-[right_center] scale-0 transition-all duration-500" data-astro-cid-l4aeqea3>
+                <div id="icon-theme-light" data-astro-cid-l4aeqea3>
+                    <svg viewBox="0 0 512 512" data-astro-cid-l4aeqea3 class="h-8" astro-icon="theme/light">
+                        <defs>
+                            <linearGradient id="astroicon:theme/lighta" x1="149.99" x2="234.01" y1="119.24" y2="264.76"
+                                            gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="currentColor"/>
+                                <stop offset=".45" stop-color="currentColor"/>
+                                <stop offset="1" stop-color="currentColor"/>
+                            </linearGradient>
+                            <symbol id="astroicon:theme/lightb" viewBox="0 0 384 384">
+                                <circle cx="192" cy="192" r="84" fill="url(#astroicon:theme/lighta)"
+                                        stroke="currentColor" stroke-miterlimit="10" stroke-width="6"/>
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10"
+                                      stroke-width="24"
+                                      d="M192 61.66V12m0 360v-49.66m92.17-222.51 35.11-35.11M64.72 319.28l35.11-35.11m0-184.34L64.72 64.72m254.56 254.56-35.11-35.11M61.66 192H12m360 0h-49.66">
+                                    <animateTransform additive="sum" attributeName="transform" dur="6s"
+                                                      repeatCount="indefinite" type="rotate"
+                                                      values="0 192 192; 45 192 192"/>
+                                </path>
+                            </symbol>
+                        </defs>
+                        <use xlink:href="#astroicon:theme/lightb" width="384" height="384"
+                             transform="translate(64 64)"/>
+                    </svg>
+                    <span class="sr-only" data-astro-cid-l4aeqea3>Use light theme</span></div>
+                <div id="icon-theme-dark" class="hidden" data-astro-cid-l4aeqea3>
+                    <svg viewBox="0 0 512 512" data-astro-cid-l4aeqea3 class="h-8" astro-icon="theme/dark">
+                        <defs>
+                            <linearGradient id="astroicon:theme/darkb" x1="54.33" x2="187.18" y1="29.03" y2="259.13"
+                                            gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="currentColor"/>
+                                <stop offset=".45" stop-color="currentColor"/>
+                                <stop offset="1" stop-color="currentColor"/>
+                            </linearGradient>
+                            <linearGradient id="astroicon:theme/darka" x1="294" x2="330" y1="112.82" y2="175.18"
+                                            gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="currentColor"/>
+                                <stop offset=".45" stop-color="currentColor"/>
+                                <stop offset="1" stop-color="currentColor"/>
+                            </linearGradient>
+                            <linearGradient xlink:href="#astroicon:theme/darka" id="astroicon:theme/darkc" x1="295.52"
+                                            x2="316.48" y1="185.86" y2="222.14"/>
+                            <linearGradient xlink:href="#astroicon:theme/darka" id="astroicon:theme/darkd" x1="356.29"
+                                            x2="387.71" y1="194.78" y2="249.22"/>
+                            <symbol id="astroicon:theme/darke" overflow="visible" viewBox="0 0 270 270">
+                                <path fill="url(#astroicon:theme/darkb)" stroke="currentColor" stroke-linecap="round"
+                                      stroke-linejoin="round" stroke-width="6"
+                                      d="M252.25 168.63C178.13 168.63 118 109.35 118 36.21A130.48 130.48 0 0 1 122.47 3C55.29 10.25 3 66.37 3 134.58 3 207.71 63.09 267 137.21 267 199.69 267 252 224.82 267 167.79a135.56 135.56 0 0 1-14.75.84Z">
+                                    <animateTransform additive="sum" attributeName="transform" dur="6s"
+                                                      repeatCount="indefinite" type="rotate"
+                                                      values="-15 135 135; 9 135 135; -15 135 135"/>
+                                </path>
+                            </symbol>
+                        </defs>
+                        <path fill="url(#astroicon:theme/darka)" stroke="currentColor" stroke-linecap="round"
+                              stroke-linejoin="round" stroke-width="2"
+                              d="m282.83 162.84 24.93-6.42a1.78 1.78 0 0 1 1.71.46l18.37 18a1.8 1.8 0 0 0 3-1.73l-6.42-24.93a1.78 1.78 0 0 1 .46-1.71l18-18.37a1.8 1.8 0 0 0-1.73-3l-24.93 6.42a1.78 1.78 0 0 1-1.71-.46l-18.37-18a1.8 1.8 0 0 0-3 1.73l6.42 24.93a1.78 1.78 0 0 1-.46 1.71l-18 18.37a1.8 1.8 0 0 0 1.73 3Z">
+                            <animateTransform additive="sum" attributeName="transform" calcMode="spline" dur="6s"
+                                              keySplines=".42, 0, .58, 1; .42, 0, .58, 1" repeatCount="indefinite"
+                                              type="rotate" values="-15 312 144; 15 312 144; -15 312 144"/>
+                            <animate attributeName="opacity" dur="6s" values="1; .75; 1; .75; 1; .75; 1"/>
+                        </path>
+                        <path fill="url(#astroicon:theme/darkc)" stroke="currentColor" stroke-linecap="round"
+                              stroke-linejoin="round" stroke-width="2"
+                              d="m285.4 193.44 12 12.25a1.19 1.19 0 0 1 .3 1.14l-4.28 16.62a1.2 1.2 0 0 0 2 1.15l12.25-12a1.19 1.19 0 0 1 1.14-.3l16.62 4.28a1.2 1.2 0 0 0 1.15-2l-12-12.25a1.19 1.19 0 0 1-.3-1.14l4.28-16.62a1.2 1.2 0 0 0-2-1.15l-12.25 12a1.19 1.19 0 0 1-1.14.3l-16.62-4.28a1.2 1.2 0 0 0-1.15 2Z">
+                            <animateTransform additive="sum" attributeName="transform" begin="-.33s" calcMode="spline"
+                                              dur="6s" keySplines=".42, 0, .58, 1; .42, 0, .58, 1"
+                                              repeatCount="indefinite" type="rotate"
+                                              values="-15 306 204; 15 306 204; -15 306 204"/>
+                            <animate attributeName="opacity" begin="-.33s" dur="6s" values="1; .75; 1; .75; 1; .75; 1"/>
+                        </path>
+                        <path fill="url(#astroicon:theme/darkd)" stroke="currentColor" stroke-linecap="round"
+                              stroke-linejoin="round" stroke-width="2"
+                              d="m337.32 223.73 24.8 6.9a1.83 1.83 0 0 1 1.25 1.25l6.9 24.8a1.79 1.79 0 0 0 3.46 0l6.9-24.8a1.83 1.83 0 0 1 1.25-1.25l24.8-6.9a1.79 1.79 0 0 0 0-3.46l-24.8-6.9a1.83 1.83 0 0 1-1.25-1.25l-6.9-24.8a1.79 1.79 0 0 0-3.46 0l-6.9 24.8a1.83 1.83 0 0 1-1.25 1.25l-24.8 6.9a1.79 1.79 0 0 0 0 3.46Z">
+                            <animateTransform additive="sum" attributeName="transform" begin="-.67s" calcMode="spline"
+                                              dur="6s" keySplines=".42, 0, .58, 1; .42, 0, .58, 1"
+                                              repeatCount="indefinite" type="rotate"
+                                              values="-15 372 222; 15 372 222; -15 372 222"/>
+                            <animate attributeName="opacity" begin="-.67s" dur="6s" values="1; .75; 1; .75; 1; .75; 1"/>
+                        </path>
+                        <use xlink:href="#astroicon:theme/darke" width="270" height="270"
+                             transform="translate(121 121)"/>
+                    </svg>
+                    <span class="sr-only" data-astro-cid-l4aeqea3>Use dark theme</span></div>
+            </button>
+        </div>
+
+        <div id="menu-modal" class="modal hidden" aria-hidden="true" data-astro-cid-hpnw4vwy>
+            <div class="fixed inset-0 bg-default px-8 py-4 text-default" data-astro-cid-hpnw4vwy>
+                <div class="space-y-4" role="dialog" aria-modal="true" data-astro-cid-hpnw4vwy>
+                    <header class="text-right" data-astro-cid-hpnw4vwy>
+                        <button id="close-nav-button" type="button" class="btn" aria-label="Close navigation"
+                                data-astro-cid-hpnw4vwy>
+                            <svg viewBox="0 0 24 24" data-astro-cid-hpnw4vwy class="h-8" astro-icon="mdi:close">
+                                <path fill="currentColor"
+                                      d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+                            </svg>
+                        </button>
+                    </header>
+                    <div class="flex justify-center" data-astro-cid-hpnw4vwy>
+                        <svg fill="none" viewBox="0 0 627 894" data-astro-cid-hpnw4vwy class="h-16"
+                             astro-icon="logomark">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                  d="M445.433 22.983c7.289 9.05 11.006 21.26 18.44 45.682l162.408 533.511a675.855 675.855 0 0 0-194.166-65.737l-105.744-357.34a13.763 13.763 0 0 0-26.408.041L195.5 536.259A675.821 675.821 0 0 0 .46 602.095L163.663 68.541c7.457-24.38 11.186-36.57 18.476-45.602A59.994 59.994 0 0 1 206.454 4.95C217.224.622 229.971.622 255.466.622h116.568c25.528 0 38.292 0 49.072 4.338a60.004 60.004 0 0 1 24.327 18.023Z"
+                                  clip-rule="evenodd"/>
+                            <path fill="#FF5D01" fill-rule="evenodd"
+                                  d="M464.867 627.566c-26.773 22.894-80.212 38.507-141.766 38.507-75.55 0-138.872-23.52-155.675-55.152-6.007 18.129-7.354 38.877-7.354 52.131 0 0-3.958 65.082 41.308 110.349 0-23.505 19.055-42.559 42.559-42.559 40.287 0 40.242 35.148 40.205 63.664l-.002 2.545c0 43.282 26.453 80.385 64.073 96.024-5.619-11.557-8.771-24.535-8.771-38.25 0-41.28 24.235-56.65 52.401-74.514 22.41-14.213 47.31-30.004 64.47-61.682 8.953-16.528 14.037-35.459 14.037-55.577 0-12.372-1.922-24.295-5.485-35.486Z"
+                                  clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <nav data-astro-cid-hpnw4vwy>
+                        <ul class="flex flex-col" data-astro-cid-hpnw4vwy>
+                            <li data-astro-cid-hpnw4vwy><a class="block py-4 text-center text-xl" href="#features"
+                                                           data-astro-cid-hpnw4vwy>Features</a></li>
+                            <li data-astro-cid-hpnw4vwy><a class="block py-4 text-center text-xl" href="#compatibility"
+                                                           data-astro-cid-hpnw4vwy>Compatibility</a></li>
+                            <li data-astro-cid-hpnw4vwy><a class="block py-4 text-center text-xl" href="#showcase"
+                                                           data-astro-cid-hpnw4vwy>Showcase</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<noscript>
+    <style>
+        #open-nav-button {
+            display: none;
+        }
+    </style>
+</noscript>
+
+
+<section class="relative h-full bg-black">
+    <div id="starfield" class="absolute inset-0">
+        <canvas id="starfield-canvas"></canvas>
+    </div>
+
+    <!-- https:/github.com/tholman/github-corners -->
+    <a href="https://github.com/guiexperttable/ge-table"
+       aria-label="View source on GitHub"
+       class="absolute right-0 top-0 z-10 text-black hover:text-black focus:ring-0 focus:ring-offset-0"
+       data-astro-cid-de3f4zsp>
+        <svg class="fill-white" width="80" height="80" viewBox="0 0 250 250" aria-hidden="true" data-astro-cid-de3f4zsp>
+            <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z" data-astro-cid-de3f4zsp></path>
+            <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+                  fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"
+                  data-astro-cid-de3f4zsp></path>
+            <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+                  fill="currentColor" class="octo-body" data-astro-cid-de3f4zsp></path>
+        </svg>
+    </a>
+
+    <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
+        <img
+                src="assets/img/moon_1920.webp"
+                srcset="assets/img/moon_450.webp 450w, assets/img/moon_800.webp 800w, assets/img/moon_1200.webp 1200w"
+                class="h-full w-full object-cover" sizes="100vw" alt="The ridged surface of the moon" width="1920"
+                height="1080" loading="lazy" decoding="async">
+    </div>
+
+    <div class="relative grid h-full place-items-center sm:grid-cols-2">
+        <h2 class="flex flex-col gap-2 self-end sm:gap-4 sm:self-auto sm:justify-self-end hero">
+
+            <!--G-Logo-->
+            <svg fill="none"  viewBox="0 0 140 160"  xmlns="http://www.w3.org/2000/svg" class="h-24 text-white md:h-32">
+                <path class="logo-fill-color-0" d="M68.74,136.99l-0.6,0.34 M119.74,87.93v-0.8"/>
+                <polygon class="logo-fill-color-0" points="137.45,77.7 136.14,117.03 68.74,156.63 68.74,136.99 119.74,107.55 119.74,87.92 "/>
+                <line class="logo-fill-color-1" x1="98.95" x2="98.95" y1="95.12" y2="95.12"/>
+                <line class="logo-fill-color-1" x1="102.74" x2="86.43" y1="58.48" y2="67.89"/>
+                <line class="logo-fill-color-1" x1="137.45" x2="102.74" y1="77.69" y2="58.48"/>
+                <line class="logo-fill-color-1" x1="68.74" x2="102.17" y1="117.37" y2="97.74"/>
+                <line class="logo-fill-color-1" x1="34.74" x2="68.74" y1="97.74" y2="117.37"/>
+                <line class="logo-fill-color-1" x1="69.92" x2="0.74" y1="0.52" y2="38.73"/>
+                <line class="logo-fill-color-1" x1="103.44" x2="69.92" y1="19.48" y2="0.94"/>
+                <polygon class="logo-fill-color-2" points="85.89,29.11 85.74,48.65 69.34,38.49 69.18,19.13 "/>
+                <path class="logo-fill-color-3" d="M86.22,49L85.9,29.64l0.48,0.01l17.04-10.01l-0.32-0.02l-0.36,20.03l0.35-0.18l-17.34,9.81"/>
+                <polyline class="logo-fill-color-3" points="34.52,97.74 34.58,58.65 69.18,38.68 68.96,19.14 68.56,18.81 16.89,48.66 17.55,48.88 17.52,107.55 33.89,98.1 "/>
+                <path class="logo-fill-color-2" d="M119.74,87.13l0,20.43l0,0l-17.57-9.81l-15.83-8.84l0.09-21l33.31,20.03"/>
+                <polygon class="logo-fill-color-2" points="17.74,106.29 17.76,48.88 0.74,38.7 0.74,117.37 68.74,156.63 68.14,137.34 17.74,107.55 "/>
+            </svg>
+            <div class="gradient-text text-center font-extrabold tracking-tighter text-8xl">
+                Build fancy
+                <br> tables,
+                <br> faster.
+            </div>
+        </h2>
+
+        <div id="astronaut" class="w-2/3 max-w-3xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start">
+            <img src=assets/img/astronaut_1251.png"
+                 srcset="assets/img/astronaut_450.png 450w, assets/img/astronaut_800.png 800w"
+                 class="h-full w-full object-cover"
+                 sizes="(min-width: 640px) 42vw, 67vw"
+                 loading="eager" alt="A floating astronaut in a space suit"
+                 width="1251" height="1251" decoding="async">
+        </div>
+    </div>
+</section>
+<noscript>
+    <style>
+        #splash-bg-fallback {
+            display: block;
+        }
+    </style>
+</noscript>
+
+
+<div class="space-y-24 px-8 py-32">
+    <section id="intro" class="flex scroll-mt-24 flex-col items-center gap-4 space-y-8">
+        <div class="flex flex-col items-center gap-4">
+            <svg fill="none" viewBox="0 0 627 894" slot="eyebrow" class="h-32" astro-icon="logomark">
+                <path fill="currentColor" fill-rule="evenodd"
+                      d="M445.433 22.983c7.289 9.05 11.006 21.26 18.44 45.682l162.408 533.511a675.855 675.855 0 0 0-194.166-65.737l-105.744-357.34a13.763 13.763 0 0 0-26.408.041L195.5 536.259A675.821 675.821 0 0 0 .46 602.095L163.663 68.541c7.457-24.38 11.186-36.57 18.476-45.602A59.994 59.994 0 0 1 206.454 4.95C217.224.622 229.971.622 255.466.622h116.568c25.528 0 38.292 0 49.072 4.338a60.004 60.004 0 0 1 24.327 18.023Z"
+                      clip-rule="evenodd"/>
+                <path fill="#FF5D01" fill-rule="evenodd"
+                      d="M464.867 627.566c-26.773 22.894-80.212 38.507-141.766 38.507-75.55 0-138.872-23.52-155.675-55.152-6.007 18.129-7.354 38.877-7.354 52.131 0 0-3.958 65.082 41.308 110.349 0-23.505 19.055-42.559 42.559-42.559 40.287 0 40.242 35.148 40.205 63.664l-.002 2.545c0 43.282 26.453 80.385 64.073 96.024-5.619-11.557-8.771-24.535-8.771-38.25 0-41.28 24.235-56.65 52.401-74.514 22.41-14.213 47.31-30.004 64.47-61.682 8.953-16.528 14.037-35.459 14.037-55.577 0-12.372-1.922-24.295-5.485-35.486Z"
+                      clip-rule="evenodd"/>
+            </svg>
+            <h2 class="gradient-text text-center font-extrabold tracking-tight text-6xl">Just ship less</h2></div>
+        <p class="max-w-xl text-center font-extrabold text-2xl">
+            Astro is a new kind of site builder for the
+            <span class="text-primary">modern</span> web.
+            <span class="text-primary">Lightning-fast</span>
+            performance meets <span class="text-primary">powerful</span> developer
+            experience.
+        </p>
+        <div class="grid grid-cols-1 gap-2 sm:grid-cols-2"><a href="https:/docs.astro.build/"
+                                                              class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4">
+            <svg viewBox="0 0 24 24" class="h-8" astro-icon="mdi:telescope">
+                <path fill="currentColor"
+                      d="m21.9 8.9-1.7 1-4-6.9 1.7-1 4 6.9m-12.1-1 3 5.2 6.1-3.5-3-5.2-6.1 3.5m1.6 4.8-2-3.5-4.3 2.5 2 3.5 4.3-2.5m-9.3 1.9 1 1.7 2.6-1.5-1-1.7-2.6 1.5m10-.6-.3-.4-4.3 2.5.3.4c.2.3.5.6.8.8L7 22h2l1.4-4.3h.1L12 22h2l-1.9-5.6c.5-.7.5-1.6 0-2.4z"/>
+            </svg>
+            <span>Read the docs</span></a><a href="https:/astro.new/"
+                                             class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4">
+            <svg viewBox="0 0 24 24" class="h-8" astro-icon="mdi:rocket">
+                <path fill="currentColor"
+                      d="m20 22-3.86-1.55c.7-1.53 1.2-3.11 1.51-4.72L20 22M7.86 20.45 4 22l2.35-6.27c.31 1.61.81 3.19 1.51 4.72M12 2s5 2 5 10c0 3.1-.75 5.75-1.67 7.83A2 2 0 0 1 13.5 21h-3a2 2 0 0 1-1.83-1.17C7.76 17.75 7 15.1 7 12c0-8 5-10 5-10m0 10c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/>
+            </svg>
+            <span>Try it out</span></a></div>
+    </section>
+    <section id="features" class="flex scroll-mt-24 flex-col items-center gap-4 space-y-8">
+        <div class="flex flex-col items-center gap-4"><h2
+                class="gradient-text text-center font-extrabold tracking-tight text-6xl">Features</h2></div>
+        <p class="max-w-xl text-center font-extrabold text-2xl">
+            Astro comes <span class="text-primary">batteries included</span>. It takes
+            the best parts of
+            <span class="text-primary">state-of-the-art</span>
+            tools and adds its own <span class="text-primary">innovations</span>.
+        </p>
+        <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+                <div class="h-16 w-16 rounded-full border-2 border-current p-3">
+                    <svg viewBox="0 0 24 24" astro-icon="mdi:handshake">
+                        <path fill="currentColor"
+                              d="M11 6h3l3.29-3.3a1 1 0 0 1 1.42 0l2.58 2.59a1 1 0 0 1 0 1.41L19 9h-8v2a1 1 0 0 1-1 1 1 1 0 0 1-1-1V8a2 2 0 0 1 2-2m-6 5v4l-2.29 2.29a1 1 0 0 0 0 1.41l2.58 2.59a1 1 0 0 0 1.42 0L11 17h4a1 1 0 0 0 1-1v-1h1a1 1 0 0 0 1-1v-1h1a1 1 0 0 0 1-1v-1h-7v1a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V9z"/>
+                    </svg>
+                </div>
+                <p class="text-center font-extrabold text-xl">Bring Your Own Framework</p>
+                <p class="text-center text-offset text-sm">Build your site using React, Svelte, Vue, Preact, web
+                    components, or just plain ol&#39; HTML + JavaScript.</p></li>
+            <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+                <div class="h-16 w-16 rounded-full border-2 border-current p-3">
+                    <svg viewBox="0 0 24 24" astro-icon="mdi:feather">
+                        <path fill="currentColor"
+                              d="M22 2s-7.64-.37-13.66 7.88C3.72 16.21 2 22 2 22l1.94-1c1.44-2.5 2.19-3.53 3.6-5 2.53.74 5.17.65 7.46-2-2-.56-3.6-.43-5.96-.19C11.69 12 13.5 11.6 16 12l1-2c-1.8-.34-3-.37-4.78.04C14.19 8.65 15.56 7.87 18 8l1.21-1.93c-1.56-.11-2.5.06-4.29.5 1.61-1.46 3.08-2.12 5.22-2.25 0 0 1.05-1.89 1.86-2.32z"/>
+                    </svg>
+                </div>
+                <p class="text-center font-extrabold text-xl">100% Static HTML, No JS</p>
+                <p class="text-center text-offset text-sm">Astro renders your entire page to static HTML, removing all
+                    JavaScript from your final build by default.</p></li>
+            <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+                <div class="h-16 w-16 rounded-full border-2 border-current p-3">
+                    <svg viewBox="0 0 24 24" astro-icon="mdi:directions-fork">
+                        <path fill="currentColor"
+                              d="M3 4v8.5l3-3L9 13c1 1 1 2 1 2v6h4v-7s0-1-.53-2S12 10 12 10L9 6.58 11.5 4M18 4l-4.46 4.47L14 9s.93 1 1.47 2c.21.4.33.79.4 1.13L21 7"/>
+                    </svg>
+                </div>
+                <p class="text-center font-extrabold text-xl">On-Demand Components</p>
+                <p class="text-center text-offset text-sm">Need some JS? Astro can automatically hydrate interactive
+                    components when they become visible on the page. If the user never sees it, they never load it.</p>
+            </li>
+            <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+                <div class="h-16 w-16 rounded-full border-2 border-current p-3">
+                    <svg viewBox="0 0 24 24" astro-icon="mdi:graph">
+                        <path fill="currentColor"
+                              d="M19.5 17c-.13 0-.26 0-.39.04l-1.61-3.25a2.5 2.5 0 0 0-1.75-4.29c-.13 0-.25 0-.39.04l-1.63-3.25c.48-.45.77-1.08.77-1.79a2.5 2.5 0 0 0-5 0c0 .71.29 1.34.76 1.79L8.64 9.54c-.14-.04-.26-.04-.39-.04a2.5 2.5 0 0 0-1.75 4.29l-1.61 3.25C4.76 17 4.63 17 4.5 17a2.5 2.5 0 0 0 0 5A2.5 2.5 0 0 0 7 19.5c0-.7-.29-1.34-.76-1.79l1.62-3.25c.14.04.26.04.39.04s.25 0 .39-.04l1.63 3.25c-.47.45-.77 1.09-.77 1.79a2.5 2.5 0 0 0 5 0A2.5 2.5 0 0 0 12 17c-.13 0-.26 0-.39.04L10 13.79c.46-.45.75-1.08.75-1.79s-.29-1.34-.75-1.79l1.61-3.25c.13.04.26.04.39.04s.26 0 .39-.04L14 10.21c-.45.45-.75 1.09-.75 1.79a2.5 2.5 0 0 0 2.5 2.5c.13 0 .25 0 .39-.04l1.63 3.25c-.47.45-.77 1.09-.77 1.79a2.5 2.5 0 0 0 5 0 2.5 2.5 0 0 0-2.5-2.5z"/>
+                    </svg>
+                </div>
+                <p class="text-center font-extrabold text-xl">Broad Integration</p>
+                <p class="text-center text-offset text-sm">Astro supports TypeScript, Scoped CSS, CSS Modules, Sass,
+                    Tailwind, Markdown, MDX, and any of your favorite npm packages.</p></li>
+            <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+                <div class="h-16 w-16 rounded-full border-2 border-current p-3">
+                    <svg viewBox="0 0 24 24" astro-icon="mdi:search-web">
+                        <path fill="currentColor"
+                              d="m15.5 14 5 5-1.5 1.5-5-5v-.79l-.27-.28A6.471 6.471 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3 6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.57 4.23l.28.27h.79m-6-9.5-.55.03c-.24.52-.61 1.4-.88 2.47h2.86c-.27-1.07-.64-1.95-.88-2.47-.18-.03-.36-.03-.55-.03M13.83 7a4.943 4.943 0 0 0-2.68-2.22c.24.53.55 1.3.78 2.22h1.9M5.17 7h1.9c.23-.92.54-1.69.78-2.22A4.943 4.943 0 0 0 5.17 7M4.5 9.5c0 .5.08 1.03.23 1.5h2.14l-.12-1.5.12-1.5H4.73c-.15.47-.23 1-.23 1.5m9.77 1.5c.15-.47.23-1 .23-1.5s-.08-1.03-.23-1.5h-2.14a9.48 9.48 0 0 1 0 3h2.14m-6.4-3-.12 1.5.12 1.5h3.26a9.48 9.48 0 0 0 0-3H7.87m1.63 6.5c.18 0 .36 0 .53-.03.25-.52.63-1.4.9-2.47H8.07c.27 1.07.65 1.95.9 2.47l.53.03m4.33-2.5h-1.9c-.23.92-.54 1.69-.78 2.22A4.943 4.943 0 0 0 13.83 12m-8.66 0a4.943 4.943 0 0 0 2.68 2.22c-.24-.53-.55-1.3-.78-2.22h-1.9z"/>
+                    </svg>
+                </div>
+                <p class="text-center font-extrabold text-xl">SEO Enabled</p>
+                <p class="text-center text-offset text-sm">Automatic sitemaps, RSS feeds, pagination and collections
+                    take the pain out of SEO and syndication.</p></li>
+            <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+                <div class="h-16 w-16 rounded-full border-2 border-current p-3">
+                    <svg viewBox="0 0 24 24" astro-icon="mdi:account-group">
+                        <path fill="currentColor"
+                              d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.536 5.536 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13v-1.75M0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20H0m24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9V20z"/>
+                    </svg>
+                </div>
+                <p class="text-center font-extrabold text-xl">Community</p>
+                <p class="text-center text-offset text-sm">Astro is an open source project powered by hundreds of
+                    contributors making thousands of individual contributions.</p></li>
+        </ul>
+    </section>
+    <section id="compatibility" class="flex scroll-mt-24 flex-col items-center gap-4 space-y-8">
+        <div class="flex flex-col items-center gap-4"><h2
+                class="gradient-text text-center font-extrabold tracking-tight text-6xl">Compatibility</h2></div>
+        <p class="max-w-xl text-center font-extrabold text-2xl">
+            Astro <span class="text-primary">plays nice</span>. Bring your own UI <span
+                class="text-primary">framework</span>
+            and deploy to your favorite <span class="text-primary">platform</span>.
+        </p>
+        <div class="w-full max-w-6xl space-y-2">
+            <div class="relative border border-default bg-offset px-6 pb-4 pt-8"><h3
+                    class="absolute right-4 top-0 -translate-y-1/2 rounded-full border border-current bg-default px-4 py-1 uppercase tracking-tight text-xs">
+                Frameworks</h3>
+                <ul class="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-6">
+                    <li><a class="flex flex-col items-center gap-2" href="https:/reactjs.org/">
+                        <svg fill="none" viewBox="0 0 190 190" class="h-12" astro-icon="frameworks/react">
+                            <path fill="currentColor"
+                                  d="M190 95c0-13-16-25-40-32 6-25 3-45-8-51l-8-2v9l4 1c5 3 8 14 6 29l-2 11-25-4c-5-7-10-14-16-19 13-12 25-18 33-18v-9c-11 0-25 8-39 21-14-13-28-21-39-21v9c8 0 20 6 33 18L73 56l-25 4-2-11c-2-15 1-26 6-29l4-1v-9l-9 2c-10 7-13 26-7 51C16 70 0 82 0 95c0 12 16 24 40 32-6 24-3 44 8 50 2 2 5 2 8 2 11 0 25-7 39-21 14 14 28 21 39 21l9-2c10-6 13-26 7-51 24-7 40-19 40-31Zm-50-26-6 15a184 184 0 0 0-10-18l16 3Zm-18 41-9 15a202 202 0 0 1-35 0 213 213 0 0 1-18-30 202 202 0 0 1 17-31 202 202 0 0 1 35 0 213 213 0 0 1 18 31l-8 15Zm12-5 6 15-16 4a212 212 0 0 0 10-19Zm-39 41-11-12a240 240 0 0 0 22 0l-11 12Zm-29-22-16-4 6-15a183 183 0 0 0 10 19Zm29-81 11 12a240 240 0 0 0-22 0l11-12ZM66 66a214 214 0 0 0-10 18l-6-15 16-3Zm-35 48c-14-6-22-13-22-19s8-14 22-20l11-4 9 24-9 23-11-4Zm21 56c-5-3-8-15-6-30l2-11 25 4c5 7 10 14 16 19-13 12-25 19-33 19l-4-1Zm92-30c2 15-1 26-6 29l-4 1c-8 0-20-6-33-18 6-5 11-12 16-19l25-4 2 11Zm15-26-11 4-9-23 9-24 11 4c14 6 22 14 22 20s-9 13-22 19Z"/>
+                            <path fill="currentColor" d="M95 112a18 18 0 1 0 0-35 18 18 0 0 0 0 35Z"/>
+                        </svg>
+                        <span>React</span></a></li>
+                    <li><a class="flex flex-col items-center gap-2" href="https:/preactjs.com/">
+                        <svg fill="none" viewBox="0 0 190 190" class="h-12" astro-icon="frameworks/preact">
+                            <path fill="currentColor"
+                                  d="m101 61 24-10c6-2 12-3 17-2 4 0 7 1 9 4 1 2 2 5 1 9l-6 16-10 13a181 181 0 0 0-35-30ZM54 91l-9-13c-4-6-6-11-7-16 0-4 0-7 2-9 2-3 4-4 9-4 4-1 10 0 17 2l24 10a190 190 0 0 0-36 30Z"/>
+                            <path fill="currentColor" fill-rule="evenodd"
+                                  d="M58 95a174 174 0 0 1 37-30 182 182 0 0 1 37 30 174 174 0 0 1-37 30 182 182 0 0 1-37-30Zm37 13a13 13 0 1 0 0-26 13 13 0 0 0 0 26Z"
+                                  clip-rule="evenodd"/>
+                            <path fill="currentColor"
+                                  d="m54 99-9 13c-4 6-6 11-7 16 0 4 0 7 2 9 2 3 4 4 9 4 4 1 10 0 17-2l24-10a191 191 0 0 1-36-30Zm47 30 24 10c6 2 12 3 17 2 4 0 7-1 9-4 1-2 2-5 1-9l-6-16-10-13a181 181 0 0 1-35 30Z"/>
+                            <path fill="currentColor" fill-rule="evenodd"
+                                  d="M178 48 95 0 13 48v95l82 47 83-47V48ZM95 58c10-6 20-10 28-13 7-2 14-3 19-2 6 0 10 2 13 6s4 9 3 14c-1 6-4 12-7 18l-11 14 11 14c3 6 6 12 7 18 1 5 0 10-3 14s-7 6-13 6c-5 1-12 0-19-2-8-3-18-7-28-13-10 6-19 10-28 13-7 2-13 3-19 2-5 0-10-2-13-6s-3-9-2-14c1-6 3-12 7-18l10-14-10-14c-4-6-6-12-7-18-1-5-1-10 2-14s8-6 13-6c6-1 12 0 19 2 9 3 18 7 28 13Z"
+                                  clip-rule="evenodd"/>
+                        </svg>
+                        <span>Preact</span></a></li>
+                    <li><a class="flex flex-col items-center gap-2" href="https:/svelte.dev/">
+                        <svg fill="none" viewBox="0 0 190 190" class="h-12" astro-icon="frameworks/svelte">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                  d="M87 14c23-15 56-8 72 15v1a50 50 0 0 1 9 38c-1 6-4 12-7 17a50 50 0 0 1-3 51c-4 5-8 10-14 13l-41 26a54 54 0 0 1-81-33v-20c1-7 3-13 7-18a50 50 0 0 1 2-50c4-6 9-10 14-14l42-26ZM63 161c6 2 13 3 20 1l8-4 41-26a28 28 0 0 0 13-31l-5-11a33 33 0 0 0-35-13l-9 4-15 10a9 9 0 0 1-9 0 10 10 0 0 1-6-6v-4a9 9 0 0 1 4-6l41-26 3-1a10 10 0 0 1 10 4l2 6v1l1 1c6 2 12 4 16 8l3 1v-2l1-4a30 30 0 0 0-5-23 33 33 0 0 0-35-13l-8 4-42 26a28 28 0 0 0-13 19 30 30 0 0 0 6 23 33 33 0 0 0 35 13c3 0 5-2 8-3l16-10 2-2a10 10 0 0 1 12 8l1 3a9 9 0 0 1-4 6l-42 26-2 1a10 10 0 0 1-12-10v-1l-2-1c-6-1-11-4-16-8l-2-1-1 2-1 4a30 30 0 0 0 5 23c4 5 10 10 16 12Z"
+                                  clip-rule="evenodd"/>
+                        </svg>
+                        <span>Svelte</span></a></li>
+                    <li><a class="flex flex-col items-center gap-2" href="https:/vuejs.org/">
+                        <svg fill="none" viewBox="0 0 190 190" class="h-12" astro-icon="frameworks/vue">
+                            <path fill="currentColor"
+                                  d="M149.4 17h36.026L95.361 173 5.296 17.001h36.026l54.04 93.597L149.4 17.001Z"/>
+                            <path fill="currentColor" fill-opacity=".45"
+                                  d="m116.16 17-20.8 36.027L74.561 17H41.322l54.04 93.597L149.4 17.001h-33.24Z"/>
+                        </svg>
+                        <span>Vue</span></a></li>
+                    <li><a class="flex flex-col items-center gap-2" href="https:/www.solidjs.com/">
+                        <svg fill="none" viewBox="0 0 190 190" class="h-12" astro-icon="frameworks/solid">
+                            <path fill="currentColor" fill-opacity=".85"
+                                  d="M127.61 135.052a48.108 48.108 0 0 0-51.32-16.038L10 140.398s56.667 42.767 100.503 32.075l3.208-1.069c18.176-5.346 24.591-22.453 13.899-36.352Z"/>
+                            <path fill="currentColor" fill-opacity=".65"
+                                  d="M125.783 81.773a48.113 48.113 0 0 1 23.211 15.857c5.346 8.554 6.415 17.107 2.138 24.592l-21.384 38.49-.434-.073c4.974-7.464 4.809-17.121-1.704-25.587a48.108 48.108 0 0 0-51.32-16.038L10 140.398l21.384-37.422 66.289-21.383a48.114 48.114 0 0 1 28.11.18Z"/>
+                            <path fill="currentColor" fill-opacity=".45"
+                                  d="m57.044 50.586 4.277-1.069c42.767-9.623 99.434 32.076 99.434 32.076l-21.092 7.144a48.114 48.114 0 0 0-41.99-7.144L51.96 96.339c-3.412-2.404-6.41-5.206-8.815-8.331-9.623-14.969-4.277-32.076 13.9-37.422Z"/>
+                            <path fill="currentColor" fill-opacity=".3"
+                                  d="M79.497 17.442C123.333 7.819 180 49.517 180 49.517l-19.245 32.076s-56.667-41.699-99.434-32.076l-4.277 1.07c-5.976 1.757-10.565 4.786-13.691 8.593l-.208-.04L59.182 31.34l2.139-3.207c3.207-4.277 8.553-7.485 14.968-9.623l3.208-1.07Z"/>
+                        </svg>
+                        <span>Solid</span></a></li>
+                    <li><a class="flex flex-col items-center gap-2" href="https:/lit.dev/">
+                        <svg fill="none" viewBox="0 0 190 190" class="h-12" astro-icon="frameworks/lit">
+                            <path fill="currentColor" d="M95 143V79l33-33v65l-33 32Zm-65 0 32 33v-65H46"/>
+                            <path fill="currentColor"
+                                  d="M62 111V46l33-32v65l-33 32Zm66 65v-65l32-32v64l-32 33Zm-98-33V79l32 32"/>
+                        </svg>
+                        <span>Lit</span></a></li>
+                </ul>
+            </div>
+            <p class="text-right text-sm"><a class="text-primary"
+                                             href="https:/docs.astro.build/core-concepts/framework-components/"> ...and
+                more &rarr;</a></p></div>
+        <div class="w-full max-w-6xl space-y-2">
+            <div class="relative border border-default bg-offset px-6 pb-4 pt-8"><h3
+                    class="absolute right-4 top-0 -translate-y-1/2 rounded-full border border-current bg-default px-4 py-1 uppercase tracking-tight text-xs">
+                Platforms</h3>
+                <ul class="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-6">
+                    <li><a class="flex flex-col items-center gap-2" href="https:/www.netlify.com/">
+                        <svg fill="none" viewBox="0 0 190 190" class="h-12" astro-icon="platforms/netlify">
+                            <path fill="currentColor"
+                                  d="m137.548 65.935-.069-.03a.285.285 0 0 1-.114-.064.543.543 0 0 1-.139-.461l3.83-23.419 17.963 17.968-18.681 7.948a.411.411 0 0 1-.164.03h-.074a.487.487 0 0 1-.099-.084 8.503 8.503 0 0 0-2.453-1.888Zm26.055-1.427 19.206 19.206c3.989 3.994 5.986 5.986 6.715 8.296.109.341.198.683.267 1.035l-45.9-19.44-.075-.029c-.183-.074-.396-.159-.396-.347 0-.188.218-.277.401-.352l.06-.024 19.722-8.345Zm25.405 34.702c-.991 1.863-2.923 3.795-6.194 7.071L161.16 127.93l-28.007-5.832-.149-.03c-.248-.04-.51-.084-.51-.307a8.46 8.46 0 0 0-3.246-5.912c-.114-.114-.084-.292-.05-.456 0-.024 0-.049.01-.069l5.268-32.338.02-.109c.029-.248.074-.535.297-.535a8.571 8.571 0 0 0 5.748-3.295c.045-.05.074-.105.134-.134.158-.075.347 0 .51.07l47.818 20.227h.005Zm-32.828 33.7-35.609 35.609 6.095-37.462.01-.05a.66.66 0 0 1 .03-.143c.049-.119.178-.169.302-.218l.06-.025a9.19 9.19 0 0 0 3.444-2.562c.118-.139.262-.273.445-.297a.435.435 0 0 1 .144 0l25.074 5.153.005-.005Zm-43.146 43.146-4.013 4.013-44.375-64.131a3.294 3.294 0 0 0-.05-.069c-.069-.094-.143-.188-.128-.297 0-.08.054-.149.109-.208l.05-.065c.133-.198.247-.396.371-.609l.1-.174.014-.015c.07-.119.134-.232.253-.297.104-.049.248-.03.362-.005l49.161 10.139a.804.804 0 0 1 .376.163c.065.065.079.134.094.213a8.7 8.7 0 0 0 5.094 5.823c.139.069.08.223.015.386a1.167 1.167 0 0 0-.074.223c-.62 3.766-5.932 36.164-7.359 44.91Zm-8.384 8.379c-2.958 2.928-4.703 4.479-6.675 5.104a9.909 9.909 0 0 1-5.976 0c-2.309-.734-4.306-2.726-8.295-6.719l-44.562-44.563 11.64-18.052a.74.74 0 0 1 .198-.233c.123-.089.302-.05.45 0 2.672.806 5.54.661 8.117-.411.134-.05.268-.085.372.01.052.047.099.1.139.158l44.592 64.711v-.005Zm-69.805-50.474-10.222-10.223 20.187-8.612a.401.401 0 0 1 .164-.035c.168 0 .268.169.357.322.202.312.417.616.644.912l.064.079c.06.084.02.169-.04.248L34.85 133.961h-.005ZM20.1 119.214 7.165 106.281c-2.2-2.2-3.795-3.796-4.905-5.169l39.325 8.157c.049.009.099.017.148.024.243.04.51.085.51.313 0 .247-.292.361-.54.456l-.114.049-21.49 9.103ZM0 94.462a9.91 9.91 0 0 1 .446-2.453c.733-2.309 2.725-4.3 6.72-8.295l16.55-16.55c7.62 11.06 15.261 22.105 22.923 33.136.134.178.282.376.129.525-.724.798-1.447 1.67-1.958 2.616a.794.794 0 0 1-.247.308c-.065.039-.134.024-.209.009h-.01L0 94.458v.004Zm28.146-31.728L50.39 40.48c2.096.917 9.712 4.133 16.516 7.007 5.153 2.18 9.85 4.162 11.328 4.806.148.06.282.12.346.268.04.089.02.203 0 .297a9.927 9.927 0 0 0 2.592 9.058c.149.149 0 .362-.129.545l-.07.104-22.595 35a.686.686 0 0 1-.213.247c-.12.074-.288.04-.426.005a11.265 11.265 0 0 0-2.691-.367c-.813 0-1.695.149-2.587.313h-.005c-.099.014-.188.034-.267-.025a1.042 1.042 0 0 1-.223-.253L28.14 62.734h.005Zm26.748-26.749 28.81-28.81C87.694 3.188 89.69 1.19 92 .462a9.91 9.91 0 0 1 5.976 0c2.309.729 4.306 2.726 8.295 6.715l6.244 6.243-20.49 31.734a.767.767 0 0 1-.203.238c-.124.084-.297.049-.446 0a10.391 10.391 0 0 0-9.514 1.833c-.134.139-.332.06-.5-.015-2.677-1.164-23.489-9.96-26.467-11.224Zm61.971-18.215 18.919 18.919-4.559 28.235v.074a.64.64 0 0 1-.04.189c-.049.099-.148.119-.247.148a9.067 9.067 0 0 0-2.716 1.353.813.813 0 0 0-.099.084c-.054.06-.109.114-.198.124a.565.565 0 0 1-.213-.034l-28.83-12.25-.054-.025c-.184-.074-.402-.163-.402-.351a10.89 10.89 0 0 0-1.536-4.534c-.139-.228-.292-.466-.173-.7l20.148-31.232ZM97.381 60.415l27.026 11.446c.148.07.312.134.376.288a.521.521 0 0 1 0 .282 6.74 6.74 0 0 0-.148 1.303v.759c0 .188-.194.267-.372.342l-.055.02c-4.281 1.828-60.107 25.633-60.191 25.633-.084 0-.173 0-.258-.084-.148-.149 0-.357.134-.545l.07-.1L86.171 65.37l.04-.06c.128-.207.277-.44.515-.44l.223.034c.505.07.951.134 1.402.134 3.37 0 6.492-1.64 8.375-4.445a.79.79 0 0 1 .168-.198c.134-.1.332-.05.486.02Zm-30.95 45.514 60.85-25.95s.089 0 .173.083c.332.332.615.555.887.764l.134.084c.124.07.248.148.258.277 0 .05 0 .08-.01.124l-5.213 32.021-.02.129c-.035.248-.069.53-.302.53a8.574 8.574 0 0 0-6.804 4.197l-.025.04c-.069.114-.133.223-.247.282-.105.05-.238.03-.347.005l-48.527-10.009c-.05-.01-.753-2.572-.808-2.577Z"/>
+                        </svg>
+                        <span>Netlify</span></a></li>
+                    <li><a class="flex flex-col items-center gap-2" href="https:/vercel.com/">
+                        <svg fill="none" viewBox="0 0 190 190" class="h-12" astro-icon="platforms/vercel">
+                            <path fill="currentColor" d="m95 13 95 164.546H0L95 13Z"/>
+                        </svg>
+                        <span>Vercel</span></a></li>
+                    <li><a class="flex flex-col items-center gap-2" href="https:/pages.cloudflare.com/">
+                        <svg viewBox="0 0 640 512" class="h-12" astro-icon="fa-brands:cloudflare">
+                            <path fill="currentColor"
+                                  d="m407.906 319.913-230.8-2.928a4.58 4.58 0 0 1-3.632-1.926 4.648 4.648 0 0 1-.494-4.147 6.143 6.143 0 0 1 5.361-4.076l232.94-2.936c27.631-1.26 57.546-23.574 68.022-50.784l13.286-34.542a7.944 7.944 0 0 0 .524-2.936 7.735 7.735 0 0 0-.164-1.631A151.91 151.91 0 0 0 201.257 198.4 68.12 68.12 0 0 0 94.2 269.59C41.924 271.106 0 313.728 0 366.12a96.054 96.054 0 0 0 1.029 13.958 4.508 4.508 0 0 0 4.445 3.871l426.1.051c.043 0 .08-.019.122-.02a5.606 5.606 0 0 0 5.271-4l3.273-11.265c3.9-13.4 2.448-25.8-4.1-34.9-6.016-8.392-16.05-13.328-28.234-13.902zm105.95-98.813c-2.141 0-4.271.062-6.391.164a3.771 3.771 0 0 0-3.324 2.653l-9.077 31.193c-3.9 13.4-2.449 25.786 4.1 34.89 6.02 8.4 16.054 13.323 28.238 13.9l49.2 2.939a4.491 4.491 0 0 1 3.51 1.894 4.64 4.64 0 0 1 .514 4.169 6.153 6.153 0 0 1-5.351 4.075l-51.125 2.939c-27.754 1.27-57.669 23.574-68.145 50.784l-3.695 9.606a2.716 2.716 0 0 0 2.427 3.68c.046 0 .088.017.136.017h175.91a4.69 4.69 0 0 0 4.539-3.37 124.807 124.807 0 0 0 4.682-34C640 277.3 583.524 221.1 513.856 221.1z"/>
+                        </svg>
+                        <span>Cloudflare</span></a></li>
+                    <li><a class="flex flex-col items-center gap-2" href="https:/render.com/">
+                        <svg fill="none" viewBox="0 0 190 190" class="h-12" astro-icon="platforms/render">
+                            <path fill="currentColor"
+                                  d="M113.3 0h-2v22.6h22.6V0h-20.6ZM53.5 0c-7.2 0-14.2 1.4-20.8 4.2-6.4 2.7-12.1 6.6-17 11.5s-8.8 10.6-11.5 17C1.4 39.3 0 46.3 0 53.5v80.4h22.6V53.2c.4-8.1 3.8-15.7 9.5-21.3 5.8-5.7 13.4-9 21.5-9.3h43.2V0H53.5ZM150.4 74.2h-2v22.6H171V74.2h-20.6ZM150.4 37.1h-2v22.6H171V37.1h-20.6ZM169 0h-20.6v22.6H171V0h-2ZM150.4 111.3h-2v22.6H171v-22.6h-20.6ZM150.4 148.4h-2V171H171v-22.6h-20.6ZM113.3 148.4h-2V171h22.6v-22.6h-20.6ZM76.2 148.4h-2V171h22.6v-22.6H76.2ZM39.1 148.4h-2V171h22.6v-22.6H39.1ZM2 148.4H0V171h22.6v-22.6H2Z"/>
+                        </svg>
+                        <span>Render</span></a></li>
+                    <li><a class="flex flex-col items-center gap-2" href="https:/pages.github.com/">
+                        <svg viewBox="0 0 496 512" class="h-12" astro-icon="fa-brands:github">
+                            <path fill="currentColor"
+                                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+                        </svg>
+                        <span>GitHub</span></a></li>
+                    <li><a class="flex flex-col items-center gap-2"
+                           href="https:/docs.gitlab.com/ee/user/project/pages/">
+                        <svg viewBox="0 0 512 512" class="h-12" astro-icon="fa-brands:gitlab">
+                            <path fill="currentColor"
+                                  d="M105.2 24.9c-3.1-8.9-15.7-8.9-18.9 0L29.8 199.7h132c-.1 0-56.6-174.8-56.6-174.8zM.9 287.7c-2.6 8 .3 16.9 7.1 22l247.9 184-226.2-294zm160.8-88 94.3 294 94.3-294zm349.4 88-28.8-88-226.3 294 247.9-184c6.9-5.1 9.7-14 7.2-22zM425.7 24.9c-3.1-8.9-15.7-8.9-18.9 0l-56.6 174.8h132z"/>
+                        </svg>
+                        <span>GitLab</span></a></li>
+                </ul>
+            </div>
+            <p class="text-right text-sm"><a class="text-primary" href="https:/docs.astro.build/guides/deploy/"> ...and
+                more &rarr;</a></p></div>
+    </section>
+    <section id="showcase" class="flex scroll-mt-24 flex-col items-center gap-4 space-y-8">
+        <div class="flex flex-col items-center gap-4"><h2
+                class="gradient-text text-center font-extrabold tracking-tight text-6xl">Showcase</h2></div>
+        <p class="max-w-xl text-center font-extrabold text-2xl">
+            Astro is <span class="text-primary">versatile</span>. <span class="text-primary">Explore</span> what's
+            possible and get <span class="text-primary">inspired</span>.
+        </p>
+        <div class="max-w-6xl space-y-2">
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"><a
+                    class="group aspect-video hover:!text-default" href="https:/polinations.com/">
+                <figure class="relative h-full w-full overflow-hidden"><img
+                        src="/_astro/polinations.ae105e63_ZB1fq4.webp"
+                        srcset="/_astro/polinations.ae105e63_Z2d70aa.webp 450w, /_astro/polinations.ae105e63_1BuDV5.webp 800w"
+                        class="h-full w-full bg-cover object-cover transition-all duration-300 group-hover:scale-110 group-hover:opacity-20 group-focus:scale-110 group-focus:opacity-20"
+                        sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                        alt="A screenshot of https:/polinations.com/" width="1585" height="900" loading="lazy"
+                        decoding="async">
+                    <figcaption class="absolute inset-0">
+                        <div class="flex h-full flex-col items-center justify-center gap-2 opacity-0 transition-all duration-300 group-hover:opacity-100 group-focus:opacity-100">
+                            <h3 class="text-center font-extrabold uppercase text-xl">PoliNations</h3>
+                            <p class="border border-current px-4 py-2">https:/polinations.com/</p></div>
+                    </figcaption>
+                </figure>
+            </a><a class="group aspect-video hover:!text-default" href="https:/docs.astro.build/">
+                <figure class="relative h-full w-full overflow-hidden"><img
+                        src="/_astro/astro-docs.5eb89d4c_Z65L07.webp"
+                        srcset="/_astro/astro-docs.5eb89d4c_Z1g211.webp 450w, /_astro/astro-docs.5eb89d4c_13uKjc.webp 800w"
+                        class="h-full w-full bg-cover object-cover transition-all duration-300 group-hover:scale-110 group-hover:opacity-20 group-focus:scale-110 group-focus:opacity-20"
+                        sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                        alt="A screenshot of https:/docs.astro.build/" width="906" height="514" loading="lazy"
+                        decoding="async">
+                    <figcaption class="absolute inset-0">
+                        <div class="flex h-full flex-col items-center justify-center gap-2 opacity-0 transition-all duration-300 group-hover:opacity-100 group-focus:opacity-100">
+                            <h3 class="text-center font-extrabold uppercase text-xl">Astro Docs</h3>
+                            <p class="border border-current px-4 py-2">https:/docs.astro.build/</p></div>
+                    </figcaption>
+                </figure>
+            </a><a class="group aspect-video hover:!text-default" href="https:/divriots.com/">
+                <figure class="relative h-full w-full overflow-hidden"><img src="/_astro/divriots.f6227937_ZW72Uv.webp"
+                                                                            srcset="/_astro/divriots.f6227937_Zi8yt3.webp 450w, /_astro/divriots.f6227937_LCdQa.webp 800w"
+                                                                            class="h-full w-full bg-cover object-cover transition-all duration-300 group-hover:scale-110 group-hover:opacity-20 group-focus:scale-110 group-focus:opacity-20"
+                                                                            sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                                                                            alt="A screenshot of https:/divriots.com/"
+                                                                            width="906" height="514" loading="lazy"
+                                                                            decoding="async">
+                    <figcaption class="absolute inset-0">
+                        <div class="flex h-full flex-col items-center justify-center gap-2 opacity-0 transition-all duration-300 group-hover:opacity-100 group-focus:opacity-100">
+                            <h3 class="text-center font-extrabold uppercase text-xl">&lt;div&gt;RIOTS</h3>
+                            <p class="border border-current px-4 py-2">https:/divriots.com/</p></div>
+                    </figcaption>
+                </figure>
+            </a><a class="group aspect-video hover:!text-default" href="https:/designcember.com/">
+                <figure class="relative h-full w-full overflow-hidden"><img
+                        src="/_astro/designcember.915803bf_kxAzh.webp"
+                        srcset="/_astro/designcember.915803bf_ZioRap.webp 450w, /_astro/designcember.915803bf_Z1xYlS6.webp 800w"
+                        class="h-full w-full bg-cover object-cover transition-all duration-300 group-hover:scale-110 group-hover:opacity-20 group-focus:scale-110 group-focus:opacity-20"
+                        sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                        alt="A screenshot of https:/designcember.com/" width="1585" height="900" loading="lazy"
+                        decoding="async">
+                    <figcaption class="absolute inset-0">
+                        <div class="flex h-full flex-col items-center justify-center gap-2 opacity-0 transition-all duration-300 group-hover:opacity-100 group-focus:opacity-100">
+                            <h3 class="text-center font-extrabold uppercase text-xl">Designcember</h3>
+                            <p class="border border-current px-4 py-2">https:/designcember.com/</p></div>
+                    </figcaption>
+                </figure>
+            </a><a class="group aspect-video hover:!text-default" href="https:/firebase.blog/">
+                <figure class="relative h-full w-full overflow-hidden"><img
+                        src="/_astro/firebase-blog.7271bb69_ZB8lAp.webp"
+                        srcset="/_astro/firebase-blog.7271bb69_1XxoUt.webp 450w, /_astro/firebase-blog.7271bb69_HWUcM.webp 800w"
+                        class="h-full w-full bg-cover object-cover transition-all duration-300 group-hover:scale-110 group-hover:opacity-20 group-focus:scale-110 group-focus:opacity-20"
+                        sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                        alt="A screenshot of https:/firebase.blog/" width="1585" height="900" loading="lazy"
+                        decoding="async">
+                    <figcaption class="absolute inset-0">
+                        <div class="flex h-full flex-col items-center justify-center gap-2 opacity-0 transition-all duration-300 group-hover:opacity-100 group-focus:opacity-100">
+                            <h3 class="text-center font-extrabold uppercase text-xl">The Firebase Blog</h3>
+                            <p class="border border-current px-4 py-2">https:/firebase.blog/</p></div>
+                    </figcaption>
+                </figure>
+            </a><a class="group aspect-video hover:!text-default" href="https:/corset.dev/">
+                <figure class="relative h-full w-full overflow-hidden"><img src="/_astro/corset.58163425_Z17iGUm.webp"
+                                                                            srcset="/_astro/corset.58163425_Z23CF5H.webp 450w, /_astro/corset.58163425_ZXQRKu.webp 800w"
+                                                                            class="h-full w-full bg-cover object-cover transition-all duration-300 group-hover:scale-110 group-hover:opacity-20 group-focus:scale-110 group-focus:opacity-20"
+                                                                            sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                                                                            alt="A screenshot of https:/corset.dev/"
+                                                                            width="906" height="514" loading="lazy"
+                                                                            decoding="async">
+                    <figcaption class="absolute inset-0">
+                        <div class="flex h-full flex-col items-center justify-center gap-2 opacity-0 transition-all duration-300 group-hover:opacity-100 group-focus:opacity-100">
+                            <h3 class="text-center font-extrabold uppercase text-xl">Corset</h3>
+                            <p class="border border-current px-4 py-2">https:/corset.dev/</p></div>
+                    </figcaption>
+                </figure>
+            </a></div>
+            <p class="text-right text-sm"><a class="text-primary" href="https:/astro.build/showcase/">
+                ...and more &rarr;
+            </a></p></div>
+    </section>
+</div>
+
+
+<footer class="relative flex h-64 items-center justify-center">
+    <div class="absolute inset-0 overflow-hidden opacity-40">
+        <img alt="The ridged surface of the moon"
+             class="h-full w-full object-cover"
+             decoding="async" height="1080"
+             loading="lazy" sizes="100vw"
+             src="/_astro/moon.e37745fc_Zn2WgT.webp" srcset="/_astro/moon.e37745fc_Z1D3sGJ.webp 450w, /_astro/moon.e37745fc_Z8M5Do.webp 800w, /_astro/moon.e37745fc_Qimw0.webp 1200w" width="1920"></div>
+
+    <ul class="relative grid grid-cols-2 gap-4 sm:grid-cols-4">
+        <li>
+            <a class="flex h-16 w-16 items-center justify-center rounded-full border-2 border-current p-4"
+               href="https://gui.expert/"><span class="sr-only">GUI Expert&#39;s official website</span>
+                <svg astro-icon="mdi:home" class="h-full" viewBox="0 0 24 24">
+                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z" fill="currentColor"/>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a class="flex h-16 w-16 items-center justify-center rounded-full border-2 border-current p-4"
+               href="https://github.com/guiexperttable/ge-table"><span class="sr-only">View source on GitHub</span>
+                <svg astro-icon="fa-brands:github-alt" class="h-full" viewBox="0 0 480 512">
+                    <path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"
+                          fill="currentColor"/>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a class="flex h-16 w-16 items-center justify-center rounded-full border-2 border-current p-4"
+               href="https:/astro.build/chat"><span class="sr-only">GUI Expert on Discord</span>
+                <svg astro-icon="fa-brands:discord" class="h-full" viewBox="0 0 640 512">
+                    <path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541zM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241z"
+                          fill="currentColor"/>
+                </svg>
+            </a></li>
+        <li>
+            <a class="flex h-16 w-16 items-center justify-center rounded-full border-2 border-current p-4"
+               href="https://twitter.com/guiexpertgmbh"><span class="sr-only">GUI Expert on Twitter</span>
+                <svg astro-icon="fa-brands:twitter" class="h-full" viewBox="0 0 512 512">
+                    <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                          fill="currentColor"/>
+                </svg>
+            </a>
+        </li>
+    </ul>
+</footer>
+
+
+
+<script>
+
+  function oe(n, t) {
+    for (var o = 0; o < t.length; o++) {
+      var e = t[o];
+      e.enumerable = e.enumerable || !1, e.configurable = !0, "value" in e && (e.writable = !0), Object.defineProperty(n, e.key, e)
+    }
+  }
+
+  function v(n) {
+    return function (t) {
+      if (Array.isArray(t)) return b(t)
+    }(n) || function (t) {
+      if (typeof Symbol < "u" && Symbol.iterator in Object(t)) return Array.from(t)
+    }(n) || function (t, o) {
+      if (t) {
+        if (typeof t == "string") return b(t, o);
+        var e = Object.prototype.toString.call(t).slice(8, -1);
+        if (e === "Object" && t.constructor && (e = t.constructor.name), e === "Map" || e === "Set") return Array.from(t);
+        if (e === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(e)) return b(t, o)
+      }
+    }(n) || function () {
+      throw new TypeError(`Invalid attempt to spread non-iterable instance.
+In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`)
+    }()
+  }
+
+  function b(n, t) {
+    (t == null || t > n.length) && (t = n.length);
+    for (var o = 0, e = new Array(t); o < t; o++) e[o] = n[o];
+    return e
+  }
+
+  var q, p, d, w, I,
+    M = (q = ["a[href]", "area[href]", 'input:not([disabled]):not([type="hidden"]):not([aria-hidden])', "select:not([disabled]):not([aria-hidden])", "textarea:not([disabled]):not([aria-hidden])", "button:not([disabled]):not([aria-hidden])", "iframe", "object", "embed", "[contenteditable]", '[tabindex]:not([tabindex^="-"])'], p = function () {
+      function n(e) {
+        var i = e.targetModal, r = e.triggers, a = r === void 0 ? [] : r, u = e.onShow, l = u === void 0 ? function () {
+          } : u, f = e.onClose, m = f === void 0 ? function () {
+          } : f, S = e.openTrigger, J = S === void 0 ? "data-micromodal-trigger" : S, A = e.closeTrigger,
+          Q = A === void 0 ? "data-micromodal-close" : A, L = e.openClass, V = L === void 0 ? "is-open" : L,
+          T = e.disableScroll, X = T !== void 0 && T, P = e.disableFocus, Y = P !== void 0 && P,
+          F = e.awaitCloseAnimation, Z = F !== void 0 && F, N = e.awaitOpenAnimation, _ = N !== void 0 && N,
+          O = e.debugMode, ee = O !== void 0 && O;
+        (function (te, ne) {
+          if (!(te instanceof ne)) throw new TypeError("Cannot call a class as a function")
+        })(this, n), this.modal = document.getElementById(i), this.config = {
+          debugMode: ee,
+          disableScroll: X,
+          openTrigger: J,
+          closeTrigger: Q,
+          openClass: V,
+          onShow: l,
+          onClose: m,
+          awaitCloseAnimation: Z,
+          awaitOpenAnimation: _,
+          disableFocus: Y
+        }, a.length > 0 && this.registerTriggers.apply(this, v(a)), this.onClick = this.onClick.bind(this), this.onKeydown = this.onKeydown.bind(this)
+      }
+
+      var t, o;
+      return t = n, (o = [{
+        key: "registerTriggers", value: function () {
+          for (var e = this, i = arguments.length, r = new Array(i), a = 0; a < i; a++) r[a] = arguments[a];
+          r.filter(Boolean).forEach(function (u) {
+            u.addEventListener("click", function (l) {
+              return e.showModal(l)
+            })
+          })
+        }
+      }, {
+        key: "showModal", value: function () {
+          var e = this, i = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : null;
+          if (this.activeElement = document.activeElement, this.modal.setAttribute("aria-hidden", "false"), this.modal.classList.add(this.config.openClass), this.scrollBehaviour("disable"), this.addEventListeners(), this.config.awaitOpenAnimation) {
+            var r = function a() {
+              e.modal.removeEventListener("animationend", a, !1), e.setFocusToFirstNode()
+            };
+            this.modal.addEventListener("animationend", r, !1)
+          } else this.setFocusToFirstNode();
+          this.config.onShow(this.modal, this.activeElement, i)
+        }
+      }, {
+        key: "closeModal", value: function () {
+          var e = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : null, i = this.modal;
+          if (this.modal.setAttribute("aria-hidden", "true"), this.removeEventListeners(), this.scrollBehaviour("enable"), this.activeElement && this.activeElement.focus && this.activeElement.focus(), this.config.onClose(this.modal, this.activeElement, e), this.config.awaitCloseAnimation) {
+            var r = this.config.openClass;
+            this.modal.addEventListener("animationend", function a() {
+              i.classList.remove(r), i.removeEventListener("animationend", a, !1)
+            }, !1)
+          } else i.classList.remove(this.config.openClass)
+        }
+      }, {
+        key: "closeModalById", value: function (e) {
+          this.modal = document.getElementById(e), this.modal && this.closeModal()
+        }
+      }, {
+        key: "scrollBehaviour", value: function (e) {
+          if (this.config.disableScroll) {
+            var i = document.querySelector("body");
+            switch (e) {
+              case"enable":
+                Object.assign(i.style, {overflow: ""});
+                break;
+              case"disable":
+                Object.assign(i.style, {overflow: "hidden"})
+            }
+          }
+        }
+      }, {
+        key: "addEventListeners", value: function () {
+          this.modal.addEventListener("touchstart", this.onClick), this.modal.addEventListener("click", this.onClick), document.addEventListener("keydown", this.onKeydown)
+        }
+      }, {
+        key: "removeEventListeners", value: function () {
+          this.modal.removeEventListener("touchstart", this.onClick), this.modal.removeEventListener("click", this.onClick), document.removeEventListener("keydown", this.onKeydown)
+        }
+      }, {
+        key: "onClick", value: function (e) {
+          (e.target.hasAttribute(this.config.closeTrigger) || e.target.parentNode.hasAttribute(this.config.closeTrigger)) && (e.preventDefault(), e.stopPropagation(), this.closeModal(e))
+        }
+      }, {
+        key: "onKeydown", value: function (e) {
+          e.keyCode === 27 && this.closeModal(e), e.keyCode === 9 && this.retainFocus(e)
+        }
+      }, {
+        key: "getFocusableNodes", value: function () {
+          var e = this.modal.querySelectorAll(q);
+          return Array.apply(void 0, v(e))
+        }
+      }, {
+        key: "setFocusToFirstNode", value: function () {
+          var e = this;
+          if (!this.config.disableFocus) {
+            var i = this.getFocusableNodes();
+            if (i.length !== 0) {
+              var r = i.filter(function (a) {
+                return !a.hasAttribute(e.config.closeTrigger)
+              });
+              r.length > 0 && r[0].focus(), r.length === 0 && i[0].focus()
+            }
+          }
+        }
+      }, {
+        key: "retainFocus", value: function (e) {
+          var i = this.getFocusableNodes();
+          if (i.length !== 0) if (i = i.filter(function (a) {
+            return a.offsetParent !== null
+          }), this.modal.contains(document.activeElement)) {
+            var r = i.indexOf(document.activeElement);
+            e.shiftKey && r === 0 && (i[i.length - 1].focus(), e.preventDefault()), !e.shiftKey && i.length > 0 && r === i.length - 1 && (i[0].focus(), e.preventDefault())
+          } else i[0].focus()
+        }
+      }]) && oe(t.prototype, o), n
+    }(), d = null, w = function (n) {
+      if (!document.getElementById(n)) return console.warn("MicroModal: ❗Seems like you have missed %c'".concat(n, "'"), "background-color: #f8f9fa;color: #50596c;font-weight: bold;", "ID somewhere in your code. Refer example below to resolve it."), console.warn("%cExample:", "background-color: #f8f9fa;color: #50596c;font-weight: bold;", '<div class="modal" id="'.concat(n, '"></div>')), !1
+    }, I = function (n, t) {
+      if (function (e) {
+        e.length <= 0 && (console.warn("MicroModal: ❗Please specify at least one %c'micromodal-trigger'", "background-color: #f8f9fa;color: #50596c;font-weight: bold;", "data attribute."), console.warn("%cExample:", "background-color: #f8f9fa;color: #50596c;font-weight: bold;", '<a href="#" data-micromodal-trigger="my-modal"></a>'))
+      }(n), !t) return !0;
+      for (var o in t) w(o);
+      return !0
+    }, {
+      init: function (n) {
+        var t = Object.assign({}, {openTrigger: "data-micromodal-trigger"}, n),
+          o = v(document.querySelectorAll("[".concat(t.openTrigger, "]"))), e = function (a, u) {
+            var l = [];
+            return a.forEach(function (f) {
+              var m = f.attributes[u].value;
+              l[m] === void 0 && (l[m] = []), l[m].push(f)
+            }), l
+          }(o, t.openTrigger);
+        if (t.debugMode !== !0 || I(o, e) !== !1) for (var i in e) {
+          var r = e[i];
+          t.targetModal = i, t.triggers = v(r), d = new p(t)
+        }
+      }, show: function (n, t) {
+        var o = t || {};
+        o.targetModal = n, o.debugMode === !0 && w(n) === !1 || (d && d.removeEventListeners(), (d = new p(o)).showModal())
+      }, close: function (n) {
+        n ? d.closeModalById(n) : d.closeModal()
+      }
+    });
+  typeof window < "u" && (window.MicroModal = M);
+  var ie = !0, E = "Invariant failed";
+
+  function s(n, t) {
+    if (!n) {
+      if (ie) throw new Error(E);
+      var o = typeof t == "function" ? t() : t, e = o ? "".concat(E, ": ").concat(o) : E;
+      throw new Error(e)
+    }
+  }
+
+  const C = "menu-modal", x = document.querySelector("#page-header"), B = document.documentElement,
+    z = document.querySelector(`#${C} ul`), j = document.querySelector("#open-nav-button"),
+    K = document.querySelector("#close-nav-button");
+  s(x, "header should not be null");
+  s(z, "menu should not be null");
+  s(j, "openNavButton should not be null");
+  s(K, "closeNavButton should not be null");
+  const re = () => {
+    M.show(C, {disableScroll: !0})
+  }, $ = () => {
+    M.close(C)
+  };
+  j.addEventListener("click", re);
+  K.addEventListener("click", $);
+  document.addEventListener("scroll", () => {
+    const n = B.clientHeight - B.scrollTop - x.offsetHeight;
+    x.classList.toggle("fixed-header", n < 0)
+  });
+  z.addEventListener("click", n => {
+    n.target.tagName === "A" && $()
+  });
+  const k = ["light", "dark"], D = document.querySelector("#theme-switcher");
+  s(D, "button should not be null");
+  const H = () => document.documentElement.dataset.theme, R = () => {
+    const n = H();
+    s(n, "themeCurrent should not be undefined");
+    const t = k.indexOf(n);
+    return k[(t + 1) % k.length]
+  }, W = () => {
+    const n = H();
+    document.querySelector(`#icon-theme-${n}`)?.classList.add("hidden");
+    const t = R();
+    document.querySelector(`#icon-theme-${t}`)?.classList.remove("hidden")
+  };
+  D.addEventListener("click", () => {
+    const n = R();
+    document.documentElement.dataset.theme = n, localStorage.setItem("theme", n), W()
+  });
+  W();
+  const ae = 800, se = .1;
+
+  class le {
+    x;
+    y;
+    z;
+    xPrev;
+    yPrev;
+
+    constructor(t = 0, o = 0, e = 0) {
+      this.x = t, this.y = o, this.z = e, this.xPrev = t, this.yPrev = o
+    }
+
+    update(t, o, e) {
+      this.xPrev = this.x, this.yPrev = this.y, this.z += e * .0675, this.x += this.x * (e * .0225) * this.z, this.y += this.y * (e * .0225) * this.z, (this.x > t / 2 || this.x < -t / 2 || this.y > o / 2 || this.y < -o / 2) && (this.x = Math.random() * t - t / 2, this.y = Math.random() * o - o / 2, this.xPrev = this.x, this.yPrev = this.y, this.z = 0)
+    }
+
+    draw(t) {
+      t.lineWidth = this.z, t.beginPath(), t.moveTo(this.x, this.y), t.lineTo(this.xPrev, this.yPrev), t.stroke()
+    }
+  }
+
+  const U = Array.from({length: ae}, () => new le(0, 0, 0));
+  let g = 0;
+  const h = document.querySelector("#starfield-canvas");
+  s(h, "canvas should not be null");
+  const c = h.getContext("2d"), y = document.querySelector("#starfield");
+  s(y, "container should not be null");
+  const ce = new ResizeObserver(de);
+  ce.observe(y);
+
+  function de() {
+    s(c, "canvas context should not be null"), g > 0 && cancelAnimationFrame(g);
+    const {clientWidth: n, clientHeight: t} = y, o = window.devicePixelRatio || 1;
+    h.width = n * o, h.height = t * o, h.style.width = `${n}px`, h.style.height = `${t}px`, c.scale(o, o);
+    for (const e of U) e.x = Math.random() * n - n / 2, e.y = Math.random() * t - t / 2, e.z = 0;
+    c.translate(n / 2, t / 2), c.fillStyle = "rgba(0, 0, 0, 0.4)", c.strokeStyle = "white", g = requestAnimationFrame(G)
+  }
+
+  function G() {
+    s(c, "canvas context should not be null");
+    const {clientWidth: n, clientHeight: t} = y;
+    for (const o of U) o.update(n, t, se), o.draw(c);
+    c.fillRect(-n / 2, -t / 2, n, t), g = requestAnimationFrame(G)
+  }
+
+
+</script>
+
+</body>
+</html>
