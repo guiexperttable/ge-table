@@ -25,7 +25,10 @@
         "styles": [
           "node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
           "apps/table-website/src/styles.scss",
-          "apps/table-style/src/styles.scss"
+          "libs/table/css/table-classes.css",
+          "libs/table/css/table-tree.css",
+          "libs/table/css/table-color-vars.css",
+          "libs/table/css/table-color-classes.css"
         ],
         "scripts": [
           "node_modules/prismjs/prism.js",

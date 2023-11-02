@@ -7,7 +7,7 @@
   "targets": {
     "build": {
       "stylePreprocessorOptions": {
-        "includePaths": [ "apps/table-style/src" ]
+        "includePaths": [ "libs/table/css" ]
       },
       "executor": "@nrwl/angular:package",
       "outputs": ["{workspaceRoot}/dist/libs/angular-table"],

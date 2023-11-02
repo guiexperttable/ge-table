@@ -3,5 +3,11 @@
   "dest": "../../dist/libs/table",
   "lib": {
     "entryFile": "src/index.ts"
-  }
+  },
+  "assets": [
+    "css/table-classes.css",
+    "css/table-color-classes.css",
+    "css/table-color-vars.css",
+    "css/table-tree.css"
+  ]
 }

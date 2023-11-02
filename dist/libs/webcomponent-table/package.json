@@ -1,8 +1,0 @@
-{
-  "name": "@guiexpert/webcomponent-table",
-  "version": "1.0.1",
-  "scripts": {
-    "publish": "npm publish --access=public"
-  },
-  "type": "commonjs"
-}

@@ -8,7 +8,7 @@
     "build": "nx build",
     "build:all": "npm run _update-build-version & nx run-many --all --target=build",
     "build:table-website": "nx run table-website:build:production",
-    "build:table-style": "nx run @guiexpert/table-style:build:production",
+    "build:table": "nx run @guiexpert/table:build:production",
     "build:angular-table": "npm run _update-build-version & nx run @guiexpert/angular-table:build:production",
     "build:react-table": "nx run @guiexpert/react-table:build:production",
     "build:vue3-table": "nx run @guiexpert/vue3-table:build:production",
@@ -58,7 +58,9 @@
     "docker:container-remove": "docker container rm guiexpert -f",
     "docker:compose:build": "docker compose build",
     "docker:compose:up": "docker compose up",
-    "docker:compose:up-and-build": "docker compose up --build"
+    "docker:compose:up-and-build": "docker compose up --build",
+    "npm-pub:table": "npm publish dist/libs/table --access public",
+    "npm-pub:angular-table": "npm publish dist/libs/angular-table --access public"
   },
   "private": false,
   "dependencies": {

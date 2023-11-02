@@ -1,10 +1,9 @@
 {
   "name": "@guiexpert/table",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "scripts": {
     "typedoc:json": "npx typedoc --json ../../apps/table-website/src/assets/json/doctype.json src/index.ts",
-    "typedoc:docs": "npx typedoc --out ../../apps/table-website/src/assets/docs src/index.ts",
-    "publish": "npm publish --access=public"
+    "typedoc:docs": "npx typedoc --out ../../apps/table-website/src/assets/docs src/index.ts"
   },
   "peerDependencies": {
   },

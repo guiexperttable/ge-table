@@ -23,7 +23,6 @@
       "@guiexpert/solid-table": ["libs/solid-table/src/index.ts"],
       "@guiexpert/svelte-table": ["libs/svelte-table/src/index.ts"],
       "@guiexpert/table": ["libs/table/src/index.ts"],
-      "@guiexpert/table-style": ["apps/table-style/src"],
       "@guiexpert/vue3-table": ["libs/vue3-table/src/index.ts"],
       "@guiexpert/webcomponent-table": ["libs/webcomponent-table/src/index.ts"]
     },

@@ -1,9 +1,0 @@
-export class ValueLabel {
-    value;
-    label;
-    constructor(value, label) {
-        this.value = value;
-        this.label = label;
-    }
-}
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidmFsdWUtbGFiZWwuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi9saWJzL3RhYmxlL3NyYy9saWIvdGFibGUvZGF0YS9jb21tb24vdmFsdWUtbGFiZWwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBR0EsTUFBTSxPQUFPLFVBQVU7SUFJWjtJQUNBO0lBRlQsWUFDUyxLQUFVLEVBQ1YsS0FBYTtRQURiLFVBQUssR0FBTCxLQUFLLENBQUs7UUFDVixVQUFLLEdBQUwsS0FBSyxDQUFRO0lBRXRCLENBQUM7Q0FFRiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IFZhbHVlTGFiZWxJZiB9IGZyb20gXCIuL3ZhbHVlLWxhYmVsLmlmXCI7XG5cblxuZXhwb3J0IGNsYXNzIFZhbHVlTGFiZWwgaW1wbGVtZW50cyBWYWx1ZUxhYmVsSWYge1xuXG5cbiAgY29uc3RydWN0b3IoXG4gICAgcHVibGljIHZhbHVlOiBhbnksXG4gICAgcHVibGljIGxhYmVsOiBzdHJpbmdcbiAgKSB7XG4gIH1cblxufVxuIl19

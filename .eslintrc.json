@@ -29,14 +29,7 @@
                 "sourceTag": "scope:table-website",
                 "onlyDependOnLibsWithTags": [
                   "scope:table-website",
-                  "scope:table-style",
                   "scope:demo-table-models"
-                ]
-              },
-              {
-                "sourceTag": "scope:table-style",
-                "onlyDependOnLibsWithTags": [
-                  "scope:table-style"
                 ]
               },
               {
@@ -44,8 +37,7 @@
                 "onlyDependOnLibsWithTags": [
                   "scope:angular-table",
                   "scope:table",
-                  "scope:demo-table-models",
-                  "scope:table-style"
+                  "scope:demo-table-models"
                 ]
               },
              {
@@ -57,8 +49,7 @@
               {
                 "sourceTag": "scope:svelte-table",
                 "onlyDependOnLibsWithTags": [
-                  "scope:table",
-                  "scope:table-style"
+                  "scope:table"
                 ]
               },
               {
@@ -67,15 +58,13 @@
                   "scope:svelte-table-demo",
                   "scope:svelte-table",
                   "scope:table",
-                  "scope:demo-table-models",
-                  "scope:table-style"
+                  "scope:demo-table-models"
                 ]
               },
               {
                 "sourceTag": "scope:solid-table",
                 "onlyDependOnLibsWithTags": [
-                  "scope:table",
-                  "scope:table-style"
+                  "scope:table"
                 ]
               },
               {
@@ -84,15 +73,13 @@
                   "scope:webcomponent-table-demo",
                   "scope:webcomponent-table",
                   "scope:table",
-                  "scope:demo-table-models",
-                  "scope:table-style"
+                  "scope:demo-table-models"
                 ]
               },
               {
                 "sourceTag": "scope:webcomponent-table",
                 "onlyDependOnLibsWithTags": [
-                  "scope:table",
-                  "scope:table-style"
+                  "scope:table"
                 ]
               },
               {
@@ -101,15 +88,13 @@
                   "scope:solid-table-demo",
                   "scope:solid-table",
                   "scope:table",
-                  "scope:demo-table-models",
-                  "scope:table-style"
+                  "scope:demo-table-models"
                 ]
               },
               {
                 "sourceTag": "scope:react-table",
                 "onlyDependOnLibsWithTags": [
-                  "scope:table",
-                  "scope:table-style"
+                  "scope:table"
                 ]
               },
               {
@@ -118,15 +103,13 @@
                   "scope:react-table-demo",
                   "scope:react-table",
                   "scope:table",
-                  "scope:demo-table-models",
-                  "scope:table-style"
+                  "scope:demo-table-models"
                 ]
               },
               {
                 "sourceTag": "scope:preact-table",
                 "onlyDependOnLibsWithTags": [
-                  "scope:table",
-                  "scope:table-style"
+                  "scope:table"
                 ]
               },
               {
@@ -135,15 +118,13 @@
                   "scope:preact-table-demo",
                   "scope:preact-table",
                   "scope:table",
-                  "scope:demo-table-models",
-                  "scope:table-style"
+                  "scope:demo-table-models"
                 ]
               },
               {
                 "sourceTag": "scope:vue3-table",
                 "onlyDependOnLibsWithTags": [
-                  "scope:table",
-                  "scope:table-style"
+                  "scope:table"
                 ]
               },
               {
@@ -152,30 +133,26 @@
                   "scope:vue3-table-demo",
                   "scope:vue3-table",
                   "scope:table",
-                  "scope:demo-table-models",
-                  "scope:table-style"
+                  "scope:demo-table-models"
                 ]
               },
               {
                 "sourceTag": "scope:html5-table-demo",
                 "onlyDependOnLibsWithTags": [
                   "scope:table",
-                  "scope:demo-table-models",
-                  "scope:table-style"
+                  "scope:demo-table-models"
                 ]
               },
               {
                 "sourceTag": "scope:angular-table",
                 "onlyDependOnLibsWithTags": [
-                  "scope:table",
-                  "scope:table-style"
+                  "scope:table"
                 ]
               },
               {
                 "sourceTag": "scope:webcomponent-table",
                 "onlyDependOnLibsWithTags": [
-                  "scope:table",
-                  "scope:table-style"
+                  "scope:table"
                 ]
               },
               {

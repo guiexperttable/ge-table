@@ -5,7 +5,11 @@
 @import "scss/fonts";
 @import "scss/ge-responsive";
 
-@import "apps/table-style/src/styles.scss";
+
+@import "../../../libs/table/css/table-classes.css";
+@import "../../../libs/table/css/table-tree.css";
+@import "../../../libs/table/css/table-color-vars.css";
+@import "../../../libs/table/css/table-color-classes.css";
 
 
 /* You can add global styles to this file, and also import other style files */

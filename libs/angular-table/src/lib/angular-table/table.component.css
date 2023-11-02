@@ -1,5 +1,8 @@
 
-@import "apps/table-style/src/styles.scss";
+@import "../../../../table/css/table-classes.css";
+@import "../../../../table/css/table-tree.css";
+@import "../../../../table/css/table-color-vars.css";
+@import "../../../../table/css/table-color-classes.css";
 
 
 

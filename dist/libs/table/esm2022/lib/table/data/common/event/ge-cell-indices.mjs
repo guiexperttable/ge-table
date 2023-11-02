@@ -1,9 +1,0 @@
-export class GeCellIndices {
-    rowIndex;
-    columnIndex;
-    constructor(rowIndex = -1, columnIndex = -1) {
-        this.rowIndex = rowIndex;
-        this.columnIndex = columnIndex;
-    }
-}
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ2UtY2VsbC1pbmRpY2VzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vbGlicy90YWJsZS9zcmMvbGliL3RhYmxlL2RhdGEvY29tbW9uL2V2ZW50L2dlLWNlbGwtaW5kaWNlcy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxNQUFNLE9BQU8sYUFBYTtJQUdmO0lBQ0E7SUFGVCxZQUNTLFdBQW1CLENBQUMsQ0FBQyxFQUNyQixjQUFzQixDQUFDLENBQUM7UUFEeEIsYUFBUSxHQUFSLFFBQVEsQ0FBYTtRQUNyQixnQkFBVyxHQUFYLFdBQVcsQ0FBYTtJQUVqQyxDQUFDO0NBRUYiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgY2xhc3MgR2VDZWxsSW5kaWNlcyB7XG5cbiAgY29uc3RydWN0b3IoXG4gICAgcHVibGljIHJvd0luZGV4OiBudW1iZXIgPSAtMSxcbiAgICBwdWJsaWMgY29sdW1uSW5kZXg6IG51bWJlciA9IC0xXG4gICkge1xuICB9XG5cbn1cbiJdfQ==
