@@ -6,9 +6,10 @@
   "scripts": {
     "inst": "npm install -f",
     "build": "nx build",
-    "build:all": "npm run _update-build-version & nx run-many --all --target=build",
+    "build:all": "npm run _update-build-version & nx run-many --all --target=build  && npm run concat-css",
     "build:table-website": "nx run table-website:build:production",
-    "build:table": "nx run @guiexpert/table:build:production",
+    "build:table": "nx run @guiexpert/table:build:production && npm run concat-css",
+    "concat-css": "cat libs/table/css/*.css > dist/libs/table/css/main.css",
     "build:angular-table": "npm run _update-build-version & nx run @guiexpert/angular-table:build:production",
     "build:react-table": "nx run @guiexpert/react-table:build:production",
     "build:vue3-table": "nx run @guiexpert/vue3-table:build:production",
