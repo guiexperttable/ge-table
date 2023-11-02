@@ -30,6 +30,19 @@
     padding-left: 24px;
   }
 
+  @keyframes float {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+      transform: translate3d(0, 30px, 0);
+    }
+  }
+  .welcome-img-outer-div {
+    animation: float linear 2.5s infinite alternate;
+  }
+
   .welcome-img {
     width: 450px;
     margin-top: 40px;
