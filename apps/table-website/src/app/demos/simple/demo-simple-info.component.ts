@@ -10,6 +10,9 @@ import { Component } from "@angular/core";
         and the model here: <a target="_blank" href="https://github.com/guiexperttable/demo-table-models/blob/main/src/lib/generateSimpleModel.ts">generateSimpleModel.ts</a>
       </p>
       <p>
+        Stackblitz:: <a target="_blank" href="https://stackblitz.com/edit/stackblitz-guiexpert-angular-simple">https://stackblitz.com/edit/stackblitz-guiexpert-angular-simple</a>
+      </p>
+      <p>
         Add the table tag to your template.
         The syntax will depend on the framework you are using.
         Here is an example of the Angular syntax:
