@@ -73,6 +73,12 @@ html,
 
   --ge-table-dragged-col-div-bg: lightcyan;
   --ge-table-drop-zone-bg: rgba(244, 255, 242, 0.6);
+
+  --ge-table-color-col-resize-handle-hover-bg: cyan;
+  --ge-table-color-dragged-col-div-bg: #fafafa;
+  --ge-table-color-drop-zone-bg: #fafafa;
+  --ge-table-color-drop-zone: #fafafa;
+  --ge-table-color-tree-arrow-collapsed-color: var(--ge-table-body-west-text);
 }
 
 
@@ -138,4 +144,10 @@ html,
   --ge-table-body-west-selected-range-text: #000;
   --ge-table-body-center-selected-range-text: #000;
   --ge-table-body-east-selected-range-text: #000;
+
+  --ge-table-color-col-resize-handle-hover-bg: cyan;
+  --ge-table-color-dragged-col-div-bg: #fafafa;
+  --ge-table-color-drop-zone-bg: #fafafa;
+  --ge-table-color-drop-zone: #fafafa;
+  --ge-table-color-tree-arrow-collapsed-color: var(--ge-table-body-west-text);
 }
