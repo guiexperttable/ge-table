@@ -9,6 +9,7 @@ import { TableComponent } from "@guiexpert/angular-table";
 import { MatIconModule } from "@angular/material/icon";
 import { CircleLetterModule } from "../../common/circle-letter.module";
 import { SourceCodeModule } from "../../common/code/source-code.module";
+import {StackblitzComponent} from "../stackblitz.component";
 
 
 const routes: Routes = [
@@ -31,7 +32,8 @@ const routes: Routes = [
     MatButtonModule,
     TableComponent,
     CircleLetterModule,
-    SourceCodeModule
+    SourceCodeModule,
+    StackblitzComponent
   ],
   exports: [RouterModule]
 })

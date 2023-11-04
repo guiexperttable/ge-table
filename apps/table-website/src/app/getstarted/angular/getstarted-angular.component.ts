@@ -93,4 +93,15 @@ generateSimpleModel(
   });
 }`;
 
+  text5 = `TableFactory.createTableModel({
+  headerData: [
+    ["Column1", "Column2", "Column3"]
+  ],
+  bodyData: [
+    ["This", "is", "a"],
+    ["very", "simple", "demo"]
+  ],
+  overridingColumnWidth: 110
+});`;
+
 }

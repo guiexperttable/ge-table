@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component, ElementRef, OnDestroy, OnInit} from "@angular/core";
-import { TableApi, TableModelIf } from "@guiexpert/table";
-import { generateSimpleModel } from "@guiexpert/demo-table-models";
+import {TableApi, TableFactory, TableModelIf} from "@guiexpert/table";
 import { SyncCssService } from "../../common/syncdata/sync-css.service";
+import {generateSimpleModel} from "@guiexpert/demo-table-models";
 
 
 @Component({
