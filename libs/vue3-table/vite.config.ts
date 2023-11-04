@@ -3,6 +3,7 @@ import { defineConfig } from "vite";
 import Vue from "@vitejs/plugin-vue";
 import Components from "unplugin-vue-components/vite";
 import { tsconfigBaseAliases } from "nx-vue3-vite";
+import {viteStaticCopy} from "vite-plugin-static-copy";
 
 module.exports = defineConfig({
   assetsInclude: /\.(pdf|jpg|png|svg)$/,
@@ -16,6 +17,18 @@ module.exports = defineConfig({
     Vue(),
     Components({
       dirs: ["src/lib"]
+    }),
+    viteStaticCopy({
+      targets: [
+        {
+          src: 'README.md',
+          dest: './'
+        },
+        {
+          src: 'package.json',
+          dest: './'
+        }
+      ]
     })
   ],
   build: {

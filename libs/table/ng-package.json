@@ -8,6 +8,7 @@
     "css/table-classes.css",
     "css/table-color-classes.css",
     "css/table-color-vars.css",
-    "css/table-tree.css"
+    "css/table-tree.css",
+    "README.md"
   ]
 }

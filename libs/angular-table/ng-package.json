@@ -3,5 +3,8 @@
   "dest": "../../dist/libs/angular-table",
   "lib": {
     "entryFile": "src/index.ts"
-  }
+  },
+  "assets": [
+    "README.md"
+  ]
 }

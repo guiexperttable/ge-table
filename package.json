@@ -1,6 +1,6 @@
 {
   "name": "guiexpert",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "license": "MIT",
   "repository": "https://github.com/guiexperttable/ge-table",
   "scripts": {
@@ -8,6 +8,8 @@
     "build": "nx build",
     "build:all": "npm run _update-build-version & nx run-many --all --target=build  && npm run concat-css && npm run concat-css-2",
     "build:table-website": "nx run table-website:build:production",
+    "build:demo-table-models": "nx run demo-table-models:build:production",
+    "build:preact-table": "nx run @guiexpert/preact-table:build:production",
     "build:table": "nx run @guiexpert/table:build:production && npm run concat-css && npm run concat-css-2",
     "concat-css": "cat libs/table/css/table*.css > dist/libs/table/css/main.css",
     "concat-css-2": "cat libs/table/css/table*.css > libs/table/css/main.css",
@@ -62,7 +64,14 @@
     "docker:compose:up": "docker compose up",
     "docker:compose:up-and-build": "docker compose up --build",
     "npm-pub:table": "npm publish dist/libs/table --access public",
-    "npm-pub:angular-table": "npm publish dist/libs/angular-table --access public"
+    "npm-pub:angular-table": "npm publish dist/libs/angular-table --access public",
+    "npm-pub:demo-table-models": "npm publish dist/libs/demo-table-models --access public",
+    "npm-pub:preact-table": "npm publish dist/libs/preact-table --access public",
+    "npm-pub:react-table": "npm publish dist/libs/react-table --access public",
+    "npm-pub:vue3-table": "npm publish dist/libs/vue3-table --access public",
+    "npm-pub:webcomponent-table": "npm publish dist/libs/webcomponent-table --access public"
+
+
   },
   "private": false,
   "dependencies": {
@@ -221,6 +230,7 @@
     "vite-plugin-dts": "2.3.0",
     "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-solid": "^2.5.0",
+    "vite-plugin-static-copy": "^0.17.0",
     "vite-tsconfig-paths": "4.2.1",
     "vitest": "0.31.4",
     "vitest-preview": "latest",

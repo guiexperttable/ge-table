@@ -1,22 +1,33 @@
 /// <reference types="vitest" />
 import { defineConfig } from "vite";
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 import viteTsConfigPaths from "vite-tsconfig-paths";
 import dts from "vite-plugin-dts";
 import { join } from "path";
 
 export default defineConfig({
+  assetsInclude: ['**/README.md'],
   cacheDir: "../../node_modules/.vite/demo-table-models",
 
   plugins: [
     dts({
       entryRoot: "src",
       tsConfigFilePath: join(__dirname, "tsconfig.lib.json"),
-      skipDiagnostics: true
+      skipDiagnostics: true,
     }),
 
     viteTsConfigPaths({
       root: "../../"
+    }),
+
+    viteStaticCopy({
+      targets: [
+        {
+          src: 'README.md',
+          dest: './'
+        }
+      ]
     })
   ],
 
