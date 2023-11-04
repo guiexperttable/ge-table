@@ -10,6 +10,8 @@ import { MatIconModule } from "@angular/material/icon";
 import { CircleLetterModule } from "../../common/circle-letter.module";
 import { SourceCodeModule } from "../../common/code/source-code.module";
 import {StackblitzComponent} from "../stackblitz.component";
+import {BackToGetstartedComponent} from "../back-to-getstarted.component";
+import {DocAndDemoLinkComponent} from "../doc-and-demo-link.component";
 
 
 const routes: Routes = [
@@ -33,7 +35,9 @@ const routes: Routes = [
     TableComponent,
     CircleLetterModule,
     SourceCodeModule,
-    StackblitzComponent
+    StackblitzComponent,
+    BackToGetstartedComponent,
+    DocAndDemoLinkComponent
   ],
   exports: [RouterModule]
 })

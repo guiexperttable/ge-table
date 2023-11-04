@@ -3,6 +3,9 @@
   display: grid;
   grid-template-rows: 1fr;
   position: relative;
+  &:hover .copy-button{
+    opacity: 1;
+  }
 }
 
 pre {
@@ -20,6 +23,7 @@ pre {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  opacity: 0;
 }
 
 .copy-button:hover, .copy-button:focus {

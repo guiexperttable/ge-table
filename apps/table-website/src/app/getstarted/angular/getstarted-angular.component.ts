@@ -69,18 +69,24 @@ generateSimpleModel(
 ): TableModelIf {
 
   const bodyData: string[][] =
-    Array.from(Array(rowCount).keys()).map((r) =>
-      Array.from(Array(columnCount).keys()).map((c) => \`Body \${r}/\${c}\`)
+    Array.from(Array(rowCount).keys())
+      .map((r) =>
+        Array.from(Array(columnCount).keys())
+          .map((c) => \`Body \${r}/\${c}\`)
     );
 
   const headerData: string[][] =
-    Array.from(Array(2).keys()).map((r) =>
-      Array.from(Array(columnCount).keys()).map((c) => \`Header \${r}/\${c}\`)
+    Array.from(Array(2).keys())
+      .map((r) =>
+        Array.from(Array(columnCount).keys())
+          .map((c) => \`Header \${r}/\${c}\`)
     );
 
   const footerData: string[][] =
-    Array.from(Array(2).keys()).map((r) =>
-      Array.from(Array(columnCount).keys()).map((c) => \`Footer \${r}/\${c}\`)
+    Array.from(Array(2).keys())
+      .map((r) =>
+        Array.from(Array(columnCount).keys())
+          .map((c) => \`Footer \${r}/\${c}\`)
     );
 
   return TableFactory.createTableModel({
