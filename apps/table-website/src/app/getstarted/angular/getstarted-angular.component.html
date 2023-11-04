@@ -2,13 +2,19 @@
 <div class="header-height"></div>
 
 
-<div class="ge-padding">
-  <h2 class="feature">Get Started</h2>
-  <h3>Angular</h3>
-  <div class="gap"></div>
-</div>
 
 <div class="ge-padding content">
+
+  <h2 class="feature">Get Started / Angular</h2>
+  <p></p>
+
+  <p>
+    You can find it on stackblitz:
+    <a target="_blank" href="https://stackblitz.com/edit/stackblitz-guiexpert-angular-simple" color="primary">
+      <span aria-hidden="true" class="_container_yct9u_1" style="--logo-gap: 2px;"><svg viewBox="0 0 28 28" aria-hidden="true" class="_boltIcon_yct9u_9 _boltIcon_blue_yct9u_14" height="24" width="24"><path d="M12.747 16.273h-7.46L18.925 1.5l-3.671 10.227h7.46L9.075 26.5l3.671-10.227z"></path></svg></span> stackblitz-guiexpert-angular-simple
+    </a>
+  </p>
+  <p></p>
 
   <p>
     Add the following two NPM packages to your existing angular project
@@ -17,7 +23,8 @@
   <source-code [language]="'language-shell'" [text]="text1"></source-code>
 
   <p>
-    Import the (standalone) TableComponent in your angular module:
+    Import the (standalone) TableComponent in your angular module
+    (or in your angular standalone component, if you don't work with modules):
   </p>
   <source-code [text]="text2"></source-code>
 
@@ -28,22 +35,41 @@
   <source-code [language]="'language-markup'" [text]="text3"></source-code>
 
   <p>
-    Add two properties (tableModel and tableOptions) to the component:
+    Be sure, that your div container expands. Add this CSS rule to your component's style.
+  </p>
+  <source-code [language]="'language-css'" [text]="contentStyle"></source-code>
+
+
+  <p>
+    Include (from a CDN) the predefined @guiexpert/table CSS rules to your project You can do it by adding this tag in your index.html...
+  </p>
+  <source-code [language]="'language-markup'" [text]="predefinedCss1"></source-code>
+
+  <p>
+    ...or (in case of an angular project) by adding it in your angular.json file. In this case you can use the local copy of the node module:
+  </p>
+  <source-code [language]="'language-markup'" [text]="predefinedCss2"></source-code>
+
+
+  <p>
+    Add two properties (tableModel and tableOptions) to the component.
+    Generate a simple table model by the helper function <i>TableFactory.createTableModel</i>.
+    The properties <i>headerData</i>, <i>bodyData</i>, and <i>footerData</i> are simple arrays of arrays.
   </p>
   <source-code [text]="text4"></source-code>
 
-</div>
 
-<div class="ge-padding">
+
   <p>
     There are numerous possibilities to create table models.
     Please refer to the <a href="/doc">Documentation</a> for further information or the <a href="/demos">Demo</a> section
     for examples.
   </p>
-
   <div>
     <button [routerLink]="['/getstarted']" color="primary" mat-flat-button>
       <mat-icon>arrow_back_ios_new</mat-icon> Back
     </button>
   </div>
+
+
 </div>
