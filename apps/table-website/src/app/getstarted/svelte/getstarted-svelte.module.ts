@@ -10,6 +10,8 @@ import { SvelteLogoComponent } from "../../3p-logos/svelte-logo.component";
 import { SourceCodeModule } from "../../common/code/source-code.module";
 import { CircleLetterModule } from "../../common/circle-letter.module";
 import { PreactLogoComponent } from "../../3p-logos/preact-logo.component";
+import {BackToGetstartedComponent} from "../back-to-getstarted.component";
+import {DocAndDemoLinkComponent} from "../doc-and-demo-link.component";
 
 
 const routes: Routes = [
@@ -33,7 +35,9 @@ const routes: Routes = [
     TableComponent,
     SourceCodeModule,
     CircleLetterModule,
-    PreactLogoComponent
+    PreactLogoComponent,
+    BackToGetstartedComponent,
+    DocAndDemoLinkComponent
   ],
   exports: [RouterModule]
 })

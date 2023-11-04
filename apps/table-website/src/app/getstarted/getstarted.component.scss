@@ -7,6 +7,7 @@ div.content {
   display: grid;
   gap: 1rem;
   justify-content: center;
+  justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(min(100px, 100%), 1fr));
 
   > div {

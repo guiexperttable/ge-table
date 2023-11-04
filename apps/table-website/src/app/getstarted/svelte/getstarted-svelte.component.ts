@@ -9,47 +9,45 @@ import { ChangeDetectionStrategy, Component } from "@angular/core";
 export class GetstartedSvelteComponent {
 
 
-  text1 = `
-    npm install --save @guiexpert/table @guiexpert/svelte-table
-  `;
+  text1 = `npm install --save @guiexpert/table @guiexpert/svelte-table`;
 
   text2 = `
-  <SvelteTable
-    on:mouseClicked={handleMouseClicked}
-    on:tableReady={handleTableReady}
-    tableModel={tableModel}
-    tableOptions={tableOptions}
-  ></SvelteTable>
-  `;
+<SvelteTable
+  on:mouseClicked={handleMouseClicked}
+  on:tableReady={handleTableReady}
+  tableModel={tableModel}
+  tableOptions={tableOptions}
+></SvelteTable>
+`;
 
-  text3 = `
-    <script lang="ts">
+text3 = `
+  <script lang="ts">
 
-    import { SvelteTable } from "@guiexpert/svelte-table";
-    import {
-      GeMouseEvent,
-      TableApi
-      TableModelFactory,
-      TableModelIf,
-      TableOptions,
-      TableOptionsIf
-    } from "@guiexpert/table";
-  `;
+  import { SvelteTable } from "@guiexpert/svelte-table";
+  import {
+    GeMouseEvent,
+    TableApi
+    TableFactory,
+    TableModelIf,
+    TableOptions,
+    TableOptionsIf
+  } from "@guiexpert/table";
+`;
 
-  text4 = `
-    const tableModel: TableModelIf = TableModelFactory
-      .createByArrayOfArraysParams<any>(param: {
-        columnLabels: [
-          ['Header 1', 'Header 2']
-        ],
-        data: [
-          ['Text 1a', 'Text 2a'],
-          ['Text 1b', 'Text 2b'],
-        ]
-      };
+text4 = `
+  const tableModel: TableModelIf = TableFactory
+    .createByArrayOfArraysParams<any>(param: {
+      columnLabels: [
+        ['Header 1', 'Header 2']
+      ],
+      data: [
+        ['Text 1a', 'Text 2a'],
+        ['Text 1b', 'Text 2b'],
+      ]
+    };
 
-    function onTableReady(api: TableApi) {
-      console.info("onTableReady API:", api);
-    }
-  `;
+  function onTableReady(api: TableApi) {
+    console.info("onTableReady API:", api);
+  }
+`;
 }

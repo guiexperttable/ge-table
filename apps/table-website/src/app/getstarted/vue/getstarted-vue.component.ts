@@ -9,45 +9,41 @@ import { ChangeDetectionStrategy, Component } from "@angular/core";
 export class GetstartedVueComponent {
 
 
-  text1 = `
-    npm install --save @guiexpert/table @guiexpert/vue3-table
-  `;
+  text1 = `npm install --save @guiexpert/table @guiexpert/vue3-table`;
 
   text2 = `
-    <guiexpert-table
-      :tableModel="tableModel"
-      @tableReady="onTableReady($event)"
-    ></guiexpert-table>
-  `;
+<guiexpert-table
+  :tableModel="tableModel"
+  @tableReady="onTableReady($event)"
+></guiexpert-table>
+`;
 
-  text3 = `
-    <script lang="ts" setup>
+  text3 = `<script lang="ts" setup>
 
-    import { GuiexpertTable } from "@guiexpert/vue3-table";
-    import {
-      GeMouseEvent,
-      TableApi
-      TableModelFactory,
-      TableModelIf,
-      TableOptions,
-      TableOptionsIf
-    } from "@guiexpert/table";
-  `;
+import { GuiexpertTable } from "@guiexpert/vue3-table";
+import {
+  GeMouseEvent,
+  TableApi
+  TableFactory,
+  TableModelIf,
+  TableOptions,
+  TableOptionsIf
+} from "@guiexpert/table";
+`;
 
-  text4 = `
-    const tableModel: TableModelIf = TableModelFactory
-      .createByArrayOfArraysParams<any>(param: {
-        columnLabels: [
-          ['Header 1', 'Header 2']
-        ],
-        data: [
-          ['Text 1a', 'Text 2a'],
-          ['Text 1b', 'Text 2b'],
-        ]
-      };
+text4 = `const tableModel: TableModelIf = TableModelFactory
+  .createByArrayOfArraysParams<any>(param: {
+    columnLabels: [
+      ['Header 1', 'Header 2']
+    ],
+    data: [
+      ['Text 1a', 'Text 2a'],
+      ['Text 1b', 'Text 2b'],
+    ]
+  };
 
-    function onTableReady(api: TableApi) {
-      console.info("onTableReady API:", api);
-    }
-  `;
+function onTableReady(api: TableApi) {
+  console.info("onTableReady API:", api);
+}
+`;
 }
