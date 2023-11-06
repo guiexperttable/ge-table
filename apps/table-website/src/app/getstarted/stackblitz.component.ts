@@ -12,7 +12,7 @@ import {ChangeDetectionStrategy, Component, Input} from "@angular/core";
                      class="_boltIcon_yct9u_9 _boltIcon_blue_yct9u_14" 
                      height="24" width="24">
                     <path d="M12.747 16.273h-7.46L18.925 1.5l-3.671 10.227h7.46L9.075 26.5l3.671-10.227z"></path>
-                </svg></span> {{text}}    
+                </svg></span>{{text}}    
         </a>
     `,
     styles: [

@@ -12,6 +12,7 @@ import { CircleLetterModule } from "../../common/circle-letter.module";
 import { AngularLogoComponent } from "../../3p-logos/angular-logo.component";
 import {BackToGetstartedComponent} from "../back-to-getstarted.component";
 import {DocAndDemoLinkComponent} from "../doc-and-demo-link.component";
+import {StackblitzComponent} from "../stackblitz.component";
 
 
 const routes: Routes = [
@@ -37,7 +38,8 @@ const routes: Routes = [
     CircleLetterModule,
     AngularLogoComponent,
     BackToGetstartedComponent,
-    DocAndDemoLinkComponent
+    DocAndDemoLinkComponent,
+    StackblitzComponent
   ],
   exports: [RouterModule]
 })

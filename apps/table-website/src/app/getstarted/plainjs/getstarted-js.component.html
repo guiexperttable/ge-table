@@ -7,6 +7,12 @@
   <h2 class="feature">Get Started / Plain JavaScript</h2>
   <p></p>
 
+  <p>
+    You can find it on stackblitz:
+    <app-stackblitz [text]="'plain-html-5u9cqs'"></app-stackblitz>
+  </p>
+  <p></p>
+
   <p> Add the following NPM package to your existing plain js project
     (run this in your project root directory):
   </p>
@@ -15,6 +21,17 @@
   <p> Add an empty <b>&lt;div></b> element to your html code:
   </p>
   <source-code [language]="'language-markup'" [text]="text2"></source-code>
+
+  <p>
+    Be sure, that your div container expands. Add this CSS rule to your component's style.
+  </p>
+  <source-code [language]="'language-css'" [text]="contentStyle"></source-code>
+
+
+  <p>
+    Include (from a CDN) the predefined @guiexpert/table CSS rules to your project. You can do it by adding this tag in your index.html...
+  </p>
+  <source-code [language]="'language-markup'" [text]="predefinedCss1"></source-code>
 
   <p>
     If you are working with plain JS, you don't need to do this.
