@@ -1,9 +1,7 @@
 {
   "name": "@guiexpert/svelte-table",
-  "version": "1.0.1",
-  "scripts": {
-    "publish": "npm publish --access=public"
-  },
+  "version": "1.0.4",
+  "type": "module",
   "main": "./index.js",
   "types": "./index.d.ts",
   "exports": {

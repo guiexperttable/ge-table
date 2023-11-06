@@ -4,7 +4,7 @@ import { AreaIdent, AreaModelIf, CellRendererIf, DomServiceIf, RendererCleanupFn
 export class ComponentRendererWrapper implements CellRendererIf {
 
   constructor(
-    private readonly Component
+    private readonly Component:any
   ) {
   }
 

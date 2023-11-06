@@ -1,41 +1,42 @@
-<script>
+<script lang="ts">
   import { createEventDispatcher, onMount } from "svelte";
-  import { SimpleDomService, TableOptions, TableScope } from "@guiexpert/table";
+  // import { SimpleDomService, TableOptions, TableScope } from "@guiexpert/table";
+  import { SimpleDomService, TableOptions, TableScope } from "../../table/src";
 
-  export let tableModel;
+  export let tableModel:any;
   export let tableOptions = new TableOptions();
 
-  let root;
+  let root:any;
   const dispatch = createEventDispatcher();
 
   onMount(() => {
 
     const listener = {
-      onCheckboxChanged: (evt) => {
+      onCheckboxChanged: (evt: any) => {
         dispatch("checkboxChanged", evt);
       },
 
-      onContextmenu: (evt) => {
+      onContextmenu: (evt: any) => {
         dispatch("contextmenu", evt);
       },
 
-      onModelChanged: (evt) => {
+      onModelChanged: (evt: any) => {
         dispatch("modelChanged", evt);
       },
 
-      onMouseClicked: (evt) => {
+      onMouseClicked: (evt: any) => {
         dispatch("mouseClicked", evt);
       },
 
-      onMouseDragging: (evt) => {
+      onMouseDragging: (evt: any) => {
         dispatch("mouseDragging", evt);
       },
 
-      onMouseDraggingEnd: (evt) => {
+      onMouseDraggingEnd: (evt: any) => {
         dispatch("mouseDraggingEnd", evt);
       },
 
-      onMouseMoved: (evt) => {
+      onMouseMoved: (evt: any) => {
         dispatch("mouseMoved", evt);
       }
     };

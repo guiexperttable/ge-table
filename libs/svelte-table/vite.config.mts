@@ -1,13 +1,13 @@
 /// <reference types="vitest" />
-import { defineConfig } from "vite";
-import solidPlugin from 'vite-plugin-solid';
+import {defineConfig} from "vite";
+import {svelte} from '@sveltejs/vite-plugin-svelte';
 import viteTsConfigPaths from "vite-tsconfig-paths";
 import dts from "vite-plugin-dts";
-import { join } from "path";
+import {join} from "path";
 import {viteStaticCopy} from "vite-plugin-static-copy";
 
 export default defineConfig({
-  cacheDir: "../../node_modules/.vite/solid-table",
+  cacheDir: "../../node_modules/.vite/svelte-table",
 
   plugins: [
     dts({
@@ -15,7 +15,10 @@ export default defineConfig({
       tsConfigFilePath: join(__dirname, "tsconfig.lib.json"),
       skipDiagnostics: true
     }),
-    solidPlugin(),
+    svelte({
+      prebundleSvelteLibraries: true
+    }),
+
     viteTsConfigPaths({
       root: "../../"
     }),
@@ -44,7 +47,7 @@ export default defineConfig({
     lib: {
       // Could also be a dictionary or array of multiple entry points.
       entry: "src/index.ts",
-      name: "solid-table",
+      name: "svelte-table",
       fileName: "index",
       // Change this to the formats you want to support.
       // Don't forgot to update your package.json as well.
@@ -52,7 +55,7 @@ export default defineConfig({
     },
     rollupOptions: {
       // External packages that should not be bundled into your library.
-      external: ["solid", "react-dom", "react/jsx-runtime"]
+      external: ["svelte", "react-dom", "react/jsx-runtime"]
     }
   }
 });
