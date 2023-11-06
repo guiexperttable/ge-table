@@ -1,9 +1,10 @@
 /// <reference types="vitest" />
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import solidPlugin from 'vite-plugin-solid';
 import viteTsConfigPaths from "vite-tsconfig-paths";
 import dts from "vite-plugin-dts";
 import { join } from "path";
+import {viteStaticCopy} from "vite-plugin-static-copy";
 
 export default defineConfig({
   cacheDir: "../../node_modules/.vite/solid-table",
@@ -14,9 +15,17 @@ export default defineConfig({
       tsConfigFilePath: join(__dirname, "tsconfig.lib.json"),
       skipDiagnostics: true
     }),
-    react(),
+    solidPlugin(),
     viteTsConfigPaths({
       root: "../../"
+    }),
+    viteStaticCopy({
+      targets: [
+        {
+          src: 'README.md',
+          dest: './'
+        }
+      ]
     })
   ],
 

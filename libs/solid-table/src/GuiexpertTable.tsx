@@ -1,9 +1,9 @@
 import { mergeProps, onMount } from "solid-js";
 import { SimpleDomService, TableOptions, TableScope } from "../../table/src";
 
-export default function GuiexpertTable(props) {
+export default function GuiexpertTable(props:any) {
 
-  let ref;
+  let ref:any;
 
   const merged = mergeProps({
     tableModel: null,
@@ -14,37 +14,37 @@ export default function GuiexpertTable(props) {
   // Man verwende onMount oder createEffect, um die ref nach dem Einhängen ins DOM zu verwenden
   onMount(() => {
     const listener = {
-      onCheckboxChanged: (evt) => {
+      onCheckboxChanged: (evt: any) => {
         const e = new CustomEvent("checkboxChanged", { detail: evt, bubbles: true });
         ref.dispatchEvent(e);
       },
 
-      onContextmenu: (evt) => {
+      onContextmenu: (evt: any) => {
         const e = new CustomEvent("contextmenu", { detail: evt, bubbles: true });
         ref.dispatchEvent(e);
       },
 
-      onModelChanged: (evt) => {
+      onModelChanged: (evt: any) => {
         const e = new CustomEvent("modelChanged", { detail: evt, bubbles: true });
         ref.dispatchEvent(e);
       },
 
-      onMouseClicked: (evt) => {
+      onMouseClicked: (evt: any) => {
         const e = new CustomEvent("mouseClicked", { detail: evt, bubbles: true });
         ref.dispatchEvent(e);
       },
 
-      onMouseDragging: (evt) => {
+      onMouseDragging: (evt: any) => {
         const e = new CustomEvent("mouseDragging", { detail: evt, bubbles: true });
         ref.dispatchEvent(e);
       },
 
-      onMouseDraggingEnd: (evt) => {
+      onMouseDraggingEnd: (evt: any) => {
         const e = new CustomEvent("mouseDraggingEnd", { detail: evt, bubbles: true });
         ref.dispatchEvent(e);
       },
 
-      onMouseMoved: (evt) => {
+      onMouseMoved: (evt: any) => {
         const e = new CustomEvent("mouseMoved", { detail: evt, bubbles: true });
         ref.dispatchEvent(e);
       }
@@ -58,6 +58,6 @@ export default function GuiexpertTable(props) {
     ref.dispatchEvent(e);
   });
 
-  return <div ref={ref} />;
+  return (<div ref={ref} />);
 }
 
