@@ -12,7 +12,9 @@
     "build:preact-table": "nx run @guiexpert/preact-table:build:production",
     "build:solid-table": "nx run @guiexpert/solid-table:build:production",
     "build:svelte-table": "nx run @guiexpert/svelte-table:build:production",
-    "build:table": "nx run @guiexpert/table:build:production && npm run concat-css && npm run concat-css-2",
+    "concat-css:table:src": "cat libs/table/css/*.css > libs/table/css/main.css",
+    "build:table": "npm run concat-css:table:src && npx nx build @guiexpert/table",
+
     "concat-css": "cat libs/table/css/table*.css > dist/libs/table/css/main.css",
     "concat-css-2": "cat libs/table/css/table*.css > libs/table/css/main.css",
     "build:angular-table": "npm run _update-build-version & nx run @guiexpert/angular-table:build:production",
@@ -146,6 +148,7 @@
     "@nx/cypress": "17.0.1",
     "@nx/jest": "17.0.2",
     "@nx/js": "17.0.2",
+    "@nx/rollup": "^17.0.3",
     "@nx/nest": "17.0.2",
     "@nx/node": "17.0.2",
     "@nx/vite": "17.0.1",

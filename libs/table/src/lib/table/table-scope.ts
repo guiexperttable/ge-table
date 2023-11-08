@@ -1,3 +1,4 @@
+
 import { TableModelIf } from "./data/tablemodel/table-model.if";
 import { AreaIdent } from "./data/tablemodel/area-ident.type";
 import { GeMouseEvent } from "./data/common/event/ge-mouse-event";

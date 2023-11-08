@@ -1,13 +1,10 @@
 {
   "name": "@guiexpert/table",
-  "version": "1.0.11",
-  "scripts": {
-    "typedoc:json": "npx typedoc --json ../../apps/table-website/src/assets/json/doctype.json src/index.ts",
-    "typedoc:docs": "npx typedoc --out ../../apps/table-website/src/assets/docs src/index.ts"
-  },
-  "peerDependencies": {
-  },
+  "version": "1.0.12",
   "dependencies": {
     "tslib": "^2.3.0"
-  }
+  },
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "typings": "./src/index.d.ts"
 }

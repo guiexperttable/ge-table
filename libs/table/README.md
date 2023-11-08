@@ -71,9 +71,9 @@ import {
 ```
 
 
-Create a table model. 
-Select ('querySelector') the <div> element and create a table scope. 
-Finally, call firstInit() at least once. 
+Create a table model.
+Select ('querySelector') the <div> element and create a table scope.
+Finally, call firstInit() at least once.
 In this example, you will see the plain TS version. For plain JS, remove ': TableModelIf'.
 
 ```

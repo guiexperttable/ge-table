@@ -13,7 +13,8 @@
         "./src/assets/*"
       ],
       "@lib/*": [
-        "./src/lib/*"
+        "./src/lib/*",
+        "../../table/src/*"
       ]
     }
   },

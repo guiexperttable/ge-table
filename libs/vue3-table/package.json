@@ -1,8 +1,11 @@
 {
   "name": "@guiexpert/vue3-table",
-  "version": "1.0.2",
+  "version": "1.0.7",
   "main": "./index.js",
   "types": "./index.d.ts",
+  "lib": {
+    "entryFile": "src/index.ts"
+  },
   "exports": {
     ".": {
       "import": "./index.mjs",
