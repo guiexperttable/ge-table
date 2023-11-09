@@ -68,7 +68,7 @@ import { GuiexpertTable } from "@guiexpert/vue3-table";
 import {
   GeMouseEvent,
   TableApi
-  TableModelFactory,
+  TableFactory,
   TableModelIf,
   TableOptions,
   TableOptionsIf
@@ -79,16 +79,11 @@ import {
 Add a tableModel property and a onTableReady method to the component:
 
 ```
-const tableModel: TableModelIf = TableModelFactory
-  .createByArrayOfArraysParams<any>(param: {
-    columnLabels: [
-      ['Header 1', 'Header 2']
-    ],
-    data: [
-      ['Text 1a', 'Text 2a'],
-      ['Text 1b', 'Text 2b'],
-    ]
-  };
+const tableModel: TableModelIf = TableFactory.createTableModel({
+  headerData,
+  bodyData,
+  overridingColumnWidth: 110,
+});
 
 function onTableReady(api: TableApi) {
   console.info("onTableReady API:", api);

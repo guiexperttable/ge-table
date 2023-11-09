@@ -35,7 +35,10 @@ module.exports = defineConfig({
     lib: {
       entry: path.resolve(__dirname, "./src/index.ts"),
       name: "vue3-table",
-      fileName: (format) => `vue3-table.${format}.js`
+      fileName: (format) => (format === "es" ? "index.js" : "index.cjs"),
+      // Change this to the formats you want to support.
+      // Don't forget to update your package.json as well.
+      formats: ['es', 'cjs'],
     },
     rollupOptions: {
       // externalize deps that shouldn't be bundled

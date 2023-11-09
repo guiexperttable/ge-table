@@ -95,3 +95,6 @@ export default defineComponent({
 
 </script>
 
+<style >
+@import "../../../table/css/main.css";
+</style>
