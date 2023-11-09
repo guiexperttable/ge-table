@@ -1,10 +1,12 @@
 /// <reference types="vitest" />
+// import {path} from "path";
 import {defineConfig} from "vite";
 import {svelte} from '@sveltejs/vite-plugin-svelte';
 import viteTsConfigPaths from "vite-tsconfig-paths";
 import dts from "vite-plugin-dts";
 import {join} from "path";
 import {viteStaticCopy} from "vite-plugin-static-copy";
+
 
 export default defineConfig({
   cacheDir: "../../node_modules/.vite/svelte-table",
@@ -26,6 +28,10 @@ export default defineConfig({
       targets: [
         {
           src: 'README.md',
+          dest: './'
+        },
+        {
+          src: 'package.json',
           dest: './'
         }
       ]

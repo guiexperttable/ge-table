@@ -46,7 +46,7 @@ import { Component } from "@angular/core";
 })
 export class DemoSelfwrittenInfoComponent {
   tag = `<guiexpert-table [tableModel]="tableModel"></guiexpert-table>`;
-  model = `this.tableModel = TableModelFactory.createByAreaModelsParam({
+  model = `this.tableModel = TableFactory.createByAreaModelsParam({
   bodyAreaModel: new SelfwrittenAreaModel(),
   columnCount: 6,
   rowCheckboxVisible: false,

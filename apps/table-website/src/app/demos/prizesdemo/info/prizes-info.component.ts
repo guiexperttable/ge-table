@@ -78,7 +78,7 @@ export class PrizesInfoComponent {
     ];`;
 
   tm = `
-    this.tableModel = TableModelFactory.createByObjectArrayParam<SimplePrize>({
+    this.tableModel = TableFactory.createByObjectArrayParam<SimplePrize>({
       columnDefs: columnDefs,
       header: [
         ["Year", "Category", "Laureate", "", "Motivation"],

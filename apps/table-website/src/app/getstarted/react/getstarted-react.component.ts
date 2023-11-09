@@ -33,11 +33,11 @@ import {
 `;
 
   text4 = `const tableModel: TableModelIf = TableFactory
-  .createByArrayOfArraysParams<any>(param: {
-    columnLabels: [
+  .createTableModel<any>(param: {
+    headerData [
       ['Header 1', 'Header 2']
     ],
-    data: [
+    bodyData: [
       ['Text 1a', 'Text 2a'],
       ['Text 1b', 'Text 2b'],
     ]

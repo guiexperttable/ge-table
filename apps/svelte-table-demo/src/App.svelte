@@ -1,7 +1,7 @@
 <script lang="ts">
 
   import { ComponentRendererWrapper, GuiexpertTable } from "@guiexpert/svelte-table";
-  import { ColumnDefIf, TableFactory, TreeFactory } from "@guiexpert/table";
+  import {ColumnDefIf, TableFactory} from "@guiexpert/table";
   import {
     applyBodyRenderer,
     createColumnDefs,
@@ -9,6 +9,7 @@
     createTableRows, SimplePersonIf
   } from "@guiexpert/demo-table-models";
   import { default as GenderRendererComponent } from "./GenderRendererComponent.svelte";
+
 
   const tableOptions = createTableOptions();
   const rows: SimplePersonIf[] = createTableRows();
@@ -21,11 +22,11 @@
     fixedLeftColumnCount: 0
   });
 
-  function handleTableReady(api) {
+  function handleTableReady(api: CustomEvent) {
     console.info("Table API:", api.detail);
   }
 
-  function handleMouseClicked(evt) {
+  function handleMouseClicked(evt: CustomEvent) {
     console.info("Mouse clicked:", evt.detail);
   }
 </script>

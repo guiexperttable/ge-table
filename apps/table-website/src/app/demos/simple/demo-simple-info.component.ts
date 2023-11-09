@@ -51,14 +51,14 @@ export class DemoSimpleInfoComponent {
   tag = `<guiexpert-table [tableModel]="tableModel"></guiexpert-table>`;
   model = `tableModel: TableModelIf = generateSimpleModel(1000, 100);`;
   full =
-    `import { TableModelFactory, TableModelIf } from "@guiexpert/table";
+    `import { TableFactory, TableModelIf } from "@guiexpert/table";
 
 const data: string[][] =
   Array.from(Array(rowCount).keys()).map((r) =>
     Array.from(Array(columnCount).keys()).map((c) => \`$\{r}/$\{c}\`)
   );
 
-const columnLabels: string[][] =
+const headerData string[][] =
   Array.from(Array(2).keys()).map((r) =>
     Array.from(Array(columnCount).keys()).map((c) => \`H$\{r}/$\{c}\`)
   );
@@ -68,7 +68,7 @@ const footer: string[][] =
     Array.from(Array(columnCount).keys()).map((c) => \`F$\{r}/$\{c}\`)
   );
 
-return TableModelFactory.createByArrayOfArraysParams({
+return TableFactory.createTableModel({
   columnLabels,
   data,
   footer,
