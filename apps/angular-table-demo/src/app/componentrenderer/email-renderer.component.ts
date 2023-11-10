@@ -7,7 +7,7 @@ import {AreaIdent, AreaModelIf, RendererCleanupFnType} from "@guiexpert/table";
   template: `
     <div>
       <strong>{{debug}}</strong>
-      <span class="red-text">@gmx</span>.<i>de</i>
+      <span class="red-text">&#64;gmx</span>.<i>de</i>
     </div>
   `,
   styles: [`
