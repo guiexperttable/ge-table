@@ -13,6 +13,7 @@
     "build:solid-table": "nx run @guiexpert/solid-table:build:production",
     "build:svelte-table": "nx run @guiexpert/svelte-table:build:production",
     "build:svelte-table-demo": "nx run svelte-table-demo:build:production",
+    "build:react-table-demo": "nx run react-table-demo:build:production",
     "concat-css:table:src": "cat libs/table/css/*.css > libs/table/css/main.css",
     "build:table": "npm run concat-css:table:src && npx nx build @guiexpert/table",
     "concat-css": "cat libs/table/css/table*.css > dist/libs/table/css/main.css",
