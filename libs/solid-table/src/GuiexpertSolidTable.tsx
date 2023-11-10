@@ -1,7 +1,21 @@
-import { mergeProps, onMount } from "solid-js";
-import { SimpleDomService, TableOptions, TableScope } from "../../table/src";
+import { mergeProps, onMount, Component } from "solid-js";
+import {SimpleDomService, TableModelIf, TableOptions, TableScope} from "../../table/src";
+import {GeCheckboxEventFn, GeModelChangeEventFn, GeMouseEventFn, GeTableReadyEventFn} from "@guiexpert/react-table";
 
-export default function GuiexpertTable(props:any) {
+export interface GuiexpertTableProps {
+  tableModel: TableModelIf,
+  tableOptions?: TableOptions,
+  mouseMoved?: GeMouseEventFn,
+  contextmenu?: GeMouseEventFn,
+  mouseClicked?: GeMouseEventFn,
+  mouseDragging?: GeMouseEventFn,
+  mouseDraggingEnd?: GeMouseEventFn,
+  checkboxChanged?: GeCheckboxEventFn,
+  modelChanged?: GeModelChangeEventFn,
+  tableReady?: GeTableReadyEventFn
+}
+
+const GuiexpertSolidTable: Component<GuiexpertTableProps> =  (props:any) => {
 
   let ref:any;
 
@@ -59,5 +73,6 @@ export default function GuiexpertTable(props:any) {
   });
 
   return (<div ref={ref} />);
-}
+};
 
+export default GuiexpertSolidTable;
