@@ -1,12 +1,19 @@
 {
   "name": "@guiexpert/preact-table",
-  "version": "1.0.2",
+  "version": "1.0.5",
+  "type": "module",
   "main": "./index.js",
   "types": "./index.d.ts",
+  "lib": {
+    "entryFile": "src/index.ts"
+  },
+  "scripts": {
+    "npm-pub:svelte-table": "npm publish --access public"
+  },
   "exports": {
     ".": {
-      "import": "./index.mjs",
-      "require": "./index.js"
+      "import": "./index.js",
+      "require": "./index.cjs"
     }
   }
 }

@@ -1,13 +1,14 @@
 {
   "name": "@guiexpert/vue3-table",
-  "version": "1.0.15",
+  "version": "1.0.16",
+  "type": "module",
   "main": "./index.js",
   "types": "./index.d.ts",
   "lib": {
     "entryFile": "src/index.ts"
   },
   "scripts": {
-    "npm-pub:vue3-table": "npm publish --access public"
+    "npm-pub:svelte-table": "npm publish --access public"
   },
   "exports": {
     ".": {

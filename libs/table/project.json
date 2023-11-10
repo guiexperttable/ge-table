@@ -5,37 +5,13 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nx/rollup:rollup",
-      "outputs": ["{options.outputPath}"],
+      "executor": "@nrwl/vite:build",
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "defaultConfiguration": "production",
       "options": {
-        "main": "libs/table/src/index.ts",
-        "outputPath": "dist/libs/table",
-        "tsConfig": "libs/table/tsconfig.lib.json",
-        "compiler": "tsc",
-        "project": "libs/table/package.json",
-        "format": ["esm", "cjs"],
-        "assets": [
-          {
-            "glob": "libs/table/README.md",
-            "input": ".",
-            "output": "."
-          },
-          {
-            "glob": "libs/table/css/*.css",
-            "input": ".",
-            "output": "./css"
-          }
-        ]
-      },
-      "configurations": {
-        "production": {
-          "optimization": true,
-          "sourceMap": false,
-          "namedChunks": false,
-          "extractLicenses": true,
-          "vendorChunk": false
-        }
+        "outputPath": "dist/libs/table"
       }
     },
     "lint": {

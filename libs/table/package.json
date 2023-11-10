@@ -1,10 +1,22 @@
 {
   "name": "@guiexpert/table",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "type": "commonjs",
-  "main": "./src/index.js",
-  "typings": "./src/index.d.ts"
+  "type": "module",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "lib": {
+    "entryFile": "src/index.ts"
+  },
+  "scripts": {
+    "npm-pub:svelte-table": "npm publish --access public"
+  },
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.cjs"
+    }
+  }
 }

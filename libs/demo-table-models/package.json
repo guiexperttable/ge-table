@@ -1,5 +1,19 @@
 {
   "name": "@guiexpert/demo-table-models",
   "version": "1.0.1",
-  "type": "commonjs"
+  "type": "module",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "lib": {
+    "entryFile": "src/index.ts"
+  },
+  "scripts": {
+    "npm-pub:svelte-table": "npm publish --access public"
+  },
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.cjs"
+    }
+  }
 }
