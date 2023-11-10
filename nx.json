@@ -126,5 +126,6 @@
     }
   },
   "defaultProject": "table-website",
-  "nxCloudAccessToken": "ZTYxZDY3NjEtMjQ0Ni00MmRlLTk4ODMtYWU2N2Q4NzhlMDFmfHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "ZTYxZDY3NjEtMjQ0Ni00MmRlLTk4ODMtYWU2N2Q4NzhlMDFmfHJlYWQtd3JpdGU=",
+  "plugins": ["@nxext/svelte"]
 }
