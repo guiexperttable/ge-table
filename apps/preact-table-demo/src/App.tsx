@@ -1,3 +1,4 @@
+
 import { ComponentRendererWrapper, GuiexpertTable } from "@guiexpert/preact-table";
 import {
   applyBodyRenderer,
@@ -6,8 +7,9 @@ import {
   createTableRows,
   SimplePersonIf
 } from "@guiexpert/demo-table-models";
-import {ColumnDefIf, TableApi, TableFactory, TableOptionsIf} from "@guiexpert/table";
+import {ColumnDefIf, GeMouseEvent, TableApi, TableFactory, TableOptionsIf} from "@guiexpert/table";
 import GenderRendererComponent from "./GenderRendererComponent";
+import {GeMouseEventFn, GeTableReadyEventFn} from "@guiexpert/react-table";
 
 function App() {
 
@@ -23,20 +25,21 @@ function App() {
     fixedLeftColumnCount: 1
   });
 
-  function tableReady(api: TableApi) {
+  const tableReady  = ((api: TableApi) => {
     console.info("Table API:", api);
-  }
+  }) as GeTableReadyEventFn;
 
-  const tableProps = {
-    tableModel,
-    tableOptions,
-    mouseClicked:console.info,
-    tableReady
-  };
+  const onMouseClicked  = ((evt: GeMouseEvent) => {
+    console.info("Mouse:", evt);
+  }) as GeMouseEventFn;
+
 
   return (
     <GuiexpertTable
-      {...tableProps}
+      tableModel={tableModel}
+      tableOptions={tableOptions}
+      mouseClicked={onMouseClicked}
+      tableReady={tableReady}
     />
   );
 }

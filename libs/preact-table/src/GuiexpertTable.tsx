@@ -23,7 +23,7 @@ export interface GuiexpertTableProps {
 }
 
 
-export class GuiexpertTable extends Component {
+export class GuiexpertTable extends Component<GuiexpertTableProps>  {
 
   ref = createRef();
 
