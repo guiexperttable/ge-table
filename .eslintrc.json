@@ -40,12 +40,6 @@
                   "scope:demo-table-models"
                 ]
               },
-             {
-                "sourceTag": "scope:async-server-demo",
-                "onlyDependOnLibsWithTags": [
-                  "scope:demo-table-models"
-                ]
-              },
               {
                 "sourceTag": "scope:svelte-table",
                 "onlyDependOnLibsWithTags": [

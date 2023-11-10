@@ -14,8 +14,8 @@ export default defineConfig({
   plugins: [
     dts({
       entryRoot: "src",
-      tsConfigFilePath: join(__dirname, "tsconfig.lib.json"),
-      skipDiagnostics: true
+      tsconfigPath: join(__dirname, "tsconfig.lib.json"),
+      
     }),
     svelte({
       prebundleSvelteLibraries: true
