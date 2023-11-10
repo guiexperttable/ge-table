@@ -1,24 +1,43 @@
-import { Logo } from './logo';
-import styles from './App.module.css';
+import { ComponentRendererWrapper, GuiexpertTable } from "@guiexpert/preact-table";
+import {
+  applyBodyRenderer,
+  createColumnDefs,
+  createTableOptions,
+  createTableRows,
+  SimplePersonIf
+} from "@guiexpert/demo-table-models";
+import {ColumnDefIf, TableApi, TableFactory, TableOptionsIf} from "@guiexpert/table";
+import GenderRendererComponent from "./GenderRendererComponent";
 
 function App() {
+
+  const tableOptions: TableOptionsIf = createTableOptions();
+  const rows: SimplePersonIf[] = createTableRows();
+  const columnDefs: ColumnDefIf[] = createColumnDefs();
+  applyBodyRenderer(columnDefs[2], new ComponentRendererWrapper(GenderRendererComponent));
+
+  const tableModel = TableFactory.buildByTypedRowsParam({
+    rows,
+    columnDefs,
+    tableOptions,
+    fixedLeftColumnCount: 1
+  });
+
+  function tableReady(api: TableApi) {
+    console.info("Table API:", api);
+  }
+
+  const tableProps = {
+    tableModel,
+    tableOptions,
+    mouseClicked:console.info,
+    tableReady
+  };
+
   return (
-    <div class={styles.App}>
-      <header class={styles.header}>
-        <Logo  />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          class={styles.link}
-          href="https://github.com/preactjs/preact"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Preact
-        </a>
-      </header>
-    </div>
+    <GuiexpertTable
+      {...tableProps}
+    />
   );
 }
 
