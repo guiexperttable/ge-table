@@ -12,18 +12,18 @@ export class GetstartedSvelteComponent {
   text1 = `npm install --save @guiexpert/table @guiexpert/svelte-table`;
 
   text2 = `
-<SvelteTable
+<GuiexpertTable
   on:mouseClicked={handleMouseClicked}
   on:tableReady={handleTableReady}
   tableModel={tableModel}
   tableOptions={tableOptions}
-></SvelteTable>
+></GuiexpertTable>
 `;
 
 text3 = `
   <script lang="ts">
 
-  import { SvelteTable } from "@guiexpert/svelte-table";
+  import { GuiexpertTable } from "@guiexpert/svelte-table";
   import {
     GeMouseEvent,
     TableApi

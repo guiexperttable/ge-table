@@ -12,7 +12,7 @@ export class GetstartedPreactComponent {
   text1 = `npm install --save @guiexpert/table @guiexpert/preact-table`;
 
   text2 = `return (
-  <PreactTable
+  <GuiexpertTable
     tableOptions={tableOptions}
     tableModel={tableModel}
     mouseClicked={console.info}
@@ -20,7 +20,7 @@ export class GetstartedPreactComponent {
   />
 );`;
 
-  text3 = `import { PreactTable } from "@guiexpert/preact-table";
+  text3 = `import { GuiexpertTable } from "@guiexpert/preact-table";
 import {
   GeMouseEvent,
   TableApi

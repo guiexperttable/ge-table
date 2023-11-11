@@ -20,7 +20,7 @@ export class GetstartedSolidComponent {
 ></guiexpert-table>
 `;
 
-  text3 = `import { SolidTable } from "@guiexpert/solid-table";
+  text3 = `import { GuiexpertTable } from "@guiexpert/solid-table";
 import {
   GeMouseEvent,
   TableApi
@@ -51,7 +51,7 @@ import {
 
   return (
     <div ref={ref}>
-      <SolidTable
+      <GuiexpertTable
         tableModel={tableModel}
         tableOptions={tableOptions} />
     </div>

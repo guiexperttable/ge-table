@@ -23,6 +23,7 @@
     "build:vue3-table": "nx run @guiexpert/vue3-table:build:production",
     "build:webcomponent-table": "nx run @guiexpert/webcomponent-table:build:production",
 
+    "build:solid-table-demo": "nx run solid-table-demo:build:production",
     "build:svelte-table-demo": "nx run svelte-table-demo:build:production",
     "build:react-table-demo": "nx run react-table-demo:build:production",
     "build:preact-table-demo": "nx run preact-table-demo:build:production",

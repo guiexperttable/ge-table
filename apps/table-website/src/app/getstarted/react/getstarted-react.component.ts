@@ -13,7 +13,7 @@ export class GetstartedReactComponent {
 
   text2 = `return (
   <>
-    <ReactTable
+    <GuiexpertTable
       tableModel={tableModel}
       tableOptions={new TableOptions}
     />
@@ -21,7 +21,7 @@ export class GetstartedReactComponent {
 );
   `;
 
-  text3 = `import { ReactTable } from "@guiexpert/react-table";
+  text3 = `import { GuiexpertTable } from "@guiexpert/react-table";
 import {
   GeMouseEvent,
   TableApi

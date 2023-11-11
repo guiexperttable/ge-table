@@ -26,7 +26,7 @@ export interface GuiexpertTableProps {
   tableReady?: GeTableReadyEventFn
 }
 
-const GuiexpertSolidTable: Component<GuiexpertTableProps> =  (props:any) => {
+const GuiexpertTable: Component<GuiexpertTableProps> =  (props:any) => {
 
   let ref:any;
 
@@ -86,4 +86,4 @@ const GuiexpertSolidTable: Component<GuiexpertTableProps> =  (props:any) => {
   return (<div ref={ref} />);
 };
 
-export default GuiexpertSolidTable;
+export default GuiexpertTable;

@@ -1,8 +1,8 @@
 
 import { ComponentRendererWrapper } from "./ComponentRendererWrapper";
-import  * as GuiexpertSolidTable  from "./GuiexpertSolidTable";
+import  * as GuiexpertTable  from "./GuiexpertTable";
 
 export {
-  GuiexpertSolidTable,
+  GuiexpertTable,
   ComponentRendererWrapper
 };
