@@ -1,11 +1,12 @@
-import path from "path";
+import { join } from "path";
 import { defineConfig } from "vite";
 import Vue from "@vitejs/plugin-vue";
 import Components from "unplugin-vue-components/vite";
 import { tsconfigBaseAliases } from "nx-vue3-vite";
 import {viteStaticCopy} from "vite-plugin-static-copy";
+import dts from "vite-plugin-dts";
 
-module.exports = defineConfig({
+export default  defineConfig({
   assetsInclude: /\.(pdf|jpg|png|svg)$/,
   resolve: {
     alias: {
@@ -14,6 +15,10 @@ module.exports = defineConfig({
     }
   },
   plugins: [
+    dts({
+      entryRoot: "src",
+      tsconfigPath: join(__dirname, "tsconfig.lib.json"),
+    }),
     Vue(),
     Components({
       dirs: ["src/lib"]
@@ -33,7 +38,7 @@ module.exports = defineConfig({
   ],
   build: {
     lib: {
-      entry: path.resolve(__dirname, "./src/index.ts"),
+      entry: join(__dirname, "./src/index.ts"),
       name: "vue3-table",
       fileName: (format) => (format === "es" ? "index.js" : "index.cjs"),
       // Change this to the formats you want to support.
