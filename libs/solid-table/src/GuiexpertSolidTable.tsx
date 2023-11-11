@@ -1,6 +1,17 @@
 import { mergeProps, onMount, Component } from "solid-js";
-import {SimpleDomService, TableModelIf, TableOptions, TableScope} from "../../table/src";
-import {GeCheckboxEventFn, GeModelChangeEventFn, GeMouseEventFn, GeTableReadyEventFn} from "@guiexpert/react-table";
+import {
+  GeModelChangeEvent,
+  GeMouseEvent,
+  SimpleDomService, TableApi,
+  TableModelIf,
+  TableOptions,
+  TableScope
+} from "@guiexpert/table";
+
+export type GeMouseEventFn = (evt: GeMouseEvent) => {};
+export type GeCheckboxEventFn = (evt: any[]) => {};
+export type GeTableReadyEventFn = (evt: TableApi) => {};
+export type GeModelChangeEventFn = (evt: GeModelChangeEvent) => {};
 
 export interface GuiexpertTableProps {
   tableModel: TableModelIf,

@@ -2,12 +2,16 @@ import { Component, createRef } from "preact";
 import {
   GeModelChangeEvent,
   GeMouseEvent,
-  SimpleDomService,
+  SimpleDomService, TableApi,
   TableModelIf,
   TableOptions,
   TableScope
 } from "@guiexpert/table";
-import { GeCheckboxEventFn, GeModelChangeEventFn, GeMouseEventFn, GeTableReadyEventFn } from "@guiexpert/react-table";
+
+export type GeMouseEventFn = (evt: GeMouseEvent) => {};
+export type GeCheckboxEventFn = (evt: any[]) => {};
+export type GeTableReadyEventFn = (evt: TableApi) => {};
+export type GeModelChangeEventFn = (evt: GeModelChangeEvent) => {};
 
 export interface GuiexpertTableProps {
   tableModel: TableModelIf,
