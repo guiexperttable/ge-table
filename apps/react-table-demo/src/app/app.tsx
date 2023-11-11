@@ -1,5 +1,5 @@
 import { ComponentRendererWrapper, GeMouseEventFn, GuiexpertTable } from "@guiexpert/react-table";
-import { ColumnDefIf, TreeFactory, TableOptions, TableFactory } from "@guiexpert/table";
+import { ColumnDefIf, TableOptions, TableFactory } from "@guiexpert/table";
 import {
   applyBodyRenderer,
   createColumnDefs,
