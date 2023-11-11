@@ -114,7 +114,7 @@ export function GuiexpertTable(
       style={{
         width: "100%",
         height: "100%",
-        backgroundColor: "transparent",
+        background: "transparent",
         padding: "0",
         margin: "0"
       }}></div>
