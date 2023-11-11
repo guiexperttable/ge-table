@@ -11,7 +11,9 @@
     "entryFile": "src/index.ts"
   },
   "scripts": {
-    "npm-pub:svelte-table": "npm publish --access public"
+    "typedoc:json": "npx typedoc --json ../../apps/table-website/src/assets/json/doctype.json src/index.ts",
+    "typedoc:docs": "npx typedoc --out ../../apps/table-website/src/assets/docs src/index.ts",
+    "npm-pub:table": "npm publish --access public"
   },
   "exports": {
     ".": {

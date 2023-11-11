@@ -9,11 +9,9 @@
     "build:all": "npm run _update-build-version & nx run-many --all --target=build  && npm run concat-css && npm run concat-css-2",
     "build:table-website": "nx run table-website:build:production",
     "build:demo-table-models": "nx run demo-table-models:build:production",
-
     "build:preact-table": "nx run @guiexpert/preact-table:build:production",
     "build:solid-table": "nx run @guiexpert/solid-table:build:production --verbose",
     "build:svelte-table": "nx run @guiexpert/svelte-table:build:production",
-
     "concat-css:table:src": "cat libs/table/css/*.css > libs/table/css/main.css",
     "build:table": "npm run concat-css:table:src && npx nx build @guiexpert/table",
     "concat-css": "cat libs/table/css/table*.css > dist/libs/table/css/main.css",
@@ -22,16 +20,13 @@
     "build:react-table": "nx run @guiexpert/react-table:build:production",
     "build:vue3-table": "nx run @guiexpert/vue3-table:build:production",
     "build:webcomponent-table": "nx run @guiexpert/webcomponent-table:build:production",
-
     "build:solid-table-demo": "nx run solid-table-demo:build:production",
     "build:svelte-table-demo": "nx run svelte-table-demo:build:production",
     "build:react-table-demo": "nx run react-table-demo:build:production",
     "build:preact-table-demo": "nx run preact-table-demo:build:production",
-
     "_update-build-version": "node replace.build.version.js",
     "ng": "nx",
     "nx": "nx",
-    "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2020 browser module main",
     "start": "nx serve",
     "start:table-website": "nx run table-website:serve:development",
     "start:angular-table-demo": "nx run angular-table-demo:serve:development",
@@ -227,7 +222,7 @@
     "ts-jest": "29.1.0",
     "ts-node": "10.9.1",
     "tsconfig": "^7.0.0",
-    "typedoc": "^1.0.0-dev.4",
+    "typedoc": "0.25.3",
     "typedoc-plugin-rename-defaults": "^0.7.0",
     "typescript": "5.2.2",
     "unplugin-vue-components": "^0.24.0",

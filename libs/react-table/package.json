@@ -8,7 +8,7 @@
     "entryFile": "src/index.ts"
   },
   "scripts": {
-    "npm-pub:svelte-table": "npm publish --access public"
+    "npm-pub:react-table": "npm publish --access public"
   },
   "exports": {
     ".": {
