@@ -53,11 +53,11 @@ npm install --save @guiexpert/table @guiexpert/solid-table
 
 Import the following classes in your component:
 ```
-import { SolidTable } from "@guiexpert/solid-table";
+import { GuiexpertTable } from "@guiexpert/solid-table";
 import {
   GeMouseEvent,
   TableApi
-  TableModelFactory,
+  TableFactory,
   TableModelIf,
   TableOptions,
   TableOptionsIf
@@ -79,7 +79,7 @@ function App() {
 
   return (
     <div ref={ref}>
-      <SolidTable
+      <GuiexpertTable
         tableModel={tableModel}
         tableOptions={tableOptions} />
     </div>

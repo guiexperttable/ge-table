@@ -79,6 +79,13 @@ import {
 Add a tableModel property and a onTableReady method to the component:
 
 ```
+const headerData = [['Column 1', 'Column 2', 'Column 3']] // array of array!
+
+const bodyData = []
+for (let i = 0; i < 100; i++) {
+  bodyData.push(['This is a very', 'simple', 'demo.'])
+}
+
 const tableModel: TableModelIf = TableFactory.createTableModel({
   headerData,
   bodyData,

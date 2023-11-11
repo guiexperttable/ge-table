@@ -77,16 +77,15 @@ Finally, call firstInit() at least once.
 In this example, you will see the plain TS version. For plain JS, remove ': TableModelIf'.
 
 ```
-const tableModel: TableModelIf = TableModelFactory
-  .createByArrayOfArraysParams<any>(param: {
-    columnLabels: [
-      ['Header 1', 'Header 2']
-    ],
-    data: [
-      ['Text 1a', 'Text 2a'],
-      ['Text 1b', 'Text 2b'],
-    ]
-  };
+const tableModel: TableModelIf = TableFactory.createTableModel({
+  headerData: [
+    ['Header 1', 'Header 2']
+  ],
+  bodyData: [
+    ['Text 1a', 'Text 2a'],
+    ['Text 1b', 'Text 2b'],
+  ]
+});  
 
 const ele = document.querySelector(".container-div") as HTMLDivElement;
 

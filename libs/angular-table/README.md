@@ -74,21 +74,21 @@ Add two properties (tableModel and tableOptions) to the component:
 
 ```
 import {
-  TableModelFactory,
+  TableFactory,
   TableModelIf,
   TableOptions,
   TableOptionsIf
 } from "@guiexpert/table";
 
-tableModel = TableModelFactory.createByArrayOfArraysParams<any>({
-  columnLabels: [
+tableModel: TableModelIf = TableFactory.createTableModel({
+  headerData: [
     ['Header 1', 'Header 2']
   ],
-  data: [
+  bodyData: [
     ['Text 1a', 'Text 2a'],
     ['Text 1b', 'Text 2b'],
   ]
-};
+});
 
 tableOptions = {
   ...new TableOptions(),

@@ -51,10 +51,10 @@ Add the following two NPM packages to your existing Svelte project (run this in 
 npm install --save @guiexpert/table @guiexpert/svelte-table
 ```
 
-Add SvelteTable component to a template:
+Add GuiexpertTable component to a template:
 
 ```
-<SvelteTable
+<GuiexpertTable
   on:mouseClicked={handleMouseClicked}
   on:tableReady={handleTableReady}
   tableModel={tableModel}
@@ -66,11 +66,11 @@ Import the following classes in your component:
 ```
 <script lang="ts">
 
-import { SvelteTable } from "@guiexpert/svelte-table";
+import { GuiexpertTable } from "@guiexpert/svelte-table";
 import {
   GeMouseEvent,
   TableApi
-  TableModelFactory,
+  TableFactory,
   TableModelIf,
   TableOptions,
   TableOptionsIf
@@ -81,16 +81,15 @@ import {
 Add a tableModel property and a onTableReady method to the component:
 
 ```
-const tableModel: TableModelIf = TableModelFactory
-  .createByArrayOfArraysParams<any>(param: {
-    columnLabels: [
-      ['Header 1', 'Header 2']
-    ],
-    data: [
-      ['Text 1a', 'Text 2a'],
-      ['Text 1b', 'Text 2b'],
-    ]
-  };
+const tableModel: TableModelIf = TableFactory.createTableModel({
+  headerData: [
+    ['Header 1', 'Header 2']
+  ],
+  bodyData: [
+    ['Text 1a', 'Text 2a'],
+    ['Text 1b', 'Text 2b'],
+  ]
+});  
 
 function onTableReady(api: TableApi) {
   console.info("onTableReady API:", api);

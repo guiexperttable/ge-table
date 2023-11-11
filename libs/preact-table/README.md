@@ -51,11 +51,11 @@ Add the following two NPM packages to your existing preact project (run this in 
 npm install --save @guiexpert/table @guiexpert/preact-table
 ```
 
-Add PreactTable component to a template:
+Add GuiexpertTable component to a template:
 
 ```
 return (
-  <PreactTable
+  <GuiexpertTable
     tableOptions={tableOptions}
     tableModel={tableModel}
     mouseClicked={console.info}
@@ -66,11 +66,11 @@ return (
 
 Import the following classes in your component:
 ```
-import { PreactTable } from "@guiexpert/preact-table";
+import { GuiexpertTable } from "@guiexpert/preact-table";
 import {
   GeMouseEvent,
   TableApi
-  TableModelFactory,
+  TableFactory,
   TableModelIf,
   TableOptions,
   TableOptionsIf
@@ -81,16 +81,15 @@ import {
 Add a tableModel property and a onTableReady method to the component:
 
 ```
-const tableModel: TableModelIf = TableModelFactory
-  .createByArrayOfArraysParams<any>(param: {
-    columnLabels: [
-      ['Header 1', 'Header 2']
-    ],
-    data: [
-      ['Text 1a', 'Text 2a'],
-      ['Text 1b', 'Text 2b'],
-    ]
-  };
+const tableModel: TableModelIf = TableFactory.createTableModel({
+  headerData: [
+    ['Header 1', 'Header 2']
+  ],
+  bodyData: [
+    ['Text 1a', 'Text 2a'],
+    ['Text 1b', 'Text 2b'],
+  ]
+});  
 const tableOptions = new TableOptions();
 
 function onTableReady(api: TableApi) {

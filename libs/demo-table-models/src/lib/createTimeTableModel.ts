@@ -250,12 +250,6 @@ export const tableOptions = {
 
 export function createTimeTableModel(): TableModelIf {
 
-  // Simple example:
-  // const tm = TableModelFactory.buildByTypedRowsParam<TeamDataIf>({
-  //   rows,
-  //   columnDefs,
-  //   tableOptions
-  // });
 
   const defaultRowHeights = tableOptions.defaultRowHeights;
   const tm = TableFactory.createTableModel({

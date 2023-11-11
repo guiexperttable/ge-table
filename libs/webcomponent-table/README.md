@@ -65,7 +65,7 @@ import { TableComponent } from "@guiexpert/webcomponent-table";
 import {
   GeMouseEvent,
   TableApi
-  TableModelFactory,
+  TableFactory,
   TableModelIf,
   TableOptions,
   TableOptionsIf
@@ -76,16 +76,15 @@ import {
 Add a tableModel and tableOption property and a onTableReady method to the component. Set model and option via setData(tableModel, tableOptions):
 
 ```
-const tableModel: TableModelIf = TableModelFactory
-  .createByArrayOfArraysParams<any>(param: {
-    columnLabels: [
-      ['Header 1', 'Header 2']
-    ],
-    data: [
-      ['Text 1a', 'Text 2a'],
-      ['Text 1b', 'Text 2b'],
-    ]
-  };
+const tableModel: TableModelIf = TableFactory.createTableModel({
+  headerData: [
+    ['Header 1', 'Header 2']
+  ],
+  bodyData: [
+    ['Text 1a', 'Text 2a'],
+    ['Text 1b', 'Text 2b'],
+  ]
+});  
 
 function onTableReady(api: TableApi) {
   console.info("onTableReady API:", api);
