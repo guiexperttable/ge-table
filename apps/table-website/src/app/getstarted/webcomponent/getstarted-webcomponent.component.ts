@@ -28,7 +28,7 @@ import {
 `;
 
   text4 = `const tableModel: TableModelIf = TableFactory
-  .createTableModel<any>(param: {
+  .createTableModel<any>({
     headerData [
       ['Header 1', 'Header 2']
     ],
