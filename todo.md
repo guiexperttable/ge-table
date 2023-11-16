@@ -1,5 +1,21 @@
 # guiexpert/table
 
+## Packages Status
+
+| Framework     | Lib | Demo | Stackblitz                                                                                                                                                                                          |
+|---------------|-----|------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| plain JS      | 👌  | 👌   | ✅ : https://stackblitz.com/edit/plain-html-vfcyjh?file=index.ts                                                                                                                                     |
+| Web Component | 👌  | 👌   | ✅ : https://stackblitz.com/edit/stackblitz-guiexpert-table-webcomponents-simple?file=index.ts                                                                                                                                                                                               |
+| Angular       | 👌  | 👌   | ✅ : https://stackblitz.com/edit/stackblitz-guiexpert-angular-simple?file=src%2Fmain.ts                                                                                                              |
+| Vue3          | 👌  | 👌   | ✅ : https://stackblitz.com/edit/stackblitz-guiexpert-vue3-simple?file=src%2FApp.vue                                                                                                                 |
+| React         | 👌  | 👌   | ✅ : https://stackblitz.com/edit/stackblitz-guiexpert-react-table-typescript?file=App.tsx                                                                                                            |
+| Preact        | 👌  | 👌   | ✅ : https://stackblitz.com/edit/stackblitz-guiexpert-preact-table-simple?file=App.jsx                                                                                                               |
+| Solid         | 👌  | ❌   | ❌ : TS2604: JSX element type  GuiexpertTable  does not have any construct or call signatures.   <br/>https://stackblitz.com/edit/stackblitz-guiexpert-solid-table-simple?file=index.html,src%2Findex.tsx |
+| Svelte        | 👌  | 👌   | ❌ : fake!  https://stackblitz.com/edit/stackblitz-guiexpert-svelte-demo?file=src%2FApp.svelte                                                                                                       |
+
+
+
+
 ## TODOs
 - analyse design: https://www.sincode.ai/
 - New feature: grouping columns

@@ -11,6 +11,7 @@ import {
 } from "@guiexpert/demo-table-models";
 import { default as GenderRendererComponent } from "./GenderRendererComponent";
 
+
 const tableOptions = createTableOptions();
 const rows: SimplePersonIf[] = createTableRows();
 const columnDefs: ColumnDefIf[] = createColumnDefs();
