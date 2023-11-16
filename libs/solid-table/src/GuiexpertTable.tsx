@@ -1,32 +1,10 @@
-import { mergeProps, onMount, Component } from "solid-js";
-import {
-  GeModelChangeEvent,
-  GeMouseEvent,
-  SimpleDomService, TableApi,
-  TableModelIf,
-  TableOptions,
-  TableScope
-} from "@guiexpert/table";
+import {GuiexpertTableProps} from "./GuiexpertTableProps";
+import {mergeProps, onMount} from "solid-js";
+import {SimpleDomService, TableOptions, TableScope} from "@guiexpert/table";
 
-export type GeMouseEventFn = (evt: GeMouseEvent) => {};
-export type GeCheckboxEventFn = (evt: any[]) => {};
-export type GeTableReadyEventFn = (evt: TableApi) => {};
-export type GeModelChangeEventFn = (evt: GeModelChangeEvent) => {};
 
-export interface GuiexpertTableProps {
-  tableModel: TableModelIf,
-  tableOptions?: TableOptions,
-  mouseMoved?: GeMouseEventFn,
-  contextmenu?: GeMouseEventFn,
-  mouseClicked?: GeMouseEventFn,
-  mouseDragging?: GeMouseEventFn,
-  mouseDraggingEnd?: GeMouseEventFn,
-  checkboxChanged?: GeCheckboxEventFn,
-  modelChanged?: GeModelChangeEventFn,
-  tableReady?: GeTableReadyEventFn
-}
 
-const GuiexpertTable: Component<GuiexpertTableProps> =  (props:any) => {
+export default (props: GuiexpertTableProps) => {
 
   let ref:any;
 
@@ -36,42 +14,41 @@ const GuiexpertTable: Component<GuiexpertTableProps> =  (props:any) => {
   }, props);
 
 
-  // Man verwende onMount oder createEffect, um die ref nach dem Einhängen ins DOM zu verwenden
   onMount(() => {
     const listener = {
       onCheckboxChanged: (evt: any) => {
         const e = new CustomEvent("checkboxChanged", { detail: evt, bubbles: true });
-        ref.dispatchEvent(e);
+        if (ref) ref.dispatchEvent(e);
       },
 
       onContextmenu: (evt: any) => {
         const e = new CustomEvent("contextmenu", { detail: evt, bubbles: true });
-        ref.dispatchEvent(e);
+        if (ref) ref.dispatchEvent(e);
       },
 
       onModelChanged: (evt: any) => {
         const e = new CustomEvent("modelChanged", { detail: evt, bubbles: true });
-        ref.dispatchEvent(e);
+        if (ref) ref.dispatchEvent(e);
       },
 
       onMouseClicked: (evt: any) => {
         const e = new CustomEvent("mouseClicked", { detail: evt, bubbles: true });
-        ref.dispatchEvent(e);
+        if (ref) ref.dispatchEvent(e);
       },
 
       onMouseDragging: (evt: any) => {
         const e = new CustomEvent("mouseDragging", { detail: evt, bubbles: true });
-        ref.dispatchEvent(e);
+        if (ref) ref.dispatchEvent(e);
       },
 
       onMouseDraggingEnd: (evt: any) => {
         const e = new CustomEvent("mouseDraggingEnd", { detail: evt, bubbles: true });
-        ref.dispatchEvent(e);
+        if (ref) ref.dispatchEvent(e);
       },
 
       onMouseMoved: (evt: any) => {
         const e = new CustomEvent("mouseMoved", { detail: evt, bubbles: true });
-        ref.dispatchEvent(e);
+        if (ref) ref.dispatchEvent(e);
       }
     };
 
@@ -80,10 +57,10 @@ const GuiexpertTable: Component<GuiexpertTableProps> =  (props:any) => {
     );
     tableScope.firstInit();
     const e = new CustomEvent("tableReady", { detail: tableScope.getApi(), bubbles: true });
-    ref.dispatchEvent(e);
+    if (ref) ref.dispatchEvent(e);
   });
 
-  return (<div ref={ref} />);
-};
-
-export default GuiexpertTable;
+  return (
+    <div ref={ref} />
+  );
+}
