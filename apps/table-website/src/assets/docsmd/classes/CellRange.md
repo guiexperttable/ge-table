@@ -46,7 +46,7 @@
 
 #### Defined in
 
-[lib/table/data/common/cell-range.ts:4](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/cell-range.ts#L4)
+[lib/table/orderData/common/cell-range.ts:4](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/cell-range.ts#L4)
 
 ## Properties
 
@@ -56,7 +56,7 @@
 
 #### Defined in
 
-[lib/table/data/common/cell-range.ts:6](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/cell-range.ts#L6)
+[lib/table/orderData/common/cell-range.ts:6](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/cell-range.ts#L6)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/cell-range.ts:8](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/cell-range.ts#L8)
+[lib/table/orderData/common/cell-range.ts:8](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/cell-range.ts#L8)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/cell-range.ts:9](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/cell-range.ts#L9)
+[lib/table/orderData/common/cell-range.ts:9](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/cell-range.ts#L9)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/cell-range.ts:5](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/cell-range.ts#L5)
+[lib/table/orderData/common/cell-range.ts:5](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/cell-range.ts#L5)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/cell-range.ts:7](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/cell-range.ts#L7)
+[lib/table/orderData/common/cell-range.ts:7](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/cell-range.ts#L7)
 
 ## Methods
 
@@ -117,7 +117,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/cell-range.ts:50](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/cell-range.ts#L50)
+[lib/table/orderData/common/cell-range.ts:50](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/cell-range.ts#L50)
 
 ___
 
@@ -142,7 +142,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/cell-range.ts:12](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/cell-range.ts#L12)
+[lib/table/orderData/common/cell-range.ts:12](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/cell-range.ts#L12)
 
 ___
 
@@ -163,7 +163,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/cell-range.ts:31](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/cell-range.ts#L31)
+[lib/table/orderData/common/cell-range.ts:31](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/cell-range.ts#L31)
 
 ___
 
@@ -183,7 +183,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/cell-range.ts:44](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/cell-range.ts#L44)
+[lib/table/orderData/common/cell-range.ts:44](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/cell-range.ts#L44)
 
 ___
 
@@ -203,4 +203,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/cell-range.ts:38](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/cell-range.ts#L38)
+[lib/table/orderData/common/cell-range.ts:38](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/cell-range.ts#L38)

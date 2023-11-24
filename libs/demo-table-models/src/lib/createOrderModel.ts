@@ -17,12 +17,12 @@ import {
   TableOptions,
   TrueFn
 } from "@guiexpert/table";
-import data from "../demodata/orders";
+import orderData from "../demodata/orders";
 import {OrderIf} from "@guiexpert/demo-table-models";
 
 
 function createTableRows(): OrderIf[] {
-  return data;
+  return orderData;
 }
 
 function createColumnDefs(): ColumnDefIf[] {

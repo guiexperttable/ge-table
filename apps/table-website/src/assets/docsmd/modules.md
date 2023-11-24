@@ -218,7 +218,7 @@ The AreaIdent is an identifier for the three areas : header, boder, and footer.
 
 #### Defined in
 
-[lib/table/data/tablemodel/area-ident.type.ts:4](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/area-ident.type.ts#L4)
+[lib/table/orderData/tablemodel/area-ident.type.ts:4](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/area-ident.type.ts#L4)
 
 ___
 
@@ -242,7 +242,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/area-map.type.ts:1](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/area-map.type.ts#L1)
+[lib/table/orderData/common/area-map.type.ts:1](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/area-map.type.ts#L1)
 
 ___
 
@@ -260,7 +260,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/boolean-function.ts:1](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/boolean-function.ts#L1)
+[lib/table/orderData/common/boolean-function.ts:1](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/boolean-function.ts#L1)
 
 ___
 
@@ -270,7 +270,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/checked-type.ts:1](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/checked-type.ts#L1)
+[lib/table/orderData/common/checked-type.ts:1](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/checked-type.ts#L1)
 
 ___
 
@@ -288,7 +288,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/div-scope.type.ts:1](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/div-scope.type.ts#L1)
+[lib/table/orderData/div-scope.type.ts:1](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/div-scope.type.ts#L1)
 
 ___
 
@@ -320,7 +320,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/filter-function.ts:1](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/filter-function.ts#L1)
+[lib/table/orderData/common/filter-function.ts:1](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/filter-function.ts#L1)
 
 ___
 
@@ -385,7 +385,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/auto-restore-options.if.ts:2](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/options/auto-restore-options.if.ts#L2)
+[lib/table/orderData/options/auto-restore-options.if.ts:2](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/auto-restore-options.if.ts#L2)
 
 ___
 
@@ -403,7 +403,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/auto-restore-options.if.ts:3](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/options/auto-restore-options.if.ts#L3)
+[lib/table/orderData/options/auto-restore-options.if.ts:3](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/auto-restore-options.if.ts#L3)
 
 ___
 
@@ -427,7 +427,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/get-t.ts:1](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/get-t.ts#L1)
+[lib/table/orderData/common/get-t.ts:1](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/get-t.ts#L1)
 
 ___
 
@@ -441,7 +441,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/data/html-style.type.ts:1](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/service/data/html-style.type.ts#L1)
+[lib/table/service/orderData/html-style.type.ts:1](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/service/orderData/html-style.type.ts#L1)
 
 ___
 
@@ -473,7 +473,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/auto-restore-options.if.ts:1](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/options/auto-restore-options.if.ts#L1)
+[lib/table/orderData/options/auto-restore-options.if.ts:1](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/auto-restore-options.if.ts#L1)
 
 ___
 
@@ -527,7 +527,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/side-ident.type.ts:1](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/side-ident.type.ts#L1)
+[lib/table/orderData/side-ident.type.ts:1](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/side-ident.type.ts#L1)
 
 ___
 
@@ -537,7 +537,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sort-state.type.ts:1](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sort-state.type.ts#L1)
+[lib/table/orderData/common/sort-state.type.ts:1](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sort-state.type.ts#L1)
 
 ___
 
@@ -547,7 +547,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/tree-arrow.type.ts:1](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/tree-arrow.type.ts#L1)
+[lib/table/orderData/common/tree-arrow.type.ts:1](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/tree-arrow.type.ts#L1)
 
 ## Variables
 
@@ -575,7 +575,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/aligns.ts:10](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/aligns.ts#L10)
+[lib/table/orderData/common/aligns.ts:10](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/aligns.ts#L10)
 
 ___
 
@@ -593,7 +593,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/aligns.ts:5](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/aligns.ts#L5)
+[lib/table/orderData/common/aligns.ts:5](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/aligns.ts#L5)
 
 ___
 
@@ -611,7 +611,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/aligns.ts:15](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/aligns.ts#L15)
+[lib/table/orderData/common/aligns.ts:15](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/aligns.ts#L15)
 
 ___
 
@@ -627,7 +627,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/aligns.ts:2](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/aligns.ts#L2)
+[lib/table/orderData/common/aligns.ts:2](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/aligns.ts#L2)
 
 ___
 
@@ -643,7 +643,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/aligns.ts:1](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/aligns.ts#L1)
+[lib/table/orderData/common/aligns.ts:1](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/aligns.ts#L1)
 
 ___
 
@@ -659,7 +659,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/aligns.ts:3](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/aligns.ts#L3)
+[lib/table/orderData/common/aligns.ts:3](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/aligns.ts#L3)
 
 ___
 
@@ -669,7 +669,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:34](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L34)
+[lib/table/orderData/common/sizes.ts:34](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L34)
 
 ___
 
@@ -679,7 +679,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:33](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L33)
+[lib/table/orderData/common/sizes.ts:33](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L33)
 
 ___
 
@@ -689,7 +689,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:24](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L24)
+[lib/table/orderData/common/sizes.ts:24](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L24)
 
 ___
 
@@ -699,7 +699,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:23](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L23)
+[lib/table/orderData/common/sizes.ts:23](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L23)
 
 ___
 
@@ -709,7 +709,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:22](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L22)
+[lib/table/orderData/common/sizes.ts:22](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L22)
 
 ___
 
@@ -719,7 +719,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:21](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L21)
+[lib/table/orderData/common/sizes.ts:21](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L21)
 
 ___
 
@@ -729,7 +729,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:20](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L20)
+[lib/table/orderData/common/sizes.ts:20](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L20)
 
 ___
 
@@ -739,7 +739,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:19](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L19)
+[lib/table/orderData/common/sizes.ts:19](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L19)
 
 ___
 
@@ -749,7 +749,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:18](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L18)
+[lib/table/orderData/common/sizes.ts:18](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L18)
 
 ___
 
@@ -759,7 +759,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:17](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L17)
+[lib/table/orderData/common/sizes.ts:17](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L17)
 
 ___
 
@@ -769,7 +769,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:16](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L16)
+[lib/table/orderData/common/sizes.ts:16](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L16)
 
 ___
 
@@ -779,7 +779,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:15](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L15)
+[lib/table/orderData/common/sizes.ts:15](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L15)
 
 ___
 
@@ -789,7 +789,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:32](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L32)
+[lib/table/orderData/common/sizes.ts:32](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L32)
 
 ___
 
@@ -799,7 +799,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:14](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L14)
+[lib/table/orderData/common/sizes.ts:14](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L14)
 
 ___
 
@@ -809,7 +809,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:13](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L13)
+[lib/table/orderData/common/sizes.ts:13](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L13)
 
 ___
 
@@ -819,7 +819,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:12](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L12)
+[lib/table/orderData/common/sizes.ts:12](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L12)
 
 ___
 
@@ -829,7 +829,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:11](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L11)
+[lib/table/orderData/common/sizes.ts:11](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L11)
 
 ___
 
@@ -839,7 +839,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:10](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L10)
+[lib/table/orderData/common/sizes.ts:10](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L10)
 
 ___
 
@@ -849,7 +849,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:9](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L9)
+[lib/table/orderData/common/sizes.ts:9](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L9)
 
 ___
 
@@ -859,7 +859,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:8](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L8)
+[lib/table/orderData/common/sizes.ts:8](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L8)
 
 ___
 
@@ -869,7 +869,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:7](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L7)
+[lib/table/orderData/common/sizes.ts:7](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L7)
 
 ___
 
@@ -879,7 +879,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:6](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L6)
+[lib/table/orderData/common/sizes.ts:6](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L6)
 
 ___
 
@@ -889,7 +889,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:5](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L5)
+[lib/table/orderData/common/sizes.ts:5](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L5)
 
 ___
 
@@ -899,7 +899,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:31](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L31)
+[lib/table/orderData/common/sizes.ts:31](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L31)
 
 ___
 
@@ -909,7 +909,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:4](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L4)
+[lib/table/orderData/common/sizes.ts:4](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L4)
 
 ___
 
@@ -919,7 +919,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:30](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L30)
+[lib/table/orderData/common/sizes.ts:30](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L30)
 
 ___
 
@@ -929,7 +929,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:29](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L29)
+[lib/table/orderData/common/sizes.ts:29](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L29)
 
 ___
 
@@ -939,7 +939,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:28](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L28)
+[lib/table/orderData/common/sizes.ts:28](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L28)
 
 ___
 
@@ -949,7 +949,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:27](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L27)
+[lib/table/orderData/common/sizes.ts:27](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L27)
 
 ___
 
@@ -959,7 +959,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:26](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L26)
+[lib/table/orderData/common/sizes.ts:26](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L26)
 
 ___
 
@@ -969,7 +969,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:25](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/sizes.ts#L25)
+[lib/table/orderData/common/sizes.ts:25](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/sizes.ts#L25)
 
 ## Functions
 
@@ -983,7 +983,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/boolean-function.ts:4](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/boolean-function.ts#L4)
+[lib/table/orderData/common/boolean-function.ts:4](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/boolean-function.ts#L4)
 
 ___
 
@@ -997,7 +997,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/boolean-function.ts:3](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/boolean-function.ts#L3)
+[lib/table/orderData/common/boolean-function.ts:3](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/boolean-function.ts#L3)
 
 ___
 
@@ -1041,4 +1041,4 @@ Converts a string to the identifier of type AreaIdent.
 
 #### Defined in
 
-[lib/table/data/tablemodel/area-ident.type.ts:10](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/area-ident.type.ts#L10)
+[lib/table/orderData/tablemodel/area-ident.type.ts:10](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/area-ident.type.ts#L10)

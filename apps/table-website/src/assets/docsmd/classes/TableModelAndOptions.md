@@ -36,7 +36,7 @@
 
 #### Defined in
 
-[lib/table/data/table-model-and-options.ts:8](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/table-model-and-options.ts#L8)
+[lib/table/orderData/table-model-and-options.ts:8](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/table-model-and-options.ts#L8)
 
 ## Properties
 
@@ -50,7 +50,7 @@
 
 #### Defined in
 
-[lib/table/data/table-model-and-options.ts:9](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/table-model-and-options.ts#L9)
+[lib/table/orderData/table-model-and-options.ts:9](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/table-model-and-options.ts#L9)
 
 ___
 
@@ -64,4 +64,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/table-model-and-options.ts:10](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/table-model-and-options.ts#L10)
+[lib/table/orderData/table-model-and-options.ts:10](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/table-model-and-options.ts#L10)

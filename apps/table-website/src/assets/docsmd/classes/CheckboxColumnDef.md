@@ -44,7 +44,7 @@
 
 #### Defined in
 
-[lib/table/data/common/checkbox-column-def.ts:18](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L18)
+[lib/table/orderData/common/checkbox-column-def.ts:18](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/checkbox-column-def.ts#L18)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/checkbox-column-def.ts:13](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L13)
+[lib/table/orderData/common/checkbox-column-def.ts:13](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/checkbox-column-def.ts#L13)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/checkbox-column-def.ts:16](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L16)
+[lib/table/orderData/common/checkbox-column-def.ts:16](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/checkbox-column-def.ts#L16)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/checkbox-column-def.ts:15](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L15)
+[lib/table/orderData/common/checkbox-column-def.ts:15](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/checkbox-column-def.ts#L15)
 
 ___
 
@@ -100,7 +100,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/checkbox-column-def.ts:12](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L12)
+[lib/table/orderData/common/checkbox-column-def.ts:12](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/checkbox-column-def.ts#L12)
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/checkbox-column-def.ts:17](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L17)
+[lib/table/orderData/common/checkbox-column-def.ts:17](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/checkbox-column-def.ts#L17)
 
 ___
 
@@ -128,4 +128,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/checkbox-column-def.ts:14](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L14)
+[lib/table/orderData/common/checkbox-column-def.ts:14](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/checkbox-column-def.ts#L14)

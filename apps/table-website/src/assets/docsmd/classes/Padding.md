@@ -36,7 +36,7 @@
 
 #### Defined in
 
-[lib/table/data/tablemodel/padding.ts:2](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/padding.ts#L2)
+[lib/table/orderData/tablemodel/padding.ts:2](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/padding.ts#L2)
 
 ## Properties
 
@@ -46,7 +46,7 @@
 
 #### Defined in
 
-[lib/table/data/tablemodel/padding.ts:5](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/padding.ts#L5)
+[lib/table/orderData/tablemodel/padding.ts:5](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/padding.ts#L5)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/padding.ts:6](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/padding.ts#L6)
+[lib/table/orderData/tablemodel/padding.ts:6](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/padding.ts#L6)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/padding.ts:4](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/padding.ts#L4)
+[lib/table/orderData/tablemodel/padding.ts:4](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/padding.ts#L4)
 
 ___
 
@@ -76,4 +76,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/padding.ts:3](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/padding.ts#L3)
+[lib/table/orderData/tablemodel/padding.ts:3](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/padding.ts#L3)

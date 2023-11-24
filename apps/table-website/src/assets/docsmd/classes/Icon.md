@@ -38,7 +38,7 @@
 
 #### Defined in
 
-[lib/table/data/options/icon.ts:4](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/options/icon.ts#L4)
+[lib/table/orderData/options/icon.ts:4](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/icon.ts#L4)
 
 ## Properties
 
@@ -52,7 +52,7 @@
 
 #### Defined in
 
-[lib/table/data/options/icon.ts:7](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/options/icon.ts#L7)
+[lib/table/orderData/options/icon.ts:7](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/icon.ts#L7)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/icon.ts:5](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/options/icon.ts#L5)
+[lib/table/orderData/options/icon.ts:5](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/icon.ts#L5)
 
 ___
 
@@ -80,4 +80,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/icon.ts:6](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/options/icon.ts#L6)
+[lib/table/orderData/options/icon.ts:6](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/icon.ts#L6)

@@ -74,7 +74,7 @@ will result in the presence of an east area.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:29](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L29)
+[lib/table/orderData/tablemodel/table-model.if.ts:29](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/table-model.if.ts#L29)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:87](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L87)
+[lib/table/orderData/tablemodel/table-model.if.ts:87](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/table-model.if.ts#L87)
 
 ___
 
@@ -120,7 +120,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:85](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L85)
+[lib/table/orderData/tablemodel/table-model.if.ts:85](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/table-model.if.ts#L85)
 
 ___
 
@@ -140,7 +140,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:41](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L41)
+[lib/table/orderData/tablemodel/table-model.if.ts:41](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/table-model.if.ts#L41)
 
 ___
 
@@ -154,7 +154,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:43](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L43)
+[lib/table/orderData/tablemodel/table-model.if.ts:43](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/table-model.if.ts#L43)
 
 ___
 
@@ -174,7 +174,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:63](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L63)
+[lib/table/orderData/tablemodel/table-model.if.ts:63](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/table-model.if.ts#L63)
 
 ___
 
@@ -188,7 +188,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:35](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L35)
+[lib/table/orderData/tablemodel/table-model.if.ts:35](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/table-model.if.ts#L35)
 
 ___
 
@@ -208,7 +208,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:57](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L57)
+[lib/table/orderData/tablemodel/table-model.if.ts:57](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/table-model.if.ts#L57)
 
 ___
 
@@ -222,7 +222,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:59](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L59)
+[lib/table/orderData/tablemodel/table-model.if.ts:59](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/table-model.if.ts#L59)
 
 ___
 
@@ -242,7 +242,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:61](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L61)
+[lib/table/orderData/tablemodel/table-model.if.ts:61](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/table-model.if.ts#L61)
 
 ___
 
@@ -262,7 +262,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:37](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L37)
+[lib/table/orderData/tablemodel/table-model.if.ts:37](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/table-model.if.ts#L37)
 
 ▸ **getColumnWidth**(`columnIndex`): `number`
 
@@ -278,7 +278,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:65](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L65)
+[lib/table/orderData/tablemodel/table-model.if.ts:65](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/table-model.if.ts#L65)
 
 ___
 
@@ -292,7 +292,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:79](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L79)
+[lib/table/orderData/tablemodel/table-model.if.ts:79](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/table-model.if.ts#L79)
 
 ___
 
@@ -306,7 +306,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:81](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L81)
+[lib/table/orderData/tablemodel/table-model.if.ts:81](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/table-model.if.ts#L81)
 
 ___
 
@@ -320,7 +320,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:45](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L45)
+[lib/table/orderData/tablemodel/table-model.if.ts:45](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/table-model.if.ts#L45)
 
 ___
 
@@ -334,7 +334,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:47](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L47)
+[lib/table/orderData/tablemodel/table-model.if.ts:47](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/table-model.if.ts#L47)
 
 ___
 
@@ -348,7 +348,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:77](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L77)
+[lib/table/orderData/tablemodel/table-model.if.ts:77](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/table-model.if.ts#L77)
 
 ___
 
@@ -369,7 +369,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:55](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L55)
+[lib/table/orderData/tablemodel/table-model.if.ts:55](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/table-model.if.ts#L55)
 
 ___
 
@@ -383,7 +383,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:89](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L89)
+[lib/table/orderData/tablemodel/table-model.if.ts:89](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/table-model.if.ts#L89)
 
 ___
 
@@ -403,7 +403,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:39](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L39)
+[lib/table/orderData/tablemodel/table-model.if.ts:39](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/table-model.if.ts#L39)
 
 ___
 
@@ -417,7 +417,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:33](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L33)
+[lib/table/orderData/tablemodel/table-model.if.ts:33](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/table-model.if.ts#L33)
 
 ___
 
@@ -431,7 +431,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:51](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L51)
+[lib/table/orderData/tablemodel/table-model.if.ts:51](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/table-model.if.ts#L51)
 
 ___
 
@@ -445,7 +445,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:49](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L49)
+[lib/table/orderData/tablemodel/table-model.if.ts:49](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/table-model.if.ts#L49)
 
 ___
 
@@ -459,7 +459,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:53](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L53)
+[lib/table/orderData/tablemodel/table-model.if.ts:53](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/table-model.if.ts#L53)
 
 ___
 
@@ -479,7 +479,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:31](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L31)
+[lib/table/orderData/tablemodel/table-model.if.ts:31](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/table-model.if.ts#L31)
 
 ___
 
@@ -493,7 +493,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:75](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L75)
+[lib/table/orderData/tablemodel/table-model.if.ts:75](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/table-model.if.ts#L75)
 
 ___
 
@@ -507,7 +507,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:73](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L73)
+[lib/table/orderData/tablemodel/table-model.if.ts:73](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/table-model.if.ts#L73)
 
 ___
 
@@ -527,7 +527,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:71](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L71)
+[lib/table/orderData/tablemodel/table-model.if.ts:71](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/table-model.if.ts#L71)
 
 ___
 
@@ -548,4 +548,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:67](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L67)
+[lib/table/orderData/tablemodel/table-model.if.ts:67](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/table-model.if.ts#L67)

@@ -24,6 +24,8 @@ import { OnActionTriggeredIf } from "./action/on-action-triggered.if";
 import { ActionId } from "./action/action-id.type";
 import { ShortcutService } from "./action/shortcut.service";
 import { EventAdapter } from "./event-adapter";
+import {SimpleDomService} from "./service/simple-dom-service";
+import {TableOptions} from "./data/options/table-options";
 
 
 export class TableScope extends RenderScope implements OnActionTriggeredIf {
@@ -44,6 +46,22 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
   private mouseStartColumnIndex = -1;
   private dragFrom = -1;
   private dragTo = -1;
+
+  static create(
+    hostElement: HTMLDivElement,
+    tableModel: TableModelIf,
+    tableOptions: TableOptionsIf = new TableOptions(),
+    eventListener: EventListenerIf = new EventAdapter(),
+    domService: DomServiceIf = new SimpleDomService(),
+    ): TableScope {
+    return new TableScope(
+      hostElement,
+      tableModel,
+      domService,
+      tableOptions,
+      eventListener
+    );
+  }
 
   constructor(
     hostElement: HTMLDivElement,

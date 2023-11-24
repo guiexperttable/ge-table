@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[lib/table/data/options/icon.if.ts:5](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/options/icon.if.ts#L5)
+[lib/table/orderData/options/icon.if.ts:5](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/icon.if.ts#L5)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/icon.if.ts:3](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/options/icon.if.ts#L3)
+[lib/table/orderData/options/icon.if.ts:3](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/icon.if.ts#L3)
 
 ___
 
@@ -42,4 +42,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/icon.if.ts:4](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/options/icon.if.ts#L4)
+[lib/table/orderData/options/icon.if.ts:4](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/icon.if.ts#L4)

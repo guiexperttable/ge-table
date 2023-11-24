@@ -14,7 +14,7 @@ This is the UI-agnostic table component for your next web app. 😊
 - Handle large datasets easily
 - Excellent performance for large tables by vertical and horizontal virtual scrolling
 - Fully-featured (advanced sorting and filtering)
-- Highly customizable data grid
+- Highly customizable orderData grid
 - Outstanding performance
 - No third-party dependencies
 - UI-agnostic

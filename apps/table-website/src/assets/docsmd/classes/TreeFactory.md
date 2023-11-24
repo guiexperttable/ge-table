@@ -27,7 +27,7 @@
 
 ### buildTreeRow
 
-▸ **buildTreeRow**\<`T`\>(`data`, `childrenProperty?`, `parent?`, `deep?`, `deepMaxLimit?`): [`TreeRow`](TreeRow.md)\<`T`\>
+▸ **buildTreeRow**\<`T`\>(`orderData`, `childrenProperty?`, `parent?`, `deep?`, `deepMaxLimit?`): [`TreeRow`](TreeRow.md)\<`T`\>
 
 #### Type parameters
 
@@ -39,7 +39,7 @@
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `data` | `T` | `undefined` |
+| `orderData` | `T` | `undefined` |
 | `childrenProperty` | `string` | `"children"` |
 | `parent` | [`TreeRow`](TreeRow.md)\<`T`\> | `undefined` |
 | `deep` | `number` | `0` |
@@ -57,7 +57,7 @@ ___
 
 ### buildTreeRows
 
-▸ **buildTreeRows**\<`T`\>(`data`, `childrenProperty?`, `deepMaxLimit?`): [`TreeRow`](TreeRow.md)\<`T`\>[]
+▸ **buildTreeRows**\<`T`\>(`orderData`, `childrenProperty?`, `deepMaxLimit?`): [`TreeRow`](TreeRow.md)\<`T`\>[]
 
 #### Type parameters
 
@@ -69,7 +69,7 @@ ___
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `data` | `T`[] | `undefined` |
+| `orderData` | `T`[] | `undefined` |
 | `childrenProperty` | `string` | `"children"` |
 | `deepMaxLimit` | `number` | `12` |
 

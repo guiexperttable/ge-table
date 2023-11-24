@@ -22,7 +22,7 @@
 
 - [children](CellGroup.md#children)
 - [closed](CellGroup.md#closed)
-- [data](CellGroup.md#data)
+- [orderData](CellGroup.md#orderData)
 - [impl](CellGroup.md#impl)
 - [property](CellGroup.md#property)
 - [toggle](CellGroup.md#toggle)
@@ -32,13 +32,13 @@
 
 ### constructor
 
-• **new CellGroup**(`data`, `property?`, `toggle?`, `closed?`, `visibility?`, `children?`): [`CellGroup`](CellGroup.md)
+• **new CellGroup**(`orderData`, `property?`, `toggle?`, `closed?`, `visibility?`, `children?`): [`CellGroup`](CellGroup.md)
 
 #### Parameters
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `data` | `any` | `undefined` |
+| `orderData` | `any` | `undefined` |
 | `property?` | `string` | `undefined` |
 | `toggle?` | `boolean` | `undefined` |
 | `closed` | `boolean` | `false` |
@@ -51,7 +51,7 @@
 
 #### Defined in
 
-[lib/table/data/tablemodel/cellgroup/cell-group.ts:7](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group.ts#L7)
+[lib/table/orderData/tablemodel/cellgroup/cell-group.ts:7](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group.ts#L7)
 
 ## Properties
 
@@ -65,7 +65,7 @@
 
 #### Defined in
 
-[lib/table/data/tablemodel/cellgroup/cell-group.ts:13](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group.ts#L13)
+[lib/table/orderData/tablemodel/cellgroup/cell-group.ts:13](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group.ts#L13)
 
 ___
 
@@ -79,21 +79,21 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/cellgroup/cell-group.ts:11](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group.ts#L11)
+[lib/table/orderData/tablemodel/cellgroup/cell-group.ts:11](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group.ts#L11)
 
 ___
 
-### data
+### orderData
 
-• **data**: `any`
+• **orderData**: `any`
 
 #### Implementation of
 
-[CellGroupIf](../interfaces/CellGroupIf.md).[data](../interfaces/CellGroupIf.md#data)
+[CellGroupIf](../interfaces/CellGroupIf.md).[orderData](../interfaces/CellGroupIf.md#orderData)
 
 #### Defined in
 
-[lib/table/data/tablemodel/cellgroup/cell-group.ts:8](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group.ts#L8)
+[lib/table/orderData/tablemodel/cellgroup/cell-group.ts:8](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group.ts#L8)
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/cellgroup/cell-group.ts:5](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group.ts#L5)
+[lib/table/orderData/tablemodel/cellgroup/cell-group.ts:5](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group.ts#L5)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/cellgroup/cell-group.ts:9](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group.ts#L9)
+[lib/table/orderData/tablemodel/cellgroup/cell-group.ts:9](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group.ts#L9)
 
 ___
 
@@ -135,7 +135,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/cellgroup/cell-group.ts:10](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group.ts#L10)
+[lib/table/orderData/tablemodel/cellgroup/cell-group.ts:10](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group.ts#L10)
 
 ___
 
@@ -149,4 +149,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/cellgroup/cell-group.ts:12](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group.ts#L12)
+[lib/table/orderData/tablemodel/cellgroup/cell-group.ts:12](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group.ts#L12)

@@ -22,7 +22,7 @@
 
 - [checked](TreeRow.md#checked)
 - [children](TreeRow.md#children)
-- [data](TreeRow.md#data)
+- [orderData](TreeRow.md#orderData)
 - [deep](TreeRow.md#deep)
 - [expanded](TreeRow.md#expanded)
 - [keep](TreeRow.md#keep)
@@ -32,7 +32,7 @@
 
 ### constructor
 
-• **new TreeRow**\<`T`\>(`data`, `expanded?`, `children`, `parent`, `deep?`, `checked?`, `keep?`): [`TreeRow`](TreeRow.md)\<`T`\>
+• **new TreeRow**\<`T`\>(`orderData`, `expanded?`, `children`, `parent`, `deep?`, `checked?`, `keep?`): [`TreeRow`](TreeRow.md)\<`T`\>
 
 #### Type parameters
 
@@ -44,7 +44,7 @@
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `data` | `T` | `undefined` |
+| `orderData` | `T` | `undefined` |
 | `expanded` | `boolean` | `true` |
 | `children` | `undefined` \| [`TreeRowIf`](../interfaces/TreeRowIf.md)\<`T`\>[] | `undefined` |
 | `parent` | `undefined` \| [`TreeRowIf`](../interfaces/TreeRowIf.md)\<`T`\> | `undefined` |
@@ -58,7 +58,7 @@
 
 #### Defined in
 
-[lib/table/data/common/tree-row.ts:5](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/tree-row.ts#L5)
+[lib/table/orderData/common/tree-row.ts:5](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/tree-row.ts#L5)
 
 ## Properties
 
@@ -72,7 +72,7 @@
 
 #### Defined in
 
-[lib/table/data/common/tree-row.ts:11](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/tree-row.ts#L11)
+[lib/table/orderData/common/tree-row.ts:11](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/tree-row.ts#L11)
 
 ___
 
@@ -86,21 +86,21 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/tree-row.ts:8](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/tree-row.ts#L8)
+[lib/table/orderData/common/tree-row.ts:8](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/tree-row.ts#L8)
 
 ___
 
-### data
+### orderData
 
-• **data**: `T`
+• **orderData**: `T`
 
 #### Implementation of
 
-[TreeRowIf](../interfaces/TreeRowIf.md).[data](../interfaces/TreeRowIf.md#data)
+[TreeRowIf](../interfaces/TreeRowIf.md).[orderData](../interfaces/TreeRowIf.md#orderData)
 
 #### Defined in
 
-[lib/table/data/common/tree-row.ts:6](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/tree-row.ts#L6)
+[lib/table/orderData/common/tree-row.ts:6](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/tree-row.ts#L6)
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/tree-row.ts:10](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/tree-row.ts#L10)
+[lib/table/orderData/common/tree-row.ts:10](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/tree-row.ts#L10)
 
 ___
 
@@ -128,7 +128,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/tree-row.ts:7](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/tree-row.ts#L7)
+[lib/table/orderData/common/tree-row.ts:7](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/tree-row.ts#L7)
 
 ___
 
@@ -142,7 +142,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/tree-row.ts:12](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/tree-row.ts#L12)
+[lib/table/orderData/common/tree-row.ts:12](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/tree-row.ts#L12)
 
 ___
 
@@ -156,4 +156,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/tree-row.ts:9](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/data/common/tree-row.ts#L9)
+[lib/table/orderData/common/tree-row.ts:9](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/tree-row.ts#L9)

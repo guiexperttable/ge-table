@@ -10,7 +10,6 @@ import {TableApi, TableModelIf, TableOptionsIf} from "@guiexpert/table";
 
 import {debounceTime, takeWhile} from "rxjs";
 import {createOrderModelAndOptions, OrderIf} from "@guiexpert/demo-table-models";
-import {SyncCssService} from "../../common/syncdata/sync-css.service";
 
 
 @Component({
