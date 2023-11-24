@@ -1,3 +1,4 @@
+export * from "./lib/crypto/generateCryptoModel";
 export * from "./lib/generateSimpleModel";
 export * from "./lib/generateTreeCheckboxModel";
 export * from "./lib/generateHeatMapTableModel";
