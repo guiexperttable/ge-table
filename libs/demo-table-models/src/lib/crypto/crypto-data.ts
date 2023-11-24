@@ -1,7 +1,7 @@
 import {CryptoTopIf} from "./crypto-top.if";
 
 
-export const data: CryptoTopIf[] =
+export const cryptoData: CryptoTopIf[] =
   [
     {
       "id": 1,
