@@ -33,7 +33,7 @@ import {
 
 text4 = `const tableModel: TableModelIf = TableFactory
   .createTableModel<any>({
-    headerData [
+    headerData: [
       ['Header 1', 'Header 2']
     ],
     bodyData: [

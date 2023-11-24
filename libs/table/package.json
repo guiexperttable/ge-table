@@ -12,7 +12,9 @@
   },
   "scripts": {
     "typedoc:json": "npx typedoc --json ../../apps/table-website/src/assets/json/doctype.json src/index.ts",
-    "typedoc:docs": "npx typedoc --out ../../apps/table-website/src/assets/docs src/index.ts",
+    "typedoc:docs-html": "npx typedoc --out ../../apps/table-website/src/assets/docs src/index.ts",
+    "typedoc:docs-html-custom-css": "npx typedoc --customCss ./doc.css --out ../../apps/table-website/src/assets/docs src/index.ts",
+    "typedoc:docs-md": "npx typedoc --plugin typedoc-plugin-markdown --out ../../apps/table-website/src/assets/docsmd src/index.ts",
     "npm-pub:table": "npm publish --access public"
   },
   "exports": {
