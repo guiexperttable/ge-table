@@ -23,9 +23,7 @@ import {CoinIconRenderer} from "./renderer/coin-icon-renderer";
 import {cryptoData} from "./crypto-data";
 
 
-export function createCryptoModelAndOptions(
-  getFilterText: () => string
-): TableModelAndOptionsIf {
+export function createCryptoModelAndOptions(): TableModelAndOptionsIf {
 
   const rows: CryptoTopIf[] = cryptoData;
   // Column model:
