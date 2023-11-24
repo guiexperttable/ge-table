@@ -26,7 +26,6 @@ import {cryptoData} from "./crypto-data";
 export function createCryptoModelAndOptions(): TableModelAndOptionsIf {
 
   const rows: CryptoTopIf[] = cryptoData;
-  // Column model:
   const changePercentageRenderer = new ChangePercentageRenderer();
   const usdRenderer = new UsdRenderer();
   const nameAndSymbolRenderer = new NameAndSymbolRenderer();
@@ -94,7 +93,10 @@ export function createCryptoModelAndOptions(): TableModelAndOptionsIf {
     },
   };
 
-  return new TableModelAndOptions(TableFactory.createTableModel({
-    rows, columnDefs, tableOptions
-  }), tableOptions);
+  return new TableModelAndOptions(
+    TableFactory.createTableModel({
+      rows, columnDefs, tableOptions
+    }),
+    tableOptions
+  );
 }
