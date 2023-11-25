@@ -16,6 +16,7 @@ export * from "./lib/generateHeadergroupModel";
 export * from "./lib/createSimplePersonModel";
 export * from "./lib/createTimeTableModel";
 export * from "./lib/createOrderModel";
+export * from "./lib/treepeople/generateTreePeopleModel";
 export * from "./model/address.if";
 export * from "./model/order.if";
 export * from "./model/person.if";
