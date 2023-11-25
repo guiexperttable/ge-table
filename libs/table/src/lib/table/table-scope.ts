@@ -158,7 +158,7 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
   /*
    * Called by the table component
    */
-  firstInit() {
+  firstInit(): TableScope {
     this.tableModel.init();
     if (this.tableOptions?.externalFilterFunction) {
       this.externalFilterChanged(false);
@@ -168,6 +168,7 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
     this.resetSizeOfWrapperDiv();
     this.adjustContainersAndRows();
     this.autoRestoreScrollPosition();
+    return this;
   }
 
   createGeMouseEvent(mouseEvent: MouseEvent): GeMouseEvent {

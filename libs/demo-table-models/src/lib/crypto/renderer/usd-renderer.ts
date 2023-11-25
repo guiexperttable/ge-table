@@ -13,7 +13,7 @@ export class UsdRenderer implements CellRendererIf {
     _areaIdent: AreaIdent,
     _areaModel: AreaModelIf,
     cellValue: any,
-    domService: DomServiceIf): RendererCleanupFnType | undefined {
+    _domService: DomServiceIf): RendererCleanupFnType | undefined {
 
     if (cellValue) {
       const n = Number(cellValue);

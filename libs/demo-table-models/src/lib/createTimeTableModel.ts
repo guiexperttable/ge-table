@@ -252,7 +252,7 @@ export function createTimeTableModel(): TableModelIf {
 
 
   const defaultRowHeights = tableOptions.defaultRowHeights;
-  const tm = TableFactory.createTableModel({
+  return TableFactory.createTableModel({
     headerAreaModel: new TimeTableHeaderModel(defaultRowHeights.header),
     bodyAreaModel: new TimeTableBodyModel(defaultRowHeights.body),
     footerAreaModel: new TimeTableFooterModel(defaultRowHeights.footer),
@@ -262,8 +262,6 @@ export function createTimeTableModel(): TableModelIf {
     defaultRowHeights,
     columnCount: columnDefs.length
   });
-  console.info(tm); // TODO del
-  return tm;
 }
 
 class TimeTableBodyModel extends AreaModelObjectArrayWithColumndefs<TeamDataIf> {

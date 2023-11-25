@@ -4,13 +4,6 @@ import { CryptoTopIf } from "../crypto-top.if";
 
 export class CoinIconRenderer implements CellRendererIf {
 
-  private formatterUsd = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" });
-  private formatter = new Intl.NumberFormat("en-US");
-
-  constructor(
-    private readonly maxWidth: number = 120
-  ) {
-  }
 
   render(
     cellDiv: HTMLDivElement,
@@ -19,7 +12,7 @@ export class CoinIconRenderer implements CellRendererIf {
     _areaIdent: AreaIdent,
     areaModel: AreaModelIf,
     _cellValue: any,
-    domService: DomServiceIf): RendererCleanupFnType | undefined {
+    _domService: DomServiceIf): RendererCleanupFnType | undefined {
 
     const coin: CryptoTopIf = areaModel.getRowByIndex(rowIndex);
     if (coin?.id) {

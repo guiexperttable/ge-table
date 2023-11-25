@@ -4,7 +4,6 @@ import { CryptoTopIf } from "../crypto-top.if";
 
 export class CirculatingSupplyRenderer implements CellRendererIf {
 
-  private formatterUsd = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" });
   private formatter = new Intl.NumberFormat("en-US");
 
   constructor(
@@ -18,7 +17,7 @@ export class CirculatingSupplyRenderer implements CellRendererIf {
     _areaIdent: AreaIdent,
     areaModel: AreaModelIf,
     _cellValue: any,
-    domService: DomServiceIf): RendererCleanupFnType | undefined {
+    _domService: DomServiceIf): RendererCleanupFnType | undefined {
 
     const coin: CryptoTopIf = areaModel.getRowByIndex(rowIndex);
     if (coin) {

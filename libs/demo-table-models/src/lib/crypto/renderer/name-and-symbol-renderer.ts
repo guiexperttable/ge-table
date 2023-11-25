@@ -12,7 +12,7 @@ export class NameAndSymbolRenderer implements CellRendererIf {
     _areaIdent: AreaIdent,
     areaModel: AreaModelIf,
     _cellValue: any,
-    domService: DomServiceIf): RendererCleanupFnType | undefined {
+    _domService: DomServiceIf): RendererCleanupFnType | undefined {
 
     const coin: CryptoTopIf = areaModel.getRowByIndex(rowIndex);
     if (coin) {

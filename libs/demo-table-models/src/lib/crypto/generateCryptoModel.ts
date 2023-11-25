@@ -31,7 +31,7 @@ export function createCryptoModelAndOptions(): TableModelAndOptionsIf {
   const nameAndSymbolRenderer = new NameAndSymbolRenderer();
   const volumn24hRenderer = new Volumn24hRenderer();
   const circulatingSupplyRenderer = new CirculatingSupplyRenderer(120);
-  const coinIconRenderer = new CoinIconRenderer(120);
+  const coinIconRenderer = new CoinIconRenderer();
 
   const columnDefs: ColumnDefIf[] = [
     ColumnDef.create({
