@@ -1,10 +1,10 @@
 import { AbstractAreaModel } from "./abstract-area-model";
-import { TreeRow } from "../../common/tree-row";
 import { ColumnDefIf } from "../column/column-def.if";
 import { AreaIdent } from "../area-ident.type";
 import { FilterFunction } from "../../common/filter-function";
 import { SorterService } from "../../../service/sorter.service";
 import { SortItem } from "../../common/sort-item";
+import {isTreeRow} from "../../../instanceof-workaround";
 
 export class AreaModelObjectyArray<T> extends AbstractAreaModel<T> {
 
@@ -30,7 +30,9 @@ export class AreaModelObjectyArray<T> extends AbstractAreaModel<T> {
   getValueAt(rowIndex: number, columnIndex: number): any {
     const property = this.properties[columnIndex];
     let t = this.filteredRows[rowIndex];
-    if (t instanceof TreeRow) {
+
+    if (isTreeRow(t)) {
+      // @ts-ignore
       t = t.data;
     }
     if (t) {

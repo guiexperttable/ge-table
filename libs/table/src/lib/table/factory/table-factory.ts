@@ -18,6 +18,7 @@ import {
   AreaModelObjectArrayWithColumndefs
 } from "../data/tablemodel/areamodel/area-model-object-array-with-columndefs";
 import { TableOptions } from "../data/options/table-options";
+import {isTreeRow} from "../instanceof-workaround";
 
 
 export class TableFactory {
@@ -131,7 +132,7 @@ export class TableFactory {
     if (!p.bodyAreaModel) {
       if (p.rows) {
 
-        if (p.rows?.length && p.rows[0] instanceof TreeRow) {
+        if (p.rows?.length && isTreeRow(p.rows[0])) {
           // Tree:
           const treeRows = p.rows as TreeRow<any>[];
           p.bodyAreaModel = new AreaModelTree(
@@ -222,7 +223,7 @@ export class TableFactory {
     const defaultRowHeights = tableOptions.defaultRowHeights;
     const checkboxExtraColumnVisible = columnDefs[0].property === "CheckboxColumn";
 
-    if (rows?.length && rows[0] instanceof TreeRow) {
+    if (rows?.length && isTreeRow(rows[0])) {
       // Tree:
       const treeRows = rows as TreeRow<T>[];
       const bodyareaModel = new AreaModelTree(

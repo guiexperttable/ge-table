@@ -10,8 +10,8 @@ import { FilterFunction } from "../common/filter-function";
 import { SortItem } from "../common/sort-item";
 import { SelectionModelIf } from "../../selection/selection-model.if";
 import { GetT } from "../common/get-t";
-import { CheckboxColumnDef } from "../common/checkbox-column-def";
 import { CheckboxModel } from "../../checkbox/checkbox-model";
+import {isCheckboxColumnDef} from "../../instanceof-workaround";
 
 
 /**
@@ -70,7 +70,7 @@ export class TableModel implements TableModelIf {
       }
     }
     if (this.columnDefs?.length
-      && this.columnDefs[0] instanceof CheckboxColumnDef
+      && isCheckboxColumnDef(this.columnDefs[0])
       && !bodyAreaModel.rowSelectionModel) {
       bodyAreaModel.rowSelectionModel = new CheckboxModel();
     }

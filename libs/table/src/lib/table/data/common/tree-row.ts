@@ -2,6 +2,8 @@ import { TreeRowIf } from "./tree-row-if";
 
 export class TreeRow<T> implements TreeRowIf<T> {
 
+  public type:'TreeRow'|'' = 'TreeRow';
+
   constructor(
     public data: T,
     public expanded: boolean = true,

@@ -6,20 +6,23 @@ import { ColumnDefIf } from "../column/column-def.if";
 import { FilterFunction } from "../../common/filter-function";
 import { SorterService } from "../../../service/sorter.service";
 import { SortItem } from "../../common/sort-item";
+import {TreeRowIf} from "../../common/tree-row-if";
 
 export class AreaModelTree<S> extends AbstractAreaModel<TreeRow<S>> {
+
+  public type = 'AreaModelTree';
 
   protected readonly properties: string[];
   protected sorterService: SorterService = new SorterService();
 
   private readonly service = new TreeRowService();
-  private filteredFlattenRows: TreeRow<S>[];
-  private flattenRows: TreeRow<S>[];
+  private filteredFlattenRows: TreeRowIf<S>[];
+  private flattenRows: TreeRowIf<S>[];
   private lastPredictFn?: FilterFunction<any>;
 
   constructor(
     public override areaIdent: AreaIdent,
-    public readonly rows: TreeRow<S>[],
+    public readonly rows: TreeRowIf<S>[],
     public override  defaultRowHeight: number,
     protected override columnDefs: ColumnDefIf[] = []
   ) {
@@ -39,7 +42,7 @@ export class AreaModelTree<S> extends AbstractAreaModel<TreeRow<S>> {
     this.filteredFlattenRows = this.service.flattenTree(this.rows);
   }
 
-  getFilteredFlattenRows(): TreeRow<S>[] {
+  getFilteredFlattenRows(): TreeRowIf<S>[] {
     return this.filteredFlattenRows;
   }
 
@@ -77,7 +80,7 @@ export class AreaModelTree<S> extends AbstractAreaModel<TreeRow<S>> {
     return ["ge-table-tree-cell", "ge-table-tree-deep-" + row.deep];
   }
 
-  override getRowByIndex(idx: number): TreeRow<S> | undefined {
+  override getRowByIndex(idx: number): TreeRowIf<S> | undefined {
     return this.filteredFlattenRows[idx];
   }
 
@@ -114,7 +117,7 @@ export class AreaModelTree<S> extends AbstractAreaModel<TreeRow<S>> {
     this.doFiltering();
   }
 
-  setAllParentsOk(item: TreeRow<any>) {
+  setAllParentsOk(item: TreeRowIf<any>) {
     if (item.parent) {
       item.parent.keep = true;
       this.setAllParentsOk(item.parent);
@@ -127,7 +130,7 @@ export class AreaModelTree<S> extends AbstractAreaModel<TreeRow<S>> {
     if (editInputPipe) {
       value = editInputPipe(value, rowIndex, columnIndex);
     }
-    const treeRow: TreeRow<S> | undefined = this.getRowByIndex(rowIndex);
+    const treeRow: TreeRowIf<S> | undefined = this.getRowByIndex(rowIndex);
     if (treeRow) {
       const row: S = treeRow.data;
       const property = this.columnDefs[columnIndex].property;
@@ -142,14 +145,14 @@ export class AreaModelTree<S> extends AbstractAreaModel<TreeRow<S>> {
   }
 
   protected genericTreeTableSortComparator(property: string, f: number) {
-    return (a: TreeRow<S>, b: TreeRow<S>) => {
+    return (a: TreeRowIf<S>, b: TreeRowIf<S>) => {
       const va = this.getValueByT(a.data, property);
       const vb = this.getValueByT(b.data, property);
       return this.sorterService.genericSortComparator(va, vb, f);
     };
   }
 
-  private expandAllRecursive(arr: TreeRow<S>[], expanded: boolean) {
+  private expandAllRecursive(arr: TreeRowIf<S>[], expanded: boolean) {
     for (const row of arr) {
       row.expanded = expanded;
       if (row.children) {
@@ -204,7 +207,7 @@ export class AreaModelTree<S> extends AbstractAreaModel<TreeRow<S>> {
     return o2;
   }
 
-  private treeSort(rows: TreeRow<S>[], property: string, f: number) {
+  private treeSort(rows: TreeRowIf<S>[], property: string, f: number) {
     rows.sort(this.genericTreeTableSortComparator(property, f));
     for (const row of rows) {
       if (row.children) {

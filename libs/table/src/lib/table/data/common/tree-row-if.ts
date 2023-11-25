@@ -1,10 +1,11 @@
-import { TreeRow } from "./tree-row";
+
 
 export interface TreeRowIf<T> {
+  type?:'TreeRow'|'';
   data: T;
   expanded: boolean;
-  children: TreeRow<T>[] | undefined;
-  parent: TreeRow<T> | undefined;
+  children: TreeRowIf<T>[] | undefined;
+  parent: TreeRowIf<T> | undefined;
   deep: number;
   checked: boolean;
   keep: boolean;

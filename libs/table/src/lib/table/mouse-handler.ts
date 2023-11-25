@@ -3,6 +3,8 @@ import { TreeRow } from "./data/common/tree-row";
 import { AreaIdent, getAreaIdentByString } from "./data/tablemodel/area-ident.type";
 import { GeMouseEvent } from "./data/common/event/ge-mouse-event";
 import { MouseTargetData } from "./data/event/mouse-target-data";
+import {TreeRowIf} from "./data/common/tree-row-if";
+import {isTreeRow} from "./instanceof-workaround";
 
 export class MouseHandler {
 
@@ -56,7 +58,7 @@ export class MouseHandler {
       event.preventDefault();
       event.stopPropagation();
 
-    } else if (mouseTargetData.row instanceof TreeRow && mouseTargetData.areaModel) {
+    } else if (isTreeRow(mouseTargetData.row) && mouseTargetData.areaModel) {
       const altClickOnFirstCol = mouseTargetData.colIdx === this.getArrowColumnIndex() && event.altKey;
       const clickOnArrow = mouseTargetData.className.includes("ge-table-tree-arrow-div");
       console.info(clickOnArrow, altClickOnFirstCol);
@@ -65,7 +67,7 @@ export class MouseHandler {
         // toggle collapsed/expanded:
         event.preventDefault();
         event.stopPropagation();
-        const tr: TreeRow<any> = mouseTargetData.row as TreeRow<any>;
+        const tr: TreeRowIf<any> = mouseTargetData.row as TreeRow<any>;
         tr.expanded = !tr.expanded;
 
         if ("recalcVisibleTreeRows" in mouseTargetData.areaModel) {
@@ -114,12 +116,12 @@ export class MouseHandler {
           }
         }
 
-        if (row instanceof TreeRow) {
+        if (isTreeRow(row)) {
           if (colIdx === this.getArrowColumnIndex()) {
             // toggle collapsed/expanded:
             event.preventDefault();
             event.stopPropagation();
-            const tr: TreeRow<any> = row as TreeRow<any>;
+            const tr: TreeRowIf<any> = row as TreeRow<any>;
             tr.expanded = !tr.expanded;
 
             if ("recalcVisibleTreeRows" in areaModel) {
@@ -150,7 +152,7 @@ export class MouseHandler {
   }
 
 
-  private updateCollapsedExpandedState(tr: TreeRow<any>) {
+  private updateCollapsedExpandedState(tr: TreeRowIf<any>) {
     // store expanded/collapsed:
     const getRowId = this.tableScope.tableOptions?.autoRestoreOptions?.getRowId;
     if (getRowId) {

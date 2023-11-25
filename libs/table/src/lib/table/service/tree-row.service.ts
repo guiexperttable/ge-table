@@ -1,11 +1,12 @@
-import { TreeRow } from "../data/common/tree-row";
+
+import {TreeRowIf} from "../data/common/tree-row-if";
 
 export class TreeRowService {
 
   flattenTree<T>(
-    rows: TreeRow<T>[],
-    ret: TreeRow<T>[] = []
-  ): TreeRow<T>[] {
+    rows: TreeRowIf<T>[],
+    ret: TreeRowIf<T>[] = []
+  ): TreeRowIf<T>[] {
 
     for (const row of rows) {
       if (this.isVisible(row)) {
@@ -18,7 +19,7 @@ export class TreeRowService {
     return ret;
   }
 
-  isVisible(row: TreeRow<any>): boolean {
+  isVisible(row: TreeRowIf<any>): boolean {
     if (!row.parent) {
       return true;
     }

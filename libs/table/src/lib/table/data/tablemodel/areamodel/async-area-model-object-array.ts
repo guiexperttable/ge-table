@@ -4,6 +4,7 @@ import {ColumnDefIf} from "../column/column-def.if";
 import {FilterFunction} from "../../common/filter-function";
 import {SorterService} from "../../../service/sorter.service";
 import {SortItem} from "../../common/sort-item";
+import {isTreeRow, TreeFactory} from "@guiexpert/table";
 
 
 export class AsyncBodyAreaModelObjectArray<T> extends AbstractAreaModel<T> {
@@ -40,7 +41,8 @@ export class AsyncBodyAreaModelObjectArray<T> extends AbstractAreaModel<T> {
     }
     const property = this.properties[columnIndex];
     let t = this.cachedRows[rowIndex];
-    if (t instanceof TreeRow) {
+    if (isTreeRow(t)) {
+      // @ts-ignore
       t = t.data;
     }
     if (t) {

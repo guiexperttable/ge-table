@@ -14,7 +14,6 @@ import { TreeArrowType } from "./data/common/tree-arrow.type";
 import { TreeRow } from "./data/common/tree-row";
 import { StoreStateScrollPosService } from "./service/store-state-scroll-pos.service";
 import { GeMouseEvent } from "./data/common/event/ge-mouse-event";
-import { AreaModelTree } from "./data/tablemodel/areamodel/area-model-tree";
 import { GeoData } from "./data/geo-data";
 import { CellRendererIf } from "./renderer/cell-render.if";
 import { SelectionModelIf } from "./selection/selection-model.if";
@@ -24,6 +23,7 @@ import { ColAndRowspanModel } from "./data/tablemodel/areamodel/col-and-rowspan-
 import { AreaObjectMapType } from "./data/common/area-map.type";
 import { AreaObjectMap } from "./data/common/area-map";
 import { TableCellUpdateEventIf } from "./data/common/event/input/table-cell-update-event.if";
+import {isAreaModelTree, isTreeRow} from "./instanceof-workaround";
 
 
 interface ArgsRenderCell {
@@ -102,7 +102,7 @@ export class RenderScope extends EleScope {
     if (this.tableOptions?.getFocusModel) {
       this.getFocusModel = this.tableOptions.getFocusModel;
     }
-    if (tableModel.getAreaModel("body") instanceof AreaModelTree) {
+    if (isAreaModelTree(tableModel.getAreaModel("body"))) {
       this.tree = true;
     }
     const aereaIds: AreaIdent[] = ["header", "body", "footer"];
@@ -682,7 +682,7 @@ export class RenderScope extends EleScope {
 
     const arrowIndexOk = index === this.getTreeArrowColumnIndex();
 
-    if (arrowIndexOk && rowObject instanceof TreeRow) {
+    if (arrowIndexOk && isTreeRow(rowObject)) {
       const tr = rowObject as TreeRow<any>;
       if (tr.children?.length) {
         if (tr.expanded) {

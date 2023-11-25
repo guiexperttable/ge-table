@@ -9,7 +9,7 @@ import {
   px100,
   px120,
   px150,
-  px200,
+  px220,
   px50,
   px60,
   px70,
@@ -64,7 +64,7 @@ export function createTreePeopleTableOptions(addDemoSelection: boolean = false) 
 
 export function createTreePeopleColumnDefs(): ColumnDefIf[] {
   return [
-    new ColumnDef("lastName", "Last Name", px200),
+    new ColumnDef("lastName", "Last Name", px220),
     new ColumnDef("preName", "Pre Name", px120),
     ColumnDef.create({
       property: "age",

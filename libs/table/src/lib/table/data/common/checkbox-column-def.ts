@@ -8,6 +8,7 @@ import { AreaObjectMap } from "./area-map";
 
 export class CheckboxColumnDef implements ColumnDefIf {
 
+  public type = 'CheckboxColumnDef';
 
   public property = "CheckboxColumn";
   public headerLabel = "";

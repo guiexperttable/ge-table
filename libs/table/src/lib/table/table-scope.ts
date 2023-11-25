@@ -5,7 +5,6 @@ import { GeMouseEvent } from "./data/common/event/ge-mouse-event";
 import { DomServiceIf } from "./service/dom-service.if";
 import { ConvenienceDomService } from "./service/convenience-dom.service";
 import { TableOptionsIf } from "./data/options/table-options.if";
-import { TreeRow } from "./data/common/tree-row";
 import { MouseHandler } from "./mouse-handler";
 import { EventListenerIf } from "./event-listener.if";
 import { TableApi } from "./table-api";
@@ -26,6 +25,8 @@ import { ShortcutService } from "./action/shortcut.service";
 import { EventAdapter } from "./event-adapter";
 import {SimpleDomService} from "./service/simple-dom-service";
 import {TableOptions} from "./data/options/table-options";
+import {TreeRowIf} from "./data/common/tree-row-if";
+import {isAreaModelTree} from "./instanceof-workaround";
 
 
 export class TableScope extends RenderScope implements OnActionTriggeredIf {
@@ -272,8 +273,8 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
 
   toggleExpandCollapseAll(expand: boolean = true) {
     const bodyAreaModel = this.tableModel.getBodyModel();
-    if (bodyAreaModel instanceof AreaModelTree) {
-      const amt: AreaModelTree<any> = bodyAreaModel;
+    if (isAreaModelTree(bodyAreaModel)) {
+      const amt: AreaModelTree<any> = bodyAreaModel as AreaModelTree<any>;
       amt.toggleExpandCollapseAll(expand);
       this.repaint();
       this.storeStateCollapsedExpandService?.collapsedStateAll(expand);
@@ -418,13 +419,13 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
       if (autoRestoreOptions.autoRestoreCollapsedExpandedState && getRowId) {
         const state = this.storeStateCollapsedExpandService.collapsedExpandedStateGet();
         const areaModel = this.tableModel.getAreaModel("body");
-        if (areaModel instanceof AreaModelTree) {
-          const amtr: AreaModelTree<any> = areaModel;
+        if (isAreaModelTree(areaModel)) {
+          const amtr: AreaModelTree<any> = areaModel as AreaModelTree<any>;
           const rowCount = areaModel.getRowCount();
 
 
           for (let i = 0; i < rowCount; i++) {
-            const row: TreeRow<any> | undefined = areaModel.getRowByIndex(i);
+            const row: TreeRowIf<any> | undefined = areaModel.getRowByIndex(i);
             if (row) {
               if (state.allExpanded) {
                 row.expanded = true;
