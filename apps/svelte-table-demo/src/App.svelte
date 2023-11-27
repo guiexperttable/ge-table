@@ -14,13 +14,15 @@
   const tableOptions = createTableOptions();
   const rows: SimplePersonIf[] = createTableRows();
   const columnDefs: ColumnDefIf[] = createColumnDefs();
-  applyBodyRenderer(columnDefs[2], new ComponentRendererWrapper(GenderRendererComponent));
+  // applyBodyRenderer(columnDefs[2], new ComponentRendererWrapper(GenderRendererComponent));
   const tableModel = TableFactory.buildByTypedRowsParam({
     rows,
     columnDefs,
     tableOptions,
     fixedLeftColumnCount: 0
   });
+  console.info('columnDefs', columnDefs);
+  console.info('rows', rows);
 
   function handleTableReady(api: CustomEvent) {
     console.info("Table API:", api.detail);
@@ -31,14 +33,13 @@
   }
 </script>
 
-<main>
-  <GuiexpertTable
-    on:mouseClicked={handleMouseClicked}
-    on:tableReady={handleTableReady}
-    tableModel={tableModel}
-    tableOptions={tableOptions}
-  ></GuiexpertTable>
-</main>
 
-<style>
-</style>
+<GuiexpertTable
+  on:mouseClicked={handleMouseClicked}
+  on:tableReady={handleTableReady}
+  tableModel={tableModel}
+  tableOptions={tableOptions}
+></GuiexpertTable>
+
+
+
