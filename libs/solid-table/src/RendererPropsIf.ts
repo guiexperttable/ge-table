@@ -1,6 +1,6 @@
 import { AreaIdent, AreaModelIf } from "@guiexpert/table";
 
-// TODO nutzen
+// TODO
 export interface RendererPropsIf {
   rowIndex: number;
   columnIndex: number;

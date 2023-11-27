@@ -1,3 +1,4 @@
+import "./styles.css";
 import {ComponentRendererWrapper} from "@guiexpert/solid-table";
 import {onMount} from "solid-js";
 import {GuiexpertTable} from "@guiexpert/solid-table";
