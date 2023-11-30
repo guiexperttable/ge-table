@@ -17,6 +17,20 @@ This is the UI-agnostic table component for your next web app. 😊
 - [Web Component](https://github.com/guiexperttable/ge-table/tree/main/libs/webcomponent-table)
 
 
+| Command                                 | Action                                              |
+|:----------------------------------------|:----------------------------------------------------|
+| `npm run inst`                          | Install dependencies                                |
+| `npm run start:angular-table-demo`      | Start local dev server with angular-table-demo      |
+| `npm run start:html5-table-demo`        | Start local dev server with html5-table-demo`       |
+| `npm run start:webcomponent-table-demo` | Start local dev server with webcomponent-table-demo |
+| `npm run start:react-table-demo`        | Start local dev server with react-table-demo        |
+| `npm run preact-table-demo`             | Start local dev server with preact-table-demo       |
+| `npm run html5-table-demo`              | Start local dev server with html5-table-demo        |
+| `npm run start:table-website`           | Start local dev server with start:table-website     |
+| `npm run build:all`                     | Build all artefacts                                 |
+
+
+
 ### Features
 - Handle large datasets easily 
 - Excellent performance for large tables by vertical and horizontal virtual scrolling

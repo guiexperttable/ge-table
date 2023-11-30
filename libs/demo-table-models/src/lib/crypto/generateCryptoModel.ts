@@ -48,7 +48,7 @@ export function createCryptoModelAndOptions(): TableModelAndOptionsIf {
       bodyClasses: ["ge-table-text-align-left"],
       headerClasses: ["ge-table-text-align-left"],
       bodyRenderer: nameAndSymbolRenderer
-    }), // new ColumnDef("symbol", "Symbol", px60),
+    }),
     ColumnDef.create({
       property: "priceInUsd",
       headerLabel: "Price $",
