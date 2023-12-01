@@ -24,8 +24,8 @@ This is the UI-agnostic table component for your next web app. 😊
 | `npm run start:html5-table-demo`        | Start local dev server with html5-table-demo`       |
 | `npm run start:webcomponent-table-demo` | Start local dev server with webcomponent-table-demo |
 | `npm run start:react-table-demo`        | Start local dev server with react-table-demo        |
-| `npm run preact-table-demo`             | Start local dev server with preact-table-demo       |
-| `npm run html5-table-demo`              | Start local dev server with html5-table-demo        |
+| `npm run start:preact-table-demo`             | Start local dev server with preact-table-demo       |
+| `npm run start:html5-table-demo`              | Start local dev server with html5-table-demo        |
 | `npm run start:table-website`           | Start local dev server with start:table-website     |
 | `npm run build:all`                     | Build all artefacts                                 |
 
