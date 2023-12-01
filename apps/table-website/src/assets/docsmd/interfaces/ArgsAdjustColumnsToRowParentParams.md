@@ -25,7 +25,7 @@
 
 #### Defined in
 
-[lib/table/orderData/common/args-adjust-columns-to-row-parent-params.ts:7](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/args-adjust-columns-to-row-parent-params.ts#L7)
+[lib/table/data/common/args-adjust-columns-to-row-parent-params.ts:7](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/args-adjust-columns-to-row-parent-params.ts#L7)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/common/args-adjust-columns-to-row-parent-params.ts:9](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/args-adjust-columns-to-row-parent-params.ts#L9)
+[lib/table/data/common/args-adjust-columns-to-row-parent-params.ts:9](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/args-adjust-columns-to-row-parent-params.ts#L9)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/common/args-adjust-columns-to-row-parent-params.ts:14](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/args-adjust-columns-to-row-parent-params.ts#L14)
+[lib/table/data/common/args-adjust-columns-to-row-parent-params.ts:14](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/args-adjust-columns-to-row-parent-params.ts#L14)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/common/args-adjust-columns-to-row-parent-params.ts:13](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/args-adjust-columns-to-row-parent-params.ts#L13)
+[lib/table/data/common/args-adjust-columns-to-row-parent-params.ts:13](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/args-adjust-columns-to-row-parent-params.ts#L13)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/common/args-adjust-columns-to-row-parent-params.ts:10](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/args-adjust-columns-to-row-parent-params.ts#L10)
+[lib/table/data/common/args-adjust-columns-to-row-parent-params.ts:10](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/args-adjust-columns-to-row-parent-params.ts#L10)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/common/args-adjust-columns-to-row-parent-params.ts:16](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/args-adjust-columns-to-row-parent-params.ts#L16)
+[lib/table/data/common/args-adjust-columns-to-row-parent-params.ts:16](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/args-adjust-columns-to-row-parent-params.ts#L16)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/common/args-adjust-columns-to-row-parent-params.ts:11](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/args-adjust-columns-to-row-parent-params.ts#L11)
+[lib/table/data/common/args-adjust-columns-to-row-parent-params.ts:11](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/args-adjust-columns-to-row-parent-params.ts#L11)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/common/args-adjust-columns-to-row-parent-params.ts:12](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/args-adjust-columns-to-row-parent-params.ts#L12)
+[lib/table/data/common/args-adjust-columns-to-row-parent-params.ts:12](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/args-adjust-columns-to-row-parent-params.ts#L12)
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/common/args-adjust-columns-to-row-parent-params.ts:8](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/args-adjust-columns-to-row-parent-params.ts#L8)
+[lib/table/data/common/args-adjust-columns-to-row-parent-params.ts:8](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/args-adjust-columns-to-row-parent-params.ts#L8)
 
 ___
 
@@ -115,4 +115,4 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/common/args-adjust-columns-to-row-parent-params.ts:15](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/args-adjust-columns-to-row-parent-params.ts#L15)
+[lib/table/data/common/args-adjust-columns-to-row-parent-params.ts:15](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/args-adjust-columns-to-row-parent-params.ts#L15)

@@ -37,7 +37,7 @@
 
 #### Defined in
 
-[lib/table/service/dom-service.if.ts:5](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/service/dom-service.if.ts#L5)
+[lib/table/service/dom-service.if.ts:5](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/dom-service.if.ts#L5)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/dom-service.if.ts:13](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/service/dom-service.if.ts#L13)
+[lib/table/service/dom-service.if.ts:13](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/dom-service.if.ts#L13)
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/dom-service.if.ts:11](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/service/dom-service.if.ts#L11)
+[lib/table/service/dom-service.if.ts:11](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/dom-service.if.ts#L11)
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/dom-service.if.ts:7](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/service/dom-service.if.ts#L7)
+[lib/table/service/dom-service.if.ts:7](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/dom-service.if.ts#L7)
 
 ___
 
@@ -125,7 +125,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/dom-service.if.ts:9](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/service/dom-service.if.ts#L9)
+[lib/table/service/dom-service.if.ts:9](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/dom-service.if.ts#L9)
 
 ___
 
@@ -147,7 +147,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/dom-service.if.ts:15](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/service/dom-service.if.ts#L15)
+[lib/table/service/dom-service.if.ts:15](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/dom-service.if.ts#L15)
 
 ___
 
@@ -169,4 +169,4 @@ ___
 
 #### Defined in
 
-[lib/table/service/dom-service.if.ts:3](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/service/dom-service.if.ts#L3)
+[lib/table/service/dom-service.if.ts:3](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/dom-service.if.ts#L3)

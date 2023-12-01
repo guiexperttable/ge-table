@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[lib/table/orderData/common/index-and-px.ts:3](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/index-and-px.ts#L3)
+[lib/table/data/common/index-and-px.ts:3](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/index-and-px.ts#L3)
 
 ## Properties
 
@@ -42,7 +42,7 @@
 
 #### Defined in
 
-[lib/table/orderData/common/index-and-px.ts:4](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/index-and-px.ts#L4)
+[lib/table/data/common/index-and-px.ts:4](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/index-and-px.ts#L4)
 
 ___
 
@@ -52,4 +52,4 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/common/index-and-px.ts:5](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/index-and-px.ts#L5)
+[lib/table/data/common/index-and-px.ts:5](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/index-and-px.ts#L5)

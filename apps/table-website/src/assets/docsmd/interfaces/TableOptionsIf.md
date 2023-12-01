@@ -48,7 +48,7 @@
 
 #### Defined in
 
-[lib/table/orderData/options/table-options.if.ts:47](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/table-options.if.ts#L47)
+[lib/table/data/options/table-options.if.ts:47](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/table-options.if.ts#L47)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/table-options.if.ts:30](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/table-options.if.ts#L30)
+[lib/table/data/options/table-options.if.ts:30](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/table-options.if.ts#L30)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/table-options.if.ts:29](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/table-options.if.ts#L29)
+[lib/table/data/options/table-options.if.ts:29](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/table-options.if.ts#L29)
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/table-options.if.ts:28](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/table-options.if.ts#L28)
+[lib/table/data/options/table-options.if.ts:28](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/table-options.if.ts#L28)
 
 ___
 
@@ -88,7 +88,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/table-options.if.ts:35](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/table-options.if.ts#L35)
+[lib/table/data/options/table-options.if.ts:35](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/table-options.if.ts#L35)
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/table-options.if.ts:42](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/table-options.if.ts#L42)
+[lib/table/data/options/table-options.if.ts:42](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/table-options.if.ts#L42)
 
 ___
 
@@ -108,7 +108,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/table-options.if.ts:16](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/table-options.if.ts#L16)
+[lib/table/data/options/table-options.if.ts:16](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/table-options.if.ts#L16)
 
 ___
 
@@ -118,7 +118,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/table-options.if.ts:17](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/table-options.if.ts#L17)
+[lib/table/data/options/table-options.if.ts:17](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/table-options.if.ts#L17)
 
 ___
 
@@ -128,7 +128,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/table-options.if.ts:15](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/table-options.if.ts#L15)
+[lib/table/data/options/table-options.if.ts:15](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/table-options.if.ts#L15)
 
 ___
 
@@ -138,7 +138,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/table-options.if.ts:33](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/table-options.if.ts#L33)
+[lib/table/data/options/table-options.if.ts:33](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/table-options.if.ts#L33)
 
 ___
 
@@ -148,7 +148,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/table-options.if.ts:49](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/table-options.if.ts#L49)
+[lib/table/data/options/table-options.if.ts:49](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/table-options.if.ts#L49)
 
 ___
 
@@ -158,7 +158,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/table-options.if.ts:51](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/table-options.if.ts#L51)
+[lib/table/data/options/table-options.if.ts:51](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/table-options.if.ts#L51)
 
 ___
 
@@ -168,7 +168,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/table-options.if.ts:50](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/table-options.if.ts#L50)
+[lib/table/data/options/table-options.if.ts:50](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/table-options.if.ts#L50)
 
 ___
 
@@ -178,7 +178,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/table-options.if.ts:14](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/table-options.if.ts#L14)
+[lib/table/data/options/table-options.if.ts:14](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/table-options.if.ts#L14)
 
 ___
 
@@ -188,7 +188,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/table-options.if.ts:37](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/table-options.if.ts#L37)
+[lib/table/data/options/table-options.if.ts:37](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/table-options.if.ts#L37)
 
 ___
 
@@ -198,7 +198,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/table-options.if.ts:32](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/table-options.if.ts#L32)
+[lib/table/data/options/table-options.if.ts:32](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/table-options.if.ts#L32)
 
 ___
 
@@ -208,7 +208,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/table-options.if.ts:19](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/table-options.if.ts#L19)
+[lib/table/data/options/table-options.if.ts:19](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/table-options.if.ts#L19)
 
 ___
 
@@ -218,7 +218,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/table-options.if.ts:27](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/table-options.if.ts#L27)
+[lib/table/data/options/table-options.if.ts:27](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/table-options.if.ts#L27)
 
 ___
 
@@ -228,7 +228,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/table-options.if.ts:26](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/table-options.if.ts#L26)
+[lib/table/data/options/table-options.if.ts:26](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/table-options.if.ts#L26)
 
 ___
 
@@ -238,7 +238,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/table-options.if.ts:21](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/table-options.if.ts#L21)
+[lib/table/data/options/table-options.if.ts:21](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/table-options.if.ts#L21)
 
 ___
 
@@ -248,7 +248,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/table-options.if.ts:22](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/table-options.if.ts#L22)
+[lib/table/data/options/table-options.if.ts:22](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/table-options.if.ts#L22)
 
 ___
 
@@ -258,7 +258,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/table-options.if.ts:53](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/table-options.if.ts#L53)
+[lib/table/data/options/table-options.if.ts:53](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/table-options.if.ts#L53)
 
 ___
 
@@ -268,7 +268,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/table-options.if.ts:40](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/table-options.if.ts#L40)
+[lib/table/data/options/table-options.if.ts:40](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/table-options.if.ts#L40)
 
 ___
 
@@ -278,7 +278,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/table-options.if.ts:45](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/table-options.if.ts#L45)
+[lib/table/data/options/table-options.if.ts:45](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/table-options.if.ts#L45)
 
 ___
 
@@ -288,7 +288,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/table-options.if.ts:44](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/table-options.if.ts#L44)
+[lib/table/data/options/table-options.if.ts:44](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/table-options.if.ts#L44)
 
 ___
 
@@ -298,7 +298,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/table-options.if.ts:25](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/table-options.if.ts#L25)
+[lib/table/data/options/table-options.if.ts:25](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/table-options.if.ts#L25)
 
 ___
 
@@ -308,7 +308,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/table-options.if.ts:24](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/table-options.if.ts#L24)
+[lib/table/data/options/table-options.if.ts:24](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/table-options.if.ts#L24)
 
 ___
 
@@ -318,7 +318,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/table-options.if.ts:39](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/table-options.if.ts#L39)
+[lib/table/data/options/table-options.if.ts:39](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/table-options.if.ts#L39)
 
 ___
 
@@ -328,4 +328,4 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/table-options.if.ts:18](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/table-options.if.ts#L18)
+[lib/table/data/options/table-options.if.ts:18](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/table-options.if.ts#L18)

@@ -72,7 +72,7 @@ export interface AreaModelIf {
   /**
    * This return value is internally used to optimize the render performance.
    * Set this value to the lowest possible value. If the model has no rowspan,
-   * a value of 0 would be good. The dafault is 32. If your model has a rowspan
+   * a value of 0 would be good. The default is 32. If your model has a rowspan
    * cell greater 32, don't forget to increase this value.
    */
   getMaxRowspan(): number;

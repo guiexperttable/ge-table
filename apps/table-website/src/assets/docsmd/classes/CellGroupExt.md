@@ -19,7 +19,7 @@
 - [childIndex](CellGroupExt.md#childindex)
 - [children](CellGroupExt.md#children)
 - [closed](CellGroupExt.md#closed)
-- [orderData](CellGroupExt.md#orderData)
+- [data](CellGroupExt.md#data)
 - [impl](CellGroupExt.md#impl)
 - [leftNeighbour](CellGroupExt.md#leftneighbour)
 - [parent](CellGroupExt.md#parent)
@@ -66,7 +66,7 @@
 
 #### Defined in
 
-[lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts:12](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts#L12)
+[lib/table/data/tablemodel/cellgroup/cell-group-ext.ts:12](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group-ext.ts#L12)
 
 ## Properties
 
@@ -76,7 +76,7 @@
 
 #### Defined in
 
-[lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts:15](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts#L15)
+[lib/table/data/tablemodel/cellgroup/cell-group-ext.ts:15](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group-ext.ts#L15)
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts:8](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts#L8)
+[lib/table/data/tablemodel/cellgroup/cell-group-ext.ts:8](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group-ext.ts#L8)
 
 ___
 
@@ -104,21 +104,21 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/tablemodel/cellgroup/cell-group.ts:11](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group.ts#L11)
+[lib/table/data/tablemodel/cellgroup/cell-group.ts:11](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group.ts#L11)
 
 ___
 
-### orderData
+### data
 
-• **orderData**: `any`
+• **data**: `any`
 
 #### Inherited from
 
-[CellGroup](CellGroup.md).[orderData](CellGroup.md#orderData)
+[CellGroup](CellGroup.md).[data](CellGroup.md#data)
 
 #### Defined in
 
-[lib/table/orderData/tablemodel/cellgroup/cell-group.ts:8](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group.ts#L8)
+[lib/table/data/tablemodel/cellgroup/cell-group.ts:8](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group.ts#L8)
 
 ___
 
@@ -132,7 +132,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts:6](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts#L6)
+[lib/table/data/tablemodel/cellgroup/cell-group-ext.ts:6](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group-ext.ts#L6)
 
 ___
 
@@ -142,7 +142,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts:9](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts#L9)
+[lib/table/data/tablemodel/cellgroup/cell-group-ext.ts:9](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group-ext.ts#L9)
 
 ___
 
@@ -152,7 +152,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts:16](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts#L16)
+[lib/table/data/tablemodel/cellgroup/cell-group-ext.ts:16](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group-ext.ts#L16)
 
 ___
 
@@ -166,7 +166,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/tablemodel/cellgroup/cell-group.ts:9](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group.ts#L9)
+[lib/table/data/tablemodel/cellgroup/cell-group.ts:9](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group.ts#L9)
 
 ___
 
@@ -176,7 +176,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts:10](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts#L10)
+[lib/table/data/tablemodel/cellgroup/cell-group-ext.ts:10](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group-ext.ts#L10)
 
 ___
 
@@ -186,7 +186,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts:14](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts#L14)
+[lib/table/data/tablemodel/cellgroup/cell-group-ext.ts:14](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group-ext.ts#L14)
 
 ___
 
@@ -200,7 +200,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/tablemodel/cellgroup/cell-group.ts:10](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group.ts#L10)
+[lib/table/data/tablemodel/cellgroup/cell-group.ts:10](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group.ts#L10)
 
 ___
 
@@ -214,7 +214,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/tablemodel/cellgroup/cell-group.ts:12](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group.ts#L12)
+[lib/table/data/tablemodel/cellgroup/cell-group.ts:12](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group.ts#L12)
 
 ## Methods
 
@@ -228,7 +228,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts:98](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts#L98)
+[lib/table/data/tablemodel/cellgroup/cell-group-ext.ts:98](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group-ext.ts#L98)
 
 ___
 
@@ -249,7 +249,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts:103](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts#L103)
+[lib/table/data/tablemodel/cellgroup/cell-group-ext.ts:103](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group-ext.ts#L103)
 
 ___
 
@@ -263,7 +263,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts:37](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts#L37)
+[lib/table/data/tablemodel/cellgroup/cell-group-ext.ts:37](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group-ext.ts#L37)
 
 ___
 
@@ -284,7 +284,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts:129](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts#L129)
+[lib/table/data/tablemodel/cellgroup/cell-group-ext.ts:129](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group-ext.ts#L129)
 
 ___
 
@@ -305,7 +305,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts:118](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts#L118)
+[lib/table/data/tablemodel/cellgroup/cell-group-ext.ts:118](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group-ext.ts#L118)
 
 ___
 
@@ -319,7 +319,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts:81](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts#L81)
+[lib/table/data/tablemodel/cellgroup/cell-group-ext.ts:81](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group-ext.ts#L81)
 
 ___
 
@@ -339,7 +339,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts:140](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts#L140)
+[lib/table/data/tablemodel/cellgroup/cell-group-ext.ts:140](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group-ext.ts#L140)
 
 ___
 
@@ -353,7 +353,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts:28](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts#L28)
+[lib/table/data/tablemodel/cellgroup/cell-group-ext.ts:28](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group-ext.ts#L28)
 
 ___
 
@@ -367,4 +367,4 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts:32](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/tablemodel/cellgroup/cell-group-ext.ts#L32)
+[lib/table/data/tablemodel/cellgroup/cell-group-ext.ts:32](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group-ext.ts#L32)

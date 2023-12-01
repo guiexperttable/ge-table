@@ -27,7 +27,7 @@
 
 ### flattenTree
 
-▸ **flattenTree**\<`T`\>(`rows`, `ret?`): [`TreeRow`](TreeRow.md)\<`T`\>[]
+▸ **flattenTree**\<`T`\>(`rows`, `ret?`): [`TreeRowIf`](../interfaces/TreeRowIf.md)\<`T`\>[]
 
 #### Type parameters
 
@@ -39,16 +39,16 @@
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `rows` | [`TreeRow`](TreeRow.md)\<`T`\>[] | `undefined` |
-| `ret` | [`TreeRow`](TreeRow.md)\<`T`\>[] | `[]` |
+| `rows` | [`TreeRowIf`](../interfaces/TreeRowIf.md)\<`T`\>[] | `undefined` |
+| `ret` | [`TreeRowIf`](../interfaces/TreeRowIf.md)\<`T`\>[] | `[]` |
 
 #### Returns
 
-[`TreeRow`](TreeRow.md)\<`T`\>[]
+[`TreeRowIf`](../interfaces/TreeRowIf.md)\<`T`\>[]
 
 #### Defined in
 
-[lib/table/service/tree-row.service.ts:5](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/service/tree-row.service.ts#L5)
+[lib/table/service/tree-row.service.ts:6](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/tree-row.service.ts#L6)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `row` | [`TreeRow`](TreeRow.md)\<`any`\> |
+| `row` | [`TreeRowIf`](../interfaces/TreeRowIf.md)\<`any`\> |
 
 #### Returns
 
@@ -68,4 +68,4 @@ ___
 
 #### Defined in
 
-[lib/table/service/tree-row.service.ts:21](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/service/tree-row.service.ts#L21)
+[lib/table/service/tree-row.service.ts:22](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/tree-row.service.ts#L22)

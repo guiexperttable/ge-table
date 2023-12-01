@@ -54,7 +54,7 @@
 
 #### Defined in
 
-[lib/table/event-adapter.ts:7](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/event-adapter.ts#L7)
+[lib/table/event-adapter.ts:7](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/event-adapter.ts#L7)
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 #### Defined in
 
-[lib/table/event-adapter.ts:10](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/event-adapter.ts#L10)
+[lib/table/event-adapter.ts:10](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/event-adapter.ts#L10)
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 #### Defined in
 
-[lib/table/event-adapter.ts:13](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/event-adapter.ts#L13)
+[lib/table/event-adapter.ts:13](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/event-adapter.ts#L13)
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 #### Defined in
 
-[lib/table/event-adapter.ts:16](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/event-adapter.ts#L16)
+[lib/table/event-adapter.ts:16](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/event-adapter.ts#L16)
 
 ___
 
@@ -150,7 +150,7 @@ ___
 
 #### Defined in
 
-[lib/table/event-adapter.ts:19](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/event-adapter.ts#L19)
+[lib/table/event-adapter.ts:19](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/event-adapter.ts#L19)
 
 ___
 
@@ -174,7 +174,7 @@ ___
 
 #### Defined in
 
-[lib/table/event-adapter.ts:22](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/event-adapter.ts#L22)
+[lib/table/event-adapter.ts:22](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/event-adapter.ts#L22)
 
 ___
 
@@ -198,4 +198,4 @@ ___
 
 #### Defined in
 
-[lib/table/event-adapter.ts:25](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/event-adapter.ts#L25)
+[lib/table/event-adapter.ts:25](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/event-adapter.ts#L25)

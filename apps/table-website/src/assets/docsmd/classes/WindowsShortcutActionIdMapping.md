@@ -34,4 +34,4 @@
 
 #### Defined in
 
-[lib/table/action/windows-shortcut-actionId-mapping.ts:5](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/action/windows-shortcut-actionId-mapping.ts#L5)
+[lib/table/action/windows-shortcut-actionId-mapping.ts:5](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/action/windows-shortcut-actionId-mapping.ts#L5)

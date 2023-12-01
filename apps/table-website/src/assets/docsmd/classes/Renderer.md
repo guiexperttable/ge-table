@@ -40,4 +40,4 @@
 
 #### Defined in
 
-[lib/table/renderer/renderer.ts:7](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/renderer/renderer.ts#L7)
+[lib/table/renderer/renderer.ts:7](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/renderer/renderer.ts#L7)

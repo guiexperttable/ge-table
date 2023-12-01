@@ -27,7 +27,7 @@
 
 ### buildTreeRow
 
-▸ **buildTreeRow**\<`T`\>(`orderData`, `childrenProperty?`, `parent?`, `deep?`, `deepMaxLimit?`): [`TreeRow`](TreeRow.md)\<`T`\>
+▸ **buildTreeRow**\<`T`\>(`data`, `childrenProperty?`, `parent?`, `deep?`, `deepMaxLimit?`): [`TreeRowIf`](../interfaces/TreeRowIf.md)\<`T`\>
 
 #### Type parameters
 
@@ -39,25 +39,25 @@
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `orderData` | `T` | `undefined` |
+| `data` | `T` | `undefined` |
 | `childrenProperty` | `string` | `"children"` |
-| `parent` | [`TreeRow`](TreeRow.md)\<`T`\> | `undefined` |
+| `parent` | [`TreeRowIf`](../interfaces/TreeRowIf.md)\<`T`\> | `undefined` |
 | `deep` | `number` | `0` |
 | `deepMaxLimit` | `number` | `12` |
 
 #### Returns
 
-[`TreeRow`](TreeRow.md)\<`T`\>
+[`TreeRowIf`](../interfaces/TreeRowIf.md)\<`T`\>
 
 #### Defined in
 
-[lib/table/factory/tree-factory.ts:19](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/factory/tree-factory.ts#L19)
+[lib/table/factory/tree-factory.ts:20](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/factory/tree-factory.ts#L20)
 
 ___
 
 ### buildTreeRows
 
-▸ **buildTreeRows**\<`T`\>(`orderData`, `childrenProperty?`, `deepMaxLimit?`): [`TreeRow`](TreeRow.md)\<`T`\>[]
+▸ **buildTreeRows**\<`T`\>(`data`, `childrenProperty?`, `deepMaxLimit?`): [`TreeRowIf`](../interfaces/TreeRowIf.md)\<`T`\>[]
 
 #### Type parameters
 
@@ -69,14 +69,14 @@ ___
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `orderData` | `T`[] | `undefined` |
+| `data` | `T`[] | `undefined` |
 | `childrenProperty` | `string` | `"children"` |
 | `deepMaxLimit` | `number` | `12` |
 
 #### Returns
 
-[`TreeRow`](TreeRow.md)\<`T`\>[]
+[`TreeRowIf`](../interfaces/TreeRowIf.md)\<`T`\>[]
 
 #### Defined in
 
-[lib/table/factory/tree-factory.ts:6](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/factory/tree-factory.ts#L6)
+[lib/table/factory/tree-factory.ts:7](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/factory/tree-factory.ts#L7)

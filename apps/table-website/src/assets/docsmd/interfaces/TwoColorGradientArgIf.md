@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[lib/table/color/two-color-gradient-arg.if.ts:7](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/color/two-color-gradient-arg.if.ts#L7)
+[lib/table/color/two-color-gradient-arg.if.ts:7](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/color/two-color-gradient-arg.if.ts#L7)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[lib/table/color/two-color-gradient-arg.if.ts:6](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/color/two-color-gradient-arg.if.ts#L6)
+[lib/table/color/two-color-gradient-arg.if.ts:6](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/color/two-color-gradient-arg.if.ts#L6)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[lib/table/color/two-color-gradient-arg.if.ts:5](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/color/two-color-gradient-arg.if.ts#L5)
+[lib/table/color/two-color-gradient-arg.if.ts:5](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/color/two-color-gradient-arg.if.ts#L5)
 
 ___
 
@@ -53,4 +53,4 @@ ___
 
 #### Defined in
 
-[lib/table/color/two-color-gradient-arg.if.ts:4](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/color/two-color-gradient-arg.if.ts#L4)
+[lib/table/color/two-color-gradient-arg.if.ts:4](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/color/two-color-gradient-arg.if.ts#L4)

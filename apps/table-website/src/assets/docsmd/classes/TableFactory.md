@@ -56,7 +56,7 @@
 
 #### Defined in
 
-[lib/table/factory/table-factory.ts:214](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/factory/table-factory.ts#L214)
+[lib/table/factory/table-factory.ts:215](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/factory/table-factory.ts#L215)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[lib/table/factory/table-factory.ts:197](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/factory/table-factory.ts#L197)
+[lib/table/factory/table-factory.ts:198](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/factory/table-factory.ts#L198)
 
 ___
 
@@ -117,7 +117,7 @@ ___
 
 #### Defined in
 
-[lib/table/factory/table-factory.ts:288](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/factory/table-factory.ts#L288)
+[lib/table/factory/table-factory.ts:289](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/factory/table-factory.ts#L289)
 
 ___
 
@@ -148,7 +148,7 @@ ___
 
 #### Defined in
 
-[lib/table/factory/table-factory.ts:316](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/factory/table-factory.ts#L316)
+[lib/table/factory/table-factory.ts:317](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/factory/table-factory.ts#L317)
 
 ___
 
@@ -182,7 +182,7 @@ ___
 
 #### Defined in
 
-[lib/table/factory/table-factory.ts:344](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/factory/table-factory.ts#L344)
+[lib/table/factory/table-factory.ts:345](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/factory/table-factory.ts#L345)
 
 ___
 
@@ -217,7 +217,7 @@ ___
 
 #### Defined in
 
-[lib/table/factory/table-factory.ts:263](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/factory/table-factory.ts#L263)
+[lib/table/factory/table-factory.ts:264](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/factory/table-factory.ts#L264)
 
 ___
 
@@ -237,4 +237,4 @@ ___
 
 #### Defined in
 
-[lib/table/factory/table-factory.ts:25](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/factory/table-factory.ts#L25)
+[lib/table/factory/table-factory.ts:26](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/factory/table-factory.ts#L26)

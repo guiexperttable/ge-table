@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[lib/table/orderData/options/sorted-options.if.ts:5](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/sorted-options.if.ts#L5)
+[lib/table/data/options/sorted-options.if.ts:5](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/sorted-options.if.ts#L5)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/sorted-options.if.ts:6](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/sorted-options.if.ts#L6)
+[lib/table/data/options/sorted-options.if.ts:6](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/sorted-options.if.ts#L6)
 
 ___
 
@@ -42,4 +42,4 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/options/sorted-options.if.ts:7](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/options/sorted-options.if.ts#L7)
+[lib/table/data/options/sorted-options.if.ts:7](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/options/sorted-options.if.ts#L7)

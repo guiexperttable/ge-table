@@ -54,4 +54,4 @@
 
 #### Defined in
 
-[lib/table/renderer/date-to-locale-date-cell-renderer.ts:10](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/renderer/date-to-locale-date-cell-renderer.ts#L10)
+[lib/table/renderer/date-to-locale-date-cell-renderer.ts:10](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/renderer/date-to-locale-date-cell-renderer.ts#L10)

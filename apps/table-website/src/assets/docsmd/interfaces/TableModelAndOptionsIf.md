@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[lib/table/orderData/table-model-and-options.if.ts:6](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/table-model-and-options.if.ts#L6)
+[lib/table/data/table-model-and-options.if.ts:6](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/table-model-and-options.if.ts#L6)
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/table-model-and-options.if.ts:7](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/table-model-and-options.if.ts#L7)
+[lib/table/data/table-model-and-options.if.ts:7](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/table-model-and-options.if.ts#L7)

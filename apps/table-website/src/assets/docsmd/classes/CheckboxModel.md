@@ -56,7 +56,7 @@
 
 #### Defined in
 
-[lib/table/checkbox/checkbox-model.ts:6](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/checkbox/checkbox-model.ts#L6)
+[lib/table/checkbox/checkbox-model.ts:6](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/checkbox/checkbox-model.ts#L6)
 
 ## Methods
 
@@ -80,7 +80,7 @@
 
 #### Defined in
 
-[lib/table/checkbox/checkbox-model.ts:17](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/checkbox/checkbox-model.ts#L17)
+[lib/table/checkbox/checkbox-model.ts:17](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/checkbox/checkbox-model.ts#L17)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[lib/table/checkbox/checkbox-model.ts:49](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/checkbox/checkbox-model.ts#L49)
+[lib/table/checkbox/checkbox-model.ts:49](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/checkbox/checkbox-model.ts#L49)
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 #### Defined in
 
-[lib/table/checkbox/checkbox-model.ts:28](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/checkbox/checkbox-model.ts#L28)
+[lib/table/checkbox/checkbox-model.ts:28](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/checkbox/checkbox-model.ts#L28)
 
 ___
 
@@ -147,7 +147,7 @@ ___
 
 #### Defined in
 
-[lib/table/checkbox/checkbox-model.ts:8](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/checkbox/checkbox-model.ts#L8)
+[lib/table/checkbox/checkbox-model.ts:8](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/checkbox/checkbox-model.ts#L8)
 
 ___
 
@@ -171,7 +171,7 @@ ___
 
 #### Defined in
 
-[lib/table/checkbox/checkbox-model.ts:42](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/checkbox/checkbox-model.ts#L42)
+[lib/table/checkbox/checkbox-model.ts:42](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/checkbox/checkbox-model.ts#L42)
 
 ___
 
@@ -191,7 +191,7 @@ ___
 
 #### Defined in
 
-[lib/table/checkbox/checkbox-model.ts:53](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/checkbox/checkbox-model.ts#L53)
+[lib/table/checkbox/checkbox-model.ts:53](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/checkbox/checkbox-model.ts#L53)
 
 ___
 
@@ -215,4 +215,4 @@ ___
 
 #### Defined in
 
-[lib/table/checkbox/checkbox-model.ts:12](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/checkbox/checkbox-model.ts#L12)
+[lib/table/checkbox/checkbox-model.ts:12](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/checkbox/checkbox-model.ts#L12)

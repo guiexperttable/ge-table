@@ -127,6 +127,7 @@
 - [toggleRowCheckbox](TableScope.md#togglerowcheckbox)
 - [updateCells](TableScope.md#updatecells)
 - [updateModelValueAfterEdit](TableScope.md#updatemodelvalueafteredit)
+- [create](TableScope.md#create)
 
 ## Constructors
 
@@ -154,7 +155,7 @@
 
 #### Defined in
 
-[lib/table/table-scope.ts:48](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L48)
+[lib/table/table-scope.ts:67](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L67)
 
 ## Properties
 
@@ -164,7 +165,7 @@
 
 #### Defined in
 
-[lib/table/table-scope.ts:40](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L40)
+[lib/table/table-scope.ts:43](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L43)
 
 ___
 
@@ -178,7 +179,7 @@ ___
 
 #### Defined in
 
-[lib/table/ele-scope.ts:19](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/ele-scope.ts#L19)
+[lib/table/ele-scope.ts:19](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/ele-scope.ts#L19)
 
 ___
 
@@ -192,7 +193,7 @@ ___
 
 #### Defined in
 
-[lib/table/ele-scope.ts:39](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/ele-scope.ts#L39)
+[lib/table/ele-scope.ts:39](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/ele-scope.ts#L39)
 
 ___
 
@@ -206,7 +207,7 @@ ___
 
 #### Defined in
 
-[lib/table/ele-scope.ts:21](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/ele-scope.ts#L21)
+[lib/table/ele-scope.ts:21](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/ele-scope.ts#L21)
 
 ___
 
@@ -220,7 +221,7 @@ ___
 
 #### Defined in
 
-[lib/table/ele-scope.ts:40](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/ele-scope.ts#L40)
+[lib/table/ele-scope.ts:40](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/ele-scope.ts#L40)
 
 ___
 
@@ -234,7 +235,7 @@ ___
 
 #### Defined in
 
-[lib/table/ele-scope.ts:20](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/ele-scope.ts#L20)
+[lib/table/ele-scope.ts:20](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/ele-scope.ts#L20)
 
 ___
 
@@ -248,7 +249,7 @@ ___
 
 #### Defined in
 
-[lib/table/ele-scope.ts:38](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/ele-scope.ts#L38)
+[lib/table/ele-scope.ts:38](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/ele-scope.ts#L38)
 
 ___
 
@@ -262,7 +263,7 @@ ___
 
 #### Defined in
 
-[lib/table/ele-scope.ts:24](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/ele-scope.ts#L24)
+[lib/table/ele-scope.ts:24](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/ele-scope.ts#L24)
 
 ___
 
@@ -276,7 +277,7 @@ ___
 
 #### Defined in
 
-[lib/table/ele-scope.ts:26](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/ele-scope.ts#L26)
+[lib/table/ele-scope.ts:26](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/ele-scope.ts#L26)
 
 ___
 
@@ -290,7 +291,7 @@ ___
 
 #### Defined in
 
-[lib/table/ele-scope.ts:25](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/ele-scope.ts#L25)
+[lib/table/ele-scope.ts:25](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/ele-scope.ts#L25)
 
 ___
 
@@ -304,7 +305,7 @@ ___
 
 #### Defined in
 
-[lib/table/ele-scope.ts:15](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/ele-scope.ts#L15)
+[lib/table/ele-scope.ts:15](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/ele-scope.ts#L15)
 
 ___
 
@@ -318,7 +319,7 @@ ___
 
 #### Defined in
 
-[lib/table/ele-scope.ts:17](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/ele-scope.ts#L17)
+[lib/table/ele-scope.ts:17](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/ele-scope.ts#L17)
 
 ___
 
@@ -332,7 +333,7 @@ ___
 
 #### Defined in
 
-[lib/table/ele-scope.ts:16](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/ele-scope.ts#L16)
+[lib/table/ele-scope.ts:16](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/ele-scope.ts#L16)
 
 ___
 
@@ -346,7 +347,7 @@ ___
 
 #### Defined in
 
-[lib/table/ele-scope.ts:31](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/ele-scope.ts#L31)
+[lib/table/ele-scope.ts:31](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/ele-scope.ts#L31)
 
 ___
 
@@ -360,7 +361,7 @@ ___
 
 #### Defined in
 
-[lib/table/ele-scope.ts:30](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/ele-scope.ts#L30)
+[lib/table/ele-scope.ts:30](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/ele-scope.ts#L30)
 
 ___
 
@@ -374,7 +375,7 @@ ___
 
 #### Defined in
 
-[lib/table/ele-scope.ts:29](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/ele-scope.ts#L29)
+[lib/table/ele-scope.ts:29](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/ele-scope.ts#L29)
 
 ___
 
@@ -388,7 +389,7 @@ ___
 
 #### Defined in
 
-[lib/table/ele-scope.ts:28](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/ele-scope.ts#L28)
+[lib/table/ele-scope.ts:28](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/ele-scope.ts#L28)
 
 ___
 
@@ -410,7 +411,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:65](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L65)
+[lib/table/render-scope.ts:65](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L65)
 
 ___
 
@@ -424,7 +425,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:76](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L76)
+[lib/table/render-scope.ts:76](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L76)
 
 ___
 
@@ -438,7 +439,7 @@ ___
 
 #### Defined in
 
-[lib/table/ele-scope.ts:13](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/ele-scope.ts#L13)
+[lib/table/ele-scope.ts:13](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/ele-scope.ts#L13)
 
 ___
 
@@ -452,7 +453,7 @@ ___
 
 #### Defined in
 
-[lib/table/ele-scope.ts:12](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/ele-scope.ts#L12)
+[lib/table/ele-scope.ts:12](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/ele-scope.ts#L12)
 
 ___
 
@@ -466,7 +467,7 @@ ___
 
 #### Defined in
 
-[lib/table/ele-scope.ts:46](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/ele-scope.ts#L46)
+[lib/table/ele-scope.ts:46](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/ele-scope.ts#L46)
 
 ___
 
@@ -476,7 +477,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:45](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L45)
+[lib/table/table-scope.ts:48](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L48)
 
 ___
 
@@ -486,7 +487,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:46](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L46)
+[lib/table/table-scope.ts:49](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L49)
 
 ___
 
@@ -500,7 +501,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:79](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L79)
+[lib/table/render-scope.ts:79](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L79)
 
 ___
 
@@ -514,7 +515,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:117](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L117)
+[lib/table/render-scope.ts:117](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L117)
 
 ___
 
@@ -524,7 +525,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:53](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L53)
+[lib/table/table-scope.ts:72](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L72)
 
 ___
 
@@ -538,7 +539,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:77](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L77)
+[lib/table/render-scope.ts:77](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L77)
 
 ___
 
@@ -552,7 +553,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:59](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L59)
+[lib/table/render-scope.ts:59](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L59)
 
 ___
 
@@ -566,7 +567,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:58](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L58)
+[lib/table/render-scope.ts:58](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L58)
 
 ___
 
@@ -580,7 +581,7 @@ ___
 
 #### Defined in
 
-[lib/table/ele-scope.ts:44](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/ele-scope.ts#L44)
+[lib/table/ele-scope.ts:44](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/ele-scope.ts#L44)
 
 ___
 
@@ -594,7 +595,7 @@ ___
 
 #### Defined in
 
-[lib/table/ele-scope.ts:34](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/ele-scope.ts#L34)
+[lib/table/ele-scope.ts:34](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/ele-scope.ts#L34)
 
 ___
 
@@ -608,7 +609,7 @@ ___
 
 #### Defined in
 
-[lib/table/ele-scope.ts:33](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/ele-scope.ts#L33)
+[lib/table/ele-scope.ts:33](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/ele-scope.ts#L33)
 
 ___
 
@@ -618,7 +619,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:32](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L32)
+[lib/table/table-scope.ts:35](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L35)
 
 ___
 
@@ -628,7 +629,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:39](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L39)
+[lib/table/table-scope.ts:42](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L42)
 
 ___
 
@@ -642,7 +643,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:80](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L80)
+[lib/table/render-scope.ts:80](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L80)
 
 ___
 
@@ -652,7 +653,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:31](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L31)
+[lib/table/table-scope.ts:34](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L34)
 
 ___
 
@@ -662,7 +663,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:42](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L42)
+[lib/table/table-scope.ts:45](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L45)
 
 ___
 
@@ -672,7 +673,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:44](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L44)
+[lib/table/table-scope.ts:47](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L47)
 
 ___
 
@@ -682,7 +683,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:43](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L43)
+[lib/table/table-scope.ts:46](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L46)
 
 ___
 
@@ -696,7 +697,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:63](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L63)
+[lib/table/render-scope.ts:63](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L63)
 
 ___
 
@@ -710,7 +711,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:62](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L62)
+[lib/table/render-scope.ts:62](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L62)
 
 ___
 
@@ -724,7 +725,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:60](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L60)
+[lib/table/render-scope.ts:60](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L60)
 
 ___
 
@@ -738,7 +739,7 @@ ___
 
 #### Defined in
 
-[lib/table/ele-scope.ts:36](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/ele-scope.ts#L36)
+[lib/table/ele-scope.ts:36](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/ele-scope.ts#L36)
 
 ___
 
@@ -752,7 +753,7 @@ ___
 
 #### Defined in
 
-[lib/table/ele-scope.ts:10](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/ele-scope.ts#L10)
+[lib/table/ele-scope.ts:10](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/ele-scope.ts#L10)
 
 ___
 
@@ -766,7 +767,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:61](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L61)
+[lib/table/render-scope.ts:61](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L61)
 
 ___
 
@@ -776,7 +777,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:38](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L38)
+[lib/table/table-scope.ts:41](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L41)
 
 ___
 
@@ -786,7 +787,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:33](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L33)
+[lib/table/table-scope.ts:36](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L36)
 
 ___
 
@@ -800,7 +801,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:57](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L57)
+[lib/table/render-scope.ts:57](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L57)
 
 ___
 
@@ -810,7 +811,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:36](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L36)
+[lib/table/table-scope.ts:39](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L39)
 
 ___
 
@@ -820,7 +821,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:35](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L35)
+[lib/table/table-scope.ts:38](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L38)
 
 ___
 
@@ -834,7 +835,7 @@ ___
 
 #### Defined in
 
-[lib/table/ele-scope.ts:45](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/ele-scope.ts#L45)
+[lib/table/ele-scope.ts:45](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/ele-scope.ts#L45)
 
 ___
 
@@ -848,7 +849,7 @@ ___
 
 #### Defined in
 
-[lib/table/ele-scope.ts:47](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/ele-scope.ts#L47)
+[lib/table/ele-scope.ts:47](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/ele-scope.ts#L47)
 
 ___
 
@@ -862,7 +863,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:74](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L74)
+[lib/table/render-scope.ts:74](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L74)
 
 ## Methods
 
@@ -886,7 +887,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:661](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L661)
+[lib/table/render-scope.ts:661](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L661)
 
 ___
 
@@ -904,7 +905,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:166](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L166)
+[lib/table/render-scope.ts:166](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L166)
 
 ___
 
@@ -929,7 +930,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:289](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L289)
+[lib/table/render-scope.ts:289](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L289)
 
 ___
 
@@ -947,7 +948,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:263](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L263)
+[lib/table/render-scope.ts:263](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L263)
 
 ___
 
@@ -971,7 +972,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:543](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L543)
+[lib/table/render-scope.ts:543](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L543)
 
 ___
 
@@ -989,7 +990,7 @@ ___
 
 #### Defined in
 
-[lib/table/ele-scope.ts:135](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/ele-scope.ts#L135)
+[lib/table/ele-scope.ts:135](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/ele-scope.ts#L135)
 
 ___
 
@@ -1013,7 +1014,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:795](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L795)
+[lib/table/render-scope.ts:795](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L795)
 
 ___
 
@@ -1037,7 +1038,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:772](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L772)
+[lib/table/render-scope.ts:772](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L772)
 
 ___
 
@@ -1051,7 +1052,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:395](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L395)
+[lib/table/table-scope.ts:415](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L415)
 
 ___
 
@@ -1065,7 +1066,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:373](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L373)
+[lib/table/table-scope.ts:393](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L393)
 
 ___
 
@@ -1079,7 +1080,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:385](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L385)
+[lib/table/table-scope.ts:405](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L405)
 
 ___
 
@@ -1100,7 +1101,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:327](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L327)
+[lib/table/table-scope.ts:347](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L347)
 
 ___
 
@@ -1118,7 +1119,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:220](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L220)
+[lib/table/render-scope.ts:220](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L220)
 
 ___
 
@@ -1136,7 +1137,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:129](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L129)
+[lib/table/render-scope.ts:129](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L129)
 
 ___
 
@@ -1150,7 +1151,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:347](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L347)
+[lib/table/table-scope.ts:367](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L367)
 
 ___
 
@@ -1170,7 +1171,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:250](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L250)
+[lib/table/table-scope.ts:270](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L270)
 
 ___
 
@@ -1190,7 +1191,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:155](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L155)
+[lib/table/table-scope.ts:175](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L175)
 
 ___
 
@@ -1215,7 +1216,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:819](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L819)
+[lib/table/render-scope.ts:819](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L819)
 
 ___
 
@@ -1236,7 +1237,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:353](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L353)
+[lib/table/table-scope.ts:373](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L373)
 
 ___
 
@@ -1267,7 +1268,7 @@ Draws big cells (rowspan and or colspan) in body/center
 
 #### Defined in
 
-[lib/table/render-scope.ts:449](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L449)
+[lib/table/render-scope.ts:449](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L449)
 
 ___
 
@@ -1287,7 +1288,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:292](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L292)
+[lib/table/table-scope.ts:312](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L312)
 
 ___
 
@@ -1313,21 +1314,21 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:528](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L528)
+[lib/table/render-scope.ts:528](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L528)
 
 ___
 
 ### firstInit
 
-▸ **firstInit**(): `void`
+▸ **firstInit**(): [`TableScope`](TableScope.md)
 
 #### Returns
 
-`void`
+[`TableScope`](TableScope.md)
 
 #### Defined in
 
-[lib/table/table-scope.ts:143](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L143)
+[lib/table/table-scope.ts:162](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L162)
 
 ___
 
@@ -1341,7 +1342,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:136](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L136)
+[lib/table/table-scope.ts:155](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L155)
 
 ___
 
@@ -1366,7 +1367,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:246](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L246)
+[lib/table/render-scope.ts:246](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L246)
 
 ___
 
@@ -1390,7 +1391,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:235](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L235)
+[lib/table/render-scope.ts:235](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L235)
 
 ___
 
@@ -1415,7 +1416,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:756](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L756)
+[lib/table/render-scope.ts:756](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L756)
 
 ___
 
@@ -1440,7 +1441,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:273](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L273)
+[lib/table/render-scope.ts:273](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L273)
 
 ___
 
@@ -1466,7 +1467,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:764](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L764)
+[lib/table/render-scope.ts:764](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L764)
 
 ___
 
@@ -1491,7 +1492,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:281](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L281)
+[lib/table/render-scope.ts:281](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L281)
 
 ___
 
@@ -1509,7 +1510,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:651](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L651)
+[lib/table/render-scope.ts:651](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L651)
 
 ___
 
@@ -1527,7 +1528,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:813](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L813)
+[lib/table/render-scope.ts:813](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L813)
 
 ___
 
@@ -1545,7 +1546,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:789](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L789)
+[lib/table/render-scope.ts:789](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L789)
 
 ___
 
@@ -1570,7 +1571,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:136](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L136)
+[lib/table/render-scope.ts:136](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L136)
 
 ___
 
@@ -1588,7 +1589,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:118](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L118)
+[lib/table/render-scope.ts:118](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L118)
 
 ___
 
@@ -1608,7 +1609,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:227](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L227)
+[lib/table/table-scope.ts:247](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L247)
 
 ___
 
@@ -1628,7 +1629,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:199](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L199)
+[lib/table/table-scope.ts:219](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L219)
 
 ___
 
@@ -1648,7 +1649,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:244](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L244)
+[lib/table/table-scope.ts:264](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L264)
 
 ___
 
@@ -1672,7 +1673,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:86](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L86)
+[lib/table/table-scope.ts:105](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L105)
 
 ___
 
@@ -1694,7 +1695,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:306](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L306)
+[lib/table/table-scope.ts:326](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L326)
 
 ___
 
@@ -1715,7 +1716,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:274](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L274)
+[lib/table/table-scope.ts:294](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L294)
 
 ___
 
@@ -1735,7 +1736,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:184](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L184)
+[lib/table/table-scope.ts:204](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L204)
 
 ___
 
@@ -1753,7 +1754,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:162](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L162)
+[lib/table/render-scope.ts:162](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L162)
 
 ___
 
@@ -1771,7 +1772,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:122](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L122)
+[lib/table/render-scope.ts:122](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L122)
 
 ___
 
@@ -1789,7 +1790,7 @@ ___
 
 #### Defined in
 
-[lib/table/ele-scope.ts:276](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/ele-scope.ts#L276)
+[lib/table/ele-scope.ts:276](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/ele-scope.ts#L276)
 
 ___
 
@@ -1809,7 +1810,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:340](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L340)
+[lib/table/table-scope.ts:360](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L360)
 
 ___
 
@@ -1829,7 +1830,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:254](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L254)
+[lib/table/table-scope.ts:274](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L274)
 
 ___
 
@@ -1851,7 +1852,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:264](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L264)
+[lib/table/table-scope.ts:284](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L284)
 
 ___
 
@@ -1875,7 +1876,7 @@ ___
 
 #### Defined in
 
-[lib/table/render-scope.ts:227](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/render-scope.ts#L227)
+[lib/table/render-scope.ts:227](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/render-scope.ts#L227)
 
 ___
 
@@ -1898,4 +1899,28 @@ ___
 
 #### Defined in
 
-[lib/table/table-scope.ts:123](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-scope.ts#L123)
+[lib/table/table-scope.ts:142](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L142)
+
+___
+
+### create
+
+▸ **create**(`hostElement`, `tableModel`, `tableOptions?`, `eventListener?`, `domService?`): [`TableScope`](TableScope.md)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `hostElement` | `HTMLDivElement` |
+| `tableModel` | [`TableModelIf`](../interfaces/TableModelIf.md) |
+| `tableOptions` | [`TableOptionsIf`](../interfaces/TableOptionsIf.md) |
+| `eventListener` | [`EventListenerIf`](../interfaces/EventListenerIf.md) |
+| `domService` | [`DomServiceIf`](../interfaces/DomServiceIf.md) |
+
+#### Returns
+
+[`TableScope`](TableScope.md)
+
+#### Defined in
+
+[lib/table/table-scope.ts:51](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-scope.ts#L51)

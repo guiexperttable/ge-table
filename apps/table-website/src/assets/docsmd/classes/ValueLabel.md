@@ -36,7 +36,7 @@
 
 #### Defined in
 
-[lib/table/orderData/common/value-label.ts:7](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/value-label.ts#L7)
+[lib/table/data/common/value-label.ts:7](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/value-label.ts#L7)
 
 ## Properties
 
@@ -50,7 +50,7 @@
 
 #### Defined in
 
-[lib/table/orderData/common/value-label.ts:9](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/value-label.ts#L9)
+[lib/table/data/common/value-label.ts:9](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/value-label.ts#L9)
 
 ___
 
@@ -64,4 +64,4 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/common/value-label.ts:8](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/common/value-label.ts#L8)
+[lib/table/data/common/value-label.ts:8](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/value-label.ts#L8)

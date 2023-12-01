@@ -38,7 +38,7 @@
 
 #### Defined in
 
-[lib/table/color/color-rgb.ts:4](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/color/color-rgb.ts#L4)
+[lib/table/color/color-rgb.ts:4](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/color/color-rgb.ts#L4)
 
 ## Properties
 
@@ -52,7 +52,7 @@
 
 #### Defined in
 
-[lib/table/color/color-rgb.ts:7](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/color/color-rgb.ts#L7)
+[lib/table/color/color-rgb.ts:7](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/color/color-rgb.ts#L7)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[lib/table/color/color-rgb.ts:6](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/color/color-rgb.ts#L6)
+[lib/table/color/color-rgb.ts:6](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/color/color-rgb.ts#L6)
 
 ___
 
@@ -80,4 +80,4 @@ ___
 
 #### Defined in
 
-[lib/table/color/color-rgb.ts:5](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/color/color-rgb.ts#L5)
+[lib/table/color/color-rgb.ts:5](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/color/color-rgb.ts#L5)

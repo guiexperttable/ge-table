@@ -49,4 +49,4 @@
 
 #### Defined in
 
-[lib/table/renderer/cell-render.if.ts:8](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/renderer/cell-render.if.ts#L8)
+[lib/table/renderer/cell-render.if.ts:8](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/renderer/cell-render.if.ts#L8)

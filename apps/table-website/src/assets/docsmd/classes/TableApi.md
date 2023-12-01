@@ -44,7 +44,7 @@
 
 #### Defined in
 
-[lib/table/table-api.ts:8](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-api.ts#L8)
+[lib/table/table-api.ts:8](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-api.ts#L8)
 
 ## Properties
 
@@ -54,7 +54,7 @@
 
 #### Defined in
 
-[lib/table/table-api.ts:9](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-api.ts#L9)
+[lib/table/table-api.ts:9](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-api.ts#L9)
 
 ## Methods
 
@@ -68,7 +68,7 @@
 
 #### Defined in
 
-[lib/table/table-api.ts:19](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-api.ts#L19)
+[lib/table/table-api.ts:19](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-api.ts#L19)
 
 ___
 
@@ -88,7 +88,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-api.ts:40](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-api.ts#L40)
+[lib/table/table-api.ts:40](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-api.ts#L40)
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-api.ts:53](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-api.ts#L53)
+[lib/table/table-api.ts:53](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-api.ts#L53)
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-api.ts:45](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-api.ts#L45)
+[lib/table/table-api.ts:45](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-api.ts#L45)
 
 ___
 
@@ -130,7 +130,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-api.ts:57](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-api.ts#L57)
+[lib/table/table-api.ts:57](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-api.ts#L57)
 
 ___
 
@@ -151,7 +151,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-api.ts:28](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-api.ts#L28)
+[lib/table/table-api.ts:28](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-api.ts#L28)
 
 ___
 
@@ -172,7 +172,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-api.ts:23](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-api.ts#L23)
+[lib/table/table-api.ts:23](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-api.ts#L23)
 
 ___
 
@@ -193,7 +193,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-api.ts:36](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-api.ts#L36)
+[lib/table/table-api.ts:36](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-api.ts#L36)
 
 ___
 
@@ -213,7 +213,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-api.ts:49](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-api.ts#L49)
+[lib/table/table-api.ts:49](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-api.ts#L49)
 
 ___
 
@@ -233,7 +233,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-api.ts:32](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-api.ts#L32)
+[lib/table/table-api.ts:32](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-api.ts#L32)
 
 ___
 
@@ -253,4 +253,4 @@ ___
 
 #### Defined in
 
-[lib/table/table-api.ts:14](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/table-api.ts#L14)
+[lib/table/table-api.ts:14](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-api.ts#L14)

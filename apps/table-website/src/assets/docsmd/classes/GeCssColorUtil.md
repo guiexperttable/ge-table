@@ -43,7 +43,7 @@
 
 #### Defined in
 
-[lib/table/color/ge-css-color-util.ts:33](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/color/ge-css-color-util.ts#L33)
+[lib/table/color/ge-css-color-util.ts:33](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/color/ge-css-color-util.ts#L33)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[lib/table/color/ge-css-color-util.ts:18](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/color/ge-css-color-util.ts#L18)
+[lib/table/color/ge-css-color-util.ts:18](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/color/ge-css-color-util.ts#L18)
 
 ___
 
@@ -88,4 +88,4 @@ ___
 
 #### Defined in
 
-[lib/table/color/ge-css-color-util.ts:8](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/color/ge-css-color-util.ts#L8)
+[lib/table/color/ge-css-color-util.ts:8](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/color/ge-css-color-util.ts#L8)

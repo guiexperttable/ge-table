@@ -38,7 +38,7 @@
 
 #### Defined in
 
-[lib/table/renderer/date-to-int-date-cell-renderer.ts:10](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/renderer/date-to-int-date-cell-renderer.ts#L10)
+[lib/table/renderer/date-to-int-date-cell-renderer.ts:10](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/renderer/date-to-int-date-cell-renderer.ts#L10)
 
 ## Methods
 
@@ -68,4 +68,4 @@
 
 #### Defined in
 
-[lib/table/renderer/date-to-int-date-cell-renderer.ts:16](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/renderer/date-to-int-date-cell-renderer.ts#L16)
+[lib/table/renderer/date-to-int-date-cell-renderer.ts:16](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/renderer/date-to-int-date-cell-renderer.ts#L16)

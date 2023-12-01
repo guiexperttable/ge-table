@@ -38,7 +38,7 @@
 
 #### Defined in
 
-[lib/table/orderData/geo-orderData.ts:3](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/geo-orderData.ts#L3)
+[lib/table/data/geo-data.ts:3](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/geo-data.ts#L3)
 
 ## Properties
 
@@ -48,7 +48,7 @@
 
 #### Defined in
 
-[lib/table/orderData/geo-orderData.ts:6](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/geo-orderData.ts#L6)
+[lib/table/data/geo-data.ts:6](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/geo-data.ts#L6)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/geo-orderData.ts:8](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/geo-orderData.ts#L8)
+[lib/table/data/geo-data.ts:8](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/geo-data.ts#L8)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/geo-orderData.ts:4](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/geo-orderData.ts#L4)
+[lib/table/data/geo-data.ts:4](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/geo-data.ts#L4)
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/geo-orderData.ts:7](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/geo-orderData.ts#L7)
+[lib/table/data/geo-data.ts:7](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/geo-data.ts#L7)
 
 ___
 
@@ -88,4 +88,4 @@ ___
 
 #### Defined in
 
-[lib/table/orderData/geo-orderData.ts:5](https://github.com/guiexperttable/ge-table/blob/65d38fc/libs/table/src/lib/table/orderData/geo-orderData.ts#L5)
+[lib/table/data/geo-data.ts:5](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/geo-data.ts#L5)
