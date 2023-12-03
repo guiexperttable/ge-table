@@ -4,7 +4,7 @@ export class CssVars {
   public static readonly themes = ['light', 'combat', 'paper', 'blackboard'];
 
   public static readonly vars = {
-    light: `:root [data-theme="light"] {
+    light: `html[data-theme="light"] {
   --ge-table-bg: rgba(255,255,255, 0.5);
   --ge-table-header-west-bg: rgba(233, 233, 233, 0.5);
   --ge-table-header-center-bg: rgba(233, 233, 233, 0.5);
@@ -63,7 +63,7 @@ export class CssVars {
   --ge-table-drop-zone-bg: rgba(244, 255, 242, 0.6);
 }`,
 
-    combat:`:root [data-theme="combat"] {
+    combat:`html[data-theme="combat"] {
   --ge-table-bg: #101010;
   --ge-table-header-west-bg: #101010;
   --ge-table-header-center-bg: #101010;
@@ -122,7 +122,7 @@ export class CssVars {
   --ge-table-drop-zone-bg: #101010;
 }`,
 
-    paper: `:root [data-theme="paper"] {
+    paper: `html[data-theme="paper"] {
   --ge-table-bg: #e7e5df;
   --ge-table-header-west-bg: oklch(80% 0.02 99 / 48%);
   --ge-table-header-center-bg: oklch(80% 0.02 99 / 48%);
@@ -180,7 +180,7 @@ export class CssVars {
   --ge-table-dragged-col-div-bg: #2c2e33;
   --ge-table-drop-zone-bg: #e7e5df;
 }`,
-    blackboard:`:root [data-theme="dark"] {
+    blackboard:`html[data-theme="dark"] {
   --ge-table-bg: #0c1021;
   --ge-table-header-west-bg: #0c1021;
   --ge-table-header-center-bg: #0c1021;
