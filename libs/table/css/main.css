@@ -130,8 +130,7 @@
 .ge-table-cell-editor-input:focus-within {
   border: none;
 }
-html,
-:root [data-theme= "light"] {
+html, html[data-theme="light"] {
   --ge-table-bg: #fff;
   --ge-table-header-west-bg: var(--ge-table-header-center-bg);
   --ge-table-header-center-bg: rgba(233, 233, 233, 0.5);
@@ -216,35 +215,35 @@ html,
 
 
 
-:root [data-theme= "dark"] {
-  --ge-table-bg: #000;
-  --ge-table-header-west-bg: oklch(0% 0 0);
-  --ge-table-header-center-bg: oklch(0% 0 0);
-  --ge-table-header-east-bg: oklch(0% 0 0);
+html[data-theme="dark"] {
+  --ge-table-bg: #111827;
+  --ge-table-header-west-bg: #111827;
+  --ge-table-header-center-bg: #111827;
+  --ge-table-header-east-bg: #111827;
   --ge-table-header-west-text: oklch(100% 0 0);
   --ge-table-header-center-text: oklch(100% 0 0);
   --ge-table-header-east-text: oklch(100% 0 0);
-  --ge-table-header-west-horizontal-border: oklch(30% 0 0);
+  --ge-table-header-west-horizontal-border: #313641;
   --ge-table-header-west-vertical-border: oklch(32% 0 0);
-  --ge-table-header-center-horizontal-border: oklch(30% 0 0);
+  --ge-table-header-center-horizontal-border: #313641;
   --ge-table-header-center-vertical-border: oklch(32% 0 0);
-  --ge-table-header-east-horizontal-border: oklch(30% 0 0);
+  --ge-table-header-east-horizontal-border: #313641;
   --ge-table-header-east-vertical-border: oklch(32% 0 0);
-  --ge-table-body-west-bg: oklch(0% 0 0);
-  --ge-table-body-center-bg: oklch(0% 0 0);
-  --ge-table-body-east-bg: oklch(0% 0 0);
+  --ge-table-body-west-bg: #23272e;
+  --ge-table-body-center-bg: #23272e55;
+  --ge-table-body-east-bg: #23272e;
   --ge-table-body-west-text: oklch(100% 0 0);
   --ge-table-body-center-text: oklch(100% 0 0);
   --ge-table-body-east-text: oklch(100% 0 0);
-  --ge-table-body-west-horizontal-border: oklch(30% 0 0);
+  --ge-table-body-west-horizontal-border: #313641;
   --ge-table-body-west-vertical-border: oklch(32% 0 0);
-  --ge-table-body-center-horizontal-border: oklch(30% 0 0);
+  --ge-table-body-center-horizontal-border: #313641;
   --ge-table-body-center-vertical-border: oklch(32% 0 0);
-  --ge-table-body-east-horizontal-border: oklch(30% 0 0);
+  --ge-table-body-east-horizontal-border: #313641;
   --ge-table-body-east-vertical-border: oklch(32% 0 0);
-  --ge-table-footer-west-bg: oklch(0% 0 0);
-  --ge-table-footer-center-bg: oklch(0% 0 0);
-  --ge-table-footer-east-bg: oklch(0% 0 0);
+  --ge-table-footer-west-bg: #111827;
+  --ge-table-footer-center-bg: #111827;
+  --ge-table-footer-east-bg: #111827;
   --ge-table-footer-west-text: var(--ge-table-header-center-text);;
   --ge-table-footer-center-text: var(--ge-table-header-center-text);;
   --ge-table-footer-east-text: var(--ge-table-header-center-text);;
@@ -255,12 +254,12 @@ html,
   --ge-table-footer-east-horizontal-border: oklch(30% 0 0);
   --ge-table-footer-east-vertical-border: oklch(32% 0 0);
   --ge-table-border: oklch(32% 0 0);
-  --ge-table-row-odd-bg: oklch(0% 0 0);
-  --ge-table-row-even-bg: oklch(0% 0 0);
-  --ge-table-column-odd-bg: oklch(0% 0 0);
-  --ge-table-column-even-bg: oklch(0% 0 0);
-  --ge-table-hover-column-bg: oklch(0% 0 0);
-  --ge-table-hover-row-bg: oklch(0% 0 0);
+  --ge-table-row-odd-bg: #11151F55;
+  --ge-table-row-even-bg: #1A202F55;
+  --ge-table-column-odd-bg: transparent;
+  --ge-table-column-even-bg: transparent;
+  --ge-table-hover-column-bg: rgba(0, 224, 255, 0.27);
+  --ge-table-hover-row-bg: rgba(0, 224, 255, 0.27);
   --ge-table-focus-border: rgb(0, 255, 255);;
   --ge-table-color-error-text: #ffa8b5;
   --ge-table-tree-arrow-collapsed-color: #ffa8b5;
@@ -273,9 +272,9 @@ html,
   --ge-table-body-west-selected-range-bg: oklch(19% 0.2 205.2);
   --ge-table-body-center-selected-range-bg: oklch(19% 0.2 205.2);
   --ge-table-body-east-selected-range-bg: oklch(19% 0.2 205.2);
-  --ge-table-body-west-selected-range-text: #000;
-  --ge-table-body-center-selected-range-text: #000;
-  --ge-table-body-east-selected-range-text: #000;
+  --ge-table-body-west-selected-range-text: #0098db;
+  --ge-table-body-center-selected-range-text: #0098db;
+  --ge-table-body-east-selected-range-text: #0098db;
 
   --ge-table-color-col-resize-handle-hover-bg: cyan;
   --ge-table-color-dragged-col-div-bg: #fafafa;

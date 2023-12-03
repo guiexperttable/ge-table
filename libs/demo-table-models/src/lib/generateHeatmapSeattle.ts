@@ -164,7 +164,6 @@ class HeatMapSeattleFooterModel extends AreaModel {
 
   override getCustomStyleAt(_rowIndex: number, columnIndex: number): { [p: string]: string } | undefined {
     return {
-      "background": "#fff",
       "border-left": columnIndex > 2 ? "solid 1px #555" : "none"
     };
   }

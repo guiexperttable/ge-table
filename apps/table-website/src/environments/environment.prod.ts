@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
   env: "prod",
-  version: '27.11.2023 18:14',
-  commitHash: 'e66bf37'
+  version: '03.12.2023 15:02',
+  commitHash: '8fa19c4'
 };
