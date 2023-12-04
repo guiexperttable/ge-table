@@ -224,12 +224,22 @@ export class RenderScope extends EleScope {
     }
   }
 
-  updateCells(events: TableCellUpdateEventIf[]) {
-    events.forEach(evt => this.tableModel
-      .getAreaModel(evt.area)
-      .setValue(evt.rowIndex, evt.columnIndex, evt.value)
+  updateCells(
+    events: TableCellUpdateEventIf[],
+    repaintAll: boolean = false) {
+
+    events.forEach(evt => {
+      this.tableModel
+          .getAreaModel(evt.area)
+          .setValue(evt.rowIndex, evt.columnIndex, evt.value);
+        if (!repaintAll) {
+          this.rerenderCellContent(evt);
+        }
+      }
     );
-    this.repaint();
+    if (repaintAll) {
+      this.repaint();
+    }
   }
 
   protected getAreaAndSideIdentByAttr(srcElement: HTMLElement): [AreaIdent | undefined, SideIdent | undefined] {
@@ -751,6 +761,56 @@ export class RenderScope extends EleScope {
       }
     }
     return [cell, fn];
+  }
+
+  protected applyCssClasses(ele: HTMLDivElement, cssClasses: {[key:string]: boolean} = {}){
+    if (ele) {
+      Object.entries(cssClasses)
+        .forEach(([key, value]) => {
+          if (value) {
+            this.dom.addClass(key, ele);
+          } else {
+            this.dom.removeClass(key, ele);
+          }
+        });
+    }
+  }
+
+
+  public rerenderCellContent(
+    {area, rowIndex, columnIndex, value, cssClasses} : TableCellUpdateEventIf
+  ){
+    const areaModel = this.tableModel.getAreaModel(area);
+    const selector = 'div[data-col-index="'+columnIndex+'"][data-row-index="'+rowIndex+'"][data-area="'+area+'"]';
+    const cell = document.querySelector(selector) as HTMLDivElement;
+
+    if (cell) {
+      let fn: RendererCleanupFnType | undefined = undefined;
+      const editor = this.editorRenderer && this.editorRendererRow === rowIndex && this.editorRendererColumn === columnIndex;
+      const cellRenderer = (editor) ? this.editorRenderer : areaModel.getCellRenderer(rowIndex, columnIndex);
+
+      cell.innerText = '';
+      this.applyCssClasses(cell, cssClasses);
+      if (cellRenderer) {
+        fn = cellRenderer.render(cell, rowIndex, columnIndex, area, areaModel, value, this.dom.domService);
+        if (fn) {
+          this.cleanupFunctions[area].push(fn);
+        }
+      } else {
+        const text = `${value}`;
+        this.dom.addLabelDiv(cell, text, false, rowIndex, columnIndex, area);
+      }
+      const classes = areaModel.getCustomClassesAt(rowIndex, columnIndex);
+      if (classes.length) {
+        this.dom.addClasses(classes, cell);
+      }
+      const styles = areaModel.getCustomStyleAt(rowIndex, columnIndex);
+      if (styles) {
+        for (const css in styles) {
+          this.dom.setStyle(cell, css, styles[css]);
+        }
+      }
+    }
   }
 
   protected getColumnWidths(startIndex: number, endIndex: number): number[] {

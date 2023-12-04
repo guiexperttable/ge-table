@@ -117,6 +117,15 @@ export class ConvenienceDomService {
     return div;
   }
 
+  removeClass(clazz: string, div: HTMLDivElement) {
+    if (clazz.includes(" ")) {
+      clazz.split(" ").forEach(c => this.domService.removeClass(div, c));
+    } else {
+      this.domService.removeClass(div, clazz);
+    }
+    return div;
+  }
+
   addClasses(classes: string[] | undefined, div: HTMLDivElement) {
     if (classes) {
       for (const c of classes) {

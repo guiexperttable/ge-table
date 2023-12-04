@@ -7,7 +7,8 @@ export class TableCellUpdateEvent implements TableCellUpdateEventIf {
     public area: AreaIdent,
     public rowIndex: number,
     public columnIndex: number,
-    public value: any
+    public value: any,
+    public cssClasses: {[key:string]: boolean} = {},
   ) {
   }
 

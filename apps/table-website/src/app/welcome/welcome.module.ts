@@ -13,6 +13,7 @@ import { JsLogoComponent } from "../3p-logos/js-logo.component";
 import { ReactLogoComponent } from "../3p-logos/react-logo.component";
 import { MatDividerModule } from "@angular/material/divider";
 import { TimetableDemoModule } from "../demos/timetable/timetable-demo.module";
+import { TimetableeventsDemoModule } from "../demos/timetableevents/timetableevents-demo.module";
 import { MatButtonModule } from "@angular/material/button";
 import { CryptoTop100Module } from "../demos/cryptotop/crypto-top-100.module";
 import { MatIconModule } from "@angular/material/icon";
@@ -55,6 +56,7 @@ const routes: Routes = [
         JsLogoComponent,
         ReactLogoComponent,
         TimetableDemoModule,
+        TimetableeventsDemoModule,
         MatDividerModule,
         MatButtonModule,
         CryptoTop100Module,

@@ -4,6 +4,8 @@ export interface DomServiceIf {
 
   addClass(div: HTMLElement, clazz: string): HTMLDivElement;
 
+  removeClass(div: HTMLElement, clazz: string): HTMLDivElement;
+
   createElement<T>(ele: string): T;
 
   createText(text: string): HTMLElement;

@@ -11,8 +11,10 @@ export class TableApi {
   }
 
 
-  updateCells(events: TableCellUpdateEventIf[]): void {
-    this.tableScope.updateCells(events);
+  updateCells(
+    events: TableCellUpdateEventIf[],
+    repaintAll: boolean = false): void {
+    this.tableScope.updateCells(events, repaintAll);
   }
 
 

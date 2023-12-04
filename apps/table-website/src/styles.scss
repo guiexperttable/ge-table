@@ -392,3 +392,33 @@ html {
     background-color: #36BB6C;
   }
 }
+
+
+@keyframes color-green {
+  0%, 100%   { background: transparent; }
+  50%  { background: #33CC3644; }
+}
+.bg-green-0, 
+.bg-green-1,
+.bg-green-0 > div, 
+.bg-green-1 > div, 
+.bg-green-0 > div > div, 
+.bg-green-1 > div > div 
+{
+  animation: color-green 2s ease-in-out;
+}
+
+
+@keyframes color-red {
+  0%, 100%   { background: transparent; }
+  50%  { background: #cc333344; }
+}
+.bg-red-0,
+.bg-red-1,
+.bg-red-0 > div,
+.bg-red-1 > div,
+.bg-red-0 > div > div,
+.bg-red-1 > div > div
+{
+  animation: color-red 2s ease-in-out;
+}

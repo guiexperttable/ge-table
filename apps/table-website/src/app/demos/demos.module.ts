@@ -28,6 +28,10 @@ const routes: Routes = [
       import("../demos/timetable/timetable-demo.module").then(m => m.TimetableDemoModule)
   },
   {
+    path: "timetableevents", loadChildren: () =>
+      import("../demos/timetableevents/timetableevents-demo.module").then(m => m.TimetableeventsDemoModule)
+  },
+  {
     path: "prizes", loadChildren: () =>
       import("../demos/prizesdemo/prizes-demo.module").then(m => m.PrizesDemoModule)
   },

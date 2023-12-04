@@ -28,7 +28,7 @@ import { CirculatingSupplyRenderer } from "./renderer/circulating-supply-rendere
 import { CoinIconRenderer } from "./renderer/coin-icon-renderer";
 
 
-// TODO updates analog TimetableDemoComponent
+// TODO updates analog TimetableeventsDemoComponent
 @Component({
   selector: "crypto-top-100-demo",
   templateUrl: "./crypto-top-100.component.html",

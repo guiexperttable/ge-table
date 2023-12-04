@@ -26,6 +26,15 @@ export class SimpleDomService implements DomServiceIf {
     return div;
   }
 
+  removeClass(div: HTMLDivElement, clazz: string) {
+    if (clazz.includes(" ")) {
+      clazz.split(" ").forEach(c => div.classList.remove(c));
+    } else {
+      div.classList.remove(clazz);
+    }
+    return div;
+  }
+
   appendChild(parent: HTMLElement, child: HTMLElement): void {
     parent.appendChild(child);
   }
