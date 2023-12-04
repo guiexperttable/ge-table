@@ -16,6 +16,7 @@
 
 - [area](TableCellUpdateEvent.md#area)
 - [columnIndex](TableCellUpdateEvent.md#columnindex)
+- [cssClasses](TableCellUpdateEvent.md#cssclasses)
 - [rowIndex](TableCellUpdateEvent.md#rowindex)
 - [value](TableCellUpdateEvent.md#value)
 
@@ -23,7 +24,7 @@
 
 ### constructor
 
-• **new TableCellUpdateEvent**(`area`, `rowIndex`, `columnIndex`, `value`): [`TableCellUpdateEvent`](TableCellUpdateEvent.md)
+• **new TableCellUpdateEvent**(`area`, `rowIndex`, `columnIndex`, `value`, `cssClasses?`): [`TableCellUpdateEvent`](TableCellUpdateEvent.md)
 
 #### Parameters
 
@@ -33,6 +34,7 @@
 | `rowIndex` | `number` |
 | `columnIndex` | `number` |
 | `value` | `any` |
+| `cssClasses` | `Object` |
 
 #### Returns
 
@@ -40,7 +42,7 @@
 
 #### Defined in
 
-[lib/table/data/common/event/input/table-cell-update-event.ts:6](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/event/input/table-cell-update-event.ts#L6)
+[lib/table/data/common/event/input/table-cell-update-event.ts:6](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/event/input/table-cell-update-event.ts#L6)
 
 ## Properties
 
@@ -54,7 +56,7 @@
 
 #### Defined in
 
-[lib/table/data/common/event/input/table-cell-update-event.ts:7](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/event/input/table-cell-update-event.ts#L7)
+[lib/table/data/common/event/input/table-cell-update-event.ts:7](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/event/input/table-cell-update-event.ts#L7)
 
 ___
 
@@ -68,7 +70,25 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/event/input/table-cell-update-event.ts:9](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/event/input/table-cell-update-event.ts#L9)
+[lib/table/data/common/event/input/table-cell-update-event.ts:9](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/event/input/table-cell-update-event.ts#L9)
+
+___
+
+### cssClasses
+
+• **cssClasses**: `Object` = `{}`
+
+#### Index signature
+
+▪ [key: `string`]: `boolean`
+
+#### Implementation of
+
+[TableCellUpdateEventIf](../interfaces/TableCellUpdateEventIf.md).[cssClasses](../interfaces/TableCellUpdateEventIf.md#cssclasses)
+
+#### Defined in
+
+[lib/table/data/common/event/input/table-cell-update-event.ts:11](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/event/input/table-cell-update-event.ts#L11)
 
 ___
 
@@ -82,7 +102,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/event/input/table-cell-update-event.ts:8](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/event/input/table-cell-update-event.ts#L8)
+[lib/table/data/common/event/input/table-cell-update-event.ts:8](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/event/input/table-cell-update-event.ts#L8)
 
 ___
 
@@ -96,4 +116,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/event/input/table-cell-update-event.ts:10](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/event/input/table-cell-update-event.ts#L10)
+[lib/table/data/common/event/input/table-cell-update-event.ts:10](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/event/input/table-cell-update-event.ts#L10)

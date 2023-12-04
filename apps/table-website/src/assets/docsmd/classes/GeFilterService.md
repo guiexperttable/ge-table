@@ -50,7 +50,7 @@
 
 #### Defined in
 
-[lib/table/service/ge-filter.service.ts:4](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/ge-filter.service.ts#L4)
+[lib/table/service/ge-filter.service.ts:4](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/ge-filter.service.ts#L4)
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/ge-filter.service.ts:56](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/ge-filter.service.ts#L56)
+[lib/table/service/ge-filter.service.ts:56](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/ge-filter.service.ts#L56)
 
 ___
 
@@ -104,4 +104,4 @@ ___
 
 #### Defined in
 
-[lib/table/service/ge-filter.service.ts:109](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/ge-filter.service.ts#L109)
+[lib/table/service/ge-filter.service.ts:109](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/ge-filter.service.ts#L109)

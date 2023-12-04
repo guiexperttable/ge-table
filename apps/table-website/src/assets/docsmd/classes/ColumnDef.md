@@ -70,7 +70,7 @@
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:17](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L17)
+[lib/table/data/tablemodel/column/column-def.ts:17](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L17)
 
 ## Properties
 
@@ -84,7 +84,7 @@
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:21](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L21)
+[lib/table/data/tablemodel/column/column-def.ts:21](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L21)
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:32](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L32)
+[lib/table/data/tablemodel/column/column-def.ts:32](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L32)
 
 ___
 
@@ -112,7 +112,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:30](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L30)
+[lib/table/data/tablemodel/column/column-def.ts:30](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L30)
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:31](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L31)
+[lib/table/data/tablemodel/column/column-def.ts:31](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L31)
 
 ___
 
@@ -140,7 +140,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:19](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L19)
+[lib/table/data/tablemodel/column/column-def.ts:19](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L19)
 
 ___
 
@@ -154,7 +154,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:33](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L33)
+[lib/table/data/tablemodel/column/column-def.ts:33](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L33)
 
 ___
 
@@ -168,7 +168,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:24](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L24)
+[lib/table/data/tablemodel/column/column-def.ts:24](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L24)
 
 ___
 
@@ -182,7 +182,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:23](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L23)
+[lib/table/data/tablemodel/column/column-def.ts:23](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L23)
 
 ___
 
@@ -196,7 +196,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:18](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L18)
+[lib/table/data/tablemodel/column/column-def.ts:18](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L18)
 
 ___
 
@@ -210,7 +210,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:22](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L22)
+[lib/table/data/tablemodel/column/column-def.ts:22](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L22)
 
 ___
 
@@ -245,7 +245,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:26](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L26)
+[lib/table/data/tablemodel/column/column-def.ts:26](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L26)
 
 ___
 
@@ -259,7 +259,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:29](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L29)
+[lib/table/data/tablemodel/column/column-def.ts:29](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L29)
 
 ___
 
@@ -273,7 +273,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:27](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L27)
+[lib/table/data/tablemodel/column/column-def.ts:27](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L27)
 
 ___
 
@@ -287,7 +287,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:28](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L28)
+[lib/table/data/tablemodel/column/column-def.ts:28](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L28)
 
 ___
 
@@ -301,7 +301,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:25](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L25)
+[lib/table/data/tablemodel/column/column-def.ts:25](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L25)
 
 ___
 
@@ -311,7 +311,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:15](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L15)
+[lib/table/data/tablemodel/column/column-def.ts:15](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L15)
 
 ___
 
@@ -325,7 +325,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:20](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L20)
+[lib/table/data/tablemodel/column/column-def.ts:20](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L20)
 
 ## Methods
 
@@ -345,7 +345,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:37](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L37)
+[lib/table/data/tablemodel/column/column-def.ts:37](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L37)
 
 ___
 
@@ -385,4 +385,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:45](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L45)
+[lib/table/data/tablemodel/column/column-def.ts:45](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L45)

@@ -44,7 +44,7 @@
 
 #### Defined in
 
-[lib/table/color/three-color-gradient-arg.ts:5](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/color/three-color-gradient-arg.ts#L5)
+[lib/table/color/three-color-gradient-arg.ts:5](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/color/three-color-gradient-arg.ts#L5)
 
 ## Properties
 
@@ -58,7 +58,7 @@
 
 #### Defined in
 
-[lib/table/color/three-color-gradient-arg.ts:11](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/color/three-color-gradient-arg.ts#L11)
+[lib/table/color/three-color-gradient-arg.ts:11](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/color/three-color-gradient-arg.ts#L11)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[lib/table/color/three-color-gradient-arg.ts:10](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/color/three-color-gradient-arg.ts#L10)
+[lib/table/color/three-color-gradient-arg.ts:10](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/color/three-color-gradient-arg.ts#L10)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[lib/table/color/three-color-gradient-arg.ts:9](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/color/three-color-gradient-arg.ts#L9)
+[lib/table/color/three-color-gradient-arg.ts:9](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/color/three-color-gradient-arg.ts#L9)
 
 ___
 
@@ -100,7 +100,7 @@ ___
 
 #### Defined in
 
-[lib/table/color/three-color-gradient-arg.ts:8](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/color/three-color-gradient-arg.ts#L8)
+[lib/table/color/three-color-gradient-arg.ts:8](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/color/three-color-gradient-arg.ts#L8)
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 #### Defined in
 
-[lib/table/color/three-color-gradient-arg.ts:7](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/color/three-color-gradient-arg.ts#L7)
+[lib/table/color/three-color-gradient-arg.ts:7](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/color/three-color-gradient-arg.ts#L7)
 
 ___
 
@@ -128,4 +128,4 @@ ___
 
 #### Defined in
 
-[lib/table/color/three-color-gradient-arg.ts:6](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/color/three-color-gradient-arg.ts#L6)
+[lib/table/color/three-color-gradient-arg.ts:6](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/color/three-color-gradient-arg.ts#L6)

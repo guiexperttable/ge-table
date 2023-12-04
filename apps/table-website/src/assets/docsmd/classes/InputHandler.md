@@ -34,7 +34,7 @@
 
 #### Defined in
 
-[lib/table/input-handler.ts:7](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/input-handler.ts#L7)
+[lib/table/input-handler.ts:7](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/input-handler.ts#L7)
 
 ## Properties
 
@@ -44,7 +44,7 @@
 
 #### Defined in
 
-[lib/table/input-handler.ts:8](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/input-handler.ts#L8)
+[lib/table/input-handler.ts:8](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/input-handler.ts#L8)
 
 ## Methods
 
@@ -64,4 +64,4 @@
 
 #### Defined in
 
-[lib/table/input-handler.ts:14](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/input-handler.ts#L14)
+[lib/table/input-handler.ts:14](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/input-handler.ts#L14)

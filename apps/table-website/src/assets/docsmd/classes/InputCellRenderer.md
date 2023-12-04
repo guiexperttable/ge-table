@@ -54,4 +54,4 @@
 
 #### Defined in
 
-[lib/table/renderer/edit/input-cell-renderer.ts:11](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/renderer/edit/input-cell-renderer.ts#L11)
+[lib/table/renderer/edit/input-cell-renderer.ts:11](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/renderer/edit/input-cell-renderer.ts#L11)

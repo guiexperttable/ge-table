@@ -45,7 +45,7 @@
 
 #### Defined in
 
-[lib/table/data/tablemodel/cellgroup/cellgroup-factory.ts:102](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cellgroup-factory.ts#L102)
+[lib/table/data/tablemodel/cellgroup/cellgroup-factory.ts:102](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/cellgroup/cellgroup-factory.ts#L102)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/cellgroup/cellgroup-factory.ts:9](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cellgroup-factory.ts#L9)
+[lib/table/data/tablemodel/cellgroup/cellgroup-factory.ts:9](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/cellgroup/cellgroup-factory.ts#L9)
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/cellgroup/cellgroup-factory.ts:54](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cellgroup-factory.ts#L54)
+[lib/table/data/tablemodel/cellgroup/cellgroup-factory.ts:54](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/cellgroup/cellgroup-factory.ts#L54)
 
 ___
 
@@ -110,7 +110,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/cellgroup/cellgroup-factory.ts:80](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cellgroup-factory.ts#L80)
+[lib/table/data/tablemodel/cellgroup/cellgroup-factory.ts:80](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/cellgroup/cellgroup-factory.ts#L80)
 
 ___
 
@@ -131,4 +131,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/cellgroup/cellgroup-factory.ts:134](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cellgroup-factory.ts#L134)
+[lib/table/data/tablemodel/cellgroup/cellgroup-factory.ts:134](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/cellgroup/cellgroup-factory.ts#L134)

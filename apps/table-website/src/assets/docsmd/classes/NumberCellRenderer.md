@@ -40,7 +40,7 @@
 
 #### Defined in
 
-[lib/table/renderer/number-cell-renderer.ts:10](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/renderer/number-cell-renderer.ts#L10)
+[lib/table/renderer/number-cell-renderer.ts:10](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/renderer/number-cell-renderer.ts#L10)
 
 ## Properties
 
@@ -50,7 +50,7 @@
 
 #### Defined in
 
-[lib/table/renderer/number-cell-renderer.ts:12](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/renderer/number-cell-renderer.ts#L12)
+[lib/table/renderer/number-cell-renderer.ts:12](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/renderer/number-cell-renderer.ts#L12)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 #### Defined in
 
-[lib/table/renderer/number-cell-renderer.ts:11](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/renderer/number-cell-renderer.ts#L11)
+[lib/table/renderer/number-cell-renderer.ts:11](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/renderer/number-cell-renderer.ts#L11)
 
 ## Methods
 
@@ -90,4 +90,4 @@ ___
 
 #### Defined in
 
-[lib/table/renderer/number-cell-renderer.ts:15](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/renderer/number-cell-renderer.ts#L15)
+[lib/table/renderer/number-cell-renderer.ts:15](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/renderer/number-cell-renderer.ts#L15)

@@ -42,6 +42,7 @@
 - [createAreaDivWithClass](ConvenienceDomService.md#createareadivwithclass)
 - [createDivWithClass](ConvenienceDomService.md#createdivwithclass)
 - [getDivOrCreateDiv](ConvenienceDomService.md#getdivorcreatediv)
+- [removeClass](ConvenienceDomService.md#removeclass)
 - [setAttribute](ConvenienceDomService.md#setattribute)
 - [setStyle](ConvenienceDomService.md#setstyle)
 
@@ -63,7 +64,7 @@
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:20](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L20)
+[lib/table/service/convenience-dom.service.ts:20](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L20)
 
 ## Properties
 
@@ -73,7 +74,7 @@
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:21](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L21)
+[lib/table/service/convenience-dom.service.ts:21](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L21)
 
 ## Methods
 
@@ -98,7 +99,7 @@
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:360](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L360)
+[lib/table/service/convenience-dom.service.ts:369](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L369)
 
 ___
 
@@ -121,7 +122,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:250](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L250)
+[lib/table/service/convenience-dom.service.ts:259](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L259)
 
 ___
 
@@ -142,7 +143,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:111](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L111)
+[lib/table/service/convenience-dom.service.ts:111](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L111)
 
 ___
 
@@ -163,7 +164,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:120](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L120)
+[lib/table/service/convenience-dom.service.ts:129](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L129)
 
 ___
 
@@ -187,7 +188,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:406](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L406)
+[lib/table/service/convenience-dom.service.ts:415](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L415)
 
 ___
 
@@ -217,7 +218,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:194](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L194)
+[lib/table/service/convenience-dom.service.ts:203](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L203)
 
 ___
 
@@ -239,7 +240,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:514](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L514)
+[lib/table/service/convenience-dom.service.ts:523](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L523)
 
 ___
 
@@ -261,7 +262,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:443](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L443)
+[lib/table/service/convenience-dom.service.ts:452](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L452)
 
 ___
 
@@ -283,7 +284,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:426](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L426)
+[lib/table/service/convenience-dom.service.ts:435](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L435)
 
 ___
 
@@ -308,7 +309,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:274](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L274)
+[lib/table/service/convenience-dom.service.ts:283](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L283)
 
 ___
 
@@ -333,7 +334,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:154](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L154)
+[lib/table/service/convenience-dom.service.ts:163](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L163)
 
 ___
 
@@ -356,7 +357,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:314](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L314)
+[lib/table/service/convenience-dom.service.ts:323](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L323)
 
 ___
 
@@ -378,7 +379,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:496](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L496)
+[lib/table/service/convenience-dom.service.ts:505](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L505)
 
 ___
 
@@ -398,7 +399,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:89](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L89)
+[lib/table/service/convenience-dom.service.ts:89](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L89)
 
 ___
 
@@ -419,7 +420,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:104](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L104)
+[lib/table/service/convenience-dom.service.ts:104](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L104)
 
 ___
 
@@ -439,7 +440,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:44](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L44)
+[lib/table/service/convenience-dom.service.ts:44](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L44)
 
 ___
 
@@ -459,7 +460,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:39](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L39)
+[lib/table/service/convenience-dom.service.ts:39](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L39)
 
 ___
 
@@ -480,7 +481,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:32](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L32)
+[lib/table/service/convenience-dom.service.ts:32](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L32)
 
 ___
 
@@ -500,7 +501,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:66](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L66)
+[lib/table/service/convenience-dom.service.ts:66](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L66)
 
 ___
 
@@ -521,7 +522,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:49](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L49)
+[lib/table/service/convenience-dom.service.ts:49](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L49)
 
 ___
 
@@ -541,7 +542,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:82](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L82)
+[lib/table/service/convenience-dom.service.ts:82](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L82)
 
 ___
 
@@ -563,7 +564,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:72](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L72)
+[lib/table/service/convenience-dom.service.ts:72](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L72)
 
 ___
 
@@ -583,7 +584,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:61](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L61)
+[lib/table/service/convenience-dom.service.ts:61](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L61)
 
 ___
 
@@ -603,7 +604,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:55](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L55)
+[lib/table/service/convenience-dom.service.ts:55](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L55)
 
 ___
 
@@ -624,7 +625,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:529](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L529)
+[lib/table/service/convenience-dom.service.ts:538](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L538)
 
 ___
 
@@ -647,7 +648,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:137](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L137)
+[lib/table/service/convenience-dom.service.ts:146](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L146)
 
 ___
 
@@ -668,7 +669,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:146](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L146)
+[lib/table/service/convenience-dom.service.ts:155](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L155)
 
 ___
 
@@ -689,7 +690,28 @@ ___
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:538](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L538)
+[lib/table/service/convenience-dom.service.ts:547](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L547)
+
+___
+
+### removeClass
+
+▸ **removeClass**(`clazz`, `div`): `HTMLDivElement`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `clazz` | `string` |
+| `div` | `HTMLDivElement` |
+
+#### Returns
+
+`HTMLDivElement`
+
+#### Defined in
+
+[lib/table/service/convenience-dom.service.ts:120](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L120)
 
 ___
 
@@ -711,7 +733,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:129](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L129)
+[lib/table/service/convenience-dom.service.ts:138](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L138)
 
 ___
 
@@ -733,4 +755,4 @@ ___
 
 #### Defined in
 
-[lib/table/service/convenience-dom.service.ts:26](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/convenience-dom.service.ts#L26)
+[lib/table/service/convenience-dom.service.ts:26](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/convenience-dom.service.ts#L26)

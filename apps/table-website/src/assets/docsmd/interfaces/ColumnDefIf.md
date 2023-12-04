@@ -36,7 +36,7 @@
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:17](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L17)
+[lib/table/data/tablemodel/column/column-def.if.ts:17](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L17)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:26](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L26)
+[lib/table/data/tablemodel/column/column-def.if.ts:26](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L26)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:23](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L23)
+[lib/table/data/tablemodel/column/column-def.if.ts:23](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L23)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:25](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L25)
+[lib/table/data/tablemodel/column/column-def.if.ts:25](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L25)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:12](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L12)
+[lib/table/data/tablemodel/column/column-def.if.ts:12](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L12)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:24](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L24)
+[lib/table/data/tablemodel/column/column-def.if.ts:24](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L24)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:15](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L15)
+[lib/table/data/tablemodel/column/column-def.if.ts:15](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L15)
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:14](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L14)
+[lib/table/data/tablemodel/column/column-def.if.ts:14](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L14)
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:11](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L11)
+[lib/table/data/tablemodel/column/column-def.if.ts:11](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L11)
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:16](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L16)
+[lib/table/data/tablemodel/column/column-def.if.ts:16](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L16)
 
 ___
 
@@ -157,7 +157,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:20](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L20)
+[lib/table/data/tablemodel/column/column-def.if.ts:20](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L20)
 
 ___
 
@@ -167,7 +167,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:19](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L19)
+[lib/table/data/tablemodel/column/column-def.if.ts:19](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L19)
 
 ___
 
@@ -177,7 +177,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:21](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L21)
+[lib/table/data/tablemodel/column/column-def.if.ts:21](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L21)
 
 ___
 
@@ -187,7 +187,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:22](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L22)
+[lib/table/data/tablemodel/column/column-def.if.ts:22](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L22)
 
 ___
 
@@ -197,7 +197,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:18](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L18)
+[lib/table/data/tablemodel/column/column-def.if.ts:18](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L18)
 
 ___
 
@@ -207,4 +207,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:13](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L13)
+[lib/table/data/tablemodel/column/column-def.if.ts:13](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L13)

@@ -40,4 +40,4 @@
 
 #### Defined in
 
-[lib/table/data/common/area-map-factory.ts:6](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/area-map-factory.ts#L6)
+[lib/table/data/common/area-map-factory.ts:6](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/area-map-factory.ts#L6)

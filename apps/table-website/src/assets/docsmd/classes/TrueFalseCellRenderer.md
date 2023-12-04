@@ -54,4 +54,4 @@
 
 #### Defined in
 
-[lib/table/renderer/true-false-cell-renderer.ts:10](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/renderer/true-false-cell-renderer.ts#L10)
+[lib/table/renderer/true-false-cell-renderer.ts:10](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/renderer/true-false-cell-renderer.ts#L10)

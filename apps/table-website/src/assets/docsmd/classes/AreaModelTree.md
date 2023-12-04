@@ -112,7 +112,7 @@ The column information is given by the TableModelIf.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:23](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L23)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:23](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L23)
 
 ## Properties
 
@@ -128,7 +128,7 @@ The identifier for one of the areas: header, body, footer.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:24](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L24)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:24](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L24)
 
 ___
 
@@ -142,7 +142,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:15](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L15)
+[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:15](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L15)
 
 ___
 
@@ -156,7 +156,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:27](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L27)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:27](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L27)
 
 ___
 
@@ -170,7 +170,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:26](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L26)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:26](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L26)
 
 ___
 
@@ -180,7 +180,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:19](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L19)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:19](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L19)
 
 ___
 
@@ -190,7 +190,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:20](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L20)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:20](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L20)
 
 ___
 
@@ -200,7 +200,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:21](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L21)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:21](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L21)
 
 ___
 
@@ -210,7 +210,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:15](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L15)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:15](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L15)
 
 ___
 
@@ -226,7 +226,7 @@ A model and controller for a row checkbox selection
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:14](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L14)
+[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:14](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L14)
 
 ___
 
@@ -236,7 +236,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:25](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L25)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:25](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L25)
 
 ___
 
@@ -246,7 +246,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:18](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L18)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:18](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L18)
 
 ___
 
@@ -256,7 +256,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:16](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L16)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:16](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L16)
 
 ___
 
@@ -266,7 +266,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:13](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L13)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:13](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L13)
 
 ___
 
@@ -280,7 +280,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:16](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L16)
+[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:16](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L16)
 
 ## Methods
 
@@ -306,7 +306,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:166](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L166)
+[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:166](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L166)
 
 ___
 
@@ -333,7 +333,7 @@ Method for moving a column from position sourceColumnIndex to targetColumnIndex.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:35](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L35)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:35](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L35)
 
 ___
 
@@ -347,7 +347,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:164](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L164)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:164](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L164)
 
 ___
 
@@ -373,7 +373,7 @@ If the 'restore sort' option is set (see), this method will be triggered automat
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:100](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L100)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:100](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L100)
 
 ___
 
@@ -394,7 +394,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:155](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L155)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:155](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L155)
 
 ___
 
@@ -426,7 +426,7 @@ Will be called internally, when a filtering is trigger.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:95](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L95)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:95](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L95)
 
 ___
 
@@ -460,7 +460,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:147](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L147)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:147](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L147)
 
 ___
 
@@ -488,7 +488,7 @@ If the return value is undefined, no renderer is used and the model value will b
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:37](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L37)
+[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:37](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L37)
 
 ___
 
@@ -516,7 +516,7 @@ A value below 2 is ignored.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:44](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L44)
+[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:44](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L44)
 
 ___
 
@@ -543,7 +543,7 @@ This method can be used to return a list of css classes for the given cell
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:78](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L78)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:78](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L78)
 
 ___
 
@@ -570,7 +570,7 @@ This method can be used to return an object with css style information for the g
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:52](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L52)
+[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:52](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L52)
 
 ___
 
@@ -584,7 +584,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:45](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L45)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:45](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L45)
 
 ___
 
@@ -607,7 +607,7 @@ cell greater 32, don't forget to increase this value.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:80](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L80)
+[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:80](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L80)
 
 ___
 
@@ -630,7 +630,7 @@ cell greater 32, don't forget to increase this value.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:84](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L84)
+[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:84](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L84)
 
 ___
 
@@ -651,7 +651,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:200](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L200)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:200](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L200)
 
 ___
 
@@ -677,7 +677,7 @@ Returns the row of the model, which correspond to the rowIndex.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:83](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L83)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:83](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L83)
 
 ___
 
@@ -697,7 +697,7 @@ Returns the number of rows of the area
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:49](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L49)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:49](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L49)
 
 ___
 
@@ -723,7 +723,7 @@ Returns the row height in pixel of the given row (rowIndex).
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:74](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L74)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:74](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L74)
 
 ___
 
@@ -751,7 +751,7 @@ A value below 2 is ignored.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:56](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L56)
+[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:56](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L56)
 
 ___
 
@@ -778,7 +778,7 @@ Returns the value of a tooltip of the given cell (rowIndex/columnIndex).
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:31](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L31)
+[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:31](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L31)
 
 ___
 
@@ -805,7 +805,7 @@ Returns the value of the cell at position rowIndex/columnIndex.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:59](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L59)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:59](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L59)
 
 ___
 
@@ -826,7 +826,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:87](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L87)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:87](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L87)
 
 ___
 
@@ -853,7 +853,7 @@ For big tables it can be a big value (greate than the height of the viewport).
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:89](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L89)
+[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:89](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L89)
 
 ___
 
@@ -873,7 +873,7 @@ Internally used by TableModel.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:97](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L97)
+[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:97](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L97)
 
 ___
 
@@ -900,7 +900,7 @@ If this method returns true, the cell can be edited by the user.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:116](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L116)
+[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:116](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L116)
 
 ___
 
@@ -920,7 +920,7 @@ If true, the table is filterable. Rows can be filtered with help of #externalFil
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:107](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L107)
+[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:107](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L107)
 
 ___
 
@@ -946,7 +946,7 @@ If true, the row is checkable and a checkbox is rendered at the beginning of the
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:64](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L64)
+[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:64](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L64)
 
 ___
 
@@ -972,7 +972,7 @@ Returns the checked state of an row.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:68](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L68)
+[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:68](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L68)
 
 ___
 
@@ -999,7 +999,7 @@ If true, the cell is selectable.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:141](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L141)
+[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:141](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L141)
 
 ___
 
@@ -1013,7 +1013,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:41](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L41)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:41](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L41)
 
 ___
 
@@ -1033,7 +1033,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:120](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L120)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:120](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L120)
 
 ___
 
@@ -1059,7 +1059,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:150](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L150)
+[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:150](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L150)
 
 ___
 
@@ -1086,7 +1086,7 @@ Set the checked state of the row (rowIndex) to #checked.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:73](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L73)
+[lib/table/data/tablemodel/areamodel/abstract-area-model.ts:73](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/abstract-area-model.ts#L73)
 
 ___
 
@@ -1114,7 +1114,7 @@ Method for changing a cell value.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:128](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L128)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:128](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L128)
 
 ___
 
@@ -1134,7 +1134,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:113](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L113)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:113](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L113)
 
 ___
 
@@ -1156,4 +1156,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-tree.ts:210](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L210)
+[lib/table/data/tablemodel/areamodel/area-model-tree.ts:210](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-tree.ts#L210)

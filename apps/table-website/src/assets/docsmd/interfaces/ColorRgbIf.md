@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[lib/table/color/color-rgb.if.ts:5](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/color/color-rgb.if.ts#L5)
+[lib/table/color/color-rgb.if.ts:5](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/color/color-rgb.if.ts#L5)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[lib/table/color/color-rgb.if.ts:4](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/color/color-rgb.if.ts#L4)
+[lib/table/color/color-rgb.if.ts:4](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/color/color-rgb.if.ts#L4)
 
 ___
 
@@ -42,4 +42,4 @@ ___
 
 #### Defined in
 
-[lib/table/color/color-rgb.if.ts:3](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/color/color-rgb.if.ts#L3)
+[lib/table/color/color-rgb.if.ts:3](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/color/color-rgb.if.ts#L3)

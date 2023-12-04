@@ -19,6 +19,7 @@
 - [appendText](SimpleDomService.md#appendtext)
 - [createElement](SimpleDomService.md#createelement)
 - [createText](SimpleDomService.md#createtext)
+- [removeClass](SimpleDomService.md#removeclass)
 - [setAttribute](SimpleDomService.md#setattribute)
 - [setStyle](SimpleDomService.md#setstyle)
 
@@ -55,7 +56,7 @@
 
 #### Defined in
 
-[lib/table/service/simple-dom-service.ts:20](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/simple-dom-service.ts#L20)
+[lib/table/service/simple-dom-service.ts:20](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/simple-dom-service.ts#L20)
 
 ___
 
@@ -80,7 +81,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/simple-dom-service.ts:29](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/simple-dom-service.ts#L29)
+[lib/table/service/simple-dom-service.ts:38](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/simple-dom-service.ts#L38)
 
 ___
 
@@ -105,7 +106,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/simple-dom-service.ts:13](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/simple-dom-service.ts#L13)
+[lib/table/service/simple-dom-service.ts:13](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/simple-dom-service.ts#L13)
 
 ___
 
@@ -135,7 +136,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/simple-dom-service.ts:33](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/simple-dom-service.ts#L33)
+[lib/table/service/simple-dom-service.ts:42](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/simple-dom-service.ts#L42)
 
 ___
 
@@ -159,7 +160,32 @@ ___
 
 #### Defined in
 
-[lib/table/service/simple-dom-service.ts:37](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/simple-dom-service.ts#L37)
+[lib/table/service/simple-dom-service.ts:46](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/simple-dom-service.ts#L46)
+
+___
+
+### removeClass
+
+▸ **removeClass**(`div`, `clazz`): `HTMLDivElement`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `div` | `HTMLDivElement` |
+| `clazz` | `string` |
+
+#### Returns
+
+`HTMLDivElement`
+
+#### Implementation of
+
+[DomServiceIf](../interfaces/DomServiceIf.md).[removeClass](../interfaces/DomServiceIf.md#removeclass)
+
+#### Defined in
+
+[lib/table/service/simple-dom-service.ts:29](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/simple-dom-service.ts#L29)
 
 ___
 
@@ -185,7 +211,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/simple-dom-service.ts:41](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/simple-dom-service.ts#L41)
+[lib/table/service/simple-dom-service.ts:50](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/simple-dom-service.ts#L50)
 
 ___
 
@@ -211,4 +237,4 @@ ___
 
 #### Defined in
 
-[lib/table/service/simple-dom-service.ts:7](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/simple-dom-service.ts#L7)
+[lib/table/service/simple-dom-service.ts:7](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/simple-dom-service.ts#L7)

@@ -25,7 +25,7 @@
 
 #### Defined in
 
-[lib/table/color/three-color-gradient-arg.if.ts:9](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/color/three-color-gradient-arg.if.ts#L9)
+[lib/table/color/three-color-gradient-arg.if.ts:9](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/color/three-color-gradient-arg.if.ts#L9)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[lib/table/color/three-color-gradient-arg.if.ts:8](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/color/three-color-gradient-arg.if.ts#L8)
+[lib/table/color/three-color-gradient-arg.if.ts:8](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/color/three-color-gradient-arg.if.ts#L8)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[lib/table/color/three-color-gradient-arg.if.ts:7](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/color/three-color-gradient-arg.if.ts#L7)
+[lib/table/color/three-color-gradient-arg.if.ts:7](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/color/three-color-gradient-arg.if.ts#L7)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[lib/table/color/three-color-gradient-arg.if.ts:6](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/color/three-color-gradient-arg.if.ts#L6)
+[lib/table/color/three-color-gradient-arg.if.ts:6](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/color/three-color-gradient-arg.if.ts#L6)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[lib/table/color/three-color-gradient-arg.if.ts:5](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/color/three-color-gradient-arg.if.ts#L5)
+[lib/table/color/three-color-gradient-arg.if.ts:5](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/color/three-color-gradient-arg.if.ts#L5)
 
 ___
 
@@ -75,4 +75,4 @@ ___
 
 #### Defined in
 
-[lib/table/color/three-color-gradient-arg.if.ts:4](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/color/three-color-gradient-arg.if.ts#L4)
+[lib/table/color/three-color-gradient-arg.if.ts:4](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/color/three-color-gradient-arg.if.ts#L4)

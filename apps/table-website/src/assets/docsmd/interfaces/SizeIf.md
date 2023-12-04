@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[lib/table/data/common/size.if.ts:3](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/size.if.ts#L3)
+[lib/table/data/common/size.if.ts:3](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/size.if.ts#L3)
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/size.if.ts:2](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/size.if.ts#L2)
+[lib/table/data/common/size.if.ts:2](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/size.if.ts#L2)

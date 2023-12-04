@@ -52,7 +52,7 @@ AbstractStoreStateService.constructor
 
 #### Defined in
 
-[lib/table/service/store-state-scroll-pos.service.ts:11](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/store-state-scroll-pos.service.ts#L11)
+[lib/table/service/store-state-scroll-pos.service.ts:11](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/store-state-scroll-pos.service.ts#L11)
 
 ## Properties
 
@@ -62,7 +62,7 @@ AbstractStoreStateService.constructor
 
 #### Defined in
 
-[lib/table/service/store-state-scroll-pos.service.ts:7](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/store-state-scroll-pos.service.ts#L7)
+[lib/table/service/store-state-scroll-pos.service.ts:7](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/store-state-scroll-pos.service.ts#L7)
 
 ___
 
@@ -76,7 +76,7 @@ AbstractStoreStateService.getStorageKeyFn
 
 #### Defined in
 
-[lib/table/service/abstract-store-state.service.ts:7](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/abstract-store-state.service.ts#L7)
+[lib/table/service/abstract-store-state.service.ts:7](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/abstract-store-state.service.ts#L7)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/store-state-scroll-pos.service.ts:8](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/store-state-scroll-pos.service.ts#L8)
+[lib/table/service/store-state-scroll-pos.service.ts:8](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/store-state-scroll-pos.service.ts#L8)
 
 ## Methods
 
@@ -110,7 +110,7 @@ AbstractStoreStateService.autoConvertMapToObject
 
 #### Defined in
 
-[lib/table/service/abstract-store-state.service.ts:14](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/abstract-store-state.service.ts#L14)
+[lib/table/service/abstract-store-state.service.ts:14](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/abstract-store-state.service.ts#L14)
 
 ___
 
@@ -135,7 +135,7 @@ AbstractStoreStateService.checkAndPersistItem
 
 #### Defined in
 
-[lib/table/service/abstract-store-state.service.ts:35](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/abstract-store-state.service.ts#L35)
+[lib/table/service/abstract-store-state.service.ts:35](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/abstract-store-state.service.ts#L35)
 
 ___
 
@@ -149,7 +149,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/store-state-scroll-pos.service.ts:16](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/store-state-scroll-pos.service.ts#L16)
+[lib/table/service/store-state-scroll-pos.service.ts:16](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/store-state-scroll-pos.service.ts#L16)
 
 ___
 
@@ -167,7 +167,7 @@ AbstractStoreStateService.load
 
 #### Defined in
 
-[lib/table/service/store-state-scroll-pos.service.ts:26](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/store-state-scroll-pos.service.ts#L26)
+[lib/table/service/store-state-scroll-pos.service.ts:26](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/store-state-scroll-pos.service.ts#L26)
 
 ___
 
@@ -197,7 +197,7 @@ AbstractStoreStateService.loadFromLocalStorage
 
 #### Defined in
 
-[lib/table/service/abstract-store-state.service.ts:60](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/abstract-store-state.service.ts#L60)
+[lib/table/service/abstract-store-state.service.ts:60](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/abstract-store-state.service.ts#L60)
 
 ___
 
@@ -222,7 +222,7 @@ AbstractStoreStateService.persistItem
 
 #### Defined in
 
-[lib/table/service/abstract-store-state.service.ts:52](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/abstract-store-state.service.ts#L52)
+[lib/table/service/abstract-store-state.service.ts:52](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/abstract-store-state.service.ts#L52)
 
 ___
 
@@ -242,4 +242,4 @@ ___
 
 #### Defined in
 
-[lib/table/service/store-state-scroll-pos.service.ts:20](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/store-state-scroll-pos.service.ts#L20)
+[lib/table/service/store-state-scroll-pos.service.ts:20](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/store-state-scroll-pos.service.ts#L20)

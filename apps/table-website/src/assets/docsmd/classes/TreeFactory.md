@@ -51,7 +51,7 @@
 
 #### Defined in
 
-[lib/table/factory/tree-factory.ts:20](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/factory/tree-factory.ts#L20)
+[lib/table/factory/tree-factory.ts:20](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/factory/tree-factory.ts#L20)
 
 ___
 
@@ -79,4 +79,4 @@ ___
 
 #### Defined in
 
-[lib/table/factory/tree-factory.ts:7](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/factory/tree-factory.ts#L7)
+[lib/table/factory/tree-factory.ts:7](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/factory/tree-factory.ts#L7)

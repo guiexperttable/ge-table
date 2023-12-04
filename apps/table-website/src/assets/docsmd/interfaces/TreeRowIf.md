@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[lib/table/data/common/tree-row-if.ts:10](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/tree-row-if.ts#L10)
+[lib/table/data/common/tree-row-if.ts:10](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/tree-row-if.ts#L10)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/tree-row-if.ts:7](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/tree-row-if.ts#L7)
+[lib/table/data/common/tree-row-if.ts:7](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/tree-row-if.ts#L7)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/tree-row-if.ts:5](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/tree-row-if.ts#L5)
+[lib/table/data/common/tree-row-if.ts:5](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/tree-row-if.ts#L5)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/tree-row-if.ts:9](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/tree-row-if.ts#L9)
+[lib/table/data/common/tree-row-if.ts:9](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/tree-row-if.ts#L9)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/tree-row-if.ts:6](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/tree-row-if.ts#L6)
+[lib/table/data/common/tree-row-if.ts:6](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/tree-row-if.ts#L6)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/tree-row-if.ts:11](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/tree-row-if.ts#L11)
+[lib/table/data/common/tree-row-if.ts:11](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/tree-row-if.ts#L11)
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/tree-row-if.ts:8](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/tree-row-if.ts#L8)
+[lib/table/data/common/tree-row-if.ts:8](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/tree-row-if.ts#L8)
 
 ___
 
@@ -103,4 +103,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/tree-row-if.ts:4](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/tree-row-if.ts#L4)
+[lib/table/data/common/tree-row-if.ts:4](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/tree-row-if.ts#L4)

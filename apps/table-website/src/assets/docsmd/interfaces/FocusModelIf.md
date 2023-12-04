@@ -29,7 +29,7 @@
 
 #### Defined in
 
-[lib/table/focus/focus-model.if.ts:3](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/focus/focus-model.if.ts#L3)
+[lib/table/focus/focus-model.if.ts:3](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/focus/focus-model.if.ts#L3)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[lib/table/focus/focus-model.if.ts:13](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/focus/focus-model.if.ts#L13)
+[lib/table/focus/focus-model.if.ts:13](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/focus/focus-model.if.ts#L13)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[lib/table/focus/focus-model.if.ts:9](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/focus/focus-model.if.ts#L9)
+[lib/table/focus/focus-model.if.ts:9](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/focus/focus-model.if.ts#L9)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[lib/table/focus/focus-model.if.ts:11](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/focus/focus-model.if.ts#L11)
+[lib/table/focus/focus-model.if.ts:11](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/focus/focus-model.if.ts#L11)
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 #### Defined in
 
-[lib/table/focus/focus-model.if.ts:7](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/focus/focus-model.if.ts#L7)
+[lib/table/focus/focus-model.if.ts:7](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/focus/focus-model.if.ts#L7)
 
 ___
 
@@ -113,4 +113,4 @@ ___
 
 #### Defined in
 
-[lib/table/focus/focus-model.if.ts:5](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/focus/focus-model.if.ts#L5)
+[lib/table/focus/focus-model.if.ts:5](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/focus/focus-model.if.ts#L5)

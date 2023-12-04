@@ -22,4 +22,4 @@
 
 #### Defined in
 
-[lib/table/renderer/edit/edit-input-pipe.if.ts:4](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/renderer/edit/edit-input-pipe.if.ts#L4)
+[lib/table/renderer/edit/edit-input-pipe.if.ts:4](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/renderer/edit/edit-input-pipe.if.ts#L4)

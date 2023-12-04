@@ -31,4 +31,4 @@
 
 #### Defined in
 
-[lib/table/action/on-action-triggered.if.ts:5](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/action/on-action-triggered.if.ts#L5)
+[lib/table/action/on-action-triggered.if.ts:5](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/action/on-action-triggered.if.ts#L5)

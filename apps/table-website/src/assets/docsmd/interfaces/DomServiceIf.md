@@ -15,6 +15,7 @@
 - [appendText](DomServiceIf.md#appendtext)
 - [createElement](DomServiceIf.md#createelement)
 - [createText](DomServiceIf.md#createtext)
+- [removeClass](DomServiceIf.md#removeclass)
 - [setAttribute](DomServiceIf.md#setattribute)
 - [setStyle](DomServiceIf.md#setstyle)
 
@@ -37,7 +38,7 @@
 
 #### Defined in
 
-[lib/table/service/dom-service.if.ts:5](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/dom-service.if.ts#L5)
+[lib/table/service/dom-service.if.ts:5](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/dom-service.if.ts#L5)
 
 ___
 
@@ -58,7 +59,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/dom-service.if.ts:13](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/dom-service.if.ts#L13)
+[lib/table/service/dom-service.if.ts:15](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/dom-service.if.ts#L15)
 
 ___
 
@@ -79,7 +80,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/dom-service.if.ts:11](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/dom-service.if.ts#L11)
+[lib/table/service/dom-service.if.ts:13](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/dom-service.if.ts#L13)
 
 ___
 
@@ -105,7 +106,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/dom-service.if.ts:7](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/dom-service.if.ts#L7)
+[lib/table/service/dom-service.if.ts:9](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/dom-service.if.ts#L9)
 
 ___
 
@@ -125,7 +126,28 @@ ___
 
 #### Defined in
 
-[lib/table/service/dom-service.if.ts:9](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/dom-service.if.ts#L9)
+[lib/table/service/dom-service.if.ts:11](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/dom-service.if.ts#L11)
+
+___
+
+### removeClass
+
+▸ **removeClass**(`div`, `clazz`): `HTMLDivElement`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `div` | `HTMLElement` |
+| `clazz` | `string` |
+
+#### Returns
+
+`HTMLDivElement`
+
+#### Defined in
+
+[lib/table/service/dom-service.if.ts:7](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/dom-service.if.ts#L7)
 
 ___
 
@@ -147,7 +169,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/dom-service.if.ts:15](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/dom-service.if.ts#L15)
+[lib/table/service/dom-service.if.ts:17](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/dom-service.if.ts#L17)
 
 ___
 
@@ -169,4 +191,4 @@ ___
 
 #### Defined in
 
-[lib/table/service/dom-service.if.ts:3](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/service/dom-service.if.ts#L3)
+[lib/table/service/dom-service.if.ts:3](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/dom-service.if.ts#L3)

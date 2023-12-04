@@ -34,4 +34,4 @@
 
 #### Defined in
 
-[lib/table/action/osx-shortcut-actionId-mapping.ts:5](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/action/osx-shortcut-actionId-mapping.ts#L5)
+[lib/table/action/osx-shortcut-actionId-mapping.ts:5](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/action/osx-shortcut-actionId-mapping.ts#L5)

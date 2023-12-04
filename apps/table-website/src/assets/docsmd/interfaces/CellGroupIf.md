@@ -26,7 +26,7 @@
 
 #### Defined in
 
-[lib/table/data/tablemodel/cellgroup/cell-group.if.ts:8](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group.if.ts#L8)
+[lib/table/data/tablemodel/cellgroup/cell-group.if.ts:8](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group.if.ts#L8)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/cellgroup/cell-group.if.ts:6](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group.if.ts#L6)
+[lib/table/data/tablemodel/cellgroup/cell-group.if.ts:6](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group.if.ts#L6)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/cellgroup/cell-group.if.ts:3](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group.if.ts#L3)
+[lib/table/data/tablemodel/cellgroup/cell-group.if.ts:3](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group.if.ts#L3)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/cellgroup/cell-group.if.ts:10](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group.if.ts#L10)
+[lib/table/data/tablemodel/cellgroup/cell-group.if.ts:10](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group.if.ts#L10)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/cellgroup/cell-group.if.ts:4](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group.if.ts#L4)
+[lib/table/data/tablemodel/cellgroup/cell-group.if.ts:4](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group.if.ts#L4)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/cellgroup/cell-group.if.ts:5](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group.if.ts#L5)
+[lib/table/data/tablemodel/cellgroup/cell-group.if.ts:5](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group.if.ts#L5)
 
 ___
 
@@ -86,4 +86,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/cellgroup/cell-group.if.ts:7](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group.if.ts#L7)
+[lib/table/data/tablemodel/cellgroup/cell-group.if.ts:7](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/cellgroup/cell-group.if.ts#L7)

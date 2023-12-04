@@ -119,7 +119,7 @@ will result in the presence of an east area.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:47](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L47)
+[lib/table/data/tablemodel/table-model.ts:47](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L47)
 
 ## Properties
 
@@ -129,7 +129,7 @@ will result in the presence of an east area.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:49](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L49)
+[lib/table/data/tablemodel/table-model.ts:49](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L49)
 
 ___
 
@@ -139,7 +139,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:58](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L58)
+[lib/table/data/tablemodel/table-model.ts:58](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L58)
 
 ___
 
@@ -149,7 +149,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:55](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L55)
+[lib/table/data/tablemodel/table-model.ts:55](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L55)
 
 ___
 
@@ -159,7 +159,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:56](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L56)
+[lib/table/data/tablemodel/table-model.ts:56](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L56)
 
 ___
 
@@ -169,7 +169,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:40](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L40)
+[lib/table/data/tablemodel/table-model.ts:40](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L40)
 
 ___
 
@@ -179,7 +179,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:41](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L41)
+[lib/table/data/tablemodel/table-model.ts:41](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L41)
 
 ___
 
@@ -189,7 +189,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:54](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L54)
+[lib/table/data/tablemodel/table-model.ts:54](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L54)
 
 ___
 
@@ -199,7 +199,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:51](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L51)
+[lib/table/data/tablemodel/table-model.ts:51](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L51)
 
 ___
 
@@ -209,7 +209,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:52](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L52)
+[lib/table/data/tablemodel/table-model.ts:52](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L52)
 
 ___
 
@@ -219,7 +219,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:50](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L50)
+[lib/table/data/tablemodel/table-model.ts:50](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L50)
 
 ___
 
@@ -233,7 +233,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:60](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L60)
+[lib/table/data/tablemodel/table-model.ts:60](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L60)
 
 ___
 
@@ -243,7 +243,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:48](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L48)
+[lib/table/data/tablemodel/table-model.ts:48](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L48)
 
 ___
 
@@ -253,7 +253,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:57](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L57)
+[lib/table/data/tablemodel/table-model.ts:57](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L57)
 
 ___
 
@@ -263,7 +263,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:44](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L44)
+[lib/table/data/tablemodel/table-model.ts:44](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L44)
 
 ___
 
@@ -273,7 +273,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:59](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L59)
+[lib/table/data/tablemodel/table-model.ts:59](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L59)
 
 ___
 
@@ -283,7 +283,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:53](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L53)
+[lib/table/data/tablemodel/table-model.ts:53](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L53)
 
 ___
 
@@ -293,7 +293,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:39](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L39)
+[lib/table/data/tablemodel/table-model.ts:39](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L39)
 
 ___
 
@@ -303,7 +303,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:45](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L45)
+[lib/table/data/tablemodel/table-model.ts:45](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L45)
 
 ## Methods
 
@@ -325,7 +325,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:330](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L330)
+[lib/table/data/tablemodel/table-model.ts:330](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L330)
 
 ___
 
@@ -339,7 +339,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:340](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L340)
+[lib/table/data/tablemodel/table-model.ts:340](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L340)
 
 ___
 
@@ -364,7 +364,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:296](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L296)
+[lib/table/data/tablemodel/table-model.ts:296](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L296)
 
 ___
 
@@ -388,7 +388,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:270](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L270)
+[lib/table/data/tablemodel/table-model.ts:270](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L270)
 
 ___
 
@@ -418,7 +418,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:266](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L266)
+[lib/table/data/tablemodel/table-model.ts:266](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L266)
 
 ___
 
@@ -438,7 +438,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:181](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L181)
+[lib/table/data/tablemodel/table-model.ts:181](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L181)
 
 ___
 
@@ -462,7 +462,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:237](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L237)
+[lib/table/data/tablemodel/table-model.ts:237](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L237)
 
 ___
 
@@ -480,7 +480,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:250](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L250)
+[lib/table/data/tablemodel/table-model.ts:250](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L250)
 
 ___
 
@@ -504,7 +504,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:282](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L282)
+[lib/table/data/tablemodel/table-model.ts:282](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L282)
 
 ___
 
@@ -522,7 +522,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:95](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L95)
+[lib/table/data/tablemodel/table-model.ts:95](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L95)
 
 ___
 
@@ -546,7 +546,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:222](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L222)
+[lib/table/data/tablemodel/table-model.ts:222](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L222)
 
 ___
 
@@ -564,7 +564,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:274](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L274)
+[lib/table/data/tablemodel/table-model.ts:274](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L274)
 
 ___
 
@@ -588,7 +588,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:278](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L278)
+[lib/table/data/tablemodel/table-model.ts:278](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L278)
 
 ___
 
@@ -612,7 +612,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:110](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L110)
+[lib/table/data/tablemodel/table-model.ts:110](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L110)
 
 ___
 
@@ -630,7 +630,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:165](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L165)
+[lib/table/data/tablemodel/table-model.ts:165](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L165)
 
 ___
 
@@ -648,7 +648,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:169](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L169)
+[lib/table/data/tablemodel/table-model.ts:169](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L169)
 
 ___
 
@@ -666,7 +666,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:229](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L229)
+[lib/table/data/tablemodel/table-model.ts:229](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L229)
 
 ___
 
@@ -684,7 +684,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:233](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L233)
+[lib/table/data/tablemodel/table-model.ts:233](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L233)
 
 ___
 
@@ -704,7 +704,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:177](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L177)
+[lib/table/data/tablemodel/table-model.ts:177](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L177)
 
 ___
 
@@ -722,7 +722,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:161](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L161)
+[lib/table/data/tablemodel/table-model.ts:161](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L161)
 
 ___
 
@@ -747,7 +747,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:173](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L173)
+[lib/table/data/tablemodel/table-model.ts:173](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L173)
 
 ___
 
@@ -767,7 +767,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:195](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L195)
+[lib/table/data/tablemodel/table-model.ts:195](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L195)
 
 ___
 
@@ -787,7 +787,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:204](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L204)
+[lib/table/data/tablemodel/table-model.ts:204](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L204)
 
 ___
 
@@ -811,7 +811,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:124](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L124)
+[lib/table/data/tablemodel/table-model.ts:124](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L124)
 
 ___
 
@@ -829,7 +829,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:79](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L79)
+[lib/table/data/tablemodel/table-model.ts:79](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L79)
 
 ___
 
@@ -847,7 +847,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:254](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L254)
+[lib/table/data/tablemodel/table-model.ts:254](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L254)
 
 ___
 
@@ -865,7 +865,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:258](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L258)
+[lib/table/data/tablemodel/table-model.ts:258](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L258)
 
 ___
 
@@ -883,7 +883,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:262](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L262)
+[lib/table/data/tablemodel/table-model.ts:262](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L262)
 
 ___
 
@@ -907,7 +907,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:286](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L286)
+[lib/table/data/tablemodel/table-model.ts:286](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L286)
 
 ___
 
@@ -927,7 +927,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:306](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L306)
+[lib/table/data/tablemodel/table-model.ts:306](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L306)
 
 ___
 
@@ -941,7 +941,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:336](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L336)
+[lib/table/data/tablemodel/table-model.ts:336](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L336)
 
 ___
 
@@ -959,7 +959,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:139](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L139)
+[lib/table/data/tablemodel/table-model.ts:139](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L139)
 
 ___
 
@@ -977,7 +977,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:148](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L148)
+[lib/table/data/tablemodel/table-model.ts:148](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L148)
 
 ___
 
@@ -1001,7 +1001,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:134](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L134)
+[lib/table/data/tablemodel/table-model.ts:134](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L134)
 
 ___
 
@@ -1026,4 +1026,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.ts:99](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/tablemodel/table-model.ts#L99)
+[lib/table/data/tablemodel/table-model.ts:99](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/table-model.ts#L99)

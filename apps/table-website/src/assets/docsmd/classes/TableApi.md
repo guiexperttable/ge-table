@@ -44,7 +44,7 @@
 
 #### Defined in
 
-[lib/table/table-api.ts:8](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-api.ts#L8)
+[lib/table/table-api.ts:8](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/table-api.ts#L8)
 
 ## Properties
 
@@ -54,7 +54,7 @@
 
 #### Defined in
 
-[lib/table/table-api.ts:9](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-api.ts#L9)
+[lib/table/table-api.ts:9](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/table-api.ts#L9)
 
 ## Methods
 
@@ -68,7 +68,7 @@
 
 #### Defined in
 
-[lib/table/table-api.ts:19](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-api.ts#L19)
+[lib/table/table-api.ts:21](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/table-api.ts#L21)
 
 ___
 
@@ -88,7 +88,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-api.ts:40](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-api.ts#L40)
+[lib/table/table-api.ts:42](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/table-api.ts#L42)
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-api.ts:53](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-api.ts#L53)
+[lib/table/table-api.ts:55](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/table-api.ts#L55)
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-api.ts:45](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-api.ts#L45)
+[lib/table/table-api.ts:47](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/table-api.ts#L47)
 
 ___
 
@@ -130,7 +130,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-api.ts:57](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-api.ts#L57)
+[lib/table/table-api.ts:59](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/table-api.ts#L59)
 
 ___
 
@@ -151,7 +151,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-api.ts:28](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-api.ts#L28)
+[lib/table/table-api.ts:30](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/table-api.ts#L30)
 
 ___
 
@@ -172,7 +172,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-api.ts:23](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-api.ts#L23)
+[lib/table/table-api.ts:25](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/table-api.ts#L25)
 
 ___
 
@@ -193,7 +193,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-api.ts:36](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-api.ts#L36)
+[lib/table/table-api.ts:38](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/table-api.ts#L38)
 
 ___
 
@@ -213,7 +213,7 @@ ___
 
 #### Defined in
 
-[lib/table/table-api.ts:49](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-api.ts#L49)
+[lib/table/table-api.ts:51](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/table-api.ts#L51)
 
 ___
 
@@ -233,19 +233,20 @@ ___
 
 #### Defined in
 
-[lib/table/table-api.ts:32](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-api.ts#L32)
+[lib/table/table-api.ts:34](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/table-api.ts#L34)
 
 ___
 
 ### updateCells
 
-▸ **updateCells**(`events`): `void`
+▸ **updateCells**(`events`, `repaintAll?`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `events` | [`TableCellUpdateEventIf`](../interfaces/TableCellUpdateEventIf.md)[] |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `events` | [`TableCellUpdateEventIf`](../interfaces/TableCellUpdateEventIf.md)[] | `undefined` |
+| `repaintAll` | `boolean` | `false` |
 
 #### Returns
 
@@ -253,4 +254,4 @@ ___
 
 #### Defined in
 
-[lib/table/table-api.ts:14](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/table-api.ts#L14)
+[lib/table/table-api.ts:14](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/table-api.ts#L14)

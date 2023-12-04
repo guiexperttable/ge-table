@@ -59,7 +59,7 @@
 
 #### Defined in
 
-[lib/table/data/common/tree-row.ts:7](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/tree-row.ts#L7)
+[lib/table/data/common/tree-row.ts:7](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/tree-row.ts#L7)
 
 ## Properties
 
@@ -73,7 +73,7 @@
 
 #### Defined in
 
-[lib/table/data/common/tree-row.ts:13](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/tree-row.ts#L13)
+[lib/table/data/common/tree-row.ts:13](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/tree-row.ts#L13)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/tree-row.ts:10](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/tree-row.ts#L10)
+[lib/table/data/common/tree-row.ts:10](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/tree-row.ts#L10)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/tree-row.ts:8](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/tree-row.ts#L8)
+[lib/table/data/common/tree-row.ts:8](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/tree-row.ts#L8)
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/tree-row.ts:12](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/tree-row.ts#L12)
+[lib/table/data/common/tree-row.ts:12](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/tree-row.ts#L12)
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/tree-row.ts:9](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/tree-row.ts#L9)
+[lib/table/data/common/tree-row.ts:9](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/tree-row.ts#L9)
 
 ___
 
@@ -143,7 +143,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/tree-row.ts:14](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/tree-row.ts#L14)
+[lib/table/data/common/tree-row.ts:14](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/tree-row.ts#L14)
 
 ___
 
@@ -157,7 +157,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/tree-row.ts:11](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/tree-row.ts#L11)
+[lib/table/data/common/tree-row.ts:11](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/tree-row.ts#L11)
 
 ___
 
@@ -171,4 +171,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/tree-row.ts:5](https://github.com/guiexperttable/ge-table/blob/a7cb25d/libs/table/src/lib/table/data/common/tree-row.ts#L5)
+[lib/table/data/common/tree-row.ts:5](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/tree-row.ts#L5)
