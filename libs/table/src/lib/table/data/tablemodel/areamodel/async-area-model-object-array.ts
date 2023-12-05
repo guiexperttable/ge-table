@@ -1,10 +1,9 @@
 import {AbstractAreaModel} from "./abstract-area-model";
-import {TreeRow} from "../../common/tree-row";
 import {ColumnDefIf} from "../column/column-def.if";
 import {FilterFunction} from "../../common/filter-function";
 import {SorterService} from "../../../service/sorter.service";
 import {SortItem} from "../../common/sort-item";
-import {isTreeRow, TreeFactory} from "@guiexpert/table";
+import {isTreeRow} from "../../../instanceof-workaround";
 
 
 export class AsyncBodyAreaModelObjectArray<T> extends AbstractAreaModel<T> {
