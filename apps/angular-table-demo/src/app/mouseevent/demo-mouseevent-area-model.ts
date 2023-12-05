@@ -1,5 +1,4 @@
-import {AbstractAreaModel} from "@guiexpert/table";
-import {FilterFunction} from "../../../../../libs/table/src/lib/table/data/common/filter-function";
+import {AbstractAreaModel, FilterFunction} from "@guiexpert/table";
 
 
 export class DemoMouseeventAreaModel extends AbstractAreaModel<string> {

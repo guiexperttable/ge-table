@@ -1,5 +1,4 @@
-import { AbstractAreaModel, AreaIdent } from "@guiexpert/table";
-import { FilterFunction } from "../../../../../libs/table/src/lib/table/data/common/filter-function";
+import { AbstractAreaModel, AreaIdent, FilterFunction } from "@guiexpert/table";
 
 
 export class DemoMultisizeAreaModel extends AbstractAreaModel<number> {

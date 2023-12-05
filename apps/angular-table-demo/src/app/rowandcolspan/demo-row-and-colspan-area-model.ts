@@ -1,5 +1,4 @@
-import { AreaIdent, AreaModelArrayOfArrays } from "@guiexpert/table";
-import { FilterFunction } from "../../../../../libs/table/src/lib/table/data/common/filter-function";
+import { AreaIdent, AreaModelArrayOfArrays, FilterFunction } from "@guiexpert/table";
 
 export class DemoRowAndColspanAreaModel<T>
   extends AreaModelArrayOfArrays<T> {
