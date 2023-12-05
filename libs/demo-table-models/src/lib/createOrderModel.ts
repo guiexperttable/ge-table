@@ -18,7 +18,7 @@ import {
   TrueFn
 } from "@guiexpert/table";
 import orderData from "../demodata/orders";
-import {OrderIf} from "@guiexpert/demo-table-models";
+import {OrderIf} from "../model/order.if";
 
 
 function createTableRows(): OrderIf[] {
