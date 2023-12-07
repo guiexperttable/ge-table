@@ -1,3 +1,6 @@
+/**
+ * Represents padding values for the top, right, bottom, and left sides of an element.
+ */
 export class Padding {
   constructor(
     public top: number = 0,

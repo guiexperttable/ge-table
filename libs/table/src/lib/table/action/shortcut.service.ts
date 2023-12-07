@@ -6,6 +6,9 @@ import { OsxShortcutActionIdMapping } from "./osx-shortcut-actionId-mapping";
 import { OnActionTriggeredIf } from "./on-action-triggered.if";
 
 
+/**
+ * Represents a service for managing shortcuts and triggering actions based on keyboard events.
+ */
 export class ShortcutService {
 
   private shortcutActionIdMapping: ShortcutActionIdMapping = {};

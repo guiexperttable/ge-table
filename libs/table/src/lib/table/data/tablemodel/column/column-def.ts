@@ -10,7 +10,11 @@ import { GetEditRenderer } from "../../../renderer/edit/edit-cell-renderer.type"
 import { editInputPipe } from "../../../renderer/edit/edit-input-pipe.if";
 
 
+/**
+ * Represents a column definition for one column of the table.
+ */
 export class ColumnDef implements ColumnDefIf {
+
 
   public visible = true;
 

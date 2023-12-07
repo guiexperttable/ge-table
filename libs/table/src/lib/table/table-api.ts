@@ -11,6 +11,14 @@ export class TableApi {
   }
 
 
+  /**
+   * Updates the cells in the table based on the provided events.
+   *
+   * @param {TableCellUpdateEventIf[]} events - The array of events representing the updates to perform on the cells.
+   * @param {boolean} [repaintAll=false] - Optional parameter indicating whether to repaint all cells or not. Default value is false.
+   *
+   * @return {void} - This method doesn't return anything.
+   */
   updateCells(
     events: TableCellUpdateEventIf[],
     repaintAll: boolean = false): void {
@@ -18,44 +26,108 @@ export class TableApi {
   }
 
 
+  /**
+   * Notifies that the external filter has changed.
+   *
+   * @return {void}
+   */
   externalFilterChanged(): void {
     this.tableScope.externalFilterChanged();
   };
 
+  /**
+   * Scrolls the table body to the specified pixel coordinates.
+   *
+   * @param {number} _px - The horizontal pixel coordinate to scroll to. Defaults to 0.
+   * @param {number} _py - The vertical pixel coordinate to scroll to. Defaults to 0.
+   * @return {void}
+   */
   scrollToPixel(_px: number = 0, _py: number = 0) {
     // TODO scrollToPixel
   }
 
 
+  /**
+   * Scrolls to the specified index in both horizontal and vertical directions.
+   *
+   * @param {number} _indexX - The index of the column to scroll to in the horizontal direction. Default is 0.
+   * @param {number} _indexY - The index of the row to scroll to in the vertical direction. Default is 0.
+   *
+   * @return undefined
+   */
   scrollToIndex(_indexX: number = 0, _indexY: number = 0) {
     // TODO scrollToIndex
   }
 
+  /**
+   * Sets whether the header is visible or not.
+   *
+   * @param _visible - A boolean value indicating whether the header should be visible. Default value is true.
+   *
+   * @return undefined
+   */
   setHeaderVisible(_visible: boolean = true) {
     // TODO setHeaderVisible
   }
 
+  /**
+   * Sets the visibility of a column in the table.
+   *
+   * @param {_column} - The column index or column definition to set visibility for.
+   * @param {_visible=true} - The flag to set visibility to. true for visible, false for hidden.
+   *
+   * @return {void} - There is no return value.
+   */
   setColumnVisible(_column: number | ColumnDefIf, _visible: boolean = true) {
     // TODO setColumnVisible
   }
 
+  /**
+   * Returns whether a column is visible or not.
+   *
+   * @param {number | ColumnDefIf} _column - The column index or the column definition.
+   * @return {boolean} - True if the column is visible, false otherwise.
+   */
   isColumnVisible(_column: number | ColumnDefIf): boolean {
     // TODO isColumnVisible
     return true;
   }
 
+  /**
+   * Checks if the header is visible.
+   *
+   * @return {boolean} - Returns true if the header is visible, otherwise returns false.
+   */
   isHeaderVisible(): boolean {
     return true; // TODO isHeaderVisible
   }
 
+  /**
+   * Sets the visibility of the footer.
+   *
+   * @param {boolean} _visible - Indicates whether the footer should be visible or not. Default value is true.
+   *
+   * @return {void} - This method does not return any value.
+   */
   setFooterVisible(_visible: boolean = true) {
     // TODO setFooterVisible
   }
 
+  /**
+   * Determines if the footer is visible.
+   *
+   * @returns {boolean} True if the footer is visible, false otherwise.
+   */
   isFooterVisible(): boolean {
     return true; // TODO isFooterVisible
   }
 
+  /**
+   * Repaints the table.
+   *
+   * This method calls the repaint method of the tableScope object
+   * to update and redraw the table based on the latest data.
+   */
   repaint() {
     this.tableScope.repaint();
   }

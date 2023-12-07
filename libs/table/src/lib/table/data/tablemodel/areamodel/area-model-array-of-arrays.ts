@@ -3,6 +3,10 @@ import { AreaIdent } from "../area-ident.type";
 import { ColumnDefIf } from "../column/column-def.if";
 import { FilterFunction } from "../../common/filter-function";
 
+/**
+ * Represents a model for an area containing a two-dimensional array of data.
+ * @template T - The type of data in the array.
+ */
 export class AreaModelArrayOfArrays<T> extends AbstractAreaModel<T[][]> {
 
   public filteredArr: T[][];

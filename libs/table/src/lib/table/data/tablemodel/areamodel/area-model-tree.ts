@@ -8,6 +8,12 @@ import { SorterService } from "../../../service/sorter.service";
 import { SortItem } from "../../common/sort-item";
 import {TreeRowIf} from "../../common/tree-row-if";
 
+/**
+ * Represents a  tree-based table model.
+ * Extends the AbstractAreaModel class.
+ *
+ * @template S - The type of the row data.
+ */
 export class AreaModelTree<S> extends AbstractAreaModel<TreeRow<S>> {
 
   public type = 'AreaModelTree';

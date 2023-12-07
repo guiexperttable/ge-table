@@ -5,6 +5,10 @@ import { TableOptionsIf } from "./data/options/table-options.if";
 import { GeoData } from "./data/geo-data";
 
 
+/**
+ * Represents an store for HTML elements.
+ * @class
+ */
 export class EleScope {
 
   public scrollViewport: HTMLDivElement;

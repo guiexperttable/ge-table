@@ -6,6 +6,10 @@ import { SorterService } from "../../../service/sorter.service";
 import { SortItem } from "../../common/sort-item";
 import {isTreeRow} from "../../../instanceof-workaround";
 
+/**
+ * Represents an area model defined by an object array.
+ * @template T - The type of objects in the array
+ */
 export class AreaModelObjectyArray<T> extends AbstractAreaModel<T> {
 
   protected readonly properties: string[];

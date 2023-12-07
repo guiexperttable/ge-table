@@ -7,6 +7,9 @@ import { CellRendererIf } from "../../../renderer/cell-render.if";
 import { CheckedType } from "../../common/checked-type";
 
 
+/**
+ * Represents the area model (header, boder or footer) for the table.
+ */
 export class AreaModel implements AreaModelIf {
 
   areaIdent: AreaIdent = "body";

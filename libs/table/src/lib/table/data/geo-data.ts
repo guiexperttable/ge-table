@@ -1,3 +1,6 @@
+/**
+ * Represents geometric data with left, width, height, top coordinates and an optional index.
+ */
 export class GeoData {
 
   constructor(

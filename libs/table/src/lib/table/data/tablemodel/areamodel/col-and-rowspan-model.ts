@@ -2,6 +2,9 @@ import { CellRange } from "../../common/cell-range";
 import { AreaModelIf } from "./area-model.if";
 import { TableModelIf } from "../table-model.if";
 
+/**
+ * Represents a model for handling colspan and rowspan in a table.
+ */
 export class ColAndRowspanModel {
 
   protected colAndRowspanRanges: CellRange[] | undefined = undefined;

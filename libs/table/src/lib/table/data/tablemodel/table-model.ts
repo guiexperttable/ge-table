@@ -92,10 +92,22 @@ export class TableModel implements TableModelIf {
     }
   }
 
+  /**
+   * Retrieves the count of columns in the current instance.
+   *
+   * @return {number} The count of columns.
+   */
   getColumnCount(): number {
     return this.columnCount;
   };
 
+  /**
+   * Sets the width in pixel of a column (by columnIndex) in a table.
+   *
+   * @param {number} columnIndex - The index of the column.
+   * @param {number} width - The desired width of the column.
+   * @return {void}
+   */
   setColumnWidth(columnIndex: number, width: number): void {
     width = Math.max(0, width);
     if (this.overridingColumnWidth !== -1) {
@@ -107,6 +119,12 @@ export class TableModel implements TableModelIf {
     this.recalcContentWidthInPx();
   }
 
+  /**
+   * Retrieves the width of a column specified by its index.
+   *
+   * @param {number} columnIndex - The index of the desired column.
+   * @return {number} - The width of the specified column.
+   */
   getColumnWidth(columnIndex: number): number {
     const cd = this.getColumnDef(columnIndex);
     if (cd && cd.isVisible && !cd.isVisible()) {
@@ -121,6 +139,12 @@ export class TableModel implements TableModelIf {
     return 0;
   };
 
+  /**
+   * Retrieves the x position for a given column index.
+   *
+   * @param {number} columnIndex - The index of the column.
+   * @return {number} - The x position of the column.
+   */
   getXPosByColumnIndex(columnIndex: number): number {
     if (columnIndex === 0) {
       return 0;
@@ -131,11 +155,32 @@ export class TableModel implements TableModelIf {
     return this.xPositions[columnIndex];
   }
 
+  /**
+   * Recalculates the size (width, height, padding)  of the elements based on the client width.
+   *
+   * @param {number} clientWidth - The width of the client area.
+   *
+   * @return {void} - This method does not return a value.
+   */
   recalcSize(clientWidth: number) {
     this.recalcColumnWidthes(clientWidth);
     this.recalcHeightAndPadding();
   }
 
+  /**
+   * Recalculates the height and padding for the body area.
+   *
+   * This method retrieves the area model for the "body" area,
+   * and updates the rowCount property with the row count of the model.
+   *
+   * The contentHeightInPx property is then updated with the height of the "body" area.
+   *
+   * The method calls the recalcContentWidthInPx() method to recalculate the content width.
+   *
+   * Finally, the method calls the recalcPadding() method to recalculate the padding.
+   *
+   * @return {void}
+   */
   recalcHeightAndPadding() {
     const bodyModel = this.getAreaModel("body");
     this.rowCount = bodyModel.getRowCount();
@@ -145,6 +190,13 @@ export class TableModel implements TableModelIf {
     this.recalcPadding();
   }
 
+  /**
+   * Recalculates the padding of an element based on the width and height of its surrounding areas.
+   *
+   * @method recalcPadding
+   *
+   * @returns {void}
+   */
   recalcPadding() {
     const westWidth = this.getSideAreaWidth("west");
     const eastWidth = this.getSideAreaWidth("east");
@@ -158,26 +210,60 @@ export class TableModel implements TableModelIf {
       westWidth);
   }
 
+  /**
+   * Retrieves the padding value.
+   *
+   * @returns {Padding} The padding value.
+   */
   getPadding(): Padding {
     return this.padding;
   }
 
+  /**
+   * Returns the height of the content in pixels.
+   *
+   * @returns {number} The height of the content in pixels.
+   */
   getContentHeightInPixel(): number {
     return this.contentHeightInPx;
   }
 
+  /**
+   * Returns the width of the content in pixels.
+   *
+   * @returns {number} The width of the content in pixels.
+   */
   getContentWidthInPixel(): number {
     return this.contentWidthInPx;
   }
 
+  /**
+   * Returns the height of the specified row in the given row area identifier.
+   *
+   * @param {AreaIdent} rowAreaIdent - The row area identifier.
+   * @param {number} rowIndex - The index of the row.
+   * @return {number} - The height of the specified row.
+   */
   getRowHeight(rowAreaIdent: AreaIdent, rowIndex: number): number {
     return this.getAreaModel(rowAreaIdent).getRowHeight(rowIndex);
   }
 
+  /**
+   * Retrieves the model for the given row area identifier.
+   *
+   * @param {AreaIdent} rowAreaIdent - The identifier of the row area.
+   * @return {AreaModelIf} - The model of the specified row area.
+   */
   getModel(rowAreaIdent: AreaIdent): AreaModelIf {
     return this.getAreaModel(rowAreaIdent);
   }
 
+  /**
+   * Calculates the height of the area identified by the given area identifier.
+   *
+   * @param {AreaIdent} areaIdent - The identifier of the area.
+   * @return {number} - The height of the area.
+   */
   getAreaHeight(areaIdent: AreaIdent): number {
     const model = this.getModel(areaIdent);
     const rowCount = model.getRowCount();
@@ -192,6 +278,12 @@ export class TableModel implements TableModelIf {
     return ret;
   }
 
+  /**
+   * Returns the total width of the side area identified by sideIdent.
+   *
+   * @param {SideIdent} sideIdent - The identifier of the side area ("west" | "center" | "east").
+   * @return {number} - The total width in pixels of the side area.
+   */
   getSideAreaWidth(sideIdent: SideIdent): number {
     const [cStart, cEnd] = this.getSideStartAndEndColumnIndex(sideIdent);
     let ret = 0;
@@ -201,6 +293,12 @@ export class TableModel implements TableModelIf {
     return ret;
   }
 
+  /**
+   * Retrieves the start and end column indices based on the given side identifier.
+   *
+   * @param {SideIdent} sideIdent - The side identifier, which can be "west", "east", or "center".
+   * @return {[number, number]} - An array containing the start and end column indices.
+   */
   getSideStartAndEndColumnIndex(sideIdent: SideIdent): [number, number] {
     const c1 = this.getFixedLeftColumnCount();
     const c2 = this.getFixedRightColumnCount();
@@ -219,6 +317,12 @@ export class TableModel implements TableModelIf {
     return [cStart, cEnd];
   }
 
+  /**
+   * Returns the column definition at the specified index.
+   *
+   * @param {number} index - The index of the column definition to retrieve.
+   * @returns {ColumnDefIf | undefined} - The column definition at the specified index, or undefined if no ColumnDef is specified for the given column
+   */
   getColumnDef(index: number): ColumnDefIf | undefined {
     if (index < this.columnDefs.length) {
       return this.columnDefs[index];
@@ -226,14 +330,31 @@ export class TableModel implements TableModelIf {
     return undefined;
   }
 
+  /**
+   * Retrieves the count of fixed left columns.
+   *
+   * @returns {number} The count of fixed left columns.
+   */
   getFixedLeftColumnCount(): number {
     return this.fixedLeftColumnCount;
   }
 
+  /**
+   * Returns the number of fixed right columns.
+   *
+   * @returns {number} The number of fixed right columns.
+   */
   getFixedRightColumnCount(): number {
     return this.fixedRightColumnCount;
   }
 
+  /**
+   * Retrieves the area model (header, body or footer) based on the area identification.
+   *
+   * @param {AreaIdent} area - The identifier of the area.
+   * @return {AreaModelIf} The area model corresponding to the given area identification.
+   * @throws {Error} If the area identification is invalid.
+   */
   getAreaModel(area: AreaIdent): AreaModelIf {
     if (area === "header") {
       return this.headerAreaModel;
@@ -247,42 +368,102 @@ export class TableModel implements TableModelIf {
     throw new Error("Wrong ident.");
   }
 
+  /**
+   * Returns the body area model.
+   *
+   * @returns {AreaModelIf} The body area model.
+   */
   getBodyModel(): AreaModelIf {
     return this.bodyAreaModel;
   }
 
+  /**
+   * Checks if the footer is visible.
+   *
+   * @returns {boolean} True if the footer is visible, false otherwise.
+   */
   isFooterVisibe(): boolean {
     return (this.footerAreaModel?.getRowCount() ?? 0) > 0;
   }
 
+  /**
+   * Checks if the header area is visible.
+   * @return {boolean} Returns true if the header area is visible, otherwise false.
+   */
   isHeaderVisibe(): boolean {
     return (this.headerAreaModel?.getRowCount() ?? 0) > 0;
   }
 
+  /**
+   * Checks whether the row checkbox is visible.
+   *
+   * @returns {boolean} True if the row checkbox is visible, otherwise false.
+   */
   isRowCheckboxVisible(): boolean {
     return this.rowCheckboxVisible;
   }
 
+  /**
+   * This method is called when an external filter is changed.
+   *
+   * @param {FilterFunction<T>} predictFn - The function used to predict whether an element should be filtered or not.
+   * @return {void}
+   */
   externalFilterChanged<T>(predictFn: FilterFunction<T>): void {
     this.getAreaModel("body").externalFilterChanged(predictFn);
   }
 
+  /**
+   * Sorts the items using the given sortItems array.
+   *
+   * @param {SortItem[]} sortItems - An array of sort items to sort the items.
+   * @return {boolean} - Returns true if the sorting is successful, otherwise false.
+   */
   doSort(sortItems: SortItem[]): boolean {
     return this.getAreaModel("body").doSort(sortItems);
   }
 
+  /**
+   * Returns an array of ColumnDefIf objects or undefined.
+   *
+   * @return {ColumnDefIf[] | undefined} An array of ColumnDefIf objects or undefined.
+   */
   getColumnDefs(): ColumnDefIf[] | undefined {
     return this.columnDefs;
   }
 
+  /**
+   * Retrieves the property key of the table row business object associated with the specified column index.
+   * It's only available when columnDefs are specified.
+   *
+   * @param {number} columnIndex - The index of the column to retrieve the property from.
+   * @return {string} The property associated with the specified column index.
+   */
   getColumnProperty(columnIndex: number): string {
+    if (!this.columnDefs) {
+      return '';
+    }
     return this.columnDefs[columnIndex].property;
   }
 
+  /**
+   * Retrieves the row object from the body model at the specified index.
+   *
+   * @param {number} rowIndex - The index of the row to retrieve.
+   *
+   * @return {any} The row object at the specified index.
+   */
   getBodyRowByIndex(rowIndex: number): any {
     return this.getBodyModel().getRowByIndex(rowIndex);
   }
 
+  /**
+   * Checks if a column at the given index is sortable.
+   *
+   * @param {number} columnIndex - The index of the column to check.
+   *
+   * @returns {boolean} - `true` if the column is sortable, `false` otherwise.
+   */
   isSortable(columnIndex: number): boolean {
     if (this.columnDefs
       && columnIndex < this.columnDefs.length
@@ -293,6 +474,14 @@ export class TableModel implements TableModelIf {
     return false;
   }
 
+  /**
+   * Moves a column in the column order.
+   *
+   * @param {number} sourceColumnIndex - The index of the column to be moved.
+   * @param {number} targetColumnIndex - The index where the column should be moved to.
+   *
+   * @returns {void}
+   */
   changeColumnOrder(sourceColumnIndex: number, targetColumnIndex: number): void {
     this.arrayMove(this.columnDefs, sourceColumnIndex, targetColumnIndex);
     this.arrayMove(this.columnSizes, sourceColumnIndex, targetColumnIndex);

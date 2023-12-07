@@ -6,6 +6,10 @@ import { MouseTargetData } from "./data/event/mouse-target-data";
 import {TreeRowIf} from "./data/common/tree-row-if";
 import {isTreeRow} from "./instanceof-workaround";
 
+/**
+ * Class representing a MouseHandler.
+ * @class
+ */
 export class MouseHandler {
 
   mouseEvent?: MouseEvent;
@@ -37,6 +41,13 @@ export class MouseHandler {
   }
 
 
+  /**
+   * Handles the "contextmenu" event.
+   *
+   * @private
+   * @param {MouseEvent} evt - The mouse event object.
+   * @return {void}
+   */
   private onContextmenu(evt: MouseEvent) {
     this.mouseEvent = evt;
     const mouseMoveEvent = this.tableScope.createGeMouseEvent(this.mouseEvent);
@@ -44,6 +55,13 @@ export class MouseHandler {
   };
 
 
+  /**
+   * Handles the click event on the host element.
+   *
+   * @param {MouseEvent} event - The click event.
+   *
+   * @return {void}
+   */
   private onHostElementClicked(event: MouseEvent) {
     const mouseTargetData: MouseTargetData = new MouseTargetData(event.target, this.tableScope);
     if (mouseTargetData.action === 'toggleExpandCollapseAll'){
@@ -90,6 +108,12 @@ export class MouseHandler {
   };
 
 
+  /**
+   * Handles the double click event on the host element.
+   * This method is private.
+   *
+   * @param {MouseEvent} event - The double click event.
+   */
   private onHostElementDblClicked(event: MouseEvent) {
 
     if (event.target instanceof HTMLElement) {
@@ -141,6 +165,14 @@ export class MouseHandler {
   };
 
 
+  /**
+   * Publishes a GeMouseEvent.
+   *
+   * @param {MouseEvent} event - The MouseEvent to publish.
+   * @param {number} clickCount - The number of clicks for the GeMouseEvent.
+   *
+   * @return {void}
+   */
   private publishGeMouseEvent(event: MouseEvent, clickCount: number) {
     this.mouseEvent = event;
     this.geMouseEventOld = this.geMouseEvent?.clone();
@@ -152,6 +184,12 @@ export class MouseHandler {
   }
 
 
+  /**
+   * Update the collapsed/expanded state of a tree row.
+   *
+   * @param {TreeRowIf<any>} tr - The tree row object.
+   * @returns {void}
+   */
   private updateCollapsedExpandedState(tr: TreeRowIf<any>) {
     // store expanded/collapsed:
     const getRowId = this.tableScope.tableOptions?.autoRestoreOptions?.getRowId;
