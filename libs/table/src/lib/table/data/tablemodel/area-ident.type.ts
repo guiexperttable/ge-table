@@ -1,5 +1,5 @@
 /**
- * The AreaIdent is an identifier for the three areas : header, boder, and footer.
+ * The AreaIdent is an identifier for the three areas : header, body, and footer.
  */
 export type AreaIdent = "header" | "body" | "footer";
 

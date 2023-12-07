@@ -8,7 +8,7 @@ import { CheckedType } from "../../common/checked-type";
 
 
 /**
- * Represents the area model (header, boder or footer) for the table.
+ * Represents the area model (header, body or footer) for the table.
  */
 export class AreaModel implements AreaModelIf {
 
