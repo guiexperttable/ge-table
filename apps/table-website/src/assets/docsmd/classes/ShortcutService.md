@@ -2,6 +2,8 @@
 
 # Class: ShortcutService
 
+Represents a service for managing shortcuts and triggering actions based on keyboard events.
+
 ## Table of contents
 
 ### Constructors
@@ -45,7 +47,7 @@
 
 #### Defined in
 
-[lib/table/action/shortcut.service.ts:14](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/action/shortcut.service.ts#L14)
+[lib/table/action/shortcut.service.ts:17](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/action/shortcut.service.ts#L17)
 
 ## Properties
 
@@ -55,7 +57,7 @@
 
 #### Defined in
 
-[lib/table/action/shortcut.service.ts:12](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/action/shortcut.service.ts#L12)
+[lib/table/action/shortcut.service.ts:15](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/action/shortcut.service.ts#L15)
 
 ___
 
@@ -65,7 +67,7 @@ ___
 
 #### Defined in
 
-[lib/table/action/shortcut.service.ts:11](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/action/shortcut.service.ts#L11)
+[lib/table/action/shortcut.service.ts:14](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/action/shortcut.service.ts#L14)
 
 ___
 
@@ -75,7 +77,7 @@ ___
 
 #### Defined in
 
-[lib/table/action/shortcut.service.ts:15](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/action/shortcut.service.ts#L15)
+[lib/table/action/shortcut.service.ts:18](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/action/shortcut.service.ts#L18)
 
 ## Methods
 
@@ -95,7 +97,7 @@ ___
 
 #### Defined in
 
-[lib/table/action/shortcut.service.ts:22](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/action/shortcut.service.ts#L22)
+[lib/table/action/shortcut.service.ts:25](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/action/shortcut.service.ts#L25)
 
 ___
 
@@ -116,7 +118,7 @@ ___
 
 #### Defined in
 
-[lib/table/action/shortcut.service.ts:98](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/action/shortcut.service.ts#L98)
+[lib/table/action/shortcut.service.ts:101](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/action/shortcut.service.ts#L101)
 
 ___
 
@@ -136,7 +138,7 @@ ___
 
 #### Defined in
 
-[lib/table/action/shortcut.service.ts:67](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/action/shortcut.service.ts#L67)
+[lib/table/action/shortcut.service.ts:70](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/action/shortcut.service.ts#L70)
 
 ___
 
@@ -156,7 +158,7 @@ ___
 
 #### Defined in
 
-[lib/table/action/shortcut.service.ts:81](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/action/shortcut.service.ts#L81)
+[lib/table/action/shortcut.service.ts:84](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/action/shortcut.service.ts#L84)
 
 ___
 
@@ -176,7 +178,7 @@ ___
 
 #### Defined in
 
-[lib/table/action/shortcut.service.ts:114](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/action/shortcut.service.ts#L114)
+[lib/table/action/shortcut.service.ts:117](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/action/shortcut.service.ts#L117)
 
 ___
 
@@ -190,7 +192,7 @@ ___
 
 #### Defined in
 
-[lib/table/action/shortcut.service.ts:28](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/action/shortcut.service.ts#L28)
+[lib/table/action/shortcut.service.ts:31](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/action/shortcut.service.ts#L31)
 
 ___
 
@@ -204,7 +206,7 @@ ___
 
 #### Defined in
 
-[lib/table/action/shortcut.service.ts:47](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/action/shortcut.service.ts#L47)
+[lib/table/action/shortcut.service.ts:50](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/action/shortcut.service.ts#L50)
 
 ___
 
@@ -218,7 +220,7 @@ ___
 
 #### Defined in
 
-[lib/table/action/shortcut.service.ts:51](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/action/shortcut.service.ts#L51)
+[lib/table/action/shortcut.service.ts:54](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/action/shortcut.service.ts#L54)
 
 ___
 
@@ -232,7 +234,7 @@ ___
 
 #### Defined in
 
-[lib/table/action/shortcut.service.ts:43](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/action/shortcut.service.ts#L43)
+[lib/table/action/shortcut.service.ts:46](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/action/shortcut.service.ts#L46)
 
 ___
 
@@ -252,4 +254,4 @@ ___
 
 #### Defined in
 
-[lib/table/action/shortcut.service.ts:56](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/action/shortcut.service.ts#L56)
+[lib/table/action/shortcut.service.ts:59](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/action/shortcut.service.ts#L59)

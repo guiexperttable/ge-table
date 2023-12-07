@@ -207,9 +207,19 @@
 
 Ƭ **ActionId**: typeof [`actionIds`](modules.md#actionids)[`number`]
 
+Represents an action ID.
+
+**`Memberof`**
+
+module:myModule
+
+**`See`**
+
+module:myModule.actionIds
+
 #### Defined in
 
-[lib/table/action/action-id.type.ts:23](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/action/action-id.type.ts#L23)
+[lib/table/action/action-id.type.ts:35](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/action/action-id.type.ts#L35)
 
 ___
 
@@ -221,7 +231,7 @@ The AreaIdent is an identifier for the three areas : header, boder, and footer.
 
 #### Defined in
 
-[lib/table/data/tablemodel/area-ident.type.ts:4](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/area-ident.type.ts#L4)
+[lib/table/data/tablemodel/area-ident.type.ts:4](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/area-ident.type.ts#L4)
 
 ___
 
@@ -245,7 +255,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/area-map.type.ts:1](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/area-map.type.ts#L1)
+[lib/table/data/common/area-map.type.ts:1](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/area-map.type.ts#L1)
 
 ___
 
@@ -263,7 +273,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/boolean-function.ts:1](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/boolean-function.ts#L1)
+[lib/table/data/common/boolean-function.ts:1](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/boolean-function.ts#L1)
 
 ___
 
@@ -273,13 +283,15 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/checked-type.ts:1](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/checked-type.ts#L1)
+[lib/table/data/common/checked-type.ts:1](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/checked-type.ts#L1)
 
 ___
 
 ### DivScope
 
 Ƭ **DivScope**: `Object`
+
+Represents a DivScope object.
 
 #### Type declaration
 
@@ -291,7 +303,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/div-scope.type.ts:1](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/div-scope.type.ts#L1)
+[lib/table/data/div-scope.type.ts:10](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/div-scope.type.ts#L10)
 
 ___
 
@@ -323,7 +335,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/filter-function.ts:1](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/filter-function.ts#L1)
+[lib/table/data/common/filter-function.ts:1](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/filter-function.ts#L1)
 
 ___
 
@@ -333,7 +345,7 @@ ___
 
 #### Defined in
 
-[lib/table/focus/focus.type.ts:1](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/focus/focus.type.ts#L1)
+[lib/table/focus/focus.type.ts:1](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/focus/focus.type.ts#L1)
 
 ___
 
@@ -358,7 +370,7 @@ ___
 
 #### Defined in
 
-[lib/table/renderer/edit/edit-cell-renderer.type.ts:3](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/renderer/edit/edit-cell-renderer.type.ts#L3)
+[lib/table/renderer/edit/edit-cell-renderer.type.ts:3](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/renderer/edit/edit-cell-renderer.type.ts#L3)
 
 ___
 
@@ -388,7 +400,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/auto-restore-options.if.ts:2](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/options/auto-restore-options.if.ts#L2)
+[lib/table/data/options/auto-restore-options.if.ts:2](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/auto-restore-options.if.ts#L2)
 
 ___
 
@@ -406,7 +418,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/auto-restore-options.if.ts:3](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/options/auto-restore-options.if.ts#L3)
+[lib/table/data/options/auto-restore-options.if.ts:3](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/auto-restore-options.if.ts#L3)
 
 ___
 
@@ -430,7 +442,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/get-t.ts:1](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/get-t.ts#L1)
+[lib/table/data/common/get-t.ts:1](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/get-t.ts#L1)
 
 ___
 
@@ -444,7 +456,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/data/html-style.type.ts:1](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/data/html-style.type.ts#L1)
+[lib/table/service/data/html-style.type.ts:1](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/data/html-style.type.ts#L1)
 
 ___
 
@@ -476,7 +488,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/auto-restore-options.if.ts:1](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/options/auto-restore-options.if.ts#L1)
+[lib/table/data/options/auto-restore-options.if.ts:1](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/auto-restore-options.if.ts#L1)
 
 ___
 
@@ -486,7 +498,7 @@ ___
 
 #### Defined in
 
-[lib/table/renderer/renderer-cleanup-fn.type.ts:1](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/renderer/renderer-cleanup-fn.type.ts#L1)
+[lib/table/renderer/renderer-cleanup-fn.type.ts:1](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/renderer/renderer-cleanup-fn.type.ts#L1)
 
 ___
 
@@ -496,7 +508,7 @@ ___
 
 #### Defined in
 
-[lib/table/selection/selection.type.ts:2](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/selection/selection.type.ts#L2)
+[lib/table/selection/selection.type.ts:2](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/selection/selection.type.ts#L2)
 
 ___
 
@@ -506,7 +518,7 @@ ___
 
 #### Defined in
 
-[lib/table/selection/selection.type.ts:1](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/selection/selection.type.ts#L1)
+[lib/table/selection/selection.type.ts:1](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/selection/selection.type.ts#L1)
 
 ___
 
@@ -514,13 +526,15 @@ ___
 
 Ƭ **ShortcutActionIdMapping**: `Object`
 
+Represents a mapping of shortcut action IDs.
+
 #### Index signature
 
 ▪ [key: `string`]: [`ActionId`](modules.md#actionid)
 
 #### Defined in
 
-[lib/table/action/shortcut-actionid-mapping.type.ts:3](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/action/shortcut-actionid-mapping.type.ts#L3)
+[lib/table/action/shortcut-actionid-mapping.type.ts:7](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/action/shortcut-actionid-mapping.type.ts#L7)
 
 ___
 
@@ -528,9 +542,11 @@ ___
 
 Ƭ **SideIdent**: ``"west"`` \| ``"center"`` \| ``"east"``
 
+Represents a class that identifies a (vertical) side of the table.
+
 #### Defined in
 
-[lib/table/data/side-ident.type.ts:1](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/side-ident.type.ts#L1)
+[lib/table/data/side-ident.type.ts:4](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/side-ident.type.ts#L4)
 
 ___
 
@@ -538,9 +554,12 @@ ___
 
 Ƭ **SortState**: ``"asc"`` \| ``"desc"`` \| ``""``
 
+Represents the sort state of a list or table.
+It can take one of the following values: "asc", "desc", or "" (empty string).
+
 #### Defined in
 
-[lib/table/data/common/sort-state.type.ts:1](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sort-state.type.ts#L1)
+[lib/table/data/common/sort-state.type.ts:7](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sort-state.type.ts#L7)
 
 ___
 
@@ -550,7 +569,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/tree-arrow.type.ts:1](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/tree-arrow.type.ts#L1)
+[lib/table/data/common/tree-arrow.type.ts:1](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/tree-arrow.type.ts#L1)
 
 ## Variables
 
@@ -558,9 +577,11 @@ ___
 
 • `Const` **actionIds**: readonly [``"START_EDITING"``, ``"TOGGLE_SELECTION"``, ``"SELECT_ALL"``, ``"DESELECT_ALL"``, ``"NAVIGATE_LEFT"``, ``"NAVIGATE_RIGHT"``, ``"NAVIGATE_UP"``, ``"NAVIGATE_DOWN"``]
 
+An array of action identifiers.
+
 #### Defined in
 
-[lib/table/action/action-id.type.ts:2](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/action/action-id.type.ts#L2)
+[lib/table/action/action-id.type.ts:7](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/action/action-id.type.ts#L7)
 
 ___
 
@@ -578,7 +599,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/aligns.ts:10](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/aligns.ts#L10)
+[lib/table/data/common/aligns.ts:10](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/aligns.ts#L10)
 
 ___
 
@@ -596,7 +617,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/aligns.ts:5](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/aligns.ts#L5)
+[lib/table/data/common/aligns.ts:5](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/aligns.ts#L5)
 
 ___
 
@@ -614,7 +635,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/aligns.ts:15](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/aligns.ts#L15)
+[lib/table/data/common/aligns.ts:15](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/aligns.ts#L15)
 
 ___
 
@@ -630,7 +651,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/aligns.ts:2](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/aligns.ts#L2)
+[lib/table/data/common/aligns.ts:2](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/aligns.ts#L2)
 
 ___
 
@@ -646,7 +667,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/aligns.ts:1](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/aligns.ts#L1)
+[lib/table/data/common/aligns.ts:1](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/aligns.ts#L1)
 
 ___
 
@@ -662,7 +683,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/aligns.ts:3](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/aligns.ts#L3)
+[lib/table/data/common/aligns.ts:3](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/aligns.ts#L3)
 
 ___
 
@@ -672,7 +693,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:34](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L34)
+[lib/table/data/common/sizes.ts:34](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L34)
 
 ___
 
@@ -682,7 +703,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:33](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L33)
+[lib/table/data/common/sizes.ts:33](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L33)
 
 ___
 
@@ -692,7 +713,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:24](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L24)
+[lib/table/data/common/sizes.ts:24](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L24)
 
 ___
 
@@ -702,7 +723,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:23](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L23)
+[lib/table/data/common/sizes.ts:23](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L23)
 
 ___
 
@@ -712,7 +733,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:22](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L22)
+[lib/table/data/common/sizes.ts:22](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L22)
 
 ___
 
@@ -722,7 +743,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:21](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L21)
+[lib/table/data/common/sizes.ts:21](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L21)
 
 ___
 
@@ -732,7 +753,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:20](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L20)
+[lib/table/data/common/sizes.ts:20](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L20)
 
 ___
 
@@ -742,7 +763,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:19](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L19)
+[lib/table/data/common/sizes.ts:19](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L19)
 
 ___
 
@@ -752,7 +773,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:18](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L18)
+[lib/table/data/common/sizes.ts:18](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L18)
 
 ___
 
@@ -762,7 +783,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:17](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L17)
+[lib/table/data/common/sizes.ts:17](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L17)
 
 ___
 
@@ -772,7 +793,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:16](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L16)
+[lib/table/data/common/sizes.ts:16](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L16)
 
 ___
 
@@ -782,7 +803,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:15](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L15)
+[lib/table/data/common/sizes.ts:15](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L15)
 
 ___
 
@@ -792,7 +813,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:32](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L32)
+[lib/table/data/common/sizes.ts:32](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L32)
 
 ___
 
@@ -802,7 +823,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:14](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L14)
+[lib/table/data/common/sizes.ts:14](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L14)
 
 ___
 
@@ -812,7 +833,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:13](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L13)
+[lib/table/data/common/sizes.ts:13](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L13)
 
 ___
 
@@ -822,7 +843,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:12](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L12)
+[lib/table/data/common/sizes.ts:12](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L12)
 
 ___
 
@@ -832,7 +853,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:11](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L11)
+[lib/table/data/common/sizes.ts:11](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L11)
 
 ___
 
@@ -842,7 +863,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:10](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L10)
+[lib/table/data/common/sizes.ts:10](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L10)
 
 ___
 
@@ -852,7 +873,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:9](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L9)
+[lib/table/data/common/sizes.ts:9](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L9)
 
 ___
 
@@ -862,7 +883,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:8](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L8)
+[lib/table/data/common/sizes.ts:8](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L8)
 
 ___
 
@@ -872,7 +893,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:7](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L7)
+[lib/table/data/common/sizes.ts:7](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L7)
 
 ___
 
@@ -882,7 +903,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:6](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L6)
+[lib/table/data/common/sizes.ts:6](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L6)
 
 ___
 
@@ -892,7 +913,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:5](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L5)
+[lib/table/data/common/sizes.ts:5](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L5)
 
 ___
 
@@ -902,7 +923,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:31](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L31)
+[lib/table/data/common/sizes.ts:31](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L31)
 
 ___
 
@@ -912,7 +933,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:4](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L4)
+[lib/table/data/common/sizes.ts:4](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L4)
 
 ___
 
@@ -922,7 +943,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:30](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L30)
+[lib/table/data/common/sizes.ts:30](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L30)
 
 ___
 
@@ -932,7 +953,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:29](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L29)
+[lib/table/data/common/sizes.ts:29](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L29)
 
 ___
 
@@ -942,7 +963,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:28](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L28)
+[lib/table/data/common/sizes.ts:28](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L28)
 
 ___
 
@@ -952,7 +973,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:27](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L27)
+[lib/table/data/common/sizes.ts:27](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L27)
 
 ___
 
@@ -962,7 +983,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:26](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L26)
+[lib/table/data/common/sizes.ts:26](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L26)
 
 ___
 
@@ -972,7 +993,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sizes.ts:25](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/sizes.ts#L25)
+[lib/table/data/common/sizes.ts:25](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sizes.ts#L25)
 
 ## Functions
 
@@ -986,7 +1007,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/boolean-function.ts:4](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/boolean-function.ts#L4)
+[lib/table/data/common/boolean-function.ts:4](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/boolean-function.ts#L4)
 
 ___
 
@@ -1000,7 +1021,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/boolean-function.ts:3](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/boolean-function.ts#L3)
+[lib/table/data/common/boolean-function.ts:3](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/boolean-function.ts#L3)
 
 ___
 
@@ -1022,7 +1043,7 @@ ___
 
 #### Defined in
 
-[lib/table/renderer/edit/edit-input-pipe.if.ts:4](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/renderer/edit/edit-input-pipe.if.ts#L4)
+[lib/table/renderer/edit/edit-input-pipe.if.ts:12](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/renderer/edit/edit-input-pipe.if.ts#L12)
 
 ___
 
@@ -1044,7 +1065,7 @@ Converts a string to the identifier of type AreaIdent.
 
 #### Defined in
 
-[lib/table/data/tablemodel/area-ident.type.ts:10](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/area-ident.type.ts#L10)
+[lib/table/data/tablemodel/area-ident.type.ts:10](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/area-ident.type.ts#L10)
 
 ___
 
@@ -1052,19 +1073,23 @@ ___
 
 ▸ **isAreaModelTree**(`model`): `boolean`
 
+Determines if the given model is an AreaModelTree.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `model` | `any` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `model` | `any` | The model object to check. |
 
 #### Returns
 
 `boolean`
 
+- True if the model is an AreaModelTree, false otherwise.
+
 #### Defined in
 
-[lib/table/instanceof-workaround.ts:13](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/instanceof-workaround.ts#L13)
+[lib/table/instanceof-workaround.ts:26](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/instanceof-workaround.ts#L26)
 
 ___
 
@@ -1072,19 +1097,23 @@ ___
 
 ▸ **isCheckboxColumnDef**(`o`): `boolean`
 
+Checks if the given object is a CheckboxColumnDef.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `o` | `any` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `o` | `any` | The object to be checked. |
 
 #### Returns
 
 `boolean`
 
+- True if the object is a CheckboxColumnDef, false otherwise.
+
 #### Defined in
 
-[lib/table/instanceof-workaround.ts:18](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/instanceof-workaround.ts#L18)
+[lib/table/instanceof-workaround.ts:37](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/instanceof-workaround.ts#L37)
 
 ___
 
@@ -1092,16 +1121,20 @@ ___
 
 ▸ **isTreeRow**(`row`): `boolean`
 
+Checks if the given row is a tree row.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `row` | `any` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `row` | `any` | The row to be checked. |
 
 #### Returns
 
 `boolean`
 
+- true if the row is a tree row, false otherwise.
+
 #### Defined in
 
-[lib/table/instanceof-workaround.ts:7](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/instanceof-workaround.ts#L7)
+[lib/table/instanceof-workaround.ts:14](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/instanceof-workaround.ts#L14)

@@ -54,4 +54,4 @@
 
 #### Defined in
 
-[lib/table/renderer/cell-group-ext-cell-renderer.ts:11](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/renderer/cell-group-ext-cell-renderer.ts#L11)
+[lib/table/renderer/cell-group-ext-cell-renderer.ts:11](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/renderer/cell-group-ext-cell-renderer.ts#L11)

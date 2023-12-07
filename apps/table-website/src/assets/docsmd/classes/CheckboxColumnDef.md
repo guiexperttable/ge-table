@@ -2,6 +2,8 @@
 
 # Class: CheckboxColumnDef
 
+Represents a column definition of one table column.
+
 ## Implements
 
 - [`ColumnDefIf`](../interfaces/ColumnDefIf.md)
@@ -39,13 +41,15 @@
 
 • **classes**: [`AreaObjectMapType`](../modules.md#areaobjectmaptype)\<`string`[]\>
 
+Represents an object that maps an area to a collection of objects.
+
 #### Implementation of
 
 [ColumnDefIf](../interfaces/ColumnDefIf.md).[classes](../interfaces/ColumnDefIf.md#classes)
 
 #### Defined in
 
-[lib/table/data/common/checkbox-column-def.ts:19](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L19)
+[lib/table/data/common/checkbox-column-def.ts:19](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L19)
 
 ___
 
@@ -53,13 +57,15 @@ ___
 
 • **headerLabel**: `string` = `""`
 
+Represents the label for a header.
+
 #### Implementation of
 
 [ColumnDefIf](../interfaces/ColumnDefIf.md).[headerLabel](../interfaces/ColumnDefIf.md#headerlabel)
 
 #### Defined in
 
-[lib/table/data/common/checkbox-column-def.ts:14](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L14)
+[lib/table/data/common/checkbox-column-def.ts:14](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L14)
 
 ___
 
@@ -67,13 +73,15 @@ ___
 
 • **maxWidth**: [`SizeIf`](../interfaces/SizeIf.md)
 
+Represents the maximum width of a column.
+
 #### Implementation of
 
 [ColumnDefIf](../interfaces/ColumnDefIf.md).[maxWidth](../interfaces/ColumnDefIf.md#maxwidth)
 
 #### Defined in
 
-[lib/table/data/common/checkbox-column-def.ts:17](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L17)
+[lib/table/data/common/checkbox-column-def.ts:17](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L17)
 
 ___
 
@@ -81,13 +89,15 @@ ___
 
 • **minWidth**: [`SizeIf`](../interfaces/SizeIf.md)
 
+Represents the minimum width of a column.
+
 #### Implementation of
 
 [ColumnDefIf](../interfaces/ColumnDefIf.md).[minWidth](../interfaces/ColumnDefIf.md#minwidth)
 
 #### Defined in
 
-[lib/table/data/common/checkbox-column-def.ts:16](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L16)
+[lib/table/data/common/checkbox-column-def.ts:16](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L16)
 
 ___
 
@@ -95,13 +105,15 @@ ___
 
 • **property**: `string` = `"CheckboxColumn"`
 
+Represents a property name of the table row element.
+
 #### Implementation of
 
 [ColumnDefIf](../interfaces/ColumnDefIf.md).[property](../interfaces/ColumnDefIf.md#property)
 
 #### Defined in
 
-[lib/table/data/common/checkbox-column-def.ts:13](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L13)
+[lib/table/data/common/checkbox-column-def.ts:13](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L13)
 
 ___
 
@@ -109,13 +121,15 @@ ___
 
 • **rendererMap**: [`AreaObjectMapType`](../modules.md#areaobjectmaptype)\<[`CellRendererIf`](../interfaces/CellRendererIf.md)\>
 
+**`Template`**
+
 #### Implementation of
 
 [ColumnDefIf](../interfaces/ColumnDefIf.md).[rendererMap](../interfaces/ColumnDefIf.md#renderermap)
 
 #### Defined in
 
-[lib/table/data/common/checkbox-column-def.ts:18](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L18)
+[lib/table/data/common/checkbox-column-def.ts:18](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L18)
 
 ___
 
@@ -125,7 +139,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/checkbox-column-def.ts:11](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L11)
+[lib/table/data/common/checkbox-column-def.ts:11](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L11)
 
 ___
 
@@ -133,10 +147,12 @@ ___
 
 • **width**: [`SizeIf`](../interfaces/SizeIf.md)
 
+Represents the size of a column along the width dimension.
+
 #### Implementation of
 
 [ColumnDefIf](../interfaces/ColumnDefIf.md).[width](../interfaces/ColumnDefIf.md#width)
 
 #### Defined in
 
-[lib/table/data/common/checkbox-column-def.ts:15](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L15)
+[lib/table/data/common/checkbox-column-def.ts:15](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L15)

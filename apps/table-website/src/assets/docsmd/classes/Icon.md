@@ -2,6 +2,16 @@
 
 # Class: Icon
 
+Represents an Icon with content, css style and css classes.
+
+Example:
+
+new Icon(
+   ">",
+   "transform: rotate(90deg) translate(66%, -66%); transform-origin: 0 0;",
+   ["gt-table-tree-arrow-expanded"]
+)
+
 ## Implements
 
 - [`IconIf`](../interfaces/IconIf.md)
@@ -38,7 +48,7 @@
 
 #### Defined in
 
-[lib/table/data/options/icon.ts:4](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/options/icon.ts#L4)
+[lib/table/data/options/icon.ts:4](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/icon.ts#L4)
 
 ## Properties
 
@@ -52,7 +62,7 @@
 
 #### Defined in
 
-[lib/table/data/options/icon.ts:7](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/options/icon.ts#L7)
+[lib/table/data/options/icon.ts:7](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/icon.ts#L7)
 
 ___
 
@@ -66,7 +76,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/icon.ts:5](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/options/icon.ts#L5)
+[lib/table/data/options/icon.ts:5](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/icon.ts#L5)
 
 ___
 
@@ -80,4 +90,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/icon.ts:6](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/options/icon.ts#L6)
+[lib/table/data/options/icon.ts:6](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/icon.ts#L6)

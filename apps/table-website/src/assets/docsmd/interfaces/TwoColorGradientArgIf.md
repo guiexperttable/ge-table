@@ -2,6 +2,8 @@
 
 # Interface: TwoColorGradientArgIf
 
+Interface representing arguments for a two-color gradient.
+
 ## Implemented by
 
 - [`TwoColorGradientArg`](../classes/TwoColorGradientArg.md)
@@ -23,7 +25,7 @@
 
 #### Defined in
 
-[lib/table/color/two-color-gradient-arg.if.ts:7](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/color/two-color-gradient-arg.if.ts#L7)
+[lib/table/color/two-color-gradient-arg.if.ts:11](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/color/two-color-gradient-arg.if.ts#L11)
 
 ___
 
@@ -33,7 +35,7 @@ ___
 
 #### Defined in
 
-[lib/table/color/two-color-gradient-arg.if.ts:6](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/color/two-color-gradient-arg.if.ts#L6)
+[lib/table/color/two-color-gradient-arg.if.ts:10](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/color/two-color-gradient-arg.if.ts#L10)
 
 ___
 
@@ -43,7 +45,7 @@ ___
 
 #### Defined in
 
-[lib/table/color/two-color-gradient-arg.if.ts:5](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/color/two-color-gradient-arg.if.ts#L5)
+[lib/table/color/two-color-gradient-arg.if.ts:9](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/color/two-color-gradient-arg.if.ts#L9)
 
 ___
 
@@ -53,4 +55,4 @@ ___
 
 #### Defined in
 
-[lib/table/color/two-color-gradient-arg.if.ts:4](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/color/two-color-gradient-arg.if.ts#L4)
+[lib/table/color/two-color-gradient-arg.if.ts:8](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/color/two-color-gradient-arg.if.ts#L8)

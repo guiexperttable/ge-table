@@ -2,6 +2,8 @@
 
 # Class: ColAndRowspanModel
 
+Represents a model for handling colspan and rowspan in a table.
+
 ## Table of contents
 
 ### Constructors
@@ -39,7 +41,7 @@
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/col-and-rowspan-model.ts:9](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/col-and-rowspan-model.ts#L9)
+[lib/table/data/tablemodel/areamodel/col-and-rowspan-model.ts:12](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/col-and-rowspan-model.ts#L12)
 
 ## Properties
 
@@ -49,7 +51,7 @@
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/col-and-rowspan-model.ts:11](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/col-and-rowspan-model.ts#L11)
+[lib/table/data/tablemodel/areamodel/col-and-rowspan-model.ts:14](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/col-and-rowspan-model.ts#L14)
 
 ___
 
@@ -59,7 +61,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/col-and-rowspan-model.ts:7](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/col-and-rowspan-model.ts#L7)
+[lib/table/data/tablemodel/areamodel/col-and-rowspan-model.ts:10](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/col-and-rowspan-model.ts#L10)
 
 ___
 
@@ -69,7 +71,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/col-and-rowspan-model.ts:10](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/col-and-rowspan-model.ts#L10)
+[lib/table/data/tablemodel/areamodel/col-and-rowspan-model.ts:13](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/col-and-rowspan-model.ts#L13)
 
 ## Methods
 
@@ -83,7 +85,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/col-and-rowspan-model.ts:43](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/col-and-rowspan-model.ts#L43)
+[lib/table/data/tablemodel/areamodel/col-and-rowspan-model.ts:46](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/col-and-rowspan-model.ts#L46)
 
 ___
 
@@ -97,7 +99,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/col-and-rowspan-model.ts:15](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/col-and-rowspan-model.ts#L15)
+[lib/table/data/tablemodel/areamodel/col-and-rowspan-model.ts:18](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/col-and-rowspan-model.ts#L18)
 
 ___
 
@@ -118,4 +120,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/col-and-rowspan-model.ts:50](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/areamodel/col-and-rowspan-model.ts#L50)
+[lib/table/data/tablemodel/areamodel/col-and-rowspan-model.ts:53](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/col-and-rowspan-model.ts#L53)

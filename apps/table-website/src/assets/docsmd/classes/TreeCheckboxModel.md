@@ -59,7 +59,7 @@
 
 #### Defined in
 
-[lib/table/checkbox/tree-checkbox-model.ts:9](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/checkbox/tree-checkbox-model.ts#L9)
+[lib/table/checkbox/tree-checkbox-model.ts:9](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/checkbox/tree-checkbox-model.ts#L9)
 
 ## Properties
 
@@ -69,7 +69,7 @@
 
 #### Defined in
 
-[lib/table/checkbox/tree-checkbox-model.ts:10](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/checkbox/tree-checkbox-model.ts#L10)
+[lib/table/checkbox/tree-checkbox-model.ts:10](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/checkbox/tree-checkbox-model.ts#L10)
 
 ## Methods
 
@@ -93,7 +93,7 @@
 
 #### Defined in
 
-[lib/table/checkbox/tree-checkbox-model.ts:56](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/checkbox/tree-checkbox-model.ts#L56)
+[lib/table/checkbox/tree-checkbox-model.ts:56](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/checkbox/tree-checkbox-model.ts#L56)
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 #### Defined in
 
-[lib/table/checkbox/tree-checkbox-model.ts:113](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/checkbox/tree-checkbox-model.ts#L113)
+[lib/table/checkbox/tree-checkbox-model.ts:113](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/checkbox/tree-checkbox-model.ts#L113)
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 #### Defined in
 
-[lib/table/checkbox/tree-checkbox-model.ts:78](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/checkbox/tree-checkbox-model.ts#L78)
+[lib/table/checkbox/tree-checkbox-model.ts:78](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/checkbox/tree-checkbox-model.ts#L78)
 
 ___
 
@@ -154,7 +154,7 @@ ___
 
 #### Defined in
 
-[lib/table/checkbox/tree-checkbox-model.ts:95](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/checkbox/tree-checkbox-model.ts#L95)
+[lib/table/checkbox/tree-checkbox-model.ts:95](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/checkbox/tree-checkbox-model.ts#L95)
 
 ___
 
@@ -174,7 +174,7 @@ ___
 
 #### Defined in
 
-[lib/table/checkbox/tree-checkbox-model.ts:62](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/checkbox/tree-checkbox-model.ts#L62)
+[lib/table/checkbox/tree-checkbox-model.ts:62](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/checkbox/tree-checkbox-model.ts#L62)
 
 ___
 
@@ -198,7 +198,7 @@ ___
 
 #### Defined in
 
-[lib/table/checkbox/tree-checkbox-model.ts:24](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/checkbox/tree-checkbox-model.ts#L24)
+[lib/table/checkbox/tree-checkbox-model.ts:24](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/checkbox/tree-checkbox-model.ts#L24)
 
 ___
 
@@ -223,7 +223,7 @@ ___
 
 #### Defined in
 
-[lib/table/checkbox/tree-checkbox-model.ts:14](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/checkbox/tree-checkbox-model.ts#L14)
+[lib/table/checkbox/tree-checkbox-model.ts:14](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/checkbox/tree-checkbox-model.ts#L14)
 
 ___
 
@@ -241,7 +241,7 @@ ___
 
 #### Defined in
 
-[lib/table/checkbox/tree-checkbox-model.ts:33](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/checkbox/tree-checkbox-model.ts#L33)
+[lib/table/checkbox/tree-checkbox-model.ts:33](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/checkbox/tree-checkbox-model.ts#L33)
 
 ___
 
@@ -265,7 +265,7 @@ ___
 
 #### Defined in
 
-[lib/table/checkbox/tree-checkbox-model.ts:39](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/checkbox/tree-checkbox-model.ts#L39)
+[lib/table/checkbox/tree-checkbox-model.ts:39](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/checkbox/tree-checkbox-model.ts#L39)
 
 ___
 
@@ -289,4 +289,4 @@ ___
 
 #### Defined in
 
-[lib/table/checkbox/tree-checkbox-model.ts:51](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/checkbox/tree-checkbox-model.ts#L51)
+[lib/table/checkbox/tree-checkbox-model.ts:51](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/checkbox/tree-checkbox-model.ts#L51)

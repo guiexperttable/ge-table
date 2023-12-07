@@ -2,6 +2,8 @@
 
 # Class: TableModelAndOptions
 
+Container object for one table model and one table options object.
+
 ## Implements
 
 - [`TableModelAndOptionsIf`](../interfaces/TableModelAndOptionsIf.md)
@@ -36,7 +38,7 @@
 
 #### Defined in
 
-[lib/table/data/table-model-and-options.ts:8](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/table-model-and-options.ts#L8)
+[lib/table/data/table-model-and-options.ts:11](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/table-model-and-options.ts#L11)
 
 ## Properties
 
@@ -50,7 +52,7 @@
 
 #### Defined in
 
-[lib/table/data/table-model-and-options.ts:9](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/table-model-and-options.ts#L9)
+[lib/table/data/table-model-and-options.ts:12](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/table-model-and-options.ts#L12)
 
 ___
 
@@ -64,4 +66,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/table-model-and-options.ts:10](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/table-model-and-options.ts#L10)
+[lib/table/data/table-model-and-options.ts:13](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/table-model-and-options.ts#L13)

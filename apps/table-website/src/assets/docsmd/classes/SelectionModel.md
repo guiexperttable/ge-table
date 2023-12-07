@@ -52,7 +52,7 @@
 
 #### Defined in
 
-[lib/table/selection/selection-model.ts:11](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/selection/selection-model.ts#L11)
+[lib/table/selection/selection-model.ts:11](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/selection/selection-model.ts#L11)
 
 ## Properties
 
@@ -62,7 +62,7 @@
 
 #### Defined in
 
-[lib/table/selection/selection-model.ts:9](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/selection/selection-model.ts#L9)
+[lib/table/selection/selection-model.ts:9](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/selection/selection-model.ts#L9)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[lib/table/selection/selection-model.ts:8](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/selection/selection-model.ts#L8)
+[lib/table/selection/selection-model.ts:8](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/selection/selection-model.ts#L8)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[lib/table/selection/selection-model.ts:7](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/selection/selection-model.ts#L7)
+[lib/table/selection/selection-model.ts:7](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/selection/selection-model.ts#L7)
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 #### Defined in
 
-[lib/table/selection/selection-model.ts:13](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/selection/selection-model.ts#L13)
+[lib/table/selection/selection-model.ts:13](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/selection/selection-model.ts#L13)
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 #### Defined in
 
-[lib/table/selection/selection-model.ts:12](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/selection/selection-model.ts#L12)
+[lib/table/selection/selection-model.ts:12](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/selection/selection-model.ts#L12)
 
 ## Methods
 
@@ -122,7 +122,7 @@ ___
 
 #### Defined in
 
-[lib/table/selection/selection-model.ts:86](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/selection/selection-model.ts#L86)
+[lib/table/selection/selection-model.ts:86](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/selection/selection-model.ts#L86)
 
 ___
 
@@ -146,7 +146,7 @@ ___
 
 #### Defined in
 
-[lib/table/selection/selection-model.ts:60](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/selection/selection-model.ts#L60)
+[lib/table/selection/selection-model.ts:60](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/selection/selection-model.ts#L60)
 
 ___
 
@@ -164,7 +164,7 @@ ___
 
 #### Defined in
 
-[lib/table/selection/selection-model.ts:46](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/selection/selection-model.ts#L46)
+[lib/table/selection/selection-model.ts:46](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/selection/selection-model.ts#L46)
 
 ___
 
@@ -182,7 +182,7 @@ ___
 
 #### Defined in
 
-[lib/table/selection/selection-model.ts:42](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/selection/selection-model.ts#L42)
+[lib/table/selection/selection-model.ts:42](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/selection/selection-model.ts#L42)
 
 ___
 
@@ -207,7 +207,7 @@ ___
 
 #### Defined in
 
-[lib/table/selection/selection-model.ts:17](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/selection/selection-model.ts#L17)
+[lib/table/selection/selection-model.ts:17](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/selection/selection-model.ts#L17)
 
 ___
 
@@ -225,7 +225,7 @@ ___
 
 #### Defined in
 
-[lib/table/selection/selection-model.ts:52](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/selection/selection-model.ts#L52)
+[lib/table/selection/selection-model.ts:52](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/selection/selection-model.ts#L52)
 
 ___
 
@@ -246,7 +246,7 @@ ___
 
 #### Defined in
 
-[lib/table/selection/selection-model.ts:33](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/selection/selection-model.ts#L33)
+[lib/table/selection/selection-model.ts:33](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/selection/selection-model.ts#L33)
 
 ___
 
@@ -270,7 +270,7 @@ ___
 
 #### Defined in
 
-[lib/table/selection/selection-model.ts:64](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/selection/selection-model.ts#L64)
+[lib/table/selection/selection-model.ts:64](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/selection/selection-model.ts#L64)
 
 ___
 
@@ -288,7 +288,7 @@ ___
 
 #### Defined in
 
-[lib/table/selection/selection-model.ts:56](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/selection/selection-model.ts#L56)
+[lib/table/selection/selection-model.ts:56](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/selection/selection-model.ts#L56)
 
 ___
 
@@ -313,4 +313,4 @@ ___
 
 #### Defined in
 
-[lib/table/selection/selection-model.ts:77](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/selection/selection-model.ts#L77)
+[lib/table/selection/selection-model.ts:77](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/selection/selection-model.ts#L77)

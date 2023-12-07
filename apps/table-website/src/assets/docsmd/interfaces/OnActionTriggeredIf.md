@@ -19,16 +19,20 @@
 
 ▸ **onActionTriggered**(`actionId`): `boolean`
 
+Triggers an action based on the provided action ID.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `actionId` | ``"START_EDITING"`` \| ``"TOGGLE_SELECTION"`` \| ``"SELECT_ALL"`` \| ``"DESELECT_ALL"`` \| ``"NAVIGATE_LEFT"`` \| ``"NAVIGATE_RIGHT"`` \| ``"NAVIGATE_UP"`` \| ``"NAVIGATE_DOWN"`` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `actionId` | ``"START_EDITING"`` \| ``"TOGGLE_SELECTION"`` \| ``"SELECT_ALL"`` \| ``"DESELECT_ALL"`` \| ``"NAVIGATE_LEFT"`` \| ``"NAVIGATE_RIGHT"`` \| ``"NAVIGATE_UP"`` \| ``"NAVIGATE_DOWN"`` | The ID of the action to be triggered. |
 
 #### Returns
 
 `boolean`
 
+- Returns true if the action was successfully triggered; otherwise, false.
+
 #### Defined in
 
-[lib/table/action/on-action-triggered.if.ts:5](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/action/on-action-triggered.if.ts#L5)
+[lib/table/action/on-action-triggered.if.ts:12](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/action/on-action-triggered.if.ts#L12)

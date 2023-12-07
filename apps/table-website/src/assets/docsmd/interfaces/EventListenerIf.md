@@ -2,6 +2,8 @@
 
 # Interface: EventListenerIf
 
+Interface representing an event listener.
+
 ## Implemented by
 
 - [`EventAdapter`](../classes/EventAdapter.md)
@@ -36,7 +38,7 @@
 
 #### Defined in
 
-[lib/table/event-listener.if.ts:16](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/event-listener.if.ts#L16)
+[lib/table/event-listener.if.ts:21](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/event-listener.if.ts#L21)
 
 ___
 
@@ -56,7 +58,7 @@ ___
 
 #### Defined in
 
-[lib/table/event-listener.if.ts:6](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/event-listener.if.ts#L6)
+[lib/table/event-listener.if.ts:11](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/event-listener.if.ts#L11)
 
 ___
 
@@ -76,7 +78,7 @@ ___
 
 #### Defined in
 
-[lib/table/event-listener.if.ts:18](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/event-listener.if.ts#L18)
+[lib/table/event-listener.if.ts:23](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/event-listener.if.ts#L23)
 
 ___
 
@@ -96,7 +98,7 @@ ___
 
 #### Defined in
 
-[lib/table/event-listener.if.ts:14](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/event-listener.if.ts#L14)
+[lib/table/event-listener.if.ts:19](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/event-listener.if.ts#L19)
 
 ___
 
@@ -116,7 +118,7 @@ ___
 
 #### Defined in
 
-[lib/table/event-listener.if.ts:12](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/event-listener.if.ts#L12)
+[lib/table/event-listener.if.ts:17](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/event-listener.if.ts#L17)
 
 ___
 
@@ -136,7 +138,7 @@ ___
 
 #### Defined in
 
-[lib/table/event-listener.if.ts:10](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/event-listener.if.ts#L10)
+[lib/table/event-listener.if.ts:15](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/event-listener.if.ts#L15)
 
 ___
 
@@ -156,4 +158,4 @@ ___
 
 #### Defined in
 
-[lib/table/event-listener.if.ts:8](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/event-listener.if.ts#L8)
+[lib/table/event-listener.if.ts:13](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/event-listener.if.ts#L13)

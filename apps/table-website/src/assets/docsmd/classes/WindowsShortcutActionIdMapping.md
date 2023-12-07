@@ -2,6 +2,8 @@
 
 # Class: WindowsShortcutActionIdMapping
 
+Class representing a mapping of Windows shortcut keys to action IDs.
+
 ## Table of contents
 
 ### Constructors
@@ -34,4 +36,4 @@
 
 #### Defined in
 
-[lib/table/action/windows-shortcut-actionId-mapping.ts:5](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/action/windows-shortcut-actionId-mapping.ts#L5)
+[lib/table/action/windows-shortcut-actionId-mapping.ts:8](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/action/windows-shortcut-actionId-mapping.ts#L8)

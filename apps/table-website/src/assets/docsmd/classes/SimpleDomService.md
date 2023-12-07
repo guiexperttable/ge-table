@@ -56,7 +56,7 @@
 
 #### Defined in
 
-[lib/table/service/simple-dom-service.ts:20](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/simple-dom-service.ts#L20)
+[lib/table/service/simple-dom-service.ts:20](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/simple-dom-service.ts#L20)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/simple-dom-service.ts:38](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/simple-dom-service.ts#L38)
+[lib/table/service/simple-dom-service.ts:38](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/simple-dom-service.ts#L38)
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/simple-dom-service.ts:13](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/simple-dom-service.ts#L13)
+[lib/table/service/simple-dom-service.ts:13](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/simple-dom-service.ts#L13)
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/simple-dom-service.ts:42](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/simple-dom-service.ts#L42)
+[lib/table/service/simple-dom-service.ts:42](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/simple-dom-service.ts#L42)
 
 ___
 
@@ -160,7 +160,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/simple-dom-service.ts:46](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/simple-dom-service.ts#L46)
+[lib/table/service/simple-dom-service.ts:46](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/simple-dom-service.ts#L46)
 
 ___
 
@@ -185,7 +185,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/simple-dom-service.ts:29](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/simple-dom-service.ts#L29)
+[lib/table/service/simple-dom-service.ts:29](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/simple-dom-service.ts#L29)
 
 ___
 
@@ -211,7 +211,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/simple-dom-service.ts:50](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/simple-dom-service.ts#L50)
+[lib/table/service/simple-dom-service.ts:50](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/simple-dom-service.ts#L50)
 
 ___
 
@@ -237,4 +237,4 @@ ___
 
 #### Defined in
 
-[lib/table/service/simple-dom-service.ts:7](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/simple-dom-service.ts#L7)
+[lib/table/service/simple-dom-service.ts:7](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/simple-dom-service.ts#L7)

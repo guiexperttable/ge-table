@@ -2,6 +2,8 @@
 
 # Interface: TableModelAndOptionsIf
 
+Interface for a container object for one table model and one table options object.
+
 ## Implemented by
 
 - [`TableModelAndOptions`](../classes/TableModelAndOptions.md)
@@ -21,7 +23,7 @@
 
 #### Defined in
 
-[lib/table/data/table-model-and-options.if.ts:6](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/table-model-and-options.if.ts#L6)
+[lib/table/data/table-model-and-options.if.ts:9](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/table-model-and-options.if.ts#L9)
 
 ___
 
@@ -31,4 +33,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/table-model-and-options.if.ts:7](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/table-model-and-options.if.ts#L7)
+[lib/table/data/table-model-and-options.if.ts:10](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/table-model-and-options.if.ts#L10)

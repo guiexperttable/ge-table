@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[lib/table/data/common/value-label.if.ts:4](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/value-label.if.ts#L4)
+[lib/table/data/common/value-label.if.ts:4](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/value-label.if.ts#L4)
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/value-label.if.ts:3](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/value-label.if.ts#L3)
+[lib/table/data/common/value-label.if.ts:3](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/value-label.if.ts#L3)

@@ -36,7 +36,7 @@
 
 #### Defined in
 
-[lib/table/service/data/collapsed-expanded.data.ts:3](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/data/collapsed-expanded.data.ts#L3)
+[lib/table/service/data/collapsed-expanded.data.ts:3](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/data/collapsed-expanded.data.ts#L3)
 
 ## Properties
 
@@ -46,7 +46,7 @@
 
 #### Defined in
 
-[lib/table/service/data/collapsed-expanded.data.ts:6](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/data/collapsed-expanded.data.ts#L6)
+[lib/table/service/data/collapsed-expanded.data.ts:6](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/data/collapsed-expanded.data.ts#L6)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/data/collapsed-expanded.data.ts:7](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/data/collapsed-expanded.data.ts#L7)
+[lib/table/service/data/collapsed-expanded.data.ts:7](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/data/collapsed-expanded.data.ts#L7)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/data/collapsed-expanded.data.ts:4](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/data/collapsed-expanded.data.ts#L4)
+[lib/table/service/data/collapsed-expanded.data.ts:4](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/data/collapsed-expanded.data.ts#L4)
 
 ___
 
@@ -76,4 +76,4 @@ ___
 
 #### Defined in
 
-[lib/table/service/data/collapsed-expanded.data.ts:5](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/data/collapsed-expanded.data.ts#L5)
+[lib/table/service/data/collapsed-expanded.data.ts:5](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/data/collapsed-expanded.data.ts#L5)

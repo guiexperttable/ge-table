@@ -50,7 +50,7 @@
 
 #### Defined in
 
-[lib/table/data/common/area-map.ts:5](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/area-map.ts#L5)
+[lib/table/data/common/area-map.ts:5](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/area-map.ts#L5)
 
 ## Properties
 
@@ -64,7 +64,7 @@ AreaObjectMapType.body
 
 #### Defined in
 
-[lib/table/data/common/area-map.ts:7](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/area-map.ts#L7)
+[lib/table/data/common/area-map.ts:7](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/area-map.ts#L7)
 
 ___
 
@@ -78,7 +78,7 @@ AreaObjectMapType.footer
 
 #### Defined in
 
-[lib/table/data/common/area-map.ts:8](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/area-map.ts#L8)
+[lib/table/data/common/area-map.ts:8](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/area-map.ts#L8)
 
 ___
 
@@ -92,4 +92,4 @@ AreaObjectMapType.header
 
 #### Defined in
 
-[lib/table/data/common/area-map.ts:6](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/area-map.ts#L6)
+[lib/table/data/common/area-map.ts:6](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/area-map.ts#L6)

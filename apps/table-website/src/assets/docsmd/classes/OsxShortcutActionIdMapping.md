@@ -2,6 +2,8 @@
 
 # Class: OsxShortcutActionIdMapping
 
+Class representing the mapping of OS X shortcut actions to action IDs.
+
 ## Table of contents
 
 ### Constructors
@@ -34,4 +36,4 @@
 
 #### Defined in
 
-[lib/table/action/osx-shortcut-actionId-mapping.ts:5](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/action/osx-shortcut-actionId-mapping.ts#L5)
+[lib/table/action/osx-shortcut-actionId-mapping.ts:10](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/action/osx-shortcut-actionId-mapping.ts#L10)

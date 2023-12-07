@@ -2,6 +2,8 @@
 
 # Class: ColumnDef
 
+Represents a column definition for one column of the table.
+
 ## Implements
 
 - [`ColumnDefIf`](../interfaces/ColumnDefIf.md)
@@ -70,7 +72,7 @@
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:17](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L17)
+[lib/table/data/tablemodel/column/column-def.ts:21](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L21)
 
 ## Properties
 
@@ -78,13 +80,15 @@
 
 • **classes**: [`AreaObjectMapType`](../modules.md#areaobjectmaptype)\<`string`[]\>
 
+Represents an object that maps an area to a collection of objects.
+
 #### Implementation of
 
 [ColumnDefIf](../interfaces/ColumnDefIf.md).[classes](../interfaces/ColumnDefIf.md#classes)
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:21](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L21)
+[lib/table/data/tablemodel/column/column-def.ts:25](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L25)
 
 ___
 
@@ -92,13 +96,15 @@ ___
 
 • `Optional` **editInputPipe**: [`editInputPipe`](../interfaces/editInputPipe.md)
 
+Represents an edit input pipe.
+
 #### Implementation of
 
 [ColumnDefIf](../interfaces/ColumnDefIf.md).[editInputPipe](../interfaces/ColumnDefIf.md#editinputpipe)
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:32](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L32)
+[lib/table/data/tablemodel/column/column-def.ts:36](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L36)
 
 ___
 
@@ -106,13 +112,19 @@ ___
 
 • `Optional` **editable**: [`BooleanFunction`](../modules.md#booleanfunction)
 
+Determines if a column is editable or not.
+
+**`Param`**
+
+The variable to check.
+
 #### Implementation of
 
 [ColumnDefIf](../interfaces/ColumnDefIf.md).[editable](../interfaces/ColumnDefIf.md#editable)
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:30](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L30)
+[lib/table/data/tablemodel/column/column-def.ts:34](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L34)
 
 ___
 
@@ -120,13 +132,25 @@ ___
 
 • `Optional` **getEditRenderer**: [`GetEditRenderer`](../modules.md#geteditrenderer)
 
+Retrieves the edit renderer for the column.
+
+**`Name`**
+
+getEditRenderer
+
+**`Function`**
+
+**`Param`**
+
+The element for which to retrieve the edit renderer.
+
 #### Implementation of
 
 [ColumnDefIf](../interfaces/ColumnDefIf.md).[getEditRenderer](../interfaces/ColumnDefIf.md#geteditrenderer)
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:31](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L31)
+[lib/table/data/tablemodel/column/column-def.ts:35](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L35)
 
 ___
 
@@ -134,13 +158,15 @@ ___
 
 • **headerLabel**: `string`
 
+Represents the label for a header.
+
 #### Implementation of
 
 [ColumnDefIf](../interfaces/ColumnDefIf.md).[headerLabel](../interfaces/ColumnDefIf.md#headerlabel)
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:19](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L19)
+[lib/table/data/tablemodel/column/column-def.ts:23](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L23)
 
 ___
 
@@ -148,13 +174,15 @@ ___
 
 • **isVisible**: [`BooleanFunction`](../modules.md#booleanfunction)
 
+Determines if the column is visible or not.
+
 #### Implementation of
 
 [ColumnDefIf](../interfaces/ColumnDefIf.md).[isVisible](../interfaces/ColumnDefIf.md#isvisible)
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:33](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L33)
+[lib/table/data/tablemodel/column/column-def.ts:37](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L37)
 
 ___
 
@@ -162,13 +190,15 @@ ___
 
 • **maxWidth**: [`SizeIf`](../interfaces/SizeIf.md)
 
+Represents the maximum width of a column.
+
 #### Implementation of
 
 [ColumnDefIf](../interfaces/ColumnDefIf.md).[maxWidth](../interfaces/ColumnDefIf.md#maxwidth)
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:24](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L24)
+[lib/table/data/tablemodel/column/column-def.ts:28](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L28)
 
 ___
 
@@ -176,13 +206,15 @@ ___
 
 • **minWidth**: [`SizeIf`](../interfaces/SizeIf.md)
 
+Represents the minimum width of a column.
+
 #### Implementation of
 
 [ColumnDefIf](../interfaces/ColumnDefIf.md).[minWidth](../interfaces/ColumnDefIf.md#minwidth)
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:23](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L23)
+[lib/table/data/tablemodel/column/column-def.ts:27](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L27)
 
 ___
 
@@ -190,13 +222,15 @@ ___
 
 • **property**: `string`
 
+Represents a property name of the table row element.
+
 #### Implementation of
 
 [ColumnDefIf](../interfaces/ColumnDefIf.md).[property](../interfaces/ColumnDefIf.md#property)
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:18](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L18)
+[lib/table/data/tablemodel/column/column-def.ts:22](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L22)
 
 ___
 
@@ -204,13 +238,15 @@ ___
 
 • **rendererMap**: [`AreaObjectMapType`](../modules.md#areaobjectmaptype)\<[`CellRendererIf`](../interfaces/CellRendererIf.md)\>
 
+**`Template`**
+
 #### Implementation of
 
 [ColumnDefIf](../interfaces/ColumnDefIf.md).[rendererMap](../interfaces/ColumnDefIf.md#renderermap)
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:22](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L22)
+[lib/table/data/tablemodel/column/column-def.ts:26](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L26)
 
 ___
 
@@ -245,7 +281,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:26](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L26)
+[lib/table/data/tablemodel/column/column-def.ts:30](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L30)
 
 ___
 
@@ -253,13 +289,15 @@ ___
 
 • `Optional` **sortIconVisible**: [`BooleanFunction`](../modules.md#booleanfunction)
 
+Determines if the sort icon is visible.
+
 #### Implementation of
 
 [ColumnDefIf](../interfaces/ColumnDefIf.md).[sortIconVisible](../interfaces/ColumnDefIf.md#sorticonvisible)
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:29](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L29)
+[lib/table/data/tablemodel/column/column-def.ts:33](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L33)
 
 ___
 
@@ -267,13 +305,15 @@ ___
 
 • `Optional` **sortState**: [`SortState`](../modules.md#sortstate)
 
+Represents the state of sorting for a list.
+
 #### Implementation of
 
 [ColumnDefIf](../interfaces/ColumnDefIf.md).[sortState](../interfaces/ColumnDefIf.md#sortstate)
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:27](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L27)
+[lib/table/data/tablemodel/column/column-def.ts:31](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L31)
 
 ___
 
@@ -281,13 +321,15 @@ ___
 
 • `Optional` **sortStatesOrder**: [`SortState`](../modules.md#sortstate)[]
 
+Represents the order of multiple sort states.
+
 #### Implementation of
 
 [ColumnDefIf](../interfaces/ColumnDefIf.md).[sortStatesOrder](../interfaces/ColumnDefIf.md#sortstatesorder)
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:28](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L28)
+[lib/table/data/tablemodel/column/column-def.ts:32](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L32)
 
 ___
 
@@ -295,13 +337,19 @@ ___
 
 • `Optional` **sortable**: [`BooleanFunction`](../modules.md#booleanfunction)
 
+Determines whether or not a column can be sorted.
+
+**`Param`**
+
+Specifies if an item is sortable.
+
 #### Implementation of
 
 [ColumnDefIf](../interfaces/ColumnDefIf.md).[sortable](../interfaces/ColumnDefIf.md#sortable)
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:25](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L25)
+[lib/table/data/tablemodel/column/column-def.ts:29](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L29)
 
 ___
 
@@ -311,7 +359,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:15](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L15)
+[lib/table/data/tablemodel/column/column-def.ts:19](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L19)
 
 ___
 
@@ -319,13 +367,15 @@ ___
 
 • **width**: [`SizeIf`](../interfaces/SizeIf.md)
 
+Represents the size of a column along the width dimension.
+
 #### Implementation of
 
 [ColumnDefIf](../interfaces/ColumnDefIf.md).[width](../interfaces/ColumnDefIf.md#width)
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:20](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L20)
+[lib/table/data/tablemodel/column/column-def.ts:24](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L24)
 
 ## Methods
 
@@ -345,7 +395,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:37](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L37)
+[lib/table/data/tablemodel/column/column-def.ts:41](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L41)
 
 ___
 
@@ -385,4 +435,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:45](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L45)
+[lib/table/data/tablemodel/column/column-def.ts:49](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L49)

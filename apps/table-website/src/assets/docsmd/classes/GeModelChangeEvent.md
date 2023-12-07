@@ -34,7 +34,7 @@
 
 #### Defined in
 
-[lib/table/data/common/event/ge-model-change-event.ts:5](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/event/ge-model-change-event.ts#L5)
+[lib/table/data/common/event/ge-model-change-event.ts:5](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/event/ge-model-change-event.ts#L5)
 
 ## Properties
 
@@ -44,7 +44,7 @@
 
 #### Defined in
 
-[lib/table/data/common/event/ge-model-change-event.ts:6](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/event/ge-model-change-event.ts#L6)
+[lib/table/data/common/event/ge-model-change-event.ts:6](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/event/ge-model-change-event.ts#L6)
 
 ## Methods
 
@@ -65,4 +65,4 @@
 
 #### Defined in
 
-[lib/table/data/common/event/ge-model-change-event.ts:10](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/event/ge-model-change-event.ts#L10)
+[lib/table/data/common/event/ge-model-change-event.ts:10](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/event/ge-model-change-event.ts#L10)

@@ -42,7 +42,7 @@
 
 #### Defined in
 
-[lib/table/data/common/event/input/table-cell-update-event.ts:6](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/event/input/table-cell-update-event.ts#L6)
+[lib/table/data/common/event/input/table-cell-update-event.ts:6](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/event/input/table-cell-update-event.ts#L6)
 
 ## Properties
 
@@ -56,7 +56,7 @@
 
 #### Defined in
 
-[lib/table/data/common/event/input/table-cell-update-event.ts:7](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/event/input/table-cell-update-event.ts#L7)
+[lib/table/data/common/event/input/table-cell-update-event.ts:7](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/event/input/table-cell-update-event.ts#L7)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/event/input/table-cell-update-event.ts:9](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/event/input/table-cell-update-event.ts#L9)
+[lib/table/data/common/event/input/table-cell-update-event.ts:9](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/event/input/table-cell-update-event.ts#L9)
 
 ___
 
@@ -88,7 +88,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/event/input/table-cell-update-event.ts:11](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/event/input/table-cell-update-event.ts#L11)
+[lib/table/data/common/event/input/table-cell-update-event.ts:11](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/event/input/table-cell-update-event.ts#L11)
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/event/input/table-cell-update-event.ts:8](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/event/input/table-cell-update-event.ts#L8)
+[lib/table/data/common/event/input/table-cell-update-event.ts:8](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/event/input/table-cell-update-event.ts#L8)
 
 ___
 
@@ -116,4 +116,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/event/input/table-cell-update-event.ts:10](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/common/event/input/table-cell-update-event.ts#L10)
+[lib/table/data/common/event/input/table-cell-update-event.ts:10](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/event/input/table-cell-update-event.ts#L10)

@@ -56,7 +56,7 @@ AbstractStoreStateService.constructor
 
 #### Defined in
 
-[lib/table/service/store-state-collapsed-expand.service.ts:12](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/store-state-collapsed-expand.service.ts#L12)
+[lib/table/service/store-state-collapsed-expand.service.ts:12](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/store-state-collapsed-expand.service.ts#L12)
 
 ## Properties
 
@@ -66,7 +66,7 @@ AbstractStoreStateService.constructor
 
 #### Defined in
 
-[lib/table/service/store-state-collapsed-expand.service.ts:8](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/store-state-collapsed-expand.service.ts#L8)
+[lib/table/service/store-state-collapsed-expand.service.ts:8](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/store-state-collapsed-expand.service.ts#L8)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/store-state-collapsed-expand.service.ts:9](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/store-state-collapsed-expand.service.ts#L9)
+[lib/table/service/store-state-collapsed-expand.service.ts:9](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/store-state-collapsed-expand.service.ts#L9)
 
 ___
 
@@ -90,7 +90,7 @@ AbstractStoreStateService.getStorageKeyFn
 
 #### Defined in
 
-[lib/table/service/abstract-store-state.service.ts:7](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/abstract-store-state.service.ts#L7)
+[lib/table/service/abstract-store-state.service.ts:7](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/abstract-store-state.service.ts#L7)
 
 ## Methods
 
@@ -114,7 +114,7 @@ AbstractStoreStateService.autoConvertMapToObject
 
 #### Defined in
 
-[lib/table/service/abstract-store-state.service.ts:14](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/abstract-store-state.service.ts#L14)
+[lib/table/service/abstract-store-state.service.ts:14](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/abstract-store-state.service.ts#L14)
 
 ___
 
@@ -139,7 +139,7 @@ AbstractStoreStateService.checkAndPersistItem
 
 #### Defined in
 
-[lib/table/service/abstract-store-state.service.ts:35](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/abstract-store-state.service.ts#L35)
+[lib/table/service/abstract-store-state.service.ts:35](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/abstract-store-state.service.ts#L35)
 
 ___
 
@@ -153,7 +153,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/store-state-collapsed-expand.service.ts:19](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/store-state-collapsed-expand.service.ts#L19)
+[lib/table/service/store-state-collapsed-expand.service.ts:19](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/store-state-collapsed-expand.service.ts#L19)
 
 ___
 
@@ -173,7 +173,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/store-state-collapsed-expand.service.ts:23](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/store-state-collapsed-expand.service.ts#L23)
+[lib/table/service/store-state-collapsed-expand.service.ts:23](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/store-state-collapsed-expand.service.ts#L23)
 
 ___
 
@@ -193,7 +193,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/store-state-collapsed-expand.service.ts:48](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/store-state-collapsed-expand.service.ts#L48)
+[lib/table/service/store-state-collapsed-expand.service.ts:48](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/store-state-collapsed-expand.service.ts#L48)
 
 ___
 
@@ -213,7 +213,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/store-state-collapsed-expand.service.ts:28](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/store-state-collapsed-expand.service.ts#L28)
+[lib/table/service/store-state-collapsed-expand.service.ts:28](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/store-state-collapsed-expand.service.ts#L28)
 
 ___
 
@@ -233,7 +233,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/store-state-collapsed-expand.service.ts:37](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/store-state-collapsed-expand.service.ts#L37)
+[lib/table/service/store-state-collapsed-expand.service.ts:37](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/store-state-collapsed-expand.service.ts#L37)
 
 ___
 
@@ -251,7 +251,7 @@ AbstractStoreStateService.load
 
 #### Defined in
 
-[lib/table/service/store-state-collapsed-expand.service.ts:57](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/store-state-collapsed-expand.service.ts#L57)
+[lib/table/service/store-state-collapsed-expand.service.ts:57](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/store-state-collapsed-expand.service.ts#L57)
 
 ___
 
@@ -281,7 +281,7 @@ AbstractStoreStateService.loadFromLocalStorage
 
 #### Defined in
 
-[lib/table/service/abstract-store-state.service.ts:60](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/abstract-store-state.service.ts#L60)
+[lib/table/service/abstract-store-state.service.ts:60](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/abstract-store-state.service.ts#L60)
 
 ___
 
@@ -295,7 +295,7 @@ ___
 
 #### Defined in
 
-[lib/table/service/store-state-collapsed-expand.service.ts:71](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/store-state-collapsed-expand.service.ts#L71)
+[lib/table/service/store-state-collapsed-expand.service.ts:71](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/store-state-collapsed-expand.service.ts#L71)
 
 ___
 
@@ -320,4 +320,4 @@ AbstractStoreStateService.persistItem
 
 #### Defined in
 
-[lib/table/service/abstract-store-state.service.ts:52](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/service/abstract-store-state.service.ts#L52)
+[lib/table/service/abstract-store-state.service.ts:52](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/abstract-store-state.service.ts#L52)

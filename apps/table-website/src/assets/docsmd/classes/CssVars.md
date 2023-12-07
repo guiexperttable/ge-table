@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[lib/table/css-vars.ts:4](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/css-vars.ts#L4)
+[lib/table/css-vars.ts:4](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/css-vars.ts#L4)
 
 ___
 
@@ -50,4 +50,4 @@ ___
 
 #### Defined in
 
-[lib/table/css-vars.ts:6](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/css-vars.ts#L6)
+[lib/table/css-vars.ts:6](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/css-vars.ts#L6)

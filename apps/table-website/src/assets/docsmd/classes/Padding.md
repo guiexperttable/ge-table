@@ -2,6 +2,8 @@
 
 # Class: Padding
 
+Represents padding values for the top, right, bottom, and left sides of an element.
+
 ## Table of contents
 
 ### Constructors
@@ -36,7 +38,7 @@
 
 #### Defined in
 
-[lib/table/data/tablemodel/padding.ts:2](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/padding.ts#L2)
+[lib/table/data/tablemodel/padding.ts:5](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/padding.ts#L5)
 
 ## Properties
 
@@ -46,7 +48,7 @@
 
 #### Defined in
 
-[lib/table/data/tablemodel/padding.ts:5](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/padding.ts#L5)
+[lib/table/data/tablemodel/padding.ts:8](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/padding.ts#L8)
 
 ___
 
@@ -56,7 +58,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/padding.ts:6](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/padding.ts#L6)
+[lib/table/data/tablemodel/padding.ts:9](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/padding.ts#L9)
 
 ___
 
@@ -66,7 +68,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/padding.ts:4](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/padding.ts#L4)
+[lib/table/data/tablemodel/padding.ts:7](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/padding.ts#L7)
 
 ___
 
@@ -76,4 +78,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/padding.ts:3](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/tablemodel/padding.ts#L3)
+[lib/table/data/tablemodel/padding.ts:6](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/padding.ts#L6)

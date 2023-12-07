@@ -56,7 +56,7 @@ Works with AreaModelObjectArray only
 
 #### Defined in
 
-[lib/table/renderer/checkbox-boolean-property-cell-renderer.ts:12](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/renderer/checkbox-boolean-property-cell-renderer.ts#L12)
+[lib/table/renderer/checkbox-boolean-property-cell-renderer.ts:12](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/renderer/checkbox-boolean-property-cell-renderer.ts#L12)
 
 ## Properties
 
@@ -66,7 +66,7 @@ Works with AreaModelObjectArray only
 
 #### Defined in
 
-[lib/table/renderer/checkbox-boolean-property-cell-renderer.ts:13](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/renderer/checkbox-boolean-property-cell-renderer.ts#L13)
+[lib/table/renderer/checkbox-boolean-property-cell-renderer.ts:13](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/renderer/checkbox-boolean-property-cell-renderer.ts#L13)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[lib/table/renderer/checkbox-boolean-property-cell-renderer.ts:15](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/renderer/checkbox-boolean-property-cell-renderer.ts#L15)
+[lib/table/renderer/checkbox-boolean-property-cell-renderer.ts:15](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/renderer/checkbox-boolean-property-cell-renderer.ts#L15)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[lib/table/renderer/checkbox-boolean-property-cell-renderer.ts:14](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/renderer/checkbox-boolean-property-cell-renderer.ts#L14)
+[lib/table/renderer/checkbox-boolean-property-cell-renderer.ts:14](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/renderer/checkbox-boolean-property-cell-renderer.ts#L14)
 
 ## Methods
 
@@ -116,4 +116,4 @@ ___
 
 #### Defined in
 
-[lib/table/renderer/checkbox-boolean-property-cell-renderer.ts:19](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/renderer/checkbox-boolean-property-cell-renderer.ts#L19)
+[lib/table/renderer/checkbox-boolean-property-cell-renderer.ts:19](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/renderer/checkbox-boolean-property-cell-renderer.ts#L19)

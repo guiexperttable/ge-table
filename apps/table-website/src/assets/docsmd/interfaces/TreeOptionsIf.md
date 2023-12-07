@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[lib/table/data/options/tree-options.if.ts:7](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/options/tree-options.if.ts#L7)
+[lib/table/data/options/tree-options.if.ts:7](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/tree-options.if.ts#L7)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/tree-options.if.ts:5](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/options/tree-options.if.ts#L5)
+[lib/table/data/options/tree-options.if.ts:5](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/tree-options.if.ts#L5)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/tree-options.if.ts:6](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/options/tree-options.if.ts#L6)
+[lib/table/data/options/tree-options.if.ts:6](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/tree-options.if.ts#L6)
 
 ___
 
@@ -53,4 +53,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/tree-options.if.ts:8](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/options/tree-options.if.ts#L8)
+[lib/table/data/options/tree-options.if.ts:8](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/tree-options.if.ts#L8)

@@ -2,6 +2,12 @@
 
 # Class: InputHandler
 
+Class representing an input handler for table input fields (HTMLSelectElement, HTMLTextAreaElement, HTMLInputElement).
+
+**`Member Of`**
+
+module:input
+
 ## Table of contents
 
 ### Constructors
@@ -34,7 +40,7 @@
 
 #### Defined in
 
-[lib/table/input-handler.ts:7](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/input-handler.ts#L7)
+[lib/table/input-handler.ts:13](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/input-handler.ts#L13)
 
 ## Properties
 
@@ -44,7 +50,7 @@
 
 #### Defined in
 
-[lib/table/input-handler.ts:8](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/input-handler.ts#L8)
+[lib/table/input-handler.ts:14](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/input-handler.ts#L14)
 
 ## Methods
 
@@ -52,11 +58,14 @@
 
 ▸ **onHostElementChanged**(`event`): `void`
 
+Handles the onHostElementChanged event.
+In case that the element is an input field, the tableScope.updateModelValueAfterEdit() method is triggered.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `event` | `Event` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `event` | `Event` | The event object. |
 
 #### Returns
 
@@ -64,4 +73,4 @@
 
 #### Defined in
 
-[lib/table/input-handler.ts:14](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/input-handler.ts#L14)
+[lib/table/input-handler.ts:28](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/input-handler.ts#L28)

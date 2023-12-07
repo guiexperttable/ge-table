@@ -2,6 +2,8 @@
 
 # Class: SortedOptions
 
+Represents a class that defines sorted icons, which will displayed in the header (if column is sortable).
+
 ## Implements
 
 - [`SortedOptionsIf`](../interfaces/SortedOptionsIf.md)
@@ -38,7 +40,7 @@
 
 #### Defined in
 
-[lib/table/data/options/sorted-options.ts:7](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/options/sorted-options.ts#L7)
+[lib/table/data/options/sorted-options.ts:7](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/sorted-options.ts#L7)
 
 ## Properties
 
@@ -52,7 +54,7 @@
 
 #### Defined in
 
-[lib/table/data/options/sorted-options.ts:8](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/options/sorted-options.ts#L8)
+[lib/table/data/options/sorted-options.ts:8](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/sorted-options.ts#L8)
 
 ___
 
@@ -66,7 +68,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/sorted-options.ts:9](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/options/sorted-options.ts#L9)
+[lib/table/data/options/sorted-options.ts:9](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/sorted-options.ts#L9)
 
 ___
 
@@ -80,4 +82,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/sorted-options.ts:10](https://github.com/guiexperttable/ge-table/blob/7d8ffe2/libs/table/src/lib/table/data/options/sorted-options.ts#L10)
+[lib/table/data/options/sorted-options.ts:10](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/sorted-options.ts#L10)
