@@ -1,3 +1,6 @@
+/**
+ * Represents the indices (position) of a cell in a table area.
+ */
 export class GeCellIndices {
 
   constructor(

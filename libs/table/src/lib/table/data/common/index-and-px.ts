@@ -1,3 +1,6 @@
+/**
+ * Represents an index and pixel value pair.
+ */
 export class IndexAndPx {
 
   constructor(

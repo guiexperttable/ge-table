@@ -1,6 +1,9 @@
 import { AreaIdent } from "../../tablemodel/area-ident.type";
 import { SideIdent } from "../../side-ident.type";
 
+/**
+ * Represents a mouse event in the table.
+ */
 export class GeMouseEvent {
 
 

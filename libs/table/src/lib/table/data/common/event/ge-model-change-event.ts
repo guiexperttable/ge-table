@@ -1,5 +1,8 @@
 import { GeCellIndices } from "./ge-cell-indices";
 
+/**
+ * Indicates that changes have occurred in the given cells.
+ */
 export class GeModelChangeEvent {
 
   constructor(

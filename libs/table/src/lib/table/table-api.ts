@@ -1,6 +1,6 @@
-import { TableScope } from "./table-scope";
-import { ColumnDefIf } from "./data/tablemodel/column/column-def.if";
-import { TableCellUpdateEventIf } from "./data/common/event/input/table-cell-update-event.if";
+import {TableScope} from "./table-scope";
+import {ColumnDefIf} from "./data/tablemodel/column/column-def.if";
+import {TableCellUpdateEventIf} from "./data/common/event/input/table-cell-update-event.if";
 
 
 export class TableApi {
@@ -15,7 +15,7 @@ export class TableApi {
    * Updates the cells in the table based on the provided events.
    *
    * @param {TableCellUpdateEventIf[]} events - The array of events representing the updates to perform on the cells.
-   * @param {boolean} [repaintAll=false] - Optional parameter indicating whether to repaint all cells or not. Default value is false.
+   * @param {boolean} [repaintAll=false] - Optional parameter indicating whether to repaint all cells or not. Default value is false. If true, the full table will be rendered. If false, the table cell will be rendered immediately.
    *
    * @return {void} - This method doesn't return anything.
    */

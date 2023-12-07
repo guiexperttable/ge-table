@@ -1,3 +1,8 @@
+/**
+ * Represents a keyboard event.
+ *
+ * @class GeKeyEvent
+ */
 export class GeKeyEvent {
 
   constructor(

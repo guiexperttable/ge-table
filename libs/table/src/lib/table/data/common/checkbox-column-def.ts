@@ -6,6 +6,11 @@ import { CheckboxCellRenderer } from "../../renderer/checkbox-cell-renderer";
 import { AreaObjectMapType } from "./area-map.type";
 import { AreaObjectMap } from "./area-map";
 
+/**
+ * A pre-defined column definition for a checkbox representation.
+ *
+ * @implements {ColumnDefIf}
+ */
 export class CheckboxColumnDef implements ColumnDefIf {
 
   public type = 'CheckboxColumnDef';

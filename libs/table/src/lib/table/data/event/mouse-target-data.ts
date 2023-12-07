@@ -2,6 +2,9 @@ import { AreaIdent, getAreaIdentByString } from "../tablemodel/area-ident.type";
 import { AreaModelIf } from "../tablemodel/areamodel/area-model.if";
 import { TableScope } from "../../table-scope";
 
+/**
+ * Represents data about a mouse target. It's a helper class to extract all information from the target HTMLElement.
+ */
 export class MouseTargetData {
 
   rowIdx: number = -1;

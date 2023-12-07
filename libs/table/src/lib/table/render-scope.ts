@@ -504,6 +504,7 @@ export class RenderScope extends EleScope {
         gammaRange:range.gammaRange
       });
     } else {
+
       this.renderCell({
         areaModel,
         areaIdent: areaModel.areaIdent,
@@ -680,7 +681,8 @@ export class RenderScope extends EleScope {
       height,
       top,
       parent,
-      lastRowOfModel
+      lastRowOfModel,
+      gammaRange
     }: ArgsRenderCellDiv): [HTMLDivElement, RendererCleanupFnType | undefined] {
 
 
@@ -956,7 +958,7 @@ export class RenderScope extends EleScope {
       top,
       parent,
       lastRowOfModel,
-      gammaRange: gammaRange
+      gammaRange
     });
     if (cellSelected) {
       this.dom.addClass(`ge-table-${areaIdent}-${sideIdent}-selected-range`, div);
