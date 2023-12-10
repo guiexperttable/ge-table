@@ -14,11 +14,13 @@ export const headerGroups: CellGroupIf[] = [
         children: [
           {
             data: "Gold A",
-            property: "GOLD_A"
+            property: "GOLD_A",
+            visibility: "inverted"
           },
           {
             data: "Gold B",
-            property: "GOLD_B"
+            property: "GOLD_B",
+            visibility: "inverted"
           }
         ]
       },

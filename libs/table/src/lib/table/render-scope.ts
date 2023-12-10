@@ -682,7 +682,7 @@ export class RenderScope extends EleScope {
       top,
       parent,
       lastRowOfModel,
-      gammaRange
+      gammaRange: _gammaRange
     }: ArgsRenderCellDiv): [HTMLDivElement, RendererCleanupFnType | undefined] {
 
 
