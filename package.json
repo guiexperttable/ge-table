@@ -68,6 +68,7 @@
     "docker:compose:build": "docker compose build",
     "docker:compose:up": "docker compose up",
     "docker:compose:up-and-build": "docker compose up --build",
+    "npm-login": "npm login guiexpert",
     "npm-pub:table": "npm publish dist/libs/table --access public",
     "npm-pub:angular-table": "npm publish dist/libs/angular-table --access public",
     "npm-pub:demo-table-models": "npm publish dist/libs/demo-table-models --access public",
