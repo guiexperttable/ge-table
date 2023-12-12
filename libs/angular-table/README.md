@@ -8,6 +8,18 @@ This is the UI-agnostic table component for your next web app. 😊
 
 <img src="https://raw.githubusercontent.com/guiexperttable/ge-table/main/apps/table-website/src/assets/screens/heatmap.png" width="50%">
 
+### Version compatibility
+
+
+| Angular                | @guiexpert/angular-table |
+|:-----------------------|:-------------------------|
+| 17.x.x                 | ^17.0.0                  |
+| 16.x.x                 | ^16.0.7                  |
+| 15.x.x                 | ^15.0.2                  |
+| 14.x.x                 | ^14.0.3                  |
+  |
+
+
 ### Features
 - Handle large datasets easily
 - Excellent performance for large tables by vertical and horizontal virtual scrolling
