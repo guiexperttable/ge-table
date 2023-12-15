@@ -595,6 +595,31 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
       }
     }
   }
+
+  /**
+   * Scrolls the viewport to the specified pixel coordinates.
+   *
+   * @param {number} px - The horizontal pixel coordinate to scroll to.
+   * @param {number} py - The vertical pixel coordinate to scroll to.
+   *
+   * @return {void}
+   */
+  scrollToPixel(px: number, py: number) {
+    this.scrollViewport.scrollTo(px, py);
+  }
+
+  /**
+   * Scrolls to the specified index in the table.
+   *
+   * @param {number} _indexX - The horizontal index of the table where scrolling is needed.
+   * @param {number} indexY - The vertical index of the table where scrolling is needed.
+   * @return {void}
+   */
+  scrollToIndex(_indexX: number, indexY: number) {
+    const bodyAreaModel = this.tableModel.getAreaModel('body');
+    const py = bodyAreaModel.getYPosByRowIndex(indexY);
+    this.scrollToPixel(0, py); // TODO calc indexX -> px
+  }
 }
 
 

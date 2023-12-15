@@ -38,25 +38,25 @@ export class TableApi {
   /**
    * Scrolls the table body to the specified pixel coordinates.
    *
-   * @param {number} _px - The horizontal pixel coordinate to scroll to. Defaults to 0.
-   * @param {number} _py - The vertical pixel coordinate to scroll to. Defaults to 0.
+   * @param {number} px - The horizontal pixel coordinate to scroll to. Defaults to 0.
+   * @param {number} py - The vertical pixel coordinate to scroll to. Defaults to 0.
    * @return {void}
    */
-  scrollToPixel(_px: number = 0, _py: number = 0) {
-    // TODO scrollToPixel
+  scrollToPixel(px: number = 0, py: number = 0) {
+    this.tableScope.scrollToPixel(px, py);
   }
 
 
   /**
    * Scrolls to the specified index in both horizontal and vertical directions.
    *
-   * @param {number} _indexX - The index of the column to scroll to in the horizontal direction. Default is 0.
-   * @param {number} _indexY - The index of the row to scroll to in the vertical direction. Default is 0.
+   * @param {number} indexX - The index of the column to scroll to in the horizontal direction. Default is 0.
+   * @param {number} indexY - The index of the row to scroll to in the vertical direction. Default is 0.
    *
    * @return undefined
    */
-  scrollToIndex(_indexX: number = 0, _indexY: number = 0) {
-    // TODO scrollToIndex
+  scrollToIndex(indexX: number = 0, indexY: number = 0) {
+    this.tableScope.scrollToIndex(indexX, indexY);
   }
 
   /**

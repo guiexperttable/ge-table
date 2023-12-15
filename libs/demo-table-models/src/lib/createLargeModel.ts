@@ -1,8 +1,8 @@
 import {
-  AreaModel,
+  AreaModel, CellRendererIf,
   ColumnDef,
   ColumnDefIf,
-  FalseFn,
+  FalseFn, NumberCellProgressBarCellRenderer,
   px120,
   px200,
   SelectionModel,
@@ -14,21 +14,29 @@ import {
 
 
 function createLargeColumnDefs(): ColumnDefIf[] {
-  return [ColumnDef.create({
-    property: 'id',
-    headerLabel: 'ID',
-    width: px120,
-    bodyClasses: ['ge-table-text-align-left'],
-    headerClasses: ['ge-table-text-align-left'],
-    sortable: FalseFn
-  }), ColumnDef.create({
-    property: 'value',
-    headerLabel: 'Value',
-    width: px200,
-    bodyClasses: ['ge-table-text-align-left'],
-    headerClasses: ['ge-table-text-align-left'],
-    sortable: FalseFn
-  })];
+
+  return [
+    ColumnDef.create({
+      headerLabel: 'ID',
+      width: px120,
+      bodyClasses: ['ge-table-text-align-left'],
+      headerClasses: ['ge-table-text-align-left'],
+      sortable: FalseFn
+    }),
+    ColumnDef.create({
+      headerLabel: 'Value',
+      width: px200,
+      bodyClasses: ['ge-table-text-align-left'],
+      headerClasses: ['ge-table-text-align-left'],
+      sortable: FalseFn
+    }),
+    ColumnDef.create({
+      headerLabel: " ",
+      width: px200,
+      bodyClasses: ["ge-table-text-align-right"],
+      headerClasses: ["ge-table-text-align-right"]
+    }),
+  ];
 }
 
 function createLargeTableOptions(): TableOptions {
@@ -51,10 +59,13 @@ export function createLargeModelAndOptions(rowcount: number = 1000000): TableMod
 
 export class LargeBodyModel extends AreaModel {
 
-  private readonly nf = new Intl.NumberFormat('en-Us', { })
+  private readonly nf = new Intl.NumberFormat('en-Us', { });
+
+  private barRenderer:CellRendererIf;
 
   constructor(private rowcount: number = 1000000) {
     super();
+    this.barRenderer = new NumberCellProgressBarCellRenderer(rowcount, false);
   }
 
   override getRowCount(): number {
@@ -65,11 +76,19 @@ export class LargeBodyModel extends AreaModel {
     return 34;
   }
 
-
-
   override getValueAt(rowIndex: number, columnIndex: number): number | string {
     if (columnIndex === 0) return 'id' + rowIndex;
-    return this.nf.format(rowIndex);
+    if (columnIndex === 1) return this.nf.format(rowIndex);
+    return rowIndex;
+  }
+
+  override getCellRenderer(_rowIndex: number, columnIndex: number): CellRendererIf | undefined {
+    if (columnIndex==2) return this.barRenderer;
+    return undefined;
+  }
+
+  override getYPosByRowIndex(rowIndex: number): number {
+    return rowIndex * this.getRowHeight(0);
   }
 
 }

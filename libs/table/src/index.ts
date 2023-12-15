@@ -135,6 +135,7 @@ export * from "./lib/table/renderer/date-to-iso-cell-renderer";
 export * from "./lib/table/renderer/date-to-int-date-cell-renderer";
 export * from "./lib/table/renderer/date-to-locale-date-cell-renderer";
 export * from "./lib/table/renderer/male-female-to-icon-cell-renderer";
+export * from "./lib/table/renderer/number-cell-progress-bar-cell-renderer";
 export * from "./lib/table/renderer/true-false-cell-renderer";
 export * from "./lib/table/renderer/date-to-tec-cell-renderer";
 export * from "./lib/table/renderer/renderer-cleanup-fn.type";
