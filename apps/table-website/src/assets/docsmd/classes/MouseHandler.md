@@ -54,7 +54,7 @@ Class representing a MouseHandler.
 
 #### Defined in
 
-[lib/table/mouse-handler.ts:24](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/mouse-handler.ts#L24)
+[lib/table/mouse-handler.ts:24](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/mouse-handler.ts#L24)
 
 ## Properties
 
@@ -64,7 +64,7 @@ Class representing a MouseHandler.
 
 #### Defined in
 
-[lib/table/mouse-handler.ts:22](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/mouse-handler.ts#L22)
+[lib/table/mouse-handler.ts:22](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/mouse-handler.ts#L22)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[lib/table/mouse-handler.ts:20](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/mouse-handler.ts#L20)
+[lib/table/mouse-handler.ts:20](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/mouse-handler.ts#L20)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[lib/table/mouse-handler.ts:17](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/mouse-handler.ts#L17)
+[lib/table/mouse-handler.ts:17](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/mouse-handler.ts#L17)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[lib/table/mouse-handler.ts:18](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/mouse-handler.ts#L18)
+[lib/table/mouse-handler.ts:18](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/mouse-handler.ts#L18)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[lib/table/mouse-handler.ts:21](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/mouse-handler.ts#L21)
+[lib/table/mouse-handler.ts:21](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/mouse-handler.ts#L21)
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 #### Defined in
 
-[lib/table/mouse-handler.ts:15](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/mouse-handler.ts#L15)
+[lib/table/mouse-handler.ts:15](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/mouse-handler.ts#L15)
 
 ___
 
@@ -124,7 +124,7 @@ ___
 
 #### Defined in
 
-[lib/table/mouse-handler.ts:16](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/mouse-handler.ts#L16)
+[lib/table/mouse-handler.ts:16](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/mouse-handler.ts#L16)
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 #### Defined in
 
-[lib/table/mouse-handler.ts:25](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/mouse-handler.ts#L25)
+[lib/table/mouse-handler.ts:25](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/mouse-handler.ts#L25)
 
 ## Methods
 
@@ -148,7 +148,7 @@ ___
 
 #### Defined in
 
-[lib/table/mouse-handler.ts:210](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/mouse-handler.ts#L210)
+[lib/table/mouse-handler.ts:210](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/mouse-handler.ts#L210)
 
 ___
 
@@ -162,7 +162,7 @@ ___
 
 #### Defined in
 
-[lib/table/mouse-handler.ts:256](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/mouse-handler.ts#L256)
+[lib/table/mouse-handler.ts:256](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/mouse-handler.ts#L256)
 
 ___
 
@@ -176,7 +176,7 @@ ___
 
 #### Defined in
 
-[lib/table/mouse-handler.ts:245](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/mouse-handler.ts#L245)
+[lib/table/mouse-handler.ts:245](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/mouse-handler.ts#L245)
 
 ___
 
@@ -190,7 +190,7 @@ ___
 
 #### Defined in
 
-[lib/table/mouse-handler.ts:268](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/mouse-handler.ts#L268)
+[lib/table/mouse-handler.ts:268](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/mouse-handler.ts#L268)
 
 ___
 
@@ -212,7 +212,7 @@ Handles the "contextmenu" event.
 
 #### Defined in
 
-[lib/table/mouse-handler.ts:51](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/mouse-handler.ts#L51)
+[lib/table/mouse-handler.ts:51](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/mouse-handler.ts#L51)
 
 ___
 
@@ -234,7 +234,7 @@ Handles the click event on the host element.
 
 #### Defined in
 
-[lib/table/mouse-handler.ts:65](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/mouse-handler.ts#L65)
+[lib/table/mouse-handler.ts:65](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/mouse-handler.ts#L65)
 
 ___
 
@@ -257,7 +257,7 @@ This method is private.
 
 #### Defined in
 
-[lib/table/mouse-handler.ts:117](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/mouse-handler.ts#L117)
+[lib/table/mouse-handler.ts:117](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/mouse-handler.ts#L117)
 
 ___
 
@@ -277,7 +277,7 @@ ___
 
 #### Defined in
 
-[lib/table/mouse-handler.ts:216](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/mouse-handler.ts#L216)
+[lib/table/mouse-handler.ts:216](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/mouse-handler.ts#L216)
 
 ___
 
@@ -297,7 +297,7 @@ ___
 
 #### Defined in
 
-[lib/table/mouse-handler.ts:224](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/mouse-handler.ts#L224)
+[lib/table/mouse-handler.ts:224](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/mouse-handler.ts#L224)
 
 ___
 
@@ -317,7 +317,7 @@ ___
 
 #### Defined in
 
-[lib/table/mouse-handler.ts:235](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/mouse-handler.ts#L235)
+[lib/table/mouse-handler.ts:235](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/mouse-handler.ts#L235)
 
 ___
 
@@ -340,7 +340,7 @@ Publishes a GeMouseEvent.
 
 #### Defined in
 
-[lib/table/mouse-handler.ts:176](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/mouse-handler.ts#L176)
+[lib/table/mouse-handler.ts:176](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/mouse-handler.ts#L176)
 
 ___
 
@@ -362,4 +362,4 @@ Update the collapsed/expanded state of a tree row.
 
 #### Defined in
 
-[lib/table/mouse-handler.ts:193](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/mouse-handler.ts#L193)
+[lib/table/mouse-handler.ts:193](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/mouse-handler.ts#L193)

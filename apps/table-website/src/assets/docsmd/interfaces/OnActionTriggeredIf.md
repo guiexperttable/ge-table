@@ -35,4 +35,4 @@ Triggers an action based on the provided action ID.
 
 #### Defined in
 
-[lib/table/action/on-action-triggered.if.ts:12](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/action/on-action-triggered.if.ts#L12)
+[lib/table/action/on-action-triggered.if.ts:12](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/action/on-action-triggered.if.ts#L12)

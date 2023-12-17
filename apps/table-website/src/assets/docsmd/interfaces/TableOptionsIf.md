@@ -82,7 +82,7 @@ Represents the options for configuring a table.
 
 #### Defined in
 
-[lib/table/data/options/table-options.if.ts:208](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/table-options.if.ts#L208)
+[lib/table/data/options/table-options.if.ts:208](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/table-options.if.ts#L208)
 
 ___
 
@@ -94,7 +94,7 @@ The width of the column resize handle in pixels.
 
 #### Defined in
 
-[lib/table/data/options/table-options.if.ts:142](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/table-options.if.ts#L142)
+[lib/table/data/options/table-options.if.ts:142](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/table-options.if.ts#L142)
 
 ___
 
@@ -106,7 +106,7 @@ Flag indicating whether the columns are draggable.
 
 #### Defined in
 
-[lib/table/data/options/table-options.if.ts:136](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/table-options.if.ts#L136)
+[lib/table/data/options/table-options.if.ts:136](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/table-options.if.ts#L136)
 
 ___
 
@@ -118,7 +118,7 @@ Represents whether the columns are resizable.
 
 #### Defined in
 
-[lib/table/data/options/table-options.if.ts:130](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/table-options.if.ts#L130)
+[lib/table/data/options/table-options.if.ts:130](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/table-options.if.ts#L130)
 
 ___
 
@@ -134,7 +134,7 @@ An array of numbers representing the default height for each row in a table.
 
 #### Defined in
 
-[lib/table/data/options/table-options.if.ts:164](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/table-options.if.ts#L164)
+[lib/table/data/options/table-options.if.ts:164](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/table-options.if.ts#L164)
 
 ___
 
@@ -146,7 +146,7 @@ Represents the external filter function that will be used to filter the table ro
 
 #### Defined in
 
-[lib/table/data/options/table-options.if.ts:192](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/table-options.if.ts#L192)
+[lib/table/data/options/table-options.if.ts:192](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/table-options.if.ts#L192)
 
 ___
 
@@ -158,7 +158,7 @@ Determines whether the fixed east separator border is visible.
 
 #### Defined in
 
-[lib/table/data/options/table-options.if.ts:66](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/table-options.if.ts#L66)
+[lib/table/data/options/table-options.if.ts:66](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/table-options.if.ts#L66)
 
 ___
 
@@ -170,7 +170,7 @@ Indicates whether the fixed west separator border should be visible.
 
 #### Defined in
 
-[lib/table/data/options/table-options.if.ts:72](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/table-options.if.ts#L72)
+[lib/table/data/options/table-options.if.ts:72](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/table-options.if.ts#L72)
 
 ___
 
@@ -182,7 +182,7 @@ Indicates whether the footer separator border is visible or not.
 
 #### Defined in
 
-[lib/table/data/options/table-options.if.ts:60](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/table-options.if.ts#L60)
+[lib/table/data/options/table-options.if.ts:60](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/table-options.if.ts#L60)
 
 ___
 
@@ -194,7 +194,7 @@ Indicates whether a vertical separator should be displayed in the footer.
 
 #### Defined in
 
-[lib/table/data/options/table-options.if.ts:156](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/table-options.if.ts#L156)
+[lib/table/data/options/table-options.if.ts:156](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/table-options.if.ts#L156)
 
 ___
 
@@ -216,7 +216,7 @@ The action for which to retrieve the edit renderer.
 
 #### Defined in
 
-[lib/table/data/options/table-options.if.ts:218](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/table-options.if.ts#L218)
+[lib/table/data/options/table-options.if.ts:218](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/table-options.if.ts#L218)
 
 ___
 
@@ -228,7 +228,7 @@ Retrieves the focus model of the component.
 
 #### Defined in
 
-[lib/table/data/options/table-options.if.ts:231](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/table-options.if.ts#L231)
+[lib/table/data/options/table-options.if.ts:231](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/table-options.if.ts#L231)
 
 ___
 
@@ -244,7 +244,7 @@ The target object to retrieve the selection model from.
 
 #### Defined in
 
-[lib/table/data/options/table-options.if.ts:225](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/table-options.if.ts#L225)
+[lib/table/data/options/table-options.if.ts:225](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/table-options.if.ts#L225)
 
 ___
 
@@ -256,7 +256,7 @@ Indicates whether the header separator border is visible.
 
 #### Defined in
 
-[lib/table/data/options/table-options.if.ts:54](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/table-options.if.ts#L54)
+[lib/table/data/options/table-options.if.ts:54](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/table-options.if.ts#L54)
 
 ___
 
@@ -266,7 +266,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/table-options.if.ts:166](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/table-options.if.ts#L166)
+[lib/table/data/options/table-options.if.ts:166](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/table-options.if.ts#L166)
 
 ___
 
@@ -282,7 +282,7 @@ Represents whether a vertical separator should be displayed in a header.
 
 #### Defined in
 
-[lib/table/data/options/table-options.if.ts:150](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/table-options.if.ts#L150)
+[lib/table/data/options/table-options.if.ts:150](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/table-options.if.ts#L150)
 
 ___
 
@@ -294,7 +294,7 @@ Represents the visibility of the horizontal border.
 
 #### Defined in
 
-[lib/table/data/options/table-options.if.ts:84](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/table-options.if.ts#L84)
+[lib/table/data/options/table-options.if.ts:84](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/table-options.if.ts#L84)
 
 ___
 
@@ -307,7 +307,7 @@ If true, the column get the hover background color while the mouse is over the c
 
 #### Defined in
 
-[lib/table/data/options/table-options.if.ts:124](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/table-options.if.ts#L124)
+[lib/table/data/options/table-options.if.ts:124](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/table-options.if.ts#L124)
 
 ___
 
@@ -320,7 +320,7 @@ If true, the row get the hover background color while the mouse is over the row.
 
 #### Defined in
 
-[lib/table/data/options/table-options.if.ts:117](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/table-options.if.ts#L117)
+[lib/table/data/options/table-options.if.ts:117](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/table-options.if.ts#L117)
 
 ___
 
@@ -332,7 +332,7 @@ The value of the css `overflowX` determines the behavior of horizontal overflow 
 
 #### Defined in
 
-[lib/table/data/options/table-options.if.ts:91](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/table-options.if.ts#L91)
+[lib/table/data/options/table-options.if.ts:91](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/table-options.if.ts#L91)
 
 ___
 
@@ -344,7 +344,7 @@ The value of the css `overflowX` determines the behavior of vertical overflow fo
 
 #### Defined in
 
-[lib/table/data/options/table-options.if.ts:97](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/table-options.if.ts#L97)
+[lib/table/data/options/table-options.if.ts:97](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/table-options.if.ts#L97)
 
 ___
 
@@ -356,7 +356,7 @@ Represents a mapping of shortcut action IDs.
 
 #### Defined in
 
-[lib/table/data/options/table-options.if.ts:240](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/table-options.if.ts#L240)
+[lib/table/data/options/table-options.if.ts:240](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/table-options.if.ts#L240)
 
 ___
 
@@ -370,7 +370,7 @@ If false and the row is checkable, a checkbox is rendered in an extra column lef
 
 #### Defined in
 
-[lib/table/data/options/table-options.if.ts:185](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/table-options.if.ts#L185)
+[lib/table/data/options/table-options.if.ts:185](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/table-options.if.ts#L185)
 
 ___
 
@@ -382,7 +382,7 @@ Represents the sort order of the columns.
 
 #### Defined in
 
-[lib/table/data/options/table-options.if.ts:206](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/table-options.if.ts#L206)
+[lib/table/data/options/table-options.if.ts:206](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/table-options.if.ts#L206)
 
 ___
 
@@ -398,7 +398,7 @@ The SortedOptions represents a class that defines sorted icons, which will displ
 
 #### Defined in
 
-[lib/table/data/options/table-options.if.ts:200](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/table-options.if.ts#L200)
+[lib/table/data/options/table-options.if.ts:200](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/table-options.if.ts#L200)
 
 ___
 
@@ -410,7 +410,7 @@ Specifies whether the bottom border of a table is visible.
 
 #### Defined in
 
-[lib/table/data/options/table-options.if.ts:110](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/table-options.if.ts#L110)
+[lib/table/data/options/table-options.if.ts:110](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/table-options.if.ts#L110)
 
 ___
 
@@ -422,7 +422,7 @@ Indicates whether the top border of a table is visible or hidden.
 
 #### Defined in
 
-[lib/table/data/options/table-options.if.ts:104](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/table-options.if.ts#L104)
+[lib/table/data/options/table-options.if.ts:104](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/table-options.if.ts#L104)
 
 ___
 
@@ -434,7 +434,7 @@ Represents the options for configuring a tree.
 
 #### Defined in
 
-[lib/table/data/options/table-options.if.ts:176](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/table-options.if.ts#L176)
+[lib/table/data/options/table-options.if.ts:176](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/table-options.if.ts#L176)
 
 ___
 
@@ -446,4 +446,4 @@ Indicates whether the vertical border is visible.
 
 #### Defined in
 
-[lib/table/data/options/table-options.if.ts:78](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/table-options.if.ts#L78)
+[lib/table/data/options/table-options.if.ts:78](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/table-options.if.ts#L78)

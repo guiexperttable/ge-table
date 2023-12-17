@@ -36,4 +36,4 @@ Class representing a mapping of Windows shortcut keys to action IDs.
 
 #### Defined in
 
-[lib/table/action/windows-shortcut-actionId-mapping.ts:8](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/action/windows-shortcut-actionId-mapping.ts#L8)
+[lib/table/action/windows-shortcut-actionId-mapping.ts:8](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/action/windows-shortcut-actionId-mapping.ts#L8)

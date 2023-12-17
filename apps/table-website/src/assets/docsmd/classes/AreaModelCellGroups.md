@@ -80,7 +80,7 @@ The column information is given by the TableModelIf.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:25](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L25)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:25](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L25)
 
 ## Properties
 
@@ -96,7 +96,7 @@ The identifier for one of the areas: header, body, footer.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:26](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L26)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:26](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L26)
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:20](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L20)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:20](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L20)
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:23](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L23)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:23](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L23)
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:28](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L28)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:28](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L28)
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:29](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L29)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:29](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L29)
 
 ___
 
@@ -146,7 +146,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:17](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L17)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:17](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L17)
 
 ___
 
@@ -156,7 +156,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:22](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L22)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:22](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L22)
 
 ___
 
@@ -166,7 +166,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:27](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L27)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:27](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L27)
 
 ___
 
@@ -182,7 +182,7 @@ A model and controller for a row checkbox selection
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:19](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L19)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:19](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L19)
 
 ## Methods
 
@@ -196,7 +196,7 @@ A model and controller for a row checkbox selection
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:61](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L61)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:61](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L61)
 
 ___
 
@@ -223,7 +223,7 @@ Method for moving a column from position sourceColumnIndex to targetColumnIndex.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:88](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L88)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:88](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L88)
 
 ___
 
@@ -249,7 +249,7 @@ If the 'restore sort' option is set (see), this method will be triggered automat
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:92](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L92)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:92](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L92)
 
 ___
 
@@ -281,7 +281,7 @@ Will be called internally, when a filtering is trigger.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:96](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L96)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:96](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L96)
 
 ___
 
@@ -295,7 +295,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:48](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L48)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:48](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L48)
 
 ___
 
@@ -323,7 +323,7 @@ If the return value is undefined, no renderer is used and the model value will b
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:100](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L100)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:100](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L100)
 
 ___
 
@@ -351,7 +351,7 @@ A value below 2 is ignored.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:104](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L104)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:104](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L104)
 
 ___
 
@@ -378,7 +378,7 @@ This method can be used to return a list of css classes for the given cell
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:122](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L122)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:122](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L122)
 
 ___
 
@@ -405,7 +405,7 @@ This method can be used to return an object with css style information for the g
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:126](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L126)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:126](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L126)
 
 ___
 
@@ -428,7 +428,7 @@ cell greater 32, don't forget to increase this value.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:130](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L130)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:130](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L130)
 
 ___
 
@@ -442,7 +442,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:53](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L53)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:53](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L53)
 
 ___
 
@@ -465,7 +465,7 @@ cell greater 32, don't forget to increase this value.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:134](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L134)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:134](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L134)
 
 ___
 
@@ -491,7 +491,7 @@ Returns the row of the model, which correspond to the rowIndex.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:138](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L138)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:138](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L138)
 
 ___
 
@@ -511,7 +511,7 @@ Returns the number of rows of the area
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:142](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L142)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:142](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L142)
 
 ___
 
@@ -537,7 +537,7 @@ Returns the row height in pixel of the given row (rowIndex).
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:178](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L178)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:178](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L178)
 
 ___
 
@@ -565,7 +565,7 @@ A value below 2 is ignored.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:150](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L150)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:150](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L150)
 
 ___
 
@@ -592,7 +592,7 @@ Returns the value of a tooltip of the given cell (rowIndex/columnIndex).
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:160](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L160)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:160](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L160)
 
 ___
 
@@ -619,7 +619,7 @@ Returns the value of the cell at position rowIndex/columnIndex.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:165](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L165)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:165](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L165)
 
 ___
 
@@ -646,7 +646,7 @@ For big tables it can be a big value (greate than the height of the viewport).
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:169](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L169)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:169](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L169)
 
 ___
 
@@ -666,7 +666,7 @@ Internally used by TableModel.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:175](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L175)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:175](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L175)
 
 ___
 
@@ -693,7 +693,7 @@ If this method returns true, the cell can be edited by the user.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:182](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L182)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:182](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L182)
 
 ___
 
@@ -713,7 +713,7 @@ If true, the table is filterable. Rows can be filtered with help of #externalFil
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:186](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L186)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:186](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L186)
 
 ___
 
@@ -739,7 +739,7 @@ If true, the row is checkable and a checkbox is rendered at the beginning of the
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:190](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L190)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:190](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L190)
 
 ___
 
@@ -765,7 +765,7 @@ Returns the checked state of an row.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:194](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L194)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:194](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L194)
 
 ___
 
@@ -792,7 +792,7 @@ If true, the cell is selectable.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:198](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L198)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:198](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L198)
 
 ___
 
@@ -819,7 +819,7 @@ Set the checked state of the row (rowIndex) to #checked.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:202](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L202)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:202](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L202)
 
 ___
 
@@ -847,4 +847,4 @@ Method for changing a cell value.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:206](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L206)
+[lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts:206](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model-cell-groups.ts#L206)

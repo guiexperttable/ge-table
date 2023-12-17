@@ -48,7 +48,7 @@
 
 #### Defined in
 
-[lib/table/service/tree-row.service.ts:6](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/tree-row.service.ts#L6)
+[lib/table/service/tree-row.service.ts:6](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/service/tree-row.service.ts#L6)
 
 ___
 
@@ -68,4 +68,4 @@ ___
 
 #### Defined in
 
-[lib/table/service/tree-row.service.ts:22](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/service/tree-row.service.ts#L22)
+[lib/table/service/tree-row.service.ts:22](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/service/tree-row.service.ts#L22)

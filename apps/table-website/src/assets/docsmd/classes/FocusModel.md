@@ -46,7 +46,7 @@
 
 #### Defined in
 
-[lib/table/focus/focus-model.ts:10](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/focus/focus-model.ts#L10)
+[lib/table/focus/focus-model.ts:10](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/focus/focus-model.ts#L10)
 
 ## Properties
 
@@ -56,7 +56,7 @@
 
 #### Defined in
 
-[lib/table/focus/focus-model.ts:8](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/focus/focus-model.ts#L8)
+[lib/table/focus/focus-model.ts:8](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/focus/focus-model.ts#L8)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[lib/table/focus/focus-model.ts:7](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/focus/focus-model.ts#L7)
+[lib/table/focus/focus-model.ts:7](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/focus/focus-model.ts#L7)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[lib/table/focus/focus-model.ts:6](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/focus/focus-model.ts#L6)
+[lib/table/focus/focus-model.ts:6](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/focus/focus-model.ts#L6)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[lib/table/focus/focus-model.ts:11](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/focus/focus-model.ts#L11)
+[lib/table/focus/focus-model.ts:11](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/focus/focus-model.ts#L11)
 
 ## Methods
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[lib/table/focus/focus-model.ts:23](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/focus/focus-model.ts#L23)
+[lib/table/focus/focus-model.ts:23](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/focus/focus-model.ts#L23)
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 #### Defined in
 
-[lib/table/focus/focus-model.ts:15](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/focus/focus-model.ts#L15)
+[lib/table/focus/focus-model.ts:15](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/focus/focus-model.ts#L15)
 
 ___
 
@@ -140,7 +140,7 @@ ___
 
 #### Defined in
 
-[lib/table/focus/focus-model.ts:44](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/focus/focus-model.ts#L44)
+[lib/table/focus/focus-model.ts:44](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/focus/focus-model.ts#L44)
 
 ___
 
@@ -158,7 +158,7 @@ ___
 
 #### Defined in
 
-[lib/table/focus/focus-model.ts:19](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/focus/focus-model.ts#L19)
+[lib/table/focus/focus-model.ts:19](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/focus/focus-model.ts#L19)
 
 ___
 
@@ -183,7 +183,7 @@ ___
 
 #### Defined in
 
-[lib/table/focus/focus-model.ts:40](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/focus/focus-model.ts#L40)
+[lib/table/focus/focus-model.ts:40](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/focus/focus-model.ts#L40)
 
 ___
 
@@ -208,4 +208,4 @@ ___
 
 #### Defined in
 
-[lib/table/focus/focus-model.ts:29](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/focus/focus-model.ts#L29)
+[lib/table/focus/focus-model.ts:29](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/focus/focus-model.ts#L29)

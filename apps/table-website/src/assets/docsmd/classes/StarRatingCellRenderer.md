@@ -52,7 +52,7 @@ Works with AreaModelObjectArray only
 
 #### Defined in
 
-[lib/table/renderer/star-rating-cell-renderer.ts:12](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/renderer/star-rating-cell-renderer.ts#L12)
+[lib/table/renderer/star-rating-cell-renderer.ts:12](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/renderer/star-rating-cell-renderer.ts#L12)
 
 ## Properties
 
@@ -62,7 +62,7 @@ Works with AreaModelObjectArray only
 
 #### Defined in
 
-[lib/table/renderer/star-rating-cell-renderer.ts:13](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/renderer/star-rating-cell-renderer.ts#L13)
+[lib/table/renderer/star-rating-cell-renderer.ts:13](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/renderer/star-rating-cell-renderer.ts#L13)
 
 ## Methods
 
@@ -92,4 +92,4 @@ Works with AreaModelObjectArray only
 
 #### Defined in
 
-[lib/table/renderer/star-rating-cell-renderer.ts:17](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/renderer/star-rating-cell-renderer.ts#L17)
+[lib/table/renderer/star-rating-cell-renderer.ts:17](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/renderer/star-rating-cell-renderer.ts#L17)

@@ -2,6 +2,10 @@
 
 # Interface: ArgsRenderCellDiv
 
+Represents the arguments required to render a cell div.
+
+ ArgsRenderCellDiv
+
 ## Table of contents
 
 ### Properties
@@ -25,9 +29,11 @@
 
 • **areaIdent**: [`AreaIdent`](../modules.md#areaident)
 
+The identifier of the area.
+
 #### Defined in
 
-[lib/table/data/common/args-render-cell-div.ts:7](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/args-render-cell-div.ts#L7)
+[lib/table/data/common/args-render-cell-div.ts:24](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/args-render-cell-div.ts#L24)
 
 ___
 
@@ -35,9 +41,11 @@ ___
 
 • **areaModel**: [`AreaModelIf`](AreaModelIf.md)
 
+The area model for the cell.
+
 #### Defined in
 
-[lib/table/data/common/args-render-cell-div.ts:6](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/args-render-cell-div.ts#L6)
+[lib/table/data/common/args-render-cell-div.ts:23](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/args-render-cell-div.ts#L23)
 
 ___
 
@@ -45,9 +53,11 @@ ___
 
 • **gammaRange**: `boolean`
 
+Indicates if the gamma range is enabled.
+
 #### Defined in
 
-[lib/table/data/common/args-render-cell-div.ts:17](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/args-render-cell-div.ts#L17)
+[lib/table/data/common/args-render-cell-div.ts:34](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/args-render-cell-div.ts#L34)
 
 ___
 
@@ -55,9 +65,11 @@ ___
 
 • **height**: `number`
 
+The height of the cell.
+
 #### Defined in
 
-[lib/table/data/common/args-render-cell-div.ts:13](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/args-render-cell-div.ts#L13)
+[lib/table/data/common/args-render-cell-div.ts:30](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/args-render-cell-div.ts#L30)
 
 ___
 
@@ -65,9 +77,11 @@ ___
 
 • **index**: `number`
 
+The index of the cell.
+
 #### Defined in
 
-[lib/table/data/common/args-render-cell-div.ts:10](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/args-render-cell-div.ts#L10)
+[lib/table/data/common/args-render-cell-div.ts:27](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/args-render-cell-div.ts#L27)
 
 ___
 
@@ -75,9 +89,11 @@ ___
 
 • **lastRowOfModel**: `boolean`
 
+Indicates if the cell is in the last row of the model.
+
 #### Defined in
 
-[lib/table/data/common/args-render-cell-div.ts:16](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/args-render-cell-div.ts#L16)
+[lib/table/data/common/args-render-cell-div.ts:33](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/args-render-cell-div.ts#L33)
 
 ___
 
@@ -85,9 +101,11 @@ ___
 
 • **left**: `number`
 
+The left position of the cell.
+
 #### Defined in
 
-[lib/table/data/common/args-render-cell-div.ts:11](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/args-render-cell-div.ts#L11)
+[lib/table/data/common/args-render-cell-div.ts:28](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/args-render-cell-div.ts#L28)
 
 ___
 
@@ -95,9 +113,11 @@ ___
 
 • **parent**: `HTMLDivElement`
 
+The parent element of the cell.
+
 #### Defined in
 
-[lib/table/data/common/args-render-cell-div.ts:15](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/args-render-cell-div.ts#L15)
+[lib/table/data/common/args-render-cell-div.ts:32](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/args-render-cell-div.ts#L32)
 
 ___
 
@@ -105,9 +125,11 @@ ___
 
 • **rowIndex**: `number`
 
+The index of the row.
+
 #### Defined in
 
-[lib/table/data/common/args-render-cell-div.ts:9](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/args-render-cell-div.ts#L9)
+[lib/table/data/common/args-render-cell-div.ts:26](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/args-render-cell-div.ts#L26)
 
 ___
 
@@ -115,9 +137,11 @@ ___
 
 • **sideIdent**: [`SideIdent`](../modules.md#sideident)
 
+The identifier of the side.
+
 #### Defined in
 
-[lib/table/data/common/args-render-cell-div.ts:8](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/args-render-cell-div.ts#L8)
+[lib/table/data/common/args-render-cell-div.ts:25](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/args-render-cell-div.ts#L25)
 
 ___
 
@@ -125,9 +149,11 @@ ___
 
 • **top**: `number`
 
+The top position of the cell.
+
 #### Defined in
 
-[lib/table/data/common/args-render-cell-div.ts:14](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/args-render-cell-div.ts#L14)
+[lib/table/data/common/args-render-cell-div.ts:31](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/args-render-cell-div.ts#L31)
 
 ___
 
@@ -135,6 +161,8 @@ ___
 
 • **width**: `number`
 
+The width of the cell.
+
 #### Defined in
 
-[lib/table/data/common/args-render-cell-div.ts:12](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/args-render-cell-div.ts#L12)
+[lib/table/data/common/args-render-cell-div.ts:29](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/args-render-cell-div.ts#L29)

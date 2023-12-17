@@ -36,4 +36,4 @@ Class representing the mapping of OS X shortcut actions to action IDs.
 
 #### Defined in
 
-[lib/table/action/osx-shortcut-actionId-mapping.ts:10](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/action/osx-shortcut-actionId-mapping.ts#L10)
+[lib/table/action/osx-shortcut-actionId-mapping.ts:10](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/action/osx-shortcut-actionId-mapping.ts#L10)

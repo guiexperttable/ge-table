@@ -2,6 +2,8 @@
 
 # Class: GeModelChangeEvent
 
+Indicates that changes have occurred in the given cells.
+
 ## Table of contents
 
 ### Constructors
@@ -34,7 +36,7 @@
 
 #### Defined in
 
-[lib/table/data/common/event/ge-model-change-event.ts:5](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/event/ge-model-change-event.ts#L5)
+[lib/table/data/common/event/ge-model-change-event.ts:8](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/event/ge-model-change-event.ts#L8)
 
 ## Properties
 
@@ -44,7 +46,7 @@
 
 #### Defined in
 
-[lib/table/data/common/event/ge-model-change-event.ts:6](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/event/ge-model-change-event.ts#L6)
+[lib/table/data/common/event/ge-model-change-event.ts:9](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/event/ge-model-change-event.ts#L9)
 
 ## Methods
 
@@ -65,4 +67,4 @@
 
 #### Defined in
 
-[lib/table/data/common/event/ge-model-change-event.ts:10](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/event/ge-model-change-event.ts#L10)
+[lib/table/data/common/event/ge-model-change-event.ts:13](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/event/ge-model-change-event.ts#L13)

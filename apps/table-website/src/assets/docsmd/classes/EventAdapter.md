@@ -59,7 +59,7 @@ It provides empty implementations for all the event listener methods.
 
 #### Defined in
 
-[lib/table/event-adapter.ts:14](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/event-adapter.ts#L14)
+[lib/table/event-adapter.ts:14](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/event-adapter.ts#L14)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[lib/table/event-adapter.ts:17](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/event-adapter.ts#L17)
+[lib/table/event-adapter.ts:17](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/event-adapter.ts#L17)
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 #### Defined in
 
-[lib/table/event-adapter.ts:20](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/event-adapter.ts#L20)
+[lib/table/event-adapter.ts:20](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/event-adapter.ts#L20)
 
 ___
 
@@ -131,7 +131,7 @@ ___
 
 #### Defined in
 
-[lib/table/event-adapter.ts:23](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/event-adapter.ts#L23)
+[lib/table/event-adapter.ts:23](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/event-adapter.ts#L23)
 
 ___
 
@@ -155,7 +155,7 @@ ___
 
 #### Defined in
 
-[lib/table/event-adapter.ts:26](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/event-adapter.ts#L26)
+[lib/table/event-adapter.ts:26](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/event-adapter.ts#L26)
 
 ___
 
@@ -179,7 +179,7 @@ ___
 
 #### Defined in
 
-[lib/table/event-adapter.ts:29](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/event-adapter.ts#L29)
+[lib/table/event-adapter.ts:29](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/event-adapter.ts#L29)
 
 ___
 
@@ -203,4 +203,4 @@ ___
 
 #### Defined in
 
-[lib/table/event-adapter.ts:32](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/event-adapter.ts#L32)
+[lib/table/event-adapter.ts:32](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/event-adapter.ts#L32)

@@ -2,7 +2,9 @@
 
 # Class: CheckboxColumnDef
 
-Represents a column definition of one table column.
+A pre-defined column definition for a checkbox representation.
+
+**`Implements`**
 
 ## Implements
 
@@ -49,7 +51,7 @@ Represents an object that maps an area to a collection of objects.
 
 #### Defined in
 
-[lib/table/data/common/checkbox-column-def.ts:19](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L19)
+[lib/table/data/common/checkbox-column-def.ts:24](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L24)
 
 ___
 
@@ -65,7 +67,7 @@ Represents the label for a header.
 
 #### Defined in
 
-[lib/table/data/common/checkbox-column-def.ts:14](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L14)
+[lib/table/data/common/checkbox-column-def.ts:19](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L19)
 
 ___
 
@@ -81,7 +83,7 @@ Represents the maximum width of a column.
 
 #### Defined in
 
-[lib/table/data/common/checkbox-column-def.ts:17](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L17)
+[lib/table/data/common/checkbox-column-def.ts:22](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L22)
 
 ___
 
@@ -97,7 +99,7 @@ Represents the minimum width of a column.
 
 #### Defined in
 
-[lib/table/data/common/checkbox-column-def.ts:16](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L16)
+[lib/table/data/common/checkbox-column-def.ts:21](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L21)
 
 ___
 
@@ -113,7 +115,7 @@ Represents a property name of the table row element.
 
 #### Defined in
 
-[lib/table/data/common/checkbox-column-def.ts:13](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L13)
+[lib/table/data/common/checkbox-column-def.ts:18](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L18)
 
 ___
 
@@ -129,7 +131,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/checkbox-column-def.ts:18](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L18)
+[lib/table/data/common/checkbox-column-def.ts:23](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L23)
 
 ___
 
@@ -139,7 +141,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/checkbox-column-def.ts:11](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L11)
+[lib/table/data/common/checkbox-column-def.ts:16](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L16)
 
 ___
 
@@ -155,4 +157,4 @@ Represents the size of a column along the width dimension.
 
 #### Defined in
 
-[lib/table/data/common/checkbox-column-def.ts:15](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L15)
+[lib/table/data/common/checkbox-column-def.ts:20](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/checkbox-column-def.ts#L20)

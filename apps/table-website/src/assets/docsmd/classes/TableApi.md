@@ -44,7 +44,7 @@
 
 #### Defined in
 
-[lib/table/table-api.ts:8](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/table-api.ts#L8)
+[lib/table/table-api.ts:8](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/table-api.ts#L8)
 
 ## Properties
 
@@ -54,7 +54,7 @@
 
 #### Defined in
 
-[lib/table/table-api.ts:9](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/table-api.ts#L9)
+[lib/table/table-api.ts:9](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/table-api.ts#L9)
 
 ## Methods
 
@@ -70,7 +70,7 @@ Notifies that the external filter has changed.
 
 #### Defined in
 
-[lib/table/table-api.ts:34](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/table-api.ts#L34)
+[lib/table/table-api.ts:34](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/table-api.ts#L34)
 
 ___
 
@@ -94,7 +94,7 @@ Returns whether a column is visible or not.
 
 #### Defined in
 
-[lib/table/table-api.ts:91](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/table-api.ts#L91)
+[lib/table/table-api.ts:91](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/table-api.ts#L91)
 
 ___
 
@@ -112,7 +112,7 @@ True if the footer is visible, false otherwise.
 
 #### Defined in
 
-[lib/table/table-api.ts:121](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/table-api.ts#L121)
+[lib/table/table-api.ts:121](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/table-api.ts#L121)
 
 ___
 
@@ -130,7 +130,7 @@ Checks if the header is visible.
 
 #### Defined in
 
-[lib/table/table-api.ts:101](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/table-api.ts#L101)
+[lib/table/table-api.ts:101](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/table-api.ts#L101)
 
 ___
 
@@ -149,13 +149,13 @@ to update and redraw the table based on the latest data.
 
 #### Defined in
 
-[lib/table/table-api.ts:131](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/table-api.ts#L131)
+[lib/table/table-api.ts:131](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/table-api.ts#L131)
 
 ___
 
 ### scrollToIndex
 
-▸ **scrollToIndex**(`_indexX?`, `_indexY?`): `void`
+▸ **scrollToIndex**(`indexX?`, `indexY?`): `void`
 
 Scrolls to the specified index in both horizontal and vertical directions.
 
@@ -163,8 +163,8 @@ Scrolls to the specified index in both horizontal and vertical directions.
 
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
-| `_indexX` | `number` | `0` | The index of the column to scroll to in the horizontal direction. Default is 0. |
-| `_indexY` | `number` | `0` | The index of the row to scroll to in the vertical direction. Default is 0. |
+| `indexX` | `number` | `0` | The index of the column to scroll to in the horizontal direction. Default is 0. |
+| `indexY` | `number` | `0` | The index of the row to scroll to in the vertical direction. Default is 0. |
 
 #### Returns
 
@@ -174,13 +174,13 @@ undefined
 
 #### Defined in
 
-[lib/table/table-api.ts:58](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/table-api.ts#L58)
+[lib/table/table-api.ts:58](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/table-api.ts#L58)
 
 ___
 
 ### scrollToPixel
 
-▸ **scrollToPixel**(`_px?`, `_py?`): `void`
+▸ **scrollToPixel**(`px?`, `py?`): `void`
 
 Scrolls the table body to the specified pixel coordinates.
 
@@ -188,8 +188,8 @@ Scrolls the table body to the specified pixel coordinates.
 
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
-| `_px` | `number` | `0` | The horizontal pixel coordinate to scroll to. Defaults to 0. |
-| `_py` | `number` | `0` | The vertical pixel coordinate to scroll to. Defaults to 0. |
+| `px` | `number` | `0` | The horizontal pixel coordinate to scroll to. Defaults to 0. |
+| `py` | `number` | `0` | The vertical pixel coordinate to scroll to. Defaults to 0. |
 
 #### Returns
 
@@ -197,7 +197,7 @@ Scrolls the table body to the specified pixel coordinates.
 
 #### Defined in
 
-[lib/table/table-api.ts:45](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/table-api.ts#L45)
+[lib/table/table-api.ts:45](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/table-api.ts#L45)
 
 ___
 
@@ -222,7 +222,7 @@ Sets the visibility of a column in the table.
 
 #### Defined in
 
-[lib/table/table-api.ts:81](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/table-api.ts#L81)
+[lib/table/table-api.ts:81](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/table-api.ts#L81)
 
 ___
 
@@ -246,7 +246,7 @@ Sets the visibility of the footer.
 
 #### Defined in
 
-[lib/table/table-api.ts:112](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/table-api.ts#L112)
+[lib/table/table-api.ts:112](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/table-api.ts#L112)
 
 ___
 
@@ -270,7 +270,7 @@ undefined
 
 #### Defined in
 
-[lib/table/table-api.ts:69](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/table-api.ts#L69)
+[lib/table/table-api.ts:69](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/table-api.ts#L69)
 
 ___
 
@@ -285,7 +285,7 @@ Updates the cells in the table based on the provided events.
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
 | `events` | [`TableCellUpdateEventIf`](../interfaces/TableCellUpdateEventIf.md)[] | `undefined` | The array of events representing the updates to perform on the cells. |
-| `repaintAll?` | `boolean` | `false` | Optional parameter indicating whether to repaint all cells or not. Default value is false. |
+| `repaintAll?` | `boolean` | `false` | Optional parameter indicating whether to repaint all cells or not. Default value is false. If true, the full table will be rendered. If false, the table cell will be rendered immediately. |
 
 #### Returns
 
@@ -295,4 +295,4 @@ Updates the cells in the table based on the provided events.
 
 #### Defined in
 
-[lib/table/table-api.ts:22](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/table-api.ts#L22)
+[lib/table/table-api.ts:22](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/table-api.ts#L22)

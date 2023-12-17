@@ -2,6 +2,8 @@
 
 # Class: GeKeyEvent
 
+Represents a keyboard event.
+
 ## Table of contents
 
 ### Constructors
@@ -32,7 +34,7 @@
 
 #### Defined in
 
-[lib/table/data/common/event/ge-key-event.ts:3](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/event/ge-key-event.ts#L3)
+[lib/table/data/common/event/ge-key-event.ts:8](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/event/ge-key-event.ts#L8)
 
 ## Properties
 
@@ -42,7 +44,7 @@
 
 #### Defined in
 
-[lib/table/data/common/event/ge-key-event.ts:5](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/event/ge-key-event.ts#L5)
+[lib/table/data/common/event/ge-key-event.ts:10](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/event/ge-key-event.ts#L10)
 
 ___
 
@@ -52,4 +54,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/event/ge-key-event.ts:4](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/event/ge-key-event.ts#L4)
+[lib/table/data/common/event/ge-key-event.ts:9](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/event/ge-key-event.ts#L9)

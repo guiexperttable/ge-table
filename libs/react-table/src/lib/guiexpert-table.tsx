@@ -1,12 +1,12 @@
 import {
   GeModelChangeEvent,
-  GeMouseEvent,
+  GeMouseEvent, LicenseManager,
   SimpleDomService,
   TableApi,
   TableModelIf,
   TableOptions,
   TableScope
-} from "@guiexpert/table";
+} from '@guiexpert/table';
 import React, { useEffect, useRef } from "react";
 
 export type GeMouseEventFn = (evt: GeMouseEvent) => {};
@@ -24,9 +24,28 @@ export interface GuiexpertTableProps {
   mouseDraggingEnd?: GeMouseEventFn,
   checkboxChanged?: GeCheckboxEventFn,
   modelChanged?: GeModelChangeEventFn,
-  tableReady?: GeTableReadyEventFn
+  tableReady?: GeTableReadyEventFn,
+  licenseKey?: string,
 }
 
+/**
+ * Initialize and render the GuiexpertTable component.
+ *
+ * @param {Object} props - The properties of the GuiexpertTable component.
+ * @param {TableModel} props.tableModel - The model for the table.
+ * @param {TableOptions} [props.tableOptions=new TableOptions()] - The options for the table.
+ * @param {Function} [props.mouseMoved] - The callback for mouse movement events.
+ * @param {Function} [props.checkboxChanged] - The callback for checkbox change events.
+ * @param {Function} [props.contextmenu] - The callback for context menu events.
+ * @param {Function} [props.modelChanged] - The callback for model change events.
+ * @param {Function} [props.mouseClicked] - The callback for mouse click events.
+ * @param {Function} [props.mouseDragging] - The callback for mouse dragging events.
+ * @param {Function} [props.mouseDraggingEnd] - The callback for mouse dragging end events.
+ * @param {Function} [props.tableReady] - The callback for when the table is ready.
+ * @param {string} [props.licenseKey] - The license key for the GuiexpertTable component.
+ *
+ * @returns {JSX.Element} - The rendered GuiexpertTable component.
+ */
 export function GuiexpertTable(
   {
     tableModel,
@@ -38,7 +57,8 @@ export function GuiexpertTable(
     mouseClicked,
     mouseDragging,
     mouseDraggingEnd,
-    tableReady
+    tableReady,
+    licenseKey
   }: GuiexpertTableProps) {
 
   const myContainer = useRef(null);
@@ -105,6 +125,7 @@ export function GuiexpertTable(
     if (tableReady) {
       tableReady(tableScope.getApi());
     }
+    if (licenseKey) LicenseManager.getInstance().setLicenseKey(licenseKey);
   };
 
   return (

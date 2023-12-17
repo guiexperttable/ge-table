@@ -27,7 +27,7 @@ Interface for defining the arguments of a three-color gradient.
 
 #### Defined in
 
-[lib/table/color/three-color-gradient-arg.if.ts:14](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/color/three-color-gradient-arg.if.ts#L14)
+[lib/table/color/three-color-gradient-arg.if.ts:14](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/color/three-color-gradient-arg.if.ts#L14)
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 #### Defined in
 
-[lib/table/color/three-color-gradient-arg.if.ts:13](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/color/three-color-gradient-arg.if.ts#L13)
+[lib/table/color/three-color-gradient-arg.if.ts:13](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/color/three-color-gradient-arg.if.ts#L13)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 #### Defined in
 
-[lib/table/color/three-color-gradient-arg.if.ts:12](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/color/three-color-gradient-arg.if.ts#L12)
+[lib/table/color/three-color-gradient-arg.if.ts:12](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/color/three-color-gradient-arg.if.ts#L12)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[lib/table/color/three-color-gradient-arg.if.ts:11](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/color/three-color-gradient-arg.if.ts#L11)
+[lib/table/color/three-color-gradient-arg.if.ts:11](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/color/three-color-gradient-arg.if.ts#L11)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[lib/table/color/three-color-gradient-arg.if.ts:10](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/color/three-color-gradient-arg.if.ts#L10)
+[lib/table/color/three-color-gradient-arg.if.ts:10](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/color/three-color-gradient-arg.if.ts#L10)
 
 ___
 
@@ -77,4 +77,4 @@ ___
 
 #### Defined in
 
-[lib/table/color/three-color-gradient-arg.if.ts:9](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/color/three-color-gradient-arg.if.ts#L9)
+[lib/table/color/three-color-gradient-arg.if.ts:9](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/color/three-color-gradient-arg.if.ts#L9)

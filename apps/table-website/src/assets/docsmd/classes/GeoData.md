@@ -40,7 +40,7 @@ Represents geometric data with left, width, height, top coordinates and an optio
 
 #### Defined in
 
-[lib/table/data/geo-data.ts:6](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/geo-data.ts#L6)
+[lib/table/data/geo-data.ts:6](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/geo-data.ts#L6)
 
 ## Properties
 
@@ -50,7 +50,7 @@ Represents geometric data with left, width, height, top coordinates and an optio
 
 #### Defined in
 
-[lib/table/data/geo-data.ts:9](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/geo-data.ts#L9)
+[lib/table/data/geo-data.ts:9](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/geo-data.ts#L9)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/geo-data.ts:11](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/geo-data.ts#L11)
+[lib/table/data/geo-data.ts:11](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/geo-data.ts#L11)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/geo-data.ts:7](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/geo-data.ts#L7)
+[lib/table/data/geo-data.ts:7](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/geo-data.ts#L7)
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/geo-data.ts:10](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/geo-data.ts#L10)
+[lib/table/data/geo-data.ts:10](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/geo-data.ts#L10)
 
 ___
 
@@ -90,4 +90,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/geo-data.ts:8](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/geo-data.ts#L8)
+[lib/table/data/geo-data.ts:8](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/geo-data.ts#L8)

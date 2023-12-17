@@ -20,4 +20,4 @@
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/has-default-row-height-if.ts:2](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/has-default-row-height-if.ts#L2)
+[lib/table/data/tablemodel/areamodel/has-default-row-height-if.ts:2](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/has-default-row-height-if.ts#L2)

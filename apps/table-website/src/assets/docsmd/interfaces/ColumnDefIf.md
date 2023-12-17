@@ -40,7 +40,7 @@ Represents an object that maps an area to a collection of objects.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:57](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L57)
+[lib/table/data/tablemodel/column/column-def.if.ts:57](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L57)
 
 ___
 
@@ -52,7 +52,7 @@ Represents an edit input pipe.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:139](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L139)
+[lib/table/data/tablemodel/column/column-def.if.ts:139](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L139)
 
 ___
 
@@ -68,7 +68,7 @@ The variable to check.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:108](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L108)
+[lib/table/data/tablemodel/column/column-def.if.ts:108](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L108)
 
 ___
 
@@ -90,7 +90,7 @@ The element for which to retrieve the edit renderer.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:124](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L124)
+[lib/table/data/tablemodel/column/column-def.if.ts:124](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L124)
 
 ___
 
@@ -102,7 +102,7 @@ Represents the label for a header.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:24](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L24)
+[lib/table/data/tablemodel/column/column-def.if.ts:24](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L24)
 
 ___
 
@@ -114,7 +114,7 @@ Determines if the column is visible or not.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:115](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L115)
+[lib/table/data/tablemodel/column/column-def.if.ts:115](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L115)
 
 ___
 
@@ -126,7 +126,7 @@ Represents the maximum width of a column.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:45](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L45)
+[lib/table/data/tablemodel/column/column-def.if.ts:45](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L45)
 
 ___
 
@@ -138,7 +138,7 @@ Represents the minimum width of a column.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:39](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L39)
+[lib/table/data/tablemodel/column/column-def.if.ts:39](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L39)
 
 ___
 
@@ -150,7 +150,7 @@ Represents a property name of the table row element.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:18](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L18)
+[lib/table/data/tablemodel/column/column-def.if.ts:18](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L18)
 
 ___
 
@@ -162,7 +162,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:51](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L51)
+[lib/table/data/tablemodel/column/column-def.if.ts:51](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L51)
 
 ___
 
@@ -205,7 +205,7 @@ T The type of values being compared.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:86](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L86)
+[lib/table/data/tablemodel/column/column-def.if.ts:86](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L86)
 
 ___
 
@@ -217,7 +217,7 @@ Determines if the sort icon is visible.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:71](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L71)
+[lib/table/data/tablemodel/column/column-def.if.ts:71](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L71)
 
 ___
 
@@ -229,7 +229,7 @@ Represents the state of sorting for a list.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:95](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L95)
+[lib/table/data/tablemodel/column/column-def.if.ts:95](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L95)
 
 ___
 
@@ -241,7 +241,7 @@ Represents the order of multiple sort states.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:101](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L101)
+[lib/table/data/tablemodel/column/column-def.if.ts:101](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L101)
 
 ___
 
@@ -257,7 +257,7 @@ Specifies if an item is sortable.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:64](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L64)
+[lib/table/data/tablemodel/column/column-def.if.ts:64](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L64)
 
 ___
 
@@ -269,4 +269,4 @@ Represents the size of a column along the width dimension.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.if.ts:30](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L30)
+[lib/table/data/tablemodel/column/column-def.if.ts:30](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.if.ts#L30)

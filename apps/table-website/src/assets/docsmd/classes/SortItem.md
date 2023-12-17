@@ -2,6 +2,8 @@
 
 # Class: SortItem
 
+Represents a sortable column with its sort order..
+
 ## Table of contents
 
 ### Constructors
@@ -32,7 +34,7 @@
 
 #### Defined in
 
-[lib/table/data/common/sort-item.ts:5](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sort-item.ts#L5)
+[lib/table/data/common/sort-item.ts:8](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/sort-item.ts#L8)
 
 ## Properties
 
@@ -42,7 +44,7 @@
 
 #### Defined in
 
-[lib/table/data/common/sort-item.ts:6](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sort-item.ts#L6)
+[lib/table/data/common/sort-item.ts:9](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/sort-item.ts#L9)
 
 ___
 
@@ -52,4 +54,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/sort-item.ts:7](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/sort-item.ts#L7)
+[lib/table/data/common/sort-item.ts:10](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/sort-item.ts#L10)

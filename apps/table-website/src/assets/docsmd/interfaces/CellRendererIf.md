@@ -13,6 +13,7 @@
 - [`DateToTecCellRenderer`](../classes/DateToTecCellRenderer.md)
 - [`InputCellRenderer`](../classes/InputCellRenderer.md)
 - [`MaleFemaleToIconCellRenderer`](../classes/MaleFemaleToIconCellRenderer.md)
+- [`NumberCellProgressBarCellRenderer`](../classes/NumberCellProgressBarCellRenderer.md)
 - [`NumberCellRenderer`](../classes/NumberCellRenderer.md)
 - [`ProgressBarCellRenderer`](../classes/ProgressBarCellRenderer.md)
 - [`SelectCellRenderer`](../classes/SelectCellRenderer.md)
@@ -49,4 +50,4 @@
 
 #### Defined in
 
-[lib/table/renderer/cell-render.if.ts:8](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/renderer/cell-render.if.ts#L8)
+[lib/table/renderer/cell-render.if.ts:8](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/renderer/cell-render.if.ts#L8)

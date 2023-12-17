@@ -72,7 +72,7 @@ Represents a column definition for one column of the table.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:21](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L21)
+[lib/table/data/tablemodel/column/column-def.ts:21](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L21)
 
 ## Properties
 
@@ -88,7 +88,7 @@ Represents an object that maps an area to a collection of objects.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:25](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L25)
+[lib/table/data/tablemodel/column/column-def.ts:25](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L25)
 
 ___
 
@@ -104,7 +104,7 @@ Represents an edit input pipe.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:36](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L36)
+[lib/table/data/tablemodel/column/column-def.ts:36](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L36)
 
 ___
 
@@ -124,7 +124,7 @@ The variable to check.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:34](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L34)
+[lib/table/data/tablemodel/column/column-def.ts:34](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L34)
 
 ___
 
@@ -150,7 +150,7 @@ The element for which to retrieve the edit renderer.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:35](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L35)
+[lib/table/data/tablemodel/column/column-def.ts:35](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L35)
 
 ___
 
@@ -166,7 +166,7 @@ Represents the label for a header.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:23](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L23)
+[lib/table/data/tablemodel/column/column-def.ts:23](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L23)
 
 ___
 
@@ -182,7 +182,7 @@ Determines if the column is visible or not.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:37](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L37)
+[lib/table/data/tablemodel/column/column-def.ts:37](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L37)
 
 ___
 
@@ -198,7 +198,7 @@ Represents the maximum width of a column.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:28](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L28)
+[lib/table/data/tablemodel/column/column-def.ts:28](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L28)
 
 ___
 
@@ -214,7 +214,7 @@ Represents the minimum width of a column.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:27](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L27)
+[lib/table/data/tablemodel/column/column-def.ts:27](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L27)
 
 ___
 
@@ -230,7 +230,7 @@ Represents a property name of the table row element.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:22](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L22)
+[lib/table/data/tablemodel/column/column-def.ts:22](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L22)
 
 ___
 
@@ -246,7 +246,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:26](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L26)
+[lib/table/data/tablemodel/column/column-def.ts:26](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L26)
 
 ___
 
@@ -281,7 +281,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:30](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L30)
+[lib/table/data/tablemodel/column/column-def.ts:30](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L30)
 
 ___
 
@@ -297,7 +297,7 @@ Determines if the sort icon is visible.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:33](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L33)
+[lib/table/data/tablemodel/column/column-def.ts:33](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L33)
 
 ___
 
@@ -313,7 +313,7 @@ Represents the state of sorting for a list.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:31](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L31)
+[lib/table/data/tablemodel/column/column-def.ts:31](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L31)
 
 ___
 
@@ -329,7 +329,7 @@ Represents the order of multiple sort states.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:32](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L32)
+[lib/table/data/tablemodel/column/column-def.ts:32](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L32)
 
 ___
 
@@ -349,7 +349,7 @@ Specifies if an item is sortable.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:29](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L29)
+[lib/table/data/tablemodel/column/column-def.ts:29](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L29)
 
 ___
 
@@ -359,7 +359,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:19](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L19)
+[lib/table/data/tablemodel/column/column-def.ts:19](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L19)
 
 ___
 
@@ -375,7 +375,7 @@ Represents the size of a column along the width dimension.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:24](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L24)
+[lib/table/data/tablemodel/column/column-def.ts:24](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L24)
 
 ## Methods
 
@@ -395,7 +395,7 @@ Represents the size of a column along the width dimension.
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:41](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L41)
+[lib/table/data/tablemodel/column/column-def.ts:41](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L41)
 
 ___
 
@@ -435,4 +435,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/tablemodel/column/column-def.ts:49](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L49)
+[lib/table/data/tablemodel/column/column-def.ts:49](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/column/column-def.ts#L49)

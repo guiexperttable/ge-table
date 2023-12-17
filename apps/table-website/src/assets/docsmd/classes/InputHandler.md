@@ -40,7 +40,7 @@ module:input
 
 #### Defined in
 
-[lib/table/input-handler.ts:13](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/input-handler.ts#L13)
+[lib/table/input-handler.ts:13](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/input-handler.ts#L13)
 
 ## Properties
 
@@ -50,7 +50,7 @@ module:input
 
 #### Defined in
 
-[lib/table/input-handler.ts:14](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/input-handler.ts#L14)
+[lib/table/input-handler.ts:14](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/input-handler.ts#L14)
 
 ## Methods
 
@@ -73,4 +73,4 @@ In case that the element is an input field, the tableScope.updateModelValueAfter
 
 #### Defined in
 
-[lib/table/input-handler.ts:28](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/input-handler.ts#L28)
+[lib/table/input-handler.ts:28](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/input-handler.ts#L28)

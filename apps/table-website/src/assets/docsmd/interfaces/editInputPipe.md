@@ -36,4 +36,4 @@ The index of the column.
 
 #### Defined in
 
-[lib/table/renderer/edit/edit-input-pipe.if.ts:12](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/renderer/edit/edit-input-pipe.if.ts#L12)
+[lib/table/renderer/edit/edit-input-pipe.if.ts:12](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/renderer/edit/edit-input-pipe.if.ts#L12)

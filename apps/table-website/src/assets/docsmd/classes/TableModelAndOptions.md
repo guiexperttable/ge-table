@@ -38,7 +38,7 @@ Container object for one table model and one table options object.
 
 #### Defined in
 
-[lib/table/data/table-model-and-options.ts:11](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/table-model-and-options.ts#L11)
+[lib/table/data/table-model-and-options.ts:11](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/table-model-and-options.ts#L11)
 
 ## Properties
 
@@ -52,7 +52,7 @@ Container object for one table model and one table options object.
 
 #### Defined in
 
-[lib/table/data/table-model-and-options.ts:12](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/table-model-and-options.ts#L12)
+[lib/table/data/table-model-and-options.ts:12](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/table-model-and-options.ts#L12)
 
 ___
 
@@ -66,4 +66,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/table-model-and-options.ts:13](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/table-model-and-options.ts#L13)
+[lib/table/data/table-model-and-options.ts:13](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/table-model-and-options.ts#L13)

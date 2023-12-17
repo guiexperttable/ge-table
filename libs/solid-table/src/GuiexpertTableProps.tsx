@@ -18,6 +18,7 @@ export interface GuiexpertTableProps {
   mouseDraggingEnd?: GeMouseEventFn,
   checkboxChanged?: GeCheckboxEventFn,
   modelChanged?: GeModelChangeEventFn,
-  tableReady?: GeTableReadyEventFn
+  tableReady?: GeTableReadyEventFn,
+  licenseKey?: string,
 }
 

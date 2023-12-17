@@ -24,7 +24,7 @@ Represents a color in RGB format.
 
 #### Defined in
 
-[lib/table/color/color-rgb.if.ts:10](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/color/color-rgb.if.ts#L10)
+[lib/table/color/color-rgb.if.ts:10](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/color/color-rgb.if.ts#L10)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[lib/table/color/color-rgb.if.ts:9](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/color/color-rgb.if.ts#L9)
+[lib/table/color/color-rgb.if.ts:9](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/color/color-rgb.if.ts#L9)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[lib/table/color/color-rgb.if.ts:8](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/color/color-rgb.if.ts#L8)
+[lib/table/color/color-rgb.if.ts:8](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/color/color-rgb.if.ts#L8)

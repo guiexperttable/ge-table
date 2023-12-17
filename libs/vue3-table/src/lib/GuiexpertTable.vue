@@ -7,7 +7,14 @@
 </template>
 
 <script lang="ts">
-import { GeModelChangeEvent, GeMouseEvent, SimpleDomService, TableOptions, TableScope } from "@guiexpert/table";
+import {
+  GeModelChangeEvent,
+  GeMouseEvent,
+  LicenseManager,
+  SimpleDomService,
+  TableOptions,
+  TableScope
+} from '@guiexpert/table';
 import { defineComponent, onMounted, ref } from "vue";
 
 
@@ -24,6 +31,10 @@ export default defineComponent({
     debounceMouseClickDelay: {
       required: false,
       default: 150
+    },
+    licenseKey: {
+      default: '',
+      required: false
     }
   },
   emits: [
@@ -86,6 +97,8 @@ export default defineComponent({
         initTable(root.value as HTMLDivElement);
       }
     });
+
+    if (props.licenseKey) LicenseManager.getInstance().setLicenseKey(props.licenseKey);
 
     return {
       root

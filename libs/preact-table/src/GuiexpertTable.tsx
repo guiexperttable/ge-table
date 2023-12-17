@@ -1,17 +1,18 @@
 import { Component, createRef } from "preact";
 import {
   GeModelChangeEvent,
-  GeMouseEvent,
+  GeMouseEvent, LicenseManager,
   SimpleDomService, TableApi,
   TableModelIf,
   TableOptions,
   TableScope
-} from "@guiexpert/table";
+} from '@guiexpert/table';
 
 export type GeMouseEventFn = (evt: GeMouseEvent) => {};
 export type GeCheckboxEventFn = (evt: any[]) => {};
 export type GeTableReadyEventFn = (evt: TableApi) => {};
 export type GeModelChangeEventFn = (evt: GeModelChangeEvent) => {};
+
 
 export interface GuiexpertTableProps {
   tableModel: TableModelIf,
@@ -23,10 +24,15 @@ export interface GuiexpertTableProps {
   mouseDraggingEnd?: GeMouseEventFn,
   checkboxChanged?: GeCheckboxEventFn,
   modelChanged?: GeModelChangeEventFn,
-  tableReady?: GeTableReadyEventFn
+  tableReady?: GeTableReadyEventFn,
+  licenseKey?: string,
 }
 
 
+/**
+ * GuiexpertTable is a React component that wraps the ExpertTable library.
+ * It displays a table with various event listeners and callback functions.
+ */
 export class GuiexpertTable extends Component<GuiexpertTableProps>  {
 
   ref = createRef();
@@ -82,9 +88,7 @@ export class GuiexpertTable extends Component<GuiexpertTableProps>  {
       },
 
       onMouseMoved: (evt: GeMouseEvent) => {
-        // if (mouseMoved) {
-        //   mouseMoved(evt);
-        // }
+        // ignored
       }
     };
 
@@ -95,6 +99,7 @@ export class GuiexpertTable extends Component<GuiexpertTableProps>  {
     if (props.tableReady) {
       props.tableReady(tableScope.getApi());
     }
+    if (props.licenseKey) LicenseManager.getInstance().setLicenseKey(props.licenseKey);
   };
 
   render() {

@@ -32,7 +32,7 @@ new Icon(
 
 #### Defined in
 
-[lib/table/data/options/icon.if.ts:18](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/icon.if.ts#L18)
+[lib/table/data/options/icon.if.ts:18](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/icon.if.ts#L18)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/icon.if.ts:16](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/icon.if.ts#L16)
+[lib/table/data/options/icon.if.ts:16](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/icon.if.ts#L16)
 
 ___
 
@@ -52,4 +52,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/icon.if.ts:17](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/icon.if.ts#L17)
+[lib/table/data/options/icon.if.ts:17](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/icon.if.ts#L17)

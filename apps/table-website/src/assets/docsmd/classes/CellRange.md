@@ -30,15 +30,17 @@
 
 • **new CellRange**(`r1`, `c1`, `r2`, `c2`, `gammaRange?`): [`CellRange`](CellRange.md)
 
+Represents a constructor for a class.
+
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `r1` | `number` | `undefined` |
-| `c1` | `number` | `undefined` |
-| `r2` | `number` | `undefined` |
-| `c2` | `number` | `undefined` |
-| `gammaRange` | `boolean` | `false` |
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `r1` | `number` | `undefined` | The value for r1. |
+| `c1` | `number` | `undefined` | The value for c1. |
+| `r2` | `number` | `undefined` | The value for r2. |
+| `c2` | `number` | `undefined` | The value for c2. |
+| `gammaRange?` | `boolean` | `false` | The value for gammaRange. Defaults to false. gammaRange will be used for AreaModelCellGroups, but it's not implemented yet! |
 
 #### Returns
 
@@ -46,7 +48,7 @@
 
 #### Defined in
 
-[lib/table/data/common/cell-range.ts:4](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/cell-range.ts#L4)
+[lib/table/data/common/cell-range.ts:13](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/cell-range.ts#L13)
 
 ## Properties
 
@@ -54,9 +56,11 @@
 
 • **c1**: `number`
 
+The value for c1.
+
 #### Defined in
 
-[lib/table/data/common/cell-range.ts:6](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/cell-range.ts#L6)
+[lib/table/data/common/cell-range.ts:15](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/cell-range.ts#L15)
 
 ___
 
@@ -64,9 +68,11 @@ ___
 
 • **c2**: `number`
 
+The value for c2.
+
 #### Defined in
 
-[lib/table/data/common/cell-range.ts:8](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/cell-range.ts#L8)
+[lib/table/data/common/cell-range.ts:17](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/cell-range.ts#L17)
 
 ___
 
@@ -74,9 +80,11 @@ ___
 
 • **gammaRange**: `boolean` = `false`
 
+The value for gammaRange. Defaults to false. gammaRange will be used for AreaModelCellGroups, but it's not implemented yet!
+
 #### Defined in
 
-[lib/table/data/common/cell-range.ts:9](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/cell-range.ts#L9)
+[lib/table/data/common/cell-range.ts:18](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/cell-range.ts#L18)
 
 ___
 
@@ -84,9 +92,11 @@ ___
 
 • **r1**: `number`
 
+The value for r1.
+
 #### Defined in
 
-[lib/table/data/common/cell-range.ts:5](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/cell-range.ts#L5)
+[lib/table/data/common/cell-range.ts:14](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/cell-range.ts#L14)
 
 ___
 
@@ -94,9 +104,11 @@ ___
 
 • **r2**: `number`
 
+The value for r2.
+
 #### Defined in
 
-[lib/table/data/common/cell-range.ts:7](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/cell-range.ts#L7)
+[lib/table/data/common/cell-range.ts:16](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/cell-range.ts#L16)
 
 ## Methods
 
@@ -117,7 +129,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/cell-range.ts:50](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/cell-range.ts#L50)
+[lib/table/data/common/cell-range.ts:59](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/cell-range.ts#L59)
 
 ___
 
@@ -142,7 +154,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/cell-range.ts:12](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/cell-range.ts#L12)
+[lib/table/data/common/cell-range.ts:21](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/cell-range.ts#L21)
 
 ___
 
@@ -163,7 +175,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/cell-range.ts:31](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/cell-range.ts#L31)
+[lib/table/data/common/cell-range.ts:40](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/cell-range.ts#L40)
 
 ___
 
@@ -183,7 +195,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/cell-range.ts:44](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/cell-range.ts#L44)
+[lib/table/data/common/cell-range.ts:53](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/cell-range.ts#L53)
 
 ___
 
@@ -203,4 +215,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/cell-range.ts:38](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/cell-range.ts#L38)
+[lib/table/data/common/cell-range.ts:47](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/cell-range.ts#L47)

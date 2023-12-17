@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[lib/table/data/options/default-row-heights.if.ts:3](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/default-row-heights.if.ts#L3)
+[lib/table/data/options/default-row-heights.if.ts:3](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/default-row-heights.if.ts#L3)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/default-row-heights.if.ts:4](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/default-row-heights.if.ts#L4)
+[lib/table/data/options/default-row-heights.if.ts:4](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/default-row-heights.if.ts#L4)
 
 ___
 
@@ -42,4 +42,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/default-row-heights.if.ts:2](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/default-row-heights.if.ts#L2)
+[lib/table/data/options/default-row-heights.if.ts:2](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/default-row-heights.if.ts#L2)

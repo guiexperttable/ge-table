@@ -2,6 +2,8 @@
 
 # Class: Size
 
+Represents a size with a value and unit. At the moment only unit 'px' is implemented in the calculations.
+
 ## Implements
 
 - [`SizeIf`](../interfaces/SizeIf.md)
@@ -36,7 +38,7 @@
 
 #### Defined in
 
-[lib/table/data/common/size.ts:4](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/size.ts#L4)
+[lib/table/data/common/size.ts:4](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/size.ts#L4)
 
 ## Properties
 
@@ -50,7 +52,7 @@
 
 #### Defined in
 
-[lib/table/data/common/size.ts:6](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/size.ts#L6)
+[lib/table/data/common/size.ts:6](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/size.ts#L6)
 
 ___
 
@@ -64,4 +66,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/common/size.ts:5](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/common/size.ts#L5)
+[lib/table/data/common/size.ts:5](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/common/size.ts#L5)

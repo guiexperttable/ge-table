@@ -58,7 +58,7 @@ The identifier for one of the areas: header, body, footer.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model.if.ts:20](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L20)
+[lib/table/data/tablemodel/areamodel/area-model.if.ts:20](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L20)
 
 ___
 
@@ -70,7 +70,7 @@ A model and controller for a row checkbox selection
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model.if.ts:25](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L25)
+[lib/table/data/tablemodel/areamodel/area-model.if.ts:25](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L25)
 
 ## Methods
 
@@ -93,7 +93,7 @@ Method for moving a column from position sourceColumnIndex to targetColumnIndex.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model.if.ts:30](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L30)
+[lib/table/data/tablemodel/areamodel/area-model.if.ts:30](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L30)
 
 ___
 
@@ -115,7 +115,7 @@ If the 'restore sort' option is set (see), this method will be triggered automat
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model.if.ts:184](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L184)
+[lib/table/data/tablemodel/areamodel/area-model.if.ts:184](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L184)
 
 ___
 
@@ -143,7 +143,7 @@ Will be called internally, when a filtering is trigger.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model.if.ts:178](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L178)
+[lib/table/data/tablemodel/areamodel/area-model.if.ts:178](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L178)
 
 ___
 
@@ -167,7 +167,7 @@ If the return value is undefined, no renderer is used and the model value will b
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model.if.ts:115](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L115)
+[lib/table/data/tablemodel/areamodel/area-model.if.ts:115](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L115)
 
 ___
 
@@ -191,7 +191,7 @@ A value below 2 is ignored.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model.if.ts:56](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L56)
+[lib/table/data/tablemodel/areamodel/area-model.if.ts:56](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L56)
 
 ___
 
@@ -214,7 +214,7 @@ This method can be used to return a list of css classes for the given cell
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model.if.ts:85](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L85)
+[lib/table/data/tablemodel/areamodel/area-model.if.ts:85](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L85)
 
 ___
 
@@ -237,7 +237,7 @@ This method can be used to return an object with css style information for the g
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model.if.ts:92](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L92)
+[lib/table/data/tablemodel/areamodel/area-model.if.ts:92](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L92)
 
 ___
 
@@ -256,7 +256,7 @@ cell greater 32, don't forget to increase this value.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model.if.ts:64](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L64)
+[lib/table/data/tablemodel/areamodel/area-model.if.ts:64](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L64)
 
 ___
 
@@ -275,7 +275,7 @@ cell greater 32, don't forget to increase this value.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model.if.ts:78](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L78)
+[lib/table/data/tablemodel/areamodel/area-model.if.ts:78](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L78)
 
 ___
 
@@ -297,7 +297,7 @@ Returns the row of the model, which correspond to the rowIndex.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model.if.ts:127](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L127)
+[lib/table/data/tablemodel/areamodel/area-model.if.ts:127](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L127)
 
 ___
 
@@ -313,7 +313,7 @@ Returns the number of rows of the area
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model.if.ts:45](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L45)
+[lib/table/data/tablemodel/areamodel/area-model.if.ts:45](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L45)
 
 ___
 
@@ -335,7 +335,7 @@ Returns the row height in pixel of the given row (rowIndex).
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model.if.ts:121](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L121)
+[lib/table/data/tablemodel/areamodel/area-model.if.ts:121](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L121)
 
 ___
 
@@ -359,7 +359,7 @@ A value below 2 is ignored.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model.if.ts:70](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L70)
+[lib/table/data/tablemodel/areamodel/area-model.if.ts:70](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L70)
 
 ___
 
@@ -382,7 +382,7 @@ Returns the value of a tooltip of the given cell (rowIndex/columnIndex).
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model.if.ts:107](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L107)
+[lib/table/data/tablemodel/areamodel/area-model.if.ts:107](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L107)
 
 ___
 
@@ -405,7 +405,7 @@ Returns the value of the cell at position rowIndex/columnIndex.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model.if.ts:50](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L50)
+[lib/table/data/tablemodel/areamodel/area-model.if.ts:50](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L50)
 
 ▸ **getValueAt**(`rowIndex`, `columnIndex`): `any`
 
@@ -425,7 +425,7 @@ directly in the cell or rendered by a cell renderer: see [getCellRenderer](AreaM
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model.if.ts:100](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L100)
+[lib/table/data/tablemodel/areamodel/area-model.if.ts:100](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L100)
 
 ___
 
@@ -448,7 +448,7 @@ For big tables it can be a big value (greate than the height of the viewport).
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model.if.ts:134](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L134)
+[lib/table/data/tablemodel/areamodel/area-model.if.ts:134](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L134)
 
 ___
 
@@ -464,7 +464,7 @@ Internally used by TableModel.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model.if.ts:40](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L40)
+[lib/table/data/tablemodel/areamodel/area-model.if.ts:40](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L40)
 
 ___
 
@@ -487,7 +487,7 @@ If this method returns true, the cell can be edited by the user.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model.if.ts:141](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L141)
+[lib/table/data/tablemodel/areamodel/area-model.if.ts:141](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L141)
 
 ___
 
@@ -503,7 +503,7 @@ If true, the table is filterable. Rows can be filtered with help of #externalFil
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model.if.ts:172](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L172)
+[lib/table/data/tablemodel/areamodel/area-model.if.ts:172](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L172)
 
 ___
 
@@ -525,7 +525,7 @@ If true, the row is checkable and a checkbox is rendered at the beginning of the
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model.if.ts:154](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L154)
+[lib/table/data/tablemodel/areamodel/area-model.if.ts:154](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L154)
 
 ___
 
@@ -547,7 +547,7 @@ Returns the checked state of an row.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model.if.ts:160](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L160)
+[lib/table/data/tablemodel/areamodel/area-model.if.ts:160](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L160)
 
 ___
 
@@ -570,7 +570,7 @@ If true, the cell is selectable.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model.if.ts:148](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L148)
+[lib/table/data/tablemodel/areamodel/area-model.if.ts:148](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L148)
 
 ___
 
@@ -593,7 +593,7 @@ Set the checked state of the row (rowIndex) to #checked.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model.if.ts:167](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L167)
+[lib/table/data/tablemodel/areamodel/area-model.if.ts:167](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L167)
 
 ___
 
@@ -617,4 +617,4 @@ Method for changing a cell value.
 
 #### Defined in
 
-[lib/table/data/tablemodel/areamodel/area-model.if.ts:35](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L35)
+[lib/table/data/tablemodel/areamodel/area-model.if.ts:35](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/areamodel/area-model.if.ts#L35)

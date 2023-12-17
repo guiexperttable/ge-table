@@ -1,10 +1,10 @@
 import {
   GeModelChangeEvent,
-  GeMouseEvent,
+  GeMouseEvent, LicenseManager,
   SimpleDomService,
   TableModelAndOptionsIf,
   TableScope
-} from "@guiexpert/table";
+} from '@guiexpert/table';
 
 export class GuiexpertTable extends HTMLElement {
 
@@ -21,6 +21,10 @@ export class GuiexpertTable extends HTMLElement {
     if (value) {
       this.setData(value);
     }
+  }
+
+  set licenseKey(key: string){
+    LicenseManager.getInstance().setLicenseKey(key);
   }
 
   public setData({ tableModel, tableOptions }: TableModelAndOptionsIf) {
@@ -82,12 +86,11 @@ export class GuiexpertTable extends HTMLElement {
 
       const e = new CustomEvent("tableReady", { detail: tableScope.getApi(), bubbles: true });
       ele.dispatchEvent(e);
-      console.info(ele);
     }
   }
 
   connectedCallback() {
-    console.info('connectedCallback()');
+    //
   }
 }
 

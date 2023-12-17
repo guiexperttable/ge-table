@@ -62,7 +62,7 @@ See TableOptionsIf#autoRestoreOptions()
 
 #### Defined in
 
-[lib/table/data/options/auto-restore-options.ts:10](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/auto-restore-options.ts#L10)
+[lib/table/data/options/auto-restore-options.ts:10](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/auto-restore-options.ts#L10)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/auto-restore-options.ts:7](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/auto-restore-options.ts#L7)
+[lib/table/data/options/auto-restore-options.ts:7](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/auto-restore-options.ts#L7)
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/auto-restore-options.ts:8](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/auto-restore-options.ts#L8)
+[lib/table/data/options/auto-restore-options.ts:8](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/auto-restore-options.ts#L8)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/auto-restore-options.ts:11](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/auto-restore-options.ts#L11)
+[lib/table/data/options/auto-restore-options.ts:11](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/auto-restore-options.ts#L11)
 
 ___
 
@@ -118,7 +118,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/auto-restore-options.ts:6](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/auto-restore-options.ts#L6)
+[lib/table/data/options/auto-restore-options.ts:6](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/auto-restore-options.ts#L6)
 
 ___
 
@@ -132,7 +132,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/auto-restore-options.ts:14](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/auto-restore-options.ts#L14)
+[lib/table/data/options/auto-restore-options.ts:14](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/auto-restore-options.ts#L14)
 
 ## Methods
 
@@ -156,7 +156,7 @@ AutoRestoreOptionsIf.getRowId
 
 #### Defined in
 
-[lib/table/data/options/auto-restore-options.ts:28](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/auto-restore-options.ts#L28)
+[lib/table/data/options/auto-restore-options.ts:28](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/auto-restore-options.ts#L28)
 
 ___
 
@@ -182,4 +182,4 @@ AutoRestoreOptionsIf.isSame
 
 #### Defined in
 
-[lib/table/data/options/auto-restore-options.ts:17](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/auto-restore-options.ts#L17)
+[lib/table/data/options/auto-restore-options.ts:17](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/auto-restore-options.ts#L17)

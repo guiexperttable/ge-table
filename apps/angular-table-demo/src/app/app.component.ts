@@ -1,5 +1,6 @@
 import {Component, DoCheck} from '@angular/core';
 import {Router} from "@angular/router";
+import { LicenseManager } from '@guiexpert/table';
 
 @Component({
   selector: 'guiexpert-root',
@@ -14,6 +15,7 @@ export class AppComponent implements DoCheck {
   constructor(
     private readonly router: Router
   ) {
+    LicenseManager.getInstance().setLicenseKey('EXAMPLE_LICENSE_KEY')
   }
 
   ngDoCheck() {

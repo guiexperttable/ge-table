@@ -78,7 +78,7 @@ Moves a column from the source column index to the target column index.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:37](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L37)
+[lib/table/data/tablemodel/table-model.if.ts:37](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L37)
 
 ___
 
@@ -102,7 +102,7 @@ Sorts an array of SortItem objects based on a predetermined sorting algorithm.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:248](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L248)
+[lib/table/data/tablemodel/table-model.if.ts:248](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L248)
 
 ___
 
@@ -130,7 +130,7 @@ This is triggered when an external filter has changed.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:240](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L240)
+[lib/table/data/tablemodel/table-model.if.ts:240](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L240)
 
 ___
 
@@ -154,7 +154,7 @@ The area model corresponding to the provided row area identifier.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:82](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L82)
+[lib/table/data/tablemodel/table-model.if.ts:82](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L82)
 
 ___
 
@@ -172,7 +172,7 @@ The body model representing an area.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:89](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L89)
+[lib/table/data/tablemodel/table-model.if.ts:89](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L89)
 
 ___
 
@@ -196,7 +196,7 @@ Retrieves the body row at the specified index.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:164](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L164)
+[lib/table/data/tablemodel/table-model.if.ts:164](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L164)
 
 ___
 
@@ -214,7 +214,7 @@ The number of columns in the dataset.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:58](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L58)
+[lib/table/data/tablemodel/table-model.if.ts:58](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L58)
 
 ___
 
@@ -238,7 +238,7 @@ Retrieves the column definition for the specified index.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:141](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L141)
+[lib/table/data/tablemodel/table-model.if.ts:141](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L141)
 
 ___
 
@@ -256,7 +256,7 @@ An array of column definitions or undefined if there are no column definitions.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:148](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L148)
+[lib/table/data/tablemodel/table-model.if.ts:148](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L148)
 
 ___
 
@@ -280,7 +280,7 @@ The property of the column.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:156](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L156)
+[lib/table/data/tablemodel/table-model.if.ts:156](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L156)
 
 ___
 
@@ -304,7 +304,7 @@ The width of the specified column.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:66](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L66)
+[lib/table/data/tablemodel/table-model.if.ts:66](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L66)
 
 ▸ **getColumnWidth**(`columnIndex`): `number`
 
@@ -324,7 +324,7 @@ The width of the column in pixels.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:172](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L172)
+[lib/table/data/tablemodel/table-model.if.ts:172](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L172)
 
 ___
 
@@ -342,7 +342,7 @@ The height of the content in pixels.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:221](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L221)
+[lib/table/data/tablemodel/table-model.if.ts:221](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L221)
 
 ___
 
@@ -360,7 +360,7 @@ The width of the content in pixels.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:228](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L228)
+[lib/table/data/tablemodel/table-model.if.ts:228](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L228)
 
 ___
 
@@ -378,7 +378,7 @@ The count of fixed left columns.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:96](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L96)
+[lib/table/data/tablemodel/table-model.if.ts:96](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L96)
 
 ___
 
@@ -396,7 +396,7 @@ The count of fixed right columns.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:103](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L103)
+[lib/table/data/tablemodel/table-model.if.ts:103](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L103)
 
 ___
 
@@ -414,7 +414,7 @@ The padding value of the element.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:214](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L214)
+[lib/table/data/tablemodel/table-model.if.ts:214](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L214)
 
 ___
 
@@ -439,7 +439,7 @@ The height of the specified row in pixels.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:133](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L133)
+[lib/table/data/tablemodel/table-model.if.ts:133](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L133)
 
 ___
 
@@ -457,7 +457,7 @@ The selection model instance if available, or undefined if none is found.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:255](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L255)
+[lib/table/data/tablemodel/table-model.if.ts:255](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L255)
 
 ___
 
@@ -481,7 +481,7 @@ Returns the x position corresponding to the given column index.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:74](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L74)
+[lib/table/data/tablemodel/table-model.if.ts:74](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L74)
 
 ___
 
@@ -497,7 +497,7 @@ Triggered by TableScope.firstInit() after the table tag is attached to the dom.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:51](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L51)
+[lib/table/data/tablemodel/table-model.if.ts:51](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L51)
 
 ___
 
@@ -515,7 +515,7 @@ Returns true if the footer is visible, otherwise returns false.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:117](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L117)
+[lib/table/data/tablemodel/table-model.if.ts:117](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L117)
 
 ___
 
@@ -533,7 +533,7 @@ Checks if the header is visible.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:110](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L110)
+[lib/table/data/tablemodel/table-model.if.ts:110](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L110)
 
 ___
 
@@ -551,7 +551,7 @@ True if the row checkbox is visible, false otherwise.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:124](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L124)
+[lib/table/data/tablemodel/table-model.if.ts:124](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L124)
 
 ___
 
@@ -575,7 +575,7 @@ Checks if a column at the specified index is sortable.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:45](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L45)
+[lib/table/data/tablemodel/table-model.if.ts:45](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L45)
 
 ___
 
@@ -591,7 +591,7 @@ Recalculates the height and padding of an element.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:207](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L207)
+[lib/table/data/tablemodel/table-model.if.ts:207](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L207)
 
 ___
 
@@ -609,7 +609,7 @@ is properly aligned and displayed.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:200](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L200)
+[lib/table/data/tablemodel/table-model.if.ts:200](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L200)
 
 ___
 
@@ -631,7 +631,7 @@ Recalculates the size of the element based on the provided client width.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:191](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L191)
+[lib/table/data/tablemodel/table-model.if.ts:191](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L191)
 
 ___
 
@@ -654,4 +654,4 @@ Sets the width of a column in the table.
 
 #### Defined in
 
-[lib/table/data/tablemodel/table-model.if.ts:181](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L181)
+[lib/table/data/tablemodel/table-model.if.ts:181](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/tablemodel/table-model.if.ts#L181)

@@ -2,6 +2,8 @@
 
 # Class: MouseTargetData
 
+Represents data about a mouse target. It's a helper class to extract all information from the target HTMLElement.
+
 ## Table of contents
 
 ### Constructors
@@ -39,7 +41,7 @@
 
 #### Defined in
 
-[lib/table/data/event/mouse-target-data.ts:18](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/event/mouse-target-data.ts#L18)
+[lib/table/data/event/mouse-target-data.ts:21](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/event/mouse-target-data.ts#L21)
 
 ## Properties
 
@@ -49,7 +51,7 @@
 
 #### Defined in
 
-[lib/table/data/event/mouse-target-data.ts:13](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/event/mouse-target-data.ts#L13)
+[lib/table/data/event/mouse-target-data.ts:16](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/event/mouse-target-data.ts#L16)
 
 ___
 
@@ -59,7 +61,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/event/mouse-target-data.ts:9](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/event/mouse-target-data.ts#L9)
+[lib/table/data/event/mouse-target-data.ts:12](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/event/mouse-target-data.ts#L12)
 
 ___
 
@@ -69,7 +71,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/event/mouse-target-data.ts:10](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/event/mouse-target-data.ts#L10)
+[lib/table/data/event/mouse-target-data.ts:13](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/event/mouse-target-data.ts#L13)
 
 ___
 
@@ -79,7 +81,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/event/mouse-target-data.ts:15](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/event/mouse-target-data.ts#L15)
+[lib/table/data/event/mouse-target-data.ts:18](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/event/mouse-target-data.ts#L18)
 
 ___
 
@@ -89,7 +91,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/event/mouse-target-data.ts:8](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/event/mouse-target-data.ts#L8)
+[lib/table/data/event/mouse-target-data.ts:11](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/event/mouse-target-data.ts#L11)
 
 ___
 
@@ -99,7 +101,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/event/mouse-target-data.ts:14](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/event/mouse-target-data.ts#L14)
+[lib/table/data/event/mouse-target-data.ts:17](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/event/mouse-target-data.ts#L17)
 
 ___
 
@@ -109,7 +111,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/event/mouse-target-data.ts:11](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/event/mouse-target-data.ts#L11)
+[lib/table/data/event/mouse-target-data.ts:14](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/event/mouse-target-data.ts#L14)
 
 ___
 
@@ -119,7 +121,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/event/mouse-target-data.ts:7](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/event/mouse-target-data.ts#L7)
+[lib/table/data/event/mouse-target-data.ts:10](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/event/mouse-target-data.ts#L10)
 
 ___
 
@@ -129,4 +131,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/event/mouse-target-data.ts:12](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/event/mouse-target-data.ts#L12)
+[lib/table/data/event/mouse-target-data.ts:15](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/event/mouse-target-data.ts#L15)

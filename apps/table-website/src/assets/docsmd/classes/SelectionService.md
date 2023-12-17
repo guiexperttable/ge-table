@@ -43,7 +43,7 @@
 
 #### Defined in
 
-[lib/table/selection/selection-service.ts:18](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/selection/selection-service.ts#L18)
+[lib/table/selection/selection-service.ts:18](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/selection/selection-service.ts#L18)
 
 ## Properties
 
@@ -53,7 +53,7 @@
 
 #### Defined in
 
-[lib/table/selection/selection-service.ts:14](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/selection/selection-service.ts#L14)
+[lib/table/selection/selection-service.ts:14](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/selection/selection-service.ts#L14)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[lib/table/selection/selection-service.ts:13](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/selection/selection-service.ts#L13)
+[lib/table/selection/selection-service.ts:13](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/selection/selection-service.ts#L13)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[lib/table/selection/selection-service.ts:15](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/selection/selection-service.ts#L15)
+[lib/table/selection/selection-service.ts:15](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/selection/selection-service.ts#L15)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[lib/table/selection/selection-service.ts:19](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/selection/selection-service.ts#L19)
+[lib/table/selection/selection-service.ts:19](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/selection/selection-service.ts#L19)
 
 ## Methods
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[lib/table/selection/selection-service.ts:104](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/selection/selection-service.ts#L104)
+[lib/table/selection/selection-service.ts:104](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/selection/selection-service.ts#L104)
 
 ___
 
@@ -132,7 +132,7 @@ Triggers an action based on the provided action ID.
 
 #### Defined in
 
-[lib/table/selection/selection-service.ts:77](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/selection/selection-service.ts#L77)
+[lib/table/selection/selection-service.ts:77](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/selection/selection-service.ts#L77)
 
 ___
 
@@ -153,4 +153,4 @@ ___
 
 #### Defined in
 
-[lib/table/selection/selection-service.ts:30](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/selection/selection-service.ts#L30)
+[lib/table/selection/selection-service.ts:30](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/selection/selection-service.ts#L30)

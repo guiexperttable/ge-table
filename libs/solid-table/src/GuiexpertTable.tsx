@@ -1,9 +1,15 @@
 import {GuiexpertTableProps} from "./GuiexpertTableProps";
 import {mergeProps, onMount} from "solid-js";
-import {SimpleDomService, TableOptions, TableScope} from "@guiexpert/table";
+import { LicenseManager, SimpleDomService, TableOptions, TableScope } from '@guiexpert/table';
 
 
 
+/**
+ * Render a table component with specified properties
+ *
+ * @param {GuiexpertTableProps} props - The properties of the table component
+ * @returns {JSX.Element} - The rendered table component
+ */
 export default (props: GuiexpertTableProps) => {
 
   let ref:any;
@@ -58,6 +64,8 @@ export default (props: GuiexpertTableProps) => {
     tableScope.firstInit();
     const e = new CustomEvent("tableReady", { detail: tableScope.getApi(), bubbles: true });
     if (ref) ref.dispatchEvent(e);
+
+    if (merged.licenseKey) LicenseManager.getInstance().setLicenseKey(merged.licenseKey);
   });
 
   return (

@@ -35,7 +35,7 @@ See TableOptionsIf#autoRestoreOptions()
 
 #### Defined in
 
-[lib/table/data/options/auto-restore-options.if.ts:14](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/auto-restore-options.if.ts#L14)
+[lib/table/data/options/auto-restore-options.if.ts:14](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/auto-restore-options.if.ts#L14)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/auto-restore-options.if.ts:11](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/auto-restore-options.if.ts#L11)
+[lib/table/data/options/auto-restore-options.if.ts:11](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/auto-restore-options.if.ts#L11)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/auto-restore-options.if.ts:12](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/auto-restore-options.if.ts#L12)
+[lib/table/data/options/auto-restore-options.if.ts:12](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/auto-restore-options.if.ts#L12)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/auto-restore-options.if.ts:15](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/auto-restore-options.if.ts#L15)
+[lib/table/data/options/auto-restore-options.if.ts:15](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/auto-restore-options.if.ts#L15)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/auto-restore-options.if.ts:10](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/auto-restore-options.if.ts#L10)
+[lib/table/data/options/auto-restore-options.if.ts:10](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/auto-restore-options.if.ts#L10)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/auto-restore-options.if.ts:17](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/auto-restore-options.if.ts#L17)
+[lib/table/data/options/auto-restore-options.if.ts:17](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/auto-restore-options.if.ts#L17)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/auto-restore-options.if.ts:18](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/auto-restore-options.if.ts#L18)
+[lib/table/data/options/auto-restore-options.if.ts:18](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/auto-restore-options.if.ts#L18)
 
 ___
 
@@ -105,4 +105,4 @@ ___
 
 #### Defined in
 
-[lib/table/data/options/auto-restore-options.if.ts:19](https://github.com/guiexperttable/ge-table/blob/6aaca3c/libs/table/src/lib/table/data/options/auto-restore-options.if.ts#L19)
+[lib/table/data/options/auto-restore-options.if.ts:19](https://github.com/guiexperttable/ge-table/blob/65066c0/libs/table/src/lib/table/data/options/auto-restore-options.if.ts#L19)
