@@ -17,7 +17,7 @@ This is the UI-agnostic table component for your next web app. 😊
 | 16.x.x                 | ^16.0.7                  |
 | 15.x.x                 | ^15.0.2                  |
 | 14.x.x                 | ^14.0.3                  |
-  |
+  
 
 
 ### Features

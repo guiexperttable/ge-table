@@ -20,17 +20,16 @@ This is the UI-agnostic table component for your next web app. 😊
 ### Version compatibility
 
 
-| Framework      | @guiexpert/xy-table              | Core table               |
-|:---------------|:---------------------------------|:-------------------------|
-| Plain JS/TS    |                                  | @guiexpert/table@latest  |
-| Angular 17.x.x | @guiexpert/angular-table@^17.0.0 | @guiexpert/table@latest  |
-| Angular 16.x.x | @guiexpert/angular-table@^16.0.7 | @guiexpert/table@latest  |
-| Angular 15.x.x | @guiexpert/angular-table@^15.0.2 | @guiexpert/table@latest  |
-| Angular 14.x.x | @guiexpert/angular-table@^14.0.3 | @guiexpert/table@latest  |
-| Angular 14.x.x | @guiexpert/angular-table@^14.0.3 | @guiexpert/table@latest  |
-| Vue 3.x.x      | @guiexpert/vue3-table@^3.0.0     | @guiexpert/table@latest  |
-| React 18.x.x   | @guiexpert/react-table@^18.0.0   | @guiexpert/table@latest  |
-| Preact 10.x.x  | @guiexpert/preact-table@^10.0.0   | @guiexpert/table@latest  |
+| Framework      | @guiexpert/xy-table                | Core table               |
+|:---------------|:-----------------------------------|:-------------------------|
+| Plain JS/TS    |                                    | @guiexpert/table@latest  |
+| Angular 17.x.x | @guiexpert/angular-table@^17.0.0   | @guiexpert/table@latest  |
+| Angular 16.x.x | @guiexpert/angular-table@^16.0.7   | @guiexpert/table@latest  |
+| Angular 15.x.x | @guiexpert/angular-table@^15.0.2   | @guiexpert/table@latest  |
+| Angular 14.x.x | @guiexpert/angular-table@^14.0.3   | @guiexpert/table@latest  |
+| Vue 3.x.x      | @guiexpert/vue3-table@^3.0.0       | @guiexpert/table@latest  |
+| React 18.x.x   | @guiexpert/react-table@^18.0.0     | @guiexpert/table@latest  |
+| Preact 10.x.x  | @guiexpert/preact-table@^10.0.0    | @guiexpert/table@latest  |
 
 
 ### Commands
