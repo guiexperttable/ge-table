@@ -17,10 +17,10 @@ export class ChangePercentageRenderer implements CellRendererIf {
       const n = Number(cellValue);
       if (n < 0) {
         cellDiv.innerHTML = "▾ " + n.toFixed(2) + "%";
-        domService.addClass(cellDiv, "ge-positive-text-color");
+        domService.addClass(cellDiv, "ge-negative-text-color");
       } else {
         cellDiv.innerHTML = "▴ " + n.toFixed(2) + "%";
-        domService.addClass(cellDiv, "ge-negative-text-color");
+        domService.addClass(cellDiv, "ge-positive-text-color");
       }
     }
     return undefined;

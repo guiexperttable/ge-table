@@ -57,6 +57,10 @@ const routes: Routes = [
     loadChildren: () => import("./olympic/demo-olympic.module").then(m => m.DemoOlympicModule)
   },
   {
+    path: "demo",
+    loadChildren: () => import("./cellselection/demo-cellselection.module").then(m => m.DemoCellselectionModule)
+  },
+  {
     path: "**", redirectTo: "welcome"
   }
 ];

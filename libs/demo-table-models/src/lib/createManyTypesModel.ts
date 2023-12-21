@@ -2,12 +2,12 @@ import {
   CheckboxBooleanPropertyCellRenderer,
   ColumnDef,
   ColumnDefIf,
-  DateToIntlDDMMYYYYCellRenderer,
+  DateToIntlDDMMYYYYCellRenderer, PositiveAndNegativeNumberRenderer,
   ProgressBarCellRenderer,
   px100,
   px120,
-  px140, px200,
-  px60,
+  px140, px200, px220,
+  px60, px80,
   px90,
   SelectionModel,
   SelectionModelIf,
@@ -15,11 +15,11 @@ import {
   TableFactory,
   TableModelAndOptions,
   TableModelAndOptionsIf,
-  TableOptions,
+  TableOptions, TrueFalseCellRenderer,
   TrueFn
 } from '@guiexpert/table';
 import manyTypesData from '../demodata/many-types';
-import { ManyTypesIf } from '../model/mana-types.if';
+import { ManyTypesIf } from '../model/many-types.if';
 
 
 function createTableRows(rowCount: number = 75): ManyTypesIf[] {
@@ -31,7 +31,7 @@ function createColumnDefs(): ColumnDefIf[] {
       ColumnDef.create({
       property: 'company',
       headerLabel: 'Company',
-      width: px120,
+      width: px100,
       bodyClasses: ['ge-table-text-align-left'],
       headerClasses: ['ge-table-text-align-left'],
       sortable: TrueFn
@@ -47,7 +47,7 @@ function createColumnDefs(): ColumnDefIf[] {
     ColumnDef.create({
       property: 'product',
       headerLabel: 'Name',
-      width: px120,
+      width: px100,
       bodyClasses: ['ge-table-text-align-left'],
       headerClasses: ['ge-table-text-align-left'],
       sortable: TrueFn
@@ -70,7 +70,7 @@ function createColumnDefs(): ColumnDefIf[] {
     ColumnDef.create({
       property: 'lastVisit',
       headerLabel: 'Last Visit',
-      width: px100,
+      width: px220,
       bodyClasses: ['ge-table-text-align-center'],
       sortable: TrueFn
     }),
@@ -120,22 +120,21 @@ function createColumnDefs(): ColumnDefIf[] {
     ColumnDef.create({
       property: 'price',
       headerLabel: 'Price',
-      width: px100,
+      width: px60,
       bodyClasses: ['ge-table-text-align-right'],
       sortable: TrueFn
     }),
     ColumnDef.create({
       property: 'active',
       headerLabel: 'Active',
-      width: px100,
-      bodyClasses: ['ge-table-text-align-right'],
+      width: px60,
+      bodyRenderer: new TrueFalseCellRenderer(),
       sortable: TrueFn
     }),
     ColumnDef.create({
       property: 'currency',
       headerLabel: 'CCY',
-      width: px100,
-      bodyClasses: ['ge-table-text-align-right'],
+      width: px60,
       sortable: TrueFn
     }),
     ColumnDef.create({
@@ -148,14 +147,15 @@ function createColumnDefs(): ColumnDefIf[] {
     ColumnDef.create({
       property: 'f1',
       headerLabel: 'F1',
-      width: px100,
+      width: px80,
       bodyClasses: ['ge-table-text-align-right'],
+      bodyRenderer: new PositiveAndNegativeNumberRenderer(),
       sortable: TrueFn
     }),
     ColumnDef.create({
       property: 'f2',
       headerLabel: 'F2',
-      width: px100,
+      width: px120,
       bodyClasses: ['ge-table-text-align-right'],
       sortable: TrueFn
     }),
@@ -163,7 +163,8 @@ function createColumnDefs(): ColumnDefIf[] {
       property: 'lorem',
       headerLabel: 'Lorem',
       width: px200,
-      sortable: TrueFn
+      sortable: TrueFn,
+      bodyClasses: ['ge-table-text-align-left'],
     })
 
   ];
@@ -172,7 +173,7 @@ function createColumnDefs(): ColumnDefIf[] {
 function createManyTypesTableOptions(selectionModel: SelectionModelIf): TableOptions {
   return {
     ...new TableOptions(), hoverColumnVisible: false, defaultRowHeights: {
-      header: 24, body: 24, footer: 0
+      header: 32, body: 32, footer: 0
     }, getSelectionModel: () => selectionModel
   };
 }

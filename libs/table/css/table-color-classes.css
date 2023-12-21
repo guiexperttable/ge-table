@@ -83,8 +83,16 @@
 .ge-table-drop-zone { background-color: var(--ge-table-drop-zone-bg); }
 .ge-table-dragged-col-div { background-color: var(--ge-table-dragged-col-div-bg); }
 
- /*TODO geht das überhaupt?*/
+
 .ge-table-cell-editor-input,
 .ge-table-cell-editor-input:focus-within {
   border: none;
+}
+
+.ge-star-rating-div {
+  color: var(--ge-table-color-star-rating, #fcb515);
+}
+
+.ge-table-progress-bar {
+  background-color: var(--ge-table-color-progress-bar, #36BB6C);
 }

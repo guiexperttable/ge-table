@@ -28,7 +28,7 @@
  * });
  *
  */
-import { ManyTypesIf } from '../model/mana-types.if';
+import { ManyTypesIf } from '../model/many-types.if';
 
 
 const manyTypesData: ManyTypesIf[] =

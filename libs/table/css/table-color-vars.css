@@ -78,6 +78,9 @@ html, html[data-theme="light"] {
   --ge-table-color-drop-zone-bg: #fafafa;
   --ge-table-color-drop-zone: #fafafa;
   --ge-table-color-tree-arrow-collapsed-color: var(--ge-table-body-west-text);
+
+  --ge-table-color-star-rating: #fcb515;
+  --ge-table-color-progress-bar: #36BB6C;
 }
 
 
@@ -149,4 +152,7 @@ html[data-theme="dark"] {
   --ge-table-color-drop-zone-bg: #fafafa;
   --ge-table-color-drop-zone: #fafafa;
   --ge-table-color-tree-arrow-collapsed-color: var(--ge-table-body-west-text);
+
+  --ge-table-color-star-rating: #fcb515;
+  --ge-table-color-progress-bar: #36BB6C;
 }
