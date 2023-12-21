@@ -1,4 +1,15 @@
 
+.header-div {
+  padding: 20px;
+  display: grid;
+  grid-template-columns:  minmax(150px, 25%)  minmax(150px, 25%)  1fr;
+  grid-gap: 20px;
+}
+
+.header-div > div {
+  margin-right: 20px;
+}
+
 .table-div {
   display: block;
   margin: 0;

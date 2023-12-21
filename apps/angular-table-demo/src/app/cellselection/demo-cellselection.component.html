@@ -1,8 +1,22 @@
 
-TODO<br>
-TODO<br>
-TODO<br>
-TODO<br>‚
+
+<div class="header-div">
+
+  <mat-form-field appearance="fill">
+    <mat-label>Selection Type</mat-label>
+    <mat-select [(value)]="selectionType" (valueChange)="onSelectionParameterChange()">
+      <mat-option *ngFor="let tp of selectionTypes" [value]="tp">{{tp}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Selection Mode</mat-label>
+    <mat-select [(value)]="selectionMode" (valueChange)="onSelectionParameterChange()">
+      <mat-option [value]="'single'">single</mat-option>
+      <mat-option [value]="'multi'">multi</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
 
 <guiexpert-table
   (tableReady)="onTableReady($event)"
@@ -12,9 +26,4 @@ TODO<br>‚
   class="table-div"
 ></guiexpert-table>
 
-<!--div class="filter-div">
-  <mat-form-field appearance="fill">
-    <mat-label>Filter</mat-label>
-    <input (keyup)="onKeyup()" [(ngModel)]="filterText" matInput>
-  </mat-form-field>
-</div-->
+

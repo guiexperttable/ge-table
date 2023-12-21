@@ -28,6 +28,7 @@ import {TableOptions} from "./data/options/table-options";
 import {TreeRowIf} from "./data/common/tree-row-if";
 import {isAreaModelTree} from "./instanceof-workaround";
 import { LicenseManager } from './license-manager';
+import { SelectionModel } from './selection/selection-model';
 
 
 /**
@@ -516,8 +517,6 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
   /**
    * Restores the scroll position of the table if auto restore options are enabled.
    *
-   * @private
-   * @memberof ClassName
    *
    * @returns {void}
    */
@@ -624,6 +623,24 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
     const bodyAreaModel = this.tableModel.getAreaModel('body');
     const py = bodyAreaModel.getYPosByRowIndex(indexY);
     this.scrollToPixel(0, py); // TODO calc indexX -> px
+  }
+
+  /**
+   * Sets the selection model for the table.
+   *
+   * @param {SelectionModel} sm - The selection model to be set.
+   * @param {boolean} rerender - Optional parameter indicating whether to rerender the table after setting the selection model. Default value is false.
+   *
+   * @return {void} - This method does not return any value.
+   */
+  setSelectionModel(sm: SelectionModel, rerender: boolean = false){
+    const getSm = () => sm;
+    this.tableOptions.getSelectionModel = getSm;
+    this.getSelectionModel = getSm;
+    this.selectionService.getSelectionModel = getSm;
+    if (rerender) {
+      this.repaint();
+    }
   }
 }
 

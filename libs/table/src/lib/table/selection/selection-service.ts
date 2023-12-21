@@ -10,8 +10,8 @@ import { ActionId } from "../action/action-id.type";
 
 export class SelectionService implements OnActionTriggeredIf {
 
-  protected getSelectionModel?: GetT<SelectionModelIf>;
-  protected getFocusModel?: GetT<FocusModelIf>;
+  getSelectionModel?: GetT<SelectionModelIf>;
+  getFocusModel?: GetT<FocusModelIf>;
   protected previousEvt?: GeMouseEvent;
 
 

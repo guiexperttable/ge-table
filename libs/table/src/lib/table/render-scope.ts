@@ -24,6 +24,7 @@ import { AreaObjectMapType } from "./data/common/area-map.type";
 import { AreaObjectMap } from "./data/common/area-map";
 import { TableCellUpdateEventIf } from "./data/common/event/input/table-cell-update-event.if";
 import {isAreaModelTree, isTreeRow} from "./instanceof-workaround";
+import { SelectionModel } from './selection/selection-model';
 
 
 interface ArgsRenderCell {
@@ -96,6 +97,7 @@ export class RenderScope extends EleScope {
       this.getSelectionModel = this.tableModel.getSelectionModel;
 
     } else if (this.tableOptions?.getSelectionModel) {
+      //  'getSelectionModel' of the tableOptions is more important:
       this.getSelectionModel = this.tableOptions.getSelectionModel;
     }
 
@@ -126,12 +128,25 @@ export class RenderScope extends EleScope {
     this.editing = false;
   }
 
-  clearSelection() {
+  /**
+   * Clears the selection in the component.
+   *
+   * @param {boolean} rerender - Indicates whether to rerender the component after clearing the selection. Default value is false.
+   *
+   * @return {void}
+   */
+  clearSelection(rerender: boolean = false) {
     if (this.getSelectionModel) {
       const sm = this.getSelectionModel();
       sm?.clear();
+      if (rerender) {
+        this.repaint();
+      }
     }
   }
+
+
+
 
   initRenderEditor(rowIdx: number, colIdx: number) {
     let rnFn = this.tableModel.getColumnDef(colIdx)?.getEditRenderer;

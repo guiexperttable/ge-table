@@ -1,6 +1,7 @@
 import {TableScope} from "./table-scope";
 import {ColumnDefIf} from "./data/tablemodel/column/column-def.if";
 import {TableCellUpdateEventIf} from "./data/common/event/input/table-cell-update-event.if";
+import { SelectionModel } from './selection/selection-model';
 
 
 export class TableApi {
@@ -130,6 +131,29 @@ export class TableApi {
    */
   repaint() {
     this.tableScope.repaint();
+  }
+
+
+  /**
+   * Clears the current selection of the table.
+   * The table will be rendered automatically.
+   *
+   * @returns {void}
+   */
+  clearSelection() {
+    this.tableScope.clearSelection(true);
+  }
+
+  /**
+   * Sets the selection model for the table scope.
+   *
+   * @param {SelectionModel} sm - The selection model to be set.
+   * @param {boolean} [repaint=true] - Indicates whether the table should be repainted after setting the selection model. Default value is true.
+   *
+   * @return {void}
+   */
+  setSelectionModel(sm: SelectionModel, repaint: boolean = true){
+    this.tableScope.setSelectionModel(sm, repaint);
   }
 
 }
