@@ -55,13 +55,13 @@ export class DemoCellselectionComponent {
 
 
   onSelectionParameterChange(){
-    console.info('selectionType:' + this.selectionType + ',  ' + 'selectionMode:' + this.selectionMode);
-
+    // Possibility 1:
     const sm = new SelectionModel(this.selectionType, this.selectionMode);
     if (this.tableApi) {
       this.tableApi.setSelectionModel(sm);
     }
 
+    // Possibility 2:
     // // Destroying the component:
     // this.tableModel = undefined;
     // this.cdr.detectChanges();

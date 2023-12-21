@@ -17,4 +17,6 @@ export interface SelectionModelIf {
   getSelectionCount(rowIndex: number, columnIndex: number): number;
 
   selectAll(): void;
+
+  firstClick(rowIndex: number, columnIndex: number): void;
 }

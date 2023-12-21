@@ -54,14 +54,21 @@ export class SelectionService implements OnActionTriggeredIf {
           deletePreviousEvent = true;
           dirty = true;
 
+
+        } else if (evt.originalEvent?.altKey && (evt.originalEvent?.ctrlKey || evt.originalEvent?.metaKey)) {
+          sm.removeSelection(CellRange.singleCell(evt.rowIndex, evt.columnIndex));
+          deletePreviousEvent = true;
+          dirty = true;
+
         } else if (evt.originalEvent?.ctrlKey || evt.originalEvent?.metaKey) {
           sm.addSelection(CellRange.singleCell(evt.rowIndex, evt.columnIndex));
           deletePreviousEvent = true;
           dirty = true;
 
-        } else if (evt.originalEvent?.altKey && (evt.originalEvent?.ctrlKey || evt.originalEvent?.metaKey)) {
-          sm.removeSelection(CellRange.singleCell(evt.rowIndex, evt.columnIndex));
-          deletePreviousEvent = true;
+        } else {
+          // no special key.
+          // for selection type  'row' and 'column' we have to select the current row (or column):
+          sm.firstClick(evt.rowIndex, evt.columnIndex);
           dirty = true;
         }
       }

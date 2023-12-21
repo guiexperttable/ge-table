@@ -14,6 +14,14 @@ export class SelectionModel implements SelectionModelIf {
   ) {
   }
 
+  firstClick(rowIndex: number, columnIndex: number): void {
+     if (this.selectionType === 'row') {
+       this.addRange(CellRange.singleRow(rowIndex));
+     } else if (this.selectionType === 'column') {
+       this.addRange(CellRange.singleColumn(columnIndex));
+     }
+  }
+
   getSelectionCount(rowIndex: number, columnIndex: number): number {
     let count = 0;
     for (const range of this.ranges) {
