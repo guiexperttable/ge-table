@@ -25,7 +25,6 @@ export class MouseHandler {
   geMouseEvent?: GeMouseEvent;
   geMouseEventOld?: GeMouseEvent;
 
-  private doubleClicked = false;
   private expandedAll = true;
   private mouseDown = false;
   private dragging = false;
