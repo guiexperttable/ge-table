@@ -23,8 +23,7 @@ import { ColAndRowspanModel } from "./data/tablemodel/areamodel/col-and-rowspan-
 import { AreaObjectMapType } from "./data/common/area-map.type";
 import { AreaObjectMap } from "./data/common/area-map";
 import { TableCellUpdateEventIf } from "./data/common/event/input/table-cell-update-event.if";
-import {isAreaModelTree, isTreeRow} from "./instanceof-workaround";
-import { SelectionModel } from './selection/selection-model';
+import { isAreaModelTree, isTreeRow } from "./instanceof-workaround";
 
 
 interface ArgsRenderCell {
@@ -57,7 +56,7 @@ export class RenderScope extends EleScope {
 
   protected storeScrollPosStateService?: StoreStateScrollPosService;
   protected getSelectionModel?: GetT<SelectionModelIf>;
-  protected getFocusModel?: GetT<FocusModelIf>; // TODO use it!
+  protected getFocusModel?: GetT<FocusModelIf>;
   protected scrollLeft = 0;
   protected scrollViewportLeft = 0;
   protected scrollFactorY = 0;

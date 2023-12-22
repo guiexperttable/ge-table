@@ -26,7 +26,7 @@ function createTableRows(rowCount: number = 75): ManyTypesIf[] {
   return manyTypesData.slice(0, rowCount - 1);
 }
 
-function createColumnDefs(): ColumnDefIf[] {
+function createColumnDefs(editable: boolean): ColumnDefIf[] {
   return [
       ColumnDef.create({
       property: 'company',
@@ -34,7 +34,8 @@ function createColumnDefs(): ColumnDefIf[] {
       width: px100,
       bodyClasses: ['ge-table-text-align-left'],
       headerClasses: ['ge-table-text-align-left'],
-      sortable: TrueFn
+      sortable: TrueFn,
+      editable: ()=> editable
     }),
     ColumnDef.create({
       property: 'country',
@@ -42,7 +43,8 @@ function createColumnDefs(): ColumnDefIf[] {
       width: px140,
       bodyClasses: ['ge-table-text-align-left'],
       headerClasses: ['ge-table-text-align-left'],
-      sortable: TrueFn
+      sortable: TrueFn,
+      editable: ()=> editable
     }),
     ColumnDef.create({
       property: 'product',
@@ -50,14 +52,16 @@ function createColumnDefs(): ColumnDefIf[] {
       width: px100,
       bodyClasses: ['ge-table-text-align-left'],
       headerClasses: ['ge-table-text-align-left'],
-      sortable: TrueFn
+      sortable: TrueFn,
+      editable: ()=> editable
     }),
     ColumnDef.create({
       property: 'birthday',
       headerLabel: 'Birth Date',
       width: px100,
       bodyClasses: ['ge-table-text-align-center'],
-      sortable: TrueFn
+      sortable: TrueFn,
+      editable: ()=> editable
     }),
     ColumnDef.create({
       property: 'sellDate',
@@ -65,21 +69,24 @@ function createColumnDefs(): ColumnDefIf[] {
       width: px100,
       bodyRenderer: new DateToIntlDDMMYYYYCellRenderer(),
       bodyClasses: ['ge-table-text-align-center'],
-      sortable: TrueFn
+      sortable: TrueFn,
+      editable: ()=> editable
     }),
     ColumnDef.create({
       property: 'lastVisit',
       headerLabel: 'Last Visit',
       width: px220,
       bodyClasses: ['ge-table-text-align-center'],
-      sortable: TrueFn
+      sortable: TrueFn,
+      editable: ()=> editable
     }),
     ColumnDef.create({
       property: 'time',
       headerLabel: 'Time',
       width: px100,
       bodyClasses: ['ge-table-text-align-center'],
-      sortable: TrueFn
+      sortable: TrueFn,
+      editable: ()=> editable
     }),
     ColumnDef.create({
       property: 'id', headerLabel: 'Order ID', width: px120, bodyClasses: ['ge-table-text-align-center'], sortable: TrueFn
@@ -90,7 +97,8 @@ function createColumnDefs(): ColumnDefIf[] {
       width: px90,
       bodyRenderer: new CheckboxBooleanPropertyCellRenderer('inStock', true, true),
       bodyClasses: ['ge-table-text-align-center'],
-      sortable: TrueFn
+      sortable: TrueFn,
+      editable: ()=> editable
     }),
     ColumnDef.create({
       property: 'quantity',
@@ -98,7 +106,8 @@ function createColumnDefs(): ColumnDefIf[] {
       width: px60,
       bodyClasses: ['ge-table-text-align-right'],
       headerClasses: ['ge-table-text-align-right'],
-      sortable: TrueFn
+      sortable: TrueFn,
+      editable: ()=> editable
     }),
     ColumnDef.create({
       property: 'progress',
@@ -122,27 +131,31 @@ function createColumnDefs(): ColumnDefIf[] {
       headerLabel: 'Price',
       width: px60,
       bodyClasses: ['ge-table-text-align-right'],
-      sortable: TrueFn
+      sortable: TrueFn,
+      editable: ()=> editable
     }),
     ColumnDef.create({
       property: 'active',
       headerLabel: 'Active',
       width: px60,
       bodyRenderer: new TrueFalseCellRenderer(),
-      sortable: TrueFn
+      sortable: TrueFn,
+      editable: ()=> editable
     }),
     ColumnDef.create({
       property: 'currency',
       headerLabel: 'CCY',
       width: px60,
-      sortable: TrueFn
+      sortable: TrueFn,
+      editable: ()=> editable
     }),
     ColumnDef.create({
       property: 'average',
       headerLabel: 'Average',
       width: px100,
       bodyClasses: ['ge-table-text-align-right'],
-      sortable: TrueFn
+      sortable: TrueFn,
+      editable: ()=> editable
     }),
     ColumnDef.create({
       property: 'f1',
@@ -150,21 +163,24 @@ function createColumnDefs(): ColumnDefIf[] {
       width: px80,
       bodyClasses: ['ge-table-text-align-right'],
       bodyRenderer: new PositiveAndNegativeNumberRenderer(),
-      sortable: TrueFn
+      sortable: TrueFn,
+      editable: ()=> editable
     }),
     ColumnDef.create({
       property: 'f2',
       headerLabel: 'F2',
       width: px120,
       bodyClasses: ['ge-table-text-align-right'],
-      sortable: TrueFn
+      sortable: TrueFn,
+      editable: ()=> editable
     }),
     ColumnDef.create({
       property: 'lorem',
       headerLabel: 'Lorem',
       width: px200,
-      sortable: TrueFn,
       bodyClasses: ['ge-table-text-align-left'],
+      sortable: TrueFn,
+      editable: ()=> editable
     })
 
   ];
@@ -180,12 +196,13 @@ function createManyTypesTableOptions(selectionModel: SelectionModelIf): TableOpt
 
 export function createManyTypesModelAndOptions(
   selectionModel: SelectionModelIf = new SelectionModel('row', 'multi'),
-  rowCount: number = 75
+  rowCount: number = 75,
+  editable: boolean = false
 ): TableModelAndOptionsIf {
   const tableOptions = createManyTypesTableOptions(selectionModel);
   rowCount = Math.max(10, Math.min(75, rowCount));
   const rows: ManyTypesIf[] = createTableRows(rowCount);
-  const columnDefs: ColumnDefIf[] = createColumnDefs();
+  const columnDefs: ColumnDefIf[] = createColumnDefs(editable);
   return new TableModelAndOptions(TableFactory.createTableModel({
     rows, columnDefs, tableOptions
   }), tableOptions);

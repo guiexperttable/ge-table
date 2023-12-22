@@ -64,7 +64,7 @@ html, html[data-theme="light"] {
 
   --ge-table-hover-column-bg: rgba(0, 224, 255, 0.27);
   --ge-table-hover-row-bg: rgba(0, 224, 255, 0.27);
-  --ge-table-focus-border: rgb(0, 255, 255);
+  --ge-table-focus-border: rgb(0, 0, 255);
 
   --ge-table-color-error-text: #e00034;
   --ge-table-tree-arrow-collapsed-color: #e00034;

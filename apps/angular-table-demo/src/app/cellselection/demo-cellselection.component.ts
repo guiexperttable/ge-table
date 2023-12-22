@@ -14,7 +14,7 @@ export class DemoCellselectionComponent {
   selectionTypes: SelectionType[] = ["none" , "cell" , "row" , "column" , "range"];
 
   selectionType: SelectionType = this.selectionTypes[2];
-  selectionMode: SelectionMode = "single"
+  selectionMode: SelectionMode = "multi"
 
   tableOptions: TableOptionsIf;
   tableModel?: TableModelIf;
@@ -24,7 +24,11 @@ export class DemoCellselectionComponent {
   constructor(
     private readonly cdr: ChangeDetectorRef
   ) {
-    const { tableModel, tableOptions } = createManyTypesModelAndOptions(new SelectionModel(this.selectionType, this.selectionMode));
+    const { tableModel, tableOptions } = createManyTypesModelAndOptions(
+      new SelectionModel(this.selectionType, this.selectionMode),
+      75,
+      true
+    );
     this.tableModel = tableModel;
     this.tableOptions = tableOptions;
   }

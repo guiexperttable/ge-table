@@ -450,6 +450,8 @@ export class ConvenienceDomService {
   }
 
   addFocusBorderDivs(parent: HTMLDivElement, geo: GeoData, style: HtmlStyle): HTMLDivElement {
+    geo = {...geo, width: geo.width+1, height: geo.height+1}; // we want draw on the right and bottom border
+
     // Border west:
     let div = this.domService.createElement<HTMLDivElement>("div");
     this.domService.addClass(div, "ge-table-focus-border");
@@ -459,6 +461,7 @@ export class ConvenienceDomService {
     this.domService.setStyle(div, "top", `${geo.top}px`);
     this.domService.setStyle(div, "width", `1px`);
     this.domService.setStyle(div, "height", `${geo.height}px`);
+    this.domService.setStyle(div, "z-index", `9999`);
     this.applyStyle(div, style);
     this.domService.appendChild(parent, div);
 
@@ -471,6 +474,7 @@ export class ConvenienceDomService {
     this.domService.setStyle(div, "top", `${geo.top}px`);
     this.domService.setStyle(div, "width", `1px`);
     this.domService.setStyle(div, "height", `${geo.height}px`);
+    this.domService.setStyle(div, "z-index", `9999`);
     this.applyStyle(div, style);
     this.domService.appendChild(parent, div);
 
@@ -483,6 +487,7 @@ export class ConvenienceDomService {
     this.domService.setStyle(div, "top", `${(geo.top)}px`);
     this.domService.setStyle(div, "width", `${geo.width}px`);
     this.domService.setStyle(div, "height", `1px`);
+    this.domService.setStyle(div, "z-index", `9999`);
     this.applyStyle(div, style);
     this.domService.appendChild(parent, div);
 
@@ -496,6 +501,7 @@ export class ConvenienceDomService {
     this.domService.setStyle(div, "top", `${(geo.top + geo.height - 1)}px`);
     this.domService.setStyle(div, "width", `${geo.width}px`);
     this.domService.setStyle(div, "height", `1px`);
+    this.domService.setStyle(div, "z-index", `9999`);
     this.applyStyle(div, style);
     this.domService.appendChild(parent, div);
 

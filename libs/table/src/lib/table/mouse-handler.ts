@@ -12,11 +12,20 @@ import {isTreeRow} from "./instanceof-workaround";
  */
 export class MouseHandler {
 
+
+  /**
+   * Represents the delay in milliseconds between two consecutive double clicks.
+   *
+   * @type {number}
+   */
+  doubleClickDelay = 500;
+
   mouseEvent?: MouseEvent;
   startMouseEvent?: GeMouseEvent;
   geMouseEvent?: GeMouseEvent;
   geMouseEventOld?: GeMouseEvent;
 
+  private doubleClicked = false;
   private expandedAll = true;
   private mouseDown = false;
   private dragging = false;
@@ -54,7 +63,7 @@ export class MouseHandler {
     this.tableScope.contextmenu(mouseMoveEvent);
   };
 
-
+  private lastClicked = 0;
   /**
    * Handles the click event on the host element.
    *
@@ -63,6 +72,12 @@ export class MouseHandler {
    * @return {void}
    */
   private onHostElementClicked(event: MouseEvent) {
+    const now = Date.now();
+    if (now - this.lastClicked < this.doubleClickDelay) {
+      return; // skipped
+    }
+    this.lastClicked = now;
+
     const mouseTargetData: MouseTargetData = new MouseTargetData(event.target, this.tableScope);
     if (mouseTargetData.action === 'toggleExpandCollapseAll'){
       this.expandedAll = !this.expandedAll;
@@ -115,6 +130,7 @@ export class MouseHandler {
    * @param {MouseEvent} event - The double click event.
    */
   private onHostElementDblClicked(event: MouseEvent) {
+    this.lastClicked = Date.now();
 
     if (event.target instanceof HTMLElement) {
       const target = event.target as HTMLElement;
@@ -180,7 +196,12 @@ export class MouseHandler {
     if (this.geMouseEvent) {
       this.geMouseEvent.clickCount = clickCount;
     }
+
     this.tableScope.onMouseClicked(this.geMouseEvent, this.geMouseEventOld);
+    this.tableScope.publishGeMouseEvent(this.geMouseEvent);
+    if (clickCount===1) {
+      this.tableScope.debounceRepaint();
+    }
   }
 
 

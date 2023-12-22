@@ -383,7 +383,7 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
    * @param {GeMouseEvent | undefined} previousEvt - The previous mouse click event, if any.
    * @returns {void}
    */
-  onMouseClicked(evt: GeMouseEvent, previousEvt: GeMouseEvent | undefined) {
+  onMouseClicked(evt: GeMouseEvent, previousEvt: GeMouseEvent | undefined): boolean {
     let dirty = this.selectionService.onMouseClicked(evt, previousEvt);
     if (!dirty && this.getFocusModel) {
       const fm = this.getFocusModel();
@@ -395,11 +395,17 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
         }
       }
     }
-    this.eventListener.onMouseClicked(evt);
-    if (dirty) {
-      this.debounce(this.repaint.bind(this), 10);
-    }
+    return dirty;
   }
+
+  debounceRepaint(){
+    this.debounce(this.repaint.bind(this), 1);
+  }
+
+  publishGeMouseEvent(evt: GeMouseEvent) {
+    this.eventListener.onMouseClicked(evt);
+  }
+
 
   /**
    * Updates the table (repaint) when an external filter is changed.
