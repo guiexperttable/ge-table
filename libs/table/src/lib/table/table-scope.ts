@@ -385,13 +385,13 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
    */
   onMouseClicked(evt: GeMouseEvent, previousEvt: GeMouseEvent | undefined): boolean {
     let dirty = this.selectionService.onMouseClicked(evt, previousEvt);
-    if (!dirty && this.getFocusModel) {
-      const fm = this.getFocusModel();
-      if (fm) {
-        dirty = fm.hasChanged();
-        fm.clearChanged();
-        if (dirty) {
-          this.resetEditorRenderer();
+    if (!dirty) {
+      if (this.getFocusModel) {
+        this.resetEditorRenderer();
+        const fm = this.getFocusModel();
+        if (fm) {
+          dirty = fm.hasChanged();
+          fm.clearChanged();
         }
       }
     }

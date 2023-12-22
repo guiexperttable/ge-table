@@ -90,7 +90,7 @@ export class ShortcutService {
       const shortcutTokens = key
         .replace(/opt/g, "alt")
         .replace(/cmd/g, "meta")
-        .split(/[\+ ]/g).sort();
+        .split(/[+ ]/g).sort();
       if (this.areTokensEquals(tokens, shortcutTokens)) {
         return this.shortcutActionIdMapping[key] as ActionId;
       }

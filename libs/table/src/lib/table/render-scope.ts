@@ -173,6 +173,7 @@ export class RenderScope extends EleScope {
     }
   }
 
+
   repaint() {
     this.adjustAfterScrolling();
   }

@@ -39,6 +39,7 @@ export class MouseHandler {
     this.tableScope.hostElement.addEventListener("mousemove", this.onMouseMove.bind(this));
     this.tableScope.hostElement.addEventListener("mouseup", this.onMouseUp.bind(this));
     this.tableScope.hostElement.addEventListener("contextmenu", this.onContextmenu.bind(this));
+
     // @ts-ignore
     this.tableScope.hostElement['_MouseHandler'] = 'true';
 
