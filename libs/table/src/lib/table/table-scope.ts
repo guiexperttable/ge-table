@@ -124,6 +124,15 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
     this.shortcutService.addListener(this.selectionService);
   }
 
+
+  /**
+   * Triggers an action based on the provided actionId.
+   *
+   * This function can be invoked manually via the table API or by keyboard shortcuts.
+   *
+   * @param {ActionId} actionId - The identifier of the action to be triggered.
+   * @return {boolean} - Returns true if the action was triggered successfully, false otherwise.
+   */
   onActionTriggered(actionId: ActionId): boolean {
     if (actionId === "NAVIGATE_DOWN") {
       if (this.changeFocusCell(0, 1)) {
@@ -157,6 +166,10 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
         }
         return true;
       }
+    }
+    if (actionId === "COPY_2_CLIPBOARD") {
+      // TODO
+      console.warn('TODO', actionId);
     }
     return false;
   }

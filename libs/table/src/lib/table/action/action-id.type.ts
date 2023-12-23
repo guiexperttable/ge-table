@@ -1,13 +1,13 @@
-// TODO use it
 /**
  * An array of action identifiers.
  *
  * @type {ReadonlyArray<string>}
  */
 export const actionIds = [
-  //"COPY_2_CLIPBOARD",
+  "COPY_2_CLIPBOARD",
 
   "START_EDITING",
+
   "TOGGLE_SELECTION",
   "SELECT_ALL",
   "DESELECT_ALL",

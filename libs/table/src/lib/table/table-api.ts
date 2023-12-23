@@ -2,6 +2,7 @@ import {TableScope} from "./table-scope";
 import {ColumnDefIf} from "./data/tablemodel/column/column-def.if";
 import {TableCellUpdateEventIf} from "./data/common/event/input/table-cell-update-event.if";
 import { SelectionModel } from './selection/selection-model';
+import { ActionId } from './action/action-id.type';
 
 
 export class TableApi {
@@ -154,6 +155,18 @@ export class TableApi {
    */
   setSelectionModel(sm: SelectionModel, repaint: boolean = true){
     this.tableScope.setSelectionModel(sm, repaint);
+  }
+
+
+  /**
+   * Triggers the action with the given action ID.
+   * This function can be invoked programmatically.
+   *
+   * @param {ActionId} actionId - The ID of the action to trigger.
+   * @return {void}
+   */
+  triggerAction(actionId: ActionId){
+    this.tableScope.onActionTriggered(actionId);
   }
 
 }

@@ -14,11 +14,11 @@ export class OsxShortcutActionIdMapping {
       "space": "TOGGLE_SELECTION",
 
       "ctrl+num_add": "SELECT_ALL",
-      "cmd+a": "SELECT_ALL",
+      "meta+a": "SELECT_ALL",
       "ctrl+a": "SELECT_ALL",
 
-      "cmd+x": "DESELECT_ALL",
-      "cmd+shift+a": "DESELECT_ALL",
+      "meta+x": "DESELECT_ALL",
+      "meta+shift+a": "DESELECT_ALL",
       "ctrl+shift+a": "DESELECT_ALL",
       "ctrl+num_subtract": "DESELECT_ALL",
       "ctrl -": "DESELECT_ALL",
@@ -26,7 +26,10 @@ export class OsxShortcutActionIdMapping {
       "arrowup": "NAVIGATE_UP",
       "arrowdown": "NAVIGATE_DOWN",
       "arrowleft": "NAVIGATE_LEFT",
-      "arrowright": "NAVIGATE_RIGHT"
+      "arrowright": "NAVIGATE_RIGHT",
+
+      "meta+c": "COPY_2_CLIPBOARD",
+      "ctrl+c": "COPY_2_CLIPBOARD",
     };
   }
 

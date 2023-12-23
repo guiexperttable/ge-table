@@ -57,7 +57,7 @@ export class ShortcutService {
 
 
   private onKeyDown(evt: KeyboardEvent) {
-    const actionId = this.findEnty(evt);
+    const actionId = this.findEntity(evt);
     if (actionId) {
       const consumed = this.emit(actionId);
       if (consumed) {
@@ -69,7 +69,7 @@ export class ShortcutService {
 
   private emit(actionId: ActionId): boolean {
     if (this.isDebug()) {
-      console.debug("ShortcutService emit:", actionId);
+      console.debug("ShortcutService emit      :", actionId);
     }
     let ret = false;
     for (const l of this.listener) {
@@ -81,16 +81,17 @@ export class ShortcutService {
     return ret;
   }
 
-  private findEnty(evt: KeyboardEvent): ActionId | undefined {
+  private findEntity(evt: KeyboardEvent): ActionId | undefined {
     const tokens = this.getTokenByEvent(evt);
     if (this.isDebug()) {
-      console.debug("ShortcutService tokens:", tokens);
+      console.debug("ShortcutService tokens    :", tokens);
     }
     for (const key in this.shortcutActionIdMapping) {
       const shortcutTokens = key
         .replace(/opt/g, "alt")
         .replace(/cmd/g, "meta")
         .split(/[+ ]/g).sort();
+
       if (this.areTokensEquals(tokens, shortcutTokens)) {
         return this.shortcutActionIdMapping[key] as ActionId;
       }
