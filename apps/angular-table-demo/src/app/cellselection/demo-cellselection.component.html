@@ -16,6 +16,10 @@
       <mat-option [value]="'multi'">multi</mat-option>
     </mat-select>
   </mat-form-field>
+
+  <button mat-button (click)="showShortcuts()">
+    Shortcuts...
+  </button>
 </div>
 
 <guiexpert-table
@@ -26,4 +30,7 @@
   class="table-div"
 ></guiexpert-table>
 
-
+<dialog class="shortcuts-dlg">
+  <pre *ngIf="shortcutMapping">{{shortcutMapping|json}}</pre>
+  <button autofocus (click)="closeDlg()">Close</button>
+</dialog>

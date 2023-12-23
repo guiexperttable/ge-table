@@ -1,28 +1,39 @@
-import { ChangeDetectorRef, Component } from '@angular/core';
-import { SelectionMode, SelectionModel, SelectionType, TableApi, TableModelIf, TableOptionsIf } from '@guiexpert/table';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, NgZone } from '@angular/core';
+import {
+  SelectionMode,
+  SelectionModel,
+  SelectionType,
+  ShortcutActionIdMapping,
+  TableApi,
+  TableModelIf,
+  TableOptionsIf
+} from '@guiexpert/table';
 import { createManyTypesModelAndOptions } from '@guiexpert/demo-table-models';
 
 
 @Component({
   selector: 'demo-cellselection',
   templateUrl: './demo-cellselection.component.html',
-  styleUrls: ['./demo-cellselection.component.css']
+  styleUrls: ['./demo-cellselection.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DemoCellselectionComponent {
 
 
-  selectionTypes: SelectionType[] = ["none" , "cell" , "row" , "column" , "range"];
+  selectionTypes: SelectionType[] = ['none', 'cell', 'row', 'column', 'range'];
 
   selectionType: SelectionType = this.selectionTypes[2];
-  selectionMode: SelectionMode = "multi"
+  selectionMode: SelectionMode = 'multi';
 
   tableOptions: TableOptionsIf;
   tableModel?: TableModelIf;
   tableApi: TableApi | undefined;
+  shortcutMapping: ShortcutActionIdMapping | undefined;
 
 
   constructor(
-    private readonly cdr: ChangeDetectorRef
+    private readonly cdr: ChangeDetectorRef,
+    private readonly zone: NgZone
   ) {
     const { tableModel, tableOptions } = createManyTypesModelAndOptions(
       new SelectionModel(this.selectionType, this.selectionMode),
@@ -38,7 +49,7 @@ export class DemoCellselectionComponent {
     this.tableApi = $event;
   }
 
-  clearSelection(){
+  clearSelection() {
     // Possibility 1:
     // if (this.tableOptions.getSelectionModel) {
     //   const selectionModel = this.tableOptions.getSelectionModel();
@@ -57,8 +68,7 @@ export class DemoCellselectionComponent {
   }
 
 
-
-  onSelectionParameterChange(){
+  onSelectionParameterChange() {
     // Possibility 1:
     const sm = new SelectionModel(this.selectionType, this.selectionMode);
     if (this.tableApi) {
@@ -80,6 +90,15 @@ export class DemoCellselectionComponent {
   }
 
 
+  showShortcuts() {
+    if (this.tableApi) {
+      this.shortcutMapping = this.tableApi.getShortcutActionMapping();
+      (document.querySelector('.shortcuts-dlg') as HTMLDialogElement).show();
+    }
+  }
 
+  closeDlg() {
+    (document.querySelector('.shortcuts-dlg') as HTMLDialogElement).close();
+  }
 }
 

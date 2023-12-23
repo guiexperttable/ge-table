@@ -3,6 +3,7 @@ import {ColumnDefIf} from "./data/tablemodel/column/column-def.if";
 import {TableCellUpdateEventIf} from "./data/common/event/input/table-cell-update-event.if";
 import { SelectionModel } from './selection/selection-model';
 import { ActionId } from './action/action-id.type';
+import { ShortcutActionIdMapping } from './action/shortcut-actionid-mapping.type';
 
 
 export class TableApi {
@@ -167,6 +168,16 @@ export class TableApi {
    */
   triggerAction(actionId: ActionId){
     this.tableScope.onActionTriggered(actionId);
+  }
+
+
+  /**
+   * Retrieves the mapping of shortcuts to corresponding action in the current table scope.
+   *
+   * @return {ShortcutActionIdMapping} The mapping of shortcuts to corresponding action.
+   */
+  getShortcutActionMapping(): ShortcutActionIdMapping {
+    return this.tableScope.shortcutService.getShortcutActionMapping();
   }
 
 }

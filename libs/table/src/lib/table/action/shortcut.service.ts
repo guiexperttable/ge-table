@@ -22,25 +22,41 @@ export class ShortcutService {
   }
 
 
+  /**
+   * Adds a listener to the list of listeners.
+   *
+   * @param {OnActionTriggeredIf} listener - The listener to be added.
+   * @returns {void}
+   */
   addListener(listener: OnActionTriggeredIf) {
     if (!this.listener.includes(listener)) {
       this.listener.push(listener);
     }
   }
 
+  /**
+   * Initializes the ShortcutService by assigning shortcut action id mappings based on the current operating system.
+   * Also adds key down event listener to the table host element.
+   */
   init() {
-    if (this.isMacintosh()) {
-      Object.assign(this.shortcutActionIdMapping, new OsxShortcutActionIdMapping().get());
-    } else {
-      Object.assign(this.shortcutActionIdMapping, new WindowsShortcutActionIdMapping().get());
-    }
+    this.assignPredefinedSystemShortcutMappings();
+
+    // Overwrite predefined mapping with mapping from the table options:
     Object.assign(this.shortcutActionIdMapping, this.tableScope.tableOptions.shortcutActionIdMapping);
+
     if (this.isDebug()) {
       console.debug("ShortcutService", this.shortcutActionIdMapping);
     }
     // add key down listener:
     this.tableScope.hostElement.addEventListener("keydown", this.onKeyDown.bind(this));
-    //this.tableScope.hostElement.addEventListener("keyup", this.onKeyDown.bind(this));
+  }
+
+  private assignPredefinedSystemShortcutMappings(){
+    if (this.isMacintosh()) {
+      Object.assign(this.shortcutActionIdMapping, new OsxShortcutActionIdMapping().get());
+    } else {
+      Object.assign(this.shortcutActionIdMapping, new WindowsShortcutActionIdMapping().get());
+    }
   }
 
   private isMacintosh() {
@@ -135,4 +151,12 @@ export class ShortcutService {
     return tokens.sort();
   }
 
+  /**
+   * Retrieves the shortcut action mapping object.
+   *
+   * @returns {ShortcutActionIdMapping} - The shortcut action mapping object.
+   */
+  getShortcutActionMapping(): ShortcutActionIdMapping {
+    return this.shortcutActionIdMapping;
+  }
 }
