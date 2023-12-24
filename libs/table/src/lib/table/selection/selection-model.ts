@@ -1,5 +1,5 @@
 import { CellRange } from "../data/common/cell-range";
-import { SelectionMode, SelectionType } from "./selection.type";
+import { ExtendedSelectionType, SelectionMode } from './selection.type';
 import { SelectionModelIf } from "./selection-model.if";
 
 export class SelectionModel implements SelectionModelIf {
@@ -9,7 +9,7 @@ export class SelectionModel implements SelectionModelIf {
   protected allSelected: boolean = false;
 
   constructor(
-    public selectionType: SelectionType = "none",
+    public selectionType: ExtendedSelectionType = "none",
     public selectionMode: SelectionMode = "single"
   ) {
   }

@@ -20,7 +20,7 @@ import { createManyTypesModelAndOptions } from '@guiexpert/demo-table-models';
 export class DemoCellselectionComponent {
 
 
-  selectionTypes: SelectionType[] = ['none', 'cell', 'row', 'column', 'range'];
+  selectionTypes: SelectionType[] = ['none', 'cell', 'row', 'column'];
 
   selectionType: SelectionType = this.selectionTypes[2];
   selectionMode: SelectionMode = 'multi';

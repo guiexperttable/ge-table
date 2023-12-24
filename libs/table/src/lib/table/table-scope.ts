@@ -29,6 +29,8 @@ import {TreeRowIf} from "./data/common/tree-row-if";
 import {isAreaModelTree} from "./instanceof-workaround";
 import { LicenseManager } from './license-manager';
 import { SelectionModel } from './selection/selection-model';
+import { CopyService } from './service/copy-service';
+import { CopyServiceIf } from './service/copy-service.if';
 
 
 /**
@@ -76,13 +78,15 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
     tableOptions: TableOptionsIf = new TableOptions(),
     eventListener: EventListenerIf = new EventAdapter(),
     domService: DomServiceIf = new SimpleDomService(),
+    copyService: CopyServiceIf = new CopyService()
     ): TableScope {
     return new TableScope(
       hostElement,
       tableModel,
       domService,
       tableOptions,
-      eventListener
+      eventListener,
+      copyService
     );
   }
 
@@ -91,7 +95,8 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
     tableModel: TableModelIf,
     domService: DomServiceIf,
     tableOptions: TableOptionsIf,
-    protected readonly eventListener: EventListenerIf
+    protected readonly eventListener: EventListenerIf,
+    protected readonly copyService: CopyServiceIf = new CopyService()
   ) {
     super(
       hostElement,
@@ -168,8 +173,11 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
       }
     }
     if (actionId === "COPY_2_CLIPBOARD") {
-      // TODO
-      console.warn('TODO', actionId);
+      const sm = this.getSelectionModel ? this.getSelectionModel(): undefined;
+      const fm = this.getFocusModel ? this.getFocusModel(): undefined;
+      this.copyService
+        .createContent(this.tableModel, sm, fm)
+        .then(txt => this.copyService.copyContent(txt));
     }
     return false;
   }

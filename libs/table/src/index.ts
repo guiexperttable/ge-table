@@ -125,6 +125,8 @@ export * from "./lib/table/service/store-state-sorting.service";
 export * from "./lib/table/service/data/collapsed-expanded.data";
 export * from "./lib/table/service/data/html-style.type";
 export * from "./lib/table/service/ge-filter.service";
+export * from "./lib/table/service/copy-service";
+export * from "./lib/table/service/copy-service.if";
 
 
 export * from "./lib/table/renderer/renderer";
@@ -155,6 +157,7 @@ export * from './lib/table/selection/selection-model';
 export * from './lib/table/selection/selection-model.if';
 export * from './lib/table/selection/selection.type';
 export * from './lib/table/selection/selection-service';
+
 
 export * from './lib/table/color/color-rgb';
 export * from './lib/table/color/color-rgb.if';
