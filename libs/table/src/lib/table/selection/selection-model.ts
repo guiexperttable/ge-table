@@ -90,6 +90,10 @@ export class SelectionModel implements SelectionModelIf {
     }
   }
 
+  isSelected(row: number, col: number): boolean {
+    return  this.getSelectionCount(row, col) > 0;
+  }
+
 
   private addRange(range: CellRange) {
     if (this.selectionType === "none") {

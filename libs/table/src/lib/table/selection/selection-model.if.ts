@@ -4,6 +4,8 @@ export interface SelectionModelIf {
 
   togglePoint(row: number, col: number): void;
 
+  isSelected(row: number, col: number): boolean;
+
   getRanges(): CellRange[];
 
   clear(): void;
