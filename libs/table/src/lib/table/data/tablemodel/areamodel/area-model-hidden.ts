@@ -26,6 +26,12 @@ export class AreaModelHidden implements AreaModelIf {
     return "";
   }
 
+
+  getTextValueAt(_rowIndex: number, _columnIndex: number): string {
+    return "";
+  }
+
+
   getCellRenderer(_rowIndex: number, _columnIndex: number): CellRendererIf | undefined {
     return undefined;
   }

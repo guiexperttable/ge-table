@@ -50,6 +50,12 @@ export interface AreaModelIf {
   getValueAt(rowIndex: number, columnIndex: number): any;
 
   /**
+   * Returns a string value of the cell at position rowIndex/columnIndex.
+   * This function will be called by 'export' or 'copy to clipboard'.
+   */
+  getTextValueAt(rowIndex: number, columnIndex: number): string;
+
+  /**
    * Returns the value of a colspan of the cell at position rowIndex/columnIndex.
    * A value below 2 is ignored.
    */

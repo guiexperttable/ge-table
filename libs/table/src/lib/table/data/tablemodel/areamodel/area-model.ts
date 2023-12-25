@@ -74,6 +74,10 @@ export class AreaModel implements AreaModelIf {
     return undefined;
   }
 
+  getTextValueAt(_rowIndex: number, _columnIndex: number): string {
+    return '';
+  }
+
   getYPosByRowIndex(_rowIndex: number): number {
     return 0;
   }

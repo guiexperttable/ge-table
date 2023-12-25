@@ -166,6 +166,10 @@ Gold A     Gold B    Gold C   Gold D    Gold Sum    HOH Loc    HOH A    HOH B   
     return this.arr[rowIndex][columnIndex];
   }
 
+  getTextValueAt(rowIndex: number, columnIndex: number): string {
+    return "" + this.getValueAt(rowIndex, columnIndex);
+  }
+
   getYPosByRowIndex(_rowIndex: number): number {
     // TODO
     return 0;

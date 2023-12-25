@@ -29,7 +29,7 @@ export class CopyService implements CopyServiceIf {
           for (let rowIndex = range.r1; rowIndex <= range.r2; rowIndex++) {
             const rowData: string[] = [];
             for (let columnIndex = range.c1; columnIndex <= range.c2; columnIndex++) {
-              const cellValue = selectionModel.isSelected(rowIndex, columnIndex) ? tableModel.getBodyModel().getValueAt(rowIndex, columnIndex) : '';
+              const cellValue = selectionModel.isSelected(rowIndex, columnIndex) ? tableModel.getBodyModel().getTextValueAt(rowIndex, columnIndex) : '';
               rowData.push(cellValue);
             }
             content.push(rowData.join(CopyService.columnSeparatorChar));
@@ -40,7 +40,7 @@ export class CopyService implements CopyServiceIf {
 
       if (focusModel) {
         const [r, c] = focusModel.getFocus();
-        const content = String(tableModel.getBodyModel().getValueAt(r, c));
+        const content = tableModel.getBodyModel().getTextValueAt(r, c);
         return resolve(content);
       }
 

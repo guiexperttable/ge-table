@@ -28,6 +28,11 @@ export abstract class AbstractAreaModel<T> implements AreaModelIf, HasDefaultRow
 
   abstract getValueAt(rowIndex: number, columnIndex: number): any;
 
+  getTextValueAt(rowIndex: number, columnIndex: number): string {
+    // TODO date to iso aso...
+    return '' + this.getValueAt(rowIndex, columnIndex);
+  }
+
   getTooltipAt(_rowIndex: number, _columnIndex: number): any {
     return "";
   };
