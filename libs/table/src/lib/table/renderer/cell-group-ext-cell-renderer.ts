@@ -4,7 +4,6 @@ import { DomServiceIf } from '../service/dom-service.if';
 import { AreaIdent } from '../data/tablemodel/area-ident.type';
 import { RendererCleanupFnType } from './renderer-cleanup-fn.type';
 import { CellGroupExt } from '../data/tablemodel/cellgroup/cell-group-ext';
-import { Simulate } from 'react-dom/test-utils';
 
 
 export class CellGroupExtCellRenderer implements CellRendererIf {

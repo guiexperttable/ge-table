@@ -377,57 +377,6 @@ export class ConvenienceDomService {
   }
 
 
-  // TODO toggle icons instead of arrows
-  addToggleDiv(
-    parent: HTMLDivElement,
-    icon: TreeArrowType = "none",
-    treeOptions: TreeOptionsIf = new TreeOptions(),
-    rowIndex: number = -1,
-    columnIndex: number = -1,
-    areaIdent: AreaIdent = "header"
-  ): HTMLDivElement {
-
-    const div = this.domService.createElement<HTMLDivElement>("div");
-    this.domService.addClass(div, "ge-table-toggle-icon-div");
-    this.domService.setStyle(div, "display", "inline-block");
-    this.domService.setStyle(div, "position", "");
-    this.domService.setStyle(div, "width", "20px");
-    this.domService.setStyle(div, "background", "transparent");
-    this.domService.setStyle(div, "cursor", "pointer");
-    this.domService.setAttribute(div, "data-row-index", `${rowIndex}`);
-    this.domService.setAttribute(div, "data-col-index", `${columnIndex}`);
-    this.domService.setAttribute(div, "data-area", `${areaIdent}`);
-
-    let treeOptionsArrow: IconIf;
-    if (icon === "expanded") {
-      treeOptionsArrow = treeOptions.arrowExpanded;
-    } else if (icon === "collapsed") {
-      treeOptionsArrow = treeOptions.arrowCollapsed;
-    } else {
-      treeOptionsArrow = treeOptions.arrowPlaceholder;
-    }
-
-    // Text:
-    const content = 'XXX'; // TODO treeOptionsArrow.content;
-    const textElement = this.domService.createText(content);
-    this.domService.appendChild(div, textElement);
-
-    // Style:
-    if (treeOptionsArrow.style) {
-      this.applyStyleString(div, treeOptionsArrow.style);
-    }
-
-    // Classes:
-    for (const clazz of treeOptionsArrow.classes) {
-      this.domService.addClass(div, clazz);
-    }
-
-    this.domService.appendChild(parent, div);
-    return div;
-  }
-
-
-
   addArrowDiv(
     parent: HTMLDivElement,
     arrow: TreeArrowType = "none",

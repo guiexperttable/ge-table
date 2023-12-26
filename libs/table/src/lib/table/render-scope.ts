@@ -24,7 +24,6 @@ import { AreaObjectMapType } from "./data/common/area-map.type";
 import { AreaObjectMap } from "./data/common/area-map";
 import { TableCellUpdateEventIf } from "./data/common/event/input/table-cell-update-event.if";
 import { isAreaModelTree, isTreeRow } from "./instanceof-workaround";
-import { index } from 'typedoc/dist/lib/output/themes/default/partials';
 
 
 interface ArgsRenderCell {
@@ -697,8 +696,7 @@ export class RenderScope extends EleScope {
       height,
       top,
       parent,
-      lastRowOfModel,
-      gammaRange
+      lastRowOfModel
     }: ArgsRenderCellDiv): [HTMLDivElement, RendererCleanupFnType | undefined] {
 
 
@@ -969,8 +967,7 @@ export class RenderScope extends EleScope {
       height,
       parent,
       cellSelected,
-      lastRowOfModel,
-      gammaRange
+      lastRowOfModel
     }: ArgsRenderCell
   ) {
     const [div, fn] = this.addAndRenderCellDiv({
@@ -984,8 +981,7 @@ export class RenderScope extends EleScope {
       height,
       top,
       parent,
-      lastRowOfModel,
-      gammaRange
+      lastRowOfModel
     });
     if (cellSelected) {
       this.dom.addClass(`ge-table-${areaIdent}-${sideIdent}-selected-range`, div);

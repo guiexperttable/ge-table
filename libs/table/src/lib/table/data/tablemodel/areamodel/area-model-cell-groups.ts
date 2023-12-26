@@ -18,7 +18,7 @@ export class AreaModelCellGroups implements AreaModelIf {
   public gammaCells = true;
 
   public rowSelectionModel: CheckboxModelIf<any> | undefined;
-  public readonly arr: (CellGroupExt | null | undefined)[][];
+  public arr: (CellGroupExt | null | undefined)[][];
 
   private groupExts: CellGroupExt[] = [];
   private cellGroupExtCellRenderer = new CellGroupExtCellRenderer();
@@ -61,10 +61,10 @@ export class AreaModelCellGroups implements AreaModelIf {
 
   buildArray(): (CellGroupExt | null | undefined)[][] {
     // // console.info('');
-    let flatten = CellgroupFactory.flattenGroupExts(this.groupExts);
+    const flatten = CellgroupFactory.flattenGroupExts(this.groupExts);
     // // console.info("flat", flatten);
 
-    const maxCol = flatten.length;
+    // const maxCol = flatten.length;
     const maxRow = 1 + Math.max(...flatten.map(c => c.rowIndex));
     // console.info('max  row/col:', maxRow + '/' + maxCol);
 
@@ -73,7 +73,7 @@ export class AreaModelCellGroups implements AreaModelIf {
     // console.info(sb);
 
     const arrs = Array.from(Array(maxRow).keys()).map((_r) => []);
-    let ret = CellgroupFactory.buildArrayOfArrays(flatten, arrs);
+    const ret = CellgroupFactory.buildArrayOfArrays(flatten, arrs);
     console.table(ret);
 
     /*
@@ -213,13 +213,13 @@ Gold A     Gold B    Gold C   Gold D    Gold Sum    HOH Loc    HOH A    HOH B   
   }
 
   toggleHeaderGroup(mouseTargetData: MouseTargetData) {
-    const cgs = this.buildArray();
-    const cellGroup: (CellGroupExt | null | undefined) = cgs[mouseTargetData.rowIdx][mouseTargetData.colIdx];
+    const cellGroup: (CellGroupExt | null | undefined) = this.arr[mouseTargetData.rowIdx][mouseTargetData.colIdx];
     if (cellGroup?.toggle && cellGroup.visibility !== 'always') {
       cellGroup.closed = !cellGroup.closed;
 
-      this.groupExts = CellgroupFactory.buildGroupExts(this.groups);
-      this.columnDefs = CellgroupFactory.buildColumnDefs(this.groups);
+      this.arr = this.buildArray();
+      // this.groupExts = CellgroupFactory.buildGroupExts(this.groups);
+      // this.columnDefs = CellgroupFactory.buildColumnDefs(this.groups);
       
       // console.info('columnDefs', this.columnDefs);
       // console.info('toggled', cellGroup);

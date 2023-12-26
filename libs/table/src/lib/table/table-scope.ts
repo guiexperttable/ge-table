@@ -675,6 +675,7 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
   toggleHeaderGroup(mouseTargetData: MouseTargetData) {
     const headerAreaModel = this.tableModel.getAreaModel('header') as AreaModelCellGroups;
     headerAreaModel.toggleHeaderGroup(mouseTargetData);
+    this.repaint();
     console.info('_______-headerAreaModel', headerAreaModel);
     console.info('_______-mouseTargetData', mouseTargetData);
   }
