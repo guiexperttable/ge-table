@@ -79,9 +79,18 @@ export class MouseHandler {
     this.lastClicked = now;
 
     const mouseTargetData: MouseTargetData = new MouseTargetData(event.target, this.tableScope);
-    if (mouseTargetData.action === 'toggleExpandCollapseAll'){
+    if (mouseTargetData.action === 'toggleExpandCollapseAll') {
       this.expandedAll = !this.expandedAll;
       this.tableScope.toggleExpandCollapseAll(this.expandedAll);
+      event.preventDefault();
+      event.stopPropagation();
+
+    } else if (mouseTargetData.action === 'toggleHeaderGroup'){
+      // this.expandedAll = !this.expandedAll;
+      // this.tableScope.toggleExpandCollapseAll(this.expandedAll);
+      // TODO toggleHeaderGroup !!!!!!!!!!
+      console.info('toggleHeaderGroup', mouseTargetData);
+      this.tableScope.toggleHeaderGroup(mouseTargetData);
       event.preventDefault();
       event.stopPropagation();
 

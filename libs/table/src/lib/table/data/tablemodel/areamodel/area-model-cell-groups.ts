@@ -1,15 +1,16 @@
-import { AreaIdent } from "../area-ident.type";
-import { ColumnDefIf } from "../column/column-def.if";
-import { AreaModelIf } from "./area-model.if";
-import { CellGroupIf } from "../cellgroup/cell-group.if";
-import { CheckboxModelIf } from "../../../checkbox/checkbox-model.if";
-import { SortItem } from "../../common/sort-item";
-import { FilterFunction } from "../../common/filter-function";
-import { CellRendererIf } from "../../../renderer/cell-render.if";
-import { CheckedType } from "../../common/checked-type";
-import { CellgroupFactory } from "../cellgroup/cellgroup-factory";
-import { CellGroupExt } from "../cellgroup/cell-group-ext";
-import { CellGroupExtCellRenderer } from "../../../renderer/cell-group-ext-cell-renderer";
+import { AreaIdent } from '../area-ident.type';
+import { ColumnDefIf } from '../column/column-def.if';
+import { AreaModelIf } from './area-model.if';
+import { CellGroupIf } from '../cellgroup/cell-group.if';
+import { CheckboxModelIf } from '../../../checkbox/checkbox-model.if';
+import { SortItem } from '../../common/sort-item';
+import { FilterFunction } from '../../common/filter-function';
+import { CellRendererIf } from '../../../renderer/cell-render.if';
+import { CheckedType } from '../../common/checked-type';
+import { CellgroupFactory } from '../cellgroup/cellgroup-factory';
+import { CellGroupExt } from '../cellgroup/cell-group-ext';
+import { CellGroupExtCellRenderer } from '../../../renderer/cell-group-ext-cell-renderer';
+import { MouseTargetData } from '../../event/mouse-target-data';
 
 // TODO next steps:   fix this model
 export class AreaModelCellGroups implements AreaModelIf {
@@ -23,26 +24,26 @@ export class AreaModelCellGroups implements AreaModelIf {
   private cellGroupExtCellRenderer = new CellGroupExtCellRenderer();
 
   constructor(
-    public readonly areaIdent: AreaIdent = "header",
+    public readonly areaIdent: AreaIdent = 'header',
     public readonly groups: CellGroupIf[],
-    public readonly columnDefs: ColumnDefIf[] = [],
+    public columnDefs: ColumnDefIf[] = [],
     public readonly defaultRowHeight: number
   ) {
     this.groupExts = CellgroupFactory.buildGroupExts(groups);
-    console.info(this.groupExts);
-    console.info(this.getAllLeafs());
-    console.info(this.getMaxRowCount());
+    // console.info(this.groupExts);
+    // console.info(this.getAllLeafs());
+    // console.info(this.getMaxRowCount());
     for (const g of this.groupExts) {
       g.log(this.getMaxRowCount());
-      //console.info(g.getAllRowCounts(g));
+      //// console.info(g.getAllRowCounts(g));
     }
     this.arr = this.buildArray();
 
-    if (!this.columnDefs?.length && areaIdent === "header") {
+    if (!this.columnDefs?.length && areaIdent === 'header') {
       this.columnDefs = CellgroupFactory.buildColumnDefs(groups);
     }
-    console.info('this.columnDefs', this.columnDefs);
-    console.info('this.arr', this.arr);
+    // console.info('this.columnDefs', this.columnDefs);
+    // console.info('this.arr', this.arr);
   }
 
   getAllLeafs(): CellGroupExt[] {
@@ -59,17 +60,17 @@ export class AreaModelCellGroups implements AreaModelIf {
   }
 
   buildArray(): (CellGroupExt | null | undefined)[][] {
-    console.info("");
+    // // console.info('');
     let flatten = CellgroupFactory.flattenGroupExts(this.groupExts);
-    // console.info("flat", flatten);
+    // // console.info("flat", flatten);
 
     const maxCol = flatten.length;
     const maxRow = 1 + Math.max(...flatten.map(c => c.rowIndex));
-    console.info("max  row/col:", maxRow + "/" + maxCol);
+    // console.info('max  row/col:', maxRow + '/' + maxCol);
 
     const sb: string[] = [];
     CellgroupFactory.iterateThrowColumns(sb, this.groupExts);
-    console.info(sb);
+    // console.info(sb);
 
     const arrs = Array.from(Array(maxRow).keys()).map((_r) => []);
     let ret = CellgroupFactory.buildArrayOfArrays(flatten, arrs);
@@ -150,7 +151,7 @@ Gold A     Gold B    Gold C   Gold D    Gold Sum    HOH Loc    HOH A    HOH B   
   getRowspanAt(rowIndex: number, columnIndex: number): number {
     // TODO
     const cge: CellGroupExt | null | undefined = this.getValueAt(rowIndex, columnIndex);
-    if (cge){
+    if (cge) {
       const maxRowCount = this.getRowCount();
       return cge.getRowSpan(cge, maxRowCount);
     }
@@ -159,7 +160,7 @@ Gold A     Gold B    Gold C   Gold D    Gold Sum    HOH Loc    HOH A    HOH B   
 
   getTooltipAt(_rowIndex: number, _columnIndex: number): any {
     // TODO
-    return "";
+    return '';
   }
 
   getValueAt(rowIndex: number, columnIndex: number): any {
@@ -167,7 +168,7 @@ Gold A     Gold B    Gold C   Gold D    Gold Sum    HOH Loc    HOH A    HOH B   
   }
 
   getTextValueAt(rowIndex: number, columnIndex: number): string {
-    return "" + this.getValueAt(rowIndex, columnIndex);
+    return '' + this.getValueAt(rowIndex, columnIndex);
   }
 
   getYPosByRowIndex(_rowIndex: number): number {
@@ -211,4 +212,18 @@ Gold A     Gold B    Gold C   Gold D    Gold Sum    HOH Loc    HOH A    HOH B   
     return false;
   }
 
+  toggleHeaderGroup(mouseTargetData: MouseTargetData) {
+    const cgs = this.buildArray();
+    const cellGroup: (CellGroupExt | null | undefined) = cgs[mouseTargetData.rowIdx][mouseTargetData.colIdx];
+    if (cellGroup?.toggle && cellGroup.visibility !== 'always') {
+      cellGroup.closed = !cellGroup.closed;
+
+      this.groupExts = CellgroupFactory.buildGroupExts(this.groups);
+      this.columnDefs = CellgroupFactory.buildColumnDefs(this.groups);
+      
+      // console.info('columnDefs', this.columnDefs);
+      // console.info('toggled', cellGroup);
+      // console.info('columnDefs 2', CellgroupFactory.buildColumnDefs(this.groups));
+    }
+  }
 }

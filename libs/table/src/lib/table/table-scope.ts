@@ -31,6 +31,8 @@ import { LicenseManager } from './license-manager';
 import { SelectionModel } from './selection/selection-model';
 import { CopyService } from './service/copy-service';
 import { CopyServiceIf } from './service/copy-service.if';
+import { MouseTargetData } from './data/event/mouse-target-data';
+import { AreaModelCellGroups } from './data/tablemodel/areamodel/area-model-cell-groups';
 
 
 /**
@@ -668,6 +670,13 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
     if (rerender) {
       this.repaint();
     }
+  }
+
+  toggleHeaderGroup(mouseTargetData: MouseTargetData) {
+    const headerAreaModel = this.tableModel.getAreaModel('header') as AreaModelCellGroups;
+    headerAreaModel.toggleHeaderGroup(mouseTargetData);
+    console.info('_______-headerAreaModel', headerAreaModel);
+    console.info('_______-mouseTargetData', mouseTargetData);
   }
 }
 

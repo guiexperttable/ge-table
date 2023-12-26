@@ -15,6 +15,20 @@ import { SortedOptionsIf } from "../data/options/sorted-options.if";
 import { HtmlStyle } from "./data/html-style.type";
 
 
+interface AddColumnDivPara {
+  parent: HTMLDivElement;
+  geo: GeoData;
+  rowIndex: number;
+  columnIndex: number;
+  areaIdent: AreaIdent;
+  sideIdent: SideIdent;
+  text?: string;
+  treeArrow?: TreeArrowType;
+  tableOptions?: TableOptionsIf;
+  checkedType?: CheckedType | undefined;
+  sortState?: SortState;
+}
+
 export class ConvenienceDomService {
 
   constructor(
@@ -201,19 +215,10 @@ export class ConvenienceDomService {
 
 
   addColumnDiv(
-    parent: HTMLDivElement,
-    geo: GeoData,
-    rowIndex: number = -1,
-    columnIndex: number = -1,
-    areaIdent: AreaIdent,
-    sideIdent: SideIdent,
-    text: string = "",
-    treeArrow?: TreeArrowType,
-    tableOptions?: TableOptionsIf,
-    checkedType: CheckedType | undefined = undefined,
-    sortState?: SortState
+    para: AddColumnDivPara
   ): HTMLDivElement {
 
+    const {parent, geo, rowIndex=-1, columnIndex=-1, areaIdent, sideIdent, text="", treeArrow, tableOptions, checkedType=undefined, sortState} = para;
     const treeOptions = tableOptions?.treeOptions;
     const checkboxWithoutExtraColumn = tableOptions?.showCheckboxWihoutExtraColumn;
 
@@ -239,6 +244,11 @@ export class ConvenienceDomService {
       this.domService.addClass(div, "ge-table-col-tree");
       this.addArrowDiv(div, treeArrow, treeOptions, rowIndex, columnIndex, areaIdent);
     }
+    // if (toggleIcon && toggleIcon !== "none") {
+    //   this.domService.addClass(div, "ge-table-col-toggle");
+    //   this.addToggleDiv(div, toggleIcon, treeOptions, rowIndex, columnIndex, areaIdent);
+    // }
+
     if (checkboxWithoutExtraColumn && columnIndex === 0 && checkedType) {
       this.addCheckboxToDiv(div, checkedType, areaIdent, rowIndex);
     }
@@ -246,6 +256,7 @@ export class ConvenienceDomService {
       const firstTreeColumn = (treeArrow !== "none" && columnIndex === 0);
       this.addLabelDiv(div, text, firstTreeColumn, rowIndex, columnIndex, areaIdent);
     }
+
     if (sortState) {
       this.addSortedIcon(div, sortState, tableOptions?.sortedOptions, columnIndex);
     }
@@ -364,6 +375,57 @@ export class ConvenienceDomService {
     this.domService.appendChild(parent, div);
     return div;
   }
+
+
+  // TODO toggle icons instead of arrows
+  addToggleDiv(
+    parent: HTMLDivElement,
+    icon: TreeArrowType = "none",
+    treeOptions: TreeOptionsIf = new TreeOptions(),
+    rowIndex: number = -1,
+    columnIndex: number = -1,
+    areaIdent: AreaIdent = "header"
+  ): HTMLDivElement {
+
+    const div = this.domService.createElement<HTMLDivElement>("div");
+    this.domService.addClass(div, "ge-table-toggle-icon-div");
+    this.domService.setStyle(div, "display", "inline-block");
+    this.domService.setStyle(div, "position", "");
+    this.domService.setStyle(div, "width", "20px");
+    this.domService.setStyle(div, "background", "transparent");
+    this.domService.setStyle(div, "cursor", "pointer");
+    this.domService.setAttribute(div, "data-row-index", `${rowIndex}`);
+    this.domService.setAttribute(div, "data-col-index", `${columnIndex}`);
+    this.domService.setAttribute(div, "data-area", `${areaIdent}`);
+
+    let treeOptionsArrow: IconIf;
+    if (icon === "expanded") {
+      treeOptionsArrow = treeOptions.arrowExpanded;
+    } else if (icon === "collapsed") {
+      treeOptionsArrow = treeOptions.arrowCollapsed;
+    } else {
+      treeOptionsArrow = treeOptions.arrowPlaceholder;
+    }
+
+    // Text:
+    const content = 'XXX'; // TODO treeOptionsArrow.content;
+    const textElement = this.domService.createText(content);
+    this.domService.appendChild(div, textElement);
+
+    // Style:
+    if (treeOptionsArrow.style) {
+      this.applyStyleString(div, treeOptionsArrow.style);
+    }
+
+    // Classes:
+    for (const clazz of treeOptionsArrow.classes) {
+      this.domService.addClass(div, clazz);
+    }
+
+    this.domService.appendChild(parent, div);
+    return div;
+  }
+
 
 
   addArrowDiv(

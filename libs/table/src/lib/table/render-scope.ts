@@ -24,6 +24,7 @@ import { AreaObjectMapType } from "./data/common/area-map.type";
 import { AreaObjectMap } from "./data/common/area-map";
 import { TableCellUpdateEventIf } from "./data/common/event/input/table-cell-update-event.if";
 import { isAreaModelTree, isTreeRow } from "./instanceof-workaround";
+import { index } from 'typedoc/dist/lib/output/themes/default/partials';
 
 
 interface ArgsRenderCell {
@@ -501,7 +502,7 @@ export class RenderScope extends EleScope {
     }
     if (range.gammaRange) {
       // TODO render hierarchy cell
-      console.info('TODO here', range);
+      // console.info('TODO here', range);
 
       this.renderCell({
         areaModel,
@@ -618,7 +619,7 @@ export class RenderScope extends EleScope {
         let skip = false;
         if (this.colAndRowspanModels && this.colAndRowspanModels[areaIdent]) {
           if (this.colAndRowspanModels[areaIdent]?.isInRange(rowIndex, index)) {
-            skip = true; // for the body area we don't want to to render the small single cells
+            skip = true; // for the body area we don't want to render the small single cells
           }
         }
 
@@ -697,7 +698,7 @@ export class RenderScope extends EleScope {
       top,
       parent,
       lastRowOfModel,
-      gammaRange: _gammaRange
+      gammaRange
     }: ArgsRenderCellDiv): [HTMLDivElement, RendererCleanupFnType | undefined] {
 
 
@@ -734,8 +735,19 @@ export class RenderScope extends EleScope {
     const text = cellRenderer ? "" : `${val}`;
     const checkedType = areaModel.isRowChecked(rowIndex);
     const cell = this.dom.addColumnDiv(
-      parent, geo, rowIndex, index, areaIdent, sideIdent,
-      text, treeArrow, this.tableOptions, checkedType, sortState);
+      {
+        parent,
+        geo,
+        rowIndex,
+        columnIndex : index,
+        areaIdent,
+        sideIdent,
+        text,
+        treeArrow,
+        tableOptions : this.tableOptions,
+        checkedType,
+        sortState
+      });
 
     const tooltip = areaModel.getTooltipAt(rowIndex, index);
     if (tooltip) {

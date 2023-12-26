@@ -137,31 +137,36 @@ export class CellGroupExt extends CellGroup {
   }
 
 
-  log(maxRowCount: number) {
+  log(maxRowCount: number = 10): string {
     const tabs = "\t\t\t\t\t\t\t\t\t\t\t\t\t".substring(0, 2 * this.rowIndex);
     const col = `${this.getColumnIndex()}`;
     // const bcol = `${this.getBiggestChildColumnIndex()}`;
     const columnCount = `${this.getColumnCount(this)}`;
     const rowSpan = `${this.getRowSpan(this, maxRowCount)}`;
     const pc = `${this.getParentCount(this)}`;
-    console.info(`${tabs + this.data}
+
+    const out = `${tabs + this.data}
       childIndex:${this.childIndex}
       row:${this.rowIndex}
       col:${col}
       vis:${this.visibility}
+      toggle:${this.toggle}
       closed:${this.closed}
       isVisible:${this.isVisible()}
       ownColumn:${this.ownColumn()}
       claimsSpace:${this.claimsSpace()}
       colCount:${columnCount}
       rowSpan:${rowSpan}
-      pc:${pc}`.replace(/[ \n]+/g, " "));
+      pc:${pc}`.replace(/[ \n]+/g, " ");
+
+    //console.info(out);
     // console.info(`${tabs + this.data}`);
     if (this.children) {
       for (const child of this.children) {
         child.log(maxRowCount);
       }
     }
+    return out;
   }
 
 }
