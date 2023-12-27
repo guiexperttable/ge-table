@@ -18,7 +18,6 @@ export class CellGroupExtCellRenderer implements CellRendererIf {
     _domService: DomServiceIf): RendererCleanupFnType | undefined {
 
     const label = cellValue?.data ? cellValue.data : '';
-
     let title = '';
     let action = '';
     let toggleIcon = '';
@@ -41,7 +40,6 @@ export class CellGroupExtCellRenderer implements CellRendererIf {
                 data-area="${areaIdent}"
                 data-row-index="${rowIndex}"
                 data-col-index="${columnIndex}"
-                data-input-type="text"
                 title="${title}">${toggleIcon}${label}</span>`;
 
     return undefined;

@@ -30,20 +30,21 @@ export class AreaModelCellGroups implements AreaModelIf {
     public readonly defaultRowHeight: number
   ) {
     this.groupExts = CellgroupFactory.buildGroupExts(groups);
-    // console.info(this.groupExts);
-    // console.info(this.getAllLeafs());
-    // console.info(this.getMaxRowCount());
+    console.info(this.groupExts);
+    console.info(this.getAllLeafs());
+    console.info(this.getMaxRowCount());
     for (const g of this.groupExts) {
       g.log(this.getMaxRowCount());
-      //// console.info(g.getAllRowCounts(g));
+      // console.info(g.getAllRowCounts(g));
     }
     this.arr = this.buildArray();
 
     if (!this.columnDefs?.length && areaIdent === 'header') {
       this.columnDefs = CellgroupFactory.buildColumnDefs(groups);
+      console.info('this.columnDefs', this.columnDefs);
     }
-    // console.info('this.columnDefs', this.columnDefs);
-    // console.info('this.arr', this.arr);
+
+    console.info('this.arr', this.arr);
   }
 
   getAllLeafs(): CellGroupExt[] {

@@ -4,7 +4,7 @@ import {COL_IDX_UPDATED_AT, createTimeTableModel, tableOptions} from "@guiexpert
 import {SyncCssService} from "../../common/syncdata/sync-css.service";
 
 @Component({
-  selector: "timetable-demo",
+  selector: "timetable-events-demo",
   templateUrl: "./timetableevents-demo.component.html",
   styleUrls: ["./timetableevents-demo.component.css"],
   changeDetection: ChangeDetectionStrategy.OnPush

@@ -13,6 +13,7 @@ export * from "./lib/generateTreeCheckboxModel";
 export * from "./lib/generateHeatMapTableModel";
 export * from "./lib/generateHeatmapSeattle";
 export * from "./lib/generateHeadergroupModel";
+export * from "./lib/generateTeamHeadergroupModel";
 export * from "./lib/createSimplePersonModel";
 export * from "./lib/createTimeTableModel";
 export * from "./lib/createOrderModel";

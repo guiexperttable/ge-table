@@ -34,7 +34,7 @@ export class ColAndRowspanModel {
             rs = 1;
           }
 
-          const gammaRange = this.areaModel.hasOwnProperty('gammaCells');
+          const gammaRange = 'gammaCells' in this.areaModel;
           this.colAndRowspanRanges.push(
             new CellRange(r, c, r + rs - 1, c + cs - 1, gammaRange)
           );

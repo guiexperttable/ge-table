@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { DefaultRowHeights, TableApi, TableModelIf, TableOptions, TableOptionsIf } from "@guiexpert/table";
-import { createHeadergroupModel } from "@guiexpert/demo-table-models";
+import { TableApi, TableModelIf, TableOptions, TableOptionsIf } from "@guiexpert/table";
+import { createHeadergroupModel, createTeamHeadergroupModel } from '@guiexpert/demo-table-models';
 
 @Component({
   selector: "demo-cellgroup",
@@ -9,7 +9,8 @@ import { createHeadergroupModel } from "@guiexpert/demo-table-models";
 })
 export class DemoCellgroupComponent implements OnInit {
 
-  tableModel: TableModelIf = createHeadergroupModel();
+  // tableModel: TableModelIf = createHeadergroupModel();
+  tableModel: TableModelIf = createTeamHeadergroupModel();
   tableOptions: TableOptionsIf = new TableOptions();
 
 

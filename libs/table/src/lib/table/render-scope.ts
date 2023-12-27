@@ -326,6 +326,10 @@ export class RenderScope extends EleScope {
     const areaModel = this.tableModel.getAreaModel(areaIdent);
     const rowCount = areaModel.getRowCount();
 
+    if (areaIdent==='header'){
+      console.info('rowCount', rowCount);
+    }
+
     while (this.cleanupFunctions[areaIdent].length) {
       const fn = this.cleanupFunctions[areaIdent].shift();
       if (fn) {
@@ -581,6 +585,11 @@ export class RenderScope extends EleScope {
     }: ArgsAdjustColumnsToRowParentParams
   ): void {
 
+    if (areaIdent==='header'){
+      console.info('################## rowIndex:' + rowIndex)
+      console.info('##################')
+    }
+
     this.scrollViewportLeft = this.scrollViewport.scrollLeft;
     let virtualRowDivLeft = 0;
     if (!verticalFixed) {
@@ -632,6 +641,10 @@ export class RenderScope extends EleScope {
         } else {
           const cellSelected = this.renderSelectedBackgroundDiv(skip, renderSelection, sideIdent, areaModel, rowIndex, index, parent, left, top, width, height);
 
+          const gammaCells = 'gammaCells' in areaModel;
+          if (gammaCells && areaModel.getValueAt(rowIndex, index)) {
+            skip = false;
+          }
           if (!skip) {
             this.renderCell({
               areaModel,
