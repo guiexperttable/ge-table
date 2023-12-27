@@ -585,10 +585,10 @@ export class RenderScope extends EleScope {
     }: ArgsAdjustColumnsToRowParentParams
   ): void {
 
-    if (areaIdent==='header'){
-      console.info('################## rowIndex:' + rowIndex)
-      console.info('##################')
-    }
+    // if (areaIdent==='header'){
+    //   console.info('################## rowIndex:' + rowIndex)
+    //   console.info('##################')
+    // }
 
     this.scrollViewportLeft = this.scrollViewport.scrollLeft;
     let virtualRowDivLeft = 0;

@@ -20,32 +20,36 @@ export class AreaModelCellGroups implements AreaModelIf {
   public gammaCells = true;
 
   public rowSelectionModel: CheckboxModelIf<any> | undefined;
-  public arr: (CellGroupExt | null | undefined)[][];
+  public arr: (CellGroupExt | null | undefined)[][] = [];
 
   private groupExts: CellGroupExt[] = [];
   private cellGroupExtCellRenderer;
 
   constructor(
     public readonly areaIdent: AreaIdent = 'header',
-    public readonly groups: CellGroupIf[],
+    readonly groups: CellGroupIf[],
     public columnDefs: ColumnDefIf[] = [],
     public readonly defaultRowHeight: number,
-    headerGroupOptions: HeaderGroupOptionsIf = new HeaderGroupOptions()
+    private headerGroupOptions: HeaderGroupOptionsIf = new HeaderGroupOptions()
   ) {
-    this.cellGroupExtCellRenderer = new CellGroupExtCellRenderer(headerGroupOptions);
+    this.cellGroupExtCellRenderer = new CellGroupExtCellRenderer(this.headerGroupOptions);
     this.groupExts = CellgroupFactory.buildGroupExts(groups);
-    console.info(this.groupExts);
-    console.info(this.getAllLeafs());
-    console.info(this.getMaxRowCount());
+    this.init();
+  }
+
+  init(){
+    // console.info(this.groupExts);
+    // console.info(this.getAllLeafs());
+    // console.info(this.getMaxRowCount());
     for (const g of this.groupExts) {
       g.log(this.getMaxRowCount());
       // console.info(g.getAllRowCounts(g));
     }
     this.arr = this.buildArray();
 
-    if (!this.columnDefs?.length && areaIdent === 'header') {
-      this.columnDefs = CellgroupFactory.buildColumnDefs(groups);
-      console.info('this.columnDefs', this.columnDefs);
+    if (!this.columnDefs?.length && this.areaIdent === 'header') {
+      this.columnDefs = CellgroupFactory.buildColumnDefs(this.groups);
+      // console.info('this.columnDefs', this.columnDefs);
     }
 
     console.info('this.arr', this.arr);
@@ -182,9 +186,6 @@ Gold A     Gold B    Gold C   Gold D    Gold Sum    HOH Loc    HOH A    HOH B   
   }
 
 
-  init(): void {
-  }
-
   getRowHeight(_rowIndex: number): number {
     return this.defaultRowHeight;
   }
@@ -222,13 +223,16 @@ Gold A     Gold B    Gold C   Gold D    Gold Sum    HOH Loc    HOH A    HOH B   
     if (cellGroup?.toggle && cellGroup.visibility !== 'always') {
       cellGroup.closed = !cellGroup.closed;
 
-      this.arr = this.buildArray();
-      // this.groupExts = CellgroupFactory.buildGroupExts(this.groups);
+      this.init();
+      //this.groupExts = CellgroupFactory.buildGroupExts(this.groups);
+
       // this.columnDefs = CellgroupFactory.buildColumnDefs(this.groups);
+      // this.arr = this.buildArray();
       
       // console.info('columnDefs', this.columnDefs);
       // console.info('toggled', cellGroup);
       // console.info('columnDefs 2', CellgroupFactory.buildColumnDefs(this.groups));
     }
+    return CellgroupFactory.buildColumnDefs(this.groupExts);
   }
 }

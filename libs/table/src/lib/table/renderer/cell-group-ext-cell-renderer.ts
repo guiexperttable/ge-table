@@ -11,6 +11,8 @@ import { IconIf } from '../data/options/icon.if';
 
 export class CellGroupExtCellRenderer implements CellRendererIf {
 
+  private static toggleHeaderGroup = 'toggleHeaderGroup';
+
   constructor(
     private headerGroupOptions: HeaderGroupOptionsIf = new HeaderGroupOptions()
   ) {
@@ -31,7 +33,8 @@ export class CellGroupExtCellRenderer implements CellRendererIf {
     const label = cellValue?.data ? cellValue.data : '';
     if (cellValue) {
       const { toggle, visibility, closed } = cellValue;
-      const action = toggle ? 'toggleHeaderGroup' : '';
+
+      const action = toggle ? CellGroupExtCellRenderer.toggleHeaderGroup : '';
       this.addText(cellDiv, areaIdent, rowIndex, columnIndex, label, action);
       if (toggle && visibility !== 'always') {
         this.addArrowDiv(domService, cellDiv, !closed, rowIndex, columnIndex, areaIdent, action);
@@ -79,7 +82,7 @@ export class CellGroupExtCellRenderer implements CellRendererIf {
     domService.setAttribute(div, 'data-row-index', `${rowIndex}`);
     domService.setAttribute(div, 'data-col-index', `${columnIndex}`);
     domService.setAttribute(div, 'data-area', `${areaIdent}`);
-    domService.setAttribute(div, 'data-action', `${action}`);
+    domService.setAttribute(div, 'data-ge-action', `${action}`);
 
     let treeOptionsArrow: IconIf;
     if (expanded) {

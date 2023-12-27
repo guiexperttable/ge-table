@@ -89,7 +89,7 @@ export class MouseHandler {
       // this.expandedAll = !this.expandedAll;
       // this.tableScope.toggleExpandCollapseAll(this.expandedAll);
       // TODO toggleHeaderGroup !!!!!!!!!!
-      console.info('toggleHeaderGroup', mouseTargetData);
+      // console.info('toggleHeaderGroup', mouseTargetData);
       this.tableScope.toggleHeaderGroup(mouseTargetData);
       event.preventDefault();
       event.stopPropagation();

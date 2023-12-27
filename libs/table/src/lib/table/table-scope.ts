@@ -33,6 +33,7 @@ import { CopyService } from './service/copy-service';
 import { CopyServiceIf } from './service/copy-service.if';
 import { MouseTargetData } from './data/event/mouse-target-data';
 import { AreaModelCellGroups } from './data/tablemodel/areamodel/area-model-cell-groups';
+import { CellgroupFactory } from './data/tablemodel/cellgroup/cellgroup-factory';
 
 
 /**
@@ -674,10 +675,45 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
 
   toggleHeaderGroup(mouseTargetData: MouseTargetData) {
     const headerAreaModel = this.tableModel.getAreaModel('header') as AreaModelCellGroups;
-    headerAreaModel.toggleHeaderGroup(mouseTargetData);
-    this.repaint();
-    console.info('_______-headerAreaModel', headerAreaModel);
-    console.info('_______-mouseTargetData', mouseTargetData);
+
+    if ('columnDefs' in this.tableModel) {
+      this.tableModel.columnDefs = headerAreaModel.toggleHeaderGroup(mouseTargetData);
+      console.info('####### !!!!!! *******, this.tableModel.columnDefs')
+    }
+
+
+
+
+    // this.repaint();
+    this.firstInit();
+
+    // this.tableModel.recalcPadding();
+    // this.resetSizeOfWrapperDiv();
+    // this.adjustContainersAndRows();
+    //
+    // console.info('this.tableModel.getColumnCount()', this.tableModel.getColumnCount());
+    // const columnDefs = this.tableModel.getColumnDefs();
+    // if (columnDefs) {
+    //   console.info('this.tableModel.getColumnDefs()', columnDefs);
+    //   for (const cd of columnDefs) {
+    //     if (cd?.isVisible) console.info(cd.isVisible(), cd);
+    //   }
+    // }
+
+    // this.adjustColumnsToRowParent({
+    //   areaIdent: 'header',
+    //   sideIdent: 'left',
+    //   areaModel: headerAreaModel,
+    //   geo: this.tableModel.getAreaGeo('header', 'left'),
+    //   parent: this.tableModel.getAreaParent('header', 'left'),
+    //   rowIndex: mouseTargetData.rowIndex,
+    //   columnIndexStart: mouseTargetData.columnIndex,
+    //   columnIndexEnd: mouseTargetData.columnIndex,
+    //   verticalFixed: true,
+    //   lastRowOfModel: false
+    // });
+    // console.info('_______-headerAreaModel', headerAreaModel);
+    // console.info('_______-mouseTargetData', mouseTargetData);
   }
 }
 
