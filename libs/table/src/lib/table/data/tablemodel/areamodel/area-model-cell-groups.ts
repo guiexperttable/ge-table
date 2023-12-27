@@ -11,6 +11,8 @@ import { CellgroupFactory } from '../cellgroup/cellgroup-factory';
 import { CellGroupExt } from '../cellgroup/cell-group-ext';
 import { CellGroupExtCellRenderer } from '../../../renderer/cell-group-ext-cell-renderer';
 import { MouseTargetData } from '../../event/mouse-target-data';
+import { HeaderGroupOptionsIf } from '../../options/header-group-options.if';
+import { HeaderGroupOptions } from '../../options/header-group-options';
 
 // TODO next steps:   fix this model
 export class AreaModelCellGroups implements AreaModelIf {
@@ -21,14 +23,16 @@ export class AreaModelCellGroups implements AreaModelIf {
   public arr: (CellGroupExt | null | undefined)[][];
 
   private groupExts: CellGroupExt[] = [];
-  private cellGroupExtCellRenderer = new CellGroupExtCellRenderer();
+  private cellGroupExtCellRenderer;
 
   constructor(
     public readonly areaIdent: AreaIdent = 'header',
     public readonly groups: CellGroupIf[],
     public columnDefs: ColumnDefIf[] = [],
-    public readonly defaultRowHeight: number
+    public readonly defaultRowHeight: number,
+    headerGroupOptions: HeaderGroupOptionsIf = new HeaderGroupOptions()
   ) {
+    this.cellGroupExtCellRenderer = new CellGroupExtCellRenderer(headerGroupOptions);
     this.groupExts = CellgroupFactory.buildGroupExts(groups);
     console.info(this.groupExts);
     console.info(this.getAllLeafs());

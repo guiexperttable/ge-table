@@ -12,6 +12,9 @@ const routes: Routes = [
     path: "demo", loadChildren: () => import("./objectarray/demo-objectarray.module").then(m => m.DemoObjectarrayModule)
   },
   {
+    path: "demo", loadChildren: () => import("./cellgroup/demo-cellgroup.module").then(m => m.DemoCellgroupModule)
+  },
+  {
     path: "demo", loadChildren: () => import("./multisize/demo-multisize.module").then(m => m.DemoMultisizeModule)
   },
   {

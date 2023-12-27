@@ -9,6 +9,7 @@ import { SelectionModelIf } from "../../selection/selection-model.if";
 import { GetT } from "../common/get-t";
 import { FocusModelIf } from "../../focus/focus-model.if";
 import { ShortcutActionIdMapping } from "../../action/shortcut-actionid-mapping.type";
+import { HeaderGroupOptionsIf } from './header-group-options.if';
 
 /**
  * Represents the options for configuring a table.
@@ -35,6 +36,7 @@ import { ShortcutActionIdMapping } from "../../action/shortcut-actionid-mapping.
  * | defaultRowHeights                | Represents the default row heights for a given table.                                            |
  * | headerToggleExpandCollapseIcons  | Indicates whether to show toggle icons in the header.                                            |
  * | treeOptions                      | Represents the options for configuring a tree.                                                   |
+ * | headerGroupOptions               | Represents the options for expnded/collapsed icons of the header groups.                                                   |
  * | showCheckboxWihoutExtraColumn    | Indicates whether to show checkbox without an extra column.                                       |
  * | externalFilterFunction           | Represents the external filter function used to filter table rows.                                |
  * | sortedOptions                    | Represents a sorted options object.                                                              |
@@ -165,15 +167,12 @@ export interface TableOptionsIf {
 
   headerToggleExpandCollapseIcons: boolean;
 
-  /**
-   * Represents the options for configuring a tree.
-   *
-   * @typedef {Object} TreeOptions
-   * @property {number} [maxDepth] - Maximum depth of the tree.
-   * @property {boolean} [allowDuplicates] - Indicates if duplicate items are allowed in the tree.
-   * @property {string[]} [colors] - An array of color options for styling the tree.
-   */
+
   treeOptions: TreeOptionsIf;
+
+
+
+  headerGroupOptions: HeaderGroupOptionsIf;
 
   /**
    * Indicates whether to show checkbox without an extra column.

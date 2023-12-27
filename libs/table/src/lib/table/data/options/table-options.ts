@@ -12,6 +12,7 @@ import { GetT } from "../common/get-t";
 import { FocusModelIf } from "../../focus/focus-model.if";
 import { FocusModel } from "../../focus/focus-model";
 import { ShortcutActionIdMapping } from "../../action/shortcut-actionid-mapping.type";
+import { HeaderGroupOptions } from './header-group-options';
 
 const selectionModel = new SelectionModel();
 const focusModel = new FocusModel("cell");
@@ -51,6 +52,7 @@ export class TableOptions implements TableOptionsIf {
   headerVerticalSeparator = false;
 
   treeOptions = new TreeOptions();
+  headerGroupOptions = new HeaderGroupOptions();
   showCheckboxWihoutExtraColumn = false;
 
   externalFilterFunction: FilterFunction<any> | undefined = undefined;
