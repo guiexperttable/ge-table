@@ -20,7 +20,7 @@ export const headerGroups: CellGroupIf[] = [
           {
             data: "Gold B",
             property: "GOLD_B",
-            visibility: "inverted"
+            visibility: "normal"
           }
         ]
       },

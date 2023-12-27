@@ -5,7 +5,7 @@ import {
   TableFactory,
   TableModelIf
 } from "@guiexpert/table";
-import { headerGroups } from "../demodata/header-groups";
+import { headerGroups } from "../../demodata/header-groups";
 
 export interface FalconIf {
   "GOLD": number;
@@ -23,7 +23,7 @@ export interface FalconIf {
   "HOH_D": number;
 }
 
-// TODO hier gehts weiter
+
 export function createHeadergroupModel(): TableModelIf {
   const defaultRowHeight = 34;
   const groupExts = CellgroupFactory.buildGroupExts(headerGroups);

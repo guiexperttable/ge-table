@@ -37,17 +37,16 @@ export const teamHeaderGroups: CellGroupIf[] = [
 
 ];
 
-// TODO hier gehts weiter
-export function createTeamHeadergroupModel(): TableModelIf {
-  const defaultRowHeight = 34;
-  const groupExts = CellgroupFactory.buildGroupExts(teamHeaderGroups);
-  const columnDefs = CellgroupFactory.buildColumnDefs(groupExts); // TODO fix
-  const headerAreaModel = new AreaModelCellGroups("header", teamHeaderGroups, columnDefs, defaultRowHeight);
 
-  console.info("headerGroups", teamHeaderGroups);
+export function createTeamHeadergroupModel(cellGroups: CellGroupIf[] = teamHeaderGroups): TableModelIf {
+  const defaultRowHeight = 34;
+  const groupExts = CellgroupFactory.buildGroupExts(cellGroups);
+  const columnDefs = CellgroupFactory.buildColumnDefs(groupExts);
+  const headerAreaModel = new AreaModelCellGroups("header", cellGroups, columnDefs, defaultRowHeight);
+
+  console.info("headerGroups", cellGroups);
   console.info("columnDefs", columnDefs.map(cd => cd.property));
   console.info("columnDefs", columnDefs);
-  //console.info(CellgroupFactory.buildDeepMap(headerGroups));
 
   const arrs = [
     {
