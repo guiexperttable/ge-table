@@ -1,5 +1,4 @@
 <guiexpert-table
-  (tableReady)="onTable1Ready($event)"
   [tableModel]="tableModel1"
   [tableOptions]="tableOptions"
   class="table-div"
@@ -8,7 +7,6 @@
 <br>
 
 <guiexpert-table
-  (tableReady)="onTable2Ready($event)"
   [tableModel]="tableModel2"
   [tableOptions]="tableOptions"
   class="table-div"
@@ -17,8 +15,14 @@
 <br>
 
 <guiexpert-table
-  (tableReady)="onTable3Ready($event)"
   [tableModel]="tableModel3"
+  [tableOptions]="tableOptions"
+  class="table-div"
+></guiexpert-table>
+<br>
+
+<guiexpert-table
+  [tableModel]="tableModel4"
   [tableOptions]="tableOptions"
   class="table-div"
 ></guiexpert-table>
@@ -26,7 +30,6 @@
 <br>
 
 <guiexpert-table
-  (tableReady)="onTableReady($event)"
   [tableModel]="tableModel"
   [tableOptions]="tableOptions"
   class="big-table-div"

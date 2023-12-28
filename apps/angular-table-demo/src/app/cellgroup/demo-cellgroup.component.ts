@@ -13,14 +13,10 @@ export class DemoCellgroupComponent {
 
   tableModel1: TableModelIf = createTeamHeadergroupModel();
   tableModel2: TableModelIf;
-  tableModel3: TableModelIf = createTeamHeadergroupModel();
+  tableModel3: TableModelIf;
+  tableModel4: TableModelIf;
   tableOptions: TableOptionsIf = new TableOptions();
 
-
-  private tableApi?: TableApi;
-  private tableApi1?: TableApi;
-  private tableApi2?: TableApi;
-  private tableApi3?: TableApi;
 
   constructor() {
     const hg2 = this.clone(teamHeaderGroups);
@@ -28,25 +24,16 @@ export class DemoCellgroupComponent {
     this.tableModel2 = createTeamHeadergroupModel(hg2);
 
     const hg3 = this.clone(teamHeaderGroups);
-    hg3[0].closed = true;
     if (hg3[0].children?.length) hg3[0].children[0].visibility = 'inverted';
     this.tableModel3 = createTeamHeadergroupModel(hg3);
+
+    const hg4 = this.clone(teamHeaderGroups);
+    hg4[0].closed = true;
+    if (hg4[0].children?.length) hg4[0].children[0].visibility = 'inverted';
+    this.tableModel4 = createTeamHeadergroupModel(hg4);
   }
 
 
-
-  onTableReady($event: TableApi) {
-    this.tableApi = $event;
-  }
-  onTable1Ready($event: TableApi) {
-    this.tableApi1 = $event;
-  }
-  onTable2Ready($event: TableApi) {
-    this.tableApi2 = $event;
-  }
-  onTable3Ready($event: TableApi) {
-    this.tableApi3 = $event;
-  }
 
 
   private clone<T>(o:T): T {
