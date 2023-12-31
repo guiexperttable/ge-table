@@ -33,7 +33,6 @@ import { CopyService } from './service/copy-service';
 import { CopyServiceIf } from './service/copy-service.if';
 import { MouseTargetData } from './data/event/mouse-target-data';
 import { AreaModelCellGroups } from './data/tablemodel/areamodel/area-model-cell-groups';
-import { CellgroupFactory } from './data/tablemodel/cellgroup/cellgroup-factory';
 
 
 /**

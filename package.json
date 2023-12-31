@@ -4,7 +4,7 @@
   "license": "MIT",
   "repository": "https://github.com/guiexperttable/ge-table",
   "scripts": {
-    "inst": "npm install -f",
+    "inst": "pnpm install -f",
     "build": "nx build",
     "build:all": "npm run _update-build-version & nx run-many --all --target=build  && npm run concat-css && npm run concat-css-2",
     "build:table-website": "nx run table-website:build:production",
