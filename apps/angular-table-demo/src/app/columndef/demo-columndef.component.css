@@ -7,10 +7,13 @@
 }
 
 .filter-div {
+  display: grid;
+  grid-template-columns: 200px 100px;
+  grid-gap: 20px;
   position: absolute;
   top: 4px;
   left: 226px;
-  width: 200px;
+  width: 350px;
   height: 60px;
   overflow-y: clip;
   opacity: 0.5;

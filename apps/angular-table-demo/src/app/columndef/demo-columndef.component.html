@@ -12,4 +12,6 @@
     <mat-label>Filter</mat-label>
     <input (keyup)="onKeyup()" [(ngModel)]="filterText" matInput>
   </mat-form-field>
+
+  <button mat-flat-button (click)="onCopyClicked()">Copy</button>
 </div>

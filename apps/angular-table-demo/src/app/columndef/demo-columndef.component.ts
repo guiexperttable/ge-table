@@ -165,5 +165,8 @@ export class DemoColumndefComponent implements OnInit, OnDestroy {
     });
   }
 
+  onCopyClicked() {
+    this.tableApi?.copyToClipboard().then(console.info);
+  }
 }
 

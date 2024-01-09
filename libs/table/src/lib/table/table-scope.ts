@@ -1,38 +1,39 @@
-
-import { TableModelIf } from "./data/tablemodel/table-model.if";
-import { AreaIdent } from "./data/tablemodel/area-ident.type";
-import { GeMouseEvent } from "./data/common/event/ge-mouse-event";
-import { DomServiceIf } from "./service/dom-service.if";
-import { ConvenienceDomService } from "./service/convenience-dom.service";
-import { TableOptionsIf } from "./data/options/table-options.if";
-import { MouseHandler } from "./mouse-handler";
-import { EventListenerIf } from "./event-listener.if";
-import { TableApi } from "./table-api";
-import { SortState } from "./data/common/sort-state.type";
-import { AreaModelTree } from "./data/tablemodel/areamodel/area-model-tree";
-import { StoreStateScrollPosService } from "./service/store-state-scroll-pos.service";
-import { StoreStateCollapsedExpandService } from "./service/store-state-collapsed-expand.service";
-import { StoreStateSortingService } from "./service/store-state-sorting.service";
-import { RenderScope } from "./render-scope";
-import { SortItem } from "./data/common/sort-item";
-import { InputHandler } from "./input-handler";
-import { GeModelChangeEvent } from "./data/common/event/ge-model-change-event";
-import { SelectionService } from "./selection/selection-service";
-import { GeKeyEvent } from "./data/common/event/ge-key-event";
-import { OnActionTriggeredIf } from "./action/on-action-triggered.if";
-import { ActionId } from "./action/action-id.type";
-import { ShortcutService } from "./action/shortcut.service";
-import { EventAdapter } from "./event-adapter";
-import {SimpleDomService} from "./service/simple-dom-service";
-import {TableOptions} from "./data/options/table-options";
-import {TreeRowIf} from "./data/common/tree-row-if";
-import {isAreaModelTree} from "./instanceof-workaround";
+import { TableModelIf } from './data/tablemodel/table-model.if';
+import { AreaIdent } from './data/tablemodel/area-ident.type';
+import { GeMouseEvent } from './data/common/event/ge-mouse-event';
+import { DomServiceIf } from './service/dom-service.if';
+import { ConvenienceDomService } from './service/convenience-dom.service';
+import { TableOptionsIf } from './data/options/table-options.if';
+import { MouseHandler } from './mouse-handler';
+import { EventListenerIf } from './event-listener.if';
+import { TableApi } from './table-api';
+import { SortState } from './data/common/sort-state.type';
+import { AreaModelTree } from './data/tablemodel/areamodel/area-model-tree';
+import { StoreStateScrollPosService } from './service/store-state-scroll-pos.service';
+import { StoreStateCollapsedExpandService } from './service/store-state-collapsed-expand.service';
+import { StoreStateSortingService } from './service/store-state-sorting.service';
+import { RenderScope } from './render-scope';
+import { SortItem } from './data/common/sort-item';
+import { InputHandler } from './input-handler';
+import { GeModelChangeEvent } from './data/common/event/ge-model-change-event';
+import { SelectionService } from './selection/selection-service';
+import { GeKeyEvent } from './data/common/event/ge-key-event';
+import { OnActionTriggeredIf } from './action/on-action-triggered.if';
+import { ActionId } from './action/action-id.type';
+import { ShortcutService } from './action/shortcut.service';
+import { EventAdapter } from './event-adapter';
+import { SimpleDomService } from './service/simple-dom-service';
+import { TableOptions } from './data/options/table-options';
+import { TreeRowIf } from './data/common/tree-row-if';
+import { isAreaModelTree } from './instanceof-workaround';
 import { LicenseManager } from './license-manager';
 import { SelectionModel } from './selection/selection-model';
 import { CopyService } from './service/copy-service';
 import { CopyServiceIf } from './service/copy-service.if';
 import { MouseTargetData } from './data/event/mouse-target-data';
 import { AreaModelCellGroups } from './data/tablemodel/areamodel/area-model-cell-groups';
+import { SelectionModelIf } from './selection/selection-model.if';
+import { FocusModelIf } from './focus/focus-model.if';
 
 
 /**
@@ -57,40 +58,11 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
   protected keyEvent?: GeKeyEvent;
   private api = new TableApi(this);
 
-  private mouseStartAction = "";
+  private mouseStartAction = '';
   private mouseStartWidth = -1;
   private mouseStartColumnIndex = -1;
   private dragFrom = -1;
   private dragTo = -1;
-
-  /**
-   * Creates a TableScope instance.
-   *
-   * @param {HTMLDivElement} hostElement - The HTML div element that will contain the table.
-   * @param {TableModelIf} tableModel - The table model object.
-   * @param {TableOptionsIf} [tableOptions=new TableOptions()] - The optional table options object.
-   * @param {EventListenerIf} [eventListener=new EventAdapter()] - The optional event listener object.
-   * @param {DomServiceIf} [domService=new SimpleDomService()] - The optional DOM service object.
-   *
-   * @return {TableScope} - The newly created TableScope instance.
-   */
-  static create(
-    hostElement: HTMLDivElement,
-    tableModel: TableModelIf,
-    tableOptions: TableOptionsIf = new TableOptions(),
-    eventListener: EventListenerIf = new EventAdapter(),
-    domService: DomServiceIf = new SimpleDomService(),
-    copyService: CopyServiceIf = new CopyService()
-    ): TableScope {
-    return new TableScope(
-      hostElement,
-      tableModel,
-      domService,
-      tableOptions,
-      eventListener,
-      copyService
-    );
-  }
 
   constructor(
     hostElement: HTMLDivElement,
@@ -98,7 +70,7 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
     domService: DomServiceIf,
     tableOptions: TableOptionsIf,
     protected readonly eventListener: EventListenerIf,
-    protected readonly copyService: CopyServiceIf = new CopyService()
+    public readonly copyService: CopyServiceIf = new CopyService()
   ) {
     super(
       hostElement,
@@ -131,6 +103,34 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
     this.shortcutService.addListener(this.selectionService);
   }
 
+  /**
+   * Creates a TableScope instance.
+   *
+   * @param {HTMLDivElement} hostElement - The HTML div element that will contain the table.
+   * @param {TableModelIf} tableModel - The table model object.
+   * @param {TableOptionsIf} [tableOptions=new TableOptions()] - The optional table options object.
+   * @param {EventListenerIf} [eventListener=new EventAdapter()] - The optional event listener object.
+   * @param {DomServiceIf} [domService=new SimpleDomService()] - The optional DOM service object.
+   *
+   * @return {TableScope} - The newly created TableScope instance.
+   */
+  static create(
+    hostElement: HTMLDivElement,
+    tableModel: TableModelIf,
+    tableOptions: TableOptionsIf = new TableOptions(),
+    eventListener: EventListenerIf = new EventAdapter(),
+    domService: DomServiceIf = new SimpleDomService(),
+    copyService: CopyServiceIf = new CopyService()
+  ): TableScope {
+    return new TableScope(
+      hostElement,
+      tableModel,
+      domService,
+      tableOptions,
+      eventListener,
+      copyService
+    );
+  }
 
   /**
    * Triggers an action based on the provided actionId.
@@ -141,27 +141,27 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
    * @return {boolean} - Returns true if the action was triggered successfully, false otherwise.
    */
   onActionTriggered(actionId: ActionId): boolean {
-    if (actionId === "NAVIGATE_DOWN") {
+    if (actionId === 'NAVIGATE_DOWN') {
       if (this.changeFocusCell(0, 1)) {
         return true;
       }
     }
-    if (actionId === "NAVIGATE_UP") {
-      if (this.changeFocusCell(0, -1)){
+    if (actionId === 'NAVIGATE_UP') {
+      if (this.changeFocusCell(0, -1)) {
         return true;
       }
     }
-    if (actionId === "NAVIGATE_LEFT") {
-      if (this.changeFocusCell(-1, 0)){
+    if (actionId === 'NAVIGATE_LEFT') {
+      if (this.changeFocusCell(-1, 0)) {
         return true;
       }
     }
-    if (actionId === "NAVIGATE_RIGHT") {
-      if (this.changeFocusCell(1, 0)){
+    if (actionId === 'NAVIGATE_RIGHT') {
+      if (this.changeFocusCell(1, 0)) {
         return true;
       }
     }
-    if (actionId === "START_EDITING") {
+    if (actionId === 'START_EDITING') {
       if (this.getFocusModel) {
         const fm = this.getFocusModel();
         if (fm) {
@@ -174,9 +174,9 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
         return true;
       }
     }
-    if (actionId === "COPY_2_CLIPBOARD") {
-      const sm = this.getSelectionModel ? this.getSelectionModel(): undefined;
-      const fm = this.getFocusModel ? this.getFocusModel(): undefined;
+    if (actionId === 'COPY_2_CLIPBOARD') {
+      const sm = this.getSelectionModel ? this.getSelectionModel() : undefined;
+      const fm = this.getFocusModel ? this.getFocusModel() : undefined;
       this.copyService
         .createContent(this.tableModel, sm, fm)
         .then(txt => this.copyService.copyContent(txt));
@@ -185,7 +185,7 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
   }
 
   updateModelValueAfterEdit(areaIdent: AreaIdent, rowIndex: number, columnIndex: number, value: string) {
-    if (areaIdent === "body") {
+    if (areaIdent === 'body') {
       const bodyAreaModel = this.tableModel.getAreaModel(areaIdent);
       const ok: boolean = bodyAreaModel.setValue(rowIndex, columnIndex, value);
       if (ok) {
@@ -241,9 +241,9 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
     if (mouseEvent) {
       const target = mouseEvent.target as HTMLElement;
       [ret.areaIdent, ret.sideIdent] = this.getAreaAndSideIdentByAttr(target);
-      ret.rowIndex = this.getNumberByAttr(target, "data-row-index");
-      ret.columnIndex = this.getNumberByAttr(target, "data-col-index");
-      ret.action = this.getStringByAttr(target, "data-ge-action");
+      ret.rowIndex = this.getNumberByAttr(target, 'data-row-index');
+      ret.columnIndex = this.getNumberByAttr(target, 'data-col-index');
+      ret.action = this.getStringByAttr(target, 'data-ge-action');
 
       // const bodyY = mouseEvent.clientY - this.hostElement.offsetTop - this.areaHeaderCenter.parent.clientHeight;
       // const bodyX = mouseEvent.clientX - this.hostElement.offsetLeft - this.areaBodyWestGeo.width;
@@ -272,13 +272,13 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
   onMouseDown(mouseEvent: GeMouseEvent) {
     if (mouseEvent.columnIndex > -1
       && mouseEvent.action
-      && ["resize-column", "drag-column"].includes(mouseEvent.action)) {
+      && ['resize-column', 'drag-column'].includes(mouseEvent.action)) {
 
       this.mouseStartWidth = this.tableModel.getColumnWidth(mouseEvent.columnIndex);
       this.mouseStartAction = mouseEvent.action;
       this.mouseStartColumnIndex = mouseEvent.columnIndex;
 
-      if (this.mouseStartAction === "drag-column") {
+      if (this.mouseStartAction === 'drag-column') {
         this.dragFrom = this.mouseStartColumnIndex;
       }
     }
@@ -295,12 +295,12 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
 
     if (
       this.mouseStartColumnIndex > -1
-      && this.mouseStartAction === "resize-column"
+      && this.mouseStartAction === 'resize-column'
       && this.tableOptions.columnsResizable) {
       this.resizeColumn(mouseEvent);
 
     } else if (
-      this.mouseStartAction === "drag-column"
+      this.mouseStartAction === 'drag-column'
       && mouseEvent.columnIndex > -1
       && this.tableOptions.columnsDraggable) {
 
@@ -328,17 +328,17 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
     this.eventListener.onMouseDraggingEnd(mouseEvent);
     this.draggingTargetColumnIndex = -1;
 
-    if (this.mouseStartAction === "resize-column") {
+    if (this.mouseStartAction === 'resize-column') {
       this.resizeColumn(mouseEvent);
 
-    } else if (this.mouseStartAction === "drag-column") {
+    } else if (this.mouseStartAction === 'drag-column') {
       this.repaint();
     }
     this.mouseStartWidth = -1;
     this.mouseStartColumnIndex = -1;
     this.dragFrom = -1;
     this.dragTo = -1;
-    this.mouseStartAction = "";
+    this.mouseStartAction = '';
   }
 
   /**
@@ -392,7 +392,7 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
   toggleRowCheckbox(rowIdx: number, _colIdx: number, areaIdent: AreaIdent) {
     const areaModel = this.tableModel.getAreaModel(areaIdent);
     const state = areaModel.isRowChecked(rowIdx);
-    const unsel = (state === undefined || state === "semi" || state === "none");
+    const unsel = (state === undefined || state === 'semi' || state === 'none');
     areaModel.setRowChecked(rowIdx, unsel);
     this.repaint(); // TODO repaint cell only
     const selectedRows = areaModel.rowSelectionModel?.getCheckedRows();
@@ -421,7 +421,7 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
     return dirty;
   }
 
-  debounceRepaint(){
+  debounceRepaint() {
     this.debounce(this.repaint.bind(this), 1);
   }
 
@@ -465,13 +465,13 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
       event.preventDefault();
       event.stopPropagation();
       const states: SortState[] = colDef.sortStatesOrder ? colDef.sortStatesOrder : this.tableOptions.sortOrder;
-      const currentState: SortState = colDef.sortState ?? "";
+      const currentState: SortState = colDef.sortState ?? '';
       const newState = states[(states.indexOf(currentState) + 1) % states.length];
 
       const sortItem = new SortItem(colIdx, newState);
       const done = this.tableModel.doSort([sortItem]);
       if (done) {
-        this.tableModel.getColumnDefs()?.forEach(cd => cd.sortState = "");
+        this.tableModel.getColumnDefs()?.forEach(cd => cd.sortState = '');
         colDef.sortState = newState;
       }
       this.repaint();
@@ -479,6 +479,110 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
     }
   }
 
+  /**
+   * Scrolls the viewport to the specified pixel coordinates.
+   *
+   * @param {number} px - The horizontal pixel coordinate to scroll to.
+   * @param {number} py - The vertical pixel coordinate to scroll to.
+   *
+   * @return {void}
+   */
+  scrollToPixel(px: number, py: number) {
+    this.scrollViewport.scrollTo(px, py);
+  }
+
+  /**
+   * Scrolls to the specified index in the table.
+   *
+   * @param {number} _indexX - The horizontal index of the table where scrolling is needed.
+   * @param {number} indexY - The vertical index of the table where scrolling is needed.
+   * @return {void}
+   */
+  scrollToIndex(_indexX: number, indexY: number) {
+    const bodyAreaModel = this.tableModel.getAreaModel('body');
+    const py = bodyAreaModel.getYPosByRowIndex(indexY);
+    this.scrollToPixel(0, py); // TODO calc indexX -> px
+  }
+
+  /**
+   * Sets the selection model for the table.
+   *
+   * @param {SelectionModel} sm - The selection model to be set.
+   * @param {boolean} rerender - Optional parameter indicating whether to rerender the table after setting the selection model. Default value is false.
+   *
+   * @return {void} - This method does not return any value.
+   */
+  setSelectionModel(sm: SelectionModel, rerender: boolean = false) {
+    const getSm = () => sm;
+    this.tableOptions.getSelectionModel = getSm;
+    this.getSelectionModel = getSm;
+    this.selectionService.getSelectionModel = getSm;
+    if (rerender) {
+      this.repaint();
+    }
+  }
+
+  toggleHeaderGroup(mouseTargetData: MouseTargetData) {
+    const headerAreaModel = this.tableModel.getAreaModel('header') as AreaModelCellGroups;
+
+    if ('columnDefs' in this.tableModel) {
+      this.tableModel.columnDefs = headerAreaModel.toggleHeaderGroup(mouseTargetData);
+      console.info('####### !!!!!! *******, this.tableModel.columnDefs');
+    }
+    // this.repaint();
+    this.firstInit();
+
+    // this.tableModel.recalcPadding();
+    // this.resetSizeOfWrapperDiv();
+    // this.adjustContainersAndRows();
+    //
+    // console.info('this.tableModel.getColumnCount()', this.tableModel.getColumnCount());
+    // const columnDefs = this.tableModel.getColumnDefs();
+    // if (columnDefs) {
+    //   console.info('this.tableModel.getColumnDefs()', columnDefs);
+    //   for (const cd of columnDefs) {
+    //     if (cd?.isVisible) console.info(cd.isVisible(), cd);
+    //   }
+    // }
+
+    // this.adjustColumnsToRowParent({
+    //   areaIdent: 'header',
+    //   sideIdent: 'left',
+    //   areaModel: headerAreaModel,
+    //   geo: this.tableModel.getAreaGeo('header', 'left'),
+    //   parent: this.tableModel.getAreaParent('header', 'left'),
+    //   rowIndex: mouseTargetData.rowIndex,
+    //   columnIndexStart: mouseTargetData.columnIndex,
+    //   columnIndexEnd: mouseTargetData.columnIndex,
+    //   verticalFixed: true,
+    //   lastRowOfModel: false
+    // });
+    // console.info('_______-headerAreaModel', headerAreaModel);
+    // console.info('_______-mouseTargetData', mouseTargetData);
+  }
+
+  /**
+   * Retrieves the selection model.
+   * @returns {SelectionModelIf | undefined} The selection model if available, otherwise undefined.
+   */
+  selectionModel(): SelectionModelIf | undefined {
+    if (this?.getSelectionModel) {
+      return this.getSelectionModel();
+    }
+    return undefined;
+  }
+
+  /**
+   * Retrieves the focus model.
+   *
+   * @returns {FocusModelIf | undefined} The focus model if it exists, or undefined otherwise.
+   */
+  focusModel(): FocusModelIf | undefined {
+    if (this?.getFocusModel) {
+      return this.getFocusModel();
+    }
+    return undefined;
+  }
 
   /**
    * Changes the focus cell using the specified deltas.
@@ -487,7 +591,7 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
    * @param {number} dy - The delta for the row index.
    * @return {boolean} - True if the focus cell was changed, false otherwise.
    */
-  private changeFocusCell(dx: number, dy: number) : boolean{
+  private changeFocusCell(dx: number, dy: number): boolean {
     if (!this.isEditing() && this.getFocusModel) {
       const fm = this.getFocusModel();
       if (fm) {
@@ -528,19 +632,19 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
     bodyY: number
   ) {
     console.clear();
-    console.info("this.hostElement.offsetTop", this.hostElement.offsetTop); // pageY of table tag
-    console.info("this.hostElement.scrollHeight", this.hostElement.scrollHeight); // height of visible scroll area
-    console.info("this.scrollViewportTop", this.scrollTop); // amount of px scrolled to top (initial : 0)
-    console.info("this.areaHeaderCenter.parent.clientHeight", this.areaHeaderCenter.parent.clientHeight);
-    console.info("bodyY", bodyY);
-    console.info("bodyX", bodyX);
-    console.info("rows", this.firstVisibleRowIndex);
-    console.info("");
-    console.info("this.tableModel", this.tableModel);
-    console.info("");
-    console.info("this.mouseMoveEvent.clientX", this.mouseHandler.mouseEvent?.clientX);
-    console.info("this.hostElement.offsetLeft", this.hostElement.offsetLeft);
-    console.info("this.areaBodyWestGeo.width", this.areaBodyWestGeo.width);
+    console.info('this.hostElement.offsetTop', this.hostElement.offsetTop); // pageY of table tag
+    console.info('this.hostElement.scrollHeight', this.hostElement.scrollHeight); // height of visible scroll area
+    console.info('this.scrollViewportTop', this.scrollTop); // amount of px scrolled to top (initial : 0)
+    console.info('this.areaHeaderCenter.parent.clientHeight', this.areaHeaderCenter.parent.clientHeight);
+    console.info('bodyY', bodyY);
+    console.info('bodyX', bodyX);
+    console.info('rows', this.firstVisibleRowIndex);
+    console.info('');
+    console.info('this.tableModel', this.tableModel);
+    console.info('');
+    console.info('this.mouseMoveEvent.clientX', this.mouseHandler.mouseEvent?.clientX);
+    console.info('this.hostElement.offsetLeft', this.hostElement.offsetLeft);
+    console.info('this.areaBodyWestGeo.width', this.areaBodyWestGeo.width);
   }
 
   /**
@@ -597,7 +701,7 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
       const getRowId = autoRestoreOptions.getRowId;
       if (autoRestoreOptions.autoRestoreCollapsedExpandedState && getRowId) {
         const state = this.storeStateCollapsedExpandService.collapsedExpandedStateGet();
-        const areaModel = this.tableModel.getAreaModel("body");
+        const areaModel = this.tableModel.getAreaModel('body');
         if (isAreaModelTree(areaModel)) {
           const amtr: AreaModelTree<any> = areaModel as AreaModelTree<any>;
           const rowCount = areaModel.getRowCount();
@@ -614,10 +718,10 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
 
               } else {
                 const rowId = getRowId(row.data);
-                if (state.mode === "expanded") {
+                if (state.mode === 'expanded') {
                   row.expanded = (this.storeStateCollapsedExpandService.collapsedExpandedStateIncludes(rowId));
 
-                } else if (state.mode === "collapsed") {
+                } else if (state.mode === 'collapsed') {
                   row.expanded = (!this.storeStateCollapsedExpandService.collapsedExpandedStateIncludes(rowId));
                 }
               }
@@ -627,88 +731,6 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
         }
       }
     }
-  }
-
-  /**
-   * Scrolls the viewport to the specified pixel coordinates.
-   *
-   * @param {number} px - The horizontal pixel coordinate to scroll to.
-   * @param {number} py - The vertical pixel coordinate to scroll to.
-   *
-   * @return {void}
-   */
-  scrollToPixel(px: number, py: number) {
-    this.scrollViewport.scrollTo(px, py);
-  }
-
-  /**
-   * Scrolls to the specified index in the table.
-   *
-   * @param {number} _indexX - The horizontal index of the table where scrolling is needed.
-   * @param {number} indexY - The vertical index of the table where scrolling is needed.
-   * @return {void}
-   */
-  scrollToIndex(_indexX: number, indexY: number) {
-    const bodyAreaModel = this.tableModel.getAreaModel('body');
-    const py = bodyAreaModel.getYPosByRowIndex(indexY);
-    this.scrollToPixel(0, py); // TODO calc indexX -> px
-  }
-
-  /**
-   * Sets the selection model for the table.
-   *
-   * @param {SelectionModel} sm - The selection model to be set.
-   * @param {boolean} rerender - Optional parameter indicating whether to rerender the table after setting the selection model. Default value is false.
-   *
-   * @return {void} - This method does not return any value.
-   */
-  setSelectionModel(sm: SelectionModel, rerender: boolean = false){
-    const getSm = () => sm;
-    this.tableOptions.getSelectionModel = getSm;
-    this.getSelectionModel = getSm;
-    this.selectionService.getSelectionModel = getSm;
-    if (rerender) {
-      this.repaint();
-    }
-  }
-
-  toggleHeaderGroup(mouseTargetData: MouseTargetData) {
-    const headerAreaModel = this.tableModel.getAreaModel('header') as AreaModelCellGroups;
-
-    if ('columnDefs' in this.tableModel) {
-      this.tableModel.columnDefs = headerAreaModel.toggleHeaderGroup(mouseTargetData);
-      console.info('####### !!!!!! *******, this.tableModel.columnDefs')
-    }
-    // this.repaint();
-    this.firstInit();
-
-    // this.tableModel.recalcPadding();
-    // this.resetSizeOfWrapperDiv();
-    // this.adjustContainersAndRows();
-    //
-    // console.info('this.tableModel.getColumnCount()', this.tableModel.getColumnCount());
-    // const columnDefs = this.tableModel.getColumnDefs();
-    // if (columnDefs) {
-    //   console.info('this.tableModel.getColumnDefs()', columnDefs);
-    //   for (const cd of columnDefs) {
-    //     if (cd?.isVisible) console.info(cd.isVisible(), cd);
-    //   }
-    // }
-
-    // this.adjustColumnsToRowParent({
-    //   areaIdent: 'header',
-    //   sideIdent: 'left',
-    //   areaModel: headerAreaModel,
-    //   geo: this.tableModel.getAreaGeo('header', 'left'),
-    //   parent: this.tableModel.getAreaParent('header', 'left'),
-    //   rowIndex: mouseTargetData.rowIndex,
-    //   columnIndexStart: mouseTargetData.columnIndex,
-    //   columnIndexEnd: mouseTargetData.columnIndex,
-    //   verticalFixed: true,
-    //   lastRowOfModel: false
-    // });
-    // console.info('_______-headerAreaModel', headerAreaModel);
-    // console.info('_______-mouseTargetData', mouseTargetData);
   }
 }
 

@@ -180,4 +180,20 @@ export class TableApi {
     return this.tableScope.shortcutService.getShortcutActionMapping();
   }
 
+
+
+  /**
+   * Copies the selected data from the table to the clipboard.
+   *
+   * @return {Promise<string>} - A promise that resolves with the copied data as a string.
+   */
+  copyToClipboard() {
+    return this.tableScope.copyService.copyToClipboard(
+      this.tableScope.tableModel,
+      this.tableScope.selectionModel(),
+      this.tableScope.focusModel()
+    );
+  }
+
+
 }
