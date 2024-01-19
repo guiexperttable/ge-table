@@ -36,6 +36,7 @@ export class EleScope {
 
   protected hoverRow: HTMLDivElement;
   protected hoverColumn: HTMLDivElement;
+  protected draggingColumn: HTMLDivElement;
 
   protected scrollTop = 0;
 
@@ -66,6 +67,9 @@ export class EleScope {
     this.hoverColumn =
       dom.applyStylePosistionAbsolute(
         dom.createDivWithClass("ge-table-hover-column", hostEle));
+    this.draggingColumn =
+      dom.applyStylePosistionAbsolute(
+        dom.createDivWithClass("ge-table-dragging-column", hostEle));
 
     this.areaHeaderWest = dom.appendRelativeChildDiv(
       dom.applyStylePosistionAbsolute(

@@ -72,7 +72,7 @@ export class RenderScope extends EleScope {
     footer: []
   };
   protected tree = false;
-  // TODO delete? protected rangeEles: HTMLDivElement[] = [];
+
   protected colAndRowspanModels: AreaObjectMapType<ColAndRowspanModel> = new AreaObjectMap<ColAndRowspanModel>();
   protected firstVisibleRowIndex = -1;
 
@@ -910,6 +910,8 @@ export class RenderScope extends EleScope {
     }
   }
 
+
+
   protected hideHoverColumn() {
     this.dom.applyStyle(this.hoverColumn, {
       "display": "none"
@@ -922,6 +924,34 @@ export class RenderScope extends EleScope {
     }
     this.debounceTimeout = setTimeout(fn.bind(this), delay);
   }
+
+
+  public dragging = false;
+  protected adjustDraggingColumn(mouseMoveEvent: GeMouseEvent, sourceColumnIndex: number) {
+    if (this.dragging) {
+      const height = this.hostElement.clientHeight;
+      const width = this.tableModel.getColumnWidth(sourceColumnIndex);
+      const fixedWest = this.areaBodyWestGeo.width;
+      const left = mouseMoveEvent.columnLeft + this.tableModel.getPadding().left - this.scrollLeft - fixedWest + mouseMoveEvent.draggingX;
+      this.dom.applyStyle(this.draggingColumn, {
+        "background": "rgba(128,128,128,0.1)",
+        "left": (left) + "px",
+        "top": "0px",
+        "width": width + "px",
+        "height": height + "px",
+        "display": "block"
+      });
+    } else {
+      this.hideDraggingColumn();
+    }
+  }
+
+  protected hideDraggingColumn() {
+    this.dom.applyStyle(this.draggingColumn, {
+      "display": "none"
+    });
+  }
+
 
   private renderDragTargetDiv(parent: HTMLDivElement, left: number, top: number, width: number, height: number): HTMLDivElement {
     const div = this.dom.applyStylePosistionAbsolute(

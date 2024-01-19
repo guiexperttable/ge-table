@@ -255,6 +255,7 @@ export class MouseHandler {
     this.mouseEvent = evt;
     if (this.mouseDown) {
       this.dragging = true;
+      this.tableScope.dragging = true;
       requestAnimationFrame(this.mouseDraggingOnFrame.bind(this));
     } else {
       requestAnimationFrame(this.mouseMoveOnFrame.bind(this));
@@ -269,6 +270,7 @@ export class MouseHandler {
     }
     this.mouseDown = false;
     this.dragging = false;
+    this.tableScope.dragging = false;
   }
 
 
@@ -279,7 +281,7 @@ export class MouseHandler {
         mouseEvent.draggingX = this.mouseEvent.clientX - this.startMouseEvent.originalEvent.clientX;
         mouseEvent.draggingY = this.mouseEvent.clientY - this.startMouseEvent.originalEvent.clientY;
       }
-      this.tableScope.mouseDraggingOnFrame(mouseEvent);
+      this.tableScope.mouseDraggingOnFrame(mouseEvent, this.startMouseEvent);
     }
   }
 

@@ -288,8 +288,9 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
    * Handles mouse dragging on the frame.
    *
    * @param {GeMouseEvent} mouseEvent - The mouse event object.
+   * @param startMouseEvent
    */
-  mouseDraggingOnFrame(mouseEvent: GeMouseEvent) {
+  mouseDraggingOnFrame(mouseEvent: GeMouseEvent, startMouseEvent: GeMouseEvent|undefined) {
     this.eventListener.onMouseDragging(mouseEvent);
     this.mouseEvent = mouseEvent;
 
@@ -313,6 +314,9 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
         this.resetSizeOfWrapperDiv();
         this.adjustContainersAndRows();
       }
+      if (startMouseEvent) {
+        this.adjustDraggingColumn(mouseEvent, startMouseEvent.columnIndex);
+      }
       this.repaint();
     }
   }
@@ -332,6 +336,7 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
       this.resizeColumn(mouseEvent);
 
     } else if (this.mouseStartAction === 'drag-column') {
+      this.hideDraggingColumn();
       this.repaint();
     }
     this.mouseStartWidth = -1;
