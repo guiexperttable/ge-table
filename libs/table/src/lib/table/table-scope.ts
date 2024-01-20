@@ -61,8 +61,11 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
   private mouseStartAction = '';
   private mouseStartWidth = -1;
   private mouseStartColumnIndex = -1;
+
   private dragFrom = -1;
   private dragTo = -1;
+  private lastDragFrom = -1;
+  private lastDragTo = -1;
 
   constructor(
     hostElement: HTMLDivElement,
@@ -309,10 +312,14 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
       this.dragTo = this.draggingTargetColumnIndex;
 
       if (this.dragFrom > -1 && this.dragTo > -1 && this.dragFrom !== this.dragTo) {
-        this.tableModel.changeColumnOrder(this.dragFrom, this.dragTo);
-        this.dragFrom = this.dragTo;
-        this.resetSizeOfWrapperDiv();
-        this.adjustContainersAndRows();
+        if (!(this.lastDragFrom === this.dragTo && this.lastDragTo === this.dragFrom)){
+          this.tableModel.changeColumnOrder(this.dragFrom, this.dragTo);
+          this.lastDragFrom = this.dragFrom;
+          this.lastDragTo = this.dragTo;
+          this.dragFrom = this.dragTo;
+          this.resetSizeOfWrapperDiv();
+          this.adjustContainersAndRows();
+        }
       }
       if (startMouseEvent) {
         this.adjustDraggingColumn(mouseEvent, startMouseEvent.columnIndex);
@@ -587,6 +594,17 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
       return this.getFocusModel();
     }
     return undefined;
+  }
+
+  setDragging(dragging: boolean){
+    this.dragging = dragging;
+    if (this.dragging) {
+      this.storeColumnWidths();
+      this.lastDragFrom =-1;
+      this.lastDragTo =-1;
+    } else {
+      this.storedColumnWidths = [];
+    }
   }
 
   /**

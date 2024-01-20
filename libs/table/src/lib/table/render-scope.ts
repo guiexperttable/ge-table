@@ -54,6 +54,10 @@ interface ArgsRenderHeaderCellResizeHandle {
 
 export class RenderScope extends EleScope {
 
+  protected dragging = false;
+  protected editing = false;
+  protected storedColumnWidths: number[] = [];
+
   protected storeScrollPosStateService?: StoreStateScrollPosService;
   protected getSelectionModel?: GetT<SelectionModelIf>;
   protected getFocusModel?: GetT<FocusModelIf>;
@@ -78,6 +82,7 @@ export class RenderScope extends EleScope {
 
   protected draggingTargetColumnIndex = -1;
   protected mouseEvent?: GeMouseEvent;
+
   private debounceTimeout?: ReturnType<typeof setTimeout> | null;
   private editorRenderer?: CellRendererIf;
   private editorRendererColumn?: number;
@@ -115,10 +120,16 @@ export class RenderScope extends EleScope {
     );
   }
 
-  protected editing = false;
+
   isEditing(){
     return this.editing;
   }
+
+
+
+
+
+
 
   resetEditorRenderer() {
     this.editorRenderer = undefined;
@@ -257,6 +268,13 @@ export class RenderScope extends EleScope {
     }
   }
 
+  protected storeColumnWidths(){
+    const columnDefs = this.tableModel.getColumnDefs();
+    if (columnDefs?.length) {
+      this.storedColumnWidths = columnDefs.map((_cd, idx) => this.tableModel.getColumnWidth(idx));
+    }
+  }
+
   protected getAreaAndSideIdentByAttr(srcElement: HTMLElement): [AreaIdent | undefined, SideIdent | undefined] {
     if (srcElement) {
       const dataArea = this.getStringByAttr(srcElement, "data-area");
@@ -325,10 +343,6 @@ export class RenderScope extends EleScope {
     const padding = this.tableModel.getPadding();
     const areaModel = this.tableModel.getAreaModel(areaIdent);
     const rowCount = areaModel.getRowCount();
-
-    if (areaIdent==='header'){
-      console.info('rowCount', rowCount);
-    }
 
     while (this.cleanupFunctions[areaIdent].length) {
       const fn = this.cleanupFunctions[areaIdent].shift();
@@ -926,21 +940,22 @@ export class RenderScope extends EleScope {
   }
 
 
-  public dragging = false;
+
   protected adjustDraggingColumn(mouseMoveEvent: GeMouseEvent, sourceColumnIndex: number) {
     if (this.dragging) {
       const height = this.hostElement.clientHeight;
       const width = this.tableModel.getColumnWidth(sourceColumnIndex);
-      const fixedWest = this.areaBodyWestGeo.width;
-      const left = mouseMoveEvent.columnLeft + this.tableModel.getPadding().left - this.scrollLeft - fixedWest + mouseMoveEvent.draggingX;
-      this.dom.applyStyle(this.draggingColumn, {
-        "background": "rgba(128,128,128,0.1)",
-        "left": (left) + "px",
-        "top": "0px",
-        "width": width + "px",
-        "height": height + "px",
-        "display": "block"
-      });
+      if (mouseMoveEvent.originalEvent?.clientX) {
+        const left = mouseMoveEvent.originalEvent?.clientX - width / 2;
+        this.dom.applyStyle(this.draggingColumn, {
+          "background": "rgba(128,128,128,0.2)",
+          "left": (left) + "px",
+          "top": "0px",
+          "width": width + "px",
+          "height": height + "px",
+          "display": "block"
+        });
+      }
     } else {
       this.hideDraggingColumn();
     }

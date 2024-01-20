@@ -465,11 +465,12 @@ export class TableModel implements TableModelIf {
    * @returns {boolean} - `true` if the column is sortable, `false` otherwise.
    */
   isSortable(columnIndex: number): boolean {
-    if (this.columnDefs
-      && columnIndex < this.columnDefs.length
-      && this.columnDefs[columnIndex].sortable) {
-      // @ts-ignore
-      return this.columnDefs[columnIndex].sortable();
+    if (this.columnDefs &&
+      columnIndex < this.columnDefs.length) {
+      const checkSortability = this.columnDefs[columnIndex]?.sortable;
+      if (typeof checkSortability === 'function') {
+        return checkSortability();
+      }
     }
     return false;
   }
@@ -502,11 +503,11 @@ export class TableModel implements TableModelIf {
           // only for a % value we have to check min and max:
           let px = Math.floor(def.width.value * clientWidth / 100);
           if (def.minWidth) {
-            let pxMin = def.minWidth.unit === "px" ? def.minWidth.value : Math.floor(def.minWidth.value * clientWidth / 100);
+            const pxMin = def.minWidth.unit === "px" ? def.minWidth.value : Math.floor(def.minWidth.value * clientWidth / 100);
             px = Math.max(pxMin, px);
           }
           if (def.maxWidth) {
-            let pxMax = def.maxWidth.unit === "px" ? def.maxWidth.value : Math.floor(def.maxWidth.value * clientWidth / 100);
+            const pxMax = def.maxWidth.unit === "px" ? def.maxWidth.value : Math.floor(def.maxWidth.value * clientWidth / 100);
             px = Math.min(pxMax, px);
           }
           return px;

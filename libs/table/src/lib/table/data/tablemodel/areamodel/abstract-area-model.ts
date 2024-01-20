@@ -118,14 +118,10 @@ export abstract class AbstractAreaModel<T> implements AreaModelIf, HasDefaultRow
     return false;
   }
 
+
   isEditable(_rowIndex: number, columnIndex: number): boolean {
-    if (this.columnDefs
-      && columnIndex < this.columnDefs.length
-      && this.columnDefs[columnIndex].editable) {
-      // @ts-ignore
-      return this.columnDefs[columnIndex].editable();
-    }
-    return false;
+    const columnDef = this.columnDefs?.[columnIndex];
+    return columnDef?.editable?.() ?? false;
   }
 
   setValue(rowIndex: number, columnIndex: number, value: any): boolean {
@@ -138,10 +134,11 @@ export abstract class AbstractAreaModel<T> implements AreaModelIf, HasDefaultRow
     if (property.includes(".")) {
       return this.setPropertyValue(row, property.split("."), value);
     }
-    // @ts-ignore
-    row[property] = value;
+
+    row[property as keyof T] = value;
     return true;
   }
+
 
   isSelectable(_rowIndex: number, _columnIndex: number): boolean {
     return true;
@@ -155,8 +152,7 @@ export abstract class AbstractAreaModel<T> implements AreaModelIf, HasDefaultRow
   protected setPropertyValue(o: any, props: string[], value: any): boolean {
     const prop = props.shift();
     if (prop) {
-      // @ts-ignore
-      let o2 = o[prop];
+      const o2 = o[prop];
       if (o2 && props.length) {
         return this.setPropertyValue(o2, props, value);
 

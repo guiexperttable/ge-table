@@ -51,8 +51,6 @@ export class AreaModelCellGroups implements AreaModelIf {
       this.columnDefs = CellgroupFactory.buildColumnDefs(this.groups);
       // console.info('this.columnDefs', this.columnDefs);
     }
-
-    console.info('this.arr', this.arr);
   }
 
   getAllLeafs(): CellGroupExt[] {
