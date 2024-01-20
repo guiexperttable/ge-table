@@ -932,7 +932,15 @@ export class RenderScope extends EleScope {
     });
   }
 
-  protected debounce(fn: Function, delay: number = 1000) {
+  /**
+   * Executes a function after a specified delay, ensuring that the function is called only once within that delay period.
+   *
+   * @param {() => void} fn - The function to be executed.
+   * @param {number} [delay=1000] - The delay in milliseconds before executing the function.
+   *
+   * @return {undefined}
+   */
+  protected debounce(fn: () => void, delay: number = 1000) {
     if (this.debounceTimeout) {
       clearTimeout(this.debounceTimeout);
     }
@@ -941,10 +949,16 @@ export class RenderScope extends EleScope {
 
 
 
-  protected adjustDraggingColumn(mouseMoveEvent: GeMouseEvent, sourceColumnIndex: number) {
+  protected adjustDraggingColumn(
+    mouseMoveEvent: GeMouseEvent,
+    sourceColumnIndex: number,
+    firstDraggingRendering: boolean
+    ) {
     if (this.dragging) {
       const height = this.hostElement.clientHeight;
-      const width = this.tableModel.getColumnWidth(sourceColumnIndex);
+      // const width = this.tableModel.getColumnWidth(sourceColumnIndex);
+      const width = this.storedColumnWidths[sourceColumnIndex];
+
       if (mouseMoveEvent.originalEvent?.clientX) {
         const left = mouseMoveEvent.originalEvent?.clientX - width / 2;
         this.dom.applyStyle(this.draggingColumn, {
@@ -955,6 +969,10 @@ export class RenderScope extends EleScope {
           "height": height + "px",
           "display": "block"
         });
+        if (firstDraggingRendering) {
+          // TODO render dragging column
+          this.dom.appendText(this.draggingColumn, new Date().getTime()+'');
+        }
       }
     } else {
       this.hideDraggingColumn();

@@ -66,6 +66,7 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
   private dragTo = -1;
   private lastDragFrom = -1;
   private lastDragTo = -1;
+  private firstDraggingRendering = true;
 
   constructor(
     hostElement: HTMLDivElement,
@@ -282,6 +283,7 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
       this.mouseStartColumnIndex = mouseEvent.columnIndex;
 
       if (this.mouseStartAction === 'drag-column') {
+        this.firstDraggingRendering = true;
         this.dragFrom = this.mouseStartColumnIndex;
       }
     }
@@ -322,7 +324,8 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
         }
       }
       if (startMouseEvent) {
-        this.adjustDraggingColumn(mouseEvent, startMouseEvent.columnIndex);
+        this.adjustDraggingColumn(mouseEvent, startMouseEvent.columnIndex, this.firstDraggingRendering);
+        this.firstDraggingRendering = false;
       }
       this.repaint();
     }
@@ -350,6 +353,7 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
     this.mouseStartColumnIndex = -1;
     this.dragFrom = -1;
     this.dragTo = -1;
+    this.firstDraggingRendering = true;
     this.mouseStartAction = '';
   }
 
