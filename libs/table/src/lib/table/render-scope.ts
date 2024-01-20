@@ -286,21 +286,21 @@ export class RenderScope extends EleScope {
     return [undefined, undefined];
   }
 
-  protected getArea(rowIdent: AreaIdent, sideIdent: SideIdent): DivScope {
-    if (rowIdent === "header") {
+  protected getArea(areaIdent: AreaIdent, sideIdent: SideIdent): DivScope {
+    if (areaIdent === "header") {
       if (sideIdent === "west") return this.areaHeaderWest;
       if (sideIdent === "center") return this.areaHeaderCenter;
       if (sideIdent === "east") return this.areaHeaderEast;
-    } else if (rowIdent === "body") {
+    } else if (areaIdent === "body") {
       if (sideIdent === "west") return this.areaBodyWest;
       if (sideIdent === "center") return this.areaBodyCenter;
       if (sideIdent === "east") return this.areaBodyEast;
-    } else if (rowIdent === "footer") {
+    } else if (areaIdent === "footer") {
       if (sideIdent === "west") return this.areaFooterWest;
       if (sideIdent === "center") return this.areaFooterCenter;
       if (sideIdent === "east") return this.areaFooterEast;
     }
-    throw Error(`Wrong area identifier: row:${rowIdent}, col:${sideIdent}`);
+    throw Error(`Wrong area identifier: row:${areaIdent}, col:${sideIdent}`);
   }
 
   protected adjustBody() {
@@ -977,6 +977,33 @@ export class RenderScope extends EleScope {
     } else {
       this.hideDraggingColumn();
     }
+  }
+
+  protected renderContentOfDraggingColumn() {
+    // TODO for header and footer kann man die zeile/zelle  rendern. body braucht man scroll-info.
+    // TODO hier gehts weiter
+    // const areaIds: AreaIdent[] = ['header', 'body', 'footer'];
+    // let y = 0;
+    // areaIds.forEach(areaIdent => {
+    //   const areaModel = this.tableModel.getAreaModel(areaIdent);
+    //   const rowCount = areaModel?.getRowCount();
+    //   if (rowCount) {
+    //     for (let index = 0; index < rowCount; index++) {
+    //       const top = y;
+    //       // const lastRowOfModel = index === rowCount - 1;
+    //       const height = this.tableModel.getRowHeight(areaIdent, index);
+    //
+    //       if (top + height > 0) {
+    //         // It's not scrolled out on top:
+    //         // Visible!
+    //         this.firstVisibleRowIndex = index;
+    //         // center -------------------------------------------
+    //         let geo = { left, width, height, top, index };
+    //         let rowDiv = this.dom.addRowDiv(this.draggingColumn., geo, index, areaIdent, 'center');
+    //       }
+    //     }
+    //   }
+    // });
   }
 
   protected hideDraggingColumn() {
