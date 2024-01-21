@@ -1,29 +1,29 @@
-import { EleScope } from "./ele-scope";
-import { TableModelIf } from "./data/tablemodel/table-model.if";
-import { ConvenienceDomService } from "./service/convenience-dom.service";
-import { TableOptionsIf } from "./data/options/table-options.if";
-import { CellRange } from "./data/common/cell-range";
-import { RendererCleanupFnType } from "./renderer/renderer-cleanup-fn.type";
-import { AreaIdent } from "./data/tablemodel/area-ident.type";
-import { SideIdent } from "./data/side-ident.type";
-import { DivScope } from "./data/div-scope.type";
-import { AreaModelIf } from "./data/tablemodel/areamodel/area-model.if";
-import { ArgsAdjustColumnsToRowParentParams } from "./data/common/args-adjust-columns-to-row-parent-params";
-import { ArgsRenderCellDiv } from "./data/common/args-render-cell-div";
-import { TreeArrowType } from "./data/common/tree-arrow.type";
-import { TreeRow } from "./data/common/tree-row";
-import { StoreStateScrollPosService } from "./service/store-state-scroll-pos.service";
-import { GeMouseEvent } from "./data/common/event/ge-mouse-event";
-import { GeoData } from "./data/geo-data";
-import { CellRendererIf } from "./renderer/cell-render.if";
-import { SelectionModelIf } from "./selection/selection-model.if";
-import { GetT } from "./data/common/get-t";
-import { FocusModelIf } from "./focus/focus-model.if";
-import { ColAndRowspanModel } from "./data/tablemodel/areamodel/col-and-rowspan-model";
-import { AreaObjectMapType } from "./data/common/area-map.type";
-import { AreaObjectMap } from "./data/common/area-map";
-import { TableCellUpdateEventIf } from "./data/common/event/input/table-cell-update-event.if";
-import { isAreaModelTree, isTreeRow } from "./instanceof-workaround";
+import { EleScope } from './ele-scope';
+import { TableModelIf } from './data/tablemodel/table-model.if';
+import { AddColumnDivPara, ConvenienceDomService } from './service/convenience-dom.service';
+import { TableOptionsIf } from './data/options/table-options.if';
+import { CellRange } from './data/common/cell-range';
+import { RendererCleanupFnType } from './renderer/renderer-cleanup-fn.type';
+import { AreaIdent } from './data/tablemodel/area-ident.type';
+import { SideIdent } from './data/side-ident.type';
+import { DivScope } from './data/div-scope.type';
+import { AreaModelIf } from './data/tablemodel/areamodel/area-model.if';
+import { ArgsAdjustColumnsToRowParentParams } from './data/common/args-adjust-columns-to-row-parent-params';
+import { ArgsRenderCellDiv } from './data/common/args-render-cell-div';
+import { TreeArrowType } from './data/common/tree-arrow.type';
+import { TreeRow } from './data/common/tree-row';
+import { StoreStateScrollPosService } from './service/store-state-scroll-pos.service';
+import { GeMouseEvent } from './data/common/event/ge-mouse-event';
+import { GeoData } from './data/geo-data';
+import { CellRendererIf } from './renderer/cell-render.if';
+import { SelectionModelIf } from './selection/selection-model.if';
+import { GetT } from './data/common/get-t';
+import { FocusModelIf } from './focus/focus-model.if';
+import { ColAndRowspanModel } from './data/tablemodel/areamodel/col-and-rowspan-model';
+import { AreaObjectMapType } from './data/common/area-map.type';
+import { AreaObjectMap } from './data/common/area-map';
+import { TableCellUpdateEventIf } from './data/common/event/input/table-cell-update-event.if';
+import { isAreaModelTree, isTreeRow } from './instanceof-workaround';
 
 
 interface ArgsRenderCell {
@@ -108,10 +108,10 @@ export class RenderScope extends EleScope {
     if (this.tableOptions?.getFocusModel) {
       this.getFocusModel = this.tableOptions.getFocusModel;
     }
-    if (isAreaModelTree(tableModel.getAreaModel("body"))) {
+    if (isAreaModelTree(tableModel.getAreaModel('body'))) {
       this.tree = true;
     }
-    const aereaIds: AreaIdent[] = ["header", "body", "footer"];
+    const aereaIds: AreaIdent[] = ['header', 'body', 'footer'];
     aereaIds.forEach(
       areaIdent => {
         this.colAndRowspanModels[areaIdent] = new ColAndRowspanModel(tableModel, tableModel.getAreaModel(areaIdent));
@@ -121,14 +121,9 @@ export class RenderScope extends EleScope {
   }
 
 
-  isEditing(){
+  isEditing() {
     return this.editing;
   }
-
-
-
-
-
 
 
   resetEditorRenderer() {
@@ -156,8 +151,6 @@ export class RenderScope extends EleScope {
   }
 
 
-
-
   initRenderEditor(rowIdx: number, colIdx: number) {
     let rnFn = this.tableModel.getColumnDef(colIdx)?.getEditRenderer;
     if (!rnFn) {
@@ -173,7 +166,7 @@ export class RenderScope extends EleScope {
         this.editing = true;
         this.repaint();
         // request focus:
-        const input = document.querySelector("input.ge-table-cell-editor-input") as HTMLInputElement;
+        const input = document.querySelector('input.ge-table-cell-editor-input') as HTMLInputElement;
         if (input) {
           input.focus();
         }
@@ -211,35 +204,35 @@ export class RenderScope extends EleScope {
     }
 
     this.adjustBody();
-    this.adjustArea("footer");
-    this.adjustArea("header");
+    this.adjustArea('footer');
+    this.adjustArea('header');
 
 
     if (this.tableOptions.tableTopBorderVisible) {
       this.removables.push(this.dom.addHorizontalBorder(
         new GeoData(0, this.hostElement.clientWidth, 1, 0),
         this.hostElement,
-        "ge-table-border"));
+        'ge-table-border'));
     }
     if (this.tableOptions.tableBottomBorderVisible) {
       this.removables.push(this.dom.addHorizontalBorder(
         new GeoData(0, this.hostElement.clientWidth, 1, this.hostElement.clientHeight - 1),
         this.hostElement,
-        "ge-table-border"));
+        'ge-table-border'));
     }
     // The border between east and center in  header/body/footer (full height):
     if (this.tableModel.getFixedLeftColumnCount() > 0) {
       this.removables.push(this.dom.addVerticalBorder(
         new GeoData(this.areaBodyWest.child.clientWidth, 1, this.hostElement.clientHeight, 0),
         this.hostElement,
-        "ge-table-body-west-vertical-border"));
+        'ge-table-body-west-vertical-border'));
     }
     // The border between header and body (full width):
-    if (this.tableModel.getAreaModel("header")?.getRowCount() > 0) {
+    if (this.tableModel.getAreaModel('header')?.getRowCount() > 0) {
       this.removables.push(this.dom.addHorizontalBorder(
         new GeoData(0, this.hostElement.clientWidth, 1, this.areaHeaderCenter.child.clientHeight),
         this.hostElement,
-        "ge-table-body-west-vertical-border"));
+        'ge-table-body-west-vertical-border'));
     }
   }
 
@@ -255,7 +248,7 @@ export class RenderScope extends EleScope {
     repaintAll: boolean = false) {
 
     events.forEach(evt => {
-      this.tableModel
+        this.tableModel
           .getAreaModel(evt.area)
           .setValue(evt.rowIndex, evt.columnIndex, evt.value);
         if (!repaintAll) {
@@ -268,7 +261,43 @@ export class RenderScope extends EleScope {
     }
   }
 
-  protected storeColumnWidths(){
+  public rerenderCellContent(
+    { area, rowIndex, columnIndex, value, cssClasses }: TableCellUpdateEventIf
+  ) {
+    const areaModel = this.tableModel.getAreaModel(area);
+    const selector = 'div[data-col-index="' + columnIndex + '"][data-row-index="' + rowIndex + '"][data-area="' + area + '"]';
+    const cell = document.querySelector(selector) as HTMLDivElement;
+
+    if (cell) {
+      let fn: RendererCleanupFnType | undefined = undefined;
+      const editor = this.editorRenderer && this.editorRendererRow === rowIndex && this.editorRendererColumn === columnIndex;
+      const cellRenderer = (editor) ? this.editorRenderer : areaModel.getCellRenderer(rowIndex, columnIndex);
+
+      cell.innerText = '';
+      this.applyCssClasses(cell, cssClasses);
+      if (cellRenderer) {
+        fn = cellRenderer.render(cell, rowIndex, columnIndex, area, areaModel, value, this.dom.domService);
+        if (fn) {
+          this.cleanupFunctions[area].push(fn);
+        }
+      } else {
+        const text = `${value}`;
+        this.dom.addLabelDiv(cell, text, false, rowIndex, columnIndex, area);
+      }
+      const classes = areaModel.getCustomClassesAt(rowIndex, columnIndex);
+      if (classes.length) {
+        this.dom.addClasses(classes, cell);
+      }
+      const styles = areaModel.getCustomStyleAt(rowIndex, columnIndex);
+      if (styles) {
+        for (const css in styles) {
+          this.dom.setStyle(cell, css, styles[css]);
+        }
+      }
+    }
+  }
+
+  protected storeColumnWidths() {
     const columnDefs = this.tableModel.getColumnDefs();
     if (columnDefs?.length) {
       this.storedColumnWidths = columnDefs.map((_cd, idx) => this.tableModel.getColumnWidth(idx));
@@ -277,8 +306,8 @@ export class RenderScope extends EleScope {
 
   protected getAreaAndSideIdentByAttr(srcElement: HTMLElement): [AreaIdent | undefined, SideIdent | undefined] {
     if (srcElement) {
-      const dataArea = this.getStringByAttr(srcElement, "data-area");
-      const dataSide = this.getStringByAttr(srcElement, "data-side");
+      const dataArea = this.getStringByAttr(srcElement, 'data-area');
+      const dataSide = this.getStringByAttr(srcElement, 'data-side');
       if (dataSide && dataArea) {
         return [dataArea, dataSide] as [AreaIdent, SideIdent];
       }
@@ -287,18 +316,18 @@ export class RenderScope extends EleScope {
   }
 
   protected getArea(areaIdent: AreaIdent, sideIdent: SideIdent): DivScope {
-    if (areaIdent === "header") {
-      if (sideIdent === "west") return this.areaHeaderWest;
-      if (sideIdent === "center") return this.areaHeaderCenter;
-      if (sideIdent === "east") return this.areaHeaderEast;
-    } else if (areaIdent === "body") {
-      if (sideIdent === "west") return this.areaBodyWest;
-      if (sideIdent === "center") return this.areaBodyCenter;
-      if (sideIdent === "east") return this.areaBodyEast;
-    } else if (areaIdent === "footer") {
-      if (sideIdent === "west") return this.areaFooterWest;
-      if (sideIdent === "center") return this.areaFooterCenter;
-      if (sideIdent === "east") return this.areaFooterEast;
+    if (areaIdent === 'header') {
+      if (sideIdent === 'west') return this.areaHeaderWest;
+      if (sideIdent === 'center') return this.areaHeaderCenter;
+      if (sideIdent === 'east') return this.areaHeaderEast;
+    } else if (areaIdent === 'body') {
+      if (sideIdent === 'west') return this.areaBodyWest;
+      if (sideIdent === 'center') return this.areaBodyCenter;
+      if (sideIdent === 'east') return this.areaBodyEast;
+    } else if (areaIdent === 'footer') {
+      if (sideIdent === 'west') return this.areaFooterWest;
+      if (sideIdent === 'center') return this.areaFooterCenter;
+      if (sideIdent === 'east') return this.areaFooterEast;
     }
     throw Error(`Wrong area identifier: row:${areaIdent}, col:${sideIdent}`);
   }
@@ -307,15 +336,15 @@ export class RenderScope extends EleScope {
     const virtualRowDivTopF1 = this.areaBodyCenterGeo.height - this.tableModel.getContentHeightInPixel();
     const virtualRowDivTop = this.scrollFactorY * virtualRowDivTopF1;
 
-    this.dom.setStyle(this.contentDiv, "top", `${this.scrollTop}px`);
-    this.dom.setStyle(this.contentDiv, "left", `${this.scrollViewport.scrollLeft}px`);
+    this.dom.setStyle(this.contentDiv, 'top', `${this.scrollTop}px`);
+    this.dom.setStyle(this.contentDiv, 'left', `${this.scrollViewport.scrollLeft}px`);
 
-    this.adjustArea("body", virtualRowDivTop);
+    this.adjustArea('body', virtualRowDivTop);
   }
 
   protected getNumberByAttr(srcElement: HTMLElement, key: string): number {
     if (srcElement) {
-      const attr = srcElement.closest("[" + key + "]")?.getAttribute(key);
+      const attr = srcElement.closest('[' + key + ']')?.getAttribute(key);
       if (attr) return Number(attr);
     }
     return -1;
@@ -323,21 +352,21 @@ export class RenderScope extends EleScope {
 
   protected getStringByAttr(srcElement: HTMLElement, key: string): string {
     if (srcElement) {
-      const attr = srcElement.closest("[" + key + "]")?.getAttribute(key);
+      const attr = srcElement.closest('[' + key + ']')?.getAttribute(key);
       if (attr) return attr;
     }
-    return "";
+    return '';
   }
 
   protected adjustArea(areaIdent: AreaIdent, yStart: number = 0) {
-    const westArea = this.getArea(areaIdent, "west");
-    const centerArea = this.getArea(areaIdent, "center");
-    const eastArea = this.getArea(areaIdent, "east");
+    const westArea = this.getArea(areaIdent, 'west');
+    const centerArea = this.getArea(areaIdent, 'center');
+    const eastArea = this.getArea(areaIdent, 'east');
     const divHeight = centerArea.child.clientHeight;
 
-    westArea.child.innerText = "";
-    centerArea.child.innerText = "";
-    eastArea.child.innerText = "";
+    westArea.child.innerText = '';
+    centerArea.child.innerText = '';
+    eastArea.child.innerText = '';
     const left = 0;
     const width = this.areaBodyCenterGeo.width;
     const padding = this.tableModel.getPadding();
@@ -368,12 +397,12 @@ export class RenderScope extends EleScope {
 
         // center -------------------------------------------
         let geo = { left, width, height, top, index };
-        let rowDiv = this.dom.addRowDiv(centerArea, geo, index, areaIdent, "center");
+        let rowDiv = this.dom.addRowDiv(centerArea, geo, index, areaIdent, 'center');
         const centerStartCol = fixedLeftColumnCount;
 
         this.adjustColumnsToRowParent({
           areaIdent,
-          sideIdent: "center",
+          sideIdent: 'center',
           areaModel,
           geo,
           parent: rowDiv,
@@ -387,10 +416,10 @@ export class RenderScope extends EleScope {
         // west -------------------------------------------
         if (padding.left > 0) {
           geo = { left, width: this.areaBodyWestGeo.width, height, top, index };
-          rowDiv = this.dom.addRowDiv(westArea, geo, index, areaIdent, "west");
+          rowDiv = this.dom.addRowDiv(westArea, geo, index, areaIdent, 'west');
           this.adjustColumnsToRowParent({
             areaIdent,
-            sideIdent: "west",
+            sideIdent: 'west',
             areaModel,
             geo,
             parent: rowDiv,
@@ -405,10 +434,10 @@ export class RenderScope extends EleScope {
         // east -------------------------------------------
         if (padding.right > 0) {
           geo = { left, width: this.areaBodyEastGeo.width, height, top, index };
-          rowDiv = this.dom.addRowDiv(eastArea, geo, index, areaIdent, "east");
+          rowDiv = this.dom.addRowDiv(eastArea, geo, index, areaIdent, 'east');
           this.adjustColumnsToRowParent({
             areaIdent,
-            sideIdent: "east",
+            sideIdent: 'east',
             areaModel,
             geo,
             parent: rowDiv,
@@ -421,14 +450,14 @@ export class RenderScope extends EleScope {
         }
 
         // "collapse / expand all" event handler action attribute:
-        if (areaIdent === "header" && this.tree && index === rowCount - 1) {
+        if (areaIdent === 'header' && this.tree && index === rowCount - 1) {
           const div =
             this.dom.applyStyle(
               this.dom.setAttribute(
                 this.dom.addDiv(rowDiv, new GeoData(16, 20, 20, 8)),
-                "data-ge-action", "toggleExpandCollapseAll"
+                'data-ge-action', 'toggleExpandCollapseAll'
               ),
-              { "cursor": "pointer" }
+              { 'cursor': 'pointer' }
             );
           const treeOptionsArrow = this.tableOptions.treeOptions.arrowExpandCollapseAll;
           if (treeOptionsArrow) {
@@ -458,20 +487,20 @@ export class RenderScope extends EleScope {
         for (const range of ranges) {
           let xStart = 0;
           let child: HTMLDivElement = centerArea.child;
-          let sideIdent: SideIdent = "center";
+          let sideIdent: SideIdent = 'center';
           if (range.c1 < fixedLeftColumnCount) {
             // West:
             child = westArea.child;
-            sideIdent = "west";
+            sideIdent = 'west';
           } else if (fixedRightColumnCount > 0 && range.c1 >= columnCount - fixedRightColumnCount) {
             // East:
             child = eastArea.child;
-            sideIdent = "east";
+            sideIdent = 'east';
           } else {
             // Center:
             const virtualRowDivLeftF1 = this.areaBodyCenterGeo.width - this.tableModel.getContentWidthInPixel();
             xStart = (this.scrollFactorX * virtualRowDivLeftF1) - this.areaBodyWestGeo.width;
-            sideIdent = "center";
+            sideIdent = 'center';
           }
           this.drawBigCell(range, xStart, yStart, areaModel, child, sideIdent);
         }
@@ -534,7 +563,7 @@ export class RenderScope extends EleScope {
         parent: parentDiv,
         cellSelected,
         lastRowOfModel: true,
-        gammaRange:range.gammaRange
+        gammaRange: range.gammaRange
       });
     } else {
 
@@ -551,11 +580,11 @@ export class RenderScope extends EleScope {
         parent: parentDiv,
         cellSelected,
         lastRowOfModel: true,
-        gammaRange:range.gammaRange
+        gammaRange: range.gammaRange
       });
     }
 
-    if (areaModel.areaIdent === "header" && this.tableOptions.columnsResizable) {
+    if (areaModel.areaIdent === 'header' && this.tableOptions.columnsResizable) {
       this.renderHeaderCellResizeHandle({
         rowIndex: range.r1,
         columnIndex: range.c1,
@@ -567,7 +596,6 @@ export class RenderScope extends EleScope {
       });
     }
   }
-
 
   protected findRowOfImportantRowspanCell(areaModel: AreaModelIf, rowIndex: number, colIndex: number): number {
     const maxRowspan = areaModel.getMaxRowspan();
@@ -582,7 +610,6 @@ export class RenderScope extends EleScope {
     }
     return -1;
   }
-
 
   protected adjustColumnsToRowParent(
     {
@@ -612,7 +639,7 @@ export class RenderScope extends EleScope {
     }
 
     const top = 0;
-    const renderSelection = !!(areaIdent === "body" && sideIdent);
+    const renderSelection = !!(areaIdent === 'body' && sideIdent);
 
     let x = virtualRowDivLeft;
     for (let index = columnIndexStart; index <= columnIndexEnd; index++) {
@@ -646,7 +673,7 @@ export class RenderScope extends EleScope {
         }
 
         if (this.draggingTargetColumnIndex === index
-          && areaIdent !== "header") {
+          && areaIdent !== 'header') {
           // For a running drag and drop action:
           this.renderDragTargetDiv(parent, left, top, width, height);
           const geo1 = { left, top, width, height };
@@ -673,10 +700,10 @@ export class RenderScope extends EleScope {
               parent,
               cellSelected,
               lastRowOfModel,
-              gammaRange:true
+              gammaRange: true
             });
           }
-          if (areaIdent === "header" && this.tableOptions.columnsResizable) {
+          if (areaIdent === 'header' && this.tableOptions.columnsResizable) {
             this.renderHeaderCellResizeHandle({
               rowIndex: rowIndex,
               columnIndex: index,
@@ -711,6 +738,7 @@ export class RenderScope extends EleScope {
     return 0;
   }
 
+
   protected addAndRenderCellDiv(
     {
       areaModel,
@@ -726,12 +754,11 @@ export class RenderScope extends EleScope {
       lastRowOfModel
     }: ArgsRenderCellDiv): [HTMLDivElement, RendererCleanupFnType | undefined] {
 
-
     const editor = this.editorRenderer && this.editorRendererRow === rowIndex && this.editorRendererColumn === index;
     const cellRenderer = (editor) ? this.editorRenderer : areaModel.getCellRenderer(rowIndex, index);
     const geo = { left, width, height, top, index };
     const rowObject = areaModel.getRowByIndex(rowIndex);
-    let treeArrow: TreeArrowType = "none";
+    let treeArrow: TreeArrowType = 'none';
 
     const arrowIndexOk = index === this.getTreeArrowColumnIndex();
 
@@ -739,17 +766,17 @@ export class RenderScope extends EleScope {
       const tr = rowObject as TreeRow<any>;
       if (tr.children?.length) {
         if (tr.expanded) {
-          treeArrow = "expanded";
+          treeArrow = 'expanded';
         } else {
-          treeArrow = "collapsed";
+          treeArrow = 'collapsed';
         }
       } else {
-        treeArrow = "hidden";
+        treeArrow = 'hidden';
       }
     }
 
     let sortState = undefined;
-    if (areaIdent === "header") {
+    if (areaIdent === 'header') {
       const columnDef = this.tableModel.getColumnDef(index);
       if (!columnDef?.sortIconVisible || columnDef?.sortIconVisible()) {
         sortState = columnDef?.sortState;
@@ -757,26 +784,26 @@ export class RenderScope extends EleScope {
     }
 
     const val = areaModel.getValueAt(rowIndex, index);
-    const text = cellRenderer ? "" : `${val}`;
+    const text = cellRenderer ? '' : `${val}`;
     const checkedType = areaModel.isRowChecked(rowIndex);
     const cell = this.dom.addColumnDiv(
       {
         parent,
         geo,
         rowIndex,
-        columnIndex : index,
+        columnIndex: index,
         areaIdent,
         sideIdent,
         text,
         treeArrow,
-        tableOptions : this.tableOptions,
+        tableOptions: this.tableOptions,
         checkedType,
         sortState
       });
 
     const tooltip = areaModel.getTooltipAt(rowIndex, index);
     if (tooltip) {
-      this.dom.setAttribute(cell, "title", tooltip);
+      this.dom.setAttribute(cell, 'title', tooltip);
     }
 
     const columnDef = this.tableModel.getColumnDef(index);
@@ -798,14 +825,14 @@ export class RenderScope extends EleScope {
     if (lastRowOfModel) {
       this.dom.addHorizontalBorder({ left, width, height, top: top + height }, parent);
     }
-    if (this.getFocusModel && areaIdent === "body") {
+    if (this.getFocusModel && areaIdent === 'body') {
       const fm = this.getFocusModel();
       if (fm?.hasFocus(rowIndex, index)) {
         this.dom.addFocusBorderDivs(parent, geo, {});
       }
     }
-    if (areaIdent === "header") {
-      this.dom.setAttribute(cell, "data-ge-action", "drag-column");
+    if (areaIdent === 'header') {
+      this.dom.setAttribute(cell, 'data-ge-action', 'drag-column');
     }
 
     const styles = areaModel.getCustomStyleAt(rowIndex, index);
@@ -817,7 +844,7 @@ export class RenderScope extends EleScope {
     return [cell, fn];
   }
 
-  protected applyCssClasses(ele: HTMLDivElement, cssClasses: {[key:string]: boolean} = {}){
+  protected applyCssClasses(ele: HTMLDivElement, cssClasses: { [key: string]: boolean } = {}) {
     if (ele) {
       Object.entries(cssClasses)
         .forEach(([key, value]) => {
@@ -827,43 +854,6 @@ export class RenderScope extends EleScope {
             this.dom.removeClass(key, ele);
           }
         });
-    }
-  }
-
-
-  public rerenderCellContent(
-    {area, rowIndex, columnIndex, value, cssClasses} : TableCellUpdateEventIf
-  ){
-    const areaModel = this.tableModel.getAreaModel(area);
-    const selector = 'div[data-col-index="'+columnIndex+'"][data-row-index="'+rowIndex+'"][data-area="'+area+'"]';
-    const cell = document.querySelector(selector) as HTMLDivElement;
-
-    if (cell) {
-      let fn: RendererCleanupFnType | undefined = undefined;
-      const editor = this.editorRenderer && this.editorRendererRow === rowIndex && this.editorRendererColumn === columnIndex;
-      const cellRenderer = (editor) ? this.editorRenderer : areaModel.getCellRenderer(rowIndex, columnIndex);
-
-      cell.innerText = '';
-      this.applyCssClasses(cell, cssClasses);
-      if (cellRenderer) {
-        fn = cellRenderer.render(cell, rowIndex, columnIndex, area, areaModel, value, this.dom.domService);
-        if (fn) {
-          this.cleanupFunctions[area].push(fn);
-        }
-      } else {
-        const text = `${value}`;
-        this.dom.addLabelDiv(cell, text, false, rowIndex, columnIndex, area);
-      }
-      const classes = areaModel.getCustomClassesAt(rowIndex, columnIndex);
-      if (classes.length) {
-        this.dom.addClasses(classes, cell);
-      }
-      const styles = areaModel.getCustomStyleAt(rowIndex, columnIndex);
-      if (styles) {
-        for (const css in styles) {
-          this.dom.setStyle(cell, css, styles[css]);
-        }
-      }
     }
   }
 
@@ -886,14 +876,14 @@ export class RenderScope extends EleScope {
   protected adjustHoverRows(mouseMoveEvent: GeMouseEvent) {
     if (this.tableOptions.hoverRowVisible && mouseMoveEvent.rowIndex > -1) {
       const width = this.hostElement.clientWidth;
-      const rowHeight = this.tableModel.getAreaModel("body").getRowHeight(mouseMoveEvent.rowIndex);
+      const rowHeight = this.tableModel.getAreaModel('body').getRowHeight(mouseMoveEvent.rowIndex);
       const top = mouseMoveEvent.rowTop + this.areaHeaderCenter.parent.clientHeight - this.scrollTop;
       this.dom.applyStyle(this.hoverRow, {
-        "left": "0",
-        "top": top + "px",
-        "width": width + "px",
-        "height": rowHeight + "px",
-        "display": "block"
+        'left': '0',
+        'top': top + 'px',
+        'width': width + 'px',
+        'height': rowHeight + 'px',
+        'display': 'block'
       });
     } else {
       this.hideHoverRow();
@@ -902,7 +892,7 @@ export class RenderScope extends EleScope {
 
   protected hideHoverRow() {
     this.dom.applyStyle(this.hoverRow, {
-      "display": "none"
+      'display': 'none'
     });
   }
 
@@ -913,11 +903,11 @@ export class RenderScope extends EleScope {
       const fixedWest = this.areaBodyWestGeo.width;
       const left = mouseMoveEvent.columnLeft + this.tableModel.getPadding().left - this.scrollLeft - fixedWest;
       this.dom.applyStyle(this.hoverColumn, {
-        "left": (left) + "px",
-        "top": "0px",
-        "width": width + "px",
-        "height": height + "px",
-        "display": "block"
+        'left': (left) + 'px',
+        'top': '0px',
+        'width': width + 'px',
+        'height': height + 'px',
+        'display': 'block'
       });
     } else {
       this.hideHoverColumn();
@@ -925,10 +915,9 @@ export class RenderScope extends EleScope {
   }
 
 
-
   protected hideHoverColumn() {
     this.dom.applyStyle(this.hoverColumn, {
-      "display": "none"
+      'display': 'none'
     });
   }
 
@@ -948,12 +937,11 @@ export class RenderScope extends EleScope {
   }
 
 
-
   protected adjustDraggingColumn(
     mouseMoveEvent: GeMouseEvent,
     sourceColumnIndex: number,
     firstDraggingRendering: boolean
-    ) {
+  ) {
     if (this.dragging) {
       const height = this.hostElement.clientHeight;
       // const width = this.tableModel.getColumnWidth(sourceColumnIndex);
@@ -961,17 +949,17 @@ export class RenderScope extends EleScope {
 
       if (mouseMoveEvent.originalEvent?.clientX) {
         const left = mouseMoveEvent.originalEvent?.clientX - width / 2;
+        const top = 0;
+        const geo: GeoData = { left, width, height, top, index: sourceColumnIndex };
         this.dom.applyStyle(this.draggingColumn, {
-          "background": "rgba(128,128,128,0.2)",
-          "left": (left) + "px",
-          "top": "0px",
-          "width": width + "px",
-          "height": height + "px",
-          "display": "block"
+          'background': 'rgba(128,128,128,0.2)',
+          'display': 'block',
+          'overfllow': 'clip',
         });
+        this.dom.applyStyleInPx(this.draggingColumn, geo);
         if (firstDraggingRendering) {
-          // TODO render dragging column
-          this.dom.appendText(this.draggingColumn, new Date().getTime()+'');
+          // render dragging column:
+          this.renderContentOfDraggingColumn(geo);
         }
       }
     } else {
@@ -979,48 +967,91 @@ export class RenderScope extends EleScope {
     }
   }
 
-  protected renderContentOfDraggingColumn() {
-    // TODO for header and footer kann man die zeile/zelle  rendern. body braucht man scroll-info.
-    // TODO hier gehts weiter
-    // const areaIds: AreaIdent[] = ['header', 'body', 'footer'];
-    // let y = 0;
-    // areaIds.forEach(areaIdent => {
-    //   const areaModel = this.tableModel.getAreaModel(areaIdent);
-    //   const rowCount = areaModel?.getRowCount();
-    //   if (rowCount) {
-    //     for (let index = 0; index < rowCount; index++) {
-    //       const top = y;
-    //       // const lastRowOfModel = index === rowCount - 1;
-    //       const height = this.tableModel.getRowHeight(areaIdent, index);
-    //
-    //       if (top + height > 0) {
-    //         // It's not scrolled out on top:
-    //         // Visible!
-    //         this.firstVisibleRowIndex = index;
-    //         // center -------------------------------------------
-    //         let geo = { left, width, height, top, index };
-    //         let rowDiv = this.dom.addRowDiv(this.draggingColumn., geo, index, areaIdent, 'center');
-    //       }
-    //     }
-    //   }
-    // });
+  protected renderContentOfDraggingColumn(columnGeo: GeoData) {
+    const y = this. renderContentOfDraggingColumnForArea(columnGeo, 'header', 0);
+    this. renderContentOfDraggingColumnForArea(columnGeo, 'body', y);
+    // we refrain from rendering the footer:
+    // y = this. renderContentOfDraggingColumnForArea(columnGeo, 'footer', y);
+  }
+
+  protected renderContentOfDraggingColumnForArea(
+    columnGeo: GeoData,
+    areaIdent: AreaIdent,
+    y: number = 0
+  ): number {
+
+    const sideIdent = 'center';
+    const areaModel = this.tableModel.getAreaModel(areaIdent);
+    const rowCount = areaModel?.getRowCount();
+    if (rowCount) {
+      const columnIndex = columnGeo.index ?? 0;
+      const parent = this.draggingColumn;
+
+      for (let rowIndex = 0; rowIndex < rowCount; rowIndex++) {
+        const top = y;
+        const height = areaModel.getRowHeight(rowIndex);
+        const geo = { left:0, width: columnGeo.width, height, top, index: rowIndex };
+        const val = areaModel.getValueAt(rowIndex, columnIndex);
+        const cellRenderer = areaModel.getCellRenderer(rowIndex, columnIndex);
+        const text = cellRenderer ? '' : `${val}`;
+        const para: AddColumnDivPara = {
+          parent,
+          geo,
+          rowIndex,
+          columnIndex,
+          areaIdent,
+          sideIdent,
+          text
+        };
+        const cell = this.dom.addColumnDiv(para);
+
+        let fn: RendererCleanupFnType | undefined = undefined;
+        if (cellRenderer) {
+          fn = cellRenderer.render(cell, rowIndex, columnIndex, areaIdent, areaModel, val, this.dom.domService);
+          if (fn) {
+            this.cleanupFunctions[areaIdent].push(fn);
+          }
+        }
+
+        const classes = areaModel.getCustomClassesAt(rowIndex, columnIndex);
+        if (classes.length) {
+          this.dom.addClasses(classes, cell);
+        }
+        const columnDef = this.tableModel.getColumnDef(columnIndex);
+        if (columnDef && columnDef.classes[areaIdent]) {
+          this.dom.addClasses(columnDef.classes[areaIdent], cell);
+        }
+
+        // unnecessary, as the horizontal borders of the table are visible due to the semi-transparent background of the column:
+        this.dom.addColumnBorderDivs(this.tableOptions, parent, geo, areaIdent, sideIdent);
+
+        const styles = areaModel.getCustomStyleAt(rowIndex, columnIndex);
+        if (styles) {
+          for (const css in styles) {
+            this.dom.setStyle(cell, css, styles[css]);
+          }
+        }
+        y = y + height;
+      }
+    }
+    return y;
   }
 
   protected hideDraggingColumn() {
     this.dom.applyStyle(this.draggingColumn, {
-      "display": "none"
+      'display': 'none'
     });
   }
 
 
   private renderDragTargetDiv(parent: HTMLDivElement, left: number, top: number, width: number, height: number): HTMLDivElement {
     const div = this.dom.applyStylePosistionAbsolute(
-      this.dom.createDivWithClass("ge-table-drop-zone", parent)
+      this.dom.createDivWithClass('ge-table-drop-zone', parent)
     );
-    this.dom.setStyle(div, "left", `${left}px`);
-    this.dom.setStyle(div, "top", `${top}px`);
-    this.dom.setStyle(div, "width", `${width}px`);
-    this.dom.setStyle(div, "height", `${height}px`);
+    this.dom.setStyle(div, 'left', `${left}px`);
+    this.dom.setStyle(div, 'top', `${top}px`);
+    this.dom.setStyle(div, 'width', `${width}px`);
+    this.dom.setStyle(div, 'height', `${height}px`);
     return div;
   }
 
@@ -1046,10 +1077,10 @@ export class RenderScope extends EleScope {
               // ge-table-body-west-selected-range
               this.dom.createDivWithClass(`ge-table-${areaModel.areaIdent}-${sideIdent}-selected-range`, parent)
             );
-            this.dom.setStyle(div, "left", `${left}px`);
-            this.dom.setStyle(div, "top", `${top}px`);
-            this.dom.setStyle(div, "width", `${width}px`);
-            this.dom.setStyle(div, "height", `${height}px`);
+            this.dom.setStyle(div, 'left', `${left}px`);
+            this.dom.setStyle(div, 'top', `${top}px`);
+            this.dom.setStyle(div, 'width', `${width}px`);
+            this.dom.setStyle(div, 'height', `${height}px`);
           }
         }
       }
@@ -1102,20 +1133,20 @@ export class RenderScope extends EleScope {
     const domService = this.dom.domService;
     const handleWidth = this.tableOptions.columnResizeHandleWidthInPx ?? 2;
 
-    const div = domService.createElement<HTMLDivElement>("div");
-    domService.setAttribute(div, "data-col-index", `${columnIndex}`);
-    domService.setAttribute(div, "data-row-index", `${rowIndex}`);
-    domService.setAttribute(div, "data-area", "header");
-    domService.setAttribute(div, "data-ge-action", "resize-column");
+    const div = domService.createElement<HTMLDivElement>('div');
+    domService.setAttribute(div, 'data-col-index', `${columnIndex}`);
+    domService.setAttribute(div, 'data-row-index', `${rowIndex}`);
+    domService.setAttribute(div, 'data-area', 'header');
+    domService.setAttribute(div, 'data-ge-action', 'resize-column');
     // domService.setAttribute(div, 'data-ge-action', 'column-resize');
     domService.addClass(div, `ge-table-column-resize-handle`);
-    domService.setStyle(div, "display", "clip");
-    domService.setStyle(div, "position", "absolute");
-    domService.setStyle(div, "cursor", "col-resize");
-    domService.setStyle(div, "left", `${(cellLeft + cellWidth - handleWidth)}px`);
-    domService.setStyle(div, "top", `${cellTop}px`);
-    domService.setStyle(div, "width", `${handleWidth}px`);
-    domService.setStyle(div, "height", `${cellHeight}px`);
+    domService.setStyle(div, 'display', 'clip');
+    domService.setStyle(div, 'position', 'absolute');
+    domService.setStyle(div, 'cursor', 'col-resize');
+    domService.setStyle(div, 'left', `${(cellLeft + cellWidth - handleWidth)}px`);
+    domService.setStyle(div, 'top', `${cellTop}px`);
+    domService.setStyle(div, 'width', `${handleWidth}px`);
+    domService.setStyle(div, 'height', `${cellHeight}px`);
     domService.appendChild(parent, div);
   }
 

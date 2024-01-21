@@ -15,7 +15,7 @@ import { SortedOptionsIf } from "../data/options/sorted-options.if";
 import { HtmlStyle } from "./data/html-style.type";
 
 
-interface AddColumnDivPara {
+export interface AddColumnDivPara {
   parent: HTMLDivElement;
   geo: GeoData;
   rowIndex: number;
