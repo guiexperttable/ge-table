@@ -101,7 +101,7 @@ export class RenderScope extends EleScope {
       this.getSelectionModel = this.tableModel.getSelectionModel;
 
     } else if (this.tableOptions?.getSelectionModel) {
-      //  'getSelectionModel' of the tableOptions is more important:
+      // The 'getSelectionModel' method from 'tableOptions' has a higher priority:
       this.getSelectionModel = this.tableOptions.getSelectionModel;
     }
 
