@@ -18,13 +18,18 @@ export class AreaModelObjectyArray<T> extends AbstractAreaModel<T> {
 
   constructor(
     public override areaIdent: AreaIdent,
-    protected readonly rows: T[],
+    protected rows: T[],
     public override defaultRowHeight: number,
     protected override columnDefs: ColumnDefIf[] = []
   ) {
     super(areaIdent, columnDefs, defaultRowHeight);
     this.filteredRows = [...rows];
     this.properties = columnDefs.map(def => def.property);
+  }
+
+  setRows(rows: T[]) {
+    this.rows = rows;
+    this.filteredRows = [...rows];
   }
 
   getRowCount(): number {

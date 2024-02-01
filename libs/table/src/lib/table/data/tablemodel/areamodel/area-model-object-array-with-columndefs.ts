@@ -12,7 +12,7 @@ export class AreaModelObjectArrayWithColumndefs<T> extends AreaModelObjectyArray
 
   constructor(
     public override areaIdent: AreaIdent,
-    protected override readonly rows: T[],
+    protected override rows: T[],
     protected override readonly columnDefs: ColumnDefIf[],
     public override defaultRowHeight: number
   ) {
