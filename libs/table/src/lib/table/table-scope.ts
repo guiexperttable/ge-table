@@ -37,12 +37,30 @@ import { FocusModelIf } from './focus/focus-model.if';
 
 
 /**
- * Creates a TableScope instance.
- * @param {HTMLDivElement} hostElement - The host element.
- * @param {TableModelIf} tableModel - The table model object.
- * @param {TableOptionsIf} [tableOptions=new TableOptions()] - Optional table options object.
- * @param {EventListenerIf} [eventListener=new EventAdapter()] - Optional event listener object.
- * @param {DomServiceIf} [domService=new SimpleDomService()] - Optional DOM service object.
+ * The TableScope class extends the RenderScope class and provides functionality for rendering and interacting with a table.
+ *
+ * @property {LicenseManager} licenseManager - An instance of LicenseManager.
+ * @property {MouseHandler} mouseHandler - An instance of MouseHandler to handle mouse events.
+ * @property {InputHandler} inputHandler - An instance of InputHandler to handle keyboard inputs.
+ * @property {ShortcutService} shortcutService - An instance of ShortcutService to register and handle shortcuts.
+ * @property {StoreStateCollapsedExpandService | undefined} storeStateCollapsedExpandService - A service to manage and restore the collapsed or expanded state of the table's rows.
+ * @property {StoreStateSortingService | undefined} storeSortingService - A service to manage and restore the sort state of the table's columns.
+ * @property {SelectionService} selectionService - An instance of SelectionService to manage cell selection in the table.
+ * @property {GeKeyEvent | undefined} keyEvent - An object representing the last processed keyboard event.
+ * @property {TableApi} api - An instance of TableApi, providing an API for table interactions.
+ *
+ * Additional properties related to the dragging state of the table:
+ * - mouseStartAction: The action performed at the start of a mouse drag operation.
+ * - mouseStartWidth: The initial width of an element at the start of a resizing drag operation.
+ * - mouseStartColumnIndex: The index of the column at the start of a resizing drag operation.
+ * - dragFrom: The initial cell index of a drag operation.
+ * - dragTo: The current cell index of a drag operation.
+ * - lastDragFrom: The previous initial cell index of a drag operation.
+ * - lastDragTo: The previous current cell index of a drag operation.
+ * - firstDraggingRendering: A boolean indicating if this is the first render during the current drag operation.
+ *
+ * Methods: Please refer to the documentation of the superclass RenderScope for the inherited methods.
+ * The TableScope class introduces additional methods not listed here. Please refer to the source code for further details.
  */
 export class TableScope extends RenderScope implements OnActionTriggeredIf {
 

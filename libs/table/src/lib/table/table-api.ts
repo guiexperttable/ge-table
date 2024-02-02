@@ -136,6 +136,20 @@ export class TableApi {
   }
 
 
+
+  /**
+   * Repaints the table scope with hard repaint.
+   * Repaints the UI by resetting the size of the wrapper div,
+   * adjusting the containers and rows, and performing additional adjustments
+   * after scrolling.
+   *
+   * @return {void}
+   */
+  repaintHard() {
+    this.tableScope.repaintHard();
+  }
+
+
   /**
    * Clears the current selection of the table.
    * The table will be rendered automatically.

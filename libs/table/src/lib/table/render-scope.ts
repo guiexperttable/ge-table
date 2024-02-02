@@ -26,6 +26,10 @@ import { TableCellUpdateEventIf } from './data/common/event/input/table-cell-upd
 import { isAreaModelTree, isTreeRow } from './instanceof-workaround';
 
 
+/**
+ * Represents a cell in the ArgsRender.
+ * @interface
+ */
 interface ArgsRenderCell {
   areaModel: AreaModelIf;
   areaIdent: AreaIdent;
@@ -42,6 +46,10 @@ interface ArgsRenderCell {
   gammaRange: boolean;
 }
 
+/**
+ * Represents the arguments passed to the renderHeaderCellResizeHandle method.
+ * @interface
+ */
 interface ArgsRenderHeaderCellResizeHandle {
   rowIndex: number;
   columnIndex: number;
@@ -51,6 +59,9 @@ interface ArgsRenderHeaderCellResizeHandle {
   cellHeight: number;
   parent: HTMLDivElement;
 }
+
+
+
 
 export class RenderScope extends EleScope {
 
@@ -126,6 +137,14 @@ export class RenderScope extends EleScope {
   }
 
 
+  /**
+   * Resets the editor renderer by clearing its values and state.
+   *
+   * @function resetEditorRenderer
+   * @memberof ClassName
+   *
+   * @returns {void}
+   */
   resetEditorRenderer() {
     this.editorRenderer = undefined;
     this.editorRendererRow = -1;
@@ -150,7 +169,12 @@ export class RenderScope extends EleScope {
     }
   }
 
-
+  /**
+   * Initializes and renders the editor for a specified row and column index.
+   *
+   * @param {number} rowIdx - The index of the row.
+   * @param {number} colIdx - The index of the column.
+   */
   initRenderEditor(rowIdx: number, colIdx: number) {
     let rnFn = this.tableModel.getColumnDef(colIdx)?.getEditRenderer;
     if (!rnFn) {
@@ -178,10 +202,33 @@ export class RenderScope extends EleScope {
   }
 
 
+  /**
+   * Adjusts the content after scrolling and initiates a repaint of the component.
+   *
+   * @return {void}
+   */
   repaint() {
     this.adjustAfterScrolling();
   }
 
+
+  /**
+   * Repaints the UI by resetting the size of the wrapper div,
+   * adjusting the containers and rows, and performing additional adjustments
+   * after scrolling.
+   *
+   * @return {void} This method does not return any value.
+   */
+  repaintHard() {
+    this.resetSizeOfWrapperDiv();
+    this.adjustContainersAndRows();
+    this.adjustAfterScrolling();
+  }
+
+  /**
+   * Adjusts the table after scrolling. This method performs various adjustments
+   * to the table's appearance and behavior after a scroll event occurs.
+   */
   override adjustAfterScrolling() {
     for (const cleaning of this.removables) {
       cleaning.remove();
@@ -236,6 +283,11 @@ export class RenderScope extends EleScope {
     }
   }
 
+  /**
+   * Checks if the scroll position should be saved and saves it.
+   *
+   * @return {void}
+   */
   checkForScrollPosSaving() {
     if (this.storeScrollPosStateService
       && this.tableOptions?.autoRestoreOptions?.autoRestoreScrollPosition) {
@@ -243,6 +295,14 @@ export class RenderScope extends EleScope {
     }
   }
 
+  /**
+   * Updates the cells in the table with the provided values and optionally repaints all cells.
+   *
+   * @param {TableCellUpdateEventIf[]} events - The array of events containing information about the cells to update.
+   * @param {boolean} repaintAll - Optional. If true, repaints all cells after updating. Defaults to false.
+   *
+   * @returns {void}
+   */
   updateCells(
     events: TableCellUpdateEventIf[],
     repaintAll: boolean = false) {
@@ -261,6 +321,15 @@ export class RenderScope extends EleScope {
     }
   }
 
+  /**
+   * Rerenders the content of a table cell based on the given parameters.
+   *
+   * @param {TableCellUpdateEventIf} area - The area of the table.
+   * @param {number} rowIndex - The index of the row.
+   * @param {number} columnIndex - The index of the column.
+   * @param {any} value - The new value to be displayed in the cell.
+   * @param {string[]} cssClasses - An array of CSS classes to be applied to the cell.
+   */
   public rerenderCellContent(
     { area, rowIndex, columnIndex, value, cssClasses }: TableCellUpdateEventIf
   ) {
@@ -297,6 +366,13 @@ export class RenderScope extends EleScope {
     }
   }
 
+  /**
+   * Stores the widths of all columns in the table.
+   *
+   * @protected
+   * @function storeColumnWidths
+   * @returns {void}
+   */
   protected storeColumnWidths() {
     const columnDefs = this.tableModel.getColumnDefs();
     if (columnDefs?.length) {
@@ -315,6 +391,15 @@ export class RenderScope extends EleScope {
     return [undefined, undefined];
   }
 
+  /**
+   * Retrieves the specified area from the grid layout.
+   *
+   * @param {string} areaIdent - The identifier for the area ('header', 'body', or 'footer').
+   * @param {string} sideIdent - The identifier for the side of the area ('west', 'center', or 'east').
+   * @protected
+   * @returns {HTMLElement} - The requested area element.
+   * @throws {Error} - If the area identifier or side identifier is incorrect.
+   */
   protected getArea(areaIdent: AreaIdent, sideIdent: SideIdent): DivScope {
     if (areaIdent === 'header') {
       if (sideIdent === 'west') return this.areaHeaderWest;
@@ -332,6 +417,12 @@ export class RenderScope extends EleScope {
     throw Error(`Wrong area identifier: row:${areaIdent}, col:${sideIdent}`);
   }
 
+  /**
+   * Adjusts the body of the table.
+   *
+   * @protected
+   * @return {void}
+   */
   protected adjustBody() {
     const virtualRowDivTopF1 = this.areaBodyCenterGeo.height - this.tableModel.getContentHeightInPixel();
     const virtualRowDivTop = this.scrollFactorY * virtualRowDivTopF1;
@@ -342,6 +433,14 @@ export class RenderScope extends EleScope {
     this.adjustArea('body', virtualRowDivTop);
   }
 
+  /**
+   * Returns a number value extracted from the specified attribute of the source element.
+   *
+   * @param {HTMLElement} srcElement - The source element from which to extract the attribute value.
+   * @param {string} key - The attribute key to extract the value from.
+   * @returns {number} - The extracted number value, or -1 if the attribute was not found or not a valid number.
+   * @protected
+   */
   protected getNumberByAttr(srcElement: HTMLElement, key: string): number {
     if (srcElement) {
       const attr = srcElement.closest('[' + key + ']')?.getAttribute(key);
@@ -350,6 +449,15 @@ export class RenderScope extends EleScope {
     return -1;
   }
 
+
+  /**
+   * Retrieves the value of the specified attribute from the nearest ancestor element that has the attribute.
+   *
+   * @param {HTMLElement} srcElement - The source element from which to start searching for the nearest ancestor element.
+   * @param {string} key - The name of the attribute to retrieve.
+   * @returns {string} The value of the specified attribute, or an empty string if the attribute is not found.
+   * @protected
+   */
   protected getStringByAttr(srcElement: HTMLElement, key: string): string {
     if (srcElement) {
       const attr = srcElement.closest('[' + key + ']')?.getAttribute(key);
@@ -358,6 +466,15 @@ export class RenderScope extends EleScope {
     return '';
   }
 
+
+  /**
+   * Adjusts the layout and positioning of the specified area in the table.
+   * This method is used internally and should not be called directly.
+   *
+   * @param {AreaIdent} areaIdent - The identifier of the area to adjust (e.g. header, body, footer).
+   * @param {number} [yStart=0] - The starting y-position for the layout adjustments.
+   * @protected
+   */
   protected adjustArea(areaIdent: AreaIdent, yStart: number = 0) {
     const westArea = this.getArea(areaIdent, 'west');
     const centerArea = this.getArea(areaIdent, 'center');
@@ -597,6 +714,15 @@ export class RenderScope extends EleScope {
     }
   }
 
+  /**
+   * Finds the row index of an important rowspan cell in a given area model.
+   *
+   * @param {AreaModelIf} areaModel - The area model to search in.
+   * @param {number} rowIndex - The current row index.
+   * @param {number} colIndex - The current column index.
+   * @returns {number} - The row index of the important rowspan cell, or -1 if not found.
+   * @protected
+   */
   protected findRowOfImportantRowspanCell(areaModel: AreaModelIf, rowIndex: number, colIndex: number): number {
     const maxRowspan = areaModel.getMaxRowspan();
     for (let r = rowIndex - 1; r > -1; r--) {
@@ -611,6 +737,13 @@ export class RenderScope extends EleScope {
     return -1;
   }
 
+  /**
+   * Adjusts the columns to fit the width of the row's parent element.
+   *
+   * @param {ArgsAdjustColumnsToRowParentParams} params - The parameters for adjusting the columns.
+   * @protected
+   * @return {void}
+   */
   protected adjustColumnsToRowParent(
     {
       areaIdent,
@@ -728,6 +861,16 @@ export class RenderScope extends EleScope {
     }
   }
 
+
+  /**
+   * Retrieves the column index of the tree arrow column in the table.
+   *
+   * @protected
+   *
+   * @returns {0 | 1} The column index of the tree arrow column.
+   *                Returns 0 if the checkbox is not visible,
+   *                otherwise returns 1.
+   */
   protected getTreeArrowColumnIndex(): 0 | 1 {
     if (this.tableOptions.showCheckboxWihoutExtraColumn) {
       return 0;
@@ -844,6 +987,13 @@ export class RenderScope extends EleScope {
     return [cell, fn];
   }
 
+  /**
+   * Applies CSS classes to an HTML element.
+   *
+   * @param {HTMLDivElement} ele - The HTML element to which CSS classes will be applied.
+   * @param {Object.<string, boolean>} cssClasses - An object containing CSS class names as keys and boolean values indicating whether to apply or remove the class.
+   * @protected
+   */
   protected applyCssClasses(ele: HTMLDivElement, cssClasses: { [key: string]: boolean } = {}) {
     if (ele) {
       Object.entries(cssClasses)
@@ -857,6 +1007,14 @@ export class RenderScope extends EleScope {
     }
   }
 
+  /**
+   * Retrieves the column widths of a table within a specified range.
+   *
+   * @param {number} startIndex - The index of the first column to retrieve the width of.
+   * @param {number} endIndex - The index of the last column to retrieve the width of.
+   *
+   * @return {number[]} An array containing the widths of the columns within the specified range.
+   */
   protected getColumnWidths(startIndex: number, endIndex: number): number[] {
     const ret: number[] = [];
     for (let i = startIndex; i <= endIndex; i++) {
@@ -865,6 +1023,14 @@ export class RenderScope extends EleScope {
     return ret;
   }
 
+  /**
+   * Retrieves the heights of rows within a specified range.
+   *
+   * @param {number} startIndex - The index of the first row in the range.
+   * @param {number} endIndex - The index of the last row in the range.
+   * @param {AreaModelIf} areaModel - The area model.
+   * @return {number[]} - An array containing the heights of the rows within the specified range.
+   */
   protected getRowHeights(startIndex: number, endIndex: number, areaModel: AreaModelIf): number[] {
     const ret: number[] = [];
     for (let i = startIndex; i <= endIndex; i++) {
@@ -873,6 +1039,13 @@ export class RenderScope extends EleScope {
     return ret;
   }
 
+  /**
+   * Adjusts the position and size of the hover row based on the mouse move event.
+   *
+   * @param {GeMouseEvent} mouseMoveEvent - The mouse move event.
+   *
+   * @return {void}
+   */
   protected adjustHoverRows(mouseMoveEvent: GeMouseEvent) {
     if (this.tableOptions.hoverRowVisible && mouseMoveEvent.rowIndex > -1) {
       const width = this.hostElement.clientWidth;
@@ -890,12 +1063,27 @@ export class RenderScope extends EleScope {
     }
   }
 
+  /**
+   * Hides the hover row by applying 'display: none' style to it.
+   *
+   * @protected
+   * @function
+   * @name hideHoverRow
+   * @memberof ClassName
+   *
+   * @returns {void}
+   */
   protected hideHoverRow() {
     this.dom.applyStyle(this.hoverRow, {
       'display': 'none'
     });
   }
 
+  /**
+   * Adjusts the position and size of the hover column based on the mouse move event.
+   *
+   * @param {GeMouseEvent} mouseMoveEvent - The mouse move event object.
+   */
   protected adjustHoverColumns(mouseMoveEvent: GeMouseEvent) {
     if (this.tableOptions.hoverColumnVisible && mouseMoveEvent.rowIndex > -1) {
       const height = this.hostElement.clientHeight;
@@ -915,6 +1103,15 @@ export class RenderScope extends EleScope {
   }
 
 
+  /**
+   * Hide hover column.
+   *
+   * This method hides the hover column by applying a style of 'display: none'
+   * to the element representing the hover column.
+   *
+   * @protected
+   * @memberof ClassName
+   */
   protected hideHoverColumn() {
     this.dom.applyStyle(this.hoverColumn, {
       'display': 'none'
@@ -937,6 +1134,13 @@ export class RenderScope extends EleScope {
   }
 
 
+  /**
+   * Adjusts the dragging column during a mouse move event.
+   *
+   * @param {GeMouseEvent} mouseMoveEvent - The mouse move event.
+   * @param {number} sourceColumnIndex - The index of the source column.
+   * @param {boolean} firstDraggingRendering - Indicates if it's the first rendering of the dragging column.
+   */
   protected adjustDraggingColumn(
     mouseMoveEvent: GeMouseEvent,
     sourceColumnIndex: number,
@@ -967,6 +1171,13 @@ export class RenderScope extends EleScope {
     }
   }
 
+  /**
+   * Renders the content of a dragging column.
+   *
+   * @param {GeoData} columnGeo - The geographic data of the column.
+   *
+   * @returns {number} The y-coordinate of the rendered content.
+   */
   protected renderContentOfDraggingColumn(columnGeo: GeoData) {
     const y = this. renderContentOfDraggingColumnForArea(columnGeo, 'header', 0);
     this. renderContentOfDraggingColumnForArea(columnGeo, 'body', y);
@@ -974,6 +1185,14 @@ export class RenderScope extends EleScope {
     // y = this. renderContentOfDraggingColumnForArea(columnGeo, 'footer', y);
   }
 
+  /**
+   * Renders the content of the dragging column for a specific area.
+   *
+   * @param {GeoData} columnGeo - The geometry data of the dragging column.
+   * @param {AreaIdent} areaIdent - The identifier of the area.
+   * @param {number} [y=0] - The starting y-position.
+   * @return {number} The final y-position after rendering all the content.
+   */
   protected renderContentOfDraggingColumnForArea(
     columnGeo: GeoData,
     areaIdent: AreaIdent,
@@ -1037,6 +1256,12 @@ export class RenderScope extends EleScope {
     return y;
   }
 
+  /**
+   * Hides the dragging column by applying a 'display: none' style to it.
+   * This method is protected and can only be accessed within the class.
+   *
+   * @return {void}
+   */
   protected hideDraggingColumn() {
     this.dom.applyStyle(this.draggingColumn, {
       'display': 'none'
@@ -1044,6 +1269,16 @@ export class RenderScope extends EleScope {
   }
 
 
+  /**
+   * Renders a draggable target div element.
+   *
+   * @param {HTMLDivElement} parent - The parent element where the target div will be appended to.
+   * @param {number} left - The left position of the target div in pixels.
+   * @param {number} top - The top position of the target div in pixels.
+   * @param {number} width - The width of the target div in pixels.
+   * @param {number} height - The height of the target div in pixels.
+   * @return {HTMLDivElement} - The rendered draggable target div element.
+   */
   private renderDragTargetDiv(parent: HTMLDivElement, left: number, top: number, width: number, height: number): HTMLDivElement {
     const div = this.dom.applyStylePosistionAbsolute(
       this.dom.createDivWithClass('ge-table-drop-zone', parent)
@@ -1056,6 +1291,23 @@ export class RenderScope extends EleScope {
   }
 
 
+  /**
+   * Render selected background div.
+   *
+   * @private
+   * @param {boolean} skip - Whether to skip rendering.
+   * @param {boolean} renderSelection - Whether to render the selection.
+   * @param {SideIdent} sideIdent - The side identifier.
+   * @param {AreaModelIf} areaModel - The area model.
+   * @param {number} rowIndex - The row index.
+   * @param {number} index - The index.
+   * @param {HTMLDivElement} parent - The parent div element.
+   * @param {number} left - The left position.
+   * @param {number} top - The top position.
+   * @param {number} width - The width of the div.
+   * @param {number} height - The height of the div.
+   * @returns {boolean} - Whether the cell is selected.
+   */
   private renderSelectedBackgroundDiv(
     skip: boolean,
     renderSelection: boolean,
@@ -1088,6 +1340,25 @@ export class RenderScope extends EleScope {
     return cellSelected;
   }
 
+  /**
+   * Renders a cell in the grid.
+   *
+   * @param {ArgsRenderCell} args - The arguments for rendering the cell.
+   * @param {AreaModel} args.areaModel - The area model of the grid.
+   * @param {string} args.areaIdent - The identifier of the area.
+   * @param {string} args.sideIdent - The identifier of the side.
+   * @param {number} args.rowIndex - The index of the row.
+   * @param {number} args.columnIndex - The index of the column.
+   * @param {number} args.left - The left position of the cell.
+   * @param {number} args.top - The top position of the cell.
+   * @param {number} args.width - The width of the cell.
+   * @param {number} args.height - The height of the cell.
+   * @param {HTMLElement} args.parent - The parent element of the cell.
+   * @param {boolean} args.cellSelected - Indicates if the cell is selected.
+   * @param {boolean} args.lastRowOfModel - Indicates if the cell is in the last row of the model.
+   *
+   * @returns {void}
+   */
   private renderCell(
     {
       areaModel,
@@ -1126,6 +1397,20 @@ export class RenderScope extends EleScope {
   }
 
 
+  /**
+   * Render the header cell resize handle.
+   *
+   * @param {ArgsRenderHeaderCellResizeHandle} args - The arguments for rendering the handle.
+   * @param {number} args.rowIndex - The index of the row.
+   * @param {number} args.columnIndex - The index of the column.
+   * @param {number} args.cellLeft - The left position of the cell.
+   * @param {number} args.cellTop - The top position of the cell.
+   * @param {number} args.cellWidth - The width of the cell.
+   * @param {number} args.cellHeight - The height of the cell.
+   * @param {HTMLElement} args.parent - The parent element to append the handle to.
+   *
+   * @return {void}
+   */
   private renderHeaderCellResizeHandle(
     { rowIndex, columnIndex, cellLeft, cellTop, cellWidth, cellHeight, parent }: ArgsRenderHeaderCellResizeHandle
   ) {

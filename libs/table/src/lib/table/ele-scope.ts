@@ -140,6 +140,11 @@ export class EleScope {
   }
 
 
+  /**
+   * Adjusts the containers and rows of the table based on the current state.
+   *
+   * @return {void}
+   */
   adjustContainersAndRows() {
     const padding = this.tableModel.getPadding();
     const w = this.hostElement.clientWidth;
@@ -277,10 +282,23 @@ export class EleScope {
     this.adjustAfterScrolling();
   }
 
+  /**
+   * Adjusts the position or appearance of elements after scrolling.
+   * This method must be overwritten in child classes.
+   *
+   * @return {void}
+   */
   adjustAfterScrolling() {
     // must be overwritten
   }
 
+  /**
+   * Resets the size of the wrapper div based on the content dimensions.
+   *
+   * @protected
+   *
+   * @returns {void} Returns nothing.
+   */
   protected resetSizeOfWrapperDiv() {
     const w = `${this.tableModel.getContentWidthInPixel()}px`;
     const h = `${this.tableModel.getContentHeightInPixel() + 1}px`; // + 1, we want to see the last horizontal border
