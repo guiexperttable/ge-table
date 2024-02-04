@@ -109,6 +109,7 @@ export * from './lib/table/data/tablemodel/areamodel/area-model-object-array';
 export * from './lib/table/data/tablemodel/areamodel/area-model-tree';
 export * from './lib/table/data/tablemodel/areamodel/col-and-rowspan-model';
 export * from './lib/table/data/tablemodel/areamodel/has-default-row-height-if';
+export * from './lib/table/data/tablemodel/areamodel/object-array-holder.if';
 
 export * from './lib/table/data/common/tree-row';
 export * from './lib/table/data/common/tree-row-if';
@@ -157,6 +158,7 @@ export * from './lib/table/selection/selection-model';
 export * from './lib/table/selection/selection-model.if';
 export * from './lib/table/selection/selection.type';
 export * from './lib/table/selection/selection-service';
+export * from './lib/table/selection/multi-rows-selection-model';
 
 
 export * from './lib/table/color/color-rgb';

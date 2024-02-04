@@ -2,7 +2,7 @@ import {CellRendererIf} from "./cell-render.if";
 import {DomServiceIf} from "../service/dom-service.if";
 import {AreaIdent} from "../data/tablemodel/area-ident.type";
 import {RendererCleanupFnType} from "./renderer-cleanup-fn.type";
-import {AreaModelObjectyArray} from "../data/tablemodel/areamodel/area-model-object-array";
+import {AreaModelObjectArray} from "../data/tablemodel/areamodel/area-model-object-array";
 
 
 export class NumberCellProgressBarCellRenderer<T> implements CellRendererIf {
@@ -18,7 +18,7 @@ export class NumberCellProgressBarCellRenderer<T> implements CellRendererIf {
     rowIndex: number,
     columnIndex: number,
     areaIdent: AreaIdent,
-    _areaModel: AreaModelObjectyArray<T>,
+    _areaModel: AreaModelObjectArray<T>,
     cellValue: number,
     domService: DomServiceIf): RendererCleanupFnType | undefined {
 

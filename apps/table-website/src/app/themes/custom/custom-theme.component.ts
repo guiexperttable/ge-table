@@ -9,7 +9,7 @@ import {
 } from "@angular/core";
 import { OkLch } from "../data/ok-lch";
 import {
-  AreaModelObjectyArray,
+  AreaModelObjectArray,
   CssVars,
   GeFilterService,
   SelectionModel,
@@ -141,7 +141,7 @@ export class CustomThemeComponent implements OnInit, OnDestroy {
   }
 
   selectItems(what: string = "") {
-    const bodyModel = this.tableModel?.getBodyModel() as AreaModelObjectyArray<ThemeRowIf>;
+    const bodyModel = this.tableModel?.getBodyModel() as AreaModelObjectArray<ThemeRowIf>;
     if (bodyModel) {
       const rc = bodyModel.getRowCount();
       for (let i = 0; i < rc; i++) {
@@ -157,7 +157,7 @@ export class CustomThemeComponent implements OnInit, OnDestroy {
   }
 
   unselectItems(what: string = "") {
-    const bodyModel = this.tableModel?.getBodyModel() as AreaModelObjectyArray<ThemeRowIf>;
+    const bodyModel = this.tableModel?.getBodyModel() as AreaModelObjectArray<ThemeRowIf>;
     if (bodyModel) {
       const rc = bodyModel.getRowCount();
       for (let i = 0; i < rc; i++) {
@@ -183,7 +183,7 @@ export class CustomThemeComponent implements OnInit, OnDestroy {
         map[k[0]] = k[1];
       });
 
-      const bodyModel = this.tableModel?.getBodyModel() as AreaModelObjectyArray<ThemeRowIf>;
+      const bodyModel = this.tableModel?.getBodyModel() as AreaModelObjectArray<ThemeRowIf>;
       if (bodyModel) {
         const rc = bodyModel.getRowCount();
         for (let i = 0; i < rc; i++) {
@@ -275,7 +275,7 @@ export class CustomThemeComponent implements OnInit, OnDestroy {
 
   selectVisible() {
     if (this.tableModel) {
-      const m = this.tableModel.getBodyModel() as AreaModelObjectyArray<ThemeRowIf>;
+      const m = this.tableModel.getBodyModel() as AreaModelObjectArray<ThemeRowIf>;
       const rows = m.getFilteredRows();
       for (const row of rows) {
         row.selected = true;
@@ -291,7 +291,7 @@ export class CustomThemeComponent implements OnInit, OnDestroy {
 
   unSelectAll() {
     if (this.tableModel) {
-      const m = this.tableModel.getBodyModel() as AreaModelObjectyArray<ThemeRowIf>;
+      const m = this.tableModel.getBodyModel() as AreaModelObjectArray<ThemeRowIf>;
       const rows = m.getAllRows();
       for (const row of rows) {
         row.selected = false;
@@ -306,7 +306,7 @@ export class CustomThemeComponent implements OnInit, OnDestroy {
 
   exportCss() {
     if (this.tableModel) {
-      const m = this.tableModel.getBodyModel() as AreaModelObjectyArray<ThemeRowIf>;
+      const m = this.tableModel.getBodyModel() as AreaModelObjectArray<ThemeRowIf>;
       const rows = m.getAllRows();
       const buf: string[] = [`.custom-theme {`];
 
@@ -343,7 +343,7 @@ export class CustomThemeComponent implements OnInit, OnDestroy {
 
   protected syncCssVars() {
     if (this.tableModel) {
-      const m = this.tableModel.getBodyModel() as AreaModelObjectyArray<ThemeRowIf>;
+      const m = this.tableModel.getBodyModel() as AreaModelObjectArray<ThemeRowIf>;
       const selectedRows = m.getAllRows().filter(r => r.selected);
       selectedRows.forEach(r => {
         r.value = this.cssString;
@@ -361,7 +361,7 @@ export class CustomThemeComponent implements OnInit, OnDestroy {
 
   protected syncAllCssVarsToPickerTable() {
     if (this.tableModel) {
-      const m = this.tableModel.getBodyModel() as AreaModelObjectyArray<ThemeRowIf>;
+      const m = this.tableModel.getBodyModel() as AreaModelObjectArray<ThemeRowIf>;
       if (this.bigScreen) {
         m.getAllRows().forEach(r => {
           this.guiTable?.style.setProperty(r.id, r.value);
@@ -383,7 +383,7 @@ export class CustomThemeComponent implements OnInit, OnDestroy {
 
   onCheckboxChanged(evt: any[]) {
     if (this.tableModel) {
-      const m = this.tableModel.getBodyModel() as AreaModelObjectyArray<ThemeRowIf>;
+      const m = this.tableModel.getBodyModel() as AreaModelObjectArray<ThemeRowIf>;
       this.selectedCount = m.getAllRows().filter(r => r.selected).length;
       this.cdr.detectChanges();
     }

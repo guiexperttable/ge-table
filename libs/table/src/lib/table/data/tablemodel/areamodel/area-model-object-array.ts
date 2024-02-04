@@ -1,3 +1,4 @@
+/* eslint @typescript-eslint/no-explicit-any: "off" */
 import { AbstractAreaModel } from "./abstract-area-model";
 import { ColumnDefIf } from "../column/column-def.if";
 import { AreaIdent } from "../area-ident.type";
@@ -5,12 +6,15 @@ import { FilterFunction } from "../../common/filter-function";
 import { SorterService } from "../../../service/sorter.service";
 import { SortItem } from "../../common/sort-item";
 import {isTreeRow} from "../../../instanceof-workaround";
+import { ObjectArrayHolderIf } from './object-array-holder.if';
 
 /**
  * Represents an area model defined by an object array.
  * @template T - The type of objects in the array
  */
-export class AreaModelObjectyArray<T> extends AbstractAreaModel<T> {
+export class AreaModelObjectArray<T>
+  extends AbstractAreaModel<T>
+  implements ObjectArrayHolderIf<T> {
 
   protected readonly properties: string[];
   protected filteredRows: T[];
@@ -41,7 +45,7 @@ export class AreaModelObjectyArray<T> extends AbstractAreaModel<T> {
     let t = this.filteredRows[rowIndex];
 
     if (isTreeRow(t)) {
-      // @ts-ignore
+      // @ts-expect-error: we access an unknown property name:
       t = t.data;
     }
     if (t) {
@@ -85,7 +89,7 @@ export class AreaModelObjectyArray<T> extends AbstractAreaModel<T> {
     if (property.includes(".")) {
       return this.getPropertyValue(t, property.split("."));
     }
-    // @ts-ignore
+    // @ts-expect-error: we access an unknown property name:
     return t[property];
   }
 
@@ -105,8 +109,8 @@ export class AreaModelObjectyArray<T> extends AbstractAreaModel<T> {
 
   private getPropertyValue(o: any, props: string[]): any {
     const prop = props.shift();
-    // @ts-ignore
-    let o2 = o[prop];
+    // @ts-expect-error: we access an unknown property name:
+    const o2 = o[prop];
     if (o2 && props.length) {
       return this.getPropertyValue(o2, props);
     }

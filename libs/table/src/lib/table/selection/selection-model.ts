@@ -59,7 +59,28 @@ export class SelectionModel implements SelectionModelIf {
   }
 
   hasSelection(): boolean {
-    return !!this.ranges.length;
+    return this.allSelected || !!this.ranges.length;
+  }
+
+  hasNoSelection(): boolean {
+    return !this.hasSelection();
+  }
+
+  /**
+   * Retrieves the merged row indices from the given range selection.
+   *
+   * @returns {number[]} Array of merged row indices
+   */
+  getMergedRowIndices() : number[] {
+    const mergedRowIndices = new Set<number>();
+    for (const range of this.ranges) {
+      for (let r = range.r1; r <= range.r2; r++) {
+        if (!mergedRowIndices.has(r) && !this.isInNegativeRange(r, 0)) {
+          mergedRowIndices.add(r);
+        }
+      }
+    }
+    return Array.from(mergedRowIndices);
   }
 
   selectAll() {
@@ -99,25 +120,8 @@ export class SelectionModel implements SelectionModelIf {
     return  this.getSelectionCount(row, col) > 0;
   }
 
-  /**
-   * Retrieves the merged row indices from the given range selection.
-   *
-   * @returns {number[]} Array of merged row indices
-   */
-  getMergedRowIndices() : number[] {
-    const mergedRowIndices: number[] = [];
-    for (const range of this.ranges) {
-      for (let r = range.r1; r <= range.r2; r++) {
-        if (!mergedRowIndices.includes(r) && !this.isInNegativeRange(r, 0)) {
-          mergedRowIndices.push(r);
-        }
-      }
-    }
-    return mergedRowIndices;
-  }
 
-
-  private addRange(range: CellRange) {
+  protected addRange(range: CellRange) {
     if (this.selectionType === "none") {
       return; // skip!
     }

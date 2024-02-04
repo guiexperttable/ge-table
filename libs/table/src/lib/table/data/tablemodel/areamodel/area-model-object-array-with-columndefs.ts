@@ -1,4 +1,4 @@
-import { AreaModelObjectyArray } from "./area-model-object-array";
+import { AreaModelObjectArray } from "./area-model-object-array";
 import { ColumnDefIf } from "../column/column-def.if";
 import { AreaIdent } from "../area-ident.type";
 
@@ -7,7 +7,7 @@ import { AreaIdent } from "../area-ident.type";
  *
  * @template T - The type of objects in the array.
  */
-export class AreaModelObjectArrayWithColumndefs<T> extends AreaModelObjectyArray<T> {
+export class AreaModelObjectArrayWithColumndefs<T> extends AreaModelObjectArray<T> {
 
 
   constructor(

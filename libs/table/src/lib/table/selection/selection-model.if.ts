@@ -33,6 +33,8 @@ export interface SelectionModelIf {
 
   hasSelection(): boolean;
 
+  hasNoSelection(): boolean;
+
   addSelection(range: CellRange): void;
 
   removeSelection(range: CellRange): void;

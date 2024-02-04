@@ -1,7 +1,7 @@
 import { ThemeRowIf } from "../data/theme-row.If";
 import {
   AreaIdent,
-  AreaModelObjectyArray,
+  AreaModelObjectArray,
   CellRendererIf,
   DomServiceIf,
   RendererCleanupFnType
@@ -16,7 +16,7 @@ export class CssColorCellRenderer implements CellRendererIf {
     _rowIndex: number,
     _columnIndex: number,
     _areaIdent: AreaIdent,
-    _areaModel: AreaModelObjectyArray<ThemeRowIf>,
+    _areaModel: AreaModelObjectArray<ThemeRowIf>,
     cellValue: any,
     _domService: DomServiceIf): RendererCleanupFnType | undefined {
 
