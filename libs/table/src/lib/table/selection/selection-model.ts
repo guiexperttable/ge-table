@@ -2,6 +2,7 @@ import { CellRange } from "../data/common/cell-range";
 import { ExtendedSelectionType, SelectionMode } from './selection.type';
 import { SelectionModelIf } from "./selection-model.if";
 
+
 export class SelectionModel implements SelectionModelIf {
 
   protected ranges: CellRange[] = [];
@@ -65,6 +66,10 @@ export class SelectionModel implements SelectionModelIf {
     this.allSelected = true;
   }
 
+  isAllSelected() {
+    return this.allSelected;
+  }
+
   addSelection(range: CellRange): void {
     this.addRange(range);
   }
@@ -92,6 +97,23 @@ export class SelectionModel implements SelectionModelIf {
 
   isSelected(row: number, col: number): boolean {
     return  this.getSelectionCount(row, col) > 0;
+  }
+
+  /**
+   * Retrieves the merged row indices from the given range selection.
+   *
+   * @returns {number[]} Array of merged row indices
+   */
+  getMergedRowIndices() : number[] {
+    const mergedRowIndices: number[] = [];
+    for (const range of this.ranges) {
+      for (let r = range.r1; r <= range.r2; r++) {
+        if (!mergedRowIndices.includes(r) && !this.isInNegativeRange(r, 0)) {
+          mergedRowIndices.push(r);
+        }
+      }
+    }
+    return mergedRowIndices;
   }
 
 
