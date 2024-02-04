@@ -29,7 +29,10 @@
 - Copy to clipboard
 - Autorestore: selection, checkboxes, scrollpos(✓), collapsed/expanded(✓)
 - Tooltiplistener
+- typedoc custom css: "typedoc:docs": "npx typedoc --out ../../apps/table-website/src/assets/docs src/index.ts --customCss ./theme/style.css",
+  https://typedoc.org/options/output/
 
+  
 ## Links
 
 - https://angular.io/presskit
@@ -43,3 +46,12 @@
 - https://api.nobelprize.org/v1/prize.json
 - https://api.nobelprize.org/v1/laureate.json
 - https://web-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?limit=100&start=1
+
+
+
+[//]: # (https://gridjs.io/docs/philosophy)
+[//]: # (https://handsontable.com/)
+[//]: # (https://fancygrid.com/)
+[//]: # (https://www.ag-grid.com/)
+[//]: # (https://flatlogic.com/blog/top-19-remarkable-javascript-table-libraries-and-plugins/)
+[//]: # (https://datatables.net/)

@@ -4,12 +4,13 @@ import {TableCellUpdateEventIf} from "./data/common/event/input/table-cell-updat
 import { SelectionModel } from './selection/selection-model';
 import { ActionId } from './action/action-id.type';
 import { ShortcutActionIdMapping } from './action/shortcut-actionid-mapping.type';
+import { SelectionModelIf } from './selection/selection-model.if';
 
 
 export class TableApi {
 
   constructor(
-    private readonly tableScope: TableScope
+    public readonly tableScope: TableScope
   ) {
   }
 
@@ -207,6 +208,25 @@ export class TableApi {
       this.tableScope.selectionModel(),
       this.tableScope.focusModel()
     );
+  }
+
+  /**
+   * Retrieves the current scope of the table.
+   *
+   * @returns {TableScope} The current scope of the table.
+   */
+  getTableScope(): TableScope {
+    return this.tableScope;
+  }
+
+  /**
+   * Retrieves the selection model of the table.
+   *
+   * @return {SelectionModelIf | undefined} The selection model of the table,
+   * or undefined if no selection model is available.
+   */
+  getSelectionModel(): SelectionModelIf | undefined {
+    return this.tableScope.selectionModel();
   }
 
 
