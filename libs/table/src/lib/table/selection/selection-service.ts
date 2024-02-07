@@ -39,6 +39,7 @@ export class SelectionService implements OnActionTriggeredIf {
         // Focus:
         if (!fm.hasFocus(evt.rowIndex, evt.columnIndex)) {
           fm.setFocus(evt.rowIndex, evt.columnIndex);
+          this.tableScope.onFocusChanged(fm);
           dirty = true;
         }
 
@@ -71,6 +72,7 @@ export class SelectionService implements OnActionTriggeredIf {
           sm.firstClick(evt.rowIndex, evt.columnIndex);
           dirty = true;
         }
+        this.tableScope.onSelectionChanged(sm);
       }
     }
     if (deletePreviousEvent) {

@@ -1,3 +1,5 @@
+/* eslint @typescript-eslint/no-explicit-any: "off" */
+
 import { TableModelIf } from './data/tablemodel/table-model.if';
 import { AreaIdent } from './data/tablemodel/area-ident.type';
 import { GeMouseEvent } from './data/common/event/ge-mouse-event';
@@ -133,6 +135,7 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
    * @param {TableOptionsIf} [tableOptions=new TableOptions()] - The optional table options object.
    * @param {EventListenerIf} [eventListener=new EventAdapter()] - The optional event listener object.
    * @param {DomServiceIf} [domService=new SimpleDomService()] - The optional DOM service object.
+   * @param {CopyServiceIf} [copyService=new CopyService()] - The optional copy service object.
    *
    * @return {TableScope} - The newly created TableScope instance.
    */
@@ -463,6 +466,14 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
     this.eventListener.onMouseClicked(evt);
   }
 
+  onFocusChanged(sm: FocusModelIf) {
+    this.eventListener.onFocusChanged(sm);
+  }
+
+  onSelectionChanged(sm: SelectionModelIf) {
+    this.eventListener.onSelectionChanged(sm);
+  }
+
 
   /**
    * Updates the table (repaint) when an external filter is changed.
@@ -777,6 +788,8 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
       }
     }
   }
+
+
 }
 
 

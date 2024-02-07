@@ -31,7 +31,7 @@ export class StoreStateSortingService extends AbstractStoreStateService {
       if (key) {
         // A main key is given by function from options
         const subKey = key + this.SORTING_STATE;
-        let sortItems = this.loadFromLocalStorage<SortItem[]>(subKey);
+        const sortItems = this.loadFromLocalStorage<SortItem[]>(subKey);
         this.sortItems = sortItems ? sortItems : [];
       }
     }

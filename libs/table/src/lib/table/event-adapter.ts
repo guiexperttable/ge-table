@@ -1,6 +1,8 @@
 import { GeModelChangeEvent } from "./data/common/event/ge-model-change-event";
 import { GeMouseEvent } from "./data/common/event/ge-mouse-event";
 import { EventListenerIf } from "./event-listener.if";
+import { SelectionModelIf } from './selection/selection-model.if';
+import { FocusModelIf } from './focus/focus-model.if';
 
 /**
  * EventAdapter class implements the EventListenerIf interface.
@@ -30,6 +32,12 @@ export class EventAdapter implements EventListenerIf {
   }
 
   onMouseMoved(_evt: GeMouseEvent): void {
+  }
+
+  onSelectionChanged(_model: SelectionModelIf): void {
+  }
+
+  onFocusChanged(_model: FocusModelIf): void {
   }
 
 }
