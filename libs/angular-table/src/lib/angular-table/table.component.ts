@@ -13,9 +13,9 @@ import {
 import { CommonModule } from "@angular/common";
 import { debounceTime, Subject, takeWhile } from "rxjs";
 import {
-  EventListenerIf,
+  EventListenerIf, FocusModelIf,
   GeModelChangeEvent,
-  GeMouseEvent, LicenseManager,
+  GeMouseEvent, LicenseManager, SelectionModelIf,
   TableApi,
   TableModelIf,
   TableOptions,
@@ -68,6 +68,8 @@ import { DomService } from "./service/dom-service";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TableComponent implements OnInit, OnDestroy, EventListenerIf {
+
+
 
   /**
    * Set the license key for the LicenseManager.
@@ -145,6 +147,13 @@ export class TableComponent implements OnInit, OnDestroy, EventListenerIf {
   @Output()
   modelChanged: Subject<GeModelChangeEvent> = new Subject<GeModelChangeEvent>();
 
+
+  @Output()
+  selectionChanged: Subject<SelectionModelIf> = new Subject<SelectionModelIf>();
+
+  @Output()
+  focusChanged: Subject<FocusModelIf> = new Subject<FocusModelIf>();
+
   /**
    * Represents a Subject that emits an array of any type when a checkbox is changed.
    *
@@ -209,6 +218,14 @@ export class TableComponent implements OnInit, OnDestroy, EventListenerIf {
   ) {
   }
 
+
+  onSelectionChanged(model: SelectionModelIf): void {
+    this.selectionChanged.next(model);
+  }
+
+  onFocusChanged(model: FocusModelIf): void {
+    this.focusChanged.next(model);
+  }
 
   onContextmenu(evt: GeMouseEvent): void {
     this.contextmenu.next(evt);
