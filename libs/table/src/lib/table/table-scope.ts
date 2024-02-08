@@ -466,11 +466,13 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
     this.eventListener.onMouseClicked(evt);
   }
 
-  onFocusChanged(sm: FocusModelIf) {
+  onFocusChanged(sm: FocusModelIf) { // TODO hier gehts weiter
+    console.info('onFocusChanged tables-scope'); // TODO del
     this.eventListener.onFocusChanged(sm);
   }
 
   onSelectionChanged(sm: SelectionModelIf) {
+    console.info('onSelectionChanged tables-scope'); // TODO del
     this.eventListener.onSelectionChanged(sm);
   }
 

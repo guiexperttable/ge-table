@@ -224,6 +224,7 @@ export class TableComponent implements OnInit, OnDestroy, EventListenerIf {
   }
 
   onFocusChanged(model: FocusModelIf): void {
+    console.info('onFocusChanged in angular component.'); // TODO delete
     this.focusChanged.next(model);
   }
 

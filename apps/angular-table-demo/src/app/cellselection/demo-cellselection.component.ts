@@ -1,7 +1,8 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, NgZone } from '@angular/core';
 import {
+  FocusModelIf,
   SelectionMode,
-  SelectionModel,
+  SelectionModel, SelectionModelIf,
   SelectionType,
   ShortcutActionIdMapping,
   TableApi,
@@ -47,6 +48,14 @@ export class DemoCellselectionComponent {
 
   onTableReady($event: TableApi) {
     this.tableApi = $event;
+  }
+
+  onSelectionChanged(model: SelectionModelIf) {
+    console.info('selectionChanged', model);
+  }
+
+  onFocusChanged(model: FocusModelIf) {
+    console.info('focusChanged', model);
   }
 
   clearSelection() {

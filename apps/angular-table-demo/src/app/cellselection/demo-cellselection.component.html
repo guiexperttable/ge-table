@@ -24,7 +24,8 @@
 
 <guiexpert-table
   (tableReady)="onTableReady($event)"
-
+  (selectionChanged)="onSelectionChanged($event)"
+  (focusChanged)="onFocusChanged($event)"
   *ngIf="tableModel"
   [tableModel]="tableModel"
   [tableOptions]="tableOptions"
