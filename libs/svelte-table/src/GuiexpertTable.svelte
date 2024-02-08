@@ -1,6 +1,6 @@
 <script lang="ts">
   import { createEventDispatcher, onMount } from 'svelte';
-  import { LicenseManager, SimpleDomService, TableOptions, TableScope } from '../../table/src'; // "@guiexpert/table";
+  import { EventListenerIf, FocusModelIf, LicenseManager, SelectionModelIf, SimpleDomService, TableOptions, TableScope } from '../../table/src'; // "@guiexpert/table";
 
   export let tableModel: any;
   export let tableOptions = new TableOptions();
@@ -11,7 +11,13 @@
 
   onMount(() => {
 
-    const listener = {
+    const listener: EventListenerIf = {
+      onSelectionChanged(model: SelectionModelIf): void {
+        dispatch('selectionChanged', model);
+      },
+      onFocusChanged(model: FocusModelIf): void{
+        dispatch('focusChanged', model);
+      },
       onCheckboxChanged: (evt: any) => {
         dispatch('checkboxChanged', evt);
       },

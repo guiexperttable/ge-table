@@ -1,18 +1,22 @@
 import {
+  EventListenerIf,
+  FocusModelIf,
   GeModelChangeEvent,
-  GeMouseEvent, LicenseManager,
+  GeMouseEvent, LicenseManager, SelectionModelIf,
   SimpleDomService,
   TableApi,
   TableModelIf,
   TableOptions,
   TableScope
 } from '@guiexpert/table';
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 export type GeMouseEventFn = (evt: GeMouseEvent) => {};
 export type GeCheckboxEventFn = (evt: any[]) => {};
 export type GeTableReadyEventFn = (evt: TableApi) => {};
 export type GeModelChangeEventFn = (evt: GeModelChangeEvent) => {};
+export type GeSelectionChangeEventFn = (evt: SelectionModelIf) => {};
+export type GeFocusChangeEventFn = (evt: FocusModelIf) => {};
 
 export interface GuiexpertTableProps {
   tableModel: TableModelIf,
@@ -24,6 +28,8 @@ export interface GuiexpertTableProps {
   mouseDraggingEnd?: GeMouseEventFn,
   checkboxChanged?: GeCheckboxEventFn,
   modelChanged?: GeModelChangeEventFn,
+  selectionChanged?: GeSelectionChangeEventFn;
+  focusChanged?: GeFocusChangeEventFn;
   tableReady?: GeTableReadyEventFn,
   licenseKey?: string,
 }
@@ -57,6 +63,8 @@ export function GuiexpertTable(
     mouseClicked,
     mouseDragging,
     mouseDraggingEnd,
+    selectionChanged,
+    focusChanged,
     tableReady,
     licenseKey
   }: GuiexpertTableProps) {
@@ -74,7 +82,20 @@ export function GuiexpertTable(
   let root: HTMLDivElement | null;
 
   const initTable = (ele: HTMLDivElement) => {
-    const listener = {
+    const listener: EventListenerIf = {
+
+      onSelectionChanged(model: SelectionModelIf): void {
+        if (selectionChanged) {
+          selectionChanged(model);
+        }
+      },
+
+      onFocusChanged(model: FocusModelIf): void{
+        if (focusChanged) {
+          focusChanged(model);
+        }
+      },
+
       onCheckboxChanged: (evt: any[]) => {
         if (checkboxChanged) {
           checkboxChanged(evt);

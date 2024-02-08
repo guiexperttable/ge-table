@@ -1,6 +1,14 @@
 import {GuiexpertTableProps} from "./GuiexpertTableProps";
 import {mergeProps, onMount} from "solid-js";
-import { LicenseManager, SimpleDomService, TableOptions, TableScope } from '@guiexpert/table';
+import {
+  EventListenerIf,
+  FocusModelIf,
+  LicenseManager,
+  SelectionModelIf,
+  SimpleDomService,
+  TableOptions,
+  TableScope
+} from '@guiexpert/table';
 
 
 
@@ -21,7 +29,17 @@ export default (props: GuiexpertTableProps) => {
 
 
   onMount(() => {
-    const listener = {
+    const listener: EventListenerIf = {
+      onSelectionChanged(model: SelectionModelIf): void {
+        const e = new CustomEvent("selectionChanged", { detail: model, bubbles: true });
+        if (ref) ref.dispatchEvent(e);
+      },
+
+      onFocusChanged(model: FocusModelIf): void{
+        const e = new CustomEvent("focusChanged", { detail: model, bubbles: true });
+        if (ref) ref.dispatchEvent(e);
+      },
+
       onCheckboxChanged: (evt: any) => {
         const e = new CustomEvent("checkboxChanged", { detail: evt, bubbles: true });
         if (ref) ref.dispatchEvent(e);

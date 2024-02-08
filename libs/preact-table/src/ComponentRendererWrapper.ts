@@ -6,7 +6,6 @@ export class ComponentRendererWrapper implements CellRendererIf {
 
   constructor(
     private readonly Component: any
-    //private readonly appContext: AppContext | null
   ) {
     console.info(Component);
   }

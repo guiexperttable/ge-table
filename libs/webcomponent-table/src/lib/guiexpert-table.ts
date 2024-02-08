@@ -1,6 +1,7 @@
 import {
+  EventListenerIf, FocusModelIf,
   GeModelChangeEvent,
-  GeMouseEvent, LicenseManager,
+  GeMouseEvent, LicenseManager, SelectionModelIf,
   SimpleDomService,
   TableModelAndOptionsIf,
   TableScope
@@ -40,7 +41,17 @@ export class GuiexpertTable extends HTMLElement {
     const domService = new SimpleDomService();
     if (tableModel) {
 
-      const listener = {
+      const listener: EventListenerIf = {
+        onSelectionChanged(model: SelectionModelIf): void {
+          const e = new CustomEvent("selectionChanged", { detail: model, bubbles: true });
+          ele.dispatchEvent(e);
+        },
+
+        onFocusChanged(model: FocusModelIf): void{
+          const e = new CustomEvent("focusChanged", { detail: model, bubbles: true });
+          ele.dispatchEvent(e);
+        },
+
         onCheckboxChanged: (evt: any[]) => {
           const e = new CustomEvent("checkboxChanged", { detail: evt, bubbles: true });
           ele.dispatchEvent(e);

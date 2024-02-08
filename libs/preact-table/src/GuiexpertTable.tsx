@@ -1,7 +1,8 @@
 import { Component, createRef } from "preact";
 import {
+  EventListenerIf, FocusModelIf,
   GeModelChangeEvent,
-  GeMouseEvent, LicenseManager,
+  GeMouseEvent, LicenseManager, SelectionModelIf,
   SimpleDomService, TableApi,
   TableModelIf,
   TableOptions,
@@ -12,6 +13,8 @@ export type GeMouseEventFn = (evt: GeMouseEvent) => {};
 export type GeCheckboxEventFn = (evt: any[]) => {};
 export type GeTableReadyEventFn = (evt: TableApi) => {};
 export type GeModelChangeEventFn = (evt: GeModelChangeEvent) => {};
+export type GeSelectionChangeEventFn = (evt: SelectionModelIf) => {};
+export type GeFocusChangeEventFn = (evt: FocusModelIf) => {};
 
 
 export interface GuiexpertTableProps {
@@ -26,6 +29,8 @@ export interface GuiexpertTableProps {
   modelChanged?: GeModelChangeEventFn,
   tableReady?: GeTableReadyEventFn,
   licenseKey?: string,
+  selectionChanged?: GeSelectionChangeEventFn;
+  focusChanged?: GeFocusChangeEventFn;
 }
 
 
@@ -50,7 +55,21 @@ export class GuiexpertTable extends Component<GuiexpertTableProps>  {
   }
 
   initTable(ele: HTMLDivElement, props: GuiexpertTableProps) {
-    const listener = {
+    const listener: EventListenerIf = {
+
+      onSelectionChanged(model: SelectionModelIf): void {
+        if (props.selectionChanged) {
+          props.selectionChanged(model);
+        }
+      },
+
+      onFocusChanged(model: FocusModelIf): void{
+        if (props.focusChanged) {
+          props.focusChanged(model);
+        }
+      },
+
+
       onCheckboxChanged: (evt: any[]) => {
         if (props.checkboxChanged) {
           props.checkboxChanged(evt);

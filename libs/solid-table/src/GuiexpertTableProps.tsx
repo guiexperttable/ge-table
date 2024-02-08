@@ -1,12 +1,15 @@
 
 import {
-  GeModelChangeEvent, GeMouseEvent, TableApi, TableModelIf, TableOptions
-} from "@guiexpert/table";
+  FocusModelIf,
+  GeModelChangeEvent, GeMouseEvent, SelectionModelIf, TableApi, TableModelIf, TableOptions
+} from '@guiexpert/table';
 
 export type GeMouseEventFn = (evt: GeMouseEvent) => {};
 export type GeCheckboxEventFn = (evt: any[]) => {};
 export type GeTableReadyEventFn = (evt: TableApi) => {};
 export type GeModelChangeEventFn = (evt: GeModelChangeEvent) => {};
+export type GeSelectionChangeEventFn = (evt: SelectionModelIf) => {};
+export type GeFocusChangeEventFn = (evt: FocusModelIf) => {};
 
 export interface GuiexpertTableProps {
   tableModel: TableModelIf,
@@ -18,6 +21,8 @@ export interface GuiexpertTableProps {
   mouseDraggingEnd?: GeMouseEventFn,
   checkboxChanged?: GeCheckboxEventFn,
   modelChanged?: GeModelChangeEventFn,
+  selectionChanged?: GeSelectionChangeEventFn;
+  focusChanged?: GeFocusChangeEventFn;
   tableReady?: GeTableReadyEventFn,
   licenseKey?: string,
 }

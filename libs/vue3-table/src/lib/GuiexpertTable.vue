@@ -8,9 +8,10 @@
 
 <script lang="ts">
 import {
+  FocusModelIf,
   GeModelChangeEvent,
   GeMouseEvent,
-  LicenseManager,
+  LicenseManager, SelectionModelIf,
   SimpleDomService,
   TableOptions,
   TableScope
@@ -44,6 +45,8 @@ export default defineComponent({
     "checkboxChanged",
     "contextmenu",
     "modelChanged",
+    "focusChanged",
+    "selectionChanged",
     "mouseDraggingEnd",
     "mouseMoved"
   ],
@@ -54,6 +57,14 @@ export default defineComponent({
     const initTable = (ele: HTMLDivElement) => {
 
       const listener = {
+
+        onSelectionChanged: (evt: SelectionModelIf) => {
+          emit("selectionChanged", evt);
+        },
+
+        onFocusChanged: (evt: FocusModelIf) => {
+          emit("focusChanged", evt);
+        },
 
         onCheckboxChanged: (evt: any[]) => {
           emit("checkboxChanged", evt);
