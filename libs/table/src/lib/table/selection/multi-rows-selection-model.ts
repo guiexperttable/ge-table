@@ -59,7 +59,45 @@ export class MultiRowsSelectionModel<T> extends SelectionModel {
       this.selectAll();
 
     } else {
-      this.toggleSelection();
+      const arr = this.model.getAllRows();
+      this.silent = true;
+      for (let i = 0; i < arr.length; i++) {
+        this.toggleRow(i);
+      }
+      this.silent = false;
+      this.fireChangeEvent();
+    }
+  }
+
+  /**
+   * Toggles the selection of filtered rows.
+   * If all rows are currently selected, clears the selection.
+   * If no rows are currently selected, selects all filtered rows.
+   * Otherwise, toggles the selection of all filtered rows.
+   *
+   * @return {void}
+   */
+  toggleFilteredRowsSelection() {
+    if (this.isAllSelected()) {
+      this.clear();
+
+    } else if (this.hasNoSelection()) {
+      const arr = this.model.getFilteredRows();
+      this.silent = true;
+      for (let i = 0; i < arr.length; i++) {
+        this.selectRow(i);
+      }
+      this.silent = false;
+      this.fireChangeEvent();
+
+    } else {
+      const arr = this.model.getFilteredRows();
+      this.silent = true;
+      for (let i = 0; i < arr.length; i++) {
+        this.toggleRow(i);
+      }
+      this.silent = false;
+      this.fireChangeEvent();
     }
   }
 

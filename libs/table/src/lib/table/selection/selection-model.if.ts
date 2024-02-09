@@ -1,6 +1,13 @@
 import { CellRange } from "../data/common/cell-range";
+import { EventSelectionChangedListenerIf } from './event-selection-changed-listener.if';
 
 export interface SelectionModelIf {
+
+  getEventSelectionChangedListeners(): EventSelectionChangedListenerIf[];
+  addEventSelectionChangedListener(listener: EventSelectionChangedListenerIf): void;
+  removeEventSelectionChangedListener(listener: EventSelectionChangedListenerIf): void;
+
+
 
   /**
    * Toggles the selection state of a point at the specified row and column in a grid.

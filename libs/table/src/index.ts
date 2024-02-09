@@ -10,6 +10,8 @@ export * from './lib/table/input-handler';
 export * from './lib/table/event-listener.if';
 export * from './lib/table/event-adapter';
 export * from './lib/table/css-vars';
+export * from './lib/table/selection/event-selection-changed-listener.if';
+export * from './lib/table/focus/event-focus-changed-listener.if';
 
 export * from './lib/table/factory/tree-factory';
 export * from './lib/table/factory/table-factory';

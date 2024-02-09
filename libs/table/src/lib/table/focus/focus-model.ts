@@ -1,5 +1,6 @@
 import { FocusType } from "./focus.type";
 import { FocusModelIf } from "./focus-model.if";
+import { EventFocusChangedListenerIf } from './event-focus-changed-listener.if';
 
 export class FocusModel implements FocusModelIf {
 
@@ -7,9 +8,32 @@ export class FocusModel implements FocusModelIf {
   protected columnIndex: number = -1;
   protected changed = false;
 
+  private listenerArr: EventFocusChangedListenerIf[] = [];
+
   constructor(
     public selectionType: FocusType = "none"
   ) {
+  }
+
+  getEventFocusChangedListeners(): EventFocusChangedListenerIf[]{
+    return this.listenerArr;
+  }
+
+  addEventFocusChangedListener(listener: EventFocusChangedListenerIf): void {
+    if (!this.listenerArr.includes(listener)) {
+      this.listenerArr.push(listener);
+    }
+  }
+
+  removeEventFocusChangedListener(listener: EventFocusChangedListenerIf): void {
+    const index = this.listenerArr.indexOf(listener, 0);
+    if (index > -1) {
+      this.listenerArr.splice(index, 1);
+    }
+  }
+
+  fireChangeEvent() {
+    this.listenerArr.forEach(l => l.onFocusChanged(this));
   }
 
   clearChanged(): void {
@@ -23,6 +47,7 @@ export class FocusModel implements FocusModelIf {
   clear(): void {
     this.rowIndex = -1;
     this.columnIndex = -1;
+    this.fireChangeEvent();
   }
 
 
@@ -34,6 +59,7 @@ export class FocusModel implements FocusModelIf {
       this.rowIndex = rowIndex;
       this.columnIndex = columnIndex;
       this.changed = true;
+      this.fireChangeEvent();
     }
   }
 

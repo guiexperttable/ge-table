@@ -1,6 +1,7 @@
 import { CellRange } from "../data/common/cell-range";
 import { ExtendedSelectionType, SelectionMode } from './selection.type';
 import { SelectionModelIf } from "./selection-model.if";
+import { EventSelectionChangedListenerIf } from './event-selection-changed-listener.if';
 
 
 export class SelectionModel implements SelectionModelIf {
@@ -9,10 +10,37 @@ export class SelectionModel implements SelectionModelIf {
   protected negativeRanges: CellRange[] = [];
   protected allSelected: boolean = false;
 
+  protected silent = false;
+
+  private listenerArr: EventSelectionChangedListenerIf[] = [];
+
   constructor(
     public selectionType: ExtendedSelectionType = "none",
     public selectionMode: SelectionMode = "single"
   ) {
+  }
+
+  getEventSelectionChangedListeners(): EventSelectionChangedListenerIf[]{
+    return this.listenerArr;
+  }
+
+  addEventSelectionChangedListener(listener: EventSelectionChangedListenerIf): void {
+    if (!this.listenerArr.includes(listener)) {
+      this.listenerArr.push(listener);
+    }
+  }
+
+  removeEventSelectionChangedListener(listener: EventSelectionChangedListenerIf): void {
+    const index = this.listenerArr.indexOf(listener, 0);
+    if (index > -1) {
+      this.listenerArr.splice(index, 1);
+    }
+  }
+
+  fireChangeEvent() {
+    if (!this.silent) {
+      this.listenerArr.forEach(l => l.onSelectionChanged(this));
+    }
   }
 
   firstClick(rowIndex: number, columnIndex: number): void {
@@ -56,6 +84,7 @@ export class SelectionModel implements SelectionModelIf {
     this.ranges = [];
     this.negativeRanges = [];
     this.allSelected = false;
+    this.fireChangeEvent();
   }
 
   hasSelection(): boolean {
@@ -85,6 +114,7 @@ export class SelectionModel implements SelectionModelIf {
 
   selectAll() {
     this.allSelected = true;
+    this.fireChangeEvent();
   }
 
   isAllSelected() {
@@ -93,6 +123,7 @@ export class SelectionModel implements SelectionModelIf {
 
   addSelection(range: CellRange): void {
     this.addRange(range);
+    this.fireChangeEvent();
   }
 
   removeSelection(range: CellRange): void {
@@ -106,6 +137,7 @@ export class SelectionModel implements SelectionModelIf {
       r = CellRange.singleColumn(range.c1);
     }
     this.negativeRanges.push(r);
+    this.fireChangeEvent();
   }
 
   togglePoint(row: number, col: number): void {
@@ -142,6 +174,7 @@ export class SelectionModel implements SelectionModelIf {
       //
     }
     this.ranges.push(range);
+    this.fireChangeEvent();
   }
 
 }

@@ -1,4 +1,10 @@
+import { EventFocusChangedListenerIf } from './event-focus-changed-listener.if';
+
 export interface FocusModelIf {
+
+  getEventFocusChangedListeners(): EventFocusChangedListenerIf[];
+  addEventFocusChangedListener(listener: EventFocusChangedListenerIf): void;
+  removeEventFocusChangedListener(listener: EventFocusChangedListenerIf): void;
 
   clear(): void;
 

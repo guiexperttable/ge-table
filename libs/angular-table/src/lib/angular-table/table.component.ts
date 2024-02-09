@@ -220,6 +220,7 @@ export class TableComponent implements OnInit, OnDestroy, EventListenerIf {
 
 
   onSelectionChanged(model: SelectionModelIf): void {
+    console.info('onSelectionChanged in angular component.'); // TODO delete
     this.selectionChanged.next(model);
   }
 

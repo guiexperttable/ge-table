@@ -36,6 +36,8 @@ import { MouseTargetData } from './data/event/mouse-target-data';
 import { AreaModelCellGroups } from './data/tablemodel/areamodel/area-model-cell-groups';
 import { SelectionModelIf } from './selection/selection-model.if';
 import { FocusModelIf } from './focus/focus-model.if';
+import { EventFocusChangedListenerIf } from './focus/event-focus-changed-listener.if';
+import { EventSelectionChangedListenerIf } from './selection/event-selection-changed-listener.if';
 
 
 /**
@@ -64,7 +66,7 @@ import { FocusModelIf } from './focus/focus-model.if';
  * Methods: Please refer to the documentation of the superclass RenderScope for the inherited methods.
  * The TableScope class introduces additional methods not listed here. Please refer to the source code for further details.
  */
-export class TableScope extends RenderScope implements OnActionTriggeredIf {
+export class TableScope extends RenderScope implements OnActionTriggeredIf, EventFocusChangedListenerIf, EventSelectionChangedListenerIf {
 
   public licenseManager = LicenseManager.getInstance();
   public mouseHandler: MouseHandler;
@@ -88,20 +90,8 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
   private lastDragTo = -1;
   private firstDraggingRendering = true;
 
-  constructor(
-    hostElement: HTMLDivElement,
-    tableModel: TableModelIf,
-    domService: DomServiceIf,
-    tableOptions: TableOptionsIf,
-    protected readonly eventListener: EventListenerIf,
-    public readonly copyService: CopyServiceIf = new CopyService()
-  ) {
-    super(
-      hostElement,
-      tableModel,
-      new ConvenienceDomService(domService),
-      tableOptions
-    );
+  constructor(hostElement: HTMLDivElement, tableModel: TableModelIf, domService: DomServiceIf, tableOptions: TableOptionsIf, protected readonly eventListener: EventListenerIf, public readonly copyService: CopyServiceIf = new CopyService()) {
+    super(hostElement, tableModel, new ConvenienceDomService(domService), tableOptions);
     if (!eventListener) {
       this.eventListener = new EventAdapter();
     }
@@ -125,6 +115,15 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
 
     this.shortcutService = new ShortcutService(this);
     this.shortcutService.addListener(this.selectionService);
+
+    const sm = this.getSelectionModel ? this.getSelectionModel() : undefined;
+    if (sm) {
+      sm.addEventSelectionChangedListener(this);
+    }
+    const fm = this.getFocusModel ? this.getFocusModel() : undefined;
+    if (fm) {
+      fm.addEventFocusChangedListener(this);
+    }
   }
 
   /**
@@ -139,22 +138,8 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
    *
    * @return {TableScope} - The newly created TableScope instance.
    */
-  static create(
-    hostElement: HTMLDivElement,
-    tableModel: TableModelIf,
-    tableOptions: TableOptionsIf = new TableOptions(),
-    eventListener: EventListenerIf = new EventAdapter(),
-    domService: DomServiceIf = new SimpleDomService(),
-    copyService: CopyServiceIf = new CopyService()
-  ): TableScope {
-    return new TableScope(
-      hostElement,
-      tableModel,
-      domService,
-      tableOptions,
-      eventListener,
-      copyService
-    );
+  static create(hostElement: HTMLDivElement, tableModel: TableModelIf, tableOptions: TableOptionsIf = new TableOptions(), eventListener: EventListenerIf = new EventAdapter(), domService: DomServiceIf = new SimpleDomService(), copyService: CopyServiceIf = new CopyService()): TableScope {
+    return new TableScope(hostElement, tableModel, domService, tableOptions, eventListener, copyService);
   }
 
   /**
@@ -295,9 +280,7 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
    * @return {void}
    */
   onMouseDown(mouseEvent: GeMouseEvent) {
-    if (mouseEvent.columnIndex > -1
-      && mouseEvent.action
-      && ['resize-column', 'drag-column'].includes(mouseEvent.action)) {
+    if (mouseEvent.columnIndex > -1 && mouseEvent.action && ['resize-column', 'drag-column'].includes(mouseEvent.action)) {
 
       this.mouseStartWidth = this.tableModel.getColumnWidth(mouseEvent.columnIndex);
       this.mouseStartAction = mouseEvent.action;
@@ -316,26 +299,20 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
    * @param {GeMouseEvent} mouseEvent - The mouse event object.
    * @param startMouseEvent
    */
-  mouseDraggingOnFrame(mouseEvent: GeMouseEvent, startMouseEvent: GeMouseEvent|undefined) {
+  mouseDraggingOnFrame(mouseEvent: GeMouseEvent, startMouseEvent: GeMouseEvent | undefined) {
     this.eventListener.onMouseDragging(mouseEvent);
     this.mouseEvent = mouseEvent;
 
-    if (
-      this.mouseStartColumnIndex > -1
-      && this.mouseStartAction === 'resize-column'
-      && this.tableOptions.columnsResizable) {
+    if (this.mouseStartColumnIndex > -1 && this.mouseStartAction === 'resize-column' && this.tableOptions.columnsResizable) {
       this.resizeColumn(mouseEvent);
 
-    } else if (
-      this.mouseStartAction === 'drag-column'
-      && mouseEvent.columnIndex > -1
-      && this.tableOptions.columnsDraggable) {
+    } else if (this.mouseStartAction === 'drag-column' && mouseEvent.columnIndex > -1 && this.tableOptions.columnsDraggable) {
 
       this.draggingTargetColumnIndex = mouseEvent.columnIndex;
       this.dragTo = this.draggingTargetColumnIndex;
 
       if (this.dragFrom > -1 && this.dragTo > -1 && this.dragFrom !== this.dragTo) {
-        if (!(this.lastDragFrom === this.dragTo && this.lastDragTo === this.dragFrom)){
+        if (!(this.lastDragFrom === this.dragTo && this.lastDragTo === this.dragFrom)) {
           this.tableModel.changeColumnOrder(this.dragFrom, this.dragTo);
           this.lastDragFrom = this.dragFrom;
           this.lastDragTo = this.dragTo;
@@ -466,15 +443,59 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
     this.eventListener.onMouseClicked(evt);
   }
 
-  onFocusChanged(sm: FocusModelIf) { // TODO hier gehts weiter
-    console.info('onFocusChanged tables-scope'); // TODO del
+
+  // TODO hier gehts weiter
+  onFocusChanged(sm: FocusModelIf) {
+    // this.debounceX(
+    //   50,
+    //   ()=>{
+    //   this.eventListener.onFocusChanged(sm);
+    // });
     this.eventListener.onFocusChanged(sm);
   }
 
   onSelectionChanged(sm: SelectionModelIf) {
-    console.info('onSelectionChanged tables-scope'); // TODO del
+    console.info('xonSelectionChanged');
+    // this.debounceX(
+    //   50,
+    //   ()=>{
+    //   this.eventListener.onSelectionChanged(sm);
+    // });
     this.eventListener.onSelectionChanged(sm);
   }
+
+  // TODO delete
+// private debounceX<T extends (...args: any[]) => void>(
+//   wait: number,
+//   callback: T,
+//   immediate = false,
+// )  {
+//   // This is a number in the browser and an object in Node.js,
+//   // so we'll use the ReturnType utility to cover both cases.
+//   let timeout: ReturnType<typeof setTimeout> | null;
+//
+//   return function <U>(this: U, ...args: Parameters<typeof callback>) {
+//     const context = this;
+//     const later = () => {
+//       timeout = null;
+//
+//       if (!immediate) {
+//         callback.apply(context, args);
+//       }
+//     };
+//     const callNow = immediate && !timeout;
+//
+//     if (typeof timeout === "number") {
+//       clearTimeout(timeout);
+//     }
+//
+//     timeout = setTimeout(later, wait);
+//
+//     if (callNow) {
+//       callback.apply(context, args);
+//     }
+//   };
+// }
 
 
   /**
@@ -631,12 +652,12 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
     return undefined;
   }
 
-  setDragging(dragging: boolean){
+  setDragging(dragging: boolean) {
     this.dragging = dragging;
     if (this.dragging) {
       this.storeColumnWidths();
-      this.lastDragFrom =-1;
-      this.lastDragTo =-1;
+      this.lastDragFrom = -1;
+      this.lastDragTo = -1;
     } else {
       this.storedColumnWidths = [];
     }
@@ -685,10 +706,7 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf {
     }
   }
 
-  private debugOnce(
-    bodyX: number,
-    bodyY: number
-  ) {
+  private debugOnce(bodyX: number, bodyY: number) {
     console.clear();
     console.info('this.hostElement.offsetTop', this.hostElement.offsetTop); // pageY of table tag
     console.info('this.hostElement.scrollHeight', this.hostElement.scrollHeight); // height of visible scroll area
