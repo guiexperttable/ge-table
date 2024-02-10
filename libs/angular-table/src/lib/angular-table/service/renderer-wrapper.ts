@@ -62,7 +62,6 @@ export class RendererWrapper<T extends ComponentRendererIf<T>>
         takeUntil(this.closed$)
       )
       .subscribe((event: any) => {
-        console.info('RendererWrapper event >', event); // TODO hmm?
         this.event$.next(event);
       })
     );

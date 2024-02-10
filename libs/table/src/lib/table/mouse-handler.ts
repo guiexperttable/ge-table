@@ -86,24 +86,18 @@ export class MouseHandler {
       event.stopPropagation();
 
     } else if (mouseTargetData.action === 'toggleHeaderGroup'){
-      // this.expandedAll = !this.expandedAll;
-      // this.tableScope.toggleExpandCollapseAll(this.expandedAll);
-      // TODO toggleHeaderGroup !!!!!!!!!!
-      // console.info('toggleHeaderGroup', mouseTargetData);
       this.tableScope.toggleHeaderGroup(mouseTargetData);
       event.preventDefault();
       event.stopPropagation();
 
     } else if (mouseTargetData.inputType === 'checkbox' && mouseTargetData.areaIdent){
       this.tableScope.toggleRowCheckbox(mouseTargetData.rowIdx, mouseTargetData.colIdx, mouseTargetData.areaIdent);
-      //this.tableScope.repaint();
       event.preventDefault();
       event.stopPropagation();
 
     } else if (isTreeRow(mouseTargetData.row) && mouseTargetData.areaModel) {
       const altClickOnFirstCol = mouseTargetData.colIdx === this.getArrowColumnIndex() && event.altKey;
       const clickOnArrow = mouseTargetData.className.includes("ge-table-tree-arrow-div");
-      console.info(clickOnArrow, altClickOnFirstCol);
 
       if (altClickOnFirstCol || clickOnArrow) {
         // toggle collapsed/expanded:

@@ -222,13 +222,11 @@ export class TableComponent implements OnInit, OnDestroy, EventListenerIf {
 
   @AvoidDoubleExecution()
   onSelectionChanged(model: SelectionModelIf): void {
-    console.info('onSelectionChanged in angular component.'); // TODO delete
     this.selectionChanged.next(model);
   }
 
   @AvoidDoubleExecution()
   onFocusChanged(model: FocusModelIf): void {
-    console.info('onFocusChanged in angular component.'); // TODO delete
     this.focusChanged.next(model);
   }
 
