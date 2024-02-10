@@ -5,8 +5,10 @@ import viteTsConfigPaths from "vite-tsconfig-paths";
 import dts from "vite-plugin-dts";
 import { join } from "path";
 import {viteStaticCopy} from "vite-plugin-static-copy";
+import { preact } from '@preact/preset-vite';
 
 export default defineConfig({
+
   cacheDir: "../../node_modules/.vite/preact-table",
 
   plugins: [
@@ -14,7 +16,8 @@ export default defineConfig({
       entryRoot: "src",
       tsconfigPath: join(__dirname, "tsconfig.lib.json")
     }),
-    react(),
+    // react(),
+    preact({include: ['**/*[jt]sx']}),  // <-- add {include:...}
     viteTsConfigPaths({
       root: "../../"
     }),

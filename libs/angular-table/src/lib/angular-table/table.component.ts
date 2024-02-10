@@ -13,6 +13,7 @@ import {
 import { CommonModule } from "@angular/common";
 import { debounceTime, Subject, takeWhile } from "rxjs";
 import {
+  AvoidDoubleExecution,
   EventListenerIf, FocusModelIf,
   GeModelChangeEvent,
   GeMouseEvent, LicenseManager, SelectionModelIf,
@@ -219,16 +220,19 @@ export class TableComponent implements OnInit, OnDestroy, EventListenerIf {
   }
 
 
+  @AvoidDoubleExecution()
   onSelectionChanged(model: SelectionModelIf): void {
     console.info('onSelectionChanged in angular component.'); // TODO delete
     this.selectionChanged.next(model);
   }
 
+  @AvoidDoubleExecution()
   onFocusChanged(model: FocusModelIf): void {
     console.info('onFocusChanged in angular component.'); // TODO delete
     this.focusChanged.next(model);
   }
 
+  @AvoidDoubleExecution()
   onContextmenu(evt: GeMouseEvent): void {
     this.contextmenu.next(evt);
   }
@@ -246,6 +250,7 @@ export class TableComponent implements OnInit, OnDestroy, EventListenerIf {
     this.checkboxChanged.next(arr);
   }
 
+  @AvoidDoubleExecution()
   onModelChanged(evt: GeModelChangeEvent): void {
     this.modelChanged.next(evt);
   }

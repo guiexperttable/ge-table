@@ -1,6 +1,7 @@
 import { FocusType } from "./focus.type";
 import { FocusModelIf } from "./focus-model.if";
 import { EventFocusChangedListenerIf } from './event-focus-changed-listener.if';
+import { AvoidDoubleExecution } from '../../common/decorator/avoid-double-execution.decorator';
 
 export class FocusModel implements FocusModelIf {
 
@@ -32,6 +33,7 @@ export class FocusModel implements FocusModelIf {
     }
   }
 
+  @AvoidDoubleExecution(100)
   fireChangeEvent() {
     this.listenerArr.forEach(l => l.onFocusChanged(this));
   }

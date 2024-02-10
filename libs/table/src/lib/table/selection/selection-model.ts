@@ -2,6 +2,7 @@ import { CellRange } from "../data/common/cell-range";
 import { ExtendedSelectionType, SelectionMode } from './selection.type';
 import { SelectionModelIf } from "./selection-model.if";
 import { EventSelectionChangedListenerIf } from './event-selection-changed-listener.if';
+import { AvoidDoubleExecution } from '../../common/decorator/avoid-double-execution.decorator';
 
 
 export class SelectionModel implements SelectionModelIf {
@@ -37,6 +38,7 @@ export class SelectionModel implements SelectionModelIf {
     }
   }
 
+  @AvoidDoubleExecution(100)
   fireChangeEvent() {
     if (!this.silent) {
       this.listenerArr.forEach(l => l.onSelectionChanged(this));
