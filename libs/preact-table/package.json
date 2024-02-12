@@ -8,6 +8,7 @@
     "entryFile": "src/index.ts"
   },
   "scripts": {
+    "build": "vite build",
     "npm-pub:preact-table": "npm publish --access public"
   },
   "exports": {
