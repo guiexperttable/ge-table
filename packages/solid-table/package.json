@@ -1,6 +1,6 @@
 {
   "name": "@guiexpert/solid-table",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "type": "module",
   "main": "./index.js",
   "types": "./index.d.ts",
@@ -9,8 +9,9 @@
   },
   "scripts": {
     "i": "pnpm i",
+    "patch-version": "node patch.js",
     "build": "vite build",
-    "npm-pub:solid-table": "npm publish --access public"
+    "npm-pub": "npm publish --access public"
   },
   "exports": {
     ".": {

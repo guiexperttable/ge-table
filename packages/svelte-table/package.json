@@ -1,6 +1,6 @@
 {
   "name": "@guiexpert/svelte-table",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "type": "module",
   "main": "./index.js",
   "types": "./index.d.ts",
@@ -9,8 +9,9 @@
   },
   "scripts": {
     "i": "pnpm i",
+    "patch-version": "node patch.js",
     "build": "vite build",
-    "npm-pub:svelte-table": "npm publish --access public"
+    "npm-pub": "npm publish --access public"
   },
   "exports": {
     ".": {
@@ -32,7 +33,6 @@
     "@testing-library/svelte": "^4.0.5",
     "@tsconfig/svelte": "^4.0.1",
     "eslint-plugin-svelte3": "^4.0.0",
-
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "@types/node": "^20.11.17",
