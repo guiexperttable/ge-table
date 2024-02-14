@@ -38,7 +38,9 @@
     "build:vue3-table": "pnpm --filter vue3-table build",
     "build:webcomponent-table": "pnpm --filter webcomponent-table build",
 
-    "build:all": "pnpm run -r build"
+    "build:all": "pnpm run -r build",
+
+    "version-number": "npm version patch"
   },
   "keywords": [],
   "author": ""
