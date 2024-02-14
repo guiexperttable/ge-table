@@ -1,0 +1,39 @@
+---
+import GetStartedFooter from './get-started-footer.astro'
+export interface Props {
+  id: string;
+  title: string;
+  noLead: boolean
+}
+
+const { title, id, noLead } = Astro.props;
+---
+
+<section
+    id={id}
+    class:list={[ { 'text-sm': noLead },  'flex scroll-mt-24 flex-col items-center gap-4 space-y-8' ]}>
+  <div class="flex flex-col items-center gap-4">
+    <slot name="eyebrow" />
+    <h2 class="gradient-text text-center font-extrabold tracking-tight text-6xl">
+      {title}
+    </h2>
+  </div>
+
+  <p class:list={[ { hidden: noLead },  'max-w-xl text-center font-extrabold text-2xl' ]}>
+    <slot name="lead" />
+  </p>
+
+  <div class="slot-div">
+    <slot />
+  </div>
+
+
+  <GetStartedFooter />
+</section>
+
+<style>
+  .slot-div {
+      max-width: min(100%, 72rem);
+      padding: 0 2rem;
+  }
+</style>

@@ -1,0 +1,18 @@
+---
+import IndexLayout from '../../layouts/IndexLayout.astro';
+import Header from "../../components/header.astro";
+import Preact from "../../components/getstarted/preact.md";
+import GetStartedSection from "../../components/getstarted/common/get-started-section.astro";
+
+const title = 'Get stated (Preact)';
+---
+<IndexLayout title={title}>
+  <Header splashMode={false}  smallGap={false} />
+
+  <GetStartedSection title="Get started" id="getstarted">
+    <Fragment slot="lead">
+      Preact
+    </Fragment>
+    <Preact title={title}/>
+  </GetStartedSection>
+</IndexLayout>

@@ -1,0 +1,49 @@
+{
+  "name": "@guiexpert/vue3-table",
+  "version": "3.0.2",
+  "type": "commonjs",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "lib": {
+    "entryFile": "src/index.ts"
+  },
+  "scripts": {
+    "i": "pnpm i",
+    "build": "vite build",
+    "npm-pub:vue3-table": "npm publish --access public"
+  },
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.cjs"
+    }
+  },
+  "dependencies": {
+    "tslib": "^2.3.0",
+    "@guiexpert/table": "workspace:^",
+    "vue": "^3.2.47",
+    "vue-i18n": "^9.2.2",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@cypress/vue": "^5.0.4",
+    "@intlify/eslint-plugin-vue-i18n": "^2.0.0",
+    "@vitejs/plugin-vue": "^4.4.1",
+    "@vue/eslint-config-typescript": "^12.0.0",
+    "@vue/test-utils": "^2.4.1",
+    "eslint-plugin-vue": "^9.18.1",
+    "unplugin-vue-components": "^0.24.0",
+    "vue-eslint-parser": "^9.1.0",
+    "@types/node": "^20.11.17",
+    "vite": "^5.1.1",
+    "vite-plugin-dts": "^3.7.2",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-static-copy": "^0.17.0",
+    "vite-tsconfig-paths": "^4.2.1",
+    "vite-plugin-babel": "^1.2.0",
+    "@vitejs/plugin-react": "^4.1.1",
+    "ts-node": "10.9.1",
+    "tsconfig": "^7.0.0",
+    "typescript": "5.2.2"
+  }
+}

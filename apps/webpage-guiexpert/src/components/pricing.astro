@@ -1,0 +1,109 @@
+---
+import ContentSection from "~/components/content-section.astro";
+import PricingCard from "./pricing-card.astro";
+import {Icon} from "astro-icon";
+import Glogo from "./glogo.astro";
+---
+
+<ContentSection
+    title="Pricing"
+    id="pricing"
+    noLead="true">
+
+  <div class="max-w-6xl space-y-2">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2">
+
+
+      <PricingCard
+          title="Non-Commercial License"
+          price="Free">
+        <p>All features</p>
+        <p>Source available</p>
+        <p>Community support</p>
+        <a slot="action" href="javascript:void(0)" onclick="document.querySelector('.dialogThanks').showModal()">Free</a>
+      </PricingCard>
+
+      <PricingCard
+          title="Commercial License"
+          subTitle="Single Application"
+          price="999 $"
+          actionLeft=" "
+          primary={true}>
+        <p>Single Application</p>
+        <p>One App (one subdomain)</p>
+        <p>Perpetual license</p>
+
+        <a slot="action"
+           href="javascript:void(0)"
+           onclick="document.querySelector('.dialogSales').showModal()">
+          Contact Sales
+        </a>
+      </PricingCard>
+
+
+    </div>
+  </div>
+
+  <div class="max-w-6xl space-y-2">
+    <!--<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2">-->
+
+    <br>
+    <br>
+    <br>
+    <h2 class="text-xl">Non-commercial</h2>
+    <p>
+      Individuals and non-commercial users can freely use and modify this software library under the terms of the open
+      source license. See
+      <a href="/license">License</a>
+      .
+    </p>
+
+    <br>
+    <h2 class="text-xl">Commercial License</h2>
+    <h3 class="font-extrabold text-l">Single Application</h3>
+    <p>
+      One 'Single Application' Deployment License covers one production environment for a single project
+      (application). </p>
+    <p>
+      You do not need an additional Deployment License for environments such as testing, user acceptance testing (UAT),
+      pre-production, production failover, and others. </p>
+    <p>
+      You do not need an additional Deployment License for multiple server instances. </p>
+    <p>
+      Deploying an application to a cloud service only requires one Deployment License. </p>
+
+  </div>
+
+
+</ContentSection>
+
+<dialog class="dialogThanks max-w-lg content-center p-6 justify-center">
+  <p>Individuals and non-commercial users can freely use and modify this software library
+    under the terms of the open source license.</p>
+  <form method="dialog" class="grid content-center items-center justify-center p-6">
+    <button
+        class="underline"
+        onclick="document.querySelector('dialog').close()">Thanks</button>
+  </form>
+</dialog>
+
+
+<dialog class="dialogSales max-w-lg content-center p-6 justify-center">
+  <h2 class="font-bold text-lg pt-6 pb-6">Contact Sales</h2>
+  <p>
+    For tailored licensing, reach out to us via email at
+    <a href="mailto:sales@gui.expert?subject=gui-expert-table-license">
+      sales@gui.expert
+    </a>
+    .
+  </p>
+  <p class="pt-6 pb-6">
+    Expect a response within one business day.
+  </p>
+  <form method="dialog" class="grid content-center items-center justify-center p-6">
+    <button
+        class="underline"
+        onclick="document.querySelector('dialog').close()">Close</button>
+  </form>
+</dialog>
+

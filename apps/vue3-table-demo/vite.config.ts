@@ -1,17 +1,11 @@
-import path from "path";
+import path, {join} from "path";
 import { defineConfig } from "vite";
 import Vue from "@vitejs/plugin-vue";
 import Components from "unplugin-vue-components/vite";
-import { tsconfigBaseAliases } from "nx-vue3-vite";
 
 export default defineConfig({
   assetsInclude: /\.(pdf|jpg|png|svg)$/,
-  resolve: {
-    alias: {
-      ...tsconfigBaseAliases(__dirname)
-      // Add your aliases here
-    }
-  },
+
   publicDir: path.resolve(__dirname, "./src/public"),
   plugins: [
     Vue(),
@@ -19,7 +13,20 @@ export default defineConfig({
       dirs: ["src/app/components"]
     })
   ],
-  test: {
-    environment: "happy-dom"
+  resolve: {
+    alias: [
+      {
+        find: /@guiexpert\/table/,
+        replacement: join(__dirname, '../..', 'packages', 'table', 'src'),
+      },
+      {
+        find: /@guiexpert\/vue3-table/,
+        replacement: join(__dirname, '../..', 'packages', 'vue3-table', 'src'),
+      },
+      {
+        find: /@guiexpert\/demo-table-models/,
+        replacement: join(__dirname, '../..', 'packages', 'demo-table-models', 'src'),
+      },
+    ],
   }
 });

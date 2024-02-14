@@ -1,0 +1,40 @@
+---
+const { frontmatter } = Astro.props;
+---
+
+<div class="getstarted">
+  <h3>{frontmatter.title}</h3>
+  <slot />
+</div>
+
+<style is:global>
+
+  .getstarted * {
+      font-size: 15px;
+  }
+  .getstarted  h1 {
+      font-size: 1.4em;
+      margin-top: 1em;
+      margin-bottom: 0.8em;
+  }
+  .getstarted  h2 {
+      font-size: 1.2em;
+      margin-top: .8em;
+      margin-bottom: .5em;
+  }
+  .getstarted  h3 {
+      font-size: 1.1em;
+      margin-top: .5em;
+      margin-bottom: .5em;
+  }
+  .getstarted  h1, .getstarted  h2, .getstarted  h3 {
+      font-weight: bold !important;
+  }
+  .getstarted  p {
+      margin-top: 1em;
+      margin-bottom: 1.5em;
+  }
+  .getstarted  a {
+      text-decoration: underline;
+  }
+</style>

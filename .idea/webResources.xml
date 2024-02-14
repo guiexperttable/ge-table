@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebResourcesPaths">
+    <contentEntries>
+      <entry url="file://$PROJECT_DIR$">
+        <entryData>
+          <resourceRoots>
+            <path value="file://$PROJECT_DIR$/libs/angular-table/src" />
+            <path value="file://$PROJECT_DIR$/libs/demo-table-models/src" />
+            <path value="file://$PROJECT_DIR$/libs/table/src" />
+            <path value="file://$PROJECT_DIR$/libs/vue3-table/src" />
+            <path value="file://$PROJECT_DIR$/libs/webcomponent-table/src" />
+            <path value="file://$PROJECT_DIR$/libs/svelte-table/src" />
+            <path value="file://$PROJECT_DIR$/libs/solid-table/src" />
+            <path value="file://$PROJECT_DIR$/libs/react-table/src" />
+            <path value="file://$PROJECT_DIR$/libs/preact-table/src" />
+            <path value="file://$PROJECT_DIR$/apps/angular-table-demo/src" />
+            <path value="file://$PROJECT_DIR$/apps/html5-table-demo/src" />
+            <path value="file://$PROJECT_DIR$/apps/preact-table-demo/src" />
+            <path value="file://$PROJECT_DIR$/libs/table/css" />
+            <path value="file://$PROJECT_DIR$/apps/table-website/src" />
+          </resourceRoots>
+        </entryData>
+      </entry>
+      <entry url="file://$PROJECT_DIR$/../website-astro">
+        <entryData>
+          <resourceRoots>
+            <path value="file://$PROJECT_DIR$/../website-astro/src" />
+            <path value="file://$PROJECT_DIR$/../website-astro/public" />
+          </resourceRoots>
+        </entryData>
+      </entry>
+    </contentEntries>
+  </component>
+</project>

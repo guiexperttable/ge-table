@@ -1,0 +1,117 @@
+---
+
+const id = 'div' + Math.random().toString(36).slice(2, 11);
+const idInput = 'input' + Math.random().toString(36).slice(2, 11);
+---
+
+<div
+    style="height: calc(100vh - 128px)"
+    class:list={[id, 'order-table-div']}></div>
+
+<div class="filter-div">
+  <label>Filter:
+    <input type="text" name="filter" autofocus class:list={[ idInput, 'max-w-[100px]']}/>
+  </label>
+</div>
+
+<script
+    is:inline
+    define:vars={{id, idInput}}
+    type="module">
+
+  import {
+    TableScope,
+    EventAdapter,
+    SimpleDomService,
+  } from '/scripts/table/index.js'
+  import {createOrderModelAndOptions} from "/scripts/demo-table-models/index.js";
+
+  const inputEle = document.querySelector('.' + idInput);
+  const divEle = document.querySelector('.' + id);
+  const {tableModel, tableOptions}  = createOrderModelAndOptions();
+
+  tableOptions.externalFilterFunction = filterFn;
+
+  const tableScope = new TableScope(
+    divEle,
+    tableModel,
+    new SimpleDomService(),
+    tableOptions,
+    new EventAdapter()
+  );
+  tableScope.firstInit();
+  const tableApi = tableScope.getApi();
+
+
+  inputEle.addEventListener("keyup", (event) => {
+    if (event.isComposing || event.keyCode === 229) {
+      return;
+    }
+    tableApi.externalFilterChanged();
+  });
+
+  function filterFn(coin, _index, _array) {
+    if (!inputEle.value) {
+      return true;
+    }
+    const ls = inputEle.value.toLowerCase();
+    return JSON.stringify(coin).toLowerCase().includes(ls);
+  }
+</script>
+
+<style>
+    .filter-div {
+        font-size: 15px;
+        position: absolute;
+        top: 76px;
+        right: 255px;
+        width: 200px;
+        height: 32px;
+        overflow-y: clip;
+        opacity: 0.5;
+        z-index: 999;
+        padding-top: 4px;
+    }
+    .filter-div label {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
+    .filter-div input {
+        padding-left: 4px;
+        color: var(--color-text, #000);
+        background: var(--color-background, #fff);
+    }
+
+</style>
+
+<style is:global>
+
+    .order-table-div {
+        font-size: 13px;
+    }
+
+    .order-table-div .ge-table-header {
+        font-weight: bold;
+    }
+
+    html[data-theme= "light"] .order-table-div .ge-table-row-odd {
+        background-color: #FAFBFF55;
+    }
+
+    .order-table-div .ge-star-rating-div {
+        color: #fcb515;
+    }
+
+    .order-table-div .ge-table-label {
+        line-height: 24px;
+    }
+
+    .order-table-div .ge-table-progress-bar {
+        background-color: #36BB6C;
+    }
+
+</style>

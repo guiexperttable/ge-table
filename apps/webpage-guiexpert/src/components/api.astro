@@ -1,0 +1,108 @@
+---
+import ContentSection from "./content-section.astro";
+---
+
+<ContentSection
+    title="API"
+    id="api"
+    noLead="true">
+
+  <div class="max-w-8xl space-y-2 pl-4 pr-4">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-3 md:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3">
+
+      <div>
+        <h2 class="mb-8 font-bold">TableModels</h2>
+        <p class="mb-4">
+          The table model is the most important part.
+          It defines the structure of the table: row count, column count,
+          value in a cell, etc. </p>
+        <ul class="list-disc ml-8 mb-8">
+          <li>
+            <a target="_blank" href="/api/interfaces/TableModelIf.html">
+              TableModelIf
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="/api/classes/TableModel.html">TableModel</a>
+          </li>
+
+          <li>
+            <a target="_blank" href="/api/types/AreaIdent.html">AreaIdent
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="/api/interfaces/AreaModelIf.html">AreaModelIf</a>
+          </li>
+          <li>
+            <a target="_blank" href="/api/classes/AbstractAreaModel.html">AbstractAreaModel
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="/api/classes/AreaModelArrayOfArrays.html">AreaModelArrayOfArrays</a>
+          </li>
+          <li>
+            <a target="_blank" href="/api/classes/AreaModelObjectyArray.html">AreaModelObjectyArray</a>
+          </li>
+          <li>
+            <a target="_blank" href="/api/classes/AreaModelTree.html">AreaModelTree</a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="mb-8 font-bold">TableFactory</h2>
+        <p class="mb-4">
+          Helper class for creating table models out of data structures. </p>
+        <ul class="list-disc ml-8 mb-8">
+          <li>
+            <a target="_blank" href="/api/classes/TableFactory.html">TableFactory</a>
+          </li>
+        </ul>
+
+        <h2 class="mb-8 font-bold">TreeFactory</h2>
+        <ul>
+          <li>
+          <span>
+            An object array (T[]) can be grouped into a tree structure by this method.
+            All objects will be replaced by a
+            <a target="_blank" href="/api/classes/TreeFactory.html">TreeRow&lt;T&gt;</a>
+          </span>
+            <a target="_blank" href="/api/classes/TreeFactory.html#buildTreeRows">buildTreeRows</a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="mb-8 font-bold">ETC</h2>
+        <p class="mb-4">
+          Some useful classes: </p>
+        <ul class="list-disc ml-8 mb-8">
+          <li>
+            <a target="_blank" href="/api/classes/TableOptions.html">TableOptions</a>
+          </li>
+          <li>
+            <a target="_blank" href="/api/classes/TableApi.html">TableApi</a>
+          </li>
+          <li>
+            <a target="_blank" href="/api/classes/ColumnDef.html">ColumnDef</a>
+          </li>
+          <li>
+            <a target="_blank" href="/api/interfaces/CellRendererIf.html">CellRendererIf</a>
+          </li>
+          <li>
+            <a target="_blank" href="/api/classes/SelectionModel.html">SelectionModel</a>
+          </li>
+          <li>
+            <a target="_blank" href="/api/interfaces/SelectionModelIf.html">
+              SelectionModelIf
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</ContentSection>
+<style>
+  a {text-decoration: underline}
+</style>

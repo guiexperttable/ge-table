@@ -1,0 +1,42 @@
+.ge-table {
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ge-table-col-div {
+  text-align: center;
+  line-height: 2.5;
+  user-select: none;
+}
+
+.ge-table-label-div {
+  padding: 0;
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+
+.ge-table-label-div .ge-table-label {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.ge-table-text-align-left {
+  text-align: left;
+}
+
+.ge-table-text-align-right {
+  text-align: right;
+}
+
+.ge-table-text-align-center {
+  text-align: center;
+}
+
+/* Row checkbox */
+.ge-table-row-checkbox-div {
+  padding-left: 14px;
+}

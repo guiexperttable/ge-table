@@ -1,0 +1,56 @@
+---
+const id = 'div' + Math.random().toString(36).slice(2, 11);
+---
+
+<div class="px-8">
+  <div
+      style="height: calc(100vh - 140px); width: 540px;"
+      class:list={[id, 'large-demo']}></div>
+</div>
+
+
+<script
+    is:inline
+    define:vars={{id}}
+    type="module">
+
+  import {
+    TableScope,
+    EventAdapter,
+    SimpleDomService
+  } from '/scripts/table/index.js'
+  import {createLargeModelAndOptions} from "/scripts/demo-table-models/index.js";
+
+  const tableEle = document.querySelector('.' + id);
+  const maxRowCount = 2*1000*1000;
+  const {tableModel, tableOptions}  = createLargeModelAndOptions(maxRowCount);
+
+  const tableScope = new TableScope(
+    tableEle,
+    tableModel,
+    new SimpleDomService(),
+    tableOptions,
+    new EventAdapter()
+  );
+  tableScope.firstInit();
+
+  const tableApi = tableScope.getApi();
+  tableApi.scrollToIndex(0, maxRowCount/2);
+
+
+</script>
+
+<style>
+    div {
+        font-size: 14px;
+    }
+</style>
+
+<style is:global>
+    div.large-demo .ge-table-progress-container {
+        background-color: #888;
+    }
+    div.large-demo .ge-table-progress-bar {
+        background-color: #36BB6C;
+    }
+</style>

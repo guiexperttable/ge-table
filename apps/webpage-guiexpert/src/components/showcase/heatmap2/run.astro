@@ -1,0 +1,51 @@
+---
+
+const id = 'div' + Math.random().toString(36).slice(2, 11);
+---
+
+<div
+    style="height: 640px"
+    class={id}></div>
+
+
+<script
+    is:inline
+    define:vars={{id}}
+    type="module">
+
+  import {
+    TableScope,
+    TableOptions,
+    EventAdapter,
+    SimpleDomService,
+  } from '/scripts/table/index.js'
+  import {createHeatMapSeattleModel} from "/scripts/demo-table-models/index.js";
+
+  const tableModel  = createHeatMapSeattleModel();
+  const tableOptions = {
+    ...new TableOptions(),
+    hoverColumnVisible: false,
+    hoverRowVisible: false,
+    columnsDraggable: false,
+    columnsResizable: false,
+    tableTopBorderVisible: false,
+    tableBottomBorderVisible: false,
+    footerSeparatorBorderVisible: false,
+    horizontalBorderVisible: false,
+    verticalBorderVisible: false
+  };
+
+  new TableScope(
+    document.querySelector('.' + id),
+    tableModel,
+    new SimpleDomService(),
+    tableOptions,
+    new EventAdapter()
+  ).firstInit();
+</script>
+
+<style>
+    div {
+        font-size: 14px;
+    }
+</style>

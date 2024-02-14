@@ -1,0 +1,23 @@
+---
+import './ShowcaseTabGroup.css';
+
+const currentPage = new URL(Astro.request.url).pathname;
+const segments = currentPage.split('/');
+
+const {name} = Astro.props;
+---
+
+<div class="TabGroup no-flex text-sm">
+  <a
+      data-astro-prefetch="viewport"
+      href={'/showcase/' + name + '/run'}
+      class={segments.includes('run') ? 'active' : ''}>
+    Run
+  </a>
+  <a
+      data-astro-prefetch="viewport"
+      href={'/showcase/' + name + '/info'}
+      class={segments.includes('info') ? 'active' : ''}>
+    Description
+  </a>
+</div>

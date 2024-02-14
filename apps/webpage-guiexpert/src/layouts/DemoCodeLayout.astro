@@ -1,0 +1,14 @@
+---
+const { frontmatter } = Astro.props;
+---
+
+<div class="pl-2">
+  <h3>{frontmatter.title}</h3>
+  <slot />
+</div>
+
+<style>
+  * {
+      font-size: 15px;
+  }
+</style>

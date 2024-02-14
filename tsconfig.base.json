@@ -16,15 +16,15 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@guiexpert/angular-table": ["libs/angular-table/src/index.ts"],
-      "@guiexpert/demo-table-models": ["libs/demo-table-models/src/index.ts"],
-      "@guiexpert/preact-table": ["libs/preact-table/src/index.ts"],
-      "@guiexpert/react-table": ["libs/react-table/src/index.ts"],
-      "@guiexpert/solid-table": ["libs/solid-table/src/index.ts"],
-      "@guiexpert/svelte-table": ["libs/svelte-table/src/index.ts"],
-      "@guiexpert/table": ["libs/table/src/index.ts"],
-      "@guiexpert/vue3-table": ["libs/vue3-table/src/index.ts"],
-      "@guiexpert/webcomponent-table": ["libs/webcomponent-table/src/index.ts"]
+      "@guiexpert/angular-table": ["packages/angular-table/src/index.ts"],
+      "@guiexpert/demo-table-models": ["packages/demo-table-models/src/index.ts"],
+      "@guiexpert/preact-table": ["packages/preact-table/src/index.ts"],
+      "@guiexpert/react-table": ["packages/react-table/src/index.ts"],
+      "@guiexpert/solid-table": ["packages/solid-table/src/index.ts"],
+      "@guiexpert/svelte-table": ["packages/svelte-table/src/index.ts"],
+      "@guiexpert/table": ["packages/table/src/index.ts"],
+      "@guiexpert/vue3-table": ["packages/vue3-table/src/index.ts"],
+      "@guiexpert/webcomponent-table": ["packages/webcomponent-table/src/index.ts"]
     },
     "resolveJsonModule": true
   },

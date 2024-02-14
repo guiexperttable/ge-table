@@ -1,9 +1,7 @@
-/// <reference types="vitest" />
+
 import { defineConfig } from 'vite';
 import solidPlugin from 'vite-plugin-solid';
-// import devtools from 'solid-devtools/vite';
-
-import viteTsConfigPaths from 'vite-tsconfig-paths';
+import {join} from "path";
 
 export default defineConfig({
   cacheDir: '../../node_modules/.vite/solid-table-demo',
@@ -17,32 +15,23 @@ export default defineConfig({
   },
 
   plugins: [
-    viteTsConfigPaths({
-      root: '../../',
-    }),
-    /*
-                                                                        Uncomment the following line to enable solid-devtools.
-                                                                        For more info see https://github.com/thetarnav/solid-devtools/tree/main/packages/extension#readme
-                                                                        */
-    // devtools(),
     solidPlugin(),
   ],
 
-  // Uncomment this if you are using workers.
-  // worker: {
-  //  plugins: [
-  //    viteTsConfigPaths({
-  //      root: '../../',
-  //    }),
-  //  ],
-  // },
-
-  test: {
-    globals: true,
-    cache: {
-      dir: '../../node_modules/.vitest',
-    },
-    environment: 'jsdom',
-    include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
-  },
+  resolve: {
+    alias: [
+      {
+        find: /@guiexpert\/table/,
+        replacement: join(__dirname, '../..', 'packages', 'table', 'src'),
+      },
+      {
+        find: /@guiexpert\/solid-table/,
+        replacement: join(__dirname, '../..', 'packages', 'solid-table', 'src'),
+      },
+      {
+        find: /@guiexpert\/demo-table-models/,
+        replacement: join(__dirname, '../..', 'packages', 'demo-table-models', 'src'),
+      },
+    ],
+  }
 });

@@ -1,0 +1,62 @@
+---
+import CompatibilityList from "./getstarted-list.astro";
+import ContentSection from "~/components/content-section.astro";
+import type { CompatibilityItem } from "~/types";
+
+const frameworks: Array<CompatibilityItem> = [
+  {
+    title: "Plain JS",
+    icon: "frameworks/js",
+    url: "plainjs/",
+  },
+  {
+    title: "Angular",
+    icon: "frameworks/angular",
+    url: "angular/",
+  },
+  {
+    title: "Vue",
+    icon: "frameworks/vue",
+    url: "vue/",
+  },
+  {
+    title: "React",
+    icon: "frameworks/react",
+    url: "react/",
+  },
+  {
+    title: "Preact",
+    icon: "frameworks/preact",
+    url: "preact/",
+  },
+  // {
+  //   title: "Svelte",
+  //   icon: "frameworks/svelte",
+  //   url: "svelte/",
+  // },
+  // {
+  //   title: "Solid",
+  //   icon: "frameworks/solid",
+  //   url: "solid/",
+  // },
+  {
+    title: "WebComponent",
+    icon: "frameworks/lit",
+    url: "webcomponent/",
+  },
+];
+
+---
+
+<ContentSection title="Get started" id="getstarted">
+  <Fragment slot="lead">
+    "GUI Expert Table" is written in TypeScript and works very well with plain JavaScript.
+    It is <span class="text-primary">framework-agnostic</span> and designed to seamlessly integrate with
+    the major frameworks:
+  </Fragment>
+  <CompatibilityList
+    items={frameworks}
+    title="Frameworks"
+    url="/getstarted"
+  />
+</ContentSection>

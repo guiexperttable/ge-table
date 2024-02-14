@@ -1,0 +1,18 @@
+---
+import IndexLayout from '../../layouts/IndexLayout.astro';
+import Header from "../../components/header.astro";
+import React from "../../components/getstarted/react.md";
+import GetStartedSection from "../../components/getstarted/common/get-started-section.astro";
+
+const title = 'Get stated (React)';
+---
+<IndexLayout title={title}>
+  <Header splashMode={false}  smallGap={false} />
+
+  <GetStartedSection title="Get started" id="getstarted">
+    <Fragment slot="lead">
+      React
+    </Fragment>
+    <React title={title}/>
+  </GetStartedSection>
+</IndexLayout>

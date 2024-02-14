@@ -1,5 +1,5 @@
 {
   "presets": [
-    "@nx/js/babel"
+    "@nrwl/js/babel"
   ]
 }

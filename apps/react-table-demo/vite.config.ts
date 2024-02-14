@@ -1,7 +1,6 @@
-/// <reference types="vitest" />
-import { defineConfig } from "vite";
+import {defineConfig} from "vite";
 import react from "@vitejs/plugin-react";
-import viteTsConfigPaths from "vite-tsconfig-paths";
+import {join} from "path";
 
 export default defineConfig({
   cacheDir: "../../node_modules/.vite/react-table-demo",
@@ -18,26 +17,22 @@ export default defineConfig({
 
   plugins: [
     react(),
-    viteTsConfigPaths({
-      root: "../../"
-    })
   ],
 
-  // Uncomment this if you are using workers.
-  // worker: {
-  //  plugins: [
-  //    viteTsConfigPaths({
-  //      root: '../../',
-  //    }),
-  //  ],
-  // },
-
-  test: {
-    globals: true,
-    cache: {
-      dir: "../../node_modules/.vitest"
-    },
-    environment: "jsdom",
-    include: ["src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"]
+  resolve: {
+    alias: [
+      {
+        find: /@guiexpert\/table/,
+        replacement: join(__dirname, '../..', 'packages', 'table', 'src'),
+      },
+      {
+        find: /@guiexpert\/react-table/,
+        replacement: join(__dirname, '../..', 'packages', 'react-table', 'src'),
+      },
+      {
+        find: /@guiexpert\/demo-table-models/,
+        replacement: join(__dirname, '../..', 'packages', 'demo-table-models', 'src'),
+      },
+    ],
   }
 });

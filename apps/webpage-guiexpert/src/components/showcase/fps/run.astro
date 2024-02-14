@@ -1,0 +1,181 @@
+---
+const id = 'div' + Math.random().toString(36).slice(2, 11);
+const idOut = 'out' + Math.random().toString(36).slice(2, 11);
+---
+
+<div class:list={[id, 'table-div']}></div>
+
+<div class:list={[idOut, 'out-div']}></div>
+
+<script
+    is:inline
+    define:vars={{id, idOut}}
+    type="module">
+
+  import {
+    TableOptions,
+    TableFactory,
+    TableScope,
+    EventAdapter,
+    SimpleDomService,
+    TableCellUpdateEvent,
+    FocusModel
+  } from '/scripts/table/index.js'
+
+  const rowCount = 10;
+  const columnCount = rowCount;
+
+  const cellWidth = 34;
+  const cellHeight = cellWidth;
+
+  const bodyData =
+    Array.from(Array(rowCount).keys()).map((r) =>
+      Array.from(Array(columnCount).keys()).map((c) => 0)
+    );
+
+  const headerData = [Array.from(Array(columnCount).keys()).map((c) => String.fromCharCode(97 + c))];
+  const footerData = [Array.from(Array(columnCount).keys()).map((c) => String.fromCharCode(97 + c))];
+  const tableOptions = {
+    ...new TableOptions(),
+    defaultRowHeights: {
+      header: cellHeight,
+      body: cellHeight,
+      footer: cellHeight
+    },
+    hoverColumnVisible: false,
+    hoverRowVisible: false,
+    columnsDraggable: false,
+    columnsResizable: false,
+    getFocusModel: ()=> new FocusModel('none')
+  };
+
+  const tableModel = TableFactory.createTableModel({
+    headerData,
+    bodyData,
+    footerData,
+    overridingColumnWidth: cellWidth
+  });
+
+  const ele = document.querySelector('.' + id);
+  const eleOut = document.querySelector('.' + idOut);
+
+  ele.style.width = `${cellWidth * columnCount}px`;
+  ele.style.height = `${cellHeight * (2 + rowCount)}px`;
+
+  const tableScope = new TableScope(
+    ele,
+    tableModel,
+    new SimpleDomService(),
+    tableOptions,
+    new EventAdapter()
+  );
+  tableScope.firstInit();
+
+  const tableApi = tableScope.getApi();
+
+
+  let oddTick = true;
+  let lastTick = Date.now();
+  let count = 0;
+
+  let x = 0;
+  let y = 0;
+  let val = 1;
+
+  // Start fake realtime updates:
+  sendUpdateTableModelEvents();
+
+
+  function sendUpdateTableModelEvents() {
+    count++;
+    x = x + 1;
+    if (x === columnCount) {
+      x = 0;
+      y = y + 1;
+      if (y === rowCount) {
+        y = 0;
+        val = val===1 ? -1 : 1;
+        oddTick = !oddTick;
+      }
+    }
+
+    if (count > 120) {
+      const now = Date.now();
+      const deltaTime = now - lastTick;
+      eleOut.innerText = `${Math.round(10*count / deltaTime * 1000)/10} fps`;
+      lastTick = now;
+      count = 0;
+    }
+
+    const cssClasses = {
+      'bg-green-0': val === 1 && !oddTick,
+      'bg-green-1': val === 1 && oddTick,
+      'bg-red-0': val === -1 && !oddTick,
+      'bg-red-1': val === -1 && oddTick,
+    };
+    tableApi.updateCells([new TableCellUpdateEvent('body', y, x, val, cssClasses)]);
+
+    requestAnimationFrame(() => sendUpdateTableModelEvents());
+  }
+
+
+</script>
+
+<style>
+    div {
+        font-size: 14px;
+    }
+
+    .table-div {
+        margin-left: 30px;
+    }
+
+    .out-div {
+        background: transparent;
+        font-size: 15px;
+        padding-top: 10px;
+        padding-left: 30px;
+        height: 40px;
+    }
+</style>
+
+
+<style is:global>
+
+    @keyframes color-green {
+        0%, 100% {
+            background: transparent;
+        }
+        10% {
+            background: #33CC3644;
+        }
+    }
+
+    .bg-green-0,
+    .bg-green-1,
+    .bg-green-0 > div,
+    .bg-green-1 > div,
+    .bg-green-0 > div > div,
+    .bg-green-1 > div > div {
+        animation: color-green 1s ease-in-out;
+    }
+
+
+    @keyframes color-red {
+        0%, 100% {
+            background: transparent;
+        }
+        10% {
+            background: #cc333344;
+        }
+    }
+
+    .bg-red-0,
+    .bg-red-1,
+    .bg-red-0 > div,
+    .bg-red-1 > div,
+    .bg-red-0 > div > div,
+    .bg-red-1 > div > div {
+        animation: color-red 1s ease-in-out;
+    }
+</style>

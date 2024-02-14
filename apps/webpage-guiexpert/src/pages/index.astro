@@ -1,0 +1,36 @@
+---
+import IndexLayout from '../layouts/IndexLayout.astro';
+import Features from "~/components/features.astro";
+import Compatibility from "../components/getstarted.astro";
+import Footer from "~/components/footer.astro";
+import Intro from "~/components/intro.astro";
+import Showcase from "~/components/showcase.astro";
+import Posts from "~/components/posts.astro";
+// import Splash from "~/components/splash.astro";
+import Splash from "~/components/splash-text-and-table.astro";
+import Header from "../components/header.astro";
+import Imprint from "../components/imprint.astro";
+import Cube from "../components/cube.astro";
+import ProgressCircle from "../components/progress-circle.astro";
+
+---
+<IndexLayout title="GUI Expert Welcome" >
+
+  <Header splashMode={true} />
+  <Splash />
+
+  <div class="space-y-24 px-8 py-32" id="container">
+    <Cube />
+    <Intro />
+    <Features />
+    <Compatibility />
+    <Showcase />
+    <Posts />
+    <Imprint />
+  </div>
+
+  <Footer />
+
+</IndexLayout>
+
+<ProgressCircle />

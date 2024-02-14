@@ -1,0 +1,36 @@
+---
+const id = 'div' + Math.random().toString(36).slice(2, 11);
+---
+
+<div
+    style="height: calc(100vh - 128px)"
+    class={id}></div>
+
+
+<script
+    is:inline
+    define:vars={{id}}
+    type="module">
+
+  import {
+    TableScope,
+    EventAdapter,
+    SimpleDomService,
+  } from '/scripts/table/index.js'
+  import {createCryptoModelAndOptions} from "/scripts/demo-table-models/index.js";
+
+  const {tableModel, tableOptions}  = createCryptoModelAndOptions();
+  new TableScope(
+    document.querySelector('.' + id),
+    tableModel,
+    new SimpleDomService(),
+    tableOptions,
+    new EventAdapter()
+  ).firstInit();
+</script>
+
+<style>
+    div {
+        font-size: 14px;
+    }
+</style>

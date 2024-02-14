@@ -1,0 +1,38 @@
+---
+
+
+const id = Math.random().toString(36).slice(2, 11);
+---
+
+<div
+    style="height: calc(100vh - 128px)"
+    class={id}></div>
+
+
+<script is:inline define:vars={{id}} type="module">
+
+  import {TableFactory, TableScope, EventAdapter, TableOptions, SimpleDomService} from '/scripts/table/index.js'
+  // import {TableFactory, TableScope, EventAdapter, TableOptions, SimpleDomService} from 'https://cdn.jsdelivr.net/npm/@guiexpert/table@1.0.13/+esm'
+
+  const headerData = [ ["Column 1", "Column 2", "Column 3"] ];
+  const bodyData = [];
+  for (let i=0; i<100; i++) {
+    bodyData.push(["This is a very", "simple", "demo."]);
+  }
+  const tableModel = TableFactory.createTableModel({
+    headerData,
+    bodyData,
+    overridingColumnWidth: 110
+  });
+  const simpleDomService = new SimpleDomService();
+  const tableOptions = new TableOptions();
+  const eventAdapter = new EventAdapter();
+
+  new TableScope(document.querySelector('.'+id), tableModel, simpleDomService, tableOptions, eventAdapter).firstInit();
+</script>
+
+<style>
+  div {
+    font-size:14px;
+  }
+</style>

@@ -1,0 +1,63 @@
+
+
+a,
+.btn {
+  @apply transition-colors duration-200;
+  @apply hover:text-secondary;
+  @apply focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-transparent;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent;
+  @apply bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-pink-500;
+}
+
+.logo-fill-color-0,
+.logo-fill-color-1,
+.logo-fill-color-2,
+.logo-fill-color-3 {
+  fill: var(--color-text);
+  stroke: var(--color-text);
+}
+
+header:not(.fixed-header) .logo-fill-color-0,
+header:not(.fixed-header) .logo-fill-color-1,
+header:not(.fixed-header) .logo-fill-color-2,
+header:not(.fixed-header) .logo-fill-color-3 {
+  fill: var(--color-background);
+  stroke: var(--color-background);
+}
+
+.hero .logo-fill-color-0,
+.hero .logo-fill-color-1,
+.hero .logo-fill-color-2,
+.hero .logo-fill-color-3 {
+  fill: var(--color-secondary);
+  stroke: var(--color-secondary);
+}
+
+.ge-positive-text-color {
+  color: #16c784;
+}
+
+.ge-negative-text-color {
+  color: #ea3943;
+}
+
+.demo-content-div a {
+  text-decoration: underline;
+}
+.demo-content-div p {
+  margin: 20px 0;
+}
+
+
+html {
+  --gradient-1: #1e0061;
+  --gradient-2: #1d46f3;
+  --gradient-3: #c364ff;
+  --gradient-4: #ff4173;
+}
+.ge-linear-gradient-bg {
+  background-image: linear-gradient(90deg,var(--gradient-1),var(--gradient-2) 27%,var(--gradient-3) 77%,var(--gradient-4));
+}

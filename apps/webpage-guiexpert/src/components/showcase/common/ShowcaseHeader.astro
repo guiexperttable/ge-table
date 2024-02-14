@@ -1,0 +1,21 @@
+---
+import ShowcaseTabGroup from "./ShowcaseTabGroup.astro";
+
+const {name} = Astro.props;
+const {title} = Astro.props;
+---
+<div class="flex w-full items-center justify-between border-b border-transparent px-8 py-1">
+
+   <span>{title}</span>
+   <ShowcaseTabGroup name={name}></ShowcaseTabGroup>
+
+</div>
+
+
+
+<!--style>
+    .brd {
+        @apply bottom-auto top-0;
+        @apply border-default bg-default text-default;
+    }
+</style-->

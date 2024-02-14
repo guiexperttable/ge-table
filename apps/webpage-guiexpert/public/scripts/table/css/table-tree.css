@@ -1,0 +1,53 @@
+/* Tree table */
+
+.ge-table-col-div.ge-table-col-div-0.ge-table-tree-cell {
+  text-align: left;
+}
+
+.ge-table-tree-cell .ge-table-label-div {
+  padding-left: 0;
+  padding-right: 10px;
+  display: inline;
+}
+
+
+.ge-table-col-tree {
+  text-align: left;
+}
+
+.ge-padding-property-checkbox {
+  padding-left: 0;
+}
+
+.ge-table-col-tree.ge-table-tree-deep-0 {
+  padding-left: 16px;
+}
+
+.ge-table-col-tree.ge-table-tree-deep-1 {
+  padding-left: 36px;
+}
+
+.ge-table-col-tree.ge-table-tree-deep-2 {
+  padding-left: 56px;
+}
+
+.ge-table-col-tree.ge-table-tree-deep-3 {
+  padding-left: 76px;
+}
+
+.ge-table-col-tree.ge-table-tree-deep-4 {
+  padding-left: 96px;
+}
+
+.ge-table-col-tree.ge-table-tree-deep-5 {
+  padding-left: 116px;
+}
+
+.ge-table-col-tree.ge-table-tree-deep-5 {
+  padding-left: 136px;
+}
+
+.ge-table-col-div.ge-table-col-tree.ge-table-tree-cell {
+  display: grid;
+  grid-template-columns: 16px 1fr;
+}

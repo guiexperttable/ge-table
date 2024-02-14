@@ -1,0 +1,92 @@
+---
+
+
+const id = 'div'+Math.random().toString(36).slice(2, 11);
+---
+
+<div
+    style="height: calc(100vh - 128px)"
+    class={id}></div>
+
+<div class="debug-div"></div>
+
+<script is:inline define:vars={{id}} type="module">
+
+  import {TableFactory, TableScope, EventAdapter, TableOptions, SimpleDomService} from '/scripts/table/index.js'
+  // import {TableFactory, TableScope, EventAdapter, TableOptions, SimpleDomService} from 'https://cdn.jsdelivr.net/npm/@guiexpert/table@1.0.13/+esm'
+
+  const COLS = 100;
+  const ROWS = 200;
+
+  const headerData = [
+    Array.from(Array(COLS).keys()).map((c) => 'Header 0/'+c),
+    Array.from(Array(COLS).keys()).map((c) => 'Header 1/'+c)
+  ];
+  const bodyData = Array.from(Array(ROWS).keys()).map((r) =>
+    Array.from(Array(COLS).keys()).map((c) => r+'/'+c)
+  );
+  const footerData = [
+    Array.from(Array(COLS).keys()).map((c) => 'Footer 0/'+c),
+    Array.from(Array(COLS).keys()).map((c) => 'Footer 1/'+c)
+  ];
+
+  const tableModel = TableFactory.createTableModel({
+    headerData,
+    bodyData,
+    footerData,
+    overridingColumnWidth: 110,
+    fixedLeftColumnCount: 2
+  });
+  const simpleDomService = new SimpleDomService();
+  const tableOptions = new TableOptions();
+  const eventAdapter = {
+
+    onCheckboxChanged: (evt) => {},
+
+    onContextmenu:(evt) => {
+      debugEvent(evt, 'onContextmenu');
+    },
+
+    onModelChanged:(evt) => {
+      debugEvent(evt, 'onModelChanged');
+    },
+
+    onMouseClicked:(evt) => {
+      debugEvent(evt, 'onMouseClicked');
+    },
+
+    onMouseDragging:(evt) => {
+      debugEvent(evt, 'onMouseDragging');
+    },
+
+    onMouseDraggingEnd:(evt) => {
+      debugEvent(evt, 'onMouseDraggingEnd');
+    },
+
+    onMouseMoved:(evt) => {
+      debugEvent(evt, 'onMouseMoved');
+    }
+  };
+
+
+  new TableScope(document.querySelector('.'+id), tableModel, simpleDomService, tableOptions, eventAdapter).firstInit();
+  const outEle = document.querySelector('.debug-div');
+
+  function debugEvent(evt, text) {
+    outEle.innerText = `row index : ${evt.rowIndex}, col index : ${evt.columnIndex}, clickCount: ${evt.clickCount}, ${text}`;
+  }
+
+</script>
+
+<style>
+  div {
+    font-size:14px;
+  }
+  .debug-div {
+      position: fixed;
+      left: 220px;
+      top: 80px;
+      width: 600px;
+      height: 60px;
+  }
+</style>

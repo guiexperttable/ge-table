@@ -1,0 +1,340 @@
+---
+import ContentSection from "~/components/content-section.astro";
+import DiagramTableModel from "~/components/doc/diagram-table-model.astro";
+import CssVars from "./css-vars.md";
+import CssThemeInit from "./css-theme-init.md";
+---
+
+<ContentSection
+    title="Documentation"
+    id="documentation"
+    noLead="true">
+
+  <div class="max-w-8xl space-y-2 pl-4 pr-4">
+    <h2 class="text-xl font-bold">Introduction</h2>
+  </div>
+
+  <div class="max-w-8xl space-y-2 pl-4 pr-4">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4">
+      <div>
+        <p class="mb-4 initial-letter">
+          The idea/philosophy: This project is made for solving the problem of displaying large datasets in a grid view.
+          Large datasets mean
+          thousands of rows and columns. We use virtual scrolling for both directions (horizontal and vertical) to
+          create
+          a high-performance ui component. The data can be displayed as a grid or as a tree table (hierarchical
+          structure). </p>
+        <p class="mb-4">
+          The core library is agnostic, it's written in plain typescript. This helps us to create a lot of table
+          components for all common frameworks:</p>
+        <ul class="list-disc ml-8 mb-8">
+          <li>
+            <a
+                href="https://www.npmjs.com/package/&#64;guiexpert/angular-table"
+                target="_blank">guiexpert/angular-table
+            </a>
+          </li>
+          <li>
+            <a
+                href="https://www.npmjs.com/package/&#64;guiexpert/vue3-table"
+                target="_blank">guiexpert/vue3-table
+            </a>
+          </li>
+          <li>
+            <a
+                href="https://www.npmjs.com/package/&#64;guiexpert/react-table"
+                target="_blank">guiexpert/react-table
+            </a>
+          </li>
+          <li>
+            <a
+                href="https://www.npmjs.com/package/&#64;guiexpert/preact-table"
+                target="_blank">guiexpert/preact-table
+            </a>
+          </li>
+          <li>
+            <a
+                href="https://www.npmjs.com/package/&#64;guiexpert/solid-table"
+                target="_blank">guiexpert/solid-table
+            </a>
+          </li>
+          <li>
+            <a
+                href="https://www.npmjs.com/package/&#64;guiexpert/svelte-table"
+                target="_blank">guiexpert/svelte-table
+            </a>
+          </li>
+          <li>
+            <a
+                href="https://www.npmjs.com/package/&#64;guiexpert/webcomponent-table"
+                target="_blank">guiexpert/webcomponent-table
+            </a>
+          </li>
+        </ul>
+        <p class="mb-4">
+          If you think that important framework support is missing, send us a short message. ;-)
+          Of course, you can use the table with plain JS. </p>
+      </div>
+
+      <div>
+        <p class="mb-4">
+          Our philosophy is to think in models. A simple table mostly has a simple data structure.
+          An array of arrays or an array of objects. This is not our meaning of a table model.
+          For our library: a table model gives the information on how many rows and
+          how many columns the table has, what the value of a cell is,
+          what the column span of a cell is, what the CSS classes are, and so on.
+          A model is a concrete class of this interface
+          <a
+              target="_blank"
+              href="/api/interfaces/TableModelIf.html">TableModelIf
+          </a>
+          .
+        </p>
+        <p class="mb-4">
+          A lot of requirements of a table body also exist for the header or footer.
+          Also for a header, it's important to know the CSS classes or to know the 'colspan' value of a header cell and
+          so
+          on.
+          Because of this, we decided to create three sub-models: our table has three areas (header, body, footer),
+          so our table model has three (sub) area models (see:
+          <a
+              target="_blank"
+              href="/api/interfaces/AreaModelIf.html">AreaModelIf
+          </a>
+          ).
+          This gives you the most flexibility for designing fancy tables.
+          You can write an implementation of the table model by hand or you can use one of the flexible factory methods.
+          We try to make this table component very flexible and easy to use.
+        </p>
+      </div>
+
+      <div>
+        <DiagramTableModel></DiagramTableModel>
+      </div>
+
+      <div>
+        <p class="mb-4">
+          The table can respond to user inputs: it's possible to define an edit renderer so that the user can change
+          cell
+          values.
+          It's possible to filter table rows, re-order or resize the columns (by drag and drop), and so on.
+          This is all easy to use because it's handled by default.
+          All features of this table can be configured by an option property
+          (see
+          <a
+              target="_blank"
+              href="/api/classes/TableOptions.html">TableOptions
+          </a>
+          ).
+        </p>
+        <p class="mb-4">
+          We have tons of demo code for helping you by starting with this component. </p>
+        <p class="mb-4">
+          Have fun and don't worry: If you need help, write a question on Stackoverflow
+          (
+          <a
+              href="https://stackoverflow.com/questions/tagged/guiexpert-table"
+              target="_blank">#guiexpert-table
+          </a>
+          ).
+          Feedback is welcome! Do not hesitate to contact us
+          (
+          <a href="mailto:feedback&#64;gui.expert?subject=guiexpert-table">feedback&#64;gui.expert</a>
+          ).
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="max-w-8xl space-y-2 pl-4 pr-4">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4">
+      <div>
+        <p class="mb-4 initial-letter">
+          There are essentially three ways to create a table model: </p>
+        <ol class="list-decimal pl-6">
+          <li>Utilizing
+            <a
+                href="/api/classes/TableFactory.html#createTableModel"
+                target="_blank">TableFactory.createTableModel({})
+            </a>
+            to generate a
+            <a
+                href="/api/classes/TableModel.html"
+                target="_blank">TableModel
+            </a>
+            , enabling the passing of various parameters such as an array of business objects (T[]) combined with
+            <a
+                href="/api/classes/ColumnDef.html"
+                target="_blank">ColumnDef[]
+            </a>
+            , or an array of arrays, and so on.
+          </li>
+          <li>Developing individual
+            <a
+                href="/api/interfaces/AreaModelIf.html"
+                target="_blank">AreaModels
+            </a>
+            for the header, body, and footer, implementing the AreaModelIf interface. These can then be assembled into a
+            TableModel using <a
+                href="/api/classes/TableFactory.html#createTableModel"
+                target="_blank">TableFactory.createTableModel({})
+            </a>.
+          </li>
+          <li>Deriving from an existing model (e.g.,
+            <a
+                href="/api/classes/AreaModelObjectArrayWithColumndefs.html"
+                target="_blank"> AreaModelObjectArrayWithColumndefs&lt;T>
+            </a>
+            ) and overriding methods as necessary.
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4">
+      <div>
+        <p class="mb-4 initial-letter"></p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4">
+      <div>
+        <p class="mb-4 initial-letter"></p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4">
+      <div>
+        <p class="mb-4 initial-letter"></p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="max-w-8xl space-y-2 pl-4 pr-4">
+    <h2 class="text-xl font-bold">How to start</h2>
+  </div>
+
+  <div class="max-w-8xl space-y-2 pl-4 pr-4">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4">
+      <div>
+        <p class="mb-4 initial-letter">
+          Starting Points: the guide
+          <a href="/getstarted">getstarted</a>
+          shows you how to start with your favorite framework.
+        </p>
+      </div>
+
+      <div>
+        <p class="mb-4">
+          The page
+          <a href="/showcase">showcase</a>
+          gives you a demonstration of some fancy tables and their models.
+        </p>
+      </div>
+
+      <div>
+        <p class="mb-4">
+          Everything you need to know about the Table API:
+          <a href="/api">Table API</a>
+          .
+        </p>
+      </div>
+
+      <div>
+        <p class="mb-4">
+          Our stackblitz:
+          <a href="https://stackblitz.com/@guiexperttable/collections/gui-expert-simple-examples">
+            gui-expert-simple-examples
+          </a>
+          .
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="max-w-8xl space-y-2 pl-4 pr-4">
+    <h2 class="text-xl font-bold">Styling (Look & Feel)</h2>
+  </div>
+
+  <div class="max-w-8xl space-y-2 pl-4 pr-4">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4">
+      <div>
+        <p class="mb-4 initial-letter">
+          Dark mode is trendy and gives a stylish look. It’s great for the eyes, especially in the dark. On the other
+          hand, light mode is easy to read and works well for people with vision problems. </p>
+        <p>
+          Light mode is familiar and accessible to more people. It shows colors accurately, which is essential for
+          things like design and medical stuff. But dark mode looks bold, is easy on the eyes, and can save power on
+          some screens. However, it can mess up colors and isn’t always good for long reading or bright places. </p>
+
+        <p class="mb-4">
+          There is no golden way with one style to satisfy all users. Solution: Every app should have a dark, light and
+          system theme as an option. </p>
+        <p class="mb-4">
+          GUI Expert Table has a small set of
+          <a href="https://github.com/guiexperttable/ge-table/blob/main/libs/table/css/table-color-classes.css">CSS
+            classes
+          </a>
+          which defines the colors of the rendered table, which uses
+          <a href="https://github.com/guiexperttable/ge-table/blob/main/libs/table/css/table-color-vars.css">CSS
+            variables
+          </a>
+          .
+        </p>
+        <p class="mb-4">
+          This helps you to create a dark and a light mode matching the corporate style guide of your company. </p>
+      </div>
+
+      <div>
+        <p class="mb-4">
+          Your global app CSS should have a set of CSS variables for each theme: </p>
+        <CssVars/>
+      </div>
+
+      <div class="xl:col-span-2 2xl:col-span-2">
+        <p class="mb-4">
+          It's easy to implement a theme switcher with your favorite framework.
+          Here is a simple JS example: </p>
+        <CssThemeInit/>
+      </div>
+    </div>
+  </div>
+
+  <!--
+  <div class="max-w-8xl space-y-2 pl-4 pr-4">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4">
+      <div>
+        <p class="mb-4 initial-letter">
+          Styling table cells:
+        </p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4">
+      <div>
+        <p class="mb-4 initial-letter">
+        </p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4">
+      <div>
+        <p class="mb-4 initial-letter">
+        </p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4">
+      <div>
+        <p class="mb-4 initial-letter">
+        </p>
+      </div>
+    </div>
+  </div>
+-->
+
+
+</ContentSection>
+
+<style>
+    a {
+        text-decoration: underline
+    }
+</style>

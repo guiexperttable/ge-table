@@ -1,0 +1,75 @@
+---
+import { Icon } from "astro-icon";
+import ContentSection from "~/components/content-section.astro";
+import type { FeatureItem } from "~/types";
+
+const features: Array<FeatureItem> = [
+  {
+    title: "UI-agnostic",
+    description: "Works with plain JavaScript, Vue.js, Angular, React, Preact, Svelte, and Solid. \n" +
+      "Excellent performance with vertical and horizontal virtual scrolling.",
+    icon: "mdi:account-group",
+  },
+  {
+    title: "Flexible models",
+    description: "Flat Table, Tree table (Hierarchical View). \n" +
+      "Row and Column Spanning. \n" +
+      "Fixed Columns (Left and Right).",
+    icon: "mdi:graph",
+  },
+  {
+    title: "Usability",
+    description: "Custom filters. \n" +
+      "Row Sorting. \n" +
+      "Row, Column, and Range Selection. \n" +
+      "Single and Multi Selection.",
+    icon: "mdi:hand",
+  },
+  {
+    title: "Usability",
+    description: "Column Interactions (resize, reorder). \n" +
+      "Custom Filtering. \n" +
+      "In-place Cell Editing. \n" +
+      "Column Reordering (Drag and Drop).",
+    icon: "mdi:column",
+  },
+  {
+    title: "Accessibility",
+    description: "Keyboard Shortcuts. \n" +
+      "User-defined Key and Mouse Events. \n" +
+      "Customizable Look & Feel (via CSS variables).",
+    icon: "mdi:search-web",
+  },
+  {
+    title: "Look & Feel",
+    description: "State Persistence (Row Sorting, Column Order, Selection). \n" +
+      "Customizable Cell Contents via Renderer for Header, Body, and Footer. \n" +
+      "Full control over the HTML structure and style.",
+    icon: "mdi:feather",
+  },
+];
+---
+
+
+
+<ContentSection title="Features" id="features">
+  <Fragment slot="lead">
+    <!--
+    This software is available under dual licensing options: a Non-commercial License and a Commercial License.
+    Individuals and non-commercial users are free to use and modify this software library
+      under the terms of the open-source license, granting them full functionality.-->
+  </Fragment>
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {
+      features.map(({ title, description, icon }) => (
+        <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+          <div class="h-16 w-16 rounded-full border-2 border-current p-3">
+            <Icon name={icon} />
+          </div>
+          <p class="text-center font-extrabold text-xl">{title}</p>
+          <p class="text-center text-offset text-sm">{description}</p>
+        </li>
+      ))
+    }
+  </ul>
+</ContentSection>

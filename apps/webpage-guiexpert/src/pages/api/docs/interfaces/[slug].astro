@@ -1,0 +1,32 @@
+---
+import Header from "../../../../components/header.astro";
+import IndexLayout from "../../../../layouts/IndexLayout.astro";
+import {marked} from "marked";
+
+
+export async function getStaticPaths() {
+  const posts = await Astro.glob('../../../../content/docsmd/interfaces/*.md');
+  console.debug('post', JSON.stringify(posts))
+  return posts.map((post) => {
+    return {
+      // params: {slug: post.frontmatter.slug},
+      params:{
+        slug: post.file.split('/').findLast(f=>f.includes('.md'))
+      },
+      props: {...post}
+    }
+  })
+}
+
+const {Content, frontmatter} = Astro.props;
+const debug = JSON.stringify( Astro.props);
+const content = marked.parse(Astro.props.rawContent());
+console.debug('content', content)
+---
+<IndexLayout title="Docs">
+  <Header/>
+
+  <!--<Content/>-->
+  <div set:html={content} />
+
+</IndexLayout>

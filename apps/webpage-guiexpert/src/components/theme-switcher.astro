@@ -1,0 +1,84 @@
+---
+import {Icon} from "astro-icon";
+---
+
+<!--
+  negative margin is sum of button width (8) and gap size of flex parent (6)
+  TODO don't hardcode these values
+-->
+<button
+    id="theme-switcher"
+    type="button"
+    class="-ml-14 origin-[right_center] scale-0 transition-all duration-500">
+  <span id="icon-theme-light">
+    <Icon
+        name="theme/light"
+        class="h-8"/>
+    <span class="sr-only">Use light theme</span>
+  </span>
+  <span
+      id="icon-theme-dark"
+      class="hidden">
+    <Icon
+        name="theme/dark"
+        class="h-8"/>
+    <span class="sr-only">Use dark theme</span>
+  </span>
+</button>
+
+<script>
+
+  const themes = ["light", "dark"];
+  const button = document.querySelector("#theme-switcher");
+
+  const getThemeCurrent = () => document.documentElement.dataset.theme;
+  const getThemeNext = () => {
+    const themeCurrent = getThemeCurrent();
+    const indexThemeCurrent = themes.indexOf(themeCurrent);
+    return themes[(indexThemeCurrent + 1) % themes.length];
+  };
+
+  const updateIcon = () => {
+    const themeCurrent = getThemeCurrent();
+    const themeNext = getThemeNext();
+
+    document.querySelector(`#icon-theme-${themeCurrent}`)?.classList.add("hidden");
+    document.querySelector(`#icon-theme-${themeNext}`)?.classList.remove("hidden");
+  };
+
+  function onButtonClicked() {
+    const themeNext = getThemeNext();
+    document.documentElement.dataset.theme = themeNext;
+    localStorage.setItem("theme", themeNext);
+    updateIcon();
+  }
+
+  button.classList.add('clickhandler');
+  button.addEventListener("click", () => {
+    onButtonClicked();
+  });
+
+  updateIcon();
+
+  document.addEventListener('astro:after-swap', () => {
+    const th = localStorage.getItem("theme");
+    if (th && th !== getThemeCurrent()) {
+      document.documentElement.dataset.theme = th;
+      updateIcon();
+    }
+
+    const button = document.querySelector("#theme-switcher");
+    if (!button.classList.contains('clickhandler')) {
+      button.classList.add('clickhandler');
+      button.addEventListener("click", () => {
+        onButtonClicked();
+      });
+    }
+  })
+</script>
+
+<style>
+    :global(.fixed-header) #theme-switcher {
+        @apply ml-0 scale-100;
+    }
+</style>

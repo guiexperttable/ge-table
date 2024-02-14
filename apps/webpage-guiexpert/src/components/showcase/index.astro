@@ -1,0 +1,185 @@
+---
+import simpleImage from "../../assets/screens/simple.png";
+import arrayOfArrays from "../../assets/screens/thumbs/arrayofarrays.png";
+import cryptoImage from "../../assets/screens/thumbs/crypto.png";
+import orderImage from "../../assets/screens/thumbs/order.png";
+import heatmapImage from "../../assets/screens/thumbs/heatmap.png";
+import seattleHeatmapImage from "../../assets/screens/thumbs/seattleheatmap.png";
+import timetableImage from "../../assets/screens/thumbs/timetable.png";
+import fpsImage from "../../assets/screens/thumbs/fps.png";
+import treetableImage from "../../assets/screens/thumbs/treetable.png";
+import idFilterImage from "../../assets/screens/thumbs/idfilter.png";
+import lafImage from "../../assets/screens/thumbs/laf.png";
+import mouseeventsImage from "../../assets/screens/thumbs/mouseevents.png";
+import largeImage from "../../assets/screens/thumbs/large.png";
+import {Image} from "astro:assets";
+import ContentSection from "../content-section.astro";
+import ShowcaseCard from "./common/ShowcaseCard.astro";
+---
+
+<ContentSection
+    title="Showcase"
+    id="demos">
+  <Fragment slot="lead">
+    On this page, you will find <span class="text-primary">a&nbsp;lot&nbsp;of&nbsp;demos</span>{" "}
+    of our <span class="text-primary">fantastic&nbsp;table&nbsp;component</span>.<br>
+    If you are missing something,{" "}
+    please send us a
+    <a
+        href="mailto:info&#64;gui.expert"
+        class="underline">message
+    </a>
+    .
+  </Fragment>
+
+
+  <div class="max-w-6xl space-y-2">
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+
+      <div>
+        <ShowcaseCard
+            title="Array of Arrays"
+            img={arrayOfArrays}
+            url="/showcase/arrayofarrays/run">
+          <p>
+            Array of arrays data structure.
+            <!--
+            An array of arrays data structure can be easily converted in a
+            <a
+                class="text-primary"
+                target="_blabk"
+                href="/api/classes/TableModel.html">TableModel
+            </a>
+            with help of TableFactory
+            <a
+                class="text-primary"
+                href="/api/classes/TableFactory.html#createTableModel"
+                target="blank">.createTableModel()
+            </a>
+            {'.'}
+            -->
+          </p>
+        </ShowcaseCard>
+      </div>
+
+
+      <div>
+        <ShowcaseCard
+            title="Cryptos"
+            img={cryptoImage}
+            url="/showcase/crypto/run">
+          <p>
+            Array of object, custom renderer, row sorting, column re-ordering. </p>
+        </ShowcaseCard>
+      </div>
+
+      <div>
+        <ShowcaseCard
+            title="Order Table with filter"
+            img={orderImage}
+            url="/showcase/order/run">
+          <p>
+            Array of object, custom renderer, row sorting, column re-ordering, row filtering. </p>
+        </ShowcaseCard>
+      </div>
+
+      <div>
+        <ShowcaseCard
+            title="Heatmap"
+            img={heatmapImage}
+            url="/showcase/heatmap1/run">
+          <p>
+            Custom renderer </p>
+        </ShowcaseCard>
+      </div>
+
+      <div>
+        <ShowcaseCard
+            title="Seattle Heatmap"
+            img={seattleHeatmapImage}
+            url="/showcase/heatmap2/run">
+          <p>
+            Custom renderer </p>
+        </ShowcaseCard>
+      </div>
+
+      <div>
+        <ShowcaseCard
+            title="Time Table: row- and colspan"
+            img={timetableImage}
+            url="/showcase/timetable/run">
+          <p>
+            Rowspan and colspan in header and body area, two fixed columns, real time updates, resizable column
+            widths. </p>
+        </ShowcaseCard>
+      </div>
+
+      <div>
+        <ShowcaseCard
+            title="FPS render speed"
+            img={fpsImage}
+            url="/showcase/fps/run">
+          <p>
+            Real time updates and measurement of frames per second (fps). </p>
+        </ShowcaseCard>
+      </div>
+
+      <div>
+        <ShowcaseCard
+            title="Tree table"
+            img={treetableImage}
+            url="/showcase/treetable/run">
+          <p>
+            Tree table, fixed columns, editable, multi selection area </p>
+        </ShowcaseCard>
+      </div>
+
+      <div>
+        <ShowcaseCard
+            title="Slider filter"
+            img={idFilterImage}
+            url="/showcase/idfilter/run">
+          <p>
+            Table filter </p>
+        </ShowcaseCard>
+      </div>
+
+
+      <div>
+        <ShowcaseCard
+            title="Look & Feel"
+            img={lafImage}
+            url="/showcase/laf/run">
+          <p>
+            Look & Feel demo shows how to set CSS variables via JS </p>
+        </ShowcaseCard>
+      </div>
+
+
+      <div>
+        <ShowcaseCard
+            title="Mouse events"
+            img={mouseeventsImage}
+            url="/showcase/mouseevents/run">
+          <p>
+            Table events </p>
+        </ShowcaseCard>
+      </div>
+
+      <div>
+        <ShowcaseCard
+            title="Large Dataset (2 mio)"
+            img={largeImage}
+            url="/showcase/large/run">
+          <p>Very large dataset</p>
+        </ShowcaseCard>
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+</ContentSection>
+

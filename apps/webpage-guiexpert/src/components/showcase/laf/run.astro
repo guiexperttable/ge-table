@@ -1,0 +1,90 @@
+---
+
+import {CssVars} from "@guiexpert/table";
+const id = 'div' + Math.random().toString(36).slice(2, 11);
+const idOut = 'out' + Math.random().toString(36).slice(2, 11);
+const themes = CssVars.themes; // ['light', 'combat', 'paper', 'blackboard'];
+const cssVars = CssVars.vars;
+---
+
+<div class="px-8">
+  <ul class="flex items-center gap-6 text-base">
+    {themes.map((theme) => (
+        <li>
+          <a
+              href="javascript:void(0)"
+              class="theme-action"
+              data-theme={theme}>{theme}</a>
+        </li>
+    ))}
+  </ul>
+
+
+  <div
+      style="height: calc(100vh - 300px); width: min(1149px, calc(100vw - 4rem))"
+      class:list={[id, 'treetable-demo']}></div>
+
+  <pre class:list={[idOut,  'my-10 text-sm']}></pre>
+
+</div>
+
+
+<script
+    is:inline
+    define:vars={{id, idOut, themes, cssVars}}
+    type="module">
+
+  import {TableScope, EventAdapter, SimpleDomService} from '/scripts/table/index.js'
+  import {createTreePeopleModelAndOptions} from "/scripts/demo-table-models/index.js";
+
+  const {tableModel, tableOptions} = createTreePeopleModelAndOptions(true);
+  const tableEle = document.querySelector('.' + id);
+  const outEle = document.querySelector('.' + idOut);
+
+  const tableScope = new TableScope(
+    tableEle,
+    tableModel,
+    new SimpleDomService(),
+    tableOptions,
+    new EventAdapter()
+  );
+  tableScope.firstInit();
+  const tableApi = tableScope.getApi();
+
+  document
+    .querySelectorAll('.theme-action')
+    .forEach(ele => {
+      ele.addEventListener("click", () => {
+        setTheme(ele)
+      });
+    });
+
+  function setTheme(ele) {
+    const theme = ele.dataset.theme;
+    const vars = cssVars[theme];
+    if (vars) {
+      const kvs = cssVarString2KeyValueArray(vars);
+      kvs.forEach(k => {
+        tableEle.style.setProperty(k[0], k[1]);
+      });
+      outEle.innerText = vars;
+      // no need for: tableApi.repaint();
+    }
+  }
+
+  function cssVarString2KeyValueArray(css) {
+    return css
+      .replace(/;/g, '')
+      .split("\n")
+      .map(r => r.trim())
+      .filter(r => r.includes("--ge-table"))
+      .map(r => r.split(": ").map(s => s.trim()));
+  }
+
+</script>
+
+<style>
+    div {
+        font-size: 14px;
+    }
+</style>

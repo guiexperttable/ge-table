@@ -1,0 +1,48 @@
+import { CellRendererIf } from "../../../renderer/cell-render.if";
+import { AreaModelIf } from "./area-model.if";
+import { CheckedType } from "../../common/checked-type";
+import { ColumnDefIf } from "../column/column-def.if";
+import { AreaIdent } from "../area-ident.type";
+import { CheckboxModelIf } from "../../../checkbox/checkbox-model.if";
+import { FilterFunction } from "../../common/filter-function";
+import { SortItem } from "../../common/sort-item";
+import { HasDefaultRowHeightIf } from "./has-default-row-height-if";
+export declare abstract class AbstractAreaModel<T> implements AreaModelIf, HasDefaultRowHeightIf {
+    areaIdent: AreaIdent;
+    protected columnDefs: ColumnDefIf[];
+    defaultRowHeight: number;
+    rowSelectionModel: CheckboxModelIf<any> | undefined;
+    protected cellRenderers: (CellRendererIf | undefined)[];
+    protected yPositions: number[];
+    constructor(areaIdent: AreaIdent, columnDefs?: ColumnDefIf[], defaultRowHeight?: number);
+    abstract getRowCount(): number;
+    abstract getValueAt(rowIndex: number, columnIndex: number): any;
+    getTextValueAt(rowIndex: number, columnIndex: number): string;
+    getTooltipAt(_rowIndex: number, _columnIndex: number): any;
+    abstract getRowHeight(rowIndex: number): number;
+    getCellRenderer(_rowIndex: number, columnIndex: number): CellRendererIf | undefined;
+    getColspanAt(_rowIndex: number, _columnIndex: number): number;
+    getCustomClassesAt(_rowIndex: number, _columnIndex: number): string[];
+    getCustomStyleAt(_rowIndex: number, _columnIndex: number): {
+        [key: string]: string;
+    } | undefined;
+    getRowspanAt(_rowIndex: number, _columnIndex: number): number;
+    getRowByIndex(_rowIndex: number): any;
+    isRowCheckable(_rowIndex: number): boolean;
+    isRowChecked(rowIndex: number): CheckedType | undefined;
+    setRowChecked(rowIndex: number, checked: boolean): void;
+    getMaxColspan(): number;
+    getMaxRowspan(): number;
+    getYPosByRowIndex(rowIndex: number): number;
+    init(): void;
+    abstract externalFilterChanged<T>(predictFn: FilterFunction<T>): void;
+    isFilterable(): boolean;
+    doSort(_sortItems: SortItem[]): boolean;
+    isEditable(_rowIndex: number, columnIndex: number): boolean;
+    setValue(rowIndex: number, columnIndex: number, value: any): boolean;
+    isSelectable(_rowIndex: number, _columnIndex: number): boolean;
+    changeColumnOrder(sourceColumnIndex: number, targetColumnIndex: number): void;
+    protected setPropertyValue(o: any, props: string[], value: any): boolean;
+    protected arrayMove(arr: any[], fromIndex: number, toIndex: number): any[];
+    private calcYPositions;
+}

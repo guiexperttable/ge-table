@@ -1,0 +1,51 @@
+{
+  "name": "@guiexpert/table",
+  "version": "1.1.19",
+  "private": false,
+
+  "type": "module",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "lib": {
+    "entryFile": "src/index.ts"
+  },
+  "scripts": {
+    "i": "pnpm i",
+
+    "build": "vite build && npm run concat-css:main && npm run concat-css:dist",
+    "concat-css:main": "cat css/table*.css > css/main.css",
+    "concat-css:dist": "cat css/table*.css > dist/css/main.css",
+
+    "typedoc:json": "npx typedoc --json ../../apps/table-website/src/assets/json/doctype.json src/index.ts",
+    "typedoc:docs-html": "npx typedoc --out ../../apps/table-website/src/assets/docs src/index.ts",
+    "typedoc:docs-html-custom-css": "npx typedoc --customCss ./doc.css --out ../../apps/table-website/src/assets/docs src/index.ts",
+    "typedoc:docs-md": "npx typedoc --plugin typedoc-plugin-markdown --out ../../apps/table-website/src/assets/docsmd src/index.ts",
+    "npm-pub:table": "npm publish --access public"
+  },
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.cjs"
+    }
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "vite": "^5.1.1",
+    "vite-plugin-dts": "^3.7.2",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-static-copy": "^0.17.0",
+    "vite-tsconfig-paths": "^4.2.1",
+    "vite-plugin-babel": "^1.2.0",
+    "ts-node": "10.9.1",
+    "tsconfig": "^7.0.0",
+    "typedoc": "0.25.3",
+    "typedoc-plugin-rename-defaults": "^0.7.0",
+    "typedoc-plugin-markdown": "3.17.1",
+    "typescript": "5.2.2"
+  }
+}
+
+

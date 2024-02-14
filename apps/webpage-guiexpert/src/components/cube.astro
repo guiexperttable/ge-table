@@ -1,0 +1,231 @@
+---
+import {Image} from "astro:assets";
+import treeImage from "../assets/screens/tree.png";
+import editImage from "../assets/screens/edit.png";
+import themecreatorImage from "../assets/screens/themecreator.png";
+import heatmapImage from "../assets/screens/heatmap.png";
+---
+
+<section class="transparent ge-display-none-lt-sm">
+  <div class="scene">
+    <div class="cube">
+      <Image
+          class="side back bg-cover transition-all"
+          src={themecreatorImage}
+          alt={`A screenshot of theme creator`}/>
+
+      <Image
+          class="side left bg-cover object-cover transition-all"
+          src={heatmapImage}
+          alt={`A screenshot of heat map`}/>
+
+      <Image
+          class="side front bg-cover object-cover transition-all"
+          src={treeImage}
+          alt={`A screenshot of tree table`}/>
+
+      <Image
+          class="side right bg-cover bg-top transition-all"
+          src={editImage}
+          alt={`A screenshot of table editing`}/>
+    </div>
+  </div>
+</section>
+<section class="transparent ge-display-none-lt-sm"></section>
+<section class="transparent ge-display-none-lt-sm"></section>
+<section class="transparent ge-display-none-lt-sm"></section>
+
+
+<div class="hero-text ge-display-none-lt-sm">
+  <div class="headline-hero-super gradient-text text-center font-extrabold tracking-tight text-6xl"></div>
+</div>
+
+
+<style>
+    body {
+        --ge-welcome-rotate: 0deg;
+        --ge-welcome-img-width-number: 400;
+        --ge-welcome-img-width: calc(var(--ge-welcome-img-width-number) * 1px);
+        --ge-welcome-img-height: calc(var(--ge-welcome-img-width-number) / 2 * 1px);
+        --ge-welcome-img-transform: var(--ge-welcome-img-height);
+        --ge-welcome-img-transform-neg: calc(-1 * var(--ge-welcome-img-width-number) / 2 * 1px);
+        --ge-headline-hero-super-content: " ";
+        --ge-headline-hero-super-display: grid;
+        --ge-hero-text-color: #fff;
+        --ge-hero-action-opacity: 0;
+        --ge-welcome-zoom: 1;
+        --ge-header-border-bottom: #282F3D;
+        --ge-welcome-opacity:1;
+    }
+
+    .hero-text {
+        position: fixed;
+        top: max(80px, calc(50vh - var(--ge-welcome-img-height)/2 - 220px));
+        left: calc(50vw - 400px);
+        transition: all 0.3s;
+        height: auto;
+        margin-top: 0;
+        width: 800px;
+        place-items: center;
+        background: transparent;
+        display: var(--ge-headline-hero-super-display);
+    }
+    .hero-text .headline-hero-super::after {
+        content: var(--ge-headline-hero-super-content);
+    }
+
+    .transparent {
+        background-color: transparent;
+    }
+
+    section {
+        min-height: 100vh;
+    }
+
+    .scene {
+        z-index: -3;
+        position: fixed;
+        top: calc(50vh - var(--ge-welcome-img-height) / 2);
+        left: calc(50vw - var(--ge-welcome-img-width) / 2);
+        transition: all 0.3s;
+        perspective: 800px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: var(--ge-welcome-img-height);
+        width: var(--ge-welcome-img-width);
+        background: transparent;
+    }
+
+    .scene.sideMenuNeedsSpace {
+        left: calc(50vw - var(--ge-welcome-img-width) / 2 + 110px);
+    }
+
+    .scene .cube {
+        transform-style: preserve-3d;
+        position: relative;
+        width: var(--ge-welcome-img-width);
+        height: var(--ge-welcome-img-height);
+        transform-origin: center center;
+        transform: scale(var(--ge-welcome-zoom)) rotateY(var(--ge-welcome-rotate));
+        opacity: var(--ge-welcome-opacity);
+    }
+
+    .scene .cube .side {
+        position: absolute;
+        width: var(--ge-welcome-img-width);
+        height: var(--ge-welcome-img-height);
+        background-color: transparent;
+        opacity: 1;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: 1px solid var(--ge-header-border-bottom);
+        border-radius: 10px;
+    }
+
+    .scene .cube .side.front {
+        transform: translateZ(var(--ge-welcome-img-transform));
+    }
+
+    .scene .cube .side.right {
+        transform: translateX(var(--ge-welcome-img-transform)) rotateY(90deg);
+    }
+
+    .scene .cube .side.back {
+        transform: translateZ(var(--ge-welcome-img-transform-neg)) rotateX(180deg) rotateZ(180deg);
+    }
+
+    .scene .cube .side.left {
+        transform: translateX(var(--ge-welcome-img-transform-neg)) rotateY(90deg) scaleX(-1);
+    }
+
+
+    .hidden-1 {
+        display: block;
+    }
+
+    .hidden-2 {
+        display: none;
+    }
+
+    .hidden-3 {
+        display: none;
+    }
+
+    .hidden-3 {
+        display: none;
+    }
+</style>
+
+<script>
+
+  const nativeElement = document.querySelector('body');
+  const scrollContainer = window;
+  const headlines = [
+    "",
+    "Excellent performance",
+    "High Interactivity",
+    "Extreme Customizable",
+    "Open Source"
+  ];
+
+  scrollContainer.addEventListener("scroll", () => onScroll(), false);
+
+  nativeElement.style.setProperty("--ge-welcome-scrolldown-display", `block`);
+  nativeElement.style.setProperty("--ge-welcome-scrolldown-display-else", `none`);
+  nativeElement.style.setProperty("--ge-stroke-dashoffset", "283");
+  nativeElement.style.setProperty("--ge-headline-hero-super-content", "''");
+  nativeElement.style.setProperty("--ge-hero-text-content", "''");
+  nativeElement.style.setProperty("--ge-hero-action-opacity", "0");
+
+  function onScroll() {
+    requestAnimationFrame(() => {
+      calcCssPropertiesAfterScrolling();
+    });
+  }
+
+  function calcCssPropertiesAfterScrolling() {
+    const offsetHeight = nativeElement.clientHeight;
+    const scrollHeight = nativeElement.scrollHeight;
+    const scrollTop = nativeElement.parentElement.scrollTop;
+
+    // Rotation:
+    const r0 = (scrollTop - offsetHeight) * 360 / (4 * offsetHeight);
+    const r1 = Math.max(-270, Math.min(270, r0));
+
+    // scroll circle indicator:
+    const dashBoardOffset = (283 * (1.001 - (scrollTop / (scrollHeight - offsetHeight))));
+
+    // Zoom:
+    let zoom = r0 <= 275 ? 1 : ((r0 - 275) / 4);
+    if (zoom < 1) {
+      zoom = 1;
+    }
+    zoom = Math.min(10, zoom);
+    const headlinesIdx = Math.min(headlines.length - 1, Math.round(scrollTop / offsetHeight));
+    const opacity = (scrollTop - 0.3 * offsetHeight) > (4.5 * offsetHeight) ? 0 : 1;
+    const displayHeroText = zoom > 2 ? "none" : "grid";
+
+    const displayScrollDown = (scrollTop > scrollHeight - offsetHeight * 1.9) ? "none" : "block";
+    const displayScrollDownElse = (displayScrollDown === "block") ? "none" : "block";
+    const heroActionOpacity = Math.round(scrollTop / offsetHeight);
+
+    nativeElement.style.setProperty("--ge-stroke-dashoffset", `${dashBoardOffset}`); // for progress-circle-bar
+    nativeElement.style.setProperty("--ge-welcome-rotate", `${-r1}deg`); // rotateY for cube
+    nativeElement.style.setProperty("--ge-welcome-zoom", `${zoom}`); // zooming into cube -> section 'Features'
+    nativeElement.style.setProperty("--ge-welcome-opacity", `${opacity}`); // opacity of cube: if cube is scrolled out of view => opacity = 0
+    nativeElement.style.setProperty("--ge-welcome-scrolldown-display", `${displayScrollDown}`); // if page scrolled down, the 'none'. else 'block'
+    nativeElement.style.setProperty("--ge-welcome-scrolldown-display-else", `${displayScrollDownElse}`); // the display property of the 'Scroll to top' arrow
+    nativeElement.style.setProperty("--ge-hero-action-opacity", `${heroActionOpacity}`); // opacity of 'Get started' button
+    nativeElement.style.setProperty("--ge-headline-hero-super-content", "'" + headlines[headlinesIdx] + "'"); // Text of hero title
+    nativeElement.style.setProperty("--ge-headline-hero-super-display", displayHeroText); // Display property of hero title
+
+    // Rotation of feature images:
+    // const rotH = 0.5 + ((scrollTop + offsetHeight / 2) % offsetHeight) / offsetHeight;
+    // const rotDeg = -(rotH * 180 - 180);
+    // const rotateY = `${rotDeg}deg`;
+    // nativeElement.style.setProperty("--ge-welcome-rotate-feature-img", rotateY);
+  }
+
+  onScroll();
+</script>

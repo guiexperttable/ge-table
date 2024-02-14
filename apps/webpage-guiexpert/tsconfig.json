@@ -1,0 +1,19 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      },
+    ],
+    // Alias `src` to `~`
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["src/*"],
+
+
+      "@guiexpert/demo-table-models": ["../../packages/demo-table-models/src/index.ts"],
+      "@guiexpert/table": ["../../packages/table/src/index.ts"]
+    }
+  }
+}

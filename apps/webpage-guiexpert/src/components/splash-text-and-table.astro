@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import developerImage from "~/assets/developer_with_table.png";
+import GitHubCorner from "./github-corner.astro";
+
+const sizes = "(min-width: 240px) 240px, 300px";
+---
+
+<section class="relative h-full ge-linear-gradient-bg">
+  <GitHubCorner />
+
+  <div class="relative grid h-full place-items-center sm:grid-cols-2">
+    <div class="hero flex flex-col gap-2 self-end sm:gap-4 sm:self-auto items-center">
+      <h2 class="text-white text-center font-extrabold tracking-tighter text-8xl">
+        Build fancy
+        <br /> data grids,
+        <br /> faster.
+      </h2>
+      <h3 class="text-white p-4 text-center">
+        Works with Angular, Vue, React,&nbsp;Preact, Svelte, Solid and plain&nbsp;JavaScript
+      </h3>
+    </div>
+    <div
+      id="hero"
+      class="w-2/3 max-w-3xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start ">
+      <Image
+        class="ml-6"
+        src={developerImage}
+        height="600"
+        loading="eager"
+        alt="A happy developer in a suit"
+      />
+    </div>
+  </div>
+</section>
+
+<noscript>
+  <style>
+    #splash-bg-fallback {
+      display: block;
+    }
+  </style>
+</noscript>
+

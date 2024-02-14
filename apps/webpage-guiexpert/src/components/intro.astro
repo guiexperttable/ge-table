@@ -1,0 +1,34 @@
+---
+import { Icon } from "astro-icon";
+import ContentSection from "~/components/content-section.astro";
+import GetStartedFooter from "~/components/getstarted/common/get-started-footer.astro";
+import Glogo from "./glogo.astro";
+---
+
+<ContentSection title="JavaScript Data Table" id="intro">
+  <Glogo slot="eyebrow" class="h-24 text-white md:h-32" size="100" />
+  <Fragment slot="lead">
+
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <p>
+        The "GUI Expert Table" is designed to seamlessly integrate with <span class="text-primary">Angular</span>
+        but also works with <span class="text-primary">plain JavaScript,
+        React, Preact, Vue.js, Svelte, and Solid</span>. It is framework-agnostic. </p>
+
+      <p>
+        The underlying UI model is highly flexible, allowing you to create a wide range of tables, including
+        <span class="text-primary">flat
+          tables, tree tables</span>, columns with rowspan cells, and much more. </p>
+      <p>
+        "GUI Expert Table" can be easily used for simple flat tables with the help of the table model factory helper,
+        but it's also suitable for handling very complex tables.
+        It has been <span class="text-primary">optimized for performance</span>, making it ideal
+        for managing <span class="text-primary">large datasets</span> or handling real-time updates
+        with hundreds of updates per second, all rendered at
+        60 frames per second (fps). </p>
+    </div>
+  </Fragment>
+
+  <GetStartedFooter />
+
+</ContentSection>

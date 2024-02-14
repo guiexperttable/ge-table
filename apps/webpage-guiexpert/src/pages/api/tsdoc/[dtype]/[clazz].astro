@@ -1,0 +1,30 @@
+---
+import doctype from '../../../../content/docs/doctype.json';
+
+// TODO later
+export async function getStaticPaths() {
+  const data = doctype.children.map(c => {
+    return {
+      name: c.name,
+      variant: c.variant
+    }
+  });
+  return [
+    {params: {dtype: 'interfaces', clazz: 'TableModelIf.html'}},
+    ...data.map(item => {
+      return {params: {dtype: item.variant, clazz: item.name + '.html'}}
+    })
+  ];
+}
+
+// console.info(JSON.stringify(await getStaticPaths(), null, 2));
+
+
+const {dtype, clazz} = Astro.params;
+---
+
+<h1>2</h1>
+
+<p>dtype: {dtype}</p><p>clazz: {clazz}</p>
+
+<pre>bbbb</pre>

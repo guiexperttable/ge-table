@@ -1,0 +1,18 @@
+---
+import IndexLayout from '../../layouts/IndexLayout.astro';
+import Header from "../../components/header.astro";
+import React from "../../components/getstarted/svelte.md";
+import GetStartedSection from "../../components/getstarted/common/get-started-section.astro";
+
+const title = 'Get stated (Svelte)';
+---
+<IndexLayout title={title}>
+  <Header splashMode={false}  smallGap={false} />
+
+  <GetStartedSection title="Get started" id="getstarted">
+    <Fragment slot="lead">
+      Svelte
+    </Fragment>
+    <React title={title}/>
+  </GetStartedSection>
+</IndexLayout>

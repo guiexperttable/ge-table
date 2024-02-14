@@ -1,0 +1,19 @@
+---
+import IndexLayout from '../../layouts/IndexLayout.astro';
+import Header from "../../components/header.astro";
+import PlainJS from "../../components/getstarted/plainjs.md";
+import GetStartedSection from "../../components/getstarted/common/get-started-section.astro";
+
+const title = 'Get started (plain JS)';
+---
+<IndexLayout title={title}>
+  <Header splashMode={false} smallGap={false} />
+
+  <GetStartedSection title="Get started" id="getstarted">
+    <Fragment slot="lead">
+      Plain JavaScript / TypeScript
+    </Fragment>
+    <PlainJS title={title}/>
+  </GetStartedSection>
+</IndexLayout>
+

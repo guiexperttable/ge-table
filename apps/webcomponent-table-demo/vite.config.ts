@@ -1,42 +1,34 @@
-/// <reference types="vitest" />
-import { defineConfig } from "vite";
 
-import viteTsConfigPaths from "vite-tsconfig-paths";
+import {defineConfig} from 'vite';
+import {join} from "path";
 
 export default defineConfig({
-  cacheDir: "../../node_modules/.vite/webcomponent-table-demo",
+  cacheDir: '../../node_modules/.vite/webcomponent-table-demo',
 
   server: {
     port: 4200,
-    host: "localhost"
+    host: 'localhost',
   },
 
   preview: {
     port: 4300,
-    host: "localhost"
+    host: 'localhost',
   },
 
-  plugins: [
-    viteTsConfigPaths({
-      root: "../../"
-    })
-  ],
-
-  // Uncomment this if you are using workers.
-  // worker: {
-  //  plugins: [
-  //    viteTsConfigPaths({
-  //      root: '../../',
-  //    }),
-  //  ],
-  // },
-
-  test: {
-    globals: true,
-    cache: {
-      dir: "../../node_modules/.vitest"
-    },
-    environment: "jsdom",
-    include: ["src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"]
+  resolve: {
+    alias: [
+      {
+        find: /@guiexpert\/table/,
+        replacement: join(__dirname, '../..', 'packages', 'table', 'src'),
+      },
+      {
+        find: /@guiexpert\/webcomponent-table/,
+        replacement: join(__dirname, '../..', 'packages', 'webcomponent-table', 'src'),
+      },
+      {
+        find: /@guiexpert\/demo-table-models/,
+        replacement: join(__dirname, '../..', 'packages', 'demo-table-models', 'src'),
+      },
+    ],
   }
 });
