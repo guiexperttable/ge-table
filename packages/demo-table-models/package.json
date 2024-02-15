@@ -1,6 +1,6 @@
 {
   "name": "@guiexpert/demo-table-models",
-  "version": "1.0.12",
+  "version": "1.0.14",
   "type": "module",
   "main": "./index.js",
   "types": "./index.d.ts",
@@ -10,8 +10,8 @@
   "scripts": {
     "i": "pnpm i",
     "patch-version": "node patch.js",
-    "build": "vite build && node fix-dependecies.js",
-    "npm-pub": "npm publish --access public"
+    "build": "vite build",
+    "npm-pub": "pnpm publish --access public"
   },
   "exports": {
     ".": {
