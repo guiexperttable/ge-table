@@ -1,6 +1,6 @@
 {
   "name": "@guiexpert/table",
-  "version": "1.1.22",
+  "version": "1.1.23",
   "private": false,
   "type": "module",
   "main": "./index.js",
@@ -22,8 +22,8 @@
   },
   "exports": {
     ".": {
-      "import": "./index.js",
-      "require": "./index.cjs"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     }
   },
   "dependencies": {

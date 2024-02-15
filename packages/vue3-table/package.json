@@ -1,6 +1,6 @@
 {
   "name": "@guiexpert/vue3-table",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "type": "commonjs",
   "main": "./index.js",
   "types": "./index.d.ts",
@@ -15,8 +15,8 @@
   },
   "exports": {
     ".": {
-      "import": "./index.js",
-      "require": "./index.cjs"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     }
   },
   "dependencies": {

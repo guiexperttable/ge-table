@@ -1,6 +1,6 @@
 {
   "name": "@guiexpert/react-table",
-  "version": "18.0.5",
+  "version": "18.0.6",
   "type": "module",
   "main": "./index.js",
   "types": "./index.d.ts",
@@ -15,8 +15,8 @@
   },
   "exports": {
     ".": {
-      "import": "./index.js",
-      "require": "./index.cjs"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     }
   },
   "dependencies": {
