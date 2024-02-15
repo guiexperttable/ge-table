@@ -13,8 +13,6 @@
     "build:all": "pnpm run -r build",
     "pub:all": "pnpm pub:table & pnpm pub:demo-table-models & pnpm pub:react-table & pnpm pub:preact-table & pnpm pub:solid-table & pnpm pub:svelte-table & pnpm pub:vue3-table &  pnpm pub:webcomponent-table  ",
 
-
-
     "build:preact-table-demo": "pnpm --filter preact-table-demo build",
     "serve:preact-table-demo": "pnpm --filter preact-table-demo dev",
     "build:react-table-demo": "pnpm --filter react-table-demo build",
