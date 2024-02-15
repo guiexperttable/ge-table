@@ -1,6 +1,6 @@
 {
   "name": "@guiexpert/table",
-  "version": "1.1.21",
+  "version": "1.1.22",
   "private": false,
   "type": "module",
   "main": "./index.js",
@@ -18,7 +18,7 @@
     "typedoc:docs-html": "npx typedoc --out ../../apps/table-website/src/assets/docs src/index.ts",
     "typedoc:docs-html-custom-css": "npx typedoc --customCss ./doc.css --out ../../apps/table-website/src/assets/docs src/index.ts",
     "typedoc:docs-md": "npx typedoc --plugin typedoc-plugin-markdown --out ../../apps/table-website/src/assets/docsmd src/index.ts",
-    "npm-pub": "npm publish --access public"
+    "npm-pub": "pnpm publish --access public"
   },
   "exports": {
     ".": {

@@ -1,6 +1,6 @@
 {
   "name": "@guiexpert/vue3-table",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "type": "commonjs",
   "main": "./index.js",
   "types": "./index.d.ts",
@@ -11,7 +11,7 @@
     "i": "pnpm i",
     "patch-version": "node patch.js",
     "build": "vite build",
-    "npm-pub": "npm publish --access public"
+    "npm-pub": "pnpm publish --access public"
   },
   "exports": {
     ".": {

@@ -9,6 +9,11 @@
     "i": "pnpm i",
     "test": "echo \"Error: no test specified\" && exit 1",
 
+    "patch:all": "pnpm patch:table & pnpm patch:demo-table-models & pnpm patch:react-table & pnpm patch:preact-table & pnpm patch:solid-table & pnpm patch:svelte-table & pnpm patch:vue3-table &  pnpm patch:webcomponent-table",
+    "build:all": "pnpm run -r build",
+    "pub:all": "pnpm pub:table & pnpm pub:demo-table-models & pnpm pub:react-table & pnpm pub:preact-table & pnpm pub:solid-table & pnpm pub:svelte-table & pnpm pub:vue3-table &  pnpm pub:webcomponent-table  ",
+
+
 
     "build:preact-table-demo": "pnpm --filter preact-table-demo build",
     "serve:preact-table-demo": "pnpm --filter preact-table-demo dev",
@@ -38,8 +43,6 @@
     "build:vue3-table": "pnpm --filter vue3-table build",
     "build:webcomponent-table": "pnpm --filter webcomponent-table build",
 
-    "build:all": "pnpm run -r build",
-
     "patch:table": "pnpm --filter table patch-version",
     "patch:demo-table-models": "pnpm --filter demo-table-models patch-version",
     "patch:react-table": "pnpm --filter react-table patch-version",
@@ -48,7 +51,6 @@
     "patch:svelte-table": "pnpm --filter svelte-table patch-version",
     "patch:vue3-table": "pnpm --filter vue3-table patch-version",
     "patch:webcomponent-table": "pnpm --filter webcomponent-table patch-version",
-    "patch:all": "pnpm patch:table & pnpm patch:demo-table-models & pnpm patch:react-table & pnpm patch:preact-table & pnpm patch:solid-table & pnpm patch:svelte-table & pnpm patch:vue3-table &  pnpm patch:webcomponent-table",
 
     "pub:table": "pnpm --filter table npm-pub",
     "pub:demo-table-models": "pnpm --filter demo-table-models npm-pub",
@@ -57,8 +59,7 @@
     "pub:solid-table": "pnpm --filter solid-table npm-pub",
     "pub:svelte-table": "pnpm --filter svelte-table npm-pub",
     "pub:vue3-table": "pnpm --filter vue3-table npm-pub",
-    "pub:webcomponent-table": "pnpm --filter webcomponent-table npm-pub",
-    "pub:all": "pnpm pub:table & pnpm pub:demo-table-models & pnpm pub:react-table & pnpm pub:preact-table & pnpm pub:solid-table & pnpm pub:svelte-table & pnpm pub:vue3-table &  pnpm pub:webcomponent-table  "
+    "pub:webcomponent-table": "pnpm --filter webcomponent-table npm-pub"
   },
   "keywords": [],
   "author": ""
