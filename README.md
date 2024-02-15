@@ -41,19 +41,21 @@ This mono repository leverages the package-based approach and utilizes [pnPM](ht
 
 ### Commands
 
-| Command                                 | Action                                                  |
-|:----------------------------------------|:--------------------------------------------------------|
-| `npm run i`                             | Install dependencies via pnpm                           |
-| `npm run build:all`                     | Build all artefacts via pnpm                            |
-|                                         |                                                         |
-| `npm run serve:preact-table-demo`       | Start local dev server with **preact**-table-demo       |
-| `npm run serve:react-table-demo`        | Start local dev server with **react**-table-demo        |
-| `npm run serve:solid-table-demo`        | Start local dev server with **solid**-table-demo        |
-| `npm run serve:svelte-table-demo`       | Start local dev server with **svelte**-table-demo       |
-| `npm run serve:table-demo`              | Start local dev server with **table**-demo`             |
-| `npm run serve:vue3-table-demo`         | Start local dev server with **vue3**-table-demo`        |
-| `npm run serve:webcomponent-table-demo` | Start local dev server with **webcomponent**-table-demo |
-| `npm run serve:webpage-guiexpert`       | Start local astro server with **http://gui.expert** website |
+| Command                                  | Action                                                      |
+|:-----------------------------------------|:------------------------------------------------------------|
+| `npm run i`                              | Install all dependencies via pnpm                           |
+| `npm run patch:all`                      | **Patch** version in every package.json of all artefacts    |
+| `npm run build:all`                      | **Build all** artefacts via pnpm                            |
+| `npm run pub:all`                        | **Publish all** libs to npm                                 |
+|                                          |                                                             |
+| `npm run serve:preact-table-demo`        | Start local dev server with **preact**-table-demo           |
+| `npm run serve:react-table-demo`         | Start local dev server with **react**-table-demo            |
+| `npm run serve:solid-table-demo`         | Start local dev server with **solid**-table-demo            |
+| `npm run serve:svelte-table-demo`        | Start local dev server with **svelte**-table-demo           |
+| `npm run serve:table-demo`               | Start local dev server with **table**-demo`                 |
+| `npm run serve:vue3-table-demo`          | Start local dev server with **vue3**-table-demo`            |
+| `npm run serve:webcomponent-table-demo`  | Start local dev server with **webcomponent**-table-demo     |
+| `npm run serve:webpage-guiexpert`        | Start local astro server with **http://gui.expert** website |
 
 
 
