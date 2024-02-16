@@ -7,7 +7,7 @@ This is the react component of the GuiExpert Table Project.
 
 This is the UI-agnostic table component for your next web app. 😊
 
-<img src="https://raw.githubusercontent.com/guiexperttable/ge-table/main/apps/table-website/src/assets/screens/heatmap.png" width="50%">
+<img src="https://raw.githubusercontent.com/guiexperttable/ge-table/main/apps/webpage-guiexpert/src/assets/screens/heatmap.png" width="50%">
 
 ### Features
 - Handle large datasets easily
