@@ -77,3 +77,34 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+.logo-fill-color-0 {
+  fill-opacity: 0.9;
+  stroke-opacity: 0.8;
+}
+.logo-fill-color-1 {
+  fill-opacity: 0;
+  stroke-opacity: 0.6;
+}
+.logo-fill-color-2 {
+  fill-opacity: 0.5;
+  stroke-opacity: 0.8;
+}
+.logo-fill-color-3 {
+  fill-opacity: 0.9;
+  stroke-opacity: 0.8;
+}
+
+.gradient-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to bottom right,var(--tw-gradient-stops));
+  --tw-gradient-from: #6366f1 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(99 102 241 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: rgb(217 70 239 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #d946ef var(--tw-gradient-via-position), var(--tw-gradient-to);
+  --tw-gradient-to: #ec4899 var(--tw-gradient-to-position);
+}
