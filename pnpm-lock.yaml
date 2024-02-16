@@ -12,13 +12,13 @@ importers:
     dependencies:
       '@guiexpert/demo-table-models':
         specifier: workspace:^
-        version: link:../../packages/demo-table-models
+        version: link:../../packages/demo-table-models/dist
       '@guiexpert/preact-table':
         specifier: workspace:^
-        version: link:../../packages/preact-table
+        version: link:../../packages/preact-table/dist
       '@guiexpert/table':
         specifier: workspace:^
-        version: link:../../packages/table
+        version: link:../../packages/table/dist
       preact:
         specifier: ^10.18.2
         version: 10.19.4
@@ -82,13 +82,13 @@ importers:
     dependencies:
       '@guiexpert/demo-table-models':
         specifier: workspace:^
-        version: link:../../packages/demo-table-models
+        version: link:../../packages/demo-table-models/dist
       '@guiexpert/react-table':
         specifier: workspace:^
-        version: link:../../packages/react-table
+        version: link:../../packages/react-table/dist
       '@guiexpert/table':
         specifier: workspace:^
-        version: link:../../packages/table
+        version: link:../../packages/table/dist
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -149,13 +149,13 @@ importers:
     dependencies:
       '@guiexpert/demo-table-models':
         specifier: workspace:^
-        version: link:../../packages/demo-table-models
+        version: link:../../packages/demo-table-models/dist
       '@guiexpert/solid-table':
         specifier: workspace:^
-        version: link:../../packages/solid-table
+        version: link:../../packages/solid-table/dist
       '@guiexpert/table':
         specifier: workspace:^
-        version: link:../../packages/table
+        version: link:../../packages/table/dist
       solid-js:
         specifier: ^1.6.10
         version: 1.8.14
@@ -204,13 +204,13 @@ importers:
     dependencies:
       '@guiexpert/demo-table-models':
         specifier: workspace:^
-        version: link:../../packages/demo-table-models
+        version: link:../../packages/demo-table-models/dist
       '@guiexpert/svelte-table':
         specifier: workspace:^
-        version: link:../../packages/svelte-table
+        version: link:../../packages/svelte-table/dist
       '@guiexpert/table':
         specifier: workspace:^
-        version: link:../../packages/table
+        version: link:../../packages/table/dist
       tslib:
         specifier: ^2.3.0
         version: 2.6.2
@@ -274,10 +274,10 @@ importers:
     dependencies:
       '@guiexpert/demo-table-models':
         specifier: workspace:^
-        version: link:../../packages/demo-table-models
+        version: link:../../packages/demo-table-models/dist
       '@guiexpert/table':
         specifier: workspace:^
-        version: link:../../packages/table
+        version: link:../../packages/table/dist
       tslib:
         specifier: ^2.3.0
         version: 2.6.2
@@ -313,17 +313,36 @@ importers:
         specifier: ^4.2.1
         version: 4.3.1(typescript@5.2.2)(vite@5.1.1)
 
+  apps/vue3-multi-demo:
+    dependencies:
+      vue:
+        specifier: ^3.4.15
+        version: 3.4.19(typescript@5.2.2)
+    devDependencies:
+      '@vitejs/plugin-vue':
+        specifier: ^5.0.3
+        version: 5.0.4(vite@5.1.1)(vue@3.4.19)
+      typescript:
+        specifier: ^5.2.2
+        version: 5.2.2
+      vite:
+        specifier: ^5.1.0
+        version: 5.1.1(@types/node@20.11.17)
+      vue-tsc:
+        specifier: ^1.8.27
+        version: 1.8.27(typescript@5.2.2)
+
   apps/vue3-table-demo:
     dependencies:
       '@guiexpert/demo-table-models':
         specifier: workspace:^
-        version: link:../../packages/demo-table-models
+        version: link:../../packages/demo-table-models/dist
       '@guiexpert/table':
         specifier: workspace:^
-        version: link:../../packages/table
+        version: link:../../packages/table/dist
       '@guiexpert/vue3-table':
         specifier: workspace:^
-        version: link:../../packages/vue3-table
+        version: link:../../packages/vue3-table/dist
       tslib:
         specifier: ^2.3.0
         version: 2.6.2
@@ -411,13 +430,13 @@ importers:
     dependencies:
       '@guiexpert/demo-table-models':
         specifier: workspace:^
-        version: link:../../packages/demo-table-models
+        version: link:../../packages/demo-table-models/dist
       '@guiexpert/table':
         specifier: workspace:^
-        version: link:../../packages/table
+        version: link:../../packages/table/dist
       '@guiexpert/webcomponent-table':
         specifier: workspace:^
-        version: link:../../packages/webcomponent-table
+        version: link:../../packages/webcomponent-table/dist
       tslib:
         specifier: ^2.3.0
         version: 2.6.2
@@ -524,7 +543,7 @@ importers:
     dependencies:
       '@guiexpert/table':
         specifier: workspace:^
-        version: link:../table
+        version: link:../table/dist
       tslib:
         specifier: ^2.3.0
         version: 2.6.2
@@ -568,12 +587,13 @@ importers:
       vite-tsconfig-paths:
         specifier: ^4.2.1
         version: 4.3.1(typescript@5.2.2)(vite@5.1.1)
+    publishDirectory: dist
 
   packages/preact-table:
     dependencies:
       '@guiexpert/table':
         specifier: workspace:^
-        version: link:../table
+        version: link:../table/dist
       preact:
         specifier: ^10.19.4
         version: 10.19.4
@@ -626,12 +646,13 @@ importers:
       vite-tsconfig-paths:
         specifier: ^4.2.1
         version: 4.3.1(typescript@5.2.2)(vite@5.1.1)
+    publishDirectory: dist
 
   packages/react-table:
     dependencies:
       '@guiexpert/table':
         specifier: workspace:^
-        version: link:../table
+        version: link:../table/dist
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -687,12 +708,13 @@ importers:
       vite-tsconfig-paths:
         specifier: ^4.2.1
         version: 4.3.1(typescript@5.2.2)(vite@5.1.1)
+    publishDirectory: dist
 
   packages/solid-table:
     dependencies:
       '@guiexpert/table':
         specifier: workspace:^
-        version: link:../table
+        version: link:../table/dist
       tslib:
         specifier: ^2.3.0
         version: 2.6.2
@@ -748,12 +770,13 @@ importers:
       vite-tsconfig-paths:
         specifier: ^4.2.1
         version: 4.3.1(typescript@5.2.2)(vite@5.1.1)
+    publishDirectory: dist
 
   packages/svelte-table:
     dependencies:
       '@guiexpert/table':
         specifier: workspace:^
-        version: link:../table
+        version: link:../table/dist
       preact:
         specifier: ^10.19.4
         version: 10.19.4
@@ -824,6 +847,7 @@ importers:
       vite-tsconfig-paths:
         specifier: ^4.2.1
         version: 4.3.1(typescript@5.2.2)(vite@5.1.1)
+    publishDirectory: dist
 
   packages/table:
     dependencies:
@@ -870,12 +894,13 @@ importers:
       vite-tsconfig-paths:
         specifier: ^4.2.1
         version: 4.3.1(typescript@5.2.2)(vite@5.1.1)
+    publishDirectory: dist
 
   packages/vue3-table:
     dependencies:
       '@guiexpert/table':
         specifier: workspace:^
-        version: link:../table
+        version: link:../table/dist
       tslib:
         specifier: ^2.3.0
         version: 2.6.2
@@ -946,12 +971,13 @@ importers:
       vue-eslint-parser:
         specifier: ^9.1.0
         version: 9.4.2(eslint@8.56.0)
+    publishDirectory: dist
 
   packages/webcomponent-table:
     dependencies:
       '@guiexpert/table':
         specifier: workspace:^
-        version: link:../table
+        version: link:../table/dist
       tslib:
         specifier: ^2.3.0
         version: 2.6.2
@@ -986,6 +1012,7 @@ importers:
       vite-tsconfig-paths:
         specifier: ^4.2.1
         version: 4.3.1(typescript@5.2.2)(vite@5.1.1)
+    publishDirectory: dist
 
 packages:
 
@@ -4449,6 +4476,17 @@ packages:
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       vite: ^4.0.0 || ^5.0.0
+      vue: ^3.2.25
+    dependencies:
+      vite: 5.1.1(@types/node@20.11.17)
+      vue: 3.4.19(typescript@5.2.2)
+    dev: true
+
+  /@vitejs/plugin-vue@5.0.4(vite@5.1.1)(vue@3.4.19):
+    resolution: {integrity: sha512-WS3hevEszI6CEVEx28F8RjTX97k3KsrcY6kvTg7+Whm5y3oYvcqzVeGCU3hxSAn4uY2CLCkeokkGKpoctccilQ==}
+    engines: {node: ^18.0.0 || >=20.0.0}
+    peerDependencies:
+      vite: ^5.0.0
       vue: ^3.2.25
     dependencies:
       vite: 5.1.1(@types/node@20.11.17)
