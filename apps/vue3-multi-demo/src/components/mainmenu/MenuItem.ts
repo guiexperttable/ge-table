@@ -1,8 +1,8 @@
 
 export class MenuItem {
   constructor(
-    public label: string,
-    public url: string,
+    public name: string,
+    public path: string,
     public icon: string = 'home',
   ) {
   }

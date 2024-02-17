@@ -20,7 +20,7 @@
       </q-item-section>
       <q-item-section  style="align-items: flex-start">
         <q-item-label>Item with caption</q-item-label>
-        <router-link :to="item.url">{{item.label}}</router-link>
+        <router-link :to="item.path">{{ item.name }}</router-link>
       </q-item-section>
     </q-item>
 
@@ -32,14 +32,11 @@
 
  import { ref } from 'vue';
  import { MenuItem } from './MenuItem.ts';
+ import demoItems from '../demos/demos.ts';
 
  const items = ref([
    new MenuItem('Home', '/', 'home'),
-   new MenuItem('About', '/about', 'navigate_next'),
-   new MenuItem('About', '/about', 'table_rows'),
-   new MenuItem('About', '/about', 'favorite'),
-   new MenuItem('About', '/about', 'star'),
-   new MenuItem('About', '/about', 'radio_button_unchecked'),
+   ...demoItems
  ]);
 
 </script>
