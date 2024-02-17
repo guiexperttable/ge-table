@@ -13,13 +13,14 @@
     </q-header>
 
     <q-drawer show-if-above v-model="leftDrawerOpen" side="left" bordered>
-      <!-- drawer content -->
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <MainMenue></MainMenue>
     </q-drawer>
 
     <q-page-container>
       <router-view />
+      <q-page-sticky position="bottom-right" :offset="[18, 18]">
+        <q-btn fab icon="add" color="accent"></q-btn>
+      </q-page-sticky>
     </q-page-container>
 
   </q-layout>
@@ -27,6 +28,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import MainMenue from './components/mainmenu/MainMenue.vue';
 
 
 const leftDrawerOpen = ref(false);
