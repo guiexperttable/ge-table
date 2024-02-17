@@ -1,3 +1,5 @@
+@import './assets/css/global.css';
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -59,10 +61,10 @@ button:focus-visible {
 }
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100vw;
+  margin: auto 0;
+  padding: 0;
+  min-height: 100vh;
 }
 
 @media (prefers-color-scheme: light) {
@@ -107,4 +109,10 @@ button:focus-visible {
   --tw-gradient-to: rgb(217 70 239 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), #d946ef var(--tw-gradient-via-position), var(--tw-gradient-to);
   --tw-gradient-to: #ec4899 var(--tw-gradient-to-position);
+}
+
+
+.q-page-container {
+  width: 100vw;
+  min-height: calc(100vh - 50px);
 }
