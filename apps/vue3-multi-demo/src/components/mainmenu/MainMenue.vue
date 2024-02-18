@@ -19,7 +19,7 @@
 <script setup lang="ts">
 
  import { ref } from 'vue';
- import demoItems from '../demos/demos.ts';
+ import demoItems from '../../router/demos.ts';
 
  const items = ref([
    ...demoItems

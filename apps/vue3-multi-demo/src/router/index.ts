@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory, Router, RouteRecordRaw } from 'vue-router';
-import demoItems from '../components/demos/demos.ts';
+import demoItems from './demos.ts';
 
 const routes: RouteRecordRaw[] = [
   ...demoItems

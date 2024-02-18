@@ -1,4 +1,4 @@
-import { MenuItem } from '../mainmenu/MenuItem.ts';
+import { MenuItem } from './MenuItem.ts';
 
 import { RouteComponent, RouteRecordSingleView } from 'vue-router';
 

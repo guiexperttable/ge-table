@@ -116,3 +116,8 @@ button:focus-visible {
   width: 100vw;
   min-height: calc(100vh - 50px);
 }
+.page {
+  width: 100%;
+  min-height: calc(100vh - 50px);
+  padding: 16px;
+}
