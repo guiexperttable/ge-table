@@ -1,5 +1,23 @@
 <template>
   <div class="table-div tree-table-demo">
+    <div class="filter-div">
+      <q-input bottom-slots v-model="filterText" label="Filter" counter maxlength="22" :dense="dense"
+               @update:modelValue="onFilterTextChanged">
+        <template v-slot:before>
+          <q-icon name="search"></q-icon>
+        </template>
+
+        <template v-slot:append>
+          <q-icon v-if="filterText !== ''" name="close" @click="filterText = ''" class="cursor-pointer"></q-icon>
+        </template>
+
+        <template v-slot:hint>
+          Field hint
+        </template>
+      </q-input>
+
+      <!--button mat-flat-button (click)="onCopyClicked()">Copy</button-->
+    </div>
     <guiexpert-table
       :tableModel="tableModel"
       :tableOptions="tableOptions"
@@ -7,14 +25,7 @@
       @modelChanged="onModelChanged($event)"
     ></guiexpert-table>
   </div>
-  <!--div class="filter-div">
-    <mat-form-field appearance="fill">
-      <mat-label>Filter</mat-label>
-      <input (keyup)="onKeyup()" matInput>
-    </mat-form-field>
 
-    <button mat-flat-button (click)="onCopyClicked()">Copy</button>
-  </div-->
 
 </template>
 
@@ -53,8 +64,9 @@ import {
   TrueFn,
   ValueLabel
 } from "@guiexpert/table";
+import { ref } from 'vue';
 
-
+let dense = ref(true);
 const selectionModel = new SelectionModel("range", "multi");
 let filterText = "";
 
@@ -69,6 +81,12 @@ function onTableReady($event: TableApi) {
 
 function onModelChanged(evt: GeModelChangeEvent) {
   console.info(evt);
+}
+
+function onFilterTextChanged() {
+  if (tableApi) {
+    tableApi.externalFilterChanged();
+  }
 }
 
 // Table options:
@@ -150,8 +168,22 @@ console.info('tree', tree);
 </script>
 
 <style lang="postcss">
-.table-div.tree-table-demo {
+.table-div {
   width: 100%;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 50px);
+  display: grid;
+  grid-template-rows: 50px 1fr;
+}
+.tree-table-demo .filter-div {
+  display: grid;
+  grid-template-columns: 200px 100px;
+  grid-gap: 20px;
+  //position: absolute;
+  //top: 4px;
+  //left: 226px;
+  //width: 350px;
+  height: 50px;
+  overflow-y: clip;
+  //opacity: 0.5;
 }
 </style>
