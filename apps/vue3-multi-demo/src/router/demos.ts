@@ -9,6 +9,7 @@ const demoItems: DemoItem[] = [
   new DemoItem("Multi Sizes", "/multisize", 'table_rows', () => import('../components/demos/multisize/MultiSize.vue'), 'Multiple cell heights and widths'),
   new DemoItem("CSS Style", "/style", 'table_rows', () => import('../components/demos/style/CssStyle.vue'), 'Cell style'),
   new DemoItem("Object Array", "/objectarray", 'table_rows', () => import('../components/demos/objectarray/ObjectArray.vue'), 'Array of business objects'),
+  new DemoItem("Tree Table", "/treetable", 'table_rows', () => import('../components/demos/treetable/TreeTable.vue'), 'Tree Table of business objects'),
 ];
 
 

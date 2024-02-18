@@ -1,11 +1,10 @@
 <template>
-    <div class="table-div multi-size-demo">
+    <div class="table-div object-array-demo">
       <guiexpert-table
         :tableModel="tableModel"
         :tableOptions="tableOptions"
       ></guiexpert-table>
     </div>
-  <div class="table-div multi-size-demo">Loading...</div>
 </template>
 
 
@@ -38,7 +37,7 @@ const tableModel = TableFactory.createTableModel({
 </script>
 
 <style lang="postcss">
-.table-div.multi-size-demo {
+.table-div.object-array-demo {
   width: 100%;
   height: calc(100vh - 50px);
 }
