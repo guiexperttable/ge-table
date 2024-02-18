@@ -21,6 +21,12 @@ const demoItems: DemoItem[] = [
     'dashboard',
     () => import('../components/demos/rowandcolspan/RowAndColspan.vue'),
     'Tablemodel with Rowspan and Colspan'),
+  new DemoItem(
+    "Mouse events",
+    "/mouseevents",
+    'mouse',
+    () => import('../components/demos/mouseevents/MouseEvents.vue'),
+    'Mouse events: click, move and context menu'),
 ];
 
 
