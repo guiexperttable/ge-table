@@ -1,7 +1,7 @@
 <template>
   <div class="table-div tree-table-demo">
     <div class="filter-div">
-      <q-input bottom-slots v-model="filterText" label="Filter" counter maxlength="22" :dense="dense"
+      <q-input bottom-slots v-model="filterText" label="Filter" counter maxlength="20" :dense="dense"
                @update:modelValue="onFilterTextChanged">
         <template v-slot:before>
           <q-icon name="search"></q-icon>
@@ -12,11 +12,12 @@
         </template>
 
         <template v-slot:hint>
-          Field hint
+          Enter filter text
         </template>
       </q-input>
 
-      <!--button mat-flat-button (click)="onCopyClicked()">Copy</button-->
+      <q-fab-action color="primary" @click="onCopyClicked" icon="content_copy" label="Copy"></q-fab-action>
+
     </div>
     <guiexpert-table
       :tableModel="tableModel"
@@ -86,6 +87,12 @@ function onModelChanged(evt: GeModelChangeEvent) {
 function onFilterTextChanged() {
   if (tableApi) {
     tableApi.externalFilterChanged();
+  }
+}
+
+function onCopyClicked() {
+  if (tableApi) {
+    tableApi.copyToClipboard().then(console.info);
   }
 }
 
@@ -172,18 +179,15 @@ console.info('tree', tree);
   width: 100%;
   height: calc(100vh - 50px);
   display: grid;
-  grid-template-rows: 50px 1fr;
+  grid-template-rows: 70px 1fr;
 }
 .tree-table-demo .filter-div {
   display: grid;
+  align-items: center;
+  align-content: center;
   grid-template-columns: 200px 100px;
   grid-gap: 20px;
-  //position: absolute;
-  //top: 4px;
-  //left: 226px;
-  //width: 350px;
-  height: 50px;
+  height: 70px;
   overflow-y: clip;
-  //opacity: 0.5;
 }
 </style>
