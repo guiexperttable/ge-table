@@ -1,3 +1,4 @@
 <template>
-  <h1>Home Page</h1>
+  <h1>GUI Expert</h1>
+  <h2>Table Demos (vue.js)</h2>
 </template>

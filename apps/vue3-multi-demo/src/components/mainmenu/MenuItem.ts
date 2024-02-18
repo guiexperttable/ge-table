@@ -4,6 +4,7 @@ export class MenuItem {
     public name: string,
     public path: string,
     public icon: string = 'home',
+    public caption: string = '',
   ) {
   }
 }

@@ -1,12 +1,12 @@
-import Simple from './simple/Simple.vue';
-import MultiSize from './multisize/MultiSize.vue';
-import About from '../../views/About.vue';
+
 import { DemoItem } from './DemoItem.ts';
+import Home from '../../views/Home.vue';
 
 const demoItems: DemoItem[] = [
-  { path: "/about", name: "About", component: About, icon: 'table_rows'},
-  { path: "/simple", name: "Simple", component: Simple, icon: 'table_rows'},
-  { path: "/multisize", name: "Multi Sizes", component: MultiSize, icon: 'table_rows'},
+  new DemoItem("Home", "/home", 'home', Home),
+  new DemoItem("Overview", "/overview", 'visibility', () => import('../../views/Overview.vue')),
+  new DemoItem("Simple", "/simple", 'table_rows', () => import('./simple/Simple.vue'), 'Array of Arrays'),
+  new DemoItem("Multi Sizes", "/multisize", 'table_rows', () => import('./multisize/MultiSize.vue'), 'Multiple cell heights and widths')
 ];
 
 

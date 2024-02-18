@@ -11,8 +11,10 @@ export class DemoItem  extends MenuItem implements RouteRecordSingleView {
     public path: string,
     public icon: string,
     public component: RouteComponent | Lazy<RouteComponent>,
+    public caption: string = '',
+    public description: string[] = [],
   ) {
-    super(name, path, icon);
+    super(name, path, icon, caption);
   }
 
 
