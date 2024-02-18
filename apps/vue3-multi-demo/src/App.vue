@@ -17,7 +17,9 @@
     </q-drawer>
 
     <q-page-container>
+      <Suspense>
       <router-view />
+      </Suspense>
       <!--q-page-sticky position="bottom-right" :offset="[18, 18]">
         <q-btn fab icon="add" color="accent"></q-btn>
       </q-page-sticky-->
@@ -27,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, Suspense } from 'vue';
 import MainMenue from './components/mainmenu/MainMenue.vue';
 
 

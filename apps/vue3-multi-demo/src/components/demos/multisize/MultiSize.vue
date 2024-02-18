@@ -2,7 +2,6 @@
   <div class="table-div multi-size-demo">
     <guiexpert-table
       :tableModel="tableModel"
-      class="table-div"
     ></guiexpert-table>
   </div>
 </template>
