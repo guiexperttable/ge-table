@@ -1,6 +1,7 @@
 <template>
   <div class="table-div tree-table-demo">
-    <div class="filter-div">
+    <div class="filter-div" v-if="tableModel">
+      <!--
       <q-input bottom-slots v-model="filterText" label="Filter" counter maxlength="20" :dense="dense"
                @update:modelValue="onFilterTextChanged">
         <template v-slot:before>
@@ -17,7 +18,7 @@
       </q-input>
 
       <q-fab-action color="primary" @click="onCopyClicked" icon="content_copy" label="Copy"></q-fab-action>
-
+-->
     </div>
     <guiexpert-table
       :tableModel="tableModel"
@@ -65,9 +66,9 @@ import {
   TrueFn,
   ValueLabel
 } from "@guiexpert/table";
-import { ref } from 'vue';
+// import { ref } from 'vue';
 
-let dense = ref(true);
+// let dense = ref(true);
 const selectionModel = new SelectionModel("range", "multi");
 let filterText = "";
 
@@ -84,17 +85,17 @@ function onModelChanged(evt: GeModelChangeEvent) {
   console.info(evt);
 }
 
-function onFilterTextChanged() {
-  if (tableApi) {
-    tableApi.externalFilterChanged();
-  }
-}
-
-function onCopyClicked() {
-  if (tableApi) {
-    tableApi.copyToClipboard().then(console.info);
-  }
-}
+// function onFilterTextChanged() {
+//   if (tableApi) {
+//     tableApi.externalFilterChanged();
+//   }
+// }
+//
+// function onCopyClicked() {
+//   if (tableApi) {
+//     tableApi.copyToClipboard().then(console.info);
+//   }
+// }
 
 // Table options:
 const tableOptions: TableOptionsIf = {
@@ -171,7 +172,7 @@ const tableModel: TableModelIf = TableFactory.createTableModel({
   fixedLeftColumnCount: 1,
   fixedRightColumnCount: 1
 });
-console.info('tree', tree);
+
 </script>
 
 <style lang="postcss">

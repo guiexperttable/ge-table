@@ -14,20 +14,23 @@ import {
   LicenseManager, SelectionModelIf,
   SimpleDomService,
   TableOptions,
-  TableScope
+  TableScope,
+  TableModelIf, TableOptionsIf
 } from '@guiexpert/table';
-import { defineComponent, onMounted, ref } from "vue";
+import { defineComponent, onMounted, PropType, ref } from 'vue';
 
 
 export default defineComponent({
   inheritAttrs: false,
   props: {
     tableModel: {
-      required: true
+      required: true,
+      type: Object as PropType<TableModelIf>
     },
     tableOptions: {
       required: false,
-      default: new TableOptions()
+      default: new TableOptions(),
+      type: Object as PropType<TableOptionsIf>
     },
     debounceMouseClickDelay: {
       required: false,

@@ -16,7 +16,8 @@
         "./src/lib/*",
         "../../table/src/*"
       ]
-    }
+    },
+    "experimentalDecorators": true
   },
   "references": [
     {

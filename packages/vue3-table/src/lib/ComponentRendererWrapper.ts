@@ -1,6 +1,5 @@
 import { AreaIdent, AreaModelIf, CellRendererIf, DomServiceIf, RendererCleanupFnType } from "@guiexpert/table";
-import { createVNode, render } from "vue";
-import { AppContext, VNode, VNodeProps } from "@vue/runtime-core";
+import { AppContext, createVNode, render, VNode, VNodeProps } from 'vue';
 
 declare type Data = Record<string, unknown>;
 

@@ -1,7 +1,7 @@
 import { FocusType } from "./focus.type";
 import { FocusModelIf } from "./focus-model.if";
 import { EventFocusChangedListenerIf } from './event-focus-changed-listener.if';
-import { AvoidDoubleExecution } from '../../common/decorator/avoid-double-execution.decorator';
+//import { AvoidDoubleExecution } from '../../common/decorator/avoid-double-execution.decorator';
 
 export class FocusModel implements FocusModelIf {
 

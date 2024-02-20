@@ -224,6 +224,9 @@ export class ConvenienceDomService {
 
     const div = this.domService.createElement<HTMLDivElement>("div");
     this.domService.addClass(div, "ge-table-col-div");
+    if (checkboxWithoutExtraColumn) {
+      this.domService.addClass(div, "ge-with-checkbox");
+    }
     this.domService.addClass(div, `ge-table-col-div-${geo.index}`);
     this.domService.setAttribute(div, "data-col-index", `${geo.index}`);
     this.domService.setAttribute(div, "data-row-index", `${rowIndex}`);
@@ -251,6 +254,7 @@ export class ConvenienceDomService {
 
     if (checkboxWithoutExtraColumn && columnIndex === 0 && checkedType) {
       this.addCheckboxToDiv(div, checkedType, areaIdent, rowIndex);
+
     }
     if (text) {
       const firstTreeColumn = (treeArrow !== "none" && columnIndex === 0);
