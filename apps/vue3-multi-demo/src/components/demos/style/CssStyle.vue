@@ -1,5 +1,5 @@
 <template>
-  <div class="table-div style-demo">
+  <div class="style-demo">
     <guiexpert-table
       :tableModel="tableModel"
       class="table-div"
@@ -24,7 +24,7 @@ const tableModel = TableFactory.createTableModel({
 </script>
 
 <style lang="postcss">
-.style-demo.table-div {
+.style-demo {
   width: 100%;
   height: calc(100vh - 50px);
 }

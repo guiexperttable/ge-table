@@ -1,5 +1,5 @@
 <template>
-  <div class="table-div multi-size-demo">
+  <div class="multi-size-demo">
     <guiexpert-table
       :tableModel="tableModel"
     ></guiexpert-table>
@@ -34,7 +34,7 @@ const tableModel = TableFactory.createTableModel({
 
 <style lang="postcss">
 
-.table-div.multi-size-demo {
+.multi-size-demo {
   width: 100%;
   height: calc(100vh - 50px);
 }

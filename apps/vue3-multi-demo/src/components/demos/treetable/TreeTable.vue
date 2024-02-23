@@ -1,38 +1,21 @@
 <template>
-  <div class="table-div tree-table-demo">
-    <div class="filter-div" v-if="tableModel">
-      <!--
-      <q-input bottom-slots v-model="filterText" label="Filter" counter maxlength="20" :dense="dense"
-               @update:modelValue="onFilterTextChanged">
-        <template v-slot:before>
-          <q-icon name="search"></q-icon>
-        </template>
-
-        <template v-slot:append>
-          <q-icon v-if="filterText !== ''" name="close" @click="filterText = ''" class="cursor-pointer"></q-icon>
-        </template>
-
-        <template v-slot:hint>
-          Enter filter text
-        </template>
-      </q-input>
-
-      <q-fab-action color="primary" @click="onCopyClicked" icon="content_copy" label="Copy"></q-fab-action>
--->
+  <div class="tree-table-demo" v-if="state.tableModel">
+    <div class="filter-div">
+      <input v-model="filterText"  maxlength="20" @keyup="onFilterTextChanged" @change="onFilterTextChanged">
+      <button @click="onCopyClicked" title="See console out">Copy</button>
     </div>
+
     <guiexpert-table
-      :tableModel="tableModel"
+      :tableModel="state.tableModel"
       :tableOptions="tableOptions"
       @tableReady="onTableReady($event)"
       @modelChanged="onModelChanged($event)"
     ></guiexpert-table>
   </div>
-
-
 </template>
 
 
-<script lang="ts" setup async>
+<script lang="ts" setup>
 import { GuiexpertTable } from "@guiexpert/vue3-table";
 import { PersonIf } from './data/person.if.ts';
 import {
@@ -59,16 +42,19 @@ import {
   SelectionModel,
   TableApi,
   TreeFactory,
-  TableModelIf,
   TableOptions,
   TableOptionsIf,
   TreeRow,
   TrueFn,
-  ValueLabel
-} from "@guiexpert/table";
-// import { ref } from 'vue';
+  ValueLabel,
+} from '@guiexpert/table';
+import { onMounted, reactive } from "vue";
+import { TableModelState } from '../../../common/table-model-state.ts';
 
-// let dense = ref(true);
+const state = reactive<TableModelState>({
+  tableModel: undefined
+});
+
 const selectionModel = new SelectionModel("range", "multi");
 let filterText = "";
 
@@ -80,22 +66,22 @@ function onTableReady($event: TableApi) {
   tableApi = $event;
 }
 
-
 function onModelChanged(evt: GeModelChangeEvent) {
   console.info(evt);
 }
 
-// function onFilterTextChanged() {
-//   if (tableApi) {
-//     tableApi.externalFilterChanged();
-//   }
-// }
-//
-// function onCopyClicked() {
-//   if (tableApi) {
-//     tableApi.copyToClipboard().then(console.info);
-//   }
-// }
+function onFilterTextChanged() {
+  console.info('onFilterTextChanged', tableApi);
+  if (tableApi) {
+    tableApi.externalFilterChanged();
+  }
+}
+
+function onCopyClicked() {
+  if (tableApi) {
+    tableApi.copyToClipboard().then(console.info);
+  }
+}
 
 // Table options:
 const tableOptions: TableOptionsIf = {
@@ -161,22 +147,25 @@ selectionModel.addSelection(new CellRange(1, 5, 6, 7));
 selectionModel.addSelection(new CellRange(0, 8, 0, 8));
 selectionModel.addSelection(new CellRange(5, 6, 10, 10));
 
-const response = await fetch('/assets/demodata/tree-persons.json');
-const rows: PersonIf[] = await response.json();
 
-const tree = TreeFactory.buildTreeRows<PersonIf>(rows, "friends");
-const tableModel: TableModelIf = TableFactory.createTableModel({
-  rows: tree,
-  columnDefs: columnDefs,
-  tableOptions: tableOptions,
-  fixedLeftColumnCount: 1,
-  fixedRightColumnCount: 1
+onMounted(async () => {
+  const response = await fetch('/assets/demodata/tree-persons.json');
+  const rows: PersonIf[] = await response.json();
+  const tree = TreeFactory.buildTreeRows<PersonIf>(rows, "friends");
+  state.tableModel = TableFactory.createTableModel({
+    rows: tree,
+    columnDefs: columnDefs,
+    tableOptions: tableOptions,
+    fixedLeftColumnCount: 1,
+    fixedRightColumnCount: 1
+  });
 });
+
 
 </script>
 
 <style lang="postcss">
-.table-div {
+.tree-table-demo {
   width: 100%;
   height: calc(100vh - 50px);
   display: grid;

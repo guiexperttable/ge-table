@@ -3,8 +3,7 @@
     <guiexpert-table
       @checkboxChanged="onCheckboxChanged($event)"
       :tableModel="tableModel"
-      :tableOptions="tableOptions"
-      class="table-div"></guiexpert-table>
+      :tableOptions="tableOptions"></guiexpert-table>
   </div>
 </template>
 

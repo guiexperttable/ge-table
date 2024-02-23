@@ -1,5 +1,5 @@
 <template>
-  <div class="table-div simple-demo">
+  <div class="simple-demo">
     <guiexpert-table
       :tableModel="tableModel"
       @checkboxChanged="onCheckboxChanged($event)"
@@ -60,7 +60,7 @@ const tableModel = generateSimpleModel(100, 100);
 
 <style lang="postcss">
 
-.table-div.simple-demo {
+.simple-demo {
   width: 100%;
   height: calc(100vh - 50px);
 }

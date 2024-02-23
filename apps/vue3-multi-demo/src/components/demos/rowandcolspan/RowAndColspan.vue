@@ -1,5 +1,5 @@
 <template>
-    <div class="table-div row-and-colspan-demo">
+    <div class="row-and-colspan-demo">
       <guiexpert-table
         :tableModel="tableModel"
       ></guiexpert-table>
@@ -58,7 +58,7 @@ const tableModel = TableFactory.createTableModel({
 </script>
 
 <style lang="postcss">
-.row-and-colspan-demo.table-div {
+.row-and-colspan-demo {
   width: 100%;
   height: calc(100vh - 50px);
 }

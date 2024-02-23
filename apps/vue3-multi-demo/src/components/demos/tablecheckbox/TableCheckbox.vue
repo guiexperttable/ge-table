@@ -1,15 +1,15 @@
 <template>
   <div class="table-checkbox-demo">
     <guiexpert-table
+      v-if="state.tableModel"
       @checkboxChanged="onCheckboxChanged($event)"
-      :tableModel="tableModel"
-      :tableOptions="tableOptions"
-      class="table-div"></guiexpert-table>
+      :tableModel="state.tableModel"
+      :tableOptions="tableOptions"></guiexpert-table>
   </div>
 </template>
 
 
-<script lang="ts" setup async>
+<script lang="ts" setup>
 
 import { GuiexpertTable } from "@guiexpert/vue3-table";
 import {
@@ -23,8 +23,14 @@ import {
   TableFactory,
   TableOptions,
   TableOptionsIf
-} from "@guiexpert/table";
+} from '@guiexpert/table';
 import { SimplePersonIf } from './simple-person.if.ts';
+import { onMounted, reactive } from 'vue';
+import { TableModelState } from '../../../common/table-model-state.ts';
+
+const state = reactive<TableModelState>({
+  tableModel: undefined
+});
 
 const fixedLeftColumnCount = 2;
 const tableOptions: TableOptionsIf = {
@@ -36,15 +42,6 @@ const tableOptions: TableOptionsIf = {
     footer: 0
   }
 };
-
-
-function onCheckboxChanged(evt: any[]) {
-  console.info('onCheckboxChanged  evt:', evt);
-}
-
-
-const response = await fetch('/assets/demodata/persons1000.json');
-const rows: SimplePersonIf[] = await response.json();
 const columnDefs: ColumnDefIf[] = [
   // ColumnDef.create({
   //   property: "checked",
@@ -63,14 +60,22 @@ const columnDefs: ColumnDefIf[] = [
   new ColumnDef('id', 'ID', px50)
 ];
 
-const tableModel = TableFactory.createTableModel({
-  rows,
-  columnDefs,
-  tableOptions,
-  fixedLeftColumnCount
+function onCheckboxChanged(evt: any[]) {
+  console.info('onCheckboxChanged  evt:', evt);
+}
+
+
+onMounted(async () => {
+  const response = await fetch('/assets/demodata/persons1000.json');
+  const rows: SimplePersonIf[] = await response.json();
+
+  state.tableModel = TableFactory.createTableModel({
+    rows,
+    columnDefs,
+    tableOptions,
+    fixedLeftColumnCount
+  });
 });
-
-
 
 </script>
 
