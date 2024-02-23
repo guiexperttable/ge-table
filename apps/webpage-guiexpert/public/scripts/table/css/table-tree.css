@@ -51,3 +51,7 @@
   display: grid;
   grid-template-columns: 16px 1fr;
 }
+.ge-table-col-div.ge-table-col-tree.ge-table-tree-cell.ge-with-checkbox {
+  display: grid;
+  grid-template-columns: 16px 20px 1fr;
+}

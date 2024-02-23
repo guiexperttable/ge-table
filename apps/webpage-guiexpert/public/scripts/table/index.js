@@ -180,7 +180,7 @@ class ve {
   }
   addColumnDiv(e) {
     const { parent: t, geo: o, rowIndex: i = -1, columnIndex: s = -1, areaIdent: r, sideIdent: l, text: n = "", treeArrow: d, tableOptions: a, checkedType: h = void 0, sortState: u } = e, m = a == null ? void 0 : a.treeOptions, b = a == null ? void 0 : a.showCheckboxWihoutExtraColumn, f = this.domService.createElement("div");
-    this.domService.addClass(f, "ge-table-col-div"), this.domService.addClass(f, `ge-table-col-div-${o.index}`), this.domService.setAttribute(f, "data-col-index", `${o.index}`), this.domService.setAttribute(f, "data-row-index", `${i}`), this.domService.setAttribute(f, "data-area", `${r}`);
+    this.domService.addClass(f, "ge-table-col-div"), b && this.domService.addClass(f, "ge-with-checkbox"), this.domService.addClass(f, `ge-table-col-div-${o.index}`), this.domService.setAttribute(f, "data-col-index", `${o.index}`), this.domService.setAttribute(f, "data-row-index", `${i}`), this.domService.setAttribute(f, "data-area", `${r}`);
     const g = ((o == null ? void 0 : o.index) ?? 0) % 2 === 0 ? "even" : "odd";
     if (r === "body" && l === "center" && this.domService.addClass(f, `ge-table-column-${g}`), this.domService.setStyle(f, "display", "clip"), this.domService.setStyle(f, "position", "absolute"), this.domService.setStyle(f, "left", `${o.left}px`), this.domService.setStyle(f, "top", `${o.top}px`), this.domService.setStyle(f, "width", `${o.width}px`), this.domService.setStyle(f, "height", `${o.height}px`), d && d !== "none" && (this.domService.addClass(f, "ge-table-col-tree"), this.addArrowDiv(f, d, m, i, s, r)), b && s === 0 && h && this.addCheckboxToDiv(f, h, r, i), n) {
       const p = d !== "none" && s === 0;
