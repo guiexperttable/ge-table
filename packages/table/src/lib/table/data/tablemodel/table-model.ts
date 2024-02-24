@@ -56,7 +56,7 @@ export class TableModel implements TableModelIf {
     public columnSizes: number[] = [],
     protected overridingColumnWidth: number = -1,
     protected columnCount: number = 0,
-    protected parentSize: number = 400, // can be important when we have percentage widthes,
+    protected parentSize: number = 400, // can be important when we have percentage widths,
     public readonly getSelectionModel: GetT<SelectionModelIf> = () => undefined
   ) {
     headerAreaModel.areaIdent = "header";
@@ -77,6 +77,7 @@ export class TableModel implements TableModelIf {
   }
 
   init() {
+    console.info('init()...'); // TODO
     this.recalcSize(this.parentSize);
     if (this.overridingColumnWidth === -1) {
       this.calcXPositions();
@@ -90,6 +91,10 @@ export class TableModel implements TableModelIf {
     if (this.footerAreaModel) {
       this.footerAreaModel.init();
     }
+  }
+
+  setParentWidth(widthInPixel: number): void {
+    this.parentSize = widthInPixel;
   }
 
   /**
@@ -163,7 +168,7 @@ export class TableModel implements TableModelIf {
    * @return {void} - This method does not return a value.
    */
   recalcSize(clientWidth: number) {
-    this.recalcColumnWidthes(clientWidth);
+    this.recalcColumnWidths(clientWidth);
     this.recalcHeightAndPadding();
   }
 
@@ -493,12 +498,14 @@ export class TableModel implements TableModelIf {
   }
 
 
-  private recalcColumnWidthes(clientWidth: number) {
+  private recalcColumnWidths(clientWidth: number) {
+    console.info('recalcColumnWidths...', clientWidth); // TODO
     if (!this.columnDefs?.length && !this.columnSizes?.length) {
       this.columnSizes = new Array(this.getColumnCount()).fill(this.overridingColumnWidth);
     }
     if (this.columnDefs?.length) {
       this.columnSizes = this.columnDefs.map(def => {
+        console.info('def.width', def.width); // TODO
         if (def.width.unit === "%" && clientWidth) {
           // only for a % value we have to check min and max:
           let px = Math.floor(def.width.value * clientWidth / 100);
@@ -515,6 +522,7 @@ export class TableModel implements TableModelIf {
         return def.width.value;
       });
     }
+    console.info('recalcColumnWidths. end', this.columnSizes); // TODO
   }
 
   private arrayMove(arr: any[], fromIndex: number, toIndex: number) {

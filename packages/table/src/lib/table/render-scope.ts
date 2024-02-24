@@ -225,6 +225,16 @@ export class RenderScope extends EleScope {
     this.adjustAfterScrolling();
   }
 
+  recalcColumnWidths(clientWidth?: number) {
+    let widthInPixel = clientWidth ? clientWidth : this.scrollViewport.clientWidth;
+    this.tableModel.setParentWidth(widthInPixel);
+    console.info('recalcColumnWidths... this.scrollViewport.clientWidth', this.scrollViewport.clientWidth); // TODO
+    console.info('recalcColumnWidths... widthInPixel', widthInPixel); // TODO
+    this.tableModel.init();
+    this.repaintHard();
+  }
+
+
   /**
    * Adjusts the table after scrolling. This method performs various adjustments
    * to the table's appearance and behavior after a scroll event occurs.

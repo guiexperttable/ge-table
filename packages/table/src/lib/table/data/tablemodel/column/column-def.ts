@@ -36,6 +36,10 @@ export class ColumnDef implements ColumnDefIf {
     public editInputPipe?: editInputPipe,
     public isVisible: BooleanFunction = ()=>this.visible
   ) {
+    if (width.unit !== 'px') {
+      this.minWidth = new Size(0, "px");
+      this.maxWidth = new Size(100000, "px");
+    }
   }
 
   static bodyRenderer(bodyRenderer: CellRendererIf) {

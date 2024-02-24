@@ -50,6 +50,8 @@ export interface TableModelIf {
    */
   init(): void;
 
+  setParentWidth(widthInPixel: number): void;
+
   /**
    * Returns the number of columns in a dataset.
    *

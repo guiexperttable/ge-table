@@ -1,7 +1,6 @@
 <template>
-  <div
-    @mouseup="onDivResized"
-    class="column-sizes-demo"
+  <WidthResizeBox
+    @onResized="onResized"
     style="width: 400px; height: calc(100vh - 50px);">
 
     <guiexpert-table
@@ -9,13 +8,11 @@
       v-if="state.tableModel"
       :tableModel="state.tableModel"
       :tableOptions="tableOptions"></guiexpert-table>
-  </div>
+  </WidthResizeBox>
 </template>
 
 
-<script
-  lang="ts"
-  setup>
+<script lang="ts" setup>
 import { GuiexpertTable } from '@guiexpert/vue3-table';
 import { PersonIf } from './data/person.if.ts';
 import {
@@ -24,18 +21,17 @@ import {
   DateToIntlDDMMYYYYCellRenderer,
   MaleFemaleToIconCellRenderer,
   NumberCellRenderer,
-  px100,
-  px120,
   px50,
-  px80,
   Renderer,
-  Size, TableApi,
+  Size,
+  TableApi,
   TableFactory,
   TableOptions,
   TableOptionsIf
 } from '@guiexpert/table';
 import { onMounted, reactive } from 'vue';
 import { TableModelState } from '../../../common/table-model-state.ts';
+import WidthResizeBox from '../../resizebox/WidthResizeBox.vue';
 
 const state = reactive<TableModelState>({
   tableModel: undefined
@@ -55,13 +51,27 @@ let tableApi: TableApi | undefined;
 
 // Column model:
 let columnDefs: ColumnDefIf[] = [
-  new ColumnDef('lastName', 'Last Name', new Size(20, '%')),
-  new ColumnDef('preName', 'Pre Name', px120),
-  new ColumnDef('age', 'Age', px80, undefined, ColumnDef.bodyRenderer(new NumberCellRenderer())),
-  new ColumnDef('birth', 'Birthday', px100,
+  new ColumnDef(
+    'lastName',
+    'Last Name',
+    new Size(20, '%')
+  ),
+  new ColumnDef(
+    'preName',
+    'Pre Name',
+    new Size(20, '%') /*px120*/
+  ),
+  new ColumnDef(
+    'age',
+    'Age',
+    new Size(20, '%')/*px80*/,
     undefined,
-    Renderer.bodyRenderer(new DateToIntlDDMMYYYYCellRenderer())),
-
+    ColumnDef.bodyRenderer(new NumberCellRenderer())
+  ),
+  new ColumnDef('birth', 'Birthday', /*px100*/ new Size(20, '%'),
+    undefined,
+    Renderer.bodyRenderer(new DateToIntlDDMMYYYYCellRenderer())
+  ),
   ColumnDef.create({
     property: 'gender',
     headerLabel: ' ',
@@ -81,8 +91,10 @@ onMounted(async () => {
   });
 });
 
-function onDivResized(_evt: MouseEvent) {
-  if (tableApi)  {
+function onResized(width: number) {
+  if (tableApi) {
+    console.info('onDivResized...', width);
+    tableApi.recalcColumnWidths(width); // TODO this must be the job of the table lib
     tableApi.repaintHard(); // TODO this must be the job of the table lib
   }
 }
@@ -90,20 +102,11 @@ function onDivResized(_evt: MouseEvent) {
 function onTableReady($event: TableApi) {
   tableApi = $event;
 }
-
 </script>
 
 <style lang="postcss">
-.column-sizes-demo {
-  border-right: 2px solid cyan;
-  resize: horizontal;
-  overflow: auto;
-  display: block;
-}
-
 .column-sizes-demo > * {
   width: 100%;
   height: 100%;
-  background-color: lightgoldenrodyellow;
 }
 </style>

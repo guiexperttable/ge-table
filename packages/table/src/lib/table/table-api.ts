@@ -152,6 +152,11 @@ export class TableApi {
   }
 
 
+  recalcColumnWidths(clientWidth?: number) {
+    this.tableScope.recalcColumnWidths(clientWidth);
+  }
+
+
   /**
    * Clears the current selection of the table.
    * The table will be rendered automatically.
