@@ -2,12 +2,15 @@
   <WidthResizeBox
     @onResized="onResized"
     style="width: 400px; height: calc(100vh - 50px);">
-
-    <guiexpert-table
-      @tableReady="onTableReady($event)"
-      v-if="state.tableModel"
-      :tableModel="state.tableModel"
-      :tableOptions="tableOptions"></guiexpert-table>
+    <div class="four-rows">
+      <template v-for="item in state.tableModels">
+        <guiexpert-table
+          @tableReady="onTableReady($event)"
+          v-if="item"
+          :tableModel="item"
+          :tableOptions="tableOptions"></guiexpert-table>
+      </template>
+    </div>
   </WidthResizeBox>
 </template>
 
@@ -21,20 +24,19 @@ import {
   DateToIntlDDMMYYYYCellRenderer,
   MaleFemaleToIconCellRenderer,
   NumberCellRenderer,
-  px50,
   Renderer,
-  Size,
+  Size, SizeIf,
   TableApi,
   TableFactory,
   TableOptions,
   TableOptionsIf
 } from '@guiexpert/table';
 import { onMounted, reactive } from 'vue';
-import { TableModelState } from '../../../common/table-model-state.ts';
 import WidthResizeBox from '../../resizebox/WidthResizeBox.vue';
+import { TableModelArrayState } from '../../../common/table-model-array-state.ts';
 
-const state = reactive<TableModelState>({
-  tableModel: undefined
+const state = reactive<TableModelArrayState>({
+  tableModels: [undefined, undefined, undefined, undefined]
 });
 
 const tableOptions: TableOptionsIf = {
@@ -47,60 +49,102 @@ const tableOptions: TableOptionsIf = {
   }
 };
 
-let tableApi: TableApi | undefined;
+const tableApis: TableApi[] = [];
 
 // Column model:
-let columnDefs: ColumnDefIf[] = [
-  new ColumnDef(
-    'lastName',
-    'Last Name',
-    new Size(20, '%')
-  ),
-  new ColumnDef(
-    'preName',
-    'Pre Name',
-    new Size(20, '%') /*px120*/
-  ),
-  new ColumnDef(
-    'age',
-    'Age',
-    new Size(20, '%')/*px80*/,
-    undefined,
-    ColumnDef.bodyRenderer(new NumberCellRenderer())
-  ),
-  new ColumnDef('birth', 'Birthday', /*px100*/ new Size(20, '%'),
-    undefined,
-    Renderer.bodyRenderer(new DateToIntlDDMMYYYYCellRenderer())
-  ),
-  ColumnDef.create({
-    property: 'gender',
-    headerLabel: ' ',
-    width: px50,
-    bodyRenderer: new MaleFemaleToIconCellRenderer()
-  })
+const columnDefsArr: Array<ColumnDefIf[]> = [
+  createColumnDefs([
+    new Size(200, 'px'),
+    new Size(120, 'px'),
+    new Size(80, 'px'),
+    new Size(100, 'px'),
+    new Size(50, 'px'),
+  ]),
+  createColumnDefs([
+    new Size(20, '%'),
+    new Size(20, '%'),
+    new Size(50, 'px'),
+    new Size(20, '%'),
+    new Size(50, 'px'),
+  ]),
+  createColumnDefs([
+    new Size(20, '%'),
+    new Size(20, '%'),
+    new Size(20, '%'),
+    new Size(20, '%'),
+    new Size(20, '%'),
+  ]),
+  createColumnDefs([
+    new Size(1, 'weight'),
+    new Size(1.5, 'weight'),
+    new Size(50, 'px'),
+    new Size(20, '%'),
+    new Size(50, 'px'),
+  ])
 ];
+
+
+
 
 
 onMounted(async () => {
   const response = await fetch('/assets/demodata/tree-persons.json');
   const rows: PersonIf[] = await response.json();
-  state.tableModel = TableFactory.createTableModel({
-    rows: rows,
-    columnDefs: columnDefs,
-    tableOptions: tableOptions
-  });
+  for (let i = 0; i < state.tableModels.length; i++) {
+    state.tableModels[i] = TableFactory.createTableModel({
+      rows: rows,
+      columnDefs: columnDefsArr[i],
+      tableOptions: tableOptions
+    });
+  }
 });
 
 function onResized(width: number) {
-  if (tableApi) {
-    console.info('onDivResized...', width);
+  tableApis.forEach(tableApi => {
     tableApi.recalcColumnWidths(width); // TODO this must be the job of the table lib
     tableApi.repaintHard(); // TODO this must be the job of the table lib
-  }
+  });
 }
 
 function onTableReady($event: TableApi) {
-  tableApi = $event;
+  tableApis.push($event);
+}
+
+function createColumnDefs(
+  sizes: [SizeIf, SizeIf, SizeIf, SizeIf, SizeIf]
+): ColumnDefIf[]{
+  return   [
+    new ColumnDef(
+      'lastName',
+      'Last Name',
+      sizes[0]
+    ),
+    new ColumnDef(
+      'preName',
+      'Pre Name',
+      sizes[1]
+    ),
+    new ColumnDef(
+      'age',
+      'Age',
+      sizes[2],
+      undefined,
+      ColumnDef.bodyRenderer(new NumberCellRenderer())
+    ),
+    new ColumnDef(
+      'birth',
+      'Birthday',
+      sizes[3],
+      undefined,
+      Renderer.bodyRenderer(new DateToIntlDDMMYYYYCellRenderer())
+    ),
+    ColumnDef.create({
+      property: 'gender',
+      headerLabel: ' ',
+      width: sizes[4],
+      bodyRenderer: new MaleFemaleToIconCellRenderer()
+    })
+  ];
 }
 </script>
 
@@ -108,5 +152,11 @@ function onTableReady($event: TableApi) {
 .column-sizes-demo > * {
   width: 100%;
   height: 100%;
+}
+.four-rows {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 </style>
