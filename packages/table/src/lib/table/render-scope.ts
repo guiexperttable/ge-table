@@ -225,11 +225,16 @@ export class RenderScope extends EleScope {
     this.adjustAfterScrolling();
   }
 
+  /**
+   * Recalculates the column widths of the table.
+   *
+   * @param {number} [clientWidth] - The client width of the table. If not provided, the client width of the scroll viewport will be used.
+   *
+   * @return {undefined}
+   */
   recalcColumnWidths(clientWidth?: number) {
     let widthInPixel = clientWidth ? clientWidth : this.scrollViewport.clientWidth;
     this.tableModel.setParentWidth(widthInPixel);
-    console.info('recalcColumnWidths... this.scrollViewport.clientWidth', this.scrollViewport.clientWidth); // TODO
-    console.info('recalcColumnWidths... widthInPixel', widthInPixel); // TODO
     this.tableModel.init();
     this.repaintHard();
   }

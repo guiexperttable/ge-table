@@ -12,6 +12,7 @@ import { SelectionModelIf } from "../../selection/selection-model.if";
 import { GetT } from "../common/get-t";
 import { CheckboxModel } from "../../checkbox/checkbox-model";
 import {isCheckboxColumnDef} from "../../instanceof-workaround";
+import { SizeIf } from '../common/size.if';
 
 
 /**
@@ -77,7 +78,6 @@ export class TableModel implements TableModelIf {
   }
 
   init() {
-    console.info('init()...'); // TODO
     this.recalcSize(this.parentSize);
     if (this.overridingColumnWidth === -1) {
       this.calcXPositions();
@@ -499,30 +499,60 @@ export class TableModel implements TableModelIf {
 
 
   private recalcColumnWidths(clientWidth: number) {
-    console.info('recalcColumnWidths...', clientWidth); // TODO
     if (!this.columnDefs?.length && !this.columnSizes?.length) {
       this.columnSizes = new Array(this.getColumnCount()).fill(this.overridingColumnWidth);
     }
     if (this.columnDefs?.length) {
+      const widthsWithWeights = this.columnDefs.filter(cd => cd.width?.unit === 'weight');
       this.columnSizes = this.columnDefs.map(def => {
-        console.info('def.width', def.width); // TODO
         if (def.width.unit === "%" && clientWidth) {
           // only for a % value we have to check min and max:
           let px = Math.floor(def.width.value * clientWidth / 100);
           if (def.minWidth) {
-            const pxMin = def.minWidth.unit === "px" ? def.minWidth.value : Math.floor(def.minWidth.value * clientWidth / 100);
+            const pxMin = this.sizeToPixel(def.minWidth, clientWidth);
             px = Math.max(pxMin, px);
           }
           if (def.maxWidth) {
-            const pxMax = def.maxWidth.unit === "px" ? def.maxWidth.value : Math.floor(def.maxWidth.value * clientWidth / 100);
+            const pxMax = this.sizeToPixel(def.maxWidth, clientWidth);
             px = Math.min(pxMax, px);
           }
           return px;
+        } else if (def.width.unit === "px" && clientWidth) {
+          return def.width.value;
         }
-        return def.width.value;
+        return 0;
       });
+
+      const usedWidth = this.columnSizes.reduce((sum, currentValue)=> sum + currentValue);
+      const leftWidth = clientWidth - usedWidth;
+      if (leftWidth > 0 && widthsWithWeights.length) {
+        const sumWeights = widthsWithWeights
+          .map(cd => cd.width.value)
+          .reduce((sum, currentValue) => sum + currentValue);
+
+        for (let i = 0; i < this.columnDefs.length; i++) {
+          const def = this.columnDefs[i];
+          if (def.width.unit === "weight") {
+            this.columnSizes[i] = def.width.value * leftWidth / sumWeights;
+          }
+        }
+      }
     }
-    console.info('recalcColumnWidths. end', this.columnSizes); // TODO
+  }
+
+  /**
+   * Converts the given `SizeIf` object to pixel units based on the provided `clientWidth`.
+   * The given `SizeIf` must have the uniit '%' or 'px'.
+   *
+   * @param {SizeIf} width - The size object to be converted.
+   * @param {number} clientWidth - The width of the client area in pixels.
+   * @return {number} - The converted size value in pixels. returns -1 if unit is not '%' or 'px'.
+   */
+  private sizeToPixel(width: SizeIf, clientWidth:number): number {
+    if (width.unit === "px") return width.value;
+    if (width.unit === "%") return Math.floor(width.value * clientWidth / 100);
+
+    return -1;
   }
 
   private arrayMove(arr: any[], fromIndex: number, toIndex: number) {
