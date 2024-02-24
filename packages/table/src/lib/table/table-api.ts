@@ -7,6 +7,15 @@ import { ShortcutActionIdMapping } from './action/shortcut-actionid-mapping.type
 import { SelectionModelIf } from './selection/selection-model.if';
 
 
+/**
+* TableApi Class
+*
+* A class for interfacing with a table within the application.
+* It includes features for scrolling, updating cells, handling visibility of elements like header and footer,
+* and dealing with selections within the table.
+*
+* An instance of this class is automatically created for each table component.
+*/
 export class TableApi {
 
 
@@ -152,6 +161,13 @@ export class TableApi {
   }
 
 
+  /**
+   * Recalculates the column widths of the table.
+   *
+   * @param {number} clientWidth - The width of the client area.
+   *
+   * @return {void}
+   */
   recalcColumnWidths(clientWidth?: number) {
     this.tableScope.recalcColumnWidths(clientWidth);
   }
