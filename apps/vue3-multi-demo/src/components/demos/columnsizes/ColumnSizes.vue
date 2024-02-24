@@ -100,10 +100,7 @@ onMounted(async () => {
 });
 
 function onResized(width: number) {
-  tableApis.forEach(tableApi => {
-    tableApi.recalcColumnWidths(width); // TODO this must be the job of the table lib
-    tableApi.repaintHard(); // TODO this must be the job of the table lib
-  });
+  console.info('demo comp onResized', width);
 }
 
 function onTableReady($event: TableApi) {

@@ -38,6 +38,7 @@ import { SelectionModelIf } from './selection/selection-model.if';
 import { FocusModelIf } from './focus/focus-model.if';
 import { EventFocusChangedListenerIf } from './focus/event-focus-changed-listener.if';
 import { EventSelectionChangedListenerIf } from './selection/event-selection-changed-listener.if';
+import { ResizeHandler } from './resize-handler';
 
 
 /**
@@ -71,6 +72,7 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf, Even
   public licenseManager = LicenseManager.getInstance();
   public mouseHandler: MouseHandler;
   public inputHandler: InputHandler;
+  public resizeHandler: ResizeHandler;
   public shortcutService: ShortcutService;
 
   public storeStateCollapsedExpandService?: StoreStateCollapsedExpandService;
@@ -112,6 +114,7 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf, Even
     }
     this.mouseHandler = new MouseHandler(this);
     this.inputHandler = new InputHandler(this);
+    this.resizeHandler = new ResizeHandler(this);
 
     this.shortcutService = new ShortcutService(this);
     this.shortcutService.addListener(this.selectionService);
@@ -235,6 +238,7 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf, Even
     this.resetSizeOfWrapperDiv();
     this.adjustContainersAndRows();
     this.autoRestoreScrollPosition();
+
     return this;
   }
 
