@@ -1,7 +1,7 @@
 <template>
   <WidthResizeBox
     @onResized="onResized"
-    style="width: 400px; height: calc(100vh - 50px);">
+    style="width: max(calc(100vw - 500px),400px); height: calc(100vh - 50px);">
     <div class="four-rows">
       <template v-for="item in state.tableModels">
         <guiexpert-table

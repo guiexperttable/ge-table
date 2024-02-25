@@ -7,6 +7,24 @@
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/.nx" />
       <excludeFolder url="file://$MODULE_DIR$/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/preact-table-demo/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/react-table-demo/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/solid-table-demo/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/svelte-table-demo/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/table-demo/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/vue3-multi-demo/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/vue3-table-demo/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/webcomponent-table-demo/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/webpage-guiexpert/.astro" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/webpage-guiexpert/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/demo-table-models/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/preact-table/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/react-table/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/solid-table/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/svelte-table/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/table/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/vue3-table/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/webcomponent-table/dist" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
