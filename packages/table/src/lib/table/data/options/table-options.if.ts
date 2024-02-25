@@ -48,6 +48,15 @@ import { HeaderGroupOptionsIf } from './header-group-options.if';
  * | shortcutActionIdMapping          | Represents a mapping of shortcut action IDs.                                                     |
  */
 export interface TableOptionsIf {
+
+
+  /**
+   * The delay in milliseconds used for debouncing the resize event.
+   *
+   * @type {number}
+   */
+  resizeEventDebounceDelay: number;
+
   /**
    * Indicates whether the header separator border is visible.
    *

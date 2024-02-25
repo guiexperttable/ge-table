@@ -114,7 +114,7 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf, Even
     }
     this.mouseHandler = new MouseHandler(this);
     this.inputHandler = new InputHandler(this);
-    this.resizeHandler = new ResizeHandler(this);
+    this.resizeHandler = new ResizeHandler(this, tableOptions.resizeEventDebounceDelay);
 
     this.shortcutService = new ShortcutService(this);
     this.shortcutService.addListener(this.selectionService);

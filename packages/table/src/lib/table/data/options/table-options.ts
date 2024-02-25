@@ -17,6 +17,9 @@ import { HeaderGroupOptions } from './header-group-options';
 const selectionModel = new SelectionModel();
 const focusModel = new FocusModel("cell");
 
+/**
+ * TableOptions class provides configuration options for the table.
+ */
 export class TableOptions implements TableOptionsIf {
 
   overflowX: "auto" | "scroll" = "auto";
@@ -59,6 +62,8 @@ export class TableOptions implements TableOptionsIf {
   sortedOptions = new SortedOptions();
   sortOrder: SortState[] = ["asc", "desc"];
   shortcutActionIdMapping?: ShortcutActionIdMapping;
+
+  resizeEventDebounceDelay = 500;
 
   getEditRenderer?: GetEditRenderer = (_rowIndex: number, _columnIndex: number) => new InputCellRenderer();
 

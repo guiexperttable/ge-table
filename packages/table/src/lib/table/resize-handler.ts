@@ -10,9 +10,10 @@ export class ResizeHandler {
 
 
   constructor(
-    protected tableScope: TableScope
+    protected tableScope: TableScope,
+    protected debounceDelay: number = 500
   ) {
-    const resizeObserver = new ResizeObserver(debounce(this.handleResize.bind(this), 500));
+    const resizeObserver = new ResizeObserver(debounce(this.handleResize.bind(this), debounceDelay));
     resizeObserver.observe(this.tableScope.hostElement);
   }
 
