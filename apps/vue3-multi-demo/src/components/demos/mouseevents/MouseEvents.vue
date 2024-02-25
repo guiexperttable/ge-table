@@ -1,4 +1,9 @@
 <template>
+  <a :href="gitUrl"  target="_blank">
+    <q-btn class="source-button" round  icon="code" />
+  </a>
+
+
   <div class="mouse-events-demo">
     <div class="filter-div">
       {{ debugText }}
@@ -21,6 +26,8 @@ import { GuiexpertTable } from "@guiexpert/vue3-table";
 import { GeMouseEvent, TableFactory } from '@guiexpert/table';
 import { DemoMouseeventAreaModel } from './demo-mouseevent-area-model.ts';
 import { ref } from 'vue';
+
+const gitUrl = 'https://github.com/guiexperttable/ge-table/blob/main/apps/vue3-multi-demo/src/components/demos/mouseevents/MouseEvents.vue';
 
 function onContextmenu(evt: GeMouseEvent) {
   debugEvent(evt, 'onContextmenu');
@@ -67,5 +74,13 @@ const tableModel = TableFactory.createTableModel({
 .mouse-events-demo .filter-div {
   height: 50px;
   padding: 16px;
+}
+.source-button  {
+  position: absolute;
+  right: 8px;
+  top: 4px;
+  z-index: 2001;
+  background-color: #12f20280;
+  color: #fff;
 }
 </style>

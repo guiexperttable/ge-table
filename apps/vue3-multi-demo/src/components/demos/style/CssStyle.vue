@@ -1,4 +1,9 @@
 <template>
+  <a :href="gitUrl"  target="_blank">
+    <q-btn class="source-button" round  icon="code" />
+  </a>
+
+
   <div class="style-demo">
     <guiexpert-table
       :tableModel="tableModel"
@@ -14,6 +19,7 @@ import { DefaultRowHeights, TableFactory } from '@guiexpert/table';
 import { DemoStyleAreaModel } from './demo-style-area-model.ts';
 import { DemoStyleColorCellRenderer } from './demo-style-color-cell-renderer.ts';
 
+const gitUrl = 'https://github.com/guiexperttable/ge-table/blob/main/apps/vue3-multi-demo/src/components/demos/style/CssStyle.vue';
 const size = 40
 
 const tableModel = TableFactory.createTableModel({
@@ -47,5 +53,14 @@ const tableModel = TableFactory.createTableModel({
 
 .style-demo .ge-table-col-div.text-color-yellow {
   color: yellow;
+}
+
+.source-button  {
+  position: absolute;
+  right: 8px;
+  top: 4px;
+  z-index: 2001;
+  background-color: #12f20280;
+  color: #fff;
 }
 </style>

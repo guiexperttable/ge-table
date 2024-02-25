@@ -1,9 +1,16 @@
 <template>
+
+  <a :href="gitUrl"  target="_blank">
+    <q-btn class="source-button" round  icon="code" />
+  </a>
+
+
   <div class="multi-size-demo">
     <guiexpert-table
       :tableModel="tableModel"
     ></guiexpert-table>
   </div>
+
 </template>
 
 
@@ -12,6 +19,7 @@ import { GuiexpertTable } from "@guiexpert/vue3-table";
 import { DefaultRowHeights, TableFactory } from '@guiexpert/table';
 import { DemoMultisizeAreaModel } from './demo-multisize-area-model.ts';
 
+const gitUrl = 'https://github.com/guiexperttable/ge-table/blob/main/apps/vue3-multi-demo/src/components/demos/multisize/MultiSize.vue';
 const rowCount = 50;
 const colCount = 50;
 const columnSizes: number[] = [colCount];
@@ -38,4 +46,14 @@ const tableModel = TableFactory.createTableModel({
   width: 100%;
   height: calc(100vh - 50px);
 }
+
+.source-button  {
+  position: absolute;
+  right: 8px;
+  top: 4px;
+  z-index: 2001;
+  background-color: #12f20280;
+  color: #fff;
+}
+
 </style>

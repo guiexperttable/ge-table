@@ -1,4 +1,9 @@
 <template>
+  <a :href="gitUrl"  target="_blank">
+    <q-btn class="source-button" round  icon="code" />
+  </a>
+
+
   <div class="simple-demo">
     <guiexpert-table
       :tableModel="tableModel"
@@ -20,6 +25,8 @@
 import { GuiexpertTable } from "@guiexpert/vue3-table";
 import { GeMouseEvent, TableApi } from "@guiexpert/table";
 import { generateSimpleModel } from "@guiexpert/demo-table-models";
+
+const gitUrl = 'https://github.com/guiexperttable/ge-table/blob/main/apps/vue3-multi-demo/src/components/demos/simple/Simple.vue';
 
 function onTableReady(api: TableApi) {
   console.info("demo onTableReady", api);
@@ -63,5 +70,13 @@ const tableModel = generateSimpleModel(100, 100);
 .simple-demo {
   width: 100%;
   height: calc(100vh - 50px);
+}
+.source-button  {
+  position: absolute;
+  right: 8px;
+  top: 4px;
+  z-index: 2001;
+  background-color: #12f20280;
+  color: #fff;
 }
 </style>

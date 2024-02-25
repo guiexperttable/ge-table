@@ -1,4 +1,9 @@
 <template>
+  <a :href="gitUrl"  target="_blank">
+    <q-btn class="source-button" round  icon="code" />
+  </a>
+
+
   <WidthResizeBox
     @onResized="onResized"
     style="width: max(calc(100vw - 500px),400px); height: calc(100vh - 50px);">
@@ -34,6 +39,8 @@ import {
 import { onMounted, reactive } from 'vue';
 import WidthResizeBox from '../../resizebox/WidthResizeBox.vue';
 import { TableModelArrayState } from '../../../common/table-model-array-state.ts';
+
+const gitUrl = 'https://github.com/guiexperttable/ge-table/blob/main/apps/vue3-multi-demo/src/components/demos/columnsizes/ColumnSizes.vue';
 
 const state = reactive<TableModelArrayState>({
   tableModels: [undefined, undefined, undefined, undefined]
@@ -155,5 +162,13 @@ function createColumnDefs(
   height: 100%;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.source-button  {
+  position: absolute;
+  right: 8px;
+  top: 4px;
+  z-index: 2001;
+  background-color: #12f20280;
+  color: #fff;
 }
 </style>

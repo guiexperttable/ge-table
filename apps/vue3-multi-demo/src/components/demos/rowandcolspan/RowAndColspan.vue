@@ -1,5 +1,10 @@
 <template>
-    <div class="row-and-colspan-demo">
+  <a :href="gitUrl"  target="_blank">
+    <q-btn class="source-button" round  icon="code" />
+  </a>
+
+
+  <div class="row-and-colspan-demo">
       <guiexpert-table
         :tableModel="tableModel"
       ></guiexpert-table>
@@ -19,7 +24,7 @@ import {
 import { DemoRowAndColspanAreaModel } from './demo-row-and-colspan-area-model.ts';
 
 
-
+const gitUrl = 'https://github.com/guiexperttable/ge-table/blob/main/apps/vue3-multi-demo/src/components/demos/rowandcolspan/RowAndColspan.vue';
 const rowCount = 100;
 const columnCount = 100;
 
@@ -70,5 +75,13 @@ const tableModel = TableFactory.createTableModel({
 }
 .row-and-colspan-demo .bg-red {
   background-color: rgba(255, 0, 0, 0.40) !important;
+}
+.source-button  {
+  position: absolute;
+  right: 8px;
+  top: 4px;
+  z-index: 2001;
+  background-color: #12f20280;
+  color: #fff;
 }
 </style>

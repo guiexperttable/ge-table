@@ -1,4 +1,9 @@
 <template>
+  <a :href="gitUrl"  target="_blank">
+    <q-btn class="source-button" round  icon="code" />
+  </a>
+
+
   <div class="tree-table-demo" v-if="state.tableModel">
     <div class="filter-div">
       <input v-model="filterText"  maxlength="20" @keyup="onFilterTextChanged" @change="onFilterTextChanged">
@@ -51,6 +56,7 @@ import {
 import { onMounted, reactive } from "vue";
 import { TableModelState } from '../../../common/table-model-state.ts';
 
+const gitUrl = 'https://github.com/guiexperttable/ge-table/blob/main/apps/vue3-multi-demo/src/components/demos/treetable/TreeTable.vue';
 const state = reactive<TableModelState>({
   tableModel: undefined
 });
@@ -179,5 +185,14 @@ onMounted(async () => {
   grid-gap: 20px;
   height: 70px;
   overflow-y: clip;
+}
+
+.source-button  {
+  position: absolute;
+  right: 8px;
+  top: 4px;
+  z-index: 2001;
+  background-color: #12f20280;
+  color: #fff;
 }
 </style>
