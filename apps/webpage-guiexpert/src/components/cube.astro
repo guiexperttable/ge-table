@@ -194,7 +194,7 @@ import heatmapImage from "../assets/screens/heatmap.png";
     const r1 = Math.max(-270, Math.min(270, r0));
 
     // scroll circle indicator:
-    const dashBoardOffset = (283 * (1.001 - (scrollTop / (scrollHeight - offsetHeight))));
+    // const dashBoardOffset = (283 * (1.001 - (scrollTop / (scrollHeight - offsetHeight))));
 
     // Zoom:
     let zoom = r0 <= 275 ? 1 : ((r0 - 275) / 4);
@@ -210,7 +210,7 @@ import heatmapImage from "../assets/screens/heatmap.png";
     const displayScrollDownElse = (displayScrollDown === "block") ? "none" : "block";
     const heroActionOpacity = Math.round(scrollTop / offsetHeight);
 
-    nativeElement.style.setProperty("--ge-stroke-dashoffset", `${dashBoardOffset}`); // for progress-circle-bar
+    // nativeElement.style.setProperty("--ge-stroke-dashoffset", `${dashBoardOffset}`); // for progress-circle-bar
     nativeElement.style.setProperty("--ge-welcome-rotate", `${-r1}deg`); // rotateY for cube
     nativeElement.style.setProperty("--ge-welcome-zoom", `${zoom}`); // zooming into cube -> section 'Features'
     nativeElement.style.setProperty("--ge-welcome-opacity", `${opacity}`); // opacity of cube: if cube is scrolled out of view => opacity = 0
