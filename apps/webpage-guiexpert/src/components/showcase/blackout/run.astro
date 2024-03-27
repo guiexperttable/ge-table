@@ -89,12 +89,13 @@ const id = 'div' + Math.random().toString(36).slice(2, 11);
         selectionDiv.className = classNames.join(' ');
 
         if (item.active) {
-          selectionDiv.addEventListener('click', () => {
+          selectionDiv.addEventListener('click', (evt) => {
             if (selectionDiv.classList.contains('selected')) {
               selectionDiv.classList.remove('selected');
             } else {
               selectionDiv.classList.add('selected');
             }
+            evt.stopPropagation();
           });
         }
 
@@ -106,7 +107,7 @@ const id = 'div' + Math.random().toString(36).slice(2, 11);
         // inner div with 3 sub divs:
         let {top, center, bottom} = item.values;
         if (!center) center = '━━━━';
-        let buf = [`
+        const buf = [`
     <div class="inner-bg">
       <div class="inner">
         <div>${top}</div>
@@ -160,7 +161,13 @@ const id = 'div' + Math.random().toString(36).slice(2, 11);
   const eventAdapter = new EventAdapter();
   tableModel.bodyAreaModel.getCellRenderer = (_rowIndex, _columnIndex) => bodyRenderer;
 
-  new TableScope(document.querySelector('.'+id), tableModel, simpleDomService, tableOptions, eventAdapter).firstInit();
+  const tableScope = new TableScope(document.querySelector('.'+id), tableModel, simpleDomService, tableOptions, eventAdapter);
+  tableScope.firstInit();
+  // const tableApi = tableScope.getApi();
+  //
+  // eventAdapter.onMouseClicked = (evt) => {
+  //   console.log(evt, 'onMouseClicked');
+  // };
 
 </script>
 
