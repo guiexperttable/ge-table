@@ -20,7 +20,7 @@ One can create a new (or additional) theme by redefining these
 variables (as shown in the example here),
 or by defining different CSS variable values using CSS selectors.
 Two predefined sets can be found here: 
-[table-color-vars.css](https://github.com/guiexperttable/ge-table/blob/main/libs/table/css/table-color-vars.css).
+[table-color-vars.css](https://github.com/guiexperttable/ge-table/blob/main/packages/table/css/table-color-vars.css).
 
 
 

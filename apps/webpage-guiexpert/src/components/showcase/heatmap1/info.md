@@ -91,4 +91,4 @@ export function createHeatMapModel(): TableModelIf {
 }
 ```
 
-The used css classes (starting with 'ge-table-') are available at [main.css](https://github.com/guiexperttable/ge-table/blob/main/libs/table/css/main.css).
+The used css classes (starting with 'ge-table-') are available at [main.css](https://github.com/guiexperttable/ge-table/blob/main/packages/table/css/main.css).

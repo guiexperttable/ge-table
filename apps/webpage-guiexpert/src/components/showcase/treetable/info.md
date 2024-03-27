@@ -5,9 +5,9 @@ layout: ../../../layouts/DemoCodeLayout.astro
 
 Source of demo: [treetable/run.astro](https://github.com/guiexperttable/website-astro/blob/main/src/components/showcase/treetable/run.astro).
 
-Model: [generateTreePeopleModel.ts](https://github.com/guiexperttable/ge-table/blob/main/libs/demo-table-models/src/lib/treepeople/generateTreePeopleModel.ts).
+Model: [generateTreePeopleModel.ts](https://github.com/guiexperttable/ge-table/blob/main/packages/demo-table-models/src/lib/treepeople/generateTreePeopleModel.ts).
 
-Data: [treePeopleData.ts](https://github.com/guiexperttable/ge-table/blob/main/libs/demo-table-models/src/lib/treepeople/treePeopleData.ts).
+Data: [treePeopleData.ts](https://github.com/guiexperttable/ge-table/blob/main/packages/demo-table-models/src/lib/treepeople/treePeopleData.ts).
 
 This example demonstrates a Tree-Table.
 In a Tree-Table, objects are in a hierarchical relationship to each other and typically belong to the same type, 

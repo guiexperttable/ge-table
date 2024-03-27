@@ -48,9 +48,10 @@ export declare class TableModel implements TableModelIf {
     protected contentWidthInPx: number;
     protected padding: Padding;
     protected xPositions: number[];
-    constructor(headerAreaModel: AreaModelIf, bodyAreaModel: AreaModelIf, footerAreaModel: AreaModelIf, fixedLeftColumnCount?: number, fixedRightColumnCount?: number, rowCheckboxVisible?: boolean, defaultRowHeights?: DefaultRowHeightsIf, columnDefs?: ColumnDefIf[], columnSizes?: number[], overridingColumnWidth?: number, columnCount?: number, parentSize?: number, // can be important when we have percentage widthes,
+    constructor(headerAreaModel: AreaModelIf, bodyAreaModel: AreaModelIf, footerAreaModel: AreaModelIf, fixedLeftColumnCount?: number, fixedRightColumnCount?: number, rowCheckboxVisible?: boolean, defaultRowHeights?: DefaultRowHeightsIf, columnDefs?: ColumnDefIf[], columnSizes?: number[], overridingColumnWidth?: number, columnCount?: number, parentSize?: number, // can be important when we have percentage widths,
     getSelectionModel?: GetT<SelectionModelIf>);
     init(): void;
+    setParentWidth(widthInPixel: number): void;
     /**
      * Retrieves the count of columns in the current instance.
      *
@@ -267,7 +268,16 @@ export declare class TableModel implements TableModelIf {
      * @returns {void}
      */
     changeColumnOrder(sourceColumnIndex: number, targetColumnIndex: number): void;
-    private recalcColumnWidthes;
+    private recalcColumnWidths;
+    /**
+     * Converts the given `SizeIf` object to pixel units based on the provided `clientWidth`.
+     * The given `SizeIf` must have the uniit '%' or 'px'.
+     *
+     * @param {SizeIf} width - The size object to be converted.
+     * @param {number} clientWidth - The width of the client area in pixels.
+     * @return {number} - The converted size value in pixels. returns -1 if unit is not '%' or 'px'.
+     */
+    private sizeToPixel;
     private arrayMove;
     private recalcContentWidthInPx;
     private calcXPositions;

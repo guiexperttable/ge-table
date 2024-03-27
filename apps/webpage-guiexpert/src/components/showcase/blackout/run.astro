@@ -1,0 +1,384 @@
+---
+const id = 'div' + Math.random().toString(36).slice(2, 11);
+---
+
+<div style="height: calc(100vh - 128px);" class="bg">
+  <br>
+  <br>
+  <div
+      style="height:450px;width: 900px;margin:36px; "
+      class={id}></div>
+</div>
+
+<script
+    is:inline
+    define:vars={{id}}
+    type="module">
+
+  import {TableFactory, TableScope, EventAdapter, TableOptions, SimpleDomService, ColumnDef, Size} from '/scripts/table/index.js';
+
+  const svgSnow = '<svg class="svg-snow" xmlns="http://www.w3.org/2000/svg" height="17" viewBox="0 -960 960 960" width="17"><path d="M440-80v-166L310-118l-56-56 186-186v-80h-80L174-254l-56-56 128-130H80v-80h166L118-650l56-56 186 186h80v-80L254-786l56-56 130 128v-166h80v166l130-128 56 56-186 186v80h80l186-186 56 56-128 130h166v80H714l128 130-56 56-186-186h-80v80l186 186-56 56-130-128v166h-80Z"/></svg>';
+  const svgTree = '<svg class="svg-tree" xmlns="http://www.w3.org/2000/svg" height="17" viewBox="0 -960 960 960" width="17"><path d="M558-80H402v-160H120l160-240h-80l280-400 280 400h-80l160 240H558v160ZM270-320h160-76 252-76 160-420Zm0 0h420L530-560h76L480-740 354-560h76L270-320Z"/></svg>';
+
+
+  const headerData = [ ['','','','','','','','','',''] ];
+  const bodyData = [
+    [
+      { clazz: 'blue',  active: true, selected: false, values: {top: '101', bottom:'25', center:'ARRI S60'}},
+      { clazz: 'blue',  active: true, selected: false, values: {top: '102', bottom:'25', center:'ARRI S60'}, freezed:true},
+      { clazz: 'blue',  active: true, selected: false, values: {top: '103', bottom:'25', center:'ARRI S60'}},
+      { clazz: 'blue',  active: true, selected: false, values: {top: '104', bottom:'25', center:'ARRI S60'}, e1: true, freezed:true },
+      { clazz: 'blue',  active: true, selected: false, values: {top: '105', bottom:'25', center:'ARRI S60'}, e1: true},
+      { clazz: 'blue',  active: true, selected: false, values: {top: '106', bottom:'25', center:'ARRI S60'}, e1: true},
+      { clazz: 'blue',  active: true, selected: false, values: {top: '107', bottom:'25', center:'ARRI S60'}, e1: true},
+      { clazz: 'blue',  active: true, selected: false, values: {top: '108', bottom:'25', center:'ARRI S60'}, exclamation: true},
+      { clazz: 'blue',  active: true, selected: false, values: {top: '109', bottom:'25', center:'ARRI S60'}},
+      { clazz: 'purple',  active: true, selected: false, values: {top: '201', bottom:'25', center:'Astera Titan'}}
+    ],
+    [
+      { clazz: 'purple',  active: true, selected: false, values: {top: '201.1', bottom:'55', center:'Astera Titan'}},
+      { clazz: 'purple',  active: true, selected: true, values: {top: '201.2', bottom:'55', center:'Astera Titan'}},
+      { clazz: 'purple',  active: true, selected: true, values: {top: '201.3', bottom:'55', center:'Astera Titan'}},
+      { clazz: 'purple',  active: true, selected: false, values: {top: '201.4', bottom:'55', center:'Astera Titan'}},
+      { clazz: 'purple',  active: true, selected: false, values: {top: '201.5', bottom:'55', center:'Astera Titan'}, freezed:true },
+      { clazz: 'purple',  active: true, selected: false, values: {top: '201.6', bottom:'55', center:'Astera Titan'}},
+      { clazz: 'purple',  active: true, selected: false, values: {top: '208', bottom:'55', center:'Astera Titan'}},
+      { clazz: 'purple',  active: true, selected: false, values: {top: '207', bottom:'55', center:'Astera Titan'}},
+      { clazz: 'red',  active: true, selected: false, values: {top: '301', bottom:'25', center:'Aputure 600d'}},
+      { clazz: 'red',  active: true, selected: false, values: {top: '302', bottom:'100', center:'Aputure 600d'}},
+    ],
+    [
+      { clazz: 'red',  active: true, selected: false, values: {top: '303', bottom:'55', center:'Aputure 600d'}},
+      { clazz: 'red',  active: true, selected: false, values: {top: '304', bottom:'100', center:'Aputure 600d'}, freezed:true },
+      { clazz: 'green',  active: true, selected: false, values: {top: '401', bottom:'100', center:'Kino FreeStyle'}},
+      { clazz: 'green',  active: true, selected: false, values: {top: '402', bottom:'100', center:'Kino FreeStyle'}, freezed:true },
+      { clazz: 'green',  active: true, selected: false, values: {top: '405', bottom:'55', center:'Kino FreeStyle'}},
+      { clazz: 'green',  active: true, selected: false, values: {top: '403', bottom:'55', center:'Kino FreeStyle'}, freezed:true },
+      { clazz: 'green',  active: true, selected: false, values: {top: '404', bottom:'55', center:'Kino FreeStyle'}},
+      { clazz: 'blue',  active: true, selected: false, values: {top: '901', bottom:'25', center:'Kino FreeStyle'}},
+      { clazz: 'blue',  active: false, selected: false, values: {top: '902', bottom:'25', center:''}, f: true},
+      { clazz: 'blue',  active: false, selected: false, values: {top: '903', bottom:'25', center:''}, f: true},
+    ],
+    [
+      { clazz: 'blue',  active: false, selected: false, values: {top: '904', bottom:'25', center:''}, f: true},
+      { clazz: 'blue',  active: false, selected: false, values: {top: '905', bottom:'75', center:''}, f: true},
+      { clazz: 'blue',  active: false, selected: false, values: {top: '909', bottom:'25', center:''}, f: true},
+      { clazz: 'blue',  active: false, selected: false, values: {top: '906', bottom:'25', center:''}, f: true},
+      { clazz: 'blue',  active: false, selected: false, values: {top: '907', bottom:'75', center:''}, f: true},
+      { clazz: 'blue',  active: false, selected: false, values: {top: '908', bottom:'25', center:''}, f: true},
+      { clazz: 'blue',  active: false, selected: false, values: {top: '910', bottom:'25', center:''}, f: true},
+      { clazz: 'green',  active: false, selected: false, values: {top: '131', bottom:'0', center:''}, tree:true },
+      { clazz: 'green',  active: false, selected: false, values: {top: '131', bottom:'0', center:''}, tree:true },
+      { clazz: 'green',  active: false, selected: false, values: {top: '131', bottom:'0', center:''}, tree:true },
+    ],
+  ];
+
+  class BR {
+    render(
+      cellDiv,
+      _rowIndex,
+      _columnIndex,
+      _areaIdent,
+      _areaModel,
+      cellValue,
+      _domService) {
+      console.log(cellValue);
+      if (cellValue) {
+        const item = cellValue;
+        // outer div:
+        const selectionDiv = document.createElement("div");
+        const classNames = ['selection-div', item.selected?'selected':'', item.active?'pointer': ''];
+        selectionDiv.className = classNames.join(' ');
+
+        if (item.active) {
+          selectionDiv.addEventListener('click', () => {
+            if (selectionDiv.classList.contains('selected')) {
+              selectionDiv.classList.remove('selected');
+            } else {
+              selectionDiv.classList.add('selected');
+            }
+          });
+        }
+
+        // box div:
+        const div = document.createElement("div");
+        const classes = ['box', item.clazz, (!item.active)?'inactive':'', item.freezed?'freezed':''];
+        div.className = classes.join(' ');
+
+        // inner div with 3 sub divs:
+        let {top, center, bottom} = item.values;
+        if (!center) center = '━━━━';
+        let buf = [`
+    <div class="inner-bg">
+      <div class="inner">
+        <div>${top}</div>
+        <div>${center}</div>
+        <div>${bottom}</div>
+      </div>
+    </div>
+    <div class="relative">
+    `];
+        if (item.freezed){
+          buf.push(svgSnow);
+        }
+        if (item.tree){
+          buf.push(svgTree);
+        }
+        if (item.e1){
+          buf.push('<div class="e1">E1</div>');
+        }
+        if (item.f){
+          buf.push('<div class="f">F</div>');
+        }
+        if (item.exclamation){
+          buf.push('<div class="exclamation">!</div>');
+        }
+        buf.push('</div>');
+        div.innerHTML = buf.join('');
+
+        selectionDiv.appendChild(div);
+        cellDiv.appendChild(selectionDiv);
+      }
+      return undefined;
+    }
+  }
+  const bodyRenderer = new BR();
+
+  const tableOptions = {
+    ...new TableOptions(),
+    defaultRowHeights: {
+      header: 0,
+      body: 110,
+      footer: 0
+    }
+  };
+  const tableModel = TableFactory.createTableModel({
+    headerData,
+    bodyData,
+    tableOptions,
+    overridingColumnWidth: 95,
+  });
+  const simpleDomService = new SimpleDomService();
+  const eventAdapter = new EventAdapter();
+  tableModel.bodyAreaModel.getCellRenderer = (_rowIndex, _columnIndex) => bodyRenderer;
+
+  new TableScope(document.querySelector('.'+id), tableModel, simpleDomService, tableOptions, eventAdapter).firstInit();
+
+</script>
+
+<style is:global>
+
+   html {
+       --main-bg: #15151a;
+       --main-text: #f1f1f1;
+       --no-value-text: #38383c;
+       --no-value-text-green: #40b042;
+
+       --border-blue: #4c53ff;
+       --border-freezed: #2c96e3;
+       --border-purple: #8a3cc8;
+       --border-red: #ff6c4c;
+       --border-green: #3fc83c;
+
+
+       --border-inactive-blue: #07699b;
+       --border-inactive-purple: #55257c;
+       --border-inactive-red: #9b422f;
+       --border-inactive-green: #348b35;
+       --border-inactive-green-end: #b8ecba;
+       --inactive-green-start-bg: rgba(41, 112, 42, 0.4);
+       --inactive-green-end-bg: #fff2;
+
+       --border-selected: #fde047;
+       --border-selected-inner-dots: #fde04755;
+
+       --border-radius: 9px;
+       --border-radius-plus-1: 10px;
+
+       --svg-snow: var(--border-freezed);
+       --svg-tree: #22c55d;
+
+       --e1-bg: #ebb305;
+       --e1-color: #0b0b0d;
+       --f-bg: #ef4444;
+       --f-color: #000;
+       --exclamation-bg: #f97315;
+       --exclamation-color: #22150f;
+   }
+   html,
+   html[data-theme="light"],
+   html[data-theme="dark"] {
+       --ge-table-bg: var(--main-bg);
+       --ge-table-border: var(--main-bg);
+       --ge-table-hover-column-bg: transparent;
+       --ge-table-hover-row-bg: transparent;
+       --ge-table-focus-border: transparent;
+       --ge-table-row-odd-bg: var(--main-bg);
+       --ge-table-row-even-bg: var(--main-bg);
+       --ge-table-column-odd-bg: var(--main-bg);
+       --ge-table-column-even-bg: var(--main-bg);
+
+       --ge-table-body-center-horizontal-border: var(--main-bg);
+       --ge-table-body-center-vertical-border: var(--main-bg);
+       --ge-table-body-center-horizontal-border: cyan;
+       --ge-table-body-center-vertical-border: cyan;
+
+       --ge-table-body-center-text: var(--main-text);
+   }
+   .ge-table-col-div {
+       position: absolute;
+       left: 95px;
+       top: 0px;
+       width: 95px;
+       height: 110px;
+       display: flex;
+       align-content: center;
+       align-items: center;
+       justify-content: center;
+       flex-wrap: wrap;
+   }
+
+   .bg {
+       background-color: var(--main-bg);
+   }
+  .pointer{
+      cursor: pointer;
+  }
+  .selection-div {
+      width: 76px;
+      height: 91px;
+      border-bottom-width: 1px;
+      border-style: solid;
+      border-radius: 12px;
+      border-color: transparent;
+      padding: 1px;
+      font-size: 12px;
+      line-height: 12px;
+  }
+  .selection-div.selected {
+      border-color: var(--border-selected);
+      outline: 1px var(--border-selected-inner-dots) dotted;
+      outline-offset: -6px;
+  }
+
+  .box {
+      width: calc(100% - 2px);
+      height: calc(100% - 2px);
+      border-width: 0;
+      border-style: solid;
+      border-radius: var(--border-radius-plus-1);
+      border-color: transparent;
+      padding: 1px;
+  }
+
+
+  .box.blue {background: var(--border-blue)}
+  .box.purple {background: var(--border-purple)}
+  .box.red {background: var(--border-red)}
+  .box.green {background: var(--border-green)}
+  .box.freezed {background: linear-gradient(to bottom right, var(--border-freezed), #fff) !important;}
+  .box.freezed  .inner {background: linear-gradient(135deg, #2c96e355, #8884) !important;}
+
+
+  .box.inactive.blue {background-color: var(--border-inactive-blue)}
+  .box.inactive.green {background: linear-gradient(135deg, var(--border-inactive-green), var(--border-inactive-green-end)); }
+  .box.inactive.green .inner {background: linear-gradient(135deg, var(--inactive-green-start-bg), var(--inactive-green-end-bg));}
+
+  .box .inner-bg {
+      width: 100%;
+      height: 100%;
+      background-color: var(--main-bg);
+      border-radius: var(--border-radius);
+  }
+  .box .inner {
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      border-radius: var(--border-radius);
+      display: grid;
+      grid-template-rows: 1fr 16px 1fr;
+  }
+  .box .inner > div {
+      display: grid;
+      place-items: center;
+  }
+  .box .inner > * {
+      user-select: none;
+  }
+
+  .box .inner > :nth-child(1),
+  .box .inner > :nth-child(3) {font-size: 17px; font-family: monospace;}
+
+  .box .inner > :nth-child(2) {
+      font-size: 12px;
+      font-family: sans-serif;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+  }
+
+  .box.blue .inner > :nth-child(2){background-color: var(--border-blue);}
+  .box.purple .inner > :nth-child(2){background-color: var(--border-purple);}
+  .box.red .inner > :nth-child(2){background-color: var(--border-red);color: #000;}
+  .box.green .inner > :nth-child(2) {background-color: var(--border-green); color: #000;}
+
+  .box.inactive .inner > :nth-child(2) {background-color: transparent!important;}
+  .box.inactive .inner > :nth-child(2){color: var(--no-value-text)}
+  .box.inactive.green .inner > :nth-child(2){color: var(--no-value-text-green)}
+
+
+
+
+  .box .relative {
+      width: 0;
+      height: 0;
+      overflow: visible;
+      position: relative;
+      z-index: 1000;
+  }
+  .svg-snow {
+      position: absolute;
+      fill: var(--svg-snow);
+      top: -88px;
+      left: 2px;
+  }
+  .svg-tree {
+      position: absolute;
+      fill: var(--svg-tree);
+      top: -88px;
+      left: 2px;
+  }
+
+  .exclamation, .e1, .f {
+      font-size: 10px;
+      font-weight: bold;
+      min-width: 12px;
+      width: auto;
+      display: inline-flex;
+      justify-content: center;
+      border-radius: 3px;
+      position: absolute;
+  }
+  .exclamation{
+      color: var(--exclamation-color);
+      background-color: var(--exclamation-bg);
+      top: -14px;
+      left: 6px;
+  }
+  .f {
+      color: var(--f-color);
+      background-color: var(--f-bg);
+      top: -88px;
+      left: 56px;
+  }
+  .e1 {
+      color: var(--e1-color);
+      background-color: var(--e1-bg);
+      font-size: 12px;
+      min-width: 18px;
+      min-height: 14px;
+      top: -16px;
+      left: 52px;
+  }
+
+</style>

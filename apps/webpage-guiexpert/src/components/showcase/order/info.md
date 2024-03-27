@@ -10,10 +10,10 @@ The user can change the column widths by dragging a column separator, which will
 A double click on a header will trigger a quick table sort.
 In this demo we also configured a multi table row selection. 
 
-The creation of the demo TableModel code can be found at [createOrderModelAndOptions()](https://github.com/guiexperttable/ge-table/blob/main/libs/demo-table-models/src/lib/createOrderModel.ts).
+The creation of the demo TableModel code can be found at [createOrderModelAndOptions()](https://github.com/guiexperttable/ge-table/blob/main/packages/demo-table-models/src/lib/createOrderModel.ts).
 
 The TableModel is created by an array of objects
-(see [orders.ts](https://github.com/guiexperttable/ge-table/blob/main/libs/demo-table-models/src/demodata/orders.ts)),
+(see [orders.ts](https://github.com/guiexperttable/ge-table/blob/main/packages/demo-table-models/src/demodata/orders.ts)),
 and an array of ColumnDefs and the helper function `TableFactory.createTableModel()`:
 
 ```ts
@@ -125,4 +125,4 @@ Each column is defined by this array:
 
 Some of the pre-defined renderers can be found in the core table library in this package: [renderer](https://github.com/guiexperttable/ge-table/tree/main/libs/table/src/lib/table/renderer).
 
-The used css classes (starting with 'ge-table-') are available at [main.css](https://github.com/guiexperttable/ge-table/blob/main/libs/table/css/main.css).
+The used css classes (starting with 'ge-table-') are available at [main.css](https://github.com/guiexperttable/ge-table/blob/main/packages/table/css/main.css).

@@ -48,6 +48,12 @@ import { HeaderGroupOptionsIf } from './header-group-options.if';
  */
 export interface TableOptionsIf {
     /**
+     * The delay in milliseconds used for debouncing the resize event.
+     *
+     * @type {number}
+     */
+    resizeEventDebounceDelay: number;
+    /**
      * Indicates whether the header separator border is visible.
      *
      * @type {boolean}

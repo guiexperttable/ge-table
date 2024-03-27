@@ -44,6 +44,7 @@ export declare const tableOptions: {
     sortedOptions: import('../../../table/src').SortedOptions;
     sortOrder: import('../../../table/src').SortState[];
     shortcutActionIdMapping?: import('../../../table/src').ShortcutActionIdMapping | undefined;
+    resizeEventDebounceDelay: number;
     getEditRenderer?: import('../../../table/src').GetEditRenderer | undefined;
     getSelectionModel?: import('../../../table/src').GetT<import('../../../table/src').SelectionModelIf> | undefined;
     getFocusModel?: import('../../../table/src').GetT<import('../../../table/src').FocusModelIf> | undefined;

@@ -23,6 +23,7 @@ import { SelectionModelIf } from './selection/selection-model.if';
 import { FocusModelIf } from './focus/focus-model.if';
 import { EventFocusChangedListenerIf } from './focus/event-focus-changed-listener.if';
 import { EventSelectionChangedListenerIf } from './selection/event-selection-changed-listener.if';
+import { ResizeHandler } from './resize-handler';
 /**
  * The TableScope class extends the RenderScope class and provides functionality for rendering and interacting with a table.
  *
@@ -55,6 +56,7 @@ export declare class TableScope extends RenderScope implements OnActionTriggered
     licenseManager: LicenseManager;
     mouseHandler: MouseHandler;
     inputHandler: InputHandler;
+    resizeHandler: ResizeHandler;
     shortcutService: ShortcutService;
     storeStateCollapsedExpandService?: StoreStateCollapsedExpandService;
     storeSortingService?: StoreStateSortingService;

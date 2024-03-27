@@ -86,6 +86,14 @@ export declare class RenderScope extends EleScope {
      */
     repaintHard(): void;
     /**
+     * Recalculates the column widths of the table.
+     *
+     * @param {number} [clientWidth] - The client width of the table. If not provided, the client width of the scroll viewport will be used.
+     *
+     * @return {undefined}
+     */
+    recalcColumnWidths(clientWidth?: number): void;
+    /**
      * Adjusts the table after scrolling. This method performs various adjustments
      * to the table's appearance and behavior after a scroll event occurs.
      */

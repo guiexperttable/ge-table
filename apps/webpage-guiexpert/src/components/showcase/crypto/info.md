@@ -4,10 +4,10 @@ layout: ../../../layouts/DemoCodeLayout.astro
 
 In this example, we demonstrate how to assemble a table from a list of business objects (T[]) and a few column definitions (ColumnDefIf[]).
 
-The creation of the demo TableModel code can be found at [createCryptoModelAndOptions()](https://github.com/guiexperttable/ge-table/blob/main/libs/demo-table-models/src/lib/crypto/generateCryptoModel.ts).
+The creation of the demo TableModel code can be found at [createCryptoModelAndOptions()](https://github.com/guiexperttable/ge-table/blob/main/packages/demo-table-models/src/lib/crypto/generateCryptoModel.ts).
  
 The TableModel is created by an array of objects 
-(see [crypto-data.ts](https://github.com/guiexperttable/ge-table/blob/main/libs/demo-table-models/src/lib/crypto/crypto-data.ts)), 
+(see [crypto-data.ts](https://github.com/guiexperttable/ge-table/blob/main/packages/demo-table-models/src/lib/crypto/crypto-data.ts)), 
 and an array of ColumnDefs and this helper function:
 
 ```ts

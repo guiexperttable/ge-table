@@ -355,7 +355,12 @@ export class RenderScope extends EleScope {
     if (cell) {
       let fn: RendererCleanupFnType | undefined = undefined;
       const editor = this.editorRenderer && this.editorRendererRow === rowIndex && this.editorRendererColumn === columnIndex;
-      const cellRenderer = (editor) ? this.editorRenderer : areaModel.getCellRenderer(rowIndex, columnIndex);
+      let cellRenderer;
+      if (editor) {
+        cellRenderer = this.editorRenderer;
+      } else {
+        cellRenderer = areaModel.getCellRenderer(rowIndex, columnIndex);
+      }
 
       cell.innerText = '';
       this.applyCssClasses(cell, cssClasses);

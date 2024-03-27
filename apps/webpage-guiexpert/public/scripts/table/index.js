@@ -1,4 +1,21 @@
-function et(c = 500) {
+function ot(c, e = 500) {
+  let t = null, o = 0;
+  return function(...i) {
+    const s = Date.now(), r = e - (s - o);
+    r <= 0 ? (c.apply(this, i), o = s) : t || (t = window.setTimeout(() => {
+      c.apply(this, i), o = Date.now(), t = null;
+    }, r));
+  };
+}
+function ye(c, e = 500) {
+  let t = null;
+  return function(...o) {
+    t && window.clearTimeout(t), t = window.setTimeout(() => {
+      c.apply(this, o), t = null;
+    }, e);
+  };
+}
+function it(c = 500) {
   return function(e, t, o) {
     let i = 0;
     const s = o.value;
@@ -8,14 +25,14 @@ function et(c = 500) {
     }, o;
   };
 }
-class L {
+class P {
   // The constructor is private to prevent direct construction calls
   // with the `new` operator
   constructor() {
     this.alreadySet = !1;
   }
   static getInstance() {
-    return L.instance || (L.instance = new L()), L.instance;
+    return P.instance || (P.instance = new P()), P.instance;
   }
   /**
    * Method to set the license key for the application.
@@ -39,12 +56,12 @@ function H(c) {
 function K(c) {
   return c && c.type === "AreaModelTree";
 }
-function ye(c) {
+function ve(c) {
   return c && c.type === "CheckboxColumnDef";
 }
 class Q {
-  constructor(e = -1, t = -1, o = -1, i = -1, s, r, l, n = 0, d = 0, a = 0, h = "") {
-    this.rowIndex = e, this.rowTop = t, this.columnIndex = o, this.columnLeft = i, this.areaIdent = s, this.sideIdent = r, this.originalEvent = l, this.clickCount = n, this.draggingX = d, this.draggingY = a, this.action = h;
+  constructor(e = -1, t = -1, o = -1, i = -1, s, r, l, n = 0, a = 0, d = 0, h = "") {
+    this.rowIndex = e, this.rowTop = t, this.columnIndex = o, this.columnLeft = i, this.areaIdent = s, this.sideIdent = r, this.originalEvent = l, this.clickCount = n, this.draggingX = a, this.draggingY = d, this.action = h;
   }
   clone() {
     return new Q(
@@ -62,25 +79,25 @@ class Q {
     );
   }
 }
-class $ {
+class O {
   constructor(e = ">", t = "", o = []) {
     this.content = e, this.style = t, this.classes = o;
   }
 }
 class fe {
-  constructor(e = new $(
+  constructor(e = new O(
     ">",
     "transform: rotate(90deg) translate(66%, -66%); transform-origin: 0 0;",
     ["gt-table-tree-arrow-expanded"]
-  ), t = new $(
+  ), t = new O(
     ">",
     "",
     ["ge-table-tree-arrow-collapsed"]
-  ), o = new $(
+  ), o = new O(
     ">",
     "color:transparent;",
     ["gt-table-tree-arrow-hidden"]
-  ), i = new $(
+  ), i = new O(
     "↕",
     "",
     ["gt-table-tree-arrow-expanded-all"]
@@ -89,11 +106,11 @@ class fe {
   }
 }
 class me {
-  constructor(e = new $("↑", "", ["ge-header-sorted-asc"]), t = new $("↓", "", ["ge-header-sorted-desc"]), o = new $("↑", "color:transparent;", [])) {
+  constructor(e = new O("↑", "", ["ge-header-sorted-asc"]), t = new O("↓", "", ["ge-header-sorted-desc"]), o = new O("↑", "color:transparent;", [])) {
     this.iconAsc = e, this.iconDesc = t, this.iconPlaceholder = o;
   }
 }
-class ve {
+class Re {
   constructor(e) {
     this.domService = e;
   }
@@ -169,24 +186,24 @@ class ve {
   addRowDiv(e, t, o = -1, i, s, r = "") {
     const l = t.index ?? -1, n = this.getDivOrCreateDiv(l, e);
     if (this.domService.addClass(n, "ge-table-row-div"), this.domService.addClass(n, `ge-table-row-div-${t.index}`), i === "body" && s === "center") {
-      const d = ((t == null ? void 0 : t.index) ?? 0) % 2 === 0 ? "even" : "odd";
-      this.domService.addClass(n, `ge-table-row-${d}`);
+      const a = ((t == null ? void 0 : t.index) ?? 0) % 2 === 0 ? "even" : "odd";
+      this.domService.addClass(n, `ge-table-row-${a}`);
     }
     if (this.domService.setStyle(n, "display", "clip"), this.domService.setStyle(n, "position", "absolute"), this.domService.setStyle(n, "left", `${t.left}px`), this.domService.setStyle(n, "top", `${t.top}px`), this.domService.setStyle(n, "width", `${t.width}px`), this.domService.setStyle(n, "height", `${t.height}px`), this.domService.setAttribute(n, "data-row-index", `${o}`), this.domService.setAttribute(n, "data-area", `${i}`), r) {
-      const d = this.domService.createText(r);
-      this.domService.appendChild(n, d);
+      const a = this.domService.createText(r);
+      this.domService.appendChild(n, a);
     }
     return this.domService.appendChild(e.child, n), n;
   }
   addColumnDiv(e) {
-    const { parent: t, geo: o, rowIndex: i = -1, columnIndex: s = -1, areaIdent: r, sideIdent: l, text: n = "", treeArrow: d, tableOptions: a, checkedType: h = void 0, sortState: u } = e, m = a == null ? void 0 : a.treeOptions, b = a == null ? void 0 : a.showCheckboxWihoutExtraColumn, f = this.domService.createElement("div");
+    const { parent: t, geo: o, rowIndex: i = -1, columnIndex: s = -1, areaIdent: r, sideIdent: l, text: n = "", treeArrow: a, tableOptions: d, checkedType: h = void 0, sortState: u } = e, m = d == null ? void 0 : d.treeOptions, b = d == null ? void 0 : d.showCheckboxWihoutExtraColumn, f = this.domService.createElement("div");
     this.domService.addClass(f, "ge-table-col-div"), b && this.domService.addClass(f, "ge-with-checkbox"), this.domService.addClass(f, `ge-table-col-div-${o.index}`), this.domService.setAttribute(f, "data-col-index", `${o.index}`), this.domService.setAttribute(f, "data-row-index", `${i}`), this.domService.setAttribute(f, "data-area", `${r}`);
     const g = ((o == null ? void 0 : o.index) ?? 0) % 2 === 0 ? "even" : "odd";
-    if (r === "body" && l === "center" && this.domService.addClass(f, `ge-table-column-${g}`), this.domService.setStyle(f, "display", "clip"), this.domService.setStyle(f, "position", "absolute"), this.domService.setStyle(f, "left", `${o.left}px`), this.domService.setStyle(f, "top", `${o.top}px`), this.domService.setStyle(f, "width", `${o.width}px`), this.domService.setStyle(f, "height", `${o.height}px`), d && d !== "none" && (this.domService.addClass(f, "ge-table-col-tree"), this.addArrowDiv(f, d, m, i, s, r)), b && s === 0 && h && this.addCheckboxToDiv(f, h, r, i), n) {
-      const p = d !== "none" && s === 0;
+    if (r === "body" && l === "center" && this.domService.addClass(f, `ge-table-column-${g}`), this.domService.setStyle(f, "display", "clip"), this.domService.setStyle(f, "position", "absolute"), this.domService.setStyle(f, "left", `${o.left}px`), this.domService.setStyle(f, "top", `${o.top}px`), this.domService.setStyle(f, "width", `${o.width}px`), this.domService.setStyle(f, "height", `${o.height}px`), a && a !== "none" && (this.domService.addClass(f, "ge-table-col-tree"), this.addArrowDiv(f, a, m, i, s, r)), b && s === 0 && h && this.addCheckboxToDiv(f, h, r, i), n) {
+      const p = a !== "none" && s === 0;
       this.addLabelDiv(f, n, p, i, s, r);
     }
-    return u && this.addSortedIcon(f, u, a == null ? void 0 : a.sortedOptions, s), this.domService.appendChild(t, f), f;
+    return u && this.addSortedIcon(f, u, d == null ? void 0 : d.sortedOptions, s), this.domService.appendChild(t, f), f;
   }
   addCheckboxToDiv(e, t, o, i) {
     const s = this.domService.createElement("div"), r = t === "full" ? "checked" : "";
@@ -208,8 +225,8 @@ class ve {
       } else {
         const n = this.domService.createElement("div");
         this.domService.appendChild(l, n);
-        const d = this.domService.createText(t);
-        this.domService.addClass(n, "ge-table-label"), this.domService.appendChild(n, d), this.domService.setAttribute(n, "data-row-index", `${i}`), this.domService.setAttribute(n, "data-col-index", `${s}`), this.domService.setAttribute(n, "data-area", `${r}`);
+        const a = this.domService.createText(t);
+        this.domService.addClass(n, "ge-table-label"), this.domService.appendChild(n, a), this.domService.setAttribute(n, "data-row-index", `${i}`), this.domService.setAttribute(n, "data-col-index", `${s}`), this.domService.setAttribute(n, "data-area", `${r}`);
       }
     return this.domService.appendChild(e, l), l;
   }
@@ -220,8 +237,8 @@ class ve {
     t === "asc" ? r = o.iconAsc : t === "desc" ? r = o.iconDesc : r = o.iconPlaceholder;
     const l = r.content, n = this.domService.createText(l);
     this.domService.appendChild(s, n), r.style && this.applyStyleString(s, r.style);
-    for (const d of r.classes)
-      this.domService.addClass(s, d);
+    for (const a of r.classes)
+      this.domService.addClass(s, a);
     return this.domService.appendChild(e, s), s;
   }
   addArrowDiv(e, t = "none", o = new fe(), i = -1, s = -1, r = "body") {
@@ -229,8 +246,8 @@ class ve {
     this.domService.addClass(l, "ge-table-tree-arrow-div"), this.domService.setStyle(l, "display", "inline-block"), this.domService.setStyle(l, "position", ""), this.domService.setStyle(l, "width", "20px"), this.domService.setStyle(l, "background", "transparent"), this.domService.setStyle(l, "cursor", "pointer"), this.domService.setAttribute(l, "data-row-index", `${i}`), this.domService.setAttribute(l, "data-col-index", `${s}`), this.domService.setAttribute(l, "data-area", `${r}`);
     let n;
     t === "expanded" ? n = o.arrowExpanded : t === "collapsed" ? n = o.arrowCollapsed : n = o.arrowPlaceholder;
-    const d = n.content, a = this.domService.createText(d);
-    this.domService.appendChild(l, a), n.style && this.applyStyleString(l, n.style);
+    const a = n.content, d = this.domService.createText(a);
+    this.domService.appendChild(l, d), n.style && this.applyStyleString(l, n.style);
     for (const h of n.classes)
       this.domService.addClass(l, h);
     return this.domService.appendChild(e, l), l;
@@ -276,7 +293,7 @@ class ve {
   }
 }
 const Z = (c) => c === "header" ? "header" : c === "footer" ? "footer" : "body";
-class Re {
+class Ae {
   constructor(e, t) {
     if (this.rowIdx = -1, this.colIdx = -1, this.action = null, this.inputType = null, this.className = "", e !== null && (e instanceof HTMLDivElement || e instanceof HTMLSpanElement || e instanceof HTMLInputElement)) {
       this.className = e.className, this.action = e.getAttribute("data-ge-action"), this.inputType = e.getAttribute("data-input-type"), this.rowIdx = Number(e.getAttribute("data-row-index")), this.colIdx = Number(e.getAttribute("data-col-index"));
@@ -288,7 +305,7 @@ class Re {
     }
   }
 }
-class Ae {
+class Ee {
   constructor(e) {
     this.tableScope = e, this.doubleClickDelay = 500, this.expandedAll = !0, this.mouseDown = !1, this.dragging = !1, this.lastClicked = 0, this.tableScope.hostElement.addEventListener("click", this.onHostElementClicked.bind(this)), this.tableScope.hostElement.addEventListener("dblclick", this.onHostElementDblClicked.bind(this)), this.tableScope.hostElement.addEventListener("mousedown", this.onMouseDown.bind(this)), this.tableScope.hostElement.addEventListener("mousemove", this.onMouseMove.bind(this)), this.tableScope.hostElement.addEventListener("mouseup", this.onMouseUp.bind(this)), this.tableScope.hostElement.addEventListener("contextmenu", this.onContextmenu.bind(this)), this.tableScope.hostElement._MouseHandler = "true", this.tableScope.scrollViewport.addEventListener("scroll", this.tableScope.adjustAfterScrolling.bind(this.tableScope)), [window, this.tableScope.hostElement].forEach(
       (t) => t.addEventListener("resize", this.tableScope.adjustContainersAndRows.bind(this.tableScope))
@@ -318,7 +335,7 @@ class Ae {
     if (t - this.lastClicked < this.doubleClickDelay)
       return;
     this.lastClicked = t;
-    const o = new Re(e.target, this.tableScope);
+    const o = new Ae(e.target, this.tableScope);
     if (o.action === "toggleExpandCollapseAll")
       this.expandedAll = !this.expandedAll, this.tableScope.toggleExpandCollapseAll(this.expandedAll), e.preventDefault(), e.stopPropagation();
     else if (o.action === "toggleHeaderGroup")
@@ -354,8 +371,8 @@ class Ae {
         const n = l.getRowByIndex(s);
         if (o && i === "body" && l.isEditable(s, r) && (this.tableScope.clearSelection(), this.tableScope.initRenderEditor(s, r)), H(n) && r === this.getArrowColumnIndex()) {
           e.preventDefault(), e.stopPropagation();
-          const d = n;
-          d.expanded = !d.expanded, "recalcVisibleTreeRows" in l && l.recalcVisibleTreeRows(), this.tableScope.tableModel.recalcSize(this.tableScope.hostElement.clientWidth), this.tableScope.adjustContainersAndRows(), this.updateCollapsedExpandedState(d);
+          const a = n;
+          a.expanded = !a.expanded, "recalcVisibleTreeRows" in l && l.recalcVisibleTreeRows(), this.tableScope.tableModel.recalcSize(this.tableScope.hostElement.clientWidth), this.tableScope.adjustContainersAndRows(), this.updateCollapsedExpandedState(a);
         }
       }
     }
@@ -383,8 +400,8 @@ class Ae {
     var o, i, s, r, l;
     const t = (i = (o = this.tableScope.tableOptions) == null ? void 0 : o.autoRestoreOptions) == null ? void 0 : i.getRowId;
     if (t) {
-      const n = (s = this.tableScope.storeStateCollapsedExpandService) == null ? void 0 : s.collapsedExpandedStateGet().mode, d = n === "collapsed" && !e.expanded || n === "expanded" && e.expanded, a = n === "collapsed" && e.expanded || n === "expanded" && !e.expanded, h = t(e.data);
-      d ? (r = this.tableScope.storeStateCollapsedExpandService) == null || r.collapsedStateIdsPush(h) : a && ((l = this.tableScope.storeStateCollapsedExpandService) == null || l.collapsedStateIdsRemove(h));
+      const n = (s = this.tableScope.storeStateCollapsedExpandService) == null ? void 0 : s.collapsedExpandedStateGet().mode, a = n === "collapsed" && !e.expanded || n === "expanded" && e.expanded, d = n === "collapsed" && e.expanded || n === "expanded" && !e.expanded, h = t(e.data);
+      a ? (r = this.tableScope.storeStateCollapsedExpandService) == null || r.collapsedStateIdsPush(h) : d && ((l = this.tableScope.storeStateCollapsedExpandService) == null || l.collapsedStateIdsRemove(h));
     }
   }
   getArrowColumnIndex() {
@@ -538,6 +555,16 @@ class Me {
     this.tableScope.repaintHard();
   }
   /**
+   * Recalculates the column widths of the table.
+   *
+   * @param {number} clientWidth - The width of the client area.
+   *
+   * @return {void}
+   */
+  recalcColumnWidths(e) {
+    this.tableScope.recalcColumnWidths(e);
+  }
+  /**
    * Clears the current selection of the table.
    * The table will be rendered automatically.
    *
@@ -680,7 +707,7 @@ class ee {
   //   }
   // }
 }
-class Ee extends ee {
+class Ie extends ee {
   constructor(e) {
     super(e), this.SCROLL_STATE = "scrollState", this.scrollOffset = [0, 0], this.load();
   }
@@ -702,14 +729,14 @@ class Ee extends ee {
     }
   }
 }
-class Ie {
+class ke {
   constructor(e = "collapsed", t = [], o = !1, i = !1) {
     this.mode = e, this.rowIds = t, this.allCollapsed = o, this.allExpanded = i;
   }
 }
-class ke extends ee {
+class Te extends ee {
   constructor(e) {
-    super(e), this.COLLAPSED_EXPANDED_STATE = "collapsedExpandedState", this.collapsedExpandedState = new Ie(), this.load();
+    super(e), this.COLLAPSED_EXPANDED_STATE = "collapsedExpandedState", this.collapsedExpandedState = new ke(), this.load();
   }
   collapsedExpandedStateGet() {
     return this.collapsedExpandedState;
@@ -741,7 +768,7 @@ class ke extends ee {
     this.checkAndPersistItem(this.COLLAPSED_EXPANDED_STATE, this.collapsedExpandedState);
   }
 }
-class Te extends ee {
+class De extends ee {
   constructor(e) {
     super(e), this.SORTING_STATE = "sortingState", this.sortItems = [], this.load();
   }
@@ -767,7 +794,7 @@ class F {
     this.left = e, this.width = t, this.height = o, this.top = i, this.index = s;
   }
 }
-class De {
+class _e {
   constructor(e, t, o, i) {
     this.hostElement = e, this.tableModel = t, this.dom = o, this.tableOptions = i, this.scrollTop = 0, this.areaBodyWestGeo = new F(), this.areaBodyCenterGeo = new F(), this.areaBodyEastGeo = new F();
     const s = this.hostElement;
@@ -973,7 +1000,7 @@ class A {
     return e >= this.r1 && e <= this.r2 && t >= this.c1 && t <= this.c2;
   }
 }
-class _e {
+class Fe {
   constructor(e, t) {
     this.tableModel = e, this.areaModel = t, this.colAndRowspanRanges = void 0;
   }
@@ -1011,7 +1038,7 @@ class T {
     this.header = e, this.body = t, this.footer = o;
   }
 }
-class Fe extends De {
+class Oe extends _e {
   constructor(e, t, o, i) {
     var r, l;
     super(e, t, o, i), this.dragging = !1, this.editing = !1, this.storedColumnWidths = [], this.scrollLeft = 0, this.scrollViewportLeft = 0, this.scrollFactorY = 0, this.scrollFactorX = 0, this.cleanupFunctions = {
@@ -1020,8 +1047,8 @@ class Fe extends De {
       footer: []
     }, this.tree = !1, this.colAndRowspanModels = new T(), this.firstVisibleRowIndex = -1, this.draggingTargetColumnIndex = -1, this.removables = [], this.tableModel.getSelectionModel ? this.getSelectionModel = this.tableModel.getSelectionModel : (r = this.tableOptions) != null && r.getSelectionModel && (this.getSelectionModel = this.tableOptions.getSelectionModel), (l = this.tableOptions) != null && l.getFocusModel && (this.getFocusModel = this.tableOptions.getFocusModel), K(t.getAreaModel("body")) && (this.tree = !0), ["header", "body", "footer"].forEach(
       (n) => {
-        var d;
-        this.colAndRowspanModels[n] = new _e(t, t.getAreaModel(n)), (d = this.colAndRowspanModels[n]) == null || d.init();
+        var a;
+        this.colAndRowspanModels[n] = new Fe(t, t.getAreaModel(n)), (a = this.colAndRowspanModels[n]) == null || a.init();
       }
     );
   }
@@ -1088,6 +1115,17 @@ class Fe extends De {
     this.resetSizeOfWrapperDiv(), this.adjustContainersAndRows(), this.adjustAfterScrolling();
   }
   /**
+   * Recalculates the column widths of the table.
+   *
+   * @param {number} [clientWidth] - The client width of the table. If not provided, the client width of the scroll viewport will be used.
+   *
+   * @return {undefined}
+   */
+  recalcColumnWidths(e) {
+    let t = e || this.scrollViewport.clientWidth;
+    this.tableModel.setParentWidth(t), this.tableModel.init(), this.repaintHard();
+  }
+  /**
    * Adjusts the table after scrolling. This method performs various adjustments
    * to the table's appearance and behavior after a scroll event occurs.
    */
@@ -1149,10 +1187,11 @@ class Fe extends De {
   rerenderCellContent({ area: e, rowIndex: t, columnIndex: o, value: i, cssClasses: s }) {
     const r = this.tableModel.getAreaModel(e), l = 'div[data-col-index="' + o + '"][data-row-index="' + t + '"][data-area="' + e + '"]', n = document.querySelector(l);
     if (n) {
-      let d;
-      const h = this.editorRenderer && this.editorRendererRow === t && this.editorRendererColumn === o ? this.editorRenderer : r.getCellRenderer(t, o);
-      if (n.innerText = "", this.applyCssClasses(n, s), h)
-        d = h.render(n, t, o, e, r, i, this.dom.domService), d && this.cleanupFunctions[e].push(d);
+      let a;
+      const d = this.editorRenderer && this.editorRendererRow === t && this.editorRendererColumn === o;
+      let h;
+      if (d ? h = this.editorRenderer : h = r.getCellRenderer(t, o), n.innerText = "", this.applyCssClasses(n, s), h)
+        a = h.render(n, t, o, e, r, i, this.dom.domService), a && this.cleanupFunctions[e].push(a);
       else {
         const b = `${i}`;
         this.dom.addLabelDiv(n, b, !1, t, o, e);
@@ -1274,7 +1313,7 @@ class Fe extends De {
     var g;
     const o = this.getArea(e, "west"), i = this.getArea(e, "center"), s = this.getArea(e, "east"), r = i.child.clientHeight;
     o.child.innerText = "", i.child.innerText = "", s.child.innerText = "";
-    const l = 0, n = this.areaBodyCenterGeo.width, d = this.tableModel.getPadding(), a = this.tableModel.getAreaModel(e), h = a.getRowCount();
+    const l = 0, n = this.areaBodyCenterGeo.width, a = this.tableModel.getPadding(), d = this.tableModel.getAreaModel(e), h = d.getRowCount();
     for (; this.cleanupFunctions[e].length; ) {
       const p = this.cleanupFunctions[e].shift();
       p && p();
@@ -1290,7 +1329,7 @@ class Fe extends De {
         if (this.adjustColumnsToRowParent({
           areaIdent: e,
           sideIdent: "center",
-          areaModel: a,
+          areaModel: d,
           geo: x,
           parent: S,
           rowIndex: p,
@@ -1298,10 +1337,10 @@ class Fe extends De {
           columnIndexEnd: m - b - 1,
           verticalFixed: !1,
           lastRowOfModel: y
-        }), d.left > 0 && (x = { left: l, width: this.areaBodyWestGeo.width, height: R, top: C, index: p }, S = this.dom.addRowDiv(o, x, p, e, "west"), this.adjustColumnsToRowParent({
+        }), a.left > 0 && (x = { left: l, width: this.areaBodyWestGeo.width, height: R, top: C, index: p }, S = this.dom.addRowDiv(o, x, p, e, "west"), this.adjustColumnsToRowParent({
           areaIdent: e,
           sideIdent: "west",
-          areaModel: a,
+          areaModel: d,
           geo: x,
           parent: S,
           rowIndex: p,
@@ -1309,10 +1348,10 @@ class Fe extends De {
           columnIndexEnd: k - 1,
           verticalFixed: !0,
           lastRowOfModel: y
-        })), d.right > 0 && (x = { left: l, width: this.areaBodyEastGeo.width, height: R, top: C, index: p }, S = this.dom.addRowDiv(s, x, p, e, "east"), this.adjustColumnsToRowParent({
+        })), a.right > 0 && (x = { left: l, width: this.areaBodyEastGeo.width, height: R, top: C, index: p }, S = this.dom.addRowDiv(s, x, p, e, "east"), this.adjustColumnsToRowParent({
           areaIdent: e,
           sideIdent: "east",
-          areaModel: a,
+          areaModel: d,
           geo: x,
           parent: S,
           rowIndex: p,
@@ -1321,17 +1360,17 @@ class Fe extends De {
           verticalFixed: !0,
           lastRowOfModel: y
         })), e === "header" && this.tree && p === h - 1) {
-          const M = this.dom.applyStyle(
+          const E = this.dom.applyStyle(
             this.dom.setAttribute(
               this.dom.addDiv(S, new F(16, 20, 20, 8)),
               "data-ge-action",
               "toggleExpandCollapseAll"
             ),
             { cursor: "pointer" }
-          ), E = this.tableOptions.treeOptions.arrowExpandCollapseAll;
-          if (E) {
-            const W = this.dom.domService.createText(E.content);
-            this.dom.domService.appendChild(M, W), E.style && this.dom.applyStyleString(M, E.style);
+          ), M = this.tableOptions.treeOptions.arrowExpandCollapseAll;
+          if (M) {
+            const W = this.dom.domService.createText(M.content);
+            this.dom.domService.appendChild(E, W), M.style && this.dom.applyStyleString(E, M.style);
           }
         }
       }
@@ -1351,7 +1390,7 @@ class Fe extends De {
             const S = this.areaBodyCenterGeo.width - this.tableModel.getContentWidthInPixel();
             y = this.scrollFactorX * S - this.areaBodyWestGeo.width, x = "center";
           }
-          this.drawBigCell(C, y, t, a, R, x);
+          this.drawBigCell(C, y, t, d, R, x);
         }
     }
   }
@@ -1366,10 +1405,10 @@ class Fe extends De {
    * @protected
    */
   drawBigCell(e, t, o, i, s, r) {
-    const l = o + this.getRowHeights(0, e.r1 - 1, i).reduce((g, p) => g + p, 0), n = this.tableModel.getColumnCount(), d = this.tableModel.getFixedRightColumnCount();
-    let a = 0;
-    d > 0 && e.c1 >= n - d && (a = n - d);
-    const h = t + this.getColumnWidths(a, e.c1 - 1).reduce((g, p) => g + p, 0), u = this.getRowHeights(e.r1, e.r2, i).reduce((g, p) => g + p, 0), m = this.getColumnWidths(e.c1, e.c2).reduce((g, p) => g + p, 0);
+    const l = o + this.getRowHeights(0, e.r1 - 1, i).reduce((g, p) => g + p, 0), n = this.tableModel.getColumnCount(), a = this.tableModel.getFixedRightColumnCount();
+    let d = 0;
+    a > 0 && e.c1 >= n - a && (d = n - a);
+    const h = t + this.getColumnWidths(d, e.c1 - 1).reduce((g, p) => g + p, 0), u = this.getRowHeights(e.r1, e.r2, i).reduce((g, p) => g + p, 0), m = this.getColumnWidths(e.c1, e.c2).reduce((g, p) => g + p, 0);
     let b = !1;
     const f = this.getSelectionModel ? this.getSelectionModel() : void 0;
     f && (b = f.getSelectionCount(e.r1, e.c1) > 0), e.gammaRange ? this.renderCell({
@@ -1446,13 +1485,13 @@ class Fe extends De {
     rowIndex: r,
     columnIndexStart: l,
     columnIndexEnd: n,
-    verticalFixed: d = !1,
-    lastRowOfModel: a = !1
+    verticalFixed: a = !1,
+    lastRowOfModel: d = !1
   }) {
     var f;
     this.scrollViewportLeft = this.scrollViewport.scrollLeft;
     let h = 0;
-    if (!d) {
+    if (!a) {
       const g = this.areaBodyCenterGeo.width - this.tableModel.getContentWidthInPixel();
       h = this.scrollFactorX * g;
     }
@@ -1463,16 +1502,16 @@ class Fe extends De {
       if (C > 0 && p + C > 0) {
         let y = i.height;
         const R = o.getRowspanAt(r, g), x = o.getColspanAt(r, g);
-        R > 1 && (y = this.getRowHeights(r, r + R - 1, o).reduce((M, E) => M + E, 0));
+        R > 1 && (y = this.getRowHeights(r, r + R - 1, o).reduce((E, M) => E + M, 0));
         let S = C;
-        x > 1 && (S = this.getColumnWidths(g, g + x - 1).reduce((M, E) => M + E, 0));
+        x > 1 && (S = this.getColumnWidths(g, g + x - 1).reduce((E, M) => E + M, 0));
         let k = !1;
         if (this.colAndRowspanModels && this.colAndRowspanModels[e] && (f = this.colAndRowspanModels[e]) != null && f.isInRange(r, g) && (k = !0), this.draggingTargetColumnIndex === g && e !== "header") {
           this.renderDragTargetDiv(s, p, u, S, y);
-          const M = { left: p, top: u, width: S, height: y };
-          this.dom.addColumnBorderDivs(this.tableOptions, s, M, e, t);
+          const E = { left: p, top: u, width: S, height: y };
+          this.dom.addColumnBorderDivs(this.tableOptions, s, E, e, t);
         } else {
-          const M = this.renderSelectedBackgroundDiv(k, m, t, o, r, g, s, p, u, S, y);
+          const E = this.renderSelectedBackgroundDiv(k, m, t, o, r, g, s, p, u, S, y);
           "gammaCells" in o && o.getValueAt(r, g) && (k = !1), k || this.renderCell({
             areaModel: o,
             areaIdent: e,
@@ -1484,8 +1523,8 @@ class Fe extends De {
             width: S,
             height: y,
             parent: s,
-            cellSelected: M,
-            lastRowOfModel: a,
+            cellSelected: E,
+            lastRowOfModel: d,
             gammaRange: !0
           }), e === "header" && this.tableOptions.columnsResizable && this.renderHeaderCellResizeHandle({
             rowIndex: r,
@@ -1524,12 +1563,12 @@ class Fe extends De {
     left: r,
     width: l,
     height: n,
-    top: d,
-    parent: a,
+    top: a,
+    parent: d,
     lastRowOfModel: h
   }) {
     var se;
-    const m = this.editorRenderer && this.editorRendererRow === i && this.editorRendererColumn === s ? this.editorRenderer : e.getCellRenderer(i, s), b = { left: r, width: l, height: n, top: d, index: s }, f = e.getRowByIndex(i);
+    const m = this.editorRenderer && this.editorRendererRow === i && this.editorRendererColumn === s ? this.editorRenderer : e.getCellRenderer(i, s), b = { left: r, width: l, height: n, top: a, index: s }, f = e.getRowByIndex(i);
     let g = "none";
     if (s === this.getTreeArrowColumnIndex() && H(f)) {
       const v = f;
@@ -1542,7 +1581,7 @@ class Fe extends De {
     }
     const y = e.getValueAt(i, s), R = m ? "" : `${y}`, x = e.isRowChecked(i), S = this.dom.addColumnDiv(
       {
-        parent: a,
+        parent: d,
         geo: b,
         rowIndex: i,
         columnIndex: s,
@@ -1556,21 +1595,21 @@ class Fe extends De {
       }
     ), k = e.getTooltipAt(i, s);
     k && this.dom.setAttribute(S, "title", k);
-    const M = this.tableModel.getColumnDef(s);
-    M && M.classes[t] && this.dom.addClasses(M.classes[t], S);
-    let E;
-    m && (E = m.render(S, i, s, t, e, y, this.dom.domService));
+    const E = this.tableModel.getColumnDef(s);
+    E && E.classes[t] && this.dom.addClasses(E.classes[t], S);
+    let M;
+    m && (M = m.render(S, i, s, t, e, y, this.dom.domService));
     const W = e.getCustomClassesAt(i, s);
-    if (W.length && this.dom.addClasses(W, S), this.dom.addColumnBorderDivs(this.tableOptions, a, b, t, o), h && this.dom.addHorizontalBorder({ left: r, width: l, height: n, top: d + n }, a), this.getFocusModel && t === "body") {
+    if (W.length && this.dom.addClasses(W, S), this.dom.addColumnBorderDivs(this.tableOptions, d, b, t, o), h && this.dom.addHorizontalBorder({ left: r, width: l, height: n, top: a + n }, d), this.getFocusModel && t === "body") {
       const v = this.getFocusModel();
-      v != null && v.hasFocus(i, s) && this.dom.addFocusBorderDivs(a, b, {});
+      v != null && v.hasFocus(i, s) && this.dom.addFocusBorderDivs(d, b, {});
     }
     t === "header" && this.dom.setAttribute(S, "data-ge-action", "drag-column");
     const X = e.getCustomStyleAt(i, s);
     if (X)
       for (const v in X)
         this.dom.setStyle(S, v, X[v]);
-    return [S, E];
+    return [S, M];
   }
   /**
    * Applies CSS classes to an HTML element.
@@ -1702,12 +1741,12 @@ class Fe extends De {
     if (this.dragging) {
       const r = this.hostElement.clientHeight, l = this.storedColumnWidths[t];
       if ((i = e.originalEvent) != null && i.clientX) {
-        const a = { left: ((s = e.originalEvent) == null ? void 0 : s.clientX) - l / 2, width: l, height: r, top: 0, index: t };
+        const d = { left: ((s = e.originalEvent) == null ? void 0 : s.clientX) - l / 2, width: l, height: r, top: 0, index: t };
         this.dom.applyStyle(this.draggingColumn, {
           background: "rgba(128,128,128,0.2)",
           display: "block",
           overfllow: "clip"
-        }), this.dom.applyStyleInPx(this.draggingColumn, a), o && this.renderContentOfDraggingColumn(a);
+        }), this.dom.applyStyleInPx(this.draggingColumn, d), o && this.renderContentOfDraggingColumn(d);
       }
     } else
       this.hideDraggingColumn();
@@ -1735,23 +1774,23 @@ class Fe extends De {
     const i = "center", s = this.tableModel.getAreaModel(t), r = s == null ? void 0 : s.getRowCount();
     if (r) {
       const l = e.index ?? 0, n = this.draggingColumn;
-      for (let d = 0; d < r; d++) {
-        const a = o, h = s.getRowHeight(d), u = { left: 0, width: e.width, height: h, top: a, index: d }, m = s.getValueAt(d, l), b = s.getCellRenderer(d, l), f = b ? "" : `${m}`, g = {
+      for (let a = 0; a < r; a++) {
+        const d = o, h = s.getRowHeight(a), u = { left: 0, width: e.width, height: h, top: d, index: a }, m = s.getValueAt(a, l), b = s.getCellRenderer(a, l), f = b ? "" : `${m}`, g = {
           parent: n,
           geo: u,
-          rowIndex: d,
+          rowIndex: a,
           columnIndex: l,
           areaIdent: t,
           sideIdent: i,
           text: f
         }, p = this.dom.addColumnDiv(g);
         let C;
-        b && (C = b.render(p, d, l, t, s, m, this.dom.domService), C && this.cleanupFunctions[t].push(C));
-        const y = s.getCustomClassesAt(d, l);
+        b && (C = b.render(p, a, l, t, s, m, this.dom.domService), C && this.cleanupFunctions[t].push(C));
+        const y = s.getCustomClassesAt(a, l);
         y.length && this.dom.addClasses(y, p);
         const R = this.tableModel.getColumnDef(l);
         R && R.classes[t] && this.dom.addClasses(R.classes[t], p), this.dom.addColumnBorderDivs(this.tableOptions, n, u, t, i);
-        const x = s.getCustomStyleAt(d, l);
+        const x = s.getCustomStyleAt(a, l);
         if (x)
           for (const S in x)
             this.dom.setStyle(p, S, x[S]);
@@ -1804,7 +1843,7 @@ class Fe extends De {
    * @param {number} height - The height of the div.
    * @returns {boolean} - Whether the cell is selected.
    */
-  renderSelectedBackgroundDiv(e, t, o, i, s, r, l, n, d, a, h) {
+  renderSelectedBackgroundDiv(e, t, o, i, s, r, l, n, a, d, h) {
     let u = !1;
     if (!e && t && i.isSelectable(s, r) && this.getSelectionModel) {
       const m = this.getSelectionModel();
@@ -1816,7 +1855,7 @@ class Fe extends De {
             // ge-table-body-west-selected-range
             this.dom.createDivWithClass(`ge-table-${i.areaIdent}-${o}-selected-range`, l)
           );
-          this.dom.setStyle(g, "left", `${n}px`), this.dom.setStyle(g, "top", `${d}px`), this.dom.setStyle(g, "width", `${a}px`), this.dom.setStyle(g, "height", `${h}px`);
+          this.dom.setStyle(g, "left", `${n}px`), this.dom.setStyle(g, "top", `${a}px`), this.dom.setStyle(g, "width", `${d}px`), this.dom.setStyle(g, "height", `${h}px`);
         }
       }
     }
@@ -1850,8 +1889,8 @@ class Fe extends De {
     left: r,
     top: l,
     width: n,
-    height: d,
-    parent: a,
+    height: a,
+    parent: d,
     cellSelected: h,
     lastRowOfModel: u
   }) {
@@ -1863,9 +1902,9 @@ class Fe extends De {
       index: s,
       left: r,
       width: n,
-      height: d,
+      height: a,
       top: l,
-      parent: a,
+      parent: d,
       lastRowOfModel: u
     });
     h && this.dom.addClass(`ge-table-${t}-${o}-selected-range`, m), b && this.cleanupFunctions[t].push(b);
@@ -1885,8 +1924,8 @@ class Fe extends De {
    * @return {void}
    */
   renderHeaderCellResizeHandle({ rowIndex: e, columnIndex: t, cellLeft: o, cellTop: i, cellWidth: s, cellHeight: r, parent: l }) {
-    const n = this.dom.domService, d = this.tableOptions.columnResizeHandleWidthInPx ?? 2, a = n.createElement("div");
-    n.setAttribute(a, "data-col-index", `${t}`), n.setAttribute(a, "data-row-index", `${e}`), n.setAttribute(a, "data-area", "header"), n.setAttribute(a, "data-ge-action", "resize-column"), n.addClass(a, "ge-table-column-resize-handle"), n.setStyle(a, "display", "clip"), n.setStyle(a, "position", "absolute"), n.setStyle(a, "cursor", "col-resize"), n.setStyle(a, "left", `${o + s - d}px`), n.setStyle(a, "top", `${i}px`), n.setStyle(a, "width", `${d}px`), n.setStyle(a, "height", `${r}px`), n.appendChild(l, a);
+    const n = this.dom.domService, a = this.tableOptions.columnResizeHandleWidthInPx ?? 2, d = n.createElement("div");
+    n.setAttribute(d, "data-col-index", `${t}`), n.setAttribute(d, "data-row-index", `${e}`), n.setAttribute(d, "data-area", "header"), n.setAttribute(d, "data-ge-action", "resize-column"), n.addClass(d, "ge-table-column-resize-handle"), n.setStyle(d, "display", "clip"), n.setStyle(d, "position", "absolute"), n.setStyle(d, "cursor", "col-resize"), n.setStyle(d, "left", `${o + s - a}px`), n.setStyle(d, "top", `${i}px`), n.setStyle(d, "width", `${a}px`), n.setStyle(d, "height", `${r}px`), n.appendChild(l, d);
   }
 }
 class $e {
@@ -1894,7 +1933,7 @@ class $e {
     this.columnIndex = e, this.sortState = t;
   }
 }
-class Oe {
+class Pe {
   constructor(e) {
     this.tableScope = e, this.tableScope.hostElement.addEventListener("change", this.onHostElementChanged.bind(this));
   }
@@ -1929,17 +1968,17 @@ class te {
     return new te([new Le(e, t)]);
   }
 }
-class Pe {
+class He {
   constructor(e) {
     var t, o;
     this.tableScope = e, (t = this.tableScope.tableOptions) != null && t.getSelectionModel && (this.getSelectionModel = this.tableScope.tableOptions.getSelectionModel), (o = this.tableScope.tableOptions) != null && o.getFocusModel && (this.getFocusModel = this.tableScope.tableOptions.getFocusModel);
   }
   onMouseClicked(e, t) {
-    var s, r, l, n, d, a, h;
+    var s, r, l, n, a, d, h;
     let o = !1, i = !1;
     if (this.getSelectionModel && this.getFocusModel) {
       const u = this.getSelectionModel(), m = this.getFocusModel();
-      u && m && (m.hasFocus(e.rowIndex, e.columnIndex) || (m.setFocus(e.rowIndex, e.columnIndex), this.tableScope.onFocusChanged(m), o = !0), (s = e.originalEvent) != null && s.shiftKey || u.hasSelection() && (u.clear(), o = !0), (r = e.originalEvent) != null && r.shiftKey && this.previousEvt ? (u.addSelection(this.createRangeByEvents(e, this.previousEvt)), i = !0, o = !0) : (l = e.originalEvent) != null && l.altKey && ((n = e.originalEvent) != null && n.ctrlKey || (d = e.originalEvent) != null && d.metaKey) ? (u.removeSelection(A.singleCell(e.rowIndex, e.columnIndex)), i = !0, o = !0) : (a = e.originalEvent) != null && a.ctrlKey || (h = e.originalEvent) != null && h.metaKey ? (u.addSelection(A.singleCell(e.rowIndex, e.columnIndex)), i = !0, o = !0) : (u.firstClick(e.rowIndex, e.columnIndex), o = !0), this.tableScope.onSelectionChanged(u));
+      u && m && (m.hasFocus(e.rowIndex, e.columnIndex) || (m.setFocus(e.rowIndex, e.columnIndex), this.tableScope.onFocusChanged(m), o = !0), (s = e.originalEvent) != null && s.shiftKey || u.hasSelection() && (u.clear(), o = !0), (r = e.originalEvent) != null && r.shiftKey && this.previousEvt ? (u.addSelection(this.createRangeByEvents(e, this.previousEvt)), i = !0, o = !0) : (l = e.originalEvent) != null && l.altKey && ((n = e.originalEvent) != null && n.ctrlKey || (a = e.originalEvent) != null && a.metaKey) ? (u.removeSelection(A.singleCell(e.rowIndex, e.columnIndex)), i = !0, o = !0) : (d = e.originalEvent) != null && d.ctrlKey || (h = e.originalEvent) != null && h.metaKey ? (u.addSelection(A.singleCell(e.rowIndex, e.columnIndex)), i = !0, o = !0) : (u.firstClick(e.rowIndex, e.columnIndex), o = !0), this.tableScope.onSelectionChanged(u));
     }
     return i ? this.previousEvt = void 0 : this.previousEvt = e == null ? void 0 : e.clone(), o;
   }
@@ -1970,7 +2009,7 @@ class Pe {
     });
   }
 }
-class He {
+class Be {
   get() {
     return {
       f2: "START_EDITING",
@@ -1990,7 +2029,7 @@ class He {
     };
   }
 }
-class Be {
+class Ve {
   get() {
     return {
       f2: "START_EDITING",
@@ -2012,7 +2051,7 @@ class Be {
     };
   }
 }
-class Ve {
+class We {
   constructor(e) {
     this.tableScope = e, this.shortcutActionIdMapping = {}, this.listener = [], this.listener.push(e), this.init();
   }
@@ -2033,7 +2072,7 @@ class Ve {
     this.assignPredefinedSystemShortcutMappings(), Object.assign(this.shortcutActionIdMapping, this.tableScope.tableOptions.shortcutActionIdMapping), this.isDebug() && console.debug("ShortcutService", this.shortcutActionIdMapping), this.tableScope.hostElement.addEventListener("keydown", this.onKeyDown.bind(this));
   }
   assignPredefinedSystemShortcutMappings() {
-    this.isMacintosh() ? Object.assign(this.shortcutActionIdMapping, new Be().get()) : Object.assign(this.shortcutActionIdMapping, new He().get());
+    this.isMacintosh() ? Object.assign(this.shortcutActionIdMapping, new Ve().get()) : Object.assign(this.shortcutActionIdMapping, new Be().get());
   }
   isMacintosh() {
     return navigator.platform.indexOf("Mac") > -1;
@@ -2105,7 +2144,7 @@ class re {
   onFocusChanged(e) {
   }
 }
-class We {
+class Ge {
   setStyle(e, t, o) {
     return e.style[t] = o, e;
   }
@@ -2132,7 +2171,7 @@ class We {
     e.setAttribute(t, o);
   }
 }
-class Ge {
+class ze {
   render(e, t, o, i, s, r, l) {
     if (s.isEditable(t, o)) {
       l.addClass(e, "ge-table-row-input-div");
@@ -2273,11 +2312,11 @@ class Ne {
   }
 }
 class oe {
-  constructor(e = new $(
+  constructor(e = new O(
     "❯",
     "",
     ["gt-table-icon-expanded"]
-  ), t = new $(
+  ), t = new O(
     "❯",
     "transform: rotate(180deg) translate(-100%, -100%); transform-origin: 0 0;",
     ["ge-table-icon-collapsed"]
@@ -2286,17 +2325,17 @@ class oe {
   }
   // `⊖ `,  `⊕ `;
 }
-const ze = new we(), je = new Ne("cell");
+const je = new we(), Xe = new Ne("cell");
 class U {
   constructor() {
     this.overflowX = "auto", this.overflowY = "auto", this.horizontalBorderVisible = !0, this.verticalBorderVisible = !0, this.footerSeparatorBorderVisible = !0, this.headerSeparatorBorderVisible = !0, this.fixedEastSeparatorBorderVisible = !0, this.fixedWestSeparatorBorderVisible = !0, this.tableTopBorderVisible = !0, this.tableBottomBorderVisible = !0, this.hoverRowVisible = !0, this.hoverColumnVisible = !0, this.columnsResizable = !0, this.columnsDraggable = !0, this.columnResizeHandleWidthInPx = 4, this.defaultRowHeights = {
       header: 34,
       body: 34,
       footer: 34
-    }, this.footerVerticalSeparator = !1, this.headerToggleExpandCollapseIcons = !1, this.headerVerticalSeparator = !1, this.treeOptions = new fe(), this.headerGroupOptions = new oe(), this.showCheckboxWihoutExtraColumn = !1, this.externalFilterFunction = void 0, this.sortedOptions = new me(), this.sortOrder = ["asc", "desc"], this.getEditRenderer = (e, t) => new Ge(), this.getSelectionModel = () => ze, this.getFocusModel = () => je;
+    }, this.footerVerticalSeparator = !1, this.headerToggleExpandCollapseIcons = !1, this.headerVerticalSeparator = !1, this.treeOptions = new fe(), this.headerGroupOptions = new oe(), this.showCheckboxWihoutExtraColumn = !1, this.externalFilterFunction = void 0, this.sortedOptions = new me(), this.sortOrder = ["asc", "desc"], this.resizeEventDebounceDelay = 500, this.getEditRenderer = (e, t) => new ze(), this.getSelectionModel = () => je, this.getFocusModel = () => Xe;
   }
 }
-const P = class P {
+const L = class L {
   /**
    * Returns the content to be copied based on the provided table model, selection model, and focus model.
    *
@@ -2314,14 +2353,14 @@ const P = class P {
           r.c2 = Math.min(r.c2, e.getColumnCount() - 1), r.r2 = Math.min(r.r2, e.getBodyModel().getRowCount() - 1);
           const l = [];
           for (let n = r.r1; n <= r.r2; n++) {
-            const d = [];
-            for (let a = r.c1; a <= r.c2; a++) {
-              const h = t.isSelected(n, a) ? e.getBodyModel().getTextValueAt(n, a) : "";
-              d.push(h);
+            const a = [];
+            for (let d = r.c1; d <= r.c2; d++) {
+              const h = t.isSelected(n, d) ? e.getBodyModel().getTextValueAt(n, d) : "";
+              a.push(h);
             }
-            l.push(d.join(P.columnSeparatorChar));
+            l.push(a.join(L.columnSeparatorChar));
           }
-          return i(l.join(P.rowSeparatorChar));
+          return i(l.join(L.rowSeparatorChar));
         }
       }
       if (o) {
@@ -2378,17 +2417,26 @@ const P = class P {
     return t;
   }
 };
-P.columnSeparatorChar = "	", P.rowSeparatorChar = `
+L.columnSeparatorChar = "	", L.rowSeparatorChar = `
 `;
-let N = P;
-class Se extends Fe {
-  constructor(e, t, o, i, s, r = new N()) {
-    var d;
-    if (super(e, t, new ve(o), i), this.eventListener = s, this.copyService = r, this.licenseManager = L.getInstance(), this.selectionService = new Pe(this), this.api = new Me(this), this.mouseStartAction = "", this.mouseStartWidth = -1, this.mouseStartColumnIndex = -1, this.dragFrom = -1, this.dragTo = -1, this.lastDragFrom = -1, this.lastDragTo = -1, this.firstDraggingRendering = !0, s || (this.eventListener = new re()), (d = this.tableOptions) != null && d.autoRestoreOptions) {
-      const a = this.tableOptions.autoRestoreOptions, h = a.getStorageKeyFn;
-      h && (a.autoRestoreScrollPosition && (this.storeScrollPosStateService = new Ee(h)), a.autoRestoreCollapsedExpandedState && (this.storeStateCollapsedExpandService = new ke(h)), a.autoRestoreSortingState && (this.storeSortingService = new Te(h)));
+let z = L;
+class Ye {
+  constructor(e, t = 500) {
+    this.tableScope = e, this.debounceDelay = t, new ResizeObserver(ye(this.handleResize.bind(this), t)).observe(this.tableScope.hostElement);
+  }
+  handleResize(e) {
+    const t = e[0], { width: o } = t.contentRect;
+    this.tableScope.recalcColumnWidths(o);
+  }
+}
+class Se extends Oe {
+  constructor(e, t, o, i, s, r = new z()) {
+    var a;
+    if (super(e, t, new Re(o), i), this.eventListener = s, this.copyService = r, this.licenseManager = P.getInstance(), this.selectionService = new He(this), this.api = new Me(this), this.mouseStartAction = "", this.mouseStartWidth = -1, this.mouseStartColumnIndex = -1, this.dragFrom = -1, this.dragTo = -1, this.lastDragFrom = -1, this.lastDragTo = -1, this.firstDraggingRendering = !0, s || (this.eventListener = new re()), (a = this.tableOptions) != null && a.autoRestoreOptions) {
+      const d = this.tableOptions.autoRestoreOptions, h = d.getStorageKeyFn;
+      h && (d.autoRestoreScrollPosition && (this.storeScrollPosStateService = new Ie(h)), d.autoRestoreCollapsedExpandedState && (this.storeStateCollapsedExpandService = new Te(h)), d.autoRestoreSortingState && (this.storeSortingService = new De(h)));
     }
-    this.mouseHandler = new Ae(this), this.inputHandler = new Oe(this), this.shortcutService = new Ve(this), this.shortcutService.addListener(this.selectionService);
+    this.mouseHandler = new Ee(this), this.inputHandler = new Pe(this), this.resizeHandler = new Ye(this, i.resizeEventDebounceDelay), this.shortcutService = new We(this), this.shortcutService.addListener(this.selectionService);
     const l = this.getSelectionModel ? this.getSelectionModel() : void 0;
     l && l.addEventSelectionChangedListener(this);
     const n = this.getFocusModel ? this.getFocusModel() : void 0;
@@ -2406,7 +2454,7 @@ class Se extends Fe {
    *
    * @return {TableScope} - The newly created TableScope instance.
    */
-  static create(e, t, o = new U(), i = new re(), s = new We(), r = new N()) {
+  static create(e, t, o = new U(), i = new re(), s = new Ge(), r = new z()) {
     return new Se(e, t, s, o, i, r);
   }
   /**
@@ -2604,8 +2652,8 @@ class Se extends Fe {
     const i = this.tableModel.getColumnDef(o);
     if (i != null && i.sortable && i.sortable()) {
       e.preventDefault(), e.stopPropagation();
-      const l = i.sortStatesOrder ? i.sortStatesOrder : this.tableOptions.sortOrder, n = i.sortState ?? "", d = l[(l.indexOf(n) + 1) % l.length], a = new $e(o, d);
-      this.tableModel.doSort([a]) && ((s = this.tableModel.getColumnDefs()) == null || s.forEach((u) => u.sortState = ""), i.sortState = d), this.repaint(), (r = this.storeSortingService) == null || r.setSortItems([a]);
+      const l = i.sortStatesOrder ? i.sortStatesOrder : this.tableOptions.sortOrder, n = i.sortState ?? "", a = l[(l.indexOf(n) + 1) % l.length], d = new $e(o, a);
+      this.tableModel.doSort([d]) && ((s = this.tableModel.getColumnDefs()) == null || s.forEach((u) => u.sortState = ""), i.sortState = a), this.repaint(), (r = this.storeSortingService) == null || r.setSortItems([d]);
     }
   }
   /**
@@ -2752,16 +2800,16 @@ class Se extends Fe {
         const s = this.storeStateCollapsedExpandService.collapsedExpandedStateGet(), r = this.tableModel.getAreaModel("body");
         if (K(r)) {
           const l = r, n = r.getRowCount();
-          for (let d = 0; d < n; d++) {
-            const a = r.getRowByIndex(d);
-            if (a)
+          for (let a = 0; a < n; a++) {
+            const d = r.getRowByIndex(a);
+            if (d)
               if (s.allExpanded)
-                a.expanded = !0;
+                d.expanded = !0;
               else if (s.allCollapsed)
-                a.expanded = !1;
+                d.expanded = !1;
               else {
-                const h = i(a.data);
-                s.mode === "expanded" ? a.expanded = this.storeStateCollapsedExpandService.collapsedExpandedStateIncludes(h) : s.mode === "collapsed" && (a.expanded = !this.storeStateCollapsedExpandService.collapsedExpandedStateIncludes(h));
+                const h = i(d.data);
+                s.mode === "expanded" ? d.expanded = this.storeStateCollapsedExpandService.collapsedExpandedStateIncludes(h) : s.mode === "collapsed" && (d.expanded = !this.storeStateCollapsedExpandService.collapsedExpandedStateIncludes(h));
               }
           }
           l.recalcVisibleTreeRows();
@@ -2770,9 +2818,9 @@ class Se extends Fe {
     }
   }
 }
-const z = class z {
+const N = class N {
 };
-z.themes = ["light", "combat", "paper", "blackboard"], z.vars = {
+N.themes = ["light", "combat", "paper", "blackboard"], N.vars = {
   light: `html[data-theme="light"] {
   --ge-table-bg: rgba(255,255,255, 0.5);
   --ge-table-header-west-bg: rgba(233, 233, 233, 0.5);
@@ -3006,7 +3054,7 @@ z.themes = ["light", "combat", "paper", "blackboard"], z.vars = {
   --ge-table-drop-zone-bg: #758129;
 }`
 };
-let ne = z;
+let ne = N;
 class le {
   constructor(e, t = !0, o, i, s = 0, r = !1, l = !1) {
     this.data = e, this.expanded = t, this.children = o, this.parent = i, this.deep = s, this.checked = r, this.keep = l, this.type = "TreeRow";
@@ -3026,11 +3074,11 @@ class q {
     const r = e[t];
     if (r)
       for (const n of r) {
-        const d = new le(n, !0, [], o, i + 1);
-        if ((l = o.children) == null || l.push(d), q.buildTreeRow(
+        const a = new le(n, !0, [], o, i + 1);
+        if ((l = o.children) == null || l.push(a), q.buildTreeRow(
           n,
           t,
-          d,
+          a,
           i + 1
         ), i > s)
           return console.warn("Max deep limit reached: ", i), o;
@@ -3048,10 +3096,10 @@ class w {
     this.value = e, this.unit = t;
   }
 }
-const Xe = () => !0, ae = () => !1;
+const Ke = () => !0, ae = () => !1;
 class V {
-  constructor(e, t, o = new w(100, "px"), i = new T(), s = new T(), r = new w(100, "px"), l = new w(100, "px"), n, d, a, h, u, m, b, f, g = () => this.visible) {
-    this.property = e, this.headerLabel = t, this.width = o, this.classes = i, this.rendererMap = s, this.minWidth = r, this.maxWidth = l, this.sortable = n, this.sortComparator = d, this.sortState = a, this.sortStatesOrder = h, this.sortIconVisible = u, this.editable = m, this.getEditRenderer = b, this.editInputPipe = f, this.isVisible = g, this.visible = !0;
+  constructor(e, t, o = new w(100, "px"), i = new T(), s = new T(), r = new w(100, "px"), l = new w(100, "px"), n, a, d, h, u, m, b, f, g = () => this.visible) {
+    this.property = e, this.headerLabel = t, this.width = o, this.classes = i, this.rendererMap = s, this.minWidth = r, this.maxWidth = l, this.sortable = n, this.sortComparator = a, this.sortState = d, this.sortStatesOrder = h, this.sortIconVisible = u, this.editable = m, this.getEditRenderer = b, this.editInputPipe = f, this.isVisible = g, this.visible = !0, o.unit !== "px" && (this.minWidth = new w(0, "px"), this.maxWidth = new w(1e5, "px"));
   }
   static bodyRenderer(e) {
     return new T(
@@ -3069,7 +3117,7 @@ class V {
       e.headerClasses,
       e.bodyClasses,
       e.footerClasses
-    ), i = e.sortIconVisible ?? e.sortable ?? ae, s = e.editable ?? e.editable ?? ae, r = e.isVisible ?? e.isVisible ?? Xe;
+    ), i = e.sortIconVisible ?? e.sortable ?? ae, s = e.editable ?? e.editable ?? ae, r = e.isVisible ?? e.isVisible ?? Ke;
     return new V(
       e.property ?? "",
       e.headerLabel ?? "",
@@ -3090,7 +3138,7 @@ class V {
     );
   }
 }
-const tt = new w(300, "px"), ot = new w(290, "px"), it = new w(280, "px"), st = new w(270, "px"), rt = new w(260, "px"), nt = new w(250, "px"), lt = new w(240, "px"), at = new w(230, "px"), dt = new w(220, "px"), ht = new w(210, "px"), de = new w(200, "px"), ct = new w(190, "px"), ut = new w(180, "px"), gt = new w(170, "px"), pt = new w(160, "px"), bt = new w(150, "px"), ft = new w(140, "px"), mt = new w(130, "px"), wt = new w(120, "px"), St = new w(110, "px"), xt = new w(100, "px"), Ct = new w(90, "px"), yt = new w(80, "px"), vt = new w(70, "px"), Rt = new w(60, "px"), At = new w(50, "px"), Mt = new w(40, "px"), Et = new w(30, "px"), It = new w(20, "px"), kt = new w(10, "px"), Tt = new w(0, "px");
+const st = new w(300, "px"), rt = new w(290, "px"), nt = new w(280, "px"), lt = new w(270, "px"), at = new w(260, "px"), dt = new w(250, "px"), ht = new w(240, "px"), ct = new w(230, "px"), ut = new w(220, "px"), gt = new w(210, "px"), de = new w(200, "px"), pt = new w(190, "px"), bt = new w(180, "px"), ft = new w(170, "px"), mt = new w(160, "px"), wt = new w(150, "px"), St = new w(140, "px"), xt = new w(130, "px"), Ct = new w(120, "px"), yt = new w(110, "px"), vt = new w(100, "px"), Rt = new w(90, "px"), At = new w(80, "px"), Et = new w(70, "px"), Mt = new w(60, "px"), It = new w(50, "px"), kt = new w(40, "px"), Tt = new w(30, "px"), Dt = new w(20, "px"), _t = new w(10, "px"), Ft = new w(0, "px");
 class ie {
   constructor(e, t = [], o = -1) {
     this.areaIdent = e, this.columnDefs = t, this.defaultRowHeight = o, this.rowSelectionModel = void 0, this.yPositions = [], this.cellRenderers = t.map((i) => i.rendererMap[e]);
@@ -3287,7 +3335,7 @@ class _ {
   changeColumnOrder(e, t) {
   }
 }
-class Ye {
+class Ue {
   flattenTree(e, t = []) {
     var o;
     for (const i of e)
@@ -3318,7 +3366,7 @@ class xe {
 }
 class he extends ie {
   constructor(e, t, o, i = []) {
-    super(e, i, o), this.areaIdent = e, this.rows = t, this.defaultRowHeight = o, this.columnDefs = i, this.type = "AreaModelTree", this.sorterService = new xe(), this.service = new Ye(), this.properties = i.map((s) => s.property), this.flattenRows = this.service.flattenTree(t), this.filteredFlattenRows = [...this.flattenRows];
+    super(e, i, o), this.areaIdent = e, this.rows = t, this.defaultRowHeight = o, this.columnDefs = i, this.type = "AreaModelTree", this.sorterService = new xe(), this.service = new Ue(), this.properties = i.map((s) => s.property), this.flattenRows = this.service.flattenTree(t), this.filteredFlattenRows = [...this.flattenRows];
   }
   changeColumnOrder(e, t) {
     this.arrayMove(this.properties, e, t), super.changeColumnOrder(e, t);
@@ -3485,7 +3533,7 @@ class ue {
     this.top = e, this.right = t, this.bottom = o, this.left = i;
   }
 }
-class Ke {
+class qe {
   constructor() {
     this.checkedRows = [];
   }
@@ -3517,13 +3565,16 @@ class Ke {
   }
 }
 class Y {
-  constructor(e, t, o, i = 0, s = 0, r = !1, l = new B(), n = [], d = [], a = -1, h = 0, u = 400, m = () => {
+  constructor(e, t, o, i = 0, s = 0, r = !1, l = new B(), n = [], a = [], d = -1, h = 0, u = 400, m = () => {
   }) {
     var b, f, g, p;
-    this.headerAreaModel = e, this.bodyAreaModel = t, this.footerAreaModel = o, this.fixedLeftColumnCount = i, this.fixedRightColumnCount = s, this.rowCheckboxVisible = r, this.defaultRowHeights = l, this.columnDefs = n, this.columnSizes = d, this.overridingColumnWidth = a, this.columnCount = h, this.parentSize = u, this.getSelectionModel = m, this.rowCount = 0, this.contentHeightInPx = 0, this.contentWidthInPx = 0, this.padding = new ue(0, 0, 0, 0), this.xPositions = [], e.areaIdent = "header", t.areaIdent = "body", o.areaIdent = "footer", this.columnCount || ((b = this.columnDefs) != null && b.length ? this.columnCount = this.columnDefs.length : (f = this.columnSizes) != null && f.length && (this.columnCount = (g = this.columnSizes) == null ? void 0 : g.length)), (p = this.columnDefs) != null && p.length && ye(this.columnDefs[0]) && !t.rowSelectionModel && (t.rowSelectionModel = new Ke());
+    this.headerAreaModel = e, this.bodyAreaModel = t, this.footerAreaModel = o, this.fixedLeftColumnCount = i, this.fixedRightColumnCount = s, this.rowCheckboxVisible = r, this.defaultRowHeights = l, this.columnDefs = n, this.columnSizes = a, this.overridingColumnWidth = d, this.columnCount = h, this.parentSize = u, this.getSelectionModel = m, this.rowCount = 0, this.contentHeightInPx = 0, this.contentWidthInPx = 0, this.padding = new ue(0, 0, 0, 0), this.xPositions = [], e.areaIdent = "header", t.areaIdent = "body", o.areaIdent = "footer", this.columnCount || ((b = this.columnDefs) != null && b.length ? this.columnCount = this.columnDefs.length : (f = this.columnSizes) != null && f.length && (this.columnCount = (g = this.columnSizes) == null ? void 0 : g.length)), (p = this.columnDefs) != null && p.length && ve(this.columnDefs[0]) && !t.rowSelectionModel && (t.rowSelectionModel = new qe());
   }
   init() {
     this.recalcSize(this.parentSize), this.overridingColumnWidth === -1 && this.calcXPositions(), this.headerAreaModel && this.headerAreaModel.init(), this.bodyAreaModel && this.bodyAreaModel.init(), this.footerAreaModel && this.footerAreaModel.init();
+  }
+  setParentWidth(e) {
+    this.parentSize = e;
   }
   /**
    * Retrieves the count of columns in the current instance.
@@ -3572,7 +3623,7 @@ class Y {
    * @return {void} - This method does not return a value.
    */
   recalcSize(e) {
-    this.recalcColumnWidthes(e), this.recalcHeightAndPadding();
+    this.recalcColumnWidths(e), this.recalcHeightAndPadding();
   }
   /**
    * Recalculates the height and padding for the body area.
@@ -3839,23 +3890,49 @@ class Y {
     var o, i, s;
     this.arrayMove(this.columnDefs, e, t), this.arrayMove(this.columnSizes, e, t), (o = this.headerAreaModel) == null || o.changeColumnOrder(e, t), (i = this.bodyAreaModel) == null || i.changeColumnOrder(e, t), (s = this.footerAreaModel) == null || s.changeColumnOrder(e, t), this.calcXPositions();
   }
-  recalcColumnWidthes(e) {
+  recalcColumnWidths(e) {
     var t, o, i;
-    !((t = this.columnDefs) != null && t.length) && !((o = this.columnSizes) != null && o.length) && (this.columnSizes = new Array(this.getColumnCount()).fill(this.overridingColumnWidth)), (i = this.columnDefs) != null && i.length && (this.columnSizes = this.columnDefs.map((s) => {
-      if (s.width.unit === "%" && e) {
-        let r = Math.floor(s.width.value * e / 100);
-        if (s.minWidth) {
-          const l = s.minWidth.unit === "px" ? s.minWidth.value : Math.floor(s.minWidth.value * e / 100);
-          r = Math.max(l, r);
+    if (!((t = this.columnDefs) != null && t.length) && !((o = this.columnSizes) != null && o.length) && (this.columnSizes = new Array(this.getColumnCount()).fill(this.overridingColumnWidth)), (i = this.columnDefs) != null && i.length) {
+      const s = this.columnDefs.filter((n) => {
+        var a;
+        return ((a = n.width) == null ? void 0 : a.unit) === "weight";
+      });
+      this.columnSizes = this.columnDefs.map((n) => {
+        if (n.width.unit === "%" && e) {
+          let a = Math.floor(n.width.value * e / 100);
+          if (n.minWidth) {
+            const d = this.sizeToPixel(n.minWidth, e);
+            a = Math.max(d, a);
+          }
+          if (n.maxWidth) {
+            const d = this.sizeToPixel(n.maxWidth, e);
+            a = Math.min(d, a);
+          }
+          return a;
+        } else if (n.width.unit === "px" && e)
+          return n.width.value;
+        return 0;
+      });
+      const r = this.columnSizes.reduce((n, a) => n + a), l = e - r;
+      if (l > 0 && s.length) {
+        const n = s.map((a) => a.width.value).reduce((a, d) => a + d);
+        for (let a = 0; a < this.columnDefs.length; a++) {
+          const d = this.columnDefs[a];
+          d.width.unit === "weight" && (this.columnSizes[a] = d.width.value * l / n);
         }
-        if (s.maxWidth) {
-          const l = s.maxWidth.unit === "px" ? s.maxWidth.value : Math.floor(s.maxWidth.value * e / 100);
-          r = Math.min(l, r);
-        }
-        return r;
       }
-      return s.width.value;
-    }));
+    }
+  }
+  /**
+   * Converts the given `SizeIf` object to pixel units based on the provided `clientWidth`.
+   * The given `SizeIf` must have the uniit '%' or 'px'.
+   *
+   * @param {SizeIf} width - The size object to be converted.
+   * @param {number} clientWidth - The width of the client area in pixels.
+   * @return {number} - The converted size value in pixels. returns -1 if unit is not '%' or 'px'.
+   */
+  sizeToPixel(e, t) {
+    return e.unit === "px" ? e.value : e.unit === "%" ? Math.floor(e.value * t / 100) : -1;
   }
   arrayMove(e, t, o) {
     const i = e.splice(t, 1)[0];
@@ -3871,7 +3948,7 @@ class Y {
       this.xPositions[t + 1] = this.getColumnWidth(t) + this.xPositions[t];
   }
 }
-class Ue extends ie {
+class Je extends ie {
   constructor(e, t, o, i = []) {
     super(e, i, o), this.areaIdent = e, this.rows = t, this.defaultRowHeight = o, this.columnDefs = i, this.sorterService = new xe(), this.filteredRows = [...t], this.properties = i.map((s) => s.property);
   }
@@ -3926,7 +4003,7 @@ class Ue extends ie {
     return i && t.length ? this.getPropertyValue(i, t) : i;
   }
 }
-class ge extends Ue {
+class ge extends Je {
   constructor(e, t, o, i) {
     super(
       e,
@@ -3936,9 +4013,45 @@ class ge extends Ue {
     ), this.areaIdent = e, this.rows = t, this.columnDefs = o, this.defaultRowHeight = i;
   }
 }
-class O {
+class $ {
+  /**
+   * TableFactory
+   *
+   * This class is responsible for creating table models based on various
+   * parameters and configurations. TableFactory provides different methods
+   * to create these models that must comply with TableModelIf interface.
+   *
+   * Methods:
+   *
+   * createTableModel(p: Partial<{...}>): TableModelIf
+   * Receives a set of parameters as a Partial object with a number of properties
+   * and returns an instance of an object that complies to TableModelIf interface.
+   * Refer to the method's documentation for details.
+   *
+   * buildByTypedRowsParam(param: {rows: T[]; columnDefs: ColumnDefIf[]; tableOptions?: TableOptionsIf; fixedLeftColumnCount?: number; fixedRightColumnCount?: number}): TableModelIf
+   * Receives a parameter object with essential properties needed to build the table model,
+   * including rows (type T array), column definitions (ColumnDefIf array),
+   * optional table options (TableOptionsIf object), and optional fixed column counts,
+   * and returns an instance of TableModelIf.
+   *
+   * buildByTypedRows(rows: T[], columnDefs: ColumnDefIf[], tableOptions?: TableOptionsIf, fixedLeftColumnCount?: number, fixedRightColumnCount?: number): TableModelIf
+   * Similar to `buildByTypedRowsParam` but accepts separate parameters instead of a single parameter object.
+   *
+   * createByObjectArrayParam(param: {rows: T[]; header?: string[][]; footer?: string[][]; fixedLeftColumnCount?: number; fixedRightColumnCount?: number; rowCheckboxVisible?: boolean; defaultRowHeights?: DefaultRowHeightsIf; columnDefs?: ColumnDefIf[]; columnSizes?: number[]}): TableModelIf
+   * Similar to `createTableModel` but accepts an object parameter with properties required to create a table, including row data, header and footer multi-line data, fixed column counts, visibility of row checkbox, default row heights, column definitions, and column sizes, and returns a TableModelIf instance.
+   *
+   * createByAreaModels(headerAreaModel: AreaModelIf, bodyAreaModel: AreaModelIf, footerAreaModel: AreaModelIf, fixedLeftColumnCount: number, fixedRightColumnCount: number, rowCheckboxVisible: boolean, defaultRowHeights: DefaultRowHeightsIf): TableModelIf
+   * Accepts area models for header, body, and footer, along with fixed column counts, visibility of row checkbox, and default row heights, to create a table model.
+   *
+   * createByAreaModelsParam(param: {headerAreaModel?: AreaModelIf; bodyAreaModel: AreaModelIf; footerAreaModel?: AreaModelIf; fixedLeftColumnCount?: number; fixedRightColumnCount?: number; rowCheckboxVisible?: boolean; defaultRowHeights?: DefaultRowHeightsIf; columnDefs?: ColumnDefIf[]; columnSizes?: number[]; overridingColumnWidth?: number; columnCount?: number}): TableModelIf
+   * Similar to `createByAreaModels` but accepts an object parameter with the required and optional properties to create the table model.
+   *
+   * createByObjectArray(rows: T[], header: string[][], footer: string[][], fixedLeftColumnCount: number, fixedRightColumnCount: number, rowCheckboxVisible: boolean, defaultRowHeights: DefaultRowHeightsIf): TableModelIf
+   * Allows to create a table model utilizing object array data for rows, header, and footer along with the specified configurations.
+   * Please consult each method's documentation for detailed explanation of their functionality.
+   */
   static createTableModel(e) {
-    var t, o, i, s, r, l, n, d, a, h, u, m, b, f;
+    var t, o, i, s, r, l, n, a, d, h, u, m, b, f;
     if (e.defaultRowHeights === void 0)
       if ((t = e.tableOptions) != null && t.defaultRowHeights)
         e.defaultRowHeights = e.tableOptions.defaultRowHeights;
@@ -3956,12 +4069,12 @@ class O {
           g > -1 && (e.defaultRowHeights.footer = g);
         }
       }
-    if (e.columnDefs === void 0 && ((o = e.properties) != null && o.length ? e.columnDefs = e.properties.map((g) => new V(g, g.toUpperCase(), de)) : (i = e.rows) != null && i.length ? e.columnDefs = Object.keys(e.rows[0]).map((g) => new V(g, g.toUpperCase(), de)) : e.columnDefs = []), e.columnCount === void 0 && ((s = e.columnDefs) != null && s.length ? e.columnCount = e.columnDefs.length : (r = e.headerData) != null && r.length ? e.columnCount = e.headerData[0].length : (l = e.columnSizes) != null && l.length ? e.columnCount = (n = e.columnSizes) == null ? void 0 : n.length : console.warn('Property "columnCount" is missing and cannot be derived from other properties.')), e.headerAreaModel || ((d = e.headerData) != null && d.length ? e.headerAreaModel = new D(
+    if (e.columnDefs === void 0 && ((o = e.properties) != null && o.length ? e.columnDefs = e.properties.map((g) => new V(g, g.toUpperCase(), de)) : (i = e.rows) != null && i.length ? e.columnDefs = Object.keys(e.rows[0]).map((g) => new V(g, g.toUpperCase(), de)) : e.columnDefs = []), e.columnCount === void 0 && ((s = e.columnDefs) != null && s.length ? e.columnCount = e.columnDefs.length : (r = e.headerData) != null && r.length ? e.columnCount = e.headerData[0].length : (l = e.columnSizes) != null && l.length ? e.columnCount = (n = e.columnSizes) == null ? void 0 : n.length : console.warn('Property "columnCount" is missing and cannot be derived from other properties.')), e.headerAreaModel || ((a = e.headerData) != null && a.length ? e.headerAreaModel = new D(
       "header",
       e.headerData,
       e.defaultRowHeights.header,
       e.columnDefs
-    ) : (a = e.columnDefs) != null && a.length ? e.headerAreaModel = new D(
+    ) : (d = e.columnDefs) != null && d.length ? e.headerAreaModel = new D(
       "header",
       [e.columnDefs.map((g) => g.headerLabel)],
       e.defaultRowHeights.header,
@@ -4010,8 +4123,25 @@ class O {
       e.getSelectionModel
     );
   }
+  /**
+   * Constructs a table model (an instance of `TableModelIf`) by using provided parameters.
+   *
+   * @template T The generic parameter that represents the datatype of rows.
+   *
+   * @param {Object} param The parameter object.
+   * @param {T[]} param.rows The rows data to be used in the table model.
+   * @param {ColumnDefIf[]} param.columnDefs The definition of columns that are to be used in the table model.
+   * @param {TableOptionsIf} [param.tableOptions=new TableOptions()] Optional table options that may override default table settings. Defaults to `new TableOptions()`.
+   * @param {number} [param.fixedLeftColumnCount=0] Optional parameter that specifies the count of fixed (non-scrollable) columns from the left. Defaults to `0`.
+   * @param {number} [param.fixedRightColumnCount=0] Optional parameter that specifies the count of fixed (non-scrollable) columns from the right. Defaults to `0`.
+   *
+   * @returns {TableModelIf} The newly constructed table model.
+   *
+   * @static
+   * @method
+   */
   static buildByTypedRowsParam(e) {
-    return O.buildByTypedRows(
+    return $.buildByTypedRows(
       e.rows ?? [],
       e.columnDefs,
       e.tableOptions ?? new U(),
@@ -4019,18 +4149,54 @@ class O {
       e.fixedRightColumnCount ?? 0
     );
   }
+  /**
+   * Static method that helps to build a table model object. It takes in tabular data and options and constructs a suitable
+   * model for rendering as a table. This method is capable of handling both 'Flat' and 'Tree' data structures.
+   *
+   * @typeparam T - The type of the data in the rows.
+   *
+   * @param rows - An array of the data rows. The type of these rows could be anything which is defined by the generic type parameter T.
+   *
+   * @param columnDefs - An array of objects that define the columns of the table. Each object represents one column.
+   *
+   * @param tableOptions - A configuration object that allows you to customize how the table is displayed and behaves.
+   * This is optional, and if not provided it defaults to a new instance of TableOptions.
+   *
+   * @param fixedLeftColumnCount - Optional parameter that specifies the number of columns that should remain fixed from the left
+   * side of the table while scrolling horizontally. It defaults to 0 if not provided.
+   *
+   * @param fixedRightColumnCount - Optional parameter that specifies the number of columns that should remain fixed from the right
+   * side of the table while scrolling horizontally. It defaults to 0 if not provided.
+   *
+   * @returns A TableModelIf object which can be used to render the table. The TableModelIf defines the structure of the table and
+   * contains all its data and state.
+   *
+   * @usageNotes
+   *
+   * Here is an example of using this static method to build a table model:
+   *
+   * ```typescript
+   * const tableModel = TableFactory.buildByTypedRows<User>(users, [{ property: 'name', headerLabel: 'Name' }, { property: 'email', headerLabel: 'Email' }]);
+   * ```
+   *
+   * This will build a table with two columns 'Name' and 'Email', each row representing a 'User' object from the 'users' array.
+   *
+   * **Warning:** This function assumes that the first columnDef provided represents a checkbox column if the property of the first
+   * columnDef is "CheckboxColumn". If the first column is not a checkbox column, ensure that the first columnDef does not have "CheckboxColumn"
+   * as its property.
+   */
   static buildByTypedRows(e, t, o = new U(), i = 0, s = 0) {
     const r = o.defaultRowHeights, l = t[0].property === "CheckboxColumn";
     if (e != null && e.length && H(e[0])) {
-      const n = e, d = new he(
+      const n = e, a = new he(
         "body",
         n,
         r.body,
         t
       );
-      return (l || o.showCheckboxWihoutExtraColumn) && (d.rowSelectionModel = new ce(n)), O.createByAreaModelsParam({
-        headerAreaModel: new D("header", [t.map((a) => a.headerLabel)], r.header),
-        bodyAreaModel: d,
+      return (l || o.showCheckboxWihoutExtraColumn) && (a.rowSelectionModel = new ce(n)), $.createByAreaModelsParam({
+        headerAreaModel: new D("header", [t.map((d) => d.headerLabel)], r.header),
+        bodyAreaModel: a,
         footerAreaModel: new D("footer", [], r.footer),
         columnDefs: t,
         fixedLeftColumnCount: i,
@@ -4042,7 +4208,7 @@ class O {
         overridingColumnWidth: -1
       });
     }
-    return O.createByObjectArrayParam({
+    return $.createByObjectArrayParam({
       rows: e,
       columnDefs: t,
       fixedLeftColumnCount: i,
@@ -4050,9 +4216,53 @@ class O {
       defaultRowHeights: o.defaultRowHeights
     });
   }
+  /**
+   * The `createByObjectArrayParam` static method is used to create a `TableFactory` object with the data contained in the `param` object.
+   * This method would call the `createByObjectArray` static method, which actually constructs the `TableModel` object with the provided data.
+   *
+   * @template T - Defines the type of the items contained in the rows.
+   *
+   * @param {Object} param - Method parameter as an object that carries several properties described below:
+   * @param {T[]} param.rows - Array of table row data that can be of any type.
+   * @param {string[][]} [param.header] - Optional array of arrays with the table header data.
+   * @param {string[][]} [param.footer] - Optional array of arrays with the table footer data.
+   * @param {number} [param.fixedLeftColumnCount] - Optional number detailing how many of the beginning columns are sticky to the left.
+   * @param {number} [param.fixedRightColumnCount] - Optional number detailing how many of the ending columns are sticky to the right.
+   * @param {boolean} [param.rowCheckboxVisible] - Optional flag that indicates whether checkboxes are visible in the rows.
+   * @param {DefaultRowHeightsIf} [param.defaultRowHeights] - Optional object defining default heights of rows in different sections of the table. Defaults to new `DefaultRowHeights()`.
+   * @param {ColumnDefIf[]} [param.columnDefs] - Optional array of column definitions, each is an object conforming to `ColumnDefIf` interface.
+   * @param {number[]} [param.columnSizes] - Optional array of numbers providing the specific sizes for columns.
+   *
+   * @returns A `TableFactory` object created by the `createByObjectArray` method.
+   *
+   * @example
+   * let param = {
+   *   rows: [{name: 'John', age: 30}, {name: 'Doe', age: 40}],
+   *   header: [['Name', 'Age']],
+   *   footer: [['Avg', '35']],
+   *   fixedLeftColumnCount: 1,
+   *   fixedRightColumnCount: 0,
+   *   rowCheckboxVisible: true,
+   *   defaultRowHeights: new DefaultRowHeights(40, 50, 40),
+   *   columnDefs: [
+   *     {
+   *       property: 'name',
+   *       headerLabel: 'Name',
+   *       width: 100
+   *     },
+   *     {
+   *       property: 'age',
+   *       headerLabel: 'Age',
+   *       width: 50
+   *     }
+   *   ],
+   *   columnSizes: [100, 50]
+   * };
+   * const tableModel = TableFactory.createByObjectArrayParam(param);
+   */
   static createByObjectArrayParam(e) {
     const t = e.rowCheckboxVisible !== void 0 ? e.rowCheckboxVisible : !1;
-    return O.createByObjectArray(
+    return $.createByObjectArray(
       e.rows,
       e.header ?? [],
       e.footer ?? [],
@@ -4064,7 +4274,48 @@ class O {
       e.columnSizes ?? []
     );
   }
-  static createByAreaModels(e = new _(), t, o = new _(), i = 0, s = 0, r = !1, l = new B(), n, d = [], a = -1, h) {
+  /**
+   * This public static factory method creates a `TableModel` instance using the provided parameters.
+   * Each parameter has a default value allowing for great flexibility in creating table models.
+   * The main parameters are the AreaModel instances for different table sections:
+   *
+   * @param headerAreaModel - This parameter of type `AreaModelIf` represents the header area of the table.
+   * The default value is a new instance of `AreaModelHidden`, indicating an invisible header.
+   *
+   * @param bodyAreaModel - This parameter of type `AreaModelIf` represents the body area of the table and is required.
+   * It needs to be passed as it contains all the row data that will be displayed in the table.
+   *
+   * @param footerAreaModel - This `AreaModelIf` type parameter represents the footer area of the table.
+   * Similar to `headerAreaModel`, the default value is a new instance of `AreaModelHidden`, indicating an invisible footer.
+   *
+   * Also, the method receives parameters for fixed columns, row checkbox visibility, default row heights, column definitions, column sizes, overriding column width, and column count:
+   *
+   * @param fixedLeftColumnCount - This value indicates the number of fixed columns on the left side of the table.
+   * The default value is `0`, no fixed column by default.
+   *
+   * @param fixedRightColumnCount - This value indicates the number of fixed columns on the right side of the table.
+   * Similarly to `fixedLeftColumnCount`, its default value is `0`.
+   *
+   * @param rowCheckboxVisible - This is a boolean that determines whether a checkbox will be visible for each row.
+   * The default value is `false`, indicating that checkboxes will not be displayed unless otherwise specified.
+   *
+   * @param defaultRowHeights - This object of type `DefaultRowHeightsIf` allows setting of the default row heights for the table sections.
+   * By default, it creates a new `DefaultRowHeights` instance with values of `34` for header, body and footer.
+   *
+   * @param columnDefs - Here, an array of `ColumnDefIf[]` needs to be passed to specify the column definitions.
+   *
+   * @param columnSizes - This is an array of `number[]` providing custom column sizes.
+   * If not defined, an empty array `[]` is used.
+   *
+   * @param overridingColumnWidth - This number sets a uniform width for all columns, overriding individual column sizes.
+   * Default value is `-1`, indicating that this feature is disabled by default.
+   *
+   * @param columnCount - This is the total column count.
+   *
+   * @return A new instance of `TableModel` is created using the provided parameters.
+   * If a parameter isn't provided, the default value is used.
+   */
+  static createByAreaModels(e = new _(), t, o = new _(), i = 0, s = 0, r = !1, l = new B(), n, a = [], d = -1, h) {
     return new Y(
       e,
       t,
@@ -4074,13 +4325,49 @@ class O {
       r,
       l,
       n,
-      d,
       a,
+      d,
       h
     );
   }
+  /**
+   * `TableFactory.createByAreaModelsParam` is a static method in the `TableFactory` class that creates a table model by area models and other optional parameters.
+   * This method allows more flexibility and control over table building by providing the option to decide the visibility and nature of the header, body, footer, columns, and rows in the table.
+   *
+   * @param `param` is an object that holds the configuration settings for creating the table model. Below are the properties that this object can have:
+   *   - `headerAreaModel`: Optional. An instance of `AreaModelIf` class to be used for creating the header of the table. If not provided, a new `AreaModelHidden` is created by default.
+   *   - `bodyAreaModel`: Mandatory. An instance of `AreaModelIf` class for body of the table.
+   *   - `footerAreaModel`: Optional. An instance of `AreaModelIf` class for table footer. If not provided, a new `AreaModelHidden` is created by default.
+   *   - `fixedLeftColumnCount`: Optional. Number of fixed columns on the left side of the table. Default is 0.
+   *   - `fixedRightColumnCount`: Optional. Number of fixed columns on the right side of the table. Default is 0.
+   *   - `rowCheckboxVisible`: Optional. Boolean that decides if the row checkboxes are visible or not. Defaults to `false`.
+   *   - `defaultRowHeights`: Optional. An instance of `DefaultRowHeightsIf` interface that specifies default row heights. No default value.
+   *   - `columnDefs`: Optional. Array of instance(s) of `ColumnDefIf` interface to define column properties. Defaults to an empty array.
+   *   - `columnSizes`: Optional. Array of numbers setting the sizes of the columns. Defaults to an empty array.
+   *   - `overridingColumnWidth`: Optional. Overrides the width of all columns with this value. Defaults to `-1` which means no width override.
+   *   - `columnCount`: Optional. Number setting the total count of columns. Defaults to 0.
+   *
+   * @returns a new instance of `TableModelIf` created by the `createByAreaModels` method of `TableFactory` using the provided parameters.
+   *
+   * Note: The area models (`headerAreaModel`, `bodyAreaModel`, `footerAreaModel`) should be initialized before being passed to this method. If not initialized, they might need to call their `init` method to ensure proper functioning.
+   *
+   * @example
+   * const tableModel = TableFactory.createByAreaModelsParam({
+   *    headerAreaModel: myHeaderModel,
+   *    bodyAreaModel: myBodyModel,
+   *    footerAreaModel: myFooterModel,
+   *    fixedLeftColumnCount: 2,
+   *    fixedRightColumnCount: 1,
+   *    rowCheckboxVisible: true,
+   *    defaultRowHeights: myDefaultHeights,
+   *    columnDefs: myColumnDefs,
+   *    columnSizes: [100, 100, 200],
+   *    overridingColumnWidth: 150,
+   *    columnCount: 3
+   * });
+   */
   static createByAreaModelsParam(e) {
-    return O.createByAreaModels(
+    return $.createByAreaModels(
       e.headerAreaModel ?? new _(),
       e.bodyAreaModel,
       e.footerAreaModel ?? new _(),
@@ -4094,12 +4381,60 @@ class O {
       e.columnCount ?? 0
     );
   }
-  static createByObjectArray(e, t = [], o = [], i = 0, s = 0, r = !1, l = new B(), n, d = []) {
-    let a;
-    t != null && t.length ? a = new D("header", t, l.header, n) : n != null && n.length ? a = new D("header", [n.map((m) => m.headerLabel)], l.header, n) : a = new _();
+  /**
+   * Class method `createByObjectArray` of the `TableFactory` class.
+   *
+   * This public, static method is intended to create a table model by an array of objects.
+   * This method is particularly useful when you are aiming to build a table from a set of data rows, header and footer information.
+   * The table can include both fixed and flexible columns and optional checkboxes for each row.
+   * The table layout can further be customized using the default row heights, column definitions, and column sizes parameters.
+   *
+   * @generic `T` - The generic type parameter for data rows.
+   *
+   * @param `rows` - This parameter is an array of typed data rows (type `T`) for the table body.
+   *
+   * @param `header` - This optional parameter is a two-dimensional string array. It defines the table header data. The default value is an empty array.
+   *
+   * @param `footer` - This optional parameter is a two-dimensional string array. It defines the table footer data. The default value is an empty array.
+   *
+   * @param `fixedLeftColumnCount` - This optional parameter specifies the count of fixed (non-scrollable) columns on the left side of the table. The default value is 0.
+   *
+   * @param `fixedRightColumnCount` - This optional parameter specifies the count of fixed (non-scrollable) columns on the right side of the table. The default value is 0.
+   *
+   * @param `rowCheckboxVisible` - This optional boolean parameter tells whether to display checkboxes for each row in the table. The default value is false.
+   *
+   * @param `defaultRowHeights` - This optional parameter is an instance of `DefaultRowHeightsIf` interface. It sets the default row heights for the header, body, and footer areas of the table.
+   *
+   * @param `columnDefs` - This optional parameter is an array of column definitions (`ColumnDefIf[]`). It helps to define the settings and properties of individual columns.
+   *
+   * @param `columnSizes` - This optional parameter is a number array. It helps to define the column widths. The default value is an empty array.
+   *
+   * The method further processes the header, footer, and body data to create respective models (`AreaModelIf`), and ultimately it creates and returns a new instance of `TableModel` containing all those prepared models, options, and properties.
+   *
+   * @returns It returns an instance of `TableModel` with all the provided/processed parameters.
+   *
+   * Note: You need to import the `AreaModelArrayOfArrays` and `AreaModelHidden` classes from the respective package/module before using this method.
+   *
+   * @example
+   * ```typescript
+   * // Given the following array of objects:
+   * const rows = [{field1: 'data11', field2: 'data12'}, {field1: 'data21', field2: 'data22'}];
+   *
+   * // And a set of column definitions:
+   * const columnDefs: ColumnDefIf[] = [{headerLabel: 'Field 1', property: 'field1'}, {headerLabel: 'Field 2', property: 'field2'}];
+   *
+   * // You can create a TableModel like following:
+   * let tableModel = TableFactory.createByObjectArray(rows, undefined, undefined, 0, 0, false, new DefaultRowHeights(), columnDefs);
+   * ```
+   *
+   * Reference: For more details regarding the `DefaultRowHeightsIf`, `ColumnDefIf`, `AreaModelIf`, and `AreaModelArrayOfArrays` classes/interfaces, please refer to the respective API documents.
+   */
+  static createByObjectArray(e, t = [], o = [], i = 0, s = 0, r = !1, l = new B(), n, a = []) {
+    let d;
+    t != null && t.length ? d = new D("header", t, l.header, n) : n != null && n.length ? d = new D("header", [n.map((m) => m.headerLabel)], l.header, n) : d = new _();
     const h = o ? new D("footer", o, l.footer, n) : new _(), u = new ge("body", e, n, l.body);
     return new Y(
-      a,
+      d,
       u,
       h,
       i,
@@ -4107,11 +4442,11 @@ class O {
       r,
       l,
       n,
-      d
+      a
     );
   }
 }
-const Dt = [
+const Ot = [
   "COPY_2_CLIPBOARD",
   "START_EDITING",
   "TOGGLE_SELECTION",
@@ -4129,17 +4464,17 @@ const Dt = [
   // "PAGEUP_PRESSED",
   // "PAGEDOWN_PRESSED"
 ];
-class _t {
+class $t {
   constructor(e, t) {
     this.tableModel = e, this.tableOptions = t;
   }
 }
-class qe {
+class Qe {
   constructor(e, t, o, i, s, r, l) {
     this.emmitDataKey = e, this.emmitCancelKey = t, this.queryId = o, this.filter = i, this.sorting = s, this.startIndex = r, this.endIndex = l;
   }
 }
-class Ft extends qe {
+class Pt extends Qe {
   constructor(e, t, o, i, s, r, l, n) {
     super(
       e,
@@ -4152,25 +4487,25 @@ class Ft extends qe {
     ), this.rows = n;
   }
 }
-class Je {
+class Ze {
   constructor(e, t) {
     this.value = e, this.label = t;
   }
 }
-class $t {
+class Lt {
   constructor(e, t) {
     this.index = e, this.px = t;
   }
 }
-const Ot = { body: ["ge-table-text-align-left"] }, Lt = { body: ["ge-table-text-align-center"] }, Pt = { body: ["ge-table-text-align-right"] }, Ht = {
+const Ht = { body: ["ge-table-text-align-left"] }, Bt = { body: ["ge-table-text-align-center"] }, Vt = { body: ["ge-table-text-align-right"] }, Wt = {
   header: ["ge-table-text-align-left"],
   body: ["ge-table-text-align-left"],
   footer: ["ge-table-text-align-left"]
-}, Bt = {
+}, Gt = {
   header: ["ge-table-text-align-center"],
   body: ["ge-table-text-align-center"],
   footer: ["ge-table-text-align-center"]
-}, Vt = {
+}, zt = {
   header: ["ge-table-text-align-right"],
   body: ["ge-table-text-align-right"],
   footer: ["ge-table-text-align-right"]
@@ -4179,7 +4514,7 @@ class pe {
   render(e, t, o, i, s, r, l) {
     if (s.isRowCheckable(t)) {
       l.addClass(e, "ge-table-row-checkbox-div");
-      const n = s.isRowChecked(t), d = n === "full" ? "checked" : "", a = n === "semi" ? '<span style="opacity: 0.4;">✓<span>' : "";
+      const n = s.isRowChecked(t), a = n === "full" ? "checked" : "", d = n === "semi" ? '<span style="opacity: 0.4;">✓<span>' : "";
       e.innerHTML = `
         <input
             type="checkbox"
@@ -4187,13 +4522,13 @@ class pe {
             data-row-index="${t}"
             data-col-index="${o}"
             data-input-type="checkbox"
-            ${d}
+            ${a}
             class="ge-table-row-checkbox">
-        ${a}  `;
+        ${d}  `;
     }
   }
 }
-class Wt {
+class Nt {
   constructor() {
     this.type = "CheckboxColumnDef", this.property = "CheckboxColumn", this.headerLabel = "", this.width = new w(50, "px"), this.minWidth = new w(50, "px"), this.maxWidth = new w(100, "px"), this.rendererMap = new T(new pe(), new pe(), void 0), this.classes = new T(
       [],
@@ -4202,7 +4537,7 @@ class Wt {
     );
   }
 }
-class Gt {
+class jt {
   /**
    * A factory that creates a new AreaObjectMap with the given body renderer.
    *
@@ -4217,17 +4552,17 @@ class Gt {
     );
   }
 }
-class Nt {
+class Xt {
   constructor(e = "down", t) {
     this.status = e, this.originalEvent = t;
   }
 }
-class zt {
+class Yt {
   constructor(e, t, o, i, s = {}) {
     this.area = e, this.rowIndex = t, this.columnIndex = o, this.value = i, this.cssClasses = s;
   }
 }
-class jt {
+class Kt {
   constructor() {
     this.autoRestoreSortingState = !1, this.autoRestoreCollapsedExpandedState = !1, this.autoRestoreScrollPosition = !1, this.autoRestoreCheckedState = !1, this.autoRestoreSelectedState = !1, this.getStorageKeyFn = void 0, this.isSame = (e, t, o) => {
       if (e && t && o.getRowId) {
@@ -4252,12 +4587,12 @@ class jt {
     };
   }
 }
-class Qe {
+class et {
   constructor(e, t, o, i = !1, s = "normal", r = void 0) {
     this.data = e, this.property = t, this.toggle = o, this.closed = i, this.visibility = s, this.children = r, this.impl = "CellGroup";
   }
 }
-class Ze extends Qe {
+class tt extends et {
   constructor(e, t = 0, o = 0, i) {
     super(
       e.data,
@@ -4382,7 +4717,7 @@ class I {
   static buildGroupExts(e, t = [], o = 0, i) {
     let s;
     for (let r = 0; r < e.length; r++) {
-      const l = e[r], n = new Ze(l, o, r, i);
+      const l = e[r], n = new tt(l, o, r, i);
       s && (n.leftNeighbour = s, s.rightNeighbour = n), t.push(n), l.children && (n.children = I.buildGroupExts(l.children, [], o + 1, n)), s = n;
     }
     return t;
@@ -4424,7 +4759,7 @@ class I {
       e.push(i.data + "    rowIndex:" + i.rowIndex), (o = i.children) != null && o.length && I.iterateThrowColumns(e, i.children);
   }
 }
-class Xt {
+class Ut {
   constructor() {
     this.areaIdent = "body", this.rowSelectionModel = void 0;
   }
@@ -4501,8 +4836,8 @@ const j = class j {
   render(e, t, o, i, s, r, l) {
     const n = r != null && r.data ? r.data : "";
     if (r) {
-      const { toggle: d, visibility: a, closed: h } = r, u = d ? j.toggleHeaderGroup : "";
-      this.addText(e, i, t, o, n, u), d && a !== "always" && this.addArrowDiv(l, e, !h, t, o, i, u);
+      const { toggle: a, visibility: d, closed: h } = r, u = a ? j.toggleHeaderGroup : "";
+      this.addText(e, i, t, o, n, u), a && d !== "always" && this.addArrowDiv(l, e, !h, t, o, i, u);
     } else
       this.addText(e, i, t, o, n, "");
   }
@@ -4517,11 +4852,11 @@ const j = class j {
   addArrowDiv(e, t, o = !0, i = -1, s = -1, r = "header", l) {
     const n = e.createElement("div");
     e.addClass(n, "ge-table-toggle-icon-div"), e.setStyle(n, "display", "inline-block"), e.setStyle(n, "position", ""), e.setStyle(n, "width", "20px"), e.setStyle(n, "background", "transparent"), e.setStyle(n, "cursor", "pointer"), e.setAttribute(n, "data-row-index", `${i}`), e.setAttribute(n, "data-col-index", `${s}`), e.setAttribute(n, "data-area", `${r}`), e.setAttribute(n, "data-ge-action", `${l}`);
-    let d;
-    o ? d = this.headerGroupOptions.iconExpanded : d = this.headerGroupOptions.iconCollapsed;
-    const a = d.content, h = e.createText(a);
-    e.appendChild(n, h), d.style && this.applyStyleString(e, n, d.style);
-    for (const u of d.classes)
+    let a;
+    o ? a = this.headerGroupOptions.iconExpanded : a = this.headerGroupOptions.iconCollapsed;
+    const d = a.content, h = e.createText(d);
+    e.appendChild(n, h), a.style && this.applyStyleString(e, n, a.style);
+    for (const u of a.classes)
       e.addClass(n, u);
     return e.appendChild(t, n), n;
   }
@@ -4535,7 +4870,7 @@ const j = class j {
 };
 j.toggleHeaderGroup = "toggleHeaderGroup";
 let J = j;
-class Yt {
+class qt {
   constructor(e = "header", t, o = [], i, s = new oe()) {
     this.areaIdent = e, this.groups = t, this.columnDefs = o, this.defaultRowHeight = i, this.headerGroupOptions = s, this.gammaCells = !0, this.arr = [], this.groupExts = [], this.cellGroupExtCellRenderer = new J(this.headerGroupOptions), this.groupExts = I.buildGroupExts(t), this.init();
   }
@@ -4635,24 +4970,24 @@ class Yt {
     return t != null && t.toggle && t.visibility !== "always" && (t.closed = !t.closed, this.init()), I.buildColumnDefs(this.groupExts);
   }
 }
-class Kt {
+class Jt {
   filterPredict(e, t, o = this.objectToString.bind(this)) {
     if (!e)
       return !1;
     if (!t)
       return !0;
     t = t.toLowerCase();
-    const i = "+", s = "-", r = t.toLowerCase().split(" ").filter((h) => h !== i && h !== s && h !== ""), l = r.filter((h) => !h.startsWith(i) && !h.startsWith(s)), n = r.filter((h) => h.startsWith(i)).map((h) => h.replace(/\+/g, "")), d = r.filter((h) => h.startsWith(s)).map((h) => h.replace(/-/g, ""));
-    let a = !l.length;
+    const i = "+", s = "-", r = t.toLowerCase().split(" ").filter((h) => h !== i && h !== s && h !== ""), l = r.filter((h) => !h.startsWith(i) && !h.startsWith(s)), n = r.filter((h) => h.startsWith(i)).map((h) => h.replace(/\+/g, "")), a = r.filter((h) => h.startsWith(s)).map((h) => h.replace(/-/g, ""));
+    let d = !l.length;
     for (let h = 0; h < l.length; h++)
-      (a || o(e).includes(l[h])) && (a = !0);
-    if (!a)
+      (d || o(e).includes(l[h])) && (d = !0);
+    if (!d)
       return !1;
     for (let h = 0; h < n.length; h++)
       if (!o(e).includes(n[h]))
         return !1;
-    for (let h = 0; h < d.length; h++)
-      if (o(e).includes(d[h]))
+    for (let h = 0; h < a.length; h++)
+      if (o(e).includes(a[h]))
         return !1;
     return !0;
   }
@@ -4662,18 +4997,18 @@ class Kt {
     if (!t)
       return [...e];
     t = t.toLowerCase();
-    const i = "+", s = "-", r = t.toLowerCase().split(" ").filter((a) => a !== i && a !== s && a !== ""), l = r.filter((a) => !a.startsWith(i) && !a.startsWith(s)), n = r.filter((a) => a.startsWith(i)).map((a) => a.replace(/\+/g, "")), d = r.filter((a) => a.startsWith(s)).map((a) => a.replace(/-/g, ""));
-    return e == null ? void 0 : e.filter((a) => {
+    const i = "+", s = "-", r = t.toLowerCase().split(" ").filter((d) => d !== i && d !== s && d !== ""), l = r.filter((d) => !d.startsWith(i) && !d.startsWith(s)), n = r.filter((d) => d.startsWith(i)).map((d) => d.replace(/\+/g, "")), a = r.filter((d) => d.startsWith(s)).map((d) => d.replace(/-/g, ""));
+    return e == null ? void 0 : e.filter((d) => {
       let h = !l.length;
       for (let u = 0; u < l.length; u++)
-        (h || o(a).includes(l[u])) && (h = !0);
+        (h || o(d).includes(l[u])) && (h = !0);
       if (!h)
         return !1;
       for (let u = 0; u < n.length; u++)
-        if (!o(a).includes(n[u]))
+        if (!o(d).includes(n[u]))
           return !1;
-      for (let u = 0; u < d.length; u++)
-        if (o(a).includes(d[u]))
+      for (let u = 0; u < a.length; u++)
+        if (o(d).includes(a[u]))
           return !1;
       return !0;
     });
@@ -4689,19 +5024,19 @@ class Kt {
     return t.join(" ").toLowerCase();
   }
 }
-class Ut {
+class Qt {
   static bodyRenderer(e) {
     return new T(void 0, e, void 0);
   }
 }
-class qt {
+class Zt {
   constructor(e, t = !0, o = !1) {
     this.property = e, this.skipCheckableCheck = t, this.readonly = o;
   }
   render(e, t, o, i, s, r, l) {
     if (this.readonly || this.skipCheckableCheck || s.isRowCheckable(t)) {
       l.addClass(e, "ge-table-row-checkbox-div");
-      const n = s.getRowByIndex(t), a = s.getValueByT(n, this.property) === !0 ? "checked" : "", h = this.readonly ? " readonly " : "";
+      const n = s.getRowByIndex(t), d = s.getValueByT(n, this.property) === !0 ? "checked" : "", h = this.readonly ? " readonly " : "";
       if (l.addClass(e, "ge-padding-property-checkbox"), e.innerHTML = `
         <input
           type="checkbox"
@@ -4710,7 +5045,7 @@ class qt {
           data-col-index="${o}"
           data-property-index="${this.property}"
           data-input-type="checkbox"
-          ${a}
+          ${d}
           ${h}
           class="ge-input-checkbox">`, !this.readonly) {
         const u = e.querySelector(".ge-input-checkbox");
@@ -4719,12 +5054,12 @@ class qt {
     }
   }
 }
-class Jt {
+class eo {
   render(e, t, o, i, s, r, l) {
     r && (e.innerText = new Date(r).toISOString());
   }
 }
-class Qt {
+class to {
   constructor() {
     this.formatter = new Intl.DateTimeFormat("de-DE", {
       year: "numeric",
@@ -4747,98 +5082,29 @@ class Qt {
     }
   }
 }
-class Zt {
+class oo {
   render(e, t, o, i, s, r, l) {
     r && (e.innerText = new Date(r).toLocaleDateString());
   }
 }
-class eo {
+class io {
   render(e, t, o, i, s, r, l) {
     r === "male" || r === "m" ? e.innerText = "♂" : (r === "female" || r === "f") && (e.innerText = "♀");
   }
 }
-class to {
+class so {
   constructor(e = 100, t = !1) {
     this.maxValue = e, this.labelVisible = t;
   }
   render(e, t, o, i, s, r, l) {
     if (l.addClass(e, "ge-progressbar-div"), !isNaN(r)) {
-      const d = Number(r) * 100 / this.maxValue, a = this.labelVisible ? Math.round(d) + "%" : "";
+      const a = Number(r) * 100 / this.maxValue, d = this.labelVisible ? Math.round(a) + "%" : "";
       e.innerHTML = `
         <div class="ge-table-label-div"
           data-row-index="${t}"
           data-col-index="${o}"
           data-area="${i}"
-          title="${a}"
-          style="position: relative; background: transparent; width: 100%; height: 100%;">
-              <div class="ge-table-progress-container"
-                  style="width:100%;height:50%;padding:0;margin-top:6px;"
-                  data-row-index="${t}"
-                  data-col-index="${o}"
-                  data-area="${i}">
-                  <div class="ge-table-progress-bar"
-                      style="width:${d}%;height:100%;padding:0;margin:0;"
-                      data-row-index="${t}"
-                      data-col-index="${o}"
-                      data-area="${i}">&nbsp;
-                  </div>
-              </div>
-          </div>`;
-    }
-  }
-}
-class oo {
-  render(e, t, o, i, s, r, l) {
-    r === "true" || r === !0 ? e.innerHTML = '<span class="ge-true-text-color">✅</span>' : r === "false" || r === !1 ? e.innerHTML = '<span class="ge-false-text-color">❌</span>' : e.innerText = "";
-  }
-}
-class io {
-  render(e, t, o, i, s, r, l) {
-    r && (e.innerText = new Date(r).toISOString().replace(/T/g, " ").replace(/\..*/g, ""));
-  }
-}
-class so {
-  constructor(e = Number.MIN_SAFE_INTEGER, t = Number.MAX_SAFE_INTEGER) {
-    this.min = e, this.max = t;
-  }
-  render(e, t, o, i, s, r, l) {
-    r && (e.innerText = r, (typeof r == "string" || isNaN(r) || r < this.min || r > this.max) && l.addClass(e, "ge-cell-error"));
-  }
-}
-class ro {
-  constructor(e) {
-    this.property = e;
-  }
-  render(e, t, o, i, s, r, l) {
-    l.addClass(e, "ge-star-rating-div");
-    const n = s.getRowByIndex(t), d = +("" + s.getValueByT(n, this.property));
-    if (!isNaN(d)) {
-      const a = [];
-      for (let u = 0; u < d; u++)
-        a.push("★");
-      const h = a.join(" ");
-      e.innerHTML = `
-          <div class="ge-table-label-div" data-row-index="${t}" data-col-index="${o}" data-area="${i}" style="position: relative; background: transparent; width: 100%; height: 100%;">
-            <div class="ge-table-label" data-row-index="${t}" data-col-index="${o}" data-area="${i}">${h}</div>
-          </div>`;
-    }
-  }
-}
-class no {
-  constructor(e, t = 100, o = !1) {
-    this.property = e, this.maxValue = t, this.labelVisible = o;
-  }
-  render(e, t, o, i, s, r, l) {
-    l.addClass(e, "ge-star-rating-div");
-    const n = s.getRowByIndex(t), d = +("" + s.getValueByT(n, this.property));
-    if (!isNaN(d)) {
-      const a = d * 100 / this.maxValue, h = this.labelVisible ? Math.round(a) + "%" : "";
-      e.innerHTML = `
-          <div class="ge-table-label-div"
-          data-row-index="${t}"
-          data-col-index="${o}"
-          data-area="${i}"
-          title="${h}"
+          title="${d}"
           style="position: relative; background: transparent; width: 100%; height: 100%;">
               <div class="ge-table-progress-container"
                   style="width:100%;height:50%;padding:0;margin-top:6px;"
@@ -4856,7 +5122,76 @@ class no {
     }
   }
 }
+class ro {
+  render(e, t, o, i, s, r, l) {
+    r === "true" || r === !0 ? e.innerHTML = '<span class="ge-true-text-color">✅</span>' : r === "false" || r === !1 ? e.innerHTML = '<span class="ge-false-text-color">❌</span>' : e.innerText = "";
+  }
+}
+class no {
+  render(e, t, o, i, s, r, l) {
+    r && (e.innerText = new Date(r).toISOString().replace(/T/g, " ").replace(/\..*/g, ""));
+  }
+}
 class lo {
+  constructor(e = Number.MIN_SAFE_INTEGER, t = Number.MAX_SAFE_INTEGER) {
+    this.min = e, this.max = t;
+  }
+  render(e, t, o, i, s, r, l) {
+    r && (e.innerText = r, (typeof r == "string" || isNaN(r) || r < this.min || r > this.max) && l.addClass(e, "ge-cell-error"));
+  }
+}
+class ao {
+  constructor(e) {
+    this.property = e;
+  }
+  render(e, t, o, i, s, r, l) {
+    l.addClass(e, "ge-star-rating-div");
+    const n = s.getRowByIndex(t), a = +("" + s.getValueByT(n, this.property));
+    if (!isNaN(a)) {
+      const d = [];
+      for (let u = 0; u < a; u++)
+        d.push("★");
+      const h = d.join(" ");
+      e.innerHTML = `
+          <div class="ge-table-label-div" data-row-index="${t}" data-col-index="${o}" data-area="${i}" style="position: relative; background: transparent; width: 100%; height: 100%;">
+            <div class="ge-table-label" data-row-index="${t}" data-col-index="${o}" data-area="${i}">${h}</div>
+          </div>`;
+    }
+  }
+}
+class ho {
+  constructor(e, t = 100, o = !1) {
+    this.property = e, this.maxValue = t, this.labelVisible = o;
+  }
+  render(e, t, o, i, s, r, l) {
+    l.addClass(e, "ge-star-rating-div");
+    const n = s.getRowByIndex(t), a = +("" + s.getValueByT(n, this.property));
+    if (!isNaN(a)) {
+      const d = a * 100 / this.maxValue, h = this.labelVisible ? Math.round(d) + "%" : "";
+      e.innerHTML = `
+          <div class="ge-table-label-div"
+          data-row-index="${t}"
+          data-col-index="${o}"
+          data-area="${i}"
+          title="${h}"
+          style="position: relative; background: transparent; width: 100%; height: 100%;">
+              <div class="ge-table-progress-container"
+                  style="width:100%;height:50%;padding:0;margin-top:6px;"
+                  data-row-index="${t}"
+                  data-col-index="${o}"
+                  data-area="${i}">
+                  <div class="ge-table-progress-bar"
+                      style="width:${d}%;height:100%;padding:0;margin:0;"
+                      data-row-index="${t}"
+                      data-col-index="${o}"
+                      data-area="${i}">&nbsp;
+                  </div>
+              </div>
+          </div>`;
+    }
+  }
+}
+class co {
   render(e, t, o, i, s, r, l) {
     if (r) {
       e.innerHTML = `
@@ -4876,7 +5211,7 @@ class lo {
     }
   }
 }
-const ao = function(c, e, t) {
+const uo = function(c, e, t) {
   return c ? Number(c) : "";
 };
 class Ce {
@@ -4885,19 +5220,19 @@ class Ce {
   }
   static create(e) {
     return new Ce(
-      e.map((t) => new Je(t, t))
+      e.map((t) => new Ze(t, t))
     );
   }
   render(e, t, o, i, s, r, l) {
     if (s.isEditable(t, o)) {
       l.addClass(e, "ge-table-row-select-div");
       const n = s.getValueAt(t, o);
-      let d = [];
+      let a = [];
       for (let h of this.options) {
         const u = h.value === n ? " selected " : "";
-        d.push(`<option value="${h.value}" ${u}>${h.label}</option>`);
+        a.push(`<option value="${h.value}" ${u}>${h.label}</option>`);
       }
-      const a = d.join("");
+      const d = a.join("");
       e.innerHTML = `
             <select
                 type="text"
@@ -4909,11 +5244,11 @@ class Ce {
                 data-col-index="${o}"
                 data-input-type="text"
                 style="width:100%;height:100%;border:0;padding:0 0 0 8px;"
-                class="ge-table-cell-editor-select">${a}</select>`;
+                class="ge-table-cell-editor-select">${d}</select>`;
     }
   }
 }
-class ho extends we {
+class go extends we {
   constructor(e) {
     super("row", "multi"), this.model = e;
   }
@@ -4996,7 +5331,7 @@ class ho extends we {
     this.isSelected(e, 0) ? this.unselectRow(e) : this.selectRow(e);
   }
 }
-class co {
+class po {
   constructor(e, t, o) {
     this.r = e, this.g = t, this.b = o;
   }
@@ -5011,153 +5346,156 @@ class G {
     return (e - t) / (o - t) * (s - i) + i;
   }
   static getTwoColorGradientRGB(e, t) {
-    const o = G.normalize(e, t.minValue, t.maxValue, 0, 1), i = t.maxColor.r - t.minColor.r, s = t.maxColor.g - t.minColor.g, r = t.maxColor.b - t.minColor.b, l = i * o + t.minColor.r, n = s * o + t.minColor.g, d = r * o + t.minColor.b;
-    return `rgb(${Math.round(l)}, ${Math.round(n)}, ${Math.round(d)})`;
+    const o = G.normalize(e, t.minValue, t.maxValue, 0, 1), i = t.maxColor.r - t.minColor.r, s = t.maxColor.g - t.minColor.g, r = t.maxColor.b - t.minColor.b, l = i * o + t.minColor.r, n = s * o + t.minColor.g, a = r * o + t.minColor.b;
+    return `rgb(${Math.round(l)}, ${Math.round(n)}, ${Math.round(a)})`;
   }
   static getThreeColorGradientRGB(e, t) {
     return e < t.middleValue ? G.getTwoColorGradientRGB(e, new be(t.minValue, t.minColor, t.middleValue, t.middleColor)) : e > t.middleValue ? G.getTwoColorGradientRGB(e, new be(t.middleValue, t.middleColor, t.maxValue, t.maxColor)) : `rgb(${t.middleColor.r}, ${t.middleColor.g}, ${t.middleColor.b})`;
   }
 }
-class uo {
+class bo {
   constructor(e, t, o, i, s, r) {
     this.minValue = e, this.minColor = t, this.middleValue = o, this.middleColor = i, this.maxValue = s, this.maxColor = r;
   }
 }
 export {
   ie as AbstractAreaModel,
-  Gt as AreaMapFactory,
-  Xt as AreaModel,
+  jt as AreaMapFactory,
+  Ut as AreaModel,
   D as AreaModelArrayOfArrays,
-  Yt as AreaModelCellGroups,
+  qt as AreaModelCellGroups,
   _ as AreaModelHidden,
-  Ue as AreaModelObjectArray,
+  Je as AreaModelObjectArray,
   ge as AreaModelObjectArrayWithColumndefs,
   he as AreaModelTree,
   T as AreaObjectMap,
-  jt as AutoRestoreOptions,
-  et as AvoidDoubleExecution,
-  Qe as CellGroup,
-  Ze as CellGroupExt,
+  Kt as AutoRestoreOptions,
+  it as AvoidDoubleExecution,
+  et as CellGroup,
+  tt as CellGroupExt,
   J as CellGroupExtCellRenderer,
   A as CellRange,
   I as CellgroupFactory,
-  qt as CheckboxBooleanPropertyCellRenderer,
+  Zt as CheckboxBooleanPropertyCellRenderer,
   pe as CheckboxCellRenderer,
-  Wt as CheckboxColumnDef,
-  Ke as CheckboxModel,
-  Ft as ChunkData,
-  _e as ColAndRowspanModel,
-  Ie as CollapsedExpandedData,
-  co as ColorRgb,
+  Nt as CheckboxColumnDef,
+  qe as CheckboxModel,
+  Pt as ChunkData,
+  Fe as ColAndRowspanModel,
+  ke as CollapsedExpandedData,
+  po as ColorRgb,
   V as ColumnDef,
-  ve as ConvenienceDomService,
-  N as CopyService,
+  Re as ConvenienceDomService,
+  z as CopyService,
   ne as CssVars,
-  Qt as DateToIntlDDMMYYYYCellRenderer,
-  Jt as DateToIsoCellRenderer,
-  Zt as DateToLocaleDateCellRenderer,
-  io as DateToTecCellRenderer,
+  to as DateToIntlDDMMYYYYCellRenderer,
+  eo as DateToIsoCellRenderer,
+  oo as DateToLocaleDateCellRenderer,
+  no as DateToTecCellRenderer,
   B as DefaultRowHeights,
-  De as EleScope,
+  _e as EleScope,
   re as EventAdapter,
   ae as FalseFn,
   Ne as FocusModel,
   Le as GeCellIndices,
   G as GeCssColorUtil,
-  Kt as GeFilterService,
-  Nt as GeKeyEvent,
+  Jt as GeFilterService,
+  Xt as GeKeyEvent,
   te as GeModelChangeEvent,
   Q as GeMouseEvent,
   F as GeoData,
-  $ as Icon,
-  $t as IndexAndPx,
-  Ge as InputCellRenderer,
-  Oe as InputHandler,
-  L as LicenseManager,
-  eo as MaleFemaleToIconCellRenderer,
-  Ae as MouseHandler,
-  Re as MouseTargetData,
-  ho as MultiRowsSelectionModel,
-  to as NumberCellProgressBarCellRenderer,
-  so as NumberCellRenderer,
-  Be as OsxShortcutActionIdMapping,
+  O as Icon,
+  Lt as IndexAndPx,
+  ze as InputCellRenderer,
+  Pe as InputHandler,
+  P as LicenseManager,
+  io as MaleFemaleToIconCellRenderer,
+  Ee as MouseHandler,
+  Ae as MouseTargetData,
+  go as MultiRowsSelectionModel,
+  so as NumberCellProgressBarCellRenderer,
+  lo as NumberCellRenderer,
+  Ve as OsxShortcutActionIdMapping,
   ue as Padding,
-  lo as PositiveAndNegativeNumberRenderer,
-  no as ProgressBarCellRenderer,
-  Fe as RenderScope,
-  Ut as Renderer,
-  qe as RequestChunk,
+  co as PositiveAndNegativeNumberRenderer,
+  ho as ProgressBarCellRenderer,
+  Oe as RenderScope,
+  Qt as Renderer,
+  Qe as RequestChunk,
+  Ye as ResizeHandler,
   Ce as SelectCellRenderer,
   we as SelectionModel,
-  Pe as SelectionService,
-  Ve as ShortcutService,
-  We as SimpleDomService,
+  He as SelectionService,
+  We as ShortcutService,
+  Ge as SimpleDomService,
   w as Size,
   $e as SortItem,
   me as SortedOptions,
-  ro as StarRatingCellRenderer,
-  ke as StoreStateCollapsedExpandService,
-  Ee as StoreStateScrollPosService,
-  Te as StoreStateSortingService,
+  ao as StarRatingCellRenderer,
+  Te as StoreStateCollapsedExpandService,
+  Ie as StoreStateScrollPosService,
+  De as StoreStateSortingService,
   Me as TableApi,
-  zt as TableCellUpdateEvent,
-  O as TableFactory,
+  Yt as TableCellUpdateEvent,
+  $ as TableFactory,
   Y as TableModel,
-  _t as TableModelAndOptions,
+  $t as TableModelAndOptions,
   U as TableOptions,
   Se as TableScope,
-  uo as ThreeColorGradientArg,
+  bo as ThreeColorGradientArg,
   ce as TreeCheckboxModel,
   q as TreeFactory,
   fe as TreeOptions,
   le as TreeRow,
-  Ye as TreeRowService,
-  oo as TrueFalseCellRenderer,
-  Xe as TrueFn,
+  Ue as TreeRowService,
+  ro as TrueFalseCellRenderer,
+  Ke as TrueFn,
   be as TwoColorGradientArg,
-  Je as ValueLabel,
-  He as WindowsShortcutActionIdMapping,
-  Dt as actionIds,
-  Bt as allCenter,
-  Ht as allLeft,
-  Vt as allRight,
-  Lt as bodyCenter,
-  Ot as bodyLeft,
-  Pt as bodyRight,
-  ao as editInputPipeForNumber,
+  Ze as ValueLabel,
+  Be as WindowsShortcutActionIdMapping,
+  Ot as actionIds,
+  Gt as allCenter,
+  Wt as allLeft,
+  zt as allRight,
+  Bt as bodyCenter,
+  Ht as bodyLeft,
+  Vt as bodyRight,
+  ye as debounce,
+  uo as editInputPipeForNumber,
   Z as getAreaIdentByString,
   K as isAreaModelTree,
-  ye as isCheckboxColumnDef,
+  ve as isCheckboxColumnDef,
   H as isTreeRow,
-  Tt as px0,
-  kt as px10,
-  xt as px100,
-  St as px110,
-  wt as px120,
-  mt as px130,
-  ft as px140,
-  bt as px150,
-  pt as px160,
-  gt as px170,
-  ut as px180,
-  ct as px190,
-  It as px20,
+  Ft as px0,
+  _t as px10,
+  vt as px100,
+  yt as px110,
+  Ct as px120,
+  xt as px130,
+  St as px140,
+  wt as px150,
+  mt as px160,
+  ft as px170,
+  bt as px180,
+  pt as px190,
+  Dt as px20,
   de as px200,
-  ht as px210,
-  dt as px220,
-  at as px230,
-  lt as px240,
-  nt as px250,
-  rt as px260,
-  st as px270,
-  it as px280,
-  ot as px290,
-  Et as px30,
-  tt as px300,
-  Mt as px40,
-  At as px50,
-  Rt as px60,
-  vt as px70,
-  yt as px80,
-  Ct as px90
+  gt as px210,
+  ut as px220,
+  ct as px230,
+  ht as px240,
+  dt as px250,
+  at as px260,
+  lt as px270,
+  nt as px280,
+  rt as px290,
+  Tt as px30,
+  st as px300,
+  kt as px40,
+  It as px50,
+  Mt as px60,
+  Et as px70,
+  At as px80,
+  Rt as px90,
+  ot as throttle
 };

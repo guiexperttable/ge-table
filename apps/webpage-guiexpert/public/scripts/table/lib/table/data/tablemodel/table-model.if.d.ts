@@ -45,6 +45,14 @@ export interface TableModelIf {
      */
     init(): void;
     /**
+     * Recalculates the column widths of the table.
+     *
+     * @param {number} [clientWidth] - The client width of the table. If not provided, the client width of the scroll viewport will be used.
+     *
+     * @return {undefined}
+     */
+    setParentWidth(widthInPixel: number): void;
+    /**
      * Returns the number of columns in a dataset.
      *
      * @returns {number} The number of columns in the dataset.

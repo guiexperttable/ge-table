@@ -10,6 +10,9 @@ import { GetT } from "../common/get-t";
 import { FocusModelIf } from "../../focus/focus-model.if";
 import { ShortcutActionIdMapping } from "../../action/shortcut-actionid-mapping.type";
 import { HeaderGroupOptions } from './header-group-options';
+/**
+ * TableOptions class provides configuration options for the table.
+ */
 export declare class TableOptions implements TableOptionsIf {
     overflowX: "auto" | "scroll";
     overflowY: "auto" | "scroll";
@@ -37,6 +40,7 @@ export declare class TableOptions implements TableOptionsIf {
     sortedOptions: SortedOptions;
     sortOrder: SortState[];
     shortcutActionIdMapping?: ShortcutActionIdMapping;
+    resizeEventDebounceDelay: number;
     getEditRenderer?: GetEditRenderer;
     getSelectionModel?: GetT<SelectionModelIf>;
     getFocusModel?: GetT<FocusModelIf>;

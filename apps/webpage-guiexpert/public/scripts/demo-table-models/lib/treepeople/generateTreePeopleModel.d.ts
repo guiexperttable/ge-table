@@ -42,6 +42,7 @@ export declare function createTreePeopleTableOptions(addDemoSelection?: boolean)
     sortedOptions: import('../../../../table/src').SortedOptions;
     sortOrder: import('../../../../table/src').SortState[];
     shortcutActionIdMapping?: import('../../../../table/src').ShortcutActionIdMapping | undefined;
+    resizeEventDebounceDelay: number;
     getEditRenderer?: import('../../../../table/src').GetEditRenderer | undefined;
     getFocusModel?: import('../../../../table/src').GetT<import('../../../../table/src').FocusModelIf> | undefined;
 };

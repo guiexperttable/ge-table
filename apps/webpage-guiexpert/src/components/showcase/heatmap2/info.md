@@ -3,9 +3,9 @@ layout: ../../../layouts/DemoCodeLayout.astro
 ---
 
 You will find see source code of the model here: 
-[generateHeatmapSeattle.ts](https://github.com/guiexperttable/ge-table/blob/main/libs/demo-table-models/src/lib/generateHeatmapSeattle.ts).
+[generateHeatmapSeattle.ts](https://github.com/guiexperttable/ge-table/blob/main/packages/demo-table-models/src/lib/generateHeatmapSeattle.ts).
 And the raw data here: 
-[generateHeatmapSeattleData.ts](https://github.com/guiexperttable/ge-table/blob/main/libs/demo-table-models/src/lib/generateHeatmapSeattleData.ts).
+[generateHeatmapSeattleData.ts](https://github.com/guiexperttable/ge-table/blob/main/packages/demo-table-models/src/lib/generateHeatmapSeattleData.ts).
 
 In this example, we demonstrate how write a custom body area model by extending an `AreaModel`.
 The background color is given by the `getCustomStyleAt()` method.

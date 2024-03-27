@@ -1,6 +1,7 @@
 import { SizeIf } from "./size.if";
+import { SizeUnitType } from './size-unit.type';
 export declare class Size implements SizeIf {
     value: number;
-    unit: "px" | "%";
-    constructor(value?: number, unit?: "px" | "%");
+    unit: SizeUnitType;
+    constructor(value?: number, unit?: SizeUnitType);
 }
