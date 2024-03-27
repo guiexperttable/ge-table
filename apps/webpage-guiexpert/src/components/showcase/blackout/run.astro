@@ -2,7 +2,7 @@
 const id = 'div' + Math.random().toString(36).slice(2, 11);
 ---
 
-<div style="height: calc(100vh - 128px);" class="bg">
+<div class="outer">
   <br>
   <div
       style="height:450px;width: 900px;margin:36px; "
@@ -154,7 +154,7 @@ const id = 'div' + Math.random().toString(36).slice(2, 11);
     headerData,
     bodyData,
     tableOptions,
-    overridingColumnWidth: 80,
+    overridingColumnWidth: 82,
   });
   const simpleDomService = new SimpleDomService();
   const eventAdapter = new EventAdapter();
@@ -224,8 +224,11 @@ const id = 'div' + Math.random().toString(36).slice(2, 11);
    }
 
 
-   .bg {
+   .outer {
        background-color: var(--main-bg);
+       height: calc(100vh - 128px);
+       display: grid;
+       place-content: center;
    }
   .pointer{
       cursor: pointer;
