@@ -4,7 +4,6 @@ const id = 'div' + Math.random().toString(36).slice(2, 11);
 
 <div style="height: calc(100vh - 128px);" class="bg">
   <br>
-  <br>
   <div
       style="height:450px;width: 900px;margin:36px; "
       class={id}></div>
@@ -82,7 +81,6 @@ const id = 'div' + Math.random().toString(36).slice(2, 11);
       _areaModel,
       cellValue,
       _domService) {
-      console.log(cellValue);
       if (cellValue) {
         const item = cellValue;
         // outer div:
@@ -148,7 +146,7 @@ const id = 'div' + Math.random().toString(36).slice(2, 11);
     ...new TableOptions(),
     defaultRowHeights: {
       header: 0,
-      body: 110,
+      body: 98,
       footer: 0
     }
   };
@@ -156,7 +154,7 @@ const id = 'div' + Math.random().toString(36).slice(2, 11);
     headerData,
     bodyData,
     tableOptions,
-    overridingColumnWidth: 95,
+    overridingColumnWidth: 80,
   });
   const simpleDomService = new SimpleDomService();
   const eventAdapter = new EventAdapter();
@@ -218,25 +216,13 @@ const id = 'div' + Math.random().toString(36).slice(2, 11);
        --ge-table-column-odd-bg: var(--main-bg);
        --ge-table-column-even-bg: var(--main-bg);
 
+       --ge-table-body-west-vertical-border: var(--main-bg);
        --ge-table-body-center-horizontal-border: var(--main-bg);
        --ge-table-body-center-vertical-border: var(--main-bg);
-       --ge-table-body-center-horizontal-border: cyan;
-       --ge-table-body-center-vertical-border: cyan;
 
        --ge-table-body-center-text: var(--main-text);
    }
-   .ge-table-col-div {
-       position: absolute;
-       left: 95px;
-       top: 0px;
-       width: 95px;
-       height: 110px;
-       display: flex;
-       align-content: center;
-       align-items: center;
-       justify-content: center;
-       flex-wrap: wrap;
-   }
+
 
    .bg {
        background-color: var(--main-bg);
@@ -245,9 +231,10 @@ const id = 'div' + Math.random().toString(36).slice(2, 11);
       cursor: pointer;
   }
   .selection-div {
-      width: 76px;
-      height: 91px;
-      border-bottom-width: 1px;
+      margin: 1px;
+      width: 80px;
+      height: 95px;
+      border-width: 1px;
       border-style: solid;
       border-radius: 12px;
       border-color: transparent;
@@ -262,8 +249,8 @@ const id = 'div' + Math.random().toString(36).slice(2, 11);
   }
 
   .box {
-      width: calc(100% - 2px);
-      height: calc(100% - 2px);
+      width: 100%;
+      height: 100%;
       border-width: 0;
       border-style: solid;
       border-radius: var(--border-radius-plus-1);
