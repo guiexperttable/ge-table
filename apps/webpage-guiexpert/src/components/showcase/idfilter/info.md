@@ -3,7 +3,7 @@ layout: ../../../layouts/DemoCodeLayout.astro
 ---
 
 
-Source of demo: [idfilter/run.astr](https://github.com/guiexperttable/website-astro/blob/main/src/components/showcase/idfilter/run.astro).
+Source of demo: [idfilter/run.astr](https://github.com/guiexperttable/ge-table/blob/main/apps/webpage-guiexpert/src/components/showcase/idfilter/run.astro).
 
 In this example we create the TableModel by an array of `ColumnDefs` and an array of business objects (`rows`):
 

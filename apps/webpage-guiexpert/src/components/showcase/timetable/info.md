@@ -3,7 +3,7 @@ layout: ../../../layouts/DemoCodeLayout.astro
 ---
 
 
-Source of demo: [timetable/run.astro](https://github.com/guiexperttable/website-astro/blob/main/src/components/showcase/timetable/run.astro).
+Source of demo: [timetable/run.astro](https://github.com/guiexperttable/ge-table/blob/main/apps/webpage-guiexpert/src/components/showcase/timetable/run.astro).
  
 Model: [createTimeTableModel.ts](https://github.com/guiexperttable/ge-table/blob/main/packages/demo-table-models/src/lib/createTimeTableModel.ts).
 

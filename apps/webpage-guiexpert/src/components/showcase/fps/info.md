@@ -2,7 +2,7 @@
 layout: ../../../layouts/DemoCodeLayout.astro
 ---
 
-Source of demo: [fps/run.astro](https://github.com/guiexperttable/website-astro/blob/main/src/components/showcase/fps/run.astro).
+Source of demo: [fps/run.astro](https://github.com/guiexperttable/ge-table/blob/main/apps/webpage-guiexpert/src/components/showcase/fps/run.astro).
  
 
 

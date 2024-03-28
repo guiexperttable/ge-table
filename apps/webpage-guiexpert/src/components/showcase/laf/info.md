@@ -3,7 +3,7 @@ layout: ../../../layouts/DemoCodeLayout.astro
 ---
 
 
-Source of demo: [laf/run.astro](https://github.com/guiexperttable/website-astro/blob/main/src/components/showcase/laf/run.astro).
+Source of demo: [laf/run.astro](https://github.com/guiexperttable/ge-table/blob/main/apps/webpage-guiexpert/src/components/showcase/laf/run.astro).
 
 This demo shows how to switch the style (colors) dynamically at runtime.
 The colors of the GuiExpert table are defined by CSS classes that use 

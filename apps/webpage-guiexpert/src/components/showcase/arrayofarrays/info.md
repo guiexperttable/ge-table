@@ -4,7 +4,7 @@ layout: ../../../layouts/DemoCodeLayout.astro
 
 A similar demo is here: Stackblitz: [stackblitz-guiexpert-angular-simple](https://stackblitz.com/edit/stackblitz-guiexpert-angular-simple)
 
-This page can be found at [arrayofarrays/run.astro](https://github.com/guiexperttable/website-astro/blob/main/src/components/showcase/arrayofarrays/run.astro).
+This page can be found at [arrayofarrays/run.astro](https://github.com/guiexperttable/ge-table/blob/main/apps/webpage-guiexpert/src/components/showcase/arrayofarrays/run.astro).
 
 In this example, we demonstrate how to assemble a table from a given array of array.
 
