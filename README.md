@@ -25,6 +25,7 @@ Github:
 | Framework      | @guiexpert/xy-table                  | Core table               |
 |:---------------|:-------------------------------------|:-------------------------|
 | Plain JS/TS    |                                      | @guiexpert/table@latest  |
+| Angular 19.x.x | @guiexpert/angular-table@^19.0.0     | @guiexpert/table@latest  |
 | Angular 18.x.x | @guiexpert/angular-table@^18.0.0     | @guiexpert/table@latest  |
 | Angular 17.x.x | @guiexpert/angular-table@^17.0.0     | @guiexpert/table@latest  |
 | Angular 16.x.x | @guiexpert/angular-table@^16.0.7     | @guiexpert/table@latest  |

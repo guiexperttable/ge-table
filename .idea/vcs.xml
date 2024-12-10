@@ -7,6 +7,7 @@
     <mapping directory="$PROJECT_DIR$/../angluar-16-table" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../angluar-17-table" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../angular-18-table" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../angular-19-table" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../angular-table-demo" vcs="Git" />
   </component>
 </project>
