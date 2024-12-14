@@ -154,6 +154,13 @@ export declare class TableApi {
      */
     copyToClipboard(): Promise<string>;
     /**
+     * Downloads an Excel file containing data from the table's header, body, and footer areas.
+     * Extracts the table data into a 2D matrix and uses the Excel service to generate and download the file.
+     *
+     * @return {void} No return value, downloads the Excel file directly.
+     */
+    downloadExcel(): void;
+    /**
      * Retrieves the current scope of the table.
      *
      * @returns {TableScope} The current scope of the table.

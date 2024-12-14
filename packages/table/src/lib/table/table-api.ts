@@ -5,6 +5,7 @@ import { SelectionModel } from './selection/selection-model';
 import { ActionId } from './action/action-id.type';
 import { ShortcutActionIdMapping } from './action/shortcut-actionid-mapping.type';
 import { SelectionModelIf } from './selection/selection-model.if';
+import { AreaIdent } from './data/tablemodel/area-ident.type';
 
 
 /**
@@ -230,6 +231,31 @@ export class TableApi {
       this.tableScope.selectionModel(),
       this.tableScope.focusModel()
     );
+  }
+
+  /**
+   * Downloads an Excel file containing data from the table's header, body, and footer areas.
+   * Extracts the table data into a 2D matrix and uses the Excel service to generate and download the file.
+   *
+   * @return {void} No return value, downloads the Excel file directly.
+   */
+  downloadExcel() {
+    const matrix: Array<Array<any>> = [];
+    const columnCount = this.tableScope.tableModel.getColumnCount()
+
+    const areas: AreaIdent[] = ["header" , "body" , "footer"];
+    for (const area of areas) {
+      const areaModel = this.tableScope.tableModel.getAreaModel(area);
+      const rowCount = areaModel?.getRowCount() ?? 0;
+      for (let r = 0; r < rowCount; r++) {
+        const row: any[] = [];
+        matrix.push(row);
+        for (let c = 0; c < columnCount; c++) {
+          row.push(areaModel.getValueAt(r,c));
+        }
+      }
+    }
+    return this.tableScope.excelService.downloadExcel(matrix, 'table.xlsx');
   }
 
   /**

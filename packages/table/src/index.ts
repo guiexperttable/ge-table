@@ -136,6 +136,7 @@ export * from "./lib/table/service/data/html-style.type";
 export * from "./lib/table/service/ge-filter.service";
 export * from "./lib/table/service/copy-service";
 export * from "./lib/table/service/copy-service.if";
+export * from "./lib/table/service/excel-service";
 
 
 export * from "./lib/table/renderer/renderer";

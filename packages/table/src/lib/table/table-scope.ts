@@ -39,6 +39,8 @@ import { FocusModelIf } from './focus/focus-model.if';
 import { EventFocusChangedListenerIf } from './focus/event-focus-changed-listener.if';
 import { EventSelectionChangedListenerIf } from './selection/event-selection-changed-listener.if';
 import { ResizeHandler } from './resize-handler';
+import { ExcelService } from './service/excel-service';
+import { ExcelServiceIf } from './service/excel-service.if';
 
 
 /**
@@ -92,7 +94,15 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf, Even
   private lastDragTo = -1;
   private firstDraggingRendering = true;
 
-  constructor(hostElement: HTMLDivElement, tableModel: TableModelIf, domService: DomServiceIf, tableOptions: TableOptionsIf, protected readonly eventListener: EventListenerIf, public readonly copyService: CopyServiceIf = new CopyService()) {
+  constructor(
+    hostElement: HTMLDivElement,
+    tableModel: TableModelIf,
+    domService: DomServiceIf,
+    tableOptions: TableOptionsIf,
+    protected readonly eventListener: EventListenerIf,
+    public readonly copyService: CopyServiceIf = new CopyService(),
+    public readonly excelService: ExcelServiceIf = new ExcelService(),
+  ) {
     super(hostElement, tableModel, new ConvenienceDomService(domService), tableOptions);
     if (!eventListener) {
       this.eventListener = new EventAdapter();

@@ -24,6 +24,7 @@ import { FocusModelIf } from './focus/focus-model.if';
 import { EventFocusChangedListenerIf } from './focus/event-focus-changed-listener.if';
 import { EventSelectionChangedListenerIf } from './selection/event-selection-changed-listener.if';
 import { ResizeHandler } from './resize-handler';
+import { ExcelServiceIf } from './service/excel-service.if';
 /**
  * The TableScope class extends the RenderScope class and provides functionality for rendering and interacting with a table.
  *
@@ -53,6 +54,7 @@ import { ResizeHandler } from './resize-handler';
 export declare class TableScope extends RenderScope implements OnActionTriggeredIf, EventFocusChangedListenerIf, EventSelectionChangedListenerIf {
     protected readonly eventListener: EventListenerIf;
     readonly copyService: CopyServiceIf;
+    readonly excelService: ExcelServiceIf;
     licenseManager: LicenseManager;
     mouseHandler: MouseHandler;
     inputHandler: InputHandler;
@@ -71,7 +73,7 @@ export declare class TableScope extends RenderScope implements OnActionTriggered
     private lastDragFrom;
     private lastDragTo;
     private firstDraggingRendering;
-    constructor(hostElement: HTMLDivElement, tableModel: TableModelIf, domService: DomServiceIf, tableOptions: TableOptionsIf, eventListener: EventListenerIf, copyService?: CopyServiceIf);
+    constructor(hostElement: HTMLDivElement, tableModel: TableModelIf, domService: DomServiceIf, tableOptions: TableOptionsIf, eventListener: EventListenerIf, copyService?: CopyServiceIf, excelService?: ExcelServiceIf);
     /**
      * Creates a TableScope instance.
      *
