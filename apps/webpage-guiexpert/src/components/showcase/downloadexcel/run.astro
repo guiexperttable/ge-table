@@ -1,29 +1,23 @@
 ---
 
 const id = 'div' + Math.random().toString(36).slice(2, 11);
-const idInput = 'input' + Math.random().toString(36).slice(2, 11);
 const idButton = 'button' + Math.random().toString(36).slice(2, 11);
-const idOut = 'out' + Math.random().toString(36).slice(2, 11);
+const btnClass = 'button-excel ' + idButton;
 ---
 
 <div
     style="height: calc(100vh - 128px)"
     class:list={[id, 'downloadexcel-table-div']}></div>
 
-<div class="filter-div">
+<div class="filter-div text-primary">
   <button
     type="button"
-    class={idButton}>Download Excel</button>
-  <label>
-    TODD :
-    <span class:list={[idOut, 'out']}>500</span>
-    <input type="range" name="filter" min="0" max="1000" value="500" step="10" class={idInput}/>
-  </label>
+    class={btnClass}>Download Excel</button>
 </div>
 
 <script
     is:inline
-    define:vars={{id, idInput, idOut, idButton}}
+    define:vars={{id, idButton, btnClass}}
     type="module">
 
   import {
@@ -8043,9 +8037,8 @@ const idOut = 'out' + Math.random().toString(36).slice(2, 11);
     ]
   ;
 
-  const inputEle = document.querySelector('.' + idInput);
+
   const divEle = document.querySelector('.' + id);
-  const outEle = document.querySelector('.' + idOut);
   const downloadExcelBtn = document.querySelector('.' + idButton);
 
   const tableOptions = {
@@ -8090,18 +8083,10 @@ const idOut = 'out' + Math.random().toString(36).slice(2, 11);
   tableScope.firstInit();
   const tableApi = tableScope.getApi();
 
-
-
   downloadExcelBtn.addEventListener("click", (event) => {
-    console.info('downloadExcelBtn clicked...'); // TODO del
     tableApi.downloadExcel();
   });
 
-  inputEle.addEventListener("change", (event) => {
-    filterMinimalId = Number(inputEle.value);
-    outEle.innerText = ''+filterMinimalId;
-    tableApi.externalFilterChanged();
-  });
 
   function filterFn(row, _index, _array) {
     return row.id > filterMinimalId;
@@ -8117,7 +8102,7 @@ const idOut = 'out' + Math.random().toString(36).slice(2, 11);
         width: 300px;
         height: 32px;
         overflow-y: clip;
-        opacity: 0.5;
+        opacity: 1s;
         z-index: 999;
         padding-top: 4px;
     }
@@ -8129,14 +8114,8 @@ const idOut = 'out' + Math.random().toString(36).slice(2, 11);
         align-items: center;
         gap: 8px;
     }
-    .filter-div input {
-        padding-left: 4px;
-        color: var(--color-text, #000);
-        background: var(--color-background, #fff);
-    }
-    .filter-div .out {
-        padding-left: 4px;
-        min-width: 40px;
+    .button-excel{
+        color: #0098db;
     }
 
 </style>

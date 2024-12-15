@@ -9,14 +9,10 @@ import { AreaIdent } from './data/tablemodel/area-ident.type';
 
 
 /**
-* TableApi Class
-*
-* A class for interfacing with a table within the application.
-* It includes features for scrolling, updating cells, handling visibility of elements like header and footer,
-* and dealing with selections within the table.
-*
-* An instance of this class is automatically created for each table component.
-*/
+ * The TableApi class provides a set of methods to interact with a table's functionality.
+ * It enables actions such as updating cells, scrolling, managing visibility, handling selection,
+ * copying to the clipboard, downloading data, and triggering specific actions programmatically.
+ */
 export class TableApi {
 
 
@@ -234,12 +230,16 @@ export class TableApi {
   }
 
   /**
-   * Downloads an Excel file containing data from the table's header, body, and footer areas.
-   * Extracts the table data into a 2D matrix and uses the Excel service to generate and download the file.
+   * Generates and downloads an Excel file based on the table data.
    *
-   * @return {void} No return value, downloads the Excel file directly.
+   * @param {string} fileName - The name of the Excel file to be downloaded. Defaults to 'table.xlsx'.
+   * @param {string} author - The author of the Excel file. If not provided, it will remain empty.
+   * @return {void} No return value. Initiates a file download of the Excel document.
    */
-  downloadExcel() {
+  downloadExcel(
+    fileName: string = 'table.xlsx',
+    author: string = ''
+  ) {
     const matrix: Array<Array<any>> = [];
     const columnCount = this.tableScope.tableModel.getColumnCount()
 
@@ -255,7 +255,7 @@ export class TableApi {
         }
       }
     }
-    return this.tableScope.excelService.downloadExcel(matrix, 'table.xlsx');
+    return this.tableScope.excelService.downloadExcel(matrix, fileName, author);
   }
 
   /**
