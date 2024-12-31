@@ -6,7 +6,7 @@ import { GeoData } from "./data/geo-data";
 
 
 /**
- * Represents an store for HTML elements.
+ * Represents a store for HTML elements.
  * @class
  */
 export class EleScope {

@@ -1,6 +1,8 @@
 import { Size } from "./size";
 
 
+export const px500 = new Size(500, "px");
+export const px400 = new Size(400, "px");
 export const px300 = new Size(300, "px");
 export const px290 = new Size(290, "px");
 export const px280 = new Size(280, "px");

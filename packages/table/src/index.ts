@@ -157,6 +157,12 @@ export * from "./lib/table/renderer/star-rating-cell-renderer";
 export * from "./lib/table/renderer/progress-bar-cell-renderer";
 export * from "./lib/table/renderer/positive-and-negative-number-renderer";
 
+export * from "./lib/table/renderer/action/actions-cell-renderer";
+export * from "./lib/table/renderer/action/button-cell-renderer";
+export * from "./lib/table/renderer/action/action-event.if";
+export * from "./lib/table/renderer/action/action-event";
+export * from "./lib/table/renderer/action/action-event-listener.if";
+
 export * from "./lib/table/renderer/edit/edit-cell-renderer.type";
 export * from "./lib/table/renderer/edit/edit-input-pipe.if";
 export * from "./lib/table/renderer/edit/edit-input-pipe-for-number";
@@ -177,5 +183,13 @@ export * from './lib/table/color/three-color-gradient-arg.if';
 export * from './lib/table/color/three-color-gradient-arg';
 export * from './lib/table/color/two-color-gradient-arg.if';
 export * from './lib/table/color/two-color-gradient-arg';
+
+export * from './lib/table/crud/crud-options';
+export * from './lib/table/crud/crud-options.if';
+export * from './lib/table/crud/crud-table-model-factory';
+export * from './lib/table/crud/url-info';
+export * from './lib/table/crud/url-info.if';
+export * from './lib/table/crud/urls.if';
+
 export * from "./lib/table/data/tablemodel/areamodel/has-default-row-height-if";
 

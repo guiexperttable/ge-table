@@ -21,6 +21,29 @@ import { TableOptions } from "../data/options/table-options";
 import {isTreeRow} from "../instanceof-workaround";
 
 
+export type CreateTableModelPara = {
+  headerAreaModel: AreaModelIf,
+  bodyAreaModel: AreaModelIf,
+  footerAreaModel: AreaModelIf,
+  fixedLeftColumnCount: number,
+  fixedRightColumnCount: number,
+  rowCheckboxVisible: boolean,
+  defaultRowHeights: DefaultRowHeightsIf,
+  columnDefs: ColumnDefIf[],
+  columnSizes: number[],
+  overridingColumnWidth: number,
+  columnCount: number,
+  parentSize: number,
+  getSelectionModel: GetT<SelectionModelIf>,
+  rows: any[],
+  properties: string[],
+  bodyData: any[][],
+  headerData: string[][], // multi-line header
+  footerData: string[][], // multi-line footerData
+  tableOptions: TableOptionsIf
+
+};
+
 export class TableFactory {
 
   /**
@@ -59,28 +82,7 @@ export class TableFactory {
    * Allows to create a table model utilizing object array data for rows, header, and footer along with the specified configurations.
    * Please consult each method's documentation for detailed explanation of their functionality.
    */
-  public static createTableModel(p: Partial<{
-    headerAreaModel: AreaModelIf,
-    bodyAreaModel: AreaModelIf,
-    footerAreaModel: AreaModelIf,
-    fixedLeftColumnCount: number,
-    fixedRightColumnCount: number,
-    rowCheckboxVisible: boolean,
-    defaultRowHeights: DefaultRowHeightsIf,
-    columnDefs: ColumnDefIf[],
-    columnSizes: number[],
-    overridingColumnWidth: number,
-    columnCount: number,
-    parentSize: number,
-    getSelectionModel: GetT<SelectionModelIf>,
-    rows: any[],
-    properties: string[],
-    bodyData: any[][],
-    headerData: string[][], // multi-line header
-    footerData: string[][], // multi-line footerData
-    tableOptions: TableOptionsIf
-
-  }>): TableModelIf {
+  public static createTableModel(p: Partial<CreateTableModelPara>): TableModelIf {
 
     if (p.defaultRowHeights === undefined) {
       if (p.tableOptions?.defaultRowHeights) {
@@ -343,13 +345,14 @@ export class TableFactory {
     }
 
     // Flat table:
-    return TableFactory.createByObjectArrayParam({
+    let tableModel = TableFactory.createByObjectArrayParam({
       rows,
       columnDefs,
       fixedLeftColumnCount,
       fixedRightColumnCount,
-      defaultRowHeights: tableOptions.defaultRowHeights
+      defaultRowHeights: tableOptions.defaultRowHeights,
     });
+    return tableModel;
 
   }
 

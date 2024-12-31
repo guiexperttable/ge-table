@@ -46,6 +46,13 @@ const demoItems: DemoItem[] = [
     'check_box',
     () => import('../components/demos/treecheckbox/TreeTableCheckbox.vue'),
     'Tree Table with checkbox'),
+
+  new DemoItem(
+    "CRUD",
+    "/crud",
+    'table_rows',
+    () => import('../components/demos/crud/Crud.vue'),
+    'CRUDL (create, read, update, delete, list) Demo'),
 ];
 
 

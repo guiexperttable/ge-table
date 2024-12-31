@@ -1,0 +1,73 @@
+import { CrudOptions } from './crud-options';
+import { CreateTableModelPara, TableFactory } from '../factory/table-factory';
+import { SelectionModel } from '../selection/selection-model';
+import { TableModelAndOptionsIf } from '../data/table-model-and-options.if';
+import { TableModelAndOptions } from '../data/table-model-and-options';
+import { TableOptions } from '../data/options/table-options';
+import { ColumnDefIf } from '../data/tablemodel/column/column-def.if';
+import { ColumnDef } from '../data/tablemodel/column/column-def';
+import { px200, px400 } from '../data/common/sizes';
+import { CellRendererIf } from '../renderer/cell-render.if';
+import { AreaObjectMap } from '../data/common/area-map';
+import { ActionEventListenerIf } from '../renderer/action/action-event-listener.if';
+import { ActionEventIf } from '../renderer/action/action-event.if';
+import { ActionsCellRenderer } from '../renderer/action/actions-cell-renderer';
+
+
+
+export class CrudTableModelFactory implements ActionEventListenerIf {
+
+  createTableModel<T>(
+    crudOptions: CrudOptions,
+    p: Partial<CreateTableModelPara>,
+    callback: (tableModelAndOptions: TableModelAndOptionsIf) => void = (_: TableModelAndOptionsIf) => {
+    }): void {
+
+    crudOptions.fetchList<T>(crudOptions).then(rows => {
+      p.rows = rows;
+      const selectionModel = new SelectionModel('row', 'multi');
+      const getSelectionModel = ()=>selectionModel;
+
+      const tableOptions = {
+        ...new TableOptions(),
+        ...p.tableOptions,
+        hoverColumnVisible: false,
+        getSelectionModel
+      };
+
+      const columnDefs: ColumnDefIf[] = p.columnDefs?.length ? p.columnDefs : Object.keys(p.rows[0]).map(p => new ColumnDef(p, p.toUpperCase(), px200));
+      if (crudOptions.autoAddActionColumn) {
+        let columnDef = new ColumnDef(
+          'id',
+          'Actions',
+          px400,
+          new AreaObjectMap(['ge-table-text-align-left'], ['ge-table-text-align-left ge-table-actions-cell'], undefined)
+        );
+        columnDef.rendererMap = new AreaObjectMap<CellRendererIf>(
+          undefined,
+          new ActionsCellRenderer(this, crudOptions.singleRowActions),
+          undefined
+        );
+        columnDefs.push(columnDef);
+      }
+
+      const fixedLeftColumnCount: number = 0;
+      const fixedRightColumnCount: number = 0;
+      const tableModel = TableFactory.buildByTypedRowsParam<T>({
+        rows,
+        columnDefs,
+        tableOptions,
+        fixedLeftColumnCount,
+        fixedRightColumnCount
+      });
+      tableModel.getSelectionModel = getSelectionModel;
+      const mo = new TableModelAndOptions(tableModel, tableOptions);
+      callback(mo);
+    });
+  }
+
+  onActionEvent(actionEvent: ActionEventIf): void {
+    console.info('TODO Action event', actionEvent); // TODO
+  }
+
+}

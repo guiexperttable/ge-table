@@ -58,7 +58,7 @@ export class TableModel implements TableModelIf {
     protected overridingColumnWidth: number = -1,
     protected columnCount: number = 0,
     protected parentSize: number = 400, // can be important when we have percentage widths,
-    public readonly getSelectionModel: GetT<SelectionModelIf> = () => undefined
+    public getSelectionModel: GetT<SelectionModelIf> = () => undefined
   ) {
     headerAreaModel.areaIdent = "header";
     bodyAreaModel.areaIdent = "body";
