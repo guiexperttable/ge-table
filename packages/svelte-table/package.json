@@ -1,6 +1,6 @@
 {
   "name": "@guiexpert/svelte-table",
-  "version": "4.0.12",
+  "version": "4.0.14",
   "type": "module",
   "main": "./index.js",
   "types": "./index.d.ts",

@@ -101,8 +101,8 @@ export class CrudTableModelFactory implements ActionEventListenerIf {
           this.bodyModel?.filterRowsByPredict(row => row.id != id);
 
           console.info('all', this.bodyModel?.getAllRows().length);
-          this.tableModel?.tableScope?.clearSelection(true);
-          this.tableModel?.tableScope?.repaintHard();
+          this.tableModel?.getTableScope()?.clearSelection(true);
+          this.tableModel?.getTableScope()?.repaintHard();
           return json;
         });
     }

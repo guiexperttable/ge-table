@@ -60,7 +60,7 @@ export class CrudOptions implements CrudOptionsIf {
   };
 
 
-  deleteItem = <T>(crudOptions: CrudOptionsIf, id:any) => {
+  deleteItem = (crudOptions: CrudOptionsIf, id:any) => {
     const headers: HeadersInit = crudOptions.getHeadersInit ? crudOptions.getHeadersInit() : {};
     let url = crudOptions.urls.delete?.url ?? '';
     url = url.replace('{id}', id);

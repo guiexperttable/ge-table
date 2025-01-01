@@ -265,5 +265,6 @@ export interface TableModelIf {
    */
   getSelectionModel(): SelectionModelIf|undefined;
 
-  tableScope?:TableScope;
+  setTableScope(tableScope:TableScope): void;
+  getTableScope():TableScope | undefined;
 }

@@ -575,8 +575,13 @@ export class TableModel implements TableModelIf {
     }
   }
 
-  public tableScope?:TableScope;
-
+  private tableScope:TableScope|undefined;
+  setTableScope(tableScope:TableScope): void {
+    this.tableScope = tableScope;
+  };
+  getTableScope():TableScope | undefined {
+    return this.tableScope;
+  };
 }
 
 

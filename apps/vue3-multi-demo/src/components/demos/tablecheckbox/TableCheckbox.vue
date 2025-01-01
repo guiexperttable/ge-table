@@ -35,7 +35,8 @@ import { TableModelState } from '../../../common/table-model-state.ts';
 
 const gitUrl = 'https://github.com/guiexperttable/ge-table/blob/main/apps/vue3-multi-demo/src/components/demos/tablecheckbox/TableCheckbox.vue';
 const state = reactive<TableModelState>({
-  tableModel: undefined
+  tableModel: undefined,
+  tableOptions: new TableOptions(),
 });
 
 const fixedLeftColumnCount = 2;
