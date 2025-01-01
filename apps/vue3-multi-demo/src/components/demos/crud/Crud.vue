@@ -41,10 +41,10 @@ onMounted(async () => {
     {
       ...new CrudOptions(),
       urls: {
-        create: new UrlInfo('POST', 'https://jsonplaceholder.typicode.com/todo'),
-        read: new UrlInfo('GET', 'https://jsonplaceholder.typicode.com/todo/{id}'),
-        update: new UrlInfo('PUT', 'https://jsonplaceholder.typicode.com/todo/{id}'),
-        delete: new UrlInfo('DELETE', 'https://jsonplaceholder.typicode.com/todo/{id}'),
+        create: new UrlInfo('POST', 'https://jsonplaceholder.typicode.com/todos'),
+        read: new UrlInfo('GET', 'https://jsonplaceholder.typicode.com/todos/{id}'),
+        update: new UrlInfo('PUT', 'https://jsonplaceholder.typicode.com/todos/{id}'),
+        delete: new UrlInfo('DELETE', 'https://jsonplaceholder.typicode.com/todos/{id}'),
         list: new UrlInfo('GET', 'https://jsonplaceholder.typicode.com/todos')
       }
     },

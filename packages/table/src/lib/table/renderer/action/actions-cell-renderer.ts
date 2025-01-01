@@ -23,76 +23,117 @@ export class ActionsCellRenderer implements CellRendererIf {
     columnIndex: number,
     areaIdent: AreaIdent,
     areaModel: AreaModelIf,
-    _cellValue: any,
-    domService: DomServiceIf): RendererCleanupFnType | undefined {
+    cellValue: any,
+    domService: DomServiceIf
+  ): RendererCleanupFnType | undefined {
+    domService.addClass(cellDiv, 'ge-table-row-action-div');
 
+    //const cellValue = areaModel.getValueAt(rowIndex, columnIndex);
+    const id = cellValue;
+    const crudActions = this.getCrudActions(cellValue);
 
-    domService.addClass(cellDiv, 'ge-table-row-button-div');
+    const htmlParts: string[] = crudActions.map(action =>
+      action.elementType === 'button'
+        ? this.buildButtonHtml(action, areaIdent, rowIndex, columnIndex, id)
+        : this.buildLinkHtml(action, areaIdent, rowIndex, columnIndex, id)
+    );
 
-    const val = areaModel.getValueAt(rowIndex, columnIndex);
-    const sb: string[] = [];
-    for (const action of this.crudActions) {
-      if (action.elementType === 'button') {
-        sb.push(`
-            <button
-                type="button"
-                data-area="${areaIdent}"
-                data-action="${action.action}"
-                data-row-index="${rowIndex}"
-                data-col-index="${columnIndex}"
-                style="height: 100%;line-height: 1;" `);
-        if (action.enabled) {
-          sb.push(` data-listen="click" `);
-        } else {
-          sb.push(` disabled `);
-        }
-        sb.push(` class="ge-table-cell-action ge-table-cell-button ${action.elementClass}">${action.label}</button>`);
+    cellDiv.innerHTML = htmlParts.join('');
 
-      } else {
-        // link:
-        sb.push(`
-            <a
-                href="javascript:void(0)"
-                data-area="${areaIdent}"
-                data-action="${action.action}"
-                data-row-index="${rowIndex}"
-                data-col-index="${columnIndex}" `);
-        if (action.enabled) {
-          sb.push(` data-listen="click" `);
-        } else {
-          sb.push(` disabled `);
-        }
-        sb.push(` class="ge-table-cell-action ge-table-cell-link ${action.elementClass}">${action.label}</a>`);
-      }
-    }
-    cellDiv.innerHTML = sb.join('');
+    this.addClickEventListeners(cellDiv, areaIdent, areaModel);
 
-    const buttons = cellDiv.querySelectorAll<HTMLButtonElement>('.ge-table-cell-action');
-    if (buttons?.length) {
-      buttons.forEach((button) => {
-        button.addEventListener('click', (evt: MouseEvent) => {
-          const target = evt.target as HTMLButtonElement | null;
-          if (target) {
-            const areaIdentStr = target.getAttribute('data-area');
-            const rowIndexStr = target.getAttribute('data-row-index');
-            const columnIndexStr = target.getAttribute('data-col-index');
-            const action = target.getAttribute('data-action') ?? 'unknown';
-
-            if (areaIdentStr && rowIndexStr && columnIndexStr) {
-              const area: AreaIdent = getAreaIdentByString(areaIdentStr);
-              const rowIndex = Number(rowIndexStr);
-              const columnIndex = Number(columnIndexStr);
-
-              const evt = new ActionEvent(
-                action, area, rowIndex, columnIndex
-              );
-              this.actionEventListener.onActionEvent(evt);
-            }
-          }
-        });
-      });
-    }
     return undefined;
+  }
+
+  private buildButtonHtml(
+    action: CrudAction,
+    areaIdent: AreaIdent,
+    rowIndex: number,
+    columnIndex: number,
+    id:any
+  ): string {
+    const isEnabled = action.enabled ? `data-listen="click"` : `disabled`;
+    return `
+    <button
+      type="button"
+      data-area="${areaIdent}"
+      data-action="${action.action}"
+      data-id="${id}"
+      data-row-index="${rowIndex}"
+      data-col-index="${columnIndex}"
+      style="height: 100%;line-height: 1;"
+      ${isEnabled}
+      class="ge-table-cell-action ge-table-cell-button ${action.elementClass}">
+      ${action.label}
+    </button>`;
+  }
+
+  private buildLinkHtml(
+    action: CrudAction,
+    areaIdent: AreaIdent,
+    rowIndex: number,
+    columnIndex: number,
+    id:any
+  ): string {
+    const isEnabled = action.enabled ? `data-listen="click"` : `disabled`;
+    return `
+    <a
+      href="javascript:void(0)"
+      data-area="${areaIdent}"
+      data-action="${action.action}"
+      data-id="${id}"
+      data-row-index="${rowIndex}"
+      data-col-index="${columnIndex}"
+      ${isEnabled}
+      class="ge-table-cell-action ge-table-cell-link ${action.elementClass}">
+      ${action.label}
+    </a>`;
+  }
+
+  private addClickEventListeners(
+    cellDiv: HTMLDivElement,
+    _areaIdent: AreaIdent,
+    areaModel: AreaModelIf
+  ): void {
+    const buttons = cellDiv.querySelectorAll<HTMLButtonElement>('.ge-table-cell-action');
+    buttons.forEach(button => {
+      button.addEventListener('click', (evt: MouseEvent) => {
+        const target = evt.target as HTMLButtonElement | null;
+        if (target) {
+          const actionEvent = this.createActionEvent(target, areaModel);
+          if (actionEvent) {
+            this.actionEventListener.onActionEvent(actionEvent);
+          }
+        }
+      });
+    });
+  }
+
+  private createActionEvent(
+    target: HTMLButtonElement,
+    areaModel: AreaModelIf
+  ): ActionEvent | null {
+    const areaIdentStr = target.getAttribute('data-area');
+    const rowIndexStr = target.getAttribute('data-row-index');
+    const columnIndexStr = target.getAttribute('data-col-index');
+    const action = target.getAttribute('data-action') ?? 'unknown';
+    const id = target.getAttribute('data-id') ?? 'unknown';
+
+    if (areaIdentStr && rowIndexStr && columnIndexStr) {
+      const area: AreaIdent = getAreaIdentByString(areaIdentStr);
+      const rowIndex = Number(rowIndexStr);
+      const columnIndex = Number(columnIndexStr);
+      return new ActionEvent(action, area, areaModel, rowIndex, columnIndex, id);
+    }
+
+    return null;
+  }
+
+
+  private getCrudActions(val: any): CrudAction[] {
+    return Array.isArray(val) && val.every((item) => item instanceof CrudAction)
+      ? val
+      : this.crudActions;
   }
 
 }

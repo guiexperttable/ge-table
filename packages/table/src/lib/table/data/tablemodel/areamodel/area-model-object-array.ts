@@ -35,6 +35,11 @@ export class AreaModelObjectArray<T>
     this.rows = rows;
     this.filteredRows = [...rows];
   }
+  
+  filterRowsByPredict(predict:(row: T)=>boolean) {
+    this.rows = this.rows.filter(predict);
+    this.filteredRows = this.filteredRows.filter(predict);
+  }
 
   getRowCount(): number {
     return this.filteredRows?.length ?? 0;

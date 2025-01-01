@@ -5,26 +5,27 @@ import { CrudAction } from './crud-action';
 
 export class CrudOptions implements CrudOptionsIf {
 
-  getHeadersInit: (()=>HeadersInit)  = ()=> {
-    return {};
-  };
-
   urls: UrlsIf = {
     list: {
       url: '',
-      method: 'GET',
-    },
+      method: 'GET'
+    }
   };
-
-  singleRowActions : CrudAction[] = [
-    new CrudAction('EDIT', 'Edit ', '', '', 'button'),
-    new CrudAction('CLONE', 'Clone', '', '', 'button', false),
-    new CrudAction('DELETE', 'Delete', '', '', 'link'),
+  singleRowActions: CrudAction[] = [
+    new CrudAction('VIEW', 'View', '', '', 'link'),
+    new CrudAction('EDIT', 'Edit', '', '', 'link'),
+    new CrudAction('CLONE', 'Clone', '', '', 'link'),
+    new CrudAction('DELETE', 'Delete', '', '', 'link')
   ];
-  tableActions : CrudAction[] = [
+  tableActions: CrudAction[] = [
     new CrudAction('CREATE', 'Create', '', '', 'button'),
-    new CrudAction('DELETE_SELECTED', 'Delete Selected', '', '', 'button'),
+    new CrudAction('DELETE_SELECTED', 'Delete Selected', '', '', 'button')
   ];
+  autoAddActionColumn: boolean = true;
+
+  getHeadersInit: (() => HeadersInit) = () => {
+    return {};
+  };
 
   getIdByObject = <T extends Record<string, unknown>>(o: T) => {
     const id = 'id';
@@ -34,10 +35,8 @@ export class CrudOptions implements CrudOptionsIf {
     return o;
   };
 
-  autoAddActionColumn:boolean = true;
-
   fetchList = <T>(crudOptions: CrudOptionsIf) => {
-    const headers: HeadersInit = crudOptions.getHeadersInit? crudOptions.getHeadersInit() : {};
+    const headers: HeadersInit = crudOptions.getHeadersInit ? crudOptions.getHeadersInit() : {};
     let listUrl = crudOptions.urls.list.url;
     let method = crudOptions.urls.list.method ?? 'GET';
 
@@ -45,6 +44,37 @@ export class CrudOptions implements CrudOptionsIf {
       headers,
       method
     }).then(response => response.json() as Promise<T[]>);
-  }
+  };
 
+  fetchItem = <T>(crudOptions: CrudOptionsIf, id:any) => {
+    const headers: HeadersInit = crudOptions.getHeadersInit ? crudOptions.getHeadersInit() : {};
+    let url = crudOptions.urls.read?.url ?? '';
+    url = url.replace('{id}', id);
+    let method = crudOptions.urls.read?.method ?? 'GET';
+
+    return fetch(url, {
+      headers,
+      method
+    })
+      .then(response => response.json() as Promise<T>);
+  };
+
+
+  deleteItem = <T>(crudOptions: CrudOptionsIf, id:any) => {
+    const headers: HeadersInit = crudOptions.getHeadersInit ? crudOptions.getHeadersInit() : {};
+    let url = crudOptions.urls.delete?.url ?? '';
+    url = url.replace('{id}', id);
+    let method = crudOptions.urls.delete?.method ?? 'GET';
+
+    return fetch(url, {
+      headers,
+      method
+    })
+      .then(response => response.json() as Promise<any>);
+  };
+
+  getId = <T>(item: T) => {
+    // @ts-ignore
+    return item['id'];
+  };
 }

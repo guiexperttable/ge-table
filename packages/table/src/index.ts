@@ -158,7 +158,6 @@ export * from "./lib/table/renderer/progress-bar-cell-renderer";
 export * from "./lib/table/renderer/positive-and-negative-number-renderer";
 
 export * from "./lib/table/renderer/action/actions-cell-renderer";
-export * from "./lib/table/renderer/action/button-cell-renderer";
 export * from "./lib/table/renderer/action/action-event.if";
 export * from "./lib/table/renderer/action/action-event";
 export * from "./lib/table/renderer/action/action-event-listener.if";

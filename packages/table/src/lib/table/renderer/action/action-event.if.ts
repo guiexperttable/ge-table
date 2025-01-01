@@ -5,4 +5,5 @@ export interface ActionEventIf {
   area: AreaIdent;
   rowIndex: number;
   columnIndex: number;
+  id: any;
 }

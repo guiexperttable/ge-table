@@ -104,6 +104,7 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf, Even
     public readonly excelService: ExcelServiceIf = new ExcelService(),
   ) {
     super(hostElement, tableModel, new ConvenienceDomService(domService), tableOptions);
+    tableModel.tableScope = this; // TODO
     if (!eventListener) {
       this.eventListener = new EventAdapter();
     }

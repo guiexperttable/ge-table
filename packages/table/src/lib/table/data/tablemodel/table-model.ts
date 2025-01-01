@@ -13,6 +13,7 @@ import { GetT } from "../common/get-t";
 import { CheckboxModel } from "../../checkbox/checkbox-model";
 import {isCheckboxColumnDef} from "../../instanceof-workaround";
 import { SizeIf } from '../common/size.if';
+import { TableScope } from '../../table-scope';
 
 
 /**
@@ -574,6 +575,7 @@ export class TableModel implements TableModelIf {
     }
   }
 
+  public tableScope?:TableScope;
 
 }
 
