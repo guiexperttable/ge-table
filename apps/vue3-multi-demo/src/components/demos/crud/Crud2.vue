@@ -17,7 +17,7 @@
 
 import { GuiexpertTable } from "@guiexpert/vue3-table";
 import {
-  ActionEventIf, ColumnWidths,
+  ActionEventIf,
   CrudOptions,
   CrudTableModelFactory, TableApi,
   TableModelAndOptionsIf,
@@ -34,12 +34,14 @@ const state = reactive<TableModelState>({
 const gitUrl = 'https://github.com/guiexperttable/ge-table/blob/main/apps/vue3-multi-demo/src/components/demos/crud/Crud.vue';
 
 
-function onTableReady(tableApi: TableApi) {
-  setTimeout(() => {
-    tableApi.autoResizeColumns(false);
-    tableApi.setColumnWidth(tableApi.getTableModel().getColumnCount() - 1, 400);
-    tableApi.recalcWrappers();
-  }, 1000);
+function onTableReady(_tableApi: TableApi) {
+
+  // setTimeout(() => {
+  //   tableApi.autoResizeColumns(false);
+  //   tableApi.setColumnWidth(tableApi.getTableModel().getColumnCount() - 1, 400);
+  //   tableApi.recalcWrappers();
+  // }, 1000);
+
 }
 
 onMounted(async () => {
@@ -53,10 +55,10 @@ onMounted(async () => {
         delete: new UrlInfo('DELETE', 'https://jsonplaceholder.typicode.com/users/{id}'),
         list: new UrlInfo('GET', 'https://jsonplaceholder.typicode.com/users')
       },
-      columnWidths: {
-        ...new ColumnWidths(),
-        autoCalc:false
-      }
+      // columnWidths: {
+      //   ...new ColumnWidths(),
+      //   autoCalc:false
+      // }
     },
     {},
     (tableModelAndOptions: TableModelAndOptionsIf) => {

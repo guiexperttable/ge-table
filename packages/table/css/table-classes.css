@@ -43,3 +43,38 @@
 .ge-table-body-east {
   z-index: 999;
 }
+
+
+.ge-table-crud-object-view {
+  border-radius: 8px;
+
+  width: 50%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  .ge-table-dialog-header {
+    font-weight: bold;
+    font-size: larger;
+  }
+  .ge-table-dialog-content {
+    overflow-y: auto;
+    table th,
+    table td {
+      text-align: left;
+
+      &:nth-child(2) {
+        padding-left: 12px;
+      }
+      &.ge-table-crud-object-view-object-child {
+        font-weight: bold;
+      }
+    }
+  }
+  .ge-table-dialog-footer {
+    display: flex;
+    justify-content: flex-end;
+    .ge-table-dialog-footer-close-button {
+      margin-top: 10px;
+    }
+  }
+}

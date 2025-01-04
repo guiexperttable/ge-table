@@ -18,6 +18,7 @@ import {
   AreaModelObjectArrayWithColumndefs
 } from '../data/tablemodel/areamodel/area-model-object-array-with-columndefs';
 import { Size } from '../data/common/size';
+import { CrudObjectView } from './crud-object-view';
 
 
 export class CrudTableModelFactory implements ActionEventListenerIf {
@@ -108,6 +109,7 @@ export class CrudTableModelFactory implements ActionEventListenerIf {
       this.crudOptions?.fetchItem(this.crudOptions, id)
         .then(json => {
           console.info(json);
+          new CrudObjectView(json as Record<string, any>).openDialog();
           return json;
         });
 
