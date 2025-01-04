@@ -781,6 +781,51 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf, Even
   }
 
 
+  calcAutoColumnWidths(): number[] {
+    const bodyModel = this.tableModel.getBodyModel();
+    const columnCount = this.tableModel.getColumnCount();
+    const rowCount = bodyModel?.getRowCount() ?? 0;
+
+    if (!bodyModel) {
+      console.warn('Body model is not available.');
+      return [];
+    }
+
+    const characterLengthArr = new Array(columnCount).fill(0);
+
+    // Calculate maximum string length for each column
+    for (let r = 0; r < rowCount; r++) {
+      for (let c = 0; c < columnCount; c++) {
+        const value = bodyModel.getValueAt(r, c);
+        const length = value?.toString().length || 0;
+        if (length > characterLengthArr[c]) {
+          characterLengthArr[c] = length;
+        }
+      }
+    }
+    return characterLengthArr.map((width) => Math.max(width * 10, 50));
+  }
+
+
+  setColumnWidth(columnIndex: number, width: number): void{
+    this.tableModel.setColumnWidth(columnIndex, width);
+  }
+  autoResizeColumns(recalcWrappers: boolean= true) {
+    // Resize columns
+    const columnWidthes = this.calcAutoColumnWidths();
+    for (let i = 0; i < columnWidthes.length; i++) {
+      const columnWidth = columnWidthes[i];
+      this.tableModel.setColumnWidth(i, columnWidth);
+    }
+    if (recalcWrappers) this.recalcWrappers();
+  }
+
+  recalcWrappers(){
+    this.tableModel.recalcPadding();
+    this.resetSizeOfWrapperDiv();
+    this.adjustContainersAndRows();
+  }
+
 }
 
 

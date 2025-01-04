@@ -40,3 +40,6 @@
 .ge-table-row-checkbox-div {
   padding-left: 14px;
 }
+.ge-table-body-east {
+  z-index: 999;
+}

@@ -16,6 +16,7 @@ export interface CrudOptionsIf {
   deleteItem: (crudOptions: CrudOptionsIf, id:any) => Promise<any>;
 
   getIdByObject: <T extends Record<string, unknown>>(o: T) => any;
+  calcFixedRightColumnCount: (columnCount: number) => number,
 
   autoAddActionColumn?: boolean;
   isActionDeleteVisible?: boolean;

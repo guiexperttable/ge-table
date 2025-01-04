@@ -53,6 +53,13 @@ const demoItems: DemoItem[] = [
     'table_rows',
     () => import('../components/demos/crud/Crud.vue'),
     'CRUDL (create, read, update, delete, list) Demo'),
+
+  new DemoItem(
+    "CRUD2",
+    "/crud2",
+    'table_rows',
+    () => import('../components/demos/crud/Crud2.vue'),
+    'CRUDL 2 Demo'),
 ];
 
 

@@ -183,6 +183,9 @@ export * from './lib/table/color/three-color-gradient-arg';
 export * from './lib/table/color/two-color-gradient-arg.if';
 export * from './lib/table/color/two-color-gradient-arg';
 
+export * from './lib/table/crud/column-widths.if';
+export * from './lib/table/crud/column-widths';
+export * from './lib/table/crud/crud-action';
 export * from './lib/table/crud/crud-options';
 export * from './lib/table/crud/crud-options.if';
 export * from './lib/table/crud/crud-table-model-factory';

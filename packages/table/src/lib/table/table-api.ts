@@ -6,6 +6,7 @@ import { ActionId } from './action/action-id.type';
 import { ShortcutActionIdMapping } from './action/shortcut-actionid-mapping.type';
 import { SelectionModelIf } from './selection/selection-model.if';
 import { AreaIdent } from './data/tablemodel/area-ident.type';
+import { TableModelIf } from './data/tablemodel/table-model.if';
 
 
 /**
@@ -278,4 +279,19 @@ export class TableApi {
   }
 
 
+  autoResizeColumns(recalcWrappers: boolean= true) {
+    this.tableScope.autoResizeColumns(recalcWrappers);
+  }
+
+  recalcWrappers() {
+    this.tableScope.recalcWrappers();
+  }
+
+  setColumnWidth(columnIndex: number, width: number): void{
+    this.tableScope.setColumnWidth(columnIndex, width);
+  }
+
+  getTableModel() :TableModelIf{
+    return this.tableScope.tableModel;
+  }
 }
