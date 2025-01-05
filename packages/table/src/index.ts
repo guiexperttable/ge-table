@@ -187,6 +187,7 @@ export * from './lib/table/crud/column-widths.if';
 export * from './lib/table/crud/column-widths';
 export * from './lib/table/crud/crud-action';
 export * from './lib/table/crud/crud-object-view';
+export * from './lib/table/crud/crud-object-edit';
 export * from './lib/table/crud/crud-options';
 export * from './lib/table/crud/crud-options.if';
 export * from './lib/table/crud/crud-table-model-factory';

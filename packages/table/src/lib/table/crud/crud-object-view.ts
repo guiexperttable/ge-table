@@ -15,7 +15,7 @@ export class CrudObjectView<T extends Record<string, any>> {
         ${this.generateHtmlTable(this.object)}
       </div>
       <div class="ge-table-dialog-footer">
-        <button class="ge-table-dialog-footer-close-button" style="">Close</button>
+        <button class="ge-table-dialog-footer-close-button primary" style="">Close</button>
       </div>
     `;
     document.body.appendChild(dialog);

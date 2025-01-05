@@ -1,6 +1,6 @@
 {
   "name": "@guiexpert/vue3-table",
-  "version": "3.0.19",
+  "version": "3.0.20",
   "type": "commonjs",
   "main": "./index.js",
   "types": "./index.d.ts",

@@ -19,6 +19,8 @@ import {
 } from '../data/tablemodel/areamodel/area-model-object-array-with-columndefs';
 import { Size } from '../data/common/size';
 import { CrudObjectView } from './crud-object-view';
+import { CrudObjectEdit } from './crud-object-edit';
+import { ActionEvent } from '../renderer/action/action-event';
 
 
 export class CrudTableModelFactory implements ActionEventListenerIf {
@@ -98,12 +100,17 @@ export class CrudTableModelFactory implements ActionEventListenerIf {
     });
   }
 
+  public openDialogForCreate() {
+    if (this.bodyModel) {
+      const evt = new ActionEvent('CREATE', "body", this.bodyModel, -1, -1, null)
+      this.onActionEvent(evt);
+    }
+  }
+
   onActionEvent(actionEvent: ActionEventIf): void {
     if (this.listenActionEvent) {
       this.listenActionEvent(actionEvent);
     }
-    //console.info('TODO Action event', actionEvent); // TODO
-
     if (actionEvent.action === 'VIEW') {
       let id = actionEvent.id;
       this.crudOptions?.fetchItem(this.crudOptions, id)
@@ -112,6 +119,53 @@ export class CrudTableModelFactory implements ActionEventListenerIf {
           new CrudObjectView(json as Record<string, any>).openDialog();
           return json;
         });
+
+    } else if (actionEvent.action === 'EDIT') {
+      let id = actionEvent.id;
+      const idKey = this.crudOptions.getIdKey()??'id';
+      this.crudOptions?.fetchItem<any>(this.crudOptions, id)
+        .then(json => {
+          console.info(json);
+          new CrudObjectEdit(
+            idKey,
+            json as Record<string, any>
+          ).openDialog((updatedObject: any) => {
+            console.info(updatedObject); // TODO
+            this.crudOptions.updateItem(this.crudOptions, id, updatedObject);
+          });
+          return json;
+        });
+
+    } else if (actionEvent.action === 'CLONE') {
+      let id = actionEvent.id;
+      const idKey = this.crudOptions.getIdKey()??'id';
+      this.crudOptions?.fetchItem<any>(this.crudOptions, id)
+        .then(item => {
+          const clone = JSON.parse(JSON.stringify(item));
+          new CrudObjectEdit(
+            idKey,
+            clone as Record<string, any>,
+            'Clone Item'
+          ).openDialog((updatedObject: any) => {
+            console.info(updatedObject); // TODO
+            this.crudOptions.createItem(this.crudOptions, updatedObject);
+          });
+          return clone;
+        });
+
+    } else if (actionEvent.action === 'CREATE') {
+      const idKey = this.crudOptions.getIdKey()??'id';
+      const clone = JSON.parse(JSON.stringify(this.crudOptions.getEmptyItem()));
+      new CrudObjectEdit(
+        idKey,
+        clone as Record<string, any>,
+        'Create Item'
+      ).openDialog((updatedObject: any) => {
+        console.info(updatedObject); // TODO
+        this.crudOptions.createItem(this.crudOptions, clone);
+      });
+      return clone;
+
 
     } else if (actionEvent.action === 'DELETE') {
       let id = actionEvent.id;

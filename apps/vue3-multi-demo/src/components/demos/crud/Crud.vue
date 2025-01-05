@@ -46,7 +46,16 @@ onMounted(async () => {
         update: new UrlInfo('PUT', 'https://jsonplaceholder.typicode.com/todos/{id}'),
         delete: new UrlInfo('DELETE', 'https://jsonplaceholder.typicode.com/todos/{id}'),
         list: new UrlInfo('GET', 'https://jsonplaceholder.typicode.com/todos')
-      }
+      },
+      getIdKey: () => 'id',
+      getEmptyItem: () => {
+        return {
+          id: null,
+          userId: 1,
+          title: "",
+          completed: false
+        }
+      },
     },
     {},
     (tableModelAndOptions: TableModelAndOptionsIf) => {

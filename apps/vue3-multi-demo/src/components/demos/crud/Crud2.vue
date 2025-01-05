@@ -4,6 +4,9 @@
   </a>
 
   <div class="crud-demo" v-if="state.tableModel">
+    <div class="crud-action-div">
+      <button @click="onCreateClicked">Create</button>
+    </div>
     <guiexpert-table
       :tableModel="state.tableModel"
       :tableOptions="state.tableOptions"
@@ -24,15 +27,19 @@ import {
   UrlInfo
 } from '@guiexpert/table';
 import { onMounted, reactive } from 'vue';
-import { TableModelState } from '../../../common/table-model-state.ts';
+import { CrudTableModelState } from '../../../common/crud-table-model-state.ts';
 
 
-const state = reactive<TableModelState>({
+const state = reactive<CrudTableModelState>({
   tableModel: undefined,
   tableOptions: undefined,
+  crudTableModelFactory: undefined,
 });
 const gitUrl = 'https://github.com/guiexperttable/ge-table/blob/main/apps/vue3-multi-demo/src/components/demos/crud/Crud.vue';
 
+function onCreateClicked(){
+  state.crudTableModelFactory?.openDialogForCreate();
+}
 
 function onTableReady(_tableApi: TableApi) {
 
@@ -45,7 +52,8 @@ function onTableReady(_tableApi: TableApi) {
 }
 
 onMounted(async () => {
-  new CrudTableModelFactory().createTableModel(
+  state.crudTableModelFactory = new CrudTableModelFactory();
+  state.crudTableModelFactory.createTableModel(
     {
       ...new CrudOptions(),
       urls: {
@@ -54,6 +62,32 @@ onMounted(async () => {
         update: new UrlInfo('PUT', 'https://jsonplaceholder.typicode.com/users/{id}'),
         delete: new UrlInfo('DELETE', 'https://jsonplaceholder.typicode.com/users/{id}'),
         list: new UrlInfo('GET', 'https://jsonplaceholder.typicode.com/users')
+      },
+      getIdKey: () => 'id',
+      getEmptyItem: () => {
+        return {
+          id: null,
+          name: "",
+          username: "",
+          email: "",
+          address: {
+            street: "",
+            suite: "",
+            city: "",
+            zipcode: "",
+            geo: {
+              lat: "",
+              lng: ""
+            }
+          },
+          phone: "",
+          website: "",
+          company: {
+            name: "",
+            catchPhrase: "",
+            bs: ""
+          }
+        };
       },
       // columnWidths: {
       //   ...new ColumnWidths(),
@@ -78,6 +112,12 @@ onMounted(async () => {
 .crud-demo {
   width: 100%;
   height: calc(100vh - 50px);
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.crud-action-div {
+  display: flex;
+  gap: 12px;
 }
 .source-button  {
   position: absolute;

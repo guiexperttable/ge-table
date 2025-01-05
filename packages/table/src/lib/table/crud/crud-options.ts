@@ -17,7 +17,8 @@ export class CrudOptions implements CrudOptionsIf {
     new CrudAction('VIEW', 'View', '', '', 'link'),
     new CrudAction('EDIT', 'Edit', '', '', 'link'),
     new CrudAction('CLONE', 'Clone', '', '', 'link'),
-    new CrudAction('DELETE', 'Delete', '', '', 'link')
+    new CrudAction('DELETE', 'Delete', '', '', 'link'),
+    // new CrudAction('CREATE', 'Create', '', '', 'link'),
   ];
   tableActions: CrudAction[] = [
     new CrudAction('CREATE', 'Create', '', '', 'button'),
@@ -32,8 +33,10 @@ export class CrudOptions implements CrudOptionsIf {
     return {};
   };
 
+  getIdKey: () => string= () => 'id';
+
   getIdByObject = <T extends Record<string, unknown>>(o: T) => {
-    const id = 'id';
+    const id = this.getIdKey() ?? 'id';
     if (id in o) {
       return (o as Record<string, any>)['id'];
     }
@@ -64,6 +67,33 @@ export class CrudOptions implements CrudOptionsIf {
       .then(response => response.json() as Promise<T>);
   };
 
+  updateItem = (crudOptions: CrudOptionsIf, id:any, item:any) => {
+    const headers: HeadersInit = crudOptions.getHeadersInit ? crudOptions.getHeadersInit() : {};
+    let url = crudOptions.urls.update?.url ?? '';
+    url = url.replace('{id}', id);
+    let method = crudOptions.urls.update?.method ?? 'PATCH';
+
+    return fetch(url, {
+      headers,
+      method,
+      body: JSON.stringify(item),
+    })
+      .then(response => response.json());
+  };
+
+  createItem = (crudOptions: CrudOptionsIf, item:any) => {
+    const headers: HeadersInit = crudOptions.getHeadersInit ? crudOptions.getHeadersInit() : {};
+    let url = crudOptions.urls.create?.url ?? '';
+    let method = crudOptions.urls.create?.method ?? 'POST';
+
+    return fetch(url, {
+      headers,
+      method,
+      body: JSON.stringify(item),
+    })
+      .then(response => response.json());
+  };
+
 
   deleteItem = (crudOptions: CrudOptionsIf, id:any) => {
     const headers: HeadersInit = crudOptions.getHeadersInit ? crudOptions.getHeadersInit() : {};
@@ -78,8 +108,7 @@ export class CrudOptions implements CrudOptionsIf {
       .then(response => response.json() as Promise<any>);
   };
 
-  getId = <T>(item: T) => {
-    // @ts-ignore
-    return item['id'];
+  getEmptyItem: () => any = () => {
   };
+
 }
