@@ -50,7 +50,10 @@ export class CrudTableModelFactory implements ActionEventListenerIf {
       p.rows = rows;
 
       if (rows?.length) {
-        const props: string[] = this.extractProperties(rows[0]);
+        const props: string[] = p.columnDefs?.length
+          ? p.columnDefs.map(cd=>cd.property)
+          : this.extractProperties(rows[0]);
+
         const selectionModel = new SelectionModel('row', 'multi');
         const getSelectionModel = () => selectionModel;
 
@@ -65,6 +68,14 @@ export class CrudTableModelFactory implements ActionEventListenerIf {
         const columnDefs: ColumnDefIf[] = p.columnDefs?.length
           ? p.columnDefs
           : props.map(((p, i) => new ColumnDef(p, p.toUpperCase(), new Size(widths[i], 'px'))));
+
+        if (crudOptions?.columnWidths?.autoCalc) {
+          for (let i = 0; i < columnDefs.length; i++) {
+            const columnDef = columnDefs[i];
+            columnDef.width = new Size(widths[i], 'px');
+          }
+        }
+
         if (crudOptions.autoAddActionColumn) {
           let columnDef = new ColumnDef(
             'id',

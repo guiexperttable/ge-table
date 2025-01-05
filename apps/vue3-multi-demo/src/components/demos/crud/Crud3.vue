@@ -10,7 +10,6 @@
     <guiexpert-table
       :tableModel="state.tableModel"
       :tableOptions="state.tableOptions"
-      @tableReady="onTableReady($event)"
     ></guiexpert-table>
   </div>
 </template>
@@ -20,9 +19,9 @@
 
 import { GuiexpertTable } from "@guiexpert/vue3-table";
 import {
-  ActionEventIf,
+  ActionEventIf, ColumnDef, ColumnWidths,
   CrudOptions,
-  CrudTableModelFactory, TableApi,
+  CrudTableModelFactory,
   TableModelAndOptionsIf,
   UrlInfo
 } from '@guiexpert/table';
@@ -35,27 +34,23 @@ const state = reactive<CrudTableModelState>({
   tableOptions: undefined,
   crudTableModelFactory: undefined,
 });
-const gitUrl = 'https://github.com/guiexperttable/ge-table/blob/main/apps/vue3-multi-demo/src/components/demos/crud/Crud2.vue';
+const gitUrl = 'https://github.com/guiexperttable/ge-table/blob/main/apps/vue3-multi-demo/src/components/demos/crud/Crud3.vue';
 
 function onCreateClicked(){
   state.crudTableModelFactory?.openDialogForCreate();
 }
 
-function onTableReady(_tableApi: TableApi) {
 
-  // setTimeout(() => {
-  //   tableApi.autoResizeColumns(false);
-  //   tableApi.setColumnWidth(tableApi.getTableModel().getColumnCount() - 1, 400);
-  //   tableApi.recalcWrappers();
-  // }, 1000);
-
-}
 
 onMounted(async () => {
   state.crudTableModelFactory = new CrudTableModelFactory();
   state.crudTableModelFactory.createTableModel(
     {
       ...new CrudOptions(),
+      columnWidths: {
+        ...new ColumnWidths(),
+        takeHeaderLabelsIntoAccount: false
+      },
       urls: {
         create: new UrlInfo('POST', 'https://jsonplaceholder.typicode.com/users'),
         read: new UrlInfo('GET', 'https://jsonplaceholder.typicode.com/users/{id}'),
@@ -89,12 +84,28 @@ onMounted(async () => {
           }
         };
       },
-      // columnWidths: {
-      //   ...new ColumnWidths(),
-      //   autoCalc:false
-      // }
     },
-    {},
+    {
+      columnDefs:[
+        ColumnDef.create({"property": "id", "headerLabel": "ID",}),
+        ColumnDef.create({"property": "name", "headerLabel": "NAME",}),
+        ColumnDef.create({"property": "username", "headerLabel": "USERNAME",}),
+        ColumnDef.create({"property": "email", "headerLabel": "EMAIL",}),
+        ColumnDef.create({"property": "phone", "headerLabel": "PHONE",}),
+        ColumnDef.create({"property": "website", "headerLabel": "WEBSITE",}),
+
+        ColumnDef.create({"property": "company.name", "headerLabel": "COMPANY",}),
+        ColumnDef.create({"property": "company.catchPhrase", "headerLabel": "CATCHPHRAS",}),
+        ColumnDef.create({"property": "company.bs", "headerLabel": "COMPANY BS",}),
+
+        ColumnDef.create({"property": "address.street", "headerLabel": "STREET",}),
+        ColumnDef.create({"property": "address.suite", "headerLabel": "SUITE",}),
+        ColumnDef.create({"property": "address.city", "headerLabel": "CITY",}),
+        ColumnDef.create({"property": "address.zipcode", "headerLabel": "ZIPCODE",}),
+        ColumnDef.create({"property": "address.geo.lat", "headerLabel": "GEO LAT",}),
+        ColumnDef.create({"property": "address.geo.lng", "headerLabel": "GEO LNG",}),
+      ]
+    },
     (tableModelAndOptions: TableModelAndOptionsIf) => {
       state.tableModel = tableModelAndOptions.tableModel;
       state.tableOptions = tableModelAndOptions.tableOptions;

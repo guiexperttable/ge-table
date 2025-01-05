@@ -60,6 +60,13 @@ const demoItems: DemoItem[] = [
     'table_rows',
     () => import('../components/demos/crud/Crud2.vue'),
     'CRUDL 2 Demo'),
+
+  new DemoItem(
+    "CRUD3",
+    "/crud3",
+    'table_rows',
+    () => import('../components/demos/crud/Crud3.vue'),
+    'CRUDL 3 Pre-defined columnDefs'),
 ];
 
 
