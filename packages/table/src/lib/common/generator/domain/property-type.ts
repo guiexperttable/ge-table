@@ -1,4 +1,6 @@
 
+export const UNIMPORTANT_TYPES = ['null', 'undefined', 'any'];
+
 export interface PropertyType {
   type: string;
 }

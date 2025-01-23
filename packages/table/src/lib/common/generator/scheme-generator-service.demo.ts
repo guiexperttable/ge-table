@@ -32,4 +32,4 @@ const demoData = [
 
 
 const schemeGenerator = new SchemeGenerator(JSON.stringify(demoData), 'XyzRow');
-// console.log(schemeGenerator.renderTypeScriptInterfaces().join('\n'));
+console.log(schemeGenerator.renderTypeScriptInterfaces().join('\n'));

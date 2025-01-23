@@ -3,9 +3,10 @@ import {
   ObjectPropertyType,
   PropertyItem,
   PropertyType,
-  PropertyTypeNamable
+  PropertyTypeNamable, UNIMPORTANT_TYPES
 } from './domain/property-type';
 import { PropertyItemTreeService } from './property-item-tree.service';
+import { getEntityName } from './string-util';
 
 
 /**
@@ -42,25 +43,25 @@ import { PropertyItemTreeService } from './property-item-tree.service';
  *
  *  into a TypeScript interface definitions:
  *
- *    export interface XyzRowEntity {
- *      description: string;
- *      id: (null | number);
- *      isActive: boolean;
- *      name: string;
- *      preferences: Array<(PreferenceEntity)>;
- *      profile: ProfileEntity;
- *      tags: (null | Array<()> | string);
- *    }
+ * export interface XyzRowEntity {
+ *   description: string;
+ *   id: (number | null);
+ *   isActive: boolean;
+ *   name: string;
+ *   preferences: PreferenceEntity[];
+ *   profile: ProfileEntity;
+ *   tags: (string[] | null);
+ * }
  *
- *    export interface PreferencesEntity {
- *      key: string;
- *      value: string;
- *    }
+ * export interface PreferenceEntity {
+ *   key: string;
+ *   value: string;
+ * }
  *
- *    export interface ProfileEntity {
- *      age: number;
- *      location: string;
- *    }
+ * export interface ProfileEntity {
+ *   age: number;
+ *   location: string;
+ * }
  *
  *
  * const json = JSON.stringify(demoData);
@@ -70,7 +71,7 @@ import { PropertyItemTreeService } from './property-item-tree.service';
  */
 export class SchemeGenerator {
 
-  public entitySuffix = 'Entity';
+  public orOperator = ' | ';
   public rootPropertyType: PropertyType | null = null;
 
   private renderTypeScriptInterfacesFifo: ObjectPropertyType[]=[];
@@ -148,7 +149,7 @@ export class SchemeGenerator {
 
     } else if (pt instanceof ObjectPropertyType) {
       const od: ObjectPropertyType = pt;
-      const entityName = this.getEntityName(name);
+      const entityName = getEntityName(name);
 
       if (!this.renderTypeScriptInterfacesDone.includes(entityName)) {
         this.renderTypeScriptInterfacesDone.push(entityName);
@@ -183,13 +184,6 @@ export class SchemeGenerator {
   }
 
 
-  private getEntityName(name: string): string {
-    let entityName = this.trimArraySuffixes(this.firstLetterUppercase(name));
-    if (!entityName.includes(this.entitySuffix)) {
-      entityName = entityName + this.entitySuffix;
-    }
-    return entityName;
-  }
 
   private propertyItem2InterfaceDateType(propertyItem: PropertyItem): string {
     if (propertyItem.types?.length === 0) return 'any';
@@ -198,8 +192,13 @@ export class SchemeGenerator {
     const ts = propertyItem.types
       .map(propertyType => this.renderType(propertyType, propertyItem))
       .filter(f=> f!=='undefined')
-      .join(' | ');
-    if (ts.includes(' | ')) {
+      .sort( (a,b) => {
+        if (UNIMPORTANT_TYPES.includes(a)) return 100;
+        if (UNIMPORTANT_TYPES.includes(b)) return -100;
+        return a.localeCompare(b);
+      })
+      .join(this.orOperator);
+    if (ts.includes(this.orOperator)) {
       return '(' + ts + ')';
     }
     return ts;
@@ -209,11 +208,12 @@ export class SchemeGenerator {
     if (propertyType instanceof ArrayPropertyType) {
       const s = propertyType.items
         .map(it=>this.renderType(it, propertyItem))
-        .join(' | ');
-      return `Array<(${s})>`;
+        .join(this.orOperator);
+      if (s.includes(this.orOperator)) return `(${s})[]`;
+      return `${s}[]`;
     }
     if (propertyType instanceof ObjectPropertyType) {
-      return this.getEntityName(propertyItem.name);
+      return getEntityName(propertyItem.name);
     }
     return propertyType.type;
   }
@@ -226,20 +226,4 @@ export class SchemeGenerator {
   }
 
 
-  private firstLetterUppercase(text: string): string {
-    if (!text || text.length === 0) return '';
-    return text[0].toUpperCase() + text.slice(1);
-  }
-
-  private trimArraySuffixes(text: string): string {
-    if (!text || text.length === 0) return text;
-
-    const suffixesToRemove = ['Array', 'Arr', 'List', 's'];
-    for (const suffix of suffixesToRemove) {
-      if (text.endsWith(suffix)) {
-        return text.slice(0, -suffix.length);
-      }
-    }
-    return text;
-  }
 }

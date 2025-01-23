@@ -8,14 +8,15 @@ import {
   PropertyItem,
   PropertyType,
   StringPropertyType,
-  UndefinedPropertyType
+  UndefinedPropertyType, UNIMPORTANT_TYPES
 } from './domain/property-type';
 import { ValueInfo } from './domain/value-info';
+import { getEntityName } from './string-util';
 
+
+const debugging = false;
 
 export class PropertyItemTreeService {
-
-  public entitySuffix = 'Entity';
 
 
   /**
@@ -86,15 +87,15 @@ export class PropertyItemTreeService {
    *
    * export interface XyzRowEntity {
    *   description: string;
-   *   id: (null | number);
+   *   id: (number | null);
    *   isActive: boolean;
    *   name: string;
-   *   preferences: Array<(PreferenceEntity)>;
+   *   preferences: PreferenceEntity[];
    *   profile: ProfileEntity;
-   *   tags: (null | Array<()> | string);
+   *   tags: (string[] | null);
    * }
    *
-   * export interface PreferencesEntity {
+   * export interface PreferenceEntity {
    *   key: string;
    *   value: string;
    * }
@@ -117,7 +118,7 @@ export class PropertyItemTreeService {
     if (mergedValueInfos.length > 0) {
       mergedValueInfos[0].propertyItem.name = rootName;
     }
-    if (1===1+1) this.logValueInfos(mergedValueInfos);
+    if (debugging) this.logValueInfos(mergedValueInfos);
 
     return this.valueInfos2PropertyType(mergedValueInfos);
   }
@@ -136,14 +137,14 @@ export class PropertyItemTreeService {
         if (parentValueInfo){
 
           let arrayOrObject = false;
-          if (parentValueInfo.propertyItem.types.length===1) {
-            const pt = parentValueInfo.propertyItem.types[0];
+          const importantTypes = parentValueInfo.propertyItem.types.filter(v=> !UNIMPORTANT_TYPES.includes(v.type));
+          if (importantTypes.length===1) {
+            const pt = importantTypes[0];
             if (pt instanceof ArrayPropertyType) {
               arrayOrObject = true;
               for (const type of valueInfo.propertyItem.types) {
                 pt.items.push(type);
               }
-
             } else if (pt instanceof ObjectPropertyType) {
               arrayOrObject = true;
               pt.properties.push(valueInfo.propertyItem);
@@ -211,7 +212,7 @@ export class PropertyItemTreeService {
       const valueInfo = new ValueInfo();
       let property = currentPath.split('/').pop() || '';
       if (property==='[]') {
-        property = parentName + this.entitySuffix;
+        property = getEntityName(parentName);
       } else if (property==='root') {
         property = rootName;
       }
