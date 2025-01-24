@@ -6,51 +6,55 @@ import {
   PropertyTypeNamable, UNIMPORTANT_TYPES
 } from './domain/property-type';
 import { PropertyItemTreeService } from './property-item-tree.service';
-import { getEntityName } from './string-util';
+import { entitySuffix, getEntityName } from './string-util';
 
 
 /**
  *
  *  Converts a json or object structure like this:
- *    [
- *      {
- *        id: 1,
- *        name: "Alice",
- *        description: "Lorem ipsum dolor",
- *        isActive: true,
- *        tags: ["typescript", "javascript"],
- *        profile: { age: 30, location: "Berlin" },
- *        preferences: [{ key: "theme", value: "dark" }],
- *      },
- *      {
- *        id: 2,
- *        name: "Marc",
- *        description: "Lorem ipsum dolor",
- *        isActive: false,
- *        tags: ["java", "javascript"],
- *        profile: { age: 55, location: "Frankfurt" },
- *        preferences: [{ key: "theme", value: "light" }],
- *      },
- *      {
- *        id: null,
- *        name: "Bob",
- *        isActive: false,
- *        tags: null,
- *        profile: { age: 25, location: "Frankfurt" },
- *        preferences: [{ key: "language", value: "de" }],
- *      },
- *    ]
+ *  [
+ *   {
+ *     id: 1,
+ *     name: 'Alice',
+ *     description: 'Lorem ipsum dolor',
+ *     isActive: true,
+ *     tags: ['typescript', 'javascript'],
+ *     scripts: [],
+ *     profile: { age: 30, location: 'Berlin' },
+ *     preferences: [{ key: 'theme', value: 'dark' }]
+ *   },
+ *   {
+ *     id: 2,
+ *     name: 'Marc',
+ *     description: 'Lorem ipsum dolor',
+ *     isActive: false,
+ *     tags: ['java', 'javascript'],
+ *     scripts: [],
+ *     profile: { age: 55, location: 'Frankfurt' },
+ *     preferences: [{ key: 'theme', value: 'light' }]
+ *   },
+ *   {
+ *     id: null,
+ *     name: 'Bob',
+ *     isActive: false,
+ *     tags: null,
+ *     scripts: [],
+ *     profile: { age: 25, location: 'Frankfurt' },
+ *     preferences: [{ key: 'language', value: 'de' }]
+ *   }
+ * ]
  *
  *  into a TypeScript interface definitions:
  *
  * export interface XyzRowEntity {
- *   description: string;
- *   id: (number | null);
+ *   description?: string;
+ *   id: number|null;
  *   isActive: boolean;
  *   name: string;
  *   preferences: PreferenceEntity[];
  *   profile: ProfileEntity;
- *   tags: (string[] | null);
+ *   scripts: any[];
+ *   tags: string[]|null;
  * }
  *
  * export interface PreferenceEntity {
@@ -71,10 +75,10 @@ import { getEntityName } from './string-util';
  */
 export class SchemeGenerator {
 
-  public orOperator = ' | ';
+  public orOperator = '|';
   public rootPropertyType: PropertyType | null = null;
 
-  private renderTypeScriptInterfacesFifo: ObjectPropertyType[]=[];
+  private renderTypeScriptInterfacesFifo: ObjectPropertyType[] = [];
   private renderTypeScriptInterfacesDone: string[] = [];
 
 
@@ -84,17 +88,17 @@ export class SchemeGenerator {
    * @param rootName
    */
   constructor(
-    json:string|object,
-    public rootName:string = ''
+    json: string | object,
+    public rootName: string = ''
   ) {
-    if (!this.rootName) {
-      this.rootName = 'Row';
-    }
     let parsedObject: object;
     if (typeof json === 'string') {
       parsedObject = this.jon2Object(json);
     } else {
       parsedObject = json;
+    }
+    if (!this.rootName) {
+      this.rootName = Array.isArray(parsedObject) ? 'Rows' : ('Root' + entitySuffix);
     }
     this.rootPropertyType = this.object2PropertyType(parsedObject);
   }
@@ -107,8 +111,8 @@ export class SchemeGenerator {
     return new PropertyItemTreeService().object2PropertyType(parsedObject, this.rootName);
   }
 
-  public renderTypeScriptInterfaces(){
-    const buf:string[]=[];
+  public renderTypeScriptInterfaces() {
+    const buf: string[] = [];
     if (!this.rootPropertyType) {
       return buf;
     }
@@ -119,9 +123,9 @@ export class SchemeGenerator {
     return buf;
   }
 
-  private renderTypeScriptInterfacesFifoNext(buf:string[]){
-    while (this.renderTypeScriptInterfacesFifo?.length){
-      const pt:PropertyTypeNamable|undefined = this.renderTypeScriptInterfacesFifo.shift();
+  private renderTypeScriptInterfacesFifoNext(buf: string[]) {
+    while (this.renderTypeScriptInterfacesFifo?.length) {
+      const pt: PropertyTypeNamable | undefined = this.renderTypeScriptInterfacesFifo.shift();
       if (pt) {
         this.renderTypeScriptInterfacesRecursive(pt, buf, pt.name);
       }
@@ -129,8 +133,8 @@ export class SchemeGenerator {
   }
 
   private renderTypeScriptInterfacesRecursive(
-    pt:PropertyType|null = this.rootPropertyType,
-    buf:string[] = [],
+    pt: PropertyType | null = this.rootPropertyType,
+    buf: string[] = [],
     name: string = this.rootName
   ): string[] {
 
@@ -156,8 +160,14 @@ export class SchemeGenerator {
         buf.push(`export interface ${entityName} {`);
 
         for (const property of od.properties) {
-          const typeStr = this.propertyItem2InterfaceDateType(property);
+          let typeStr = this.propertyItem2InterfaceDateType(property);
+          if (typeStr === '[]') {
+            typeStr = 'any[]';
+          } else if (typeStr.startsWith('(') && typeStr.endsWith(')')) {
+            typeStr = typeStr.substring(1, typeStr.length - 1);
+          }
           const questionMark: string = this.containsUndefinedPropertyType(property) ? '?' : '';
+
           buf.push('  ' + property.name + questionMark + ': ' + typeStr + ';');
 
           for (const type of property.types) {
@@ -184,15 +194,14 @@ export class SchemeGenerator {
   }
 
 
-
   private propertyItem2InterfaceDateType(propertyItem: PropertyItem): string {
     if (propertyItem.types?.length === 0) return 'any';
     if (propertyItem.types?.length === 1) return this.renderType(propertyItem.types[0], propertyItem);
 
     const ts = propertyItem.types
       .map(propertyType => this.renderType(propertyType, propertyItem))
-      .filter(f=> f!=='undefined')
-      .sort( (a,b) => {
+      .filter(f => f !== 'undefined')
+      .sort((a, b) => {
         if (UNIMPORTANT_TYPES.includes(a)) return 100;
         if (UNIMPORTANT_TYPES.includes(b)) return -100;
         return a.localeCompare(b);
@@ -204,10 +213,10 @@ export class SchemeGenerator {
     return ts;
   }
 
-  private renderType(propertyType:PropertyType, propertyItem: PropertyItem): string {
+  private renderType(propertyType: PropertyType, propertyItem: PropertyItem): string {
     if (propertyType instanceof ArrayPropertyType) {
       const s = propertyType.items
-        .map(it=>this.renderType(it, propertyItem))
+        .map(it => this.renderType(it, propertyItem))
         .join(this.orOperator);
       if (s.includes(this.orOperator)) return `(${s})[]`;
       return `${s}[]`;
@@ -218,9 +227,9 @@ export class SchemeGenerator {
     return propertyType.type;
   }
 
-  private containsUndefinedPropertyType(propertyItem: PropertyItem):boolean{
+  private containsUndefinedPropertyType(propertyItem: PropertyItem): boolean {
     for (const type of propertyItem.types) {
-      if (type.type==='undefined') return true;
+      if (type.type === 'undefined') return true;
     }
     return false;
   }

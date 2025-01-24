@@ -8,6 +8,7 @@ const demoData = [
     description: 'Lorem ipsum dolor',
     isActive: true,
     tags: ['typescript', 'javascript'],
+    scripts: [],
     profile: { age: 30, location: 'Berlin' },
     preferences: [{ key: 'theme', value: 'dark' }]
   },
@@ -17,6 +18,7 @@ const demoData = [
     description: 'Lorem ipsum dolor',
     isActive: false,
     tags: ['java', 'javascript'],
+    scripts: [],
     profile: { age: 55, location: 'Frankfurt' },
     preferences: [{ key: 'theme', value: 'light' }]
   },
@@ -25,11 +27,12 @@ const demoData = [
     name: 'Bob',
     isActive: false,
     tags: null,
+    scripts: [],
     profile: { age: 25, location: 'Frankfurt' },
     preferences: [{ key: 'language', value: 'de' }]
   }
 ];
 
 
-const schemeGenerator = new SchemeGenerator(JSON.stringify(demoData), 'XyzRow');
+const schemeGenerator = new SchemeGenerator(demoData, 'XyzRows');
 console.log(schemeGenerator.renderTypeScriptInterfaces().join('\n'));

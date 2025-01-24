@@ -1,4 +1,6 @@
 
+export const PROPERTY_TYPE_KEY_ANY = 'any';
+// TODO
 export const UNIMPORTANT_TYPES = ['null', 'undefined', 'any'];
 
 export interface PropertyType {
@@ -9,7 +11,7 @@ export interface PropertyTypeNamable extends PropertyType {
 }
 
 export class AnyPropertyType implements PropertyType {
-  public type: string = "any";
+  public type: string = PROPERTY_TYPE_KEY_ANY;
 }
 export class UndefinedPropertyType implements PropertyType {
   public type: string = "undefined";

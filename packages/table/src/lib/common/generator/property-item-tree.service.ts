@@ -24,31 +24,34 @@ export class PropertyItemTreeService {
    * [
    *   {
    *     id: 1,
-   *     name: "Alice",
-   *     description: "Lorem ipsum dolor",
+   *     name: 'Alice',
+   *     description: 'Lorem ipsum dolor',
    *     isActive: true,
-   *     tags: ["typescript", "javascript"],
-   *     profile: { age: 30, location: "Berlin" },
-   *     preferences: [{ key: "theme", value: "dark" }],
+   *     tags: ['typescript', 'javascript'],
+   *     scripts: [],
+   *     profile: { age: 30, location: 'Berlin' },
+   *     preferences: [{ key: 'theme', value: 'dark' }]
    *   },
    *   {
    *     id: 2,
-   *     name: "Marc",
-   *     description: "Lorem ipsum dolor",
+   *     name: 'Marc',
+   *     description: 'Lorem ipsum dolor',
    *     isActive: false,
-   *     tags: ["java", "javascript"],
-   *     profile: { age: 55, location: "Frankfurt" },
-   *     preferences: [{ key: "theme", value: "light" }],
+   *     tags: ['java', 'javascript'],
+   *     scripts: [],
+   *     profile: { age: 55, location: 'Frankfurt' },
+   *     preferences: [{ key: 'theme', value: 'light' }]
    *   },
    *   {
    *     id: null,
-   *     name: "Bob",
+   *     name: 'Bob',
    *     isActive: false,
    *     tags: null,
-   *     profile: { age: 25, location: "Frankfurt" },
-   *     preferences: [{ key: "language", value: "de" }],
-   *   },
-   * ]
+   *     scripts: [],
+   *     profile: { age: 25, location: 'Frankfurt' },
+   *     preferences: [{ key: 'language', value: 'de' }]
+   *   }
+   * ];
    *
    * into a PropertyTape tree structure like this:
    *
@@ -64,6 +67,11 @@ export class PropertyItemTreeService {
    *               [new StringPropertyType()]
    *             ),
    *             new NullPropertyType()
+   *           ]),
+   *           new PropertyItem('scripts', [
+   *             new ArrayPropertyType(
+   *               [new AnyPropertyType()]
+   *             ),
    *           ]),
    *           new PropertyItem('profile', [
    *             new ObjectPropertyType('profile', [
@@ -86,13 +94,14 @@ export class PropertyItemTreeService {
    * The PropertyTape tree structure can be rendered as TypeScript interface definitions with the SchemeGenerator:
    *
    * export interface XyzRowEntity {
-   *   description: string;
-   *   id: (number | null);
+   *   description?: string;
+   *   id: number|null;
    *   isActive: boolean;
    *   name: string;
    *   preferences: PreferenceEntity[];
    *   profile: ProfileEntity;
-   *   tags: (string[] | null);
+   *   scripts: any[];
+   *   tags: string[]|null;
    * }
    *
    * export interface PreferenceEntity {
@@ -200,15 +209,57 @@ export class PropertyItemTreeService {
         path = valueInfos[index].path;
       }
     }
+    // find undefined properties:
+    for (const valueInfo of valueInfos) {
+      const parentPath = this.getParentPath(valueInfo.path);
+      if (parentPath) {
+        const parentOfParentPath = this.getParentPath(parentPath);
+        if (parentOfParentPath) {
+          const parentOfParent: ValueInfo | null = this.getFirstValueInfoByPath(valueInfos, parentOfParentPath);
+          if (Array.isArray(parentOfParent?.value)) {
+            const arrayLength = parentOfParent?.value.length ?? 0;
+            const propertyCount = this.countPath(valueInfos, valueInfo.path);
+            if (arrayLength > propertyCount) {
+              if (!valueInfo.propertyItem.types.some(type => type.type === 'undefined')) {
+                valueInfo.propertyItem.types.push(new UndefinedPropertyType());
+              }
+            }
+          }
+        }
+      }
+    }
     ret.reverse();
     return ret;
+  }
+
+  private countPath(valueInfos: ValueInfo[], path: string): number {
+    let ret=0;
+    for (const valueInfo of valueInfos) {
+      if (valueInfo.path===path) {
+        ret++;
+      }
+    }
+    return ret;
+  }
+
+  private getFirstValueInfoByPath(valueInfos: ValueInfo[], path: string): ValueInfo|null {
+    for (let i = valueInfos.length - 1; i >= 0; i--) {
+      if (valueInfos[i].path===path) {
+        return valueInfos[i];
+      }
+    }
+    return null;
   }
 
 
   private extractValueInfos(parsedObject: Object, rootName:string): ValueInfo[] {
     const valueInfos: ValueInfo[] = [];
 
-    const processNode = (node: any, currentPath: string, parentName: string): void => {
+    const processNode = (
+      node: any,
+      currentPath: string,
+      parentName: string
+    ): void => {
       const valueInfo = new ValueInfo();
       let property = currentPath.split('/').pop() || '';
       if (property==='[]') {
