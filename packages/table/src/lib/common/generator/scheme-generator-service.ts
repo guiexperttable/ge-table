@@ -1,12 +1,13 @@
 import {
   ArrayPropertyType,
-  ObjectPropertyType,
+  ObjectPropertyType, PROPERTY_TYPE_KEY_UNDEFINED,
   PropertyItem,
   PropertyType,
   PropertyTypeNamable, UNIMPORTANT_TYPES
 } from './domain/property-type';
 import { PropertyItemTreeService } from './property-item-tree.service';
 import { entitySuffix, getEntityName } from './string-util';
+import { JsonService } from './json-service';
 
 
 /**
@@ -93,7 +94,8 @@ export class SchemeGenerator {
   ) {
     let parsedObject: object;
     if (typeof json === 'string') {
-      parsedObject = this.jon2Object(json);
+      const fixedJson = new JsonService().fixJSON(json)
+      parsedObject = this.jon2Object(fixedJson);
     } else {
       parsedObject = json;
     }
@@ -200,7 +202,7 @@ export class SchemeGenerator {
 
     const ts = propertyItem.types
       .map(propertyType => this.renderType(propertyType, propertyItem))
-      .filter(f => f !== 'undefined')
+      .filter(f => f !== PROPERTY_TYPE_KEY_UNDEFINED)
       .sort((a, b) => {
         if (UNIMPORTANT_TYPES.includes(a)) return 100;
         if (UNIMPORTANT_TYPES.includes(b)) return -100;
@@ -229,7 +231,7 @@ export class SchemeGenerator {
 
   private containsUndefinedPropertyType(propertyItem: PropertyItem): boolean {
     for (const type of propertyItem.types) {
-      if (type.type === 'undefined') return true;
+      if (type.type === PROPERTY_TYPE_KEY_UNDEFINED) return true;
     }
     return false;
   }

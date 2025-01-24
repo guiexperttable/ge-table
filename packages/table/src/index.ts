@@ -2,9 +2,12 @@
 export * from './lib/common/throttle';
 export * from './lib/common/debounce';
 export * from './lib/common/decorator/avoid-double-execution.decorator';
+
+export * from './lib/common/generator/json-service';
 export * from './lib/common/generator/property-item-tree.service';
 export * from './lib/common/generator/scheme-generator-service';
 export * from './lib/common/generator/string-util';
+
 export * from './lib/common/generator/domain/property-type';
 export * from './lib/common/generator/domain/value-info';
 

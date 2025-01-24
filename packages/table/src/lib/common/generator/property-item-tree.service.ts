@@ -5,10 +5,15 @@ import {
   NullPropertyType,
   NumberPropertyType,
   ObjectPropertyType,
+  PROPERTY_TYPE_KEY_BOOLEAN,
+  PROPERTY_TYPE_KEY_NUMBER, PROPERTY_TYPE_KEY_OBJECT,
+  PROPERTY_TYPE_KEY_STRING,
+  PROPERTY_TYPE_KEY_UNDEFINED,
   PropertyItem,
   PropertyType,
   StringPropertyType,
-  UndefinedPropertyType, UNIMPORTANT_TYPES
+  UndefinedPropertyType,
+  UNIMPORTANT_TYPES
 } from './domain/property-type';
 import { ValueInfo } from './domain/value-info';
 import { getEntityName } from './string-util';
@@ -132,7 +137,15 @@ export class PropertyItemTreeService {
     return this.valueInfos2PropertyType(mergedValueInfos);
   }
 
-  private valueInfos2PropertyType(valueInfos: ValueInfo[]): PropertyType  {
+  getParentPath(path: string): string {
+    const lastSlashIndex = path.lastIndexOf('/');
+    if (lastSlashIndex === -1) {
+      return '';
+    }
+    return path.substring(0, lastSlashIndex);
+  }
+
+  private valueInfos2PropertyType(valueInfos: ValueInfo[]): PropertyType {
     const root: PropertyType = valueInfos[0].propertyItem.types[0];
     const map = new Map<string, ValueInfo>();
     for (const valueInfo of valueInfos) {
@@ -141,13 +154,13 @@ export class PropertyItemTreeService {
 
     for (const valueInfo of valueInfos) {
       const parentPath = this.getParentPath(valueInfo.path);
-      if (parentPath){
+      if (parentPath) {
         const parentValueInfo = map.get(parentPath);
-        if (parentValueInfo){
+        if (parentValueInfo) {
 
           let arrayOrObject = false;
-          const importantTypes = parentValueInfo.propertyItem.types.filter(v=> !UNIMPORTANT_TYPES.includes(v.type));
-          if (importantTypes.length===1) {
+          const importantTypes = parentValueInfo.propertyItem.types.filter(v => !UNIMPORTANT_TYPES.includes(v.type));
+          if (importantTypes.length === 1) {
             const pt = importantTypes[0];
             if (pt instanceof ArrayPropertyType) {
               arrayOrObject = true;
@@ -170,15 +183,6 @@ export class PropertyItemTreeService {
     if (root) return root;
     return new AnyPropertyType();
   }
-
-  getParentPath(path: string): string {
-    const lastSlashIndex = path.lastIndexOf('/');
-    if (lastSlashIndex === -1) {
-      return '';
-    }
-    return path.substring(0, lastSlashIndex);
-  }
-
 
   private logValueInfos(mergedValueInfos: ValueInfo[]) {
     for (let i = 0; i < mergedValueInfos.length; i++) {
@@ -220,7 +224,7 @@ export class PropertyItemTreeService {
             const arrayLength = parentOfParent?.value.length ?? 0;
             const propertyCount = this.countPath(valueInfos, valueInfo.path);
             if (arrayLength > propertyCount) {
-              if (!valueInfo.propertyItem.types.some(type => type.type === 'undefined')) {
+              if (!valueInfo.propertyItem.types.some(type => type.type === PROPERTY_TYPE_KEY_UNDEFINED)) {
                 valueInfo.propertyItem.types.push(new UndefinedPropertyType());
               }
             }
@@ -233,18 +237,18 @@ export class PropertyItemTreeService {
   }
 
   private countPath(valueInfos: ValueInfo[], path: string): number {
-    let ret=0;
+    let ret = 0;
     for (const valueInfo of valueInfos) {
-      if (valueInfo.path===path) {
+      if (valueInfo.path === path) {
         ret++;
       }
     }
     return ret;
   }
 
-  private getFirstValueInfoByPath(valueInfos: ValueInfo[], path: string): ValueInfo|null {
+  private getFirstValueInfoByPath(valueInfos: ValueInfo[], path: string): ValueInfo | null {
     for (let i = valueInfos.length - 1; i >= 0; i--) {
-      if (valueInfos[i].path===path) {
+      if (valueInfos[i].path === path) {
         return valueInfos[i];
       }
     }
@@ -252,7 +256,7 @@ export class PropertyItemTreeService {
   }
 
 
-  private extractValueInfos(parsedObject: Object, rootName:string): ValueInfo[] {
+  private extractValueInfos(parsedObject: Object, rootName: string): ValueInfo[] {
     const valueInfos: ValueInfo[] = [];
 
     const processNode = (
@@ -262,9 +266,9 @@ export class PropertyItemTreeService {
     ): void => {
       const valueInfo = new ValueInfo();
       let property = currentPath.split('/').pop() || '';
-      if (property==='[]') {
+      if (property === '[]') {
         property = getEntityName(parentName);
-      } else if (property==='root') {
+      } else if (property === 'root') {
         property = rootName;
       }
       valueInfo.property = property;
@@ -273,7 +277,7 @@ export class PropertyItemTreeService {
       valueInfo.propertyItem = this.createPropertyItem(node, valueInfo.property);
       valueInfos.push(valueInfo);
 
-      if (node && typeof node === 'object' && !Array.isArray(node)) {
+      if (node && typeof node === PROPERTY_TYPE_KEY_OBJECT && !Array.isArray(node)) {
         for (const key in node) {
           if (node.hasOwnProperty(key)) {
             const newPath = currentPath ? `${currentPath}/${key}` : key;
@@ -310,11 +314,11 @@ export class PropertyItemTreeService {
   ): PropertyType {
     if (val === null) return new NullPropertyType();
     if (val === undefined) return new UndefinedPropertyType();
-    if (typeof val === 'string') return new StringPropertyType();
-    if (typeof val === 'number' && !isNaN(val)) return new NumberPropertyType();
-    if (typeof val === 'boolean') return new BooleanPropertyType();
+    if (typeof val === PROPERTY_TYPE_KEY_STRING) return new StringPropertyType();
+    if (typeof val === PROPERTY_TYPE_KEY_NUMBER && !isNaN(val)) return new NumberPropertyType();
+    if (typeof val === PROPERTY_TYPE_KEY_BOOLEAN) return new BooleanPropertyType();
     if (Array.isArray(val)) return new ArrayPropertyType();
-    if (typeof val === 'object') return new ObjectPropertyType(name);
+    if (typeof val === PROPERTY_TYPE_KEY_OBJECT) return new ObjectPropertyType(name);
 
     return new UndefinedPropertyType();
   }

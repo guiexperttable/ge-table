@@ -15,7 +15,7 @@ const demoData = [
   {
     id: 2,
     name: 'Marc',
-    description: 'Lorem ipsum dolor',
+    description: 'Lorem ipsum dolor 2',
     isActive: false,
     tags: ['java', 'javascript'],
     scripts: [],
