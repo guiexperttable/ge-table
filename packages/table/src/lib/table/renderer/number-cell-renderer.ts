@@ -22,7 +22,10 @@ export class NumberCellRenderer implements CellRendererIf {
     domService: DomServiceIf): RendererCleanupFnType | undefined {
 
     if (cellValue) {
-      cellDiv.innerText = cellValue;
+      cellDiv.innerHTML = `
+<div class="ge-table-label-div">
+  <div class="ge-table-label">${cellValue}</div>
+</div>`;
       if (typeof cellValue === "string"
         || isNaN(cellValue)
         || cellValue < this.min

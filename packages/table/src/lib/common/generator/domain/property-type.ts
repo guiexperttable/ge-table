@@ -41,8 +41,9 @@ export class BooleanPropertyType implements PropertyType {
   public type: string = PROPERTY_TYPE_KEY_BOOLEAN;
 }
 
-export class ArrayPropertyType implements PropertyType {
+export class ArrayPropertyType implements PropertyType, PropertyTypeNamable {
   public type: string = PROPERTY_TYPE_KEY_ARRAY;
+  public name: string = '';
 
   constructor(
     public items: PropertyType[] = []

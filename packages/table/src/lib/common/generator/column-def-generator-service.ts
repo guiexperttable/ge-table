@@ -1,13 +1,5 @@
-import {
-  ArrayPropertyType,
-  ObjectPropertyType,
-  PROPERTY_TYPE_KEY_UNDEFINED,
-  PropertyItem,
-  PropertyType,
-  PropertyTypeNamable,
-  UNIMPORTANT_TYPES
-} from './domain/property-type';
-import { getEntityName } from './string-util';
+import { PropertyType } from './domain/property-type';
+
 
 /**
  *
@@ -43,47 +35,129 @@ import { getEntityName } from './string-util';
  *     preferences: [{ key: 'language', value: 'de' }]
  *   }
  * ]
- *
- *  into a TypeScript interface definitions:
- *
- * export interface XyzRowEntity {
- *   description?: string;
- *   id: number|null;
- *   isActive: boolean;
- *   name: string;
- *   preferences: PreferenceEntity[];
- *   profile: ProfileEntity;
- *   scripts: any[];
- *   tags: string[]|null;
- * }
- *
- * export interface PreferenceEntity {
- *   key: string;
- *   value: string;
- * }
- *
- * export interface ProfileEntity {
- *   age: number;
- *   location: string;
- * }
- *
- *
- * const json = JSON.stringify(demoData);
- * const rootPropertyType: PropertyType = new PropertyTypeService().object2PropertyType(demoData, 'XyzRows');
- * console.log(new SchemeGenerator().renderTypeScriptInterfaces(rootPropertyType).join('\n'));
+ *  TODO
  *
  */
-export class SchemeGenerator {
+export class ColumnDefGenerator {
 
-  public orOperator = '|';
   public rootPropertyType: PropertyType | null = null;
 
   private rootName = 'Root';
-  private renderTypeScriptInterfacesFifo: ObjectPropertyType[] = [];
-  private renderTypeScriptInterfacesDone: string[] = [];
+  // private renderTypeScriptInterfacesFifo: ObjectPropertyType[] = [];
+  // private renderTypeScriptInterfacesDone: string[] = [];
 
 
-  public renderTypeScriptInterfaces(rootPropertyType: PropertyType) {
+
+
+  /**
+   * Converts a PropertyType tree like this:
+   *
+   * renderColumnDefs(
+   *   new ArrayPropertyType(
+   *       [
+   *         new ObjectPropertyType('XyzRowEntity', [
+   *         new PropertyItem('id', [new NumberPropertyType(), new NullPropertyType()]),
+   *         new PropertyItem('name', [new StringPropertyType()]),
+   *         new PropertyItem('description', [new StringPropertyType(), new UndefinedPropertyType()]),
+   *         new PropertyItem('isActive', [new BooleanPropertyType()]),
+   *         new PropertyItem('tags', [
+   *           new ArrayPropertyType(
+   *           [new StringPropertyType()]
+   *           ),
+   *           new NullPropertyType()
+   *         ]),
+   *         new PropertyItem('scripts', [
+   *           new ArrayPropertyType(
+   *           [new AnyPropertyType()]
+   *           ),
+   *         ]),
+   *         new PropertyItem('profile', [
+   *           new ObjectPropertyType('profile', [
+   *             new PropertyItem('age', [new NumberPropertyType()]),
+   *             new PropertyItem('location', [new StringPropertyType()])
+   *           ])
+   *         ]),
+   *         new PropertyItem('preferences', [
+   *           new ArrayPropertyType(
+   *           [
+   *             new ObjectPropertyType('preference', [
+   *             new PropertyItem('key', [new StringPropertyType()]),
+   *             new PropertyItem('value', [new StringPropertyType()])
+   *           ])
+   *           ])
+   *         ])
+   *       ])
+   *     ]);
+   * )
+   *
+   * into a ColumnDefIf Array like this:
+   *
+   *   [
+   *     ColumnDef.create({
+   *       property: "id",
+   *       headerLabel: "ID",
+   *       width: px60,
+   *       bodyClasses: ["ge-table-text-align-left"],
+   *       headerClasses: ["ge-table-text-align-left"],
+   *     }),
+   *     ColumnDef.create({
+   *       property: "name",
+   *       headerLabel: "Name",
+   *       width: px120,
+   *       bodyClasses: ["ge-table-text-align-left"],
+   *       headerClasses: ["ge-table-text-align-left"],
+   *     }),
+   *     ColumnDef.create({
+   *       property: "description",
+   *       headerLabel: "Description",
+   *       width: px200,
+   *       bodyClasses: ["ge-table-text-align-left"],
+   *       headerClasses: ["ge-table-text-align-left"],
+   *     }),
+   *     ColumnDef.create({
+   *       property: "isActive",
+   *       headerLabel: "Active",
+   *       width: px100,
+   *       bodyRenderer: new TrueFalseCellRenderer()
+   *     }),
+   *     ColumnDef.create({
+   *       property: "tags",
+   *       headerLabel: "Tags",
+   *       width: px300,
+   *       bodyClasses: ["ge-table-text-align-left"],
+   *       headerClasses: ["ge-table-text-align-left"],
+   *     }),
+   *     ColumnDef.create({
+   *       property: "profile.age",
+   *       headerLabel: "Profile Age",
+   *       width: new Size(200, "px"),
+   *       bodyClasses: ["ge-table-text-align-right"],
+   *       headerClasses: ["ge-table-text-align-right"],
+   *       bodyRenderer: new NumberCellRenderer()
+   *     }),
+   *     ColumnDef.create({
+   *       property: "profile.location",
+   *       headerLabel: "Profile Location",
+   *       width: px300,
+   *       bodyClasses: ["ge-table-text-align-left"],
+   *       headerClasses: ["ge-table-text-align-left"],
+   *     }),
+   *     ColumnDef.create({
+   *       property: "preferences",
+   *       headerLabel: "Preferences",
+   *       width: px300,
+   *       bodyClasses: ["ge-table-text-align-left"],
+   *       headerClasses: ["ge-table-text-align-left"],
+   *     }),
+   *   ];
+   *
+   *
+   *
+   * @param rootPropertyType
+   */
+  public renderColumnDefs(
+    rootPropertyType: PropertyType
+  ) {
     if ('name' in rootPropertyType) {
       this.rootName = rootPropertyType['name'] + '';
     }
@@ -92,15 +166,14 @@ export class SchemeGenerator {
     if (!this.rootPropertyType) {
       return buf;
     }
-
-    this.renderTypeScriptInterfacesFifo = [];
-    this.renderTypeScriptInterfacesRecursive(this.rootPropertyType, buf);
-    this.renderTypeScriptInterfacesFifoNext(buf);
+    // this.renderTypeScriptInterfacesFifo = [];
+    // this.renderTypeScriptInterfacesRecursive(this.rootPropertyType, buf);
+    // this.renderTypeScriptInterfacesFifoNext(buf);
 
     return buf;
   }
 
-
+  /*
   private renderTypeScriptInterfacesFifoNext(buf: string[]) {
     while (this.renderTypeScriptInterfacesFifo?.length) {
       const pt: PropertyTypeNamable | undefined = this.renderTypeScriptInterfacesFifo.shift();
@@ -212,5 +285,5 @@ export class SchemeGenerator {
     return false;
   }
 
-
+*/
 }

@@ -12,6 +12,8 @@ const demoItems: DemoItem[] = [
   new DemoItem("Multi Sizes", "/multisize", 'table_rows', () => import('../components/demos/multisize/MultiSize.vue'), 'Multiple cell heights and widths'),
   new DemoItem("CSS Style", "/style", 'palette', () => import('../components/demos/style/CssStyle.vue'), 'Cell style'),
   new DemoItem("Object Array", "/objectarray", 'table_rows', () => import('../components/demos/objectarray/ObjectArray.vue'), 'Array of business objects'),
+  new DemoItem("Auto Table 1", "/autotable1", 'lightbulb', () => import('../components/demos/autotable/AutoTable1.vue'), 'WIP AI Table'),
+  new DemoItem("Auto Table 2", "/autotable2", 'lightbulb', () => import('../components/demos/autotable/AutoTable2.vue'), 'WIP AI Table'),
 
   new DemoItem(
     "Tree Table",

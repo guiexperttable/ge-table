@@ -1,6 +1,6 @@
-import { SchemeGenerator } from './scheme-generator-service';
-import { PropertyTypeService } from './property-type.service';
 import { PropertyType } from './domain/property-type';
+import { PropertyTypeService } from './property-type.service';
+import { ColumnDefGenerator } from './column-def-generator-service';
 
 const demoData = [
   {
@@ -37,4 +37,4 @@ const demoData = [
 
 const rootPropertyType: PropertyType = new PropertyTypeService().object2PropertyType(demoData, 'XyzRows');
 
-console.log(new SchemeGenerator().renderTypeScriptInterfaces(rootPropertyType).join('\n'));
+console.log(new ColumnDefGenerator().renderColumnDefs(rootPropertyType).join('\n'));

@@ -10,18 +10,117 @@ import {
   PROPERTY_TYPE_KEY_STRING,
   PROPERTY_TYPE_KEY_UNDEFINED,
   PropertyItem,
-  PropertyType,
+  PropertyType, PropertyTypeNamable,
   StringPropertyType,
   UndefinedPropertyType,
   UNIMPORTANT_TYPES
 } from './domain/property-type';
 import { ValueInfo } from './domain/value-info';
 import { getEntityName } from './string-util';
+import { JsonService } from './json-service';
 
 
 const debugging = false;
 
-export class PropertyItemTreeService {
+export class PropertyTypeService {
+
+  /**
+   *
+   *  Converts a json or object structure like this:
+   *  [
+   *   {
+   *     id: 1,
+   *     name: 'Alice',
+   *     description: 'Lorem ipsum dolor',
+   *     isActive: true,
+   *     tags: ['typescript', 'javascript'],
+   *     scripts: [],
+   *     profile: { age: 30, location: 'Berlin' },
+   *     preferences: [{ key: 'theme', value: 'dark' }]
+   *   },
+   *   {
+   *     id: 2,
+   *     name: 'Marc',
+   *     description: 'Lorem ipsum dolor',
+   *     isActive: false,
+   *     tags: ['java', 'javascript'],
+   *     scripts: [],
+   *     profile: { age: 55, location: 'Frankfurt' },
+   *     preferences: [{ key: 'theme', value: 'light' }]
+   *   },
+   *   {
+   *     id: null,
+   *     name: 'Bob',
+   *     isActive: false,
+   *     tags: null,
+   *     scripts: [],
+   *     profile: { age: 25, location: 'Frankfurt' },
+   *     preferences: [{ key: 'language', value: 'de' }]
+   *   }
+   * ]
+   *
+   *  into a PropertyTape tree structure like this:
+   *
+   *     return new ArrayPropertyType(
+   *       [
+   *         new ObjectPropertyType('XyzRowEntity', [
+   *           new PropertyItem('id', [new NumberPropertyType(), new NullPropertyType()]),
+   *           new PropertyItem('name', [new StringPropertyType()]),
+   *           new PropertyItem('description', [new StringPropertyType(), new UndefinedPropertyType()]),
+   *           new PropertyItem('isActive', [new BooleanPropertyType()]),
+   *           new PropertyItem('tags', [
+   *             new ArrayPropertyType(
+   *               [new StringPropertyType()]
+   *             ),
+   *             new NullPropertyType()
+   *           ]),
+   *           new PropertyItem('scripts', [
+   *             new ArrayPropertyType(
+   *               [new AnyPropertyType()]
+   *             ),
+   *           ]),
+   *           new PropertyItem('profile', [
+   *             new ObjectPropertyType('profile', [
+   *               new PropertyItem('age', [new NumberPropertyType()]),
+   *               new PropertyItem('location', [new StringPropertyType()])
+   *             ])
+   *           ]),
+   *           new PropertyItem('preferences', [
+   *             new ArrayPropertyType(
+   *               [
+   *                 new ObjectPropertyType('preference', [
+   *                   new PropertyItem('key', [new StringPropertyType()]),
+   *                   new PropertyItem('value', [new StringPropertyType()])
+   *                 ])
+   *               ])
+   *           ])
+   *         ])
+   *       ]);
+   *
+   *
+   * const json = JSON.stringify(demoData);
+   * const rootPropertyType: PropertyType = new PropertyTypeService().json2PropertyType(json, 'XyzRows');
+   *
+   * @param json
+   * @param rootName
+   */
+  public json2PropertyType(
+    json: string | object,
+    rootName: string = ''
+  ): PropertyType {
+    let parsedObject: object;
+    if (typeof json === 'string') {
+      const fixedJson = new JsonService().fixJSON(json)
+      parsedObject = this.json2Object(fixedJson);
+    } else {
+      parsedObject = json;
+    }
+    return this.object2PropertyType(parsedObject, rootName);
+  }
+
+  public json2Object(json: string): object {
+    return JSON.parse(json);
+  }
 
 
   /**
@@ -134,7 +233,11 @@ export class PropertyItemTreeService {
     }
     if (debugging) this.logValueInfos(mergedValueInfos);
 
-    return this.valueInfos2PropertyType(mergedValueInfos);
+    const propertyType = this.valueInfos2PropertyType(mergedValueInfos);
+    if ('name' in propertyType) {
+      propertyType['name'] = rootName;
+    }
+    return propertyType;
   }
 
   getParentPath(path: string): string {
@@ -202,7 +305,7 @@ export class PropertyItemTreeService {
 
     for (let i = index - 1; i >= 0; i--) {
       if (valueInfos[i].path === path) {
-        let propertyType = valueInfos[i].propertyItem.types[0];
+        const propertyType = valueInfos[i].propertyItem.types[0];
         if (!valueInfos[index].propertyItem.types.some(type => type.type === propertyType.type)) {
           valueInfos[index].propertyItem.types.push(propertyType);
         }
