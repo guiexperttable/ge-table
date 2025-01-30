@@ -18,16 +18,7 @@
 
 <script lang="ts" setup>
 import { GuiexpertTable } from "@guiexpert/vue3-table";
-import {
-  ColumnDef,
-  ColumnDefIf, NumberCellRenderer, px100,
-  px120, px200, px300,
-  px60, Size,
-  TableFactory,
-  TableOptions,
-  TableOptionsIf,
-  TrueFalseCellRenderer
-} from '@guiexpert/table';
+import { ColumnDef, ColumnDefIf, TableFactory, TableOptions, TableOptionsIf, NumberCellRenderer, SimpleArrayCellRenderer, TrueFalseCellRenderer, Size } from '@guiexpert/table';
 
 import { onMounted, reactive } from 'vue';
 import { TableModelState } from '../../../common/table-model-state.ts';
@@ -107,62 +98,76 @@ onMounted(async () => {
 
   const columnDefs: ColumnDefIf[] = [
     ColumnDef.create({
-      property: "id",
-      headerLabel: "ID",
-      width: px60,
+      property: "description",
+      headerLabel: "Description",
+      width: new Size(100, "px"),
       bodyClasses: ["ge-table-text-align-left"],
       headerClasses: ["ge-table-text-align-left"],
+    }),
+    ColumnDef.create({
+      property: "id",
+      headerLabel: "Id",
+      width: new Size(100, "px"),
+      bodyClasses: ["ge-table-text-align-right"],
+      headerClasses: ["ge-table-text-align-right"],
+      bodyRenderer: new NumberCellRenderer(),
+    }),
+    ColumnDef.create({
+      property: "isActive",
+      headerLabel: "Is Active",
+      width: new Size(80, "px"),
+      bodyClasses: ["ge-table-text-align-center"],
+      headerClasses: ["ge-table-text-align-center"],
+      bodyRenderer: new TrueFalseCellRenderer(),
     }),
     ColumnDef.create({
       property: "name",
       headerLabel: "Name",
-      width: px120,
-      bodyClasses: ["ge-table-text-align-left"],
-      headerClasses: ["ge-table-text-align-left"],
-    }),
-    ColumnDef.create({
-      property: "description",
-      headerLabel: "Description",
-      width: px200,
-      bodyClasses: ["ge-table-text-align-left"],
-      headerClasses: ["ge-table-text-align-left"],
-    }),
-    ColumnDef.create({
-      property: "isActive",
-      headerLabel: "Active",
-      width: px100,
-      bodyRenderer: new TrueFalseCellRenderer()
-    }),
-    ColumnDef.create({
-      property: "tags",
-      headerLabel: "Tags",
-      width: px300,
-      bodyClasses: ["ge-table-text-align-left"],
-      headerClasses: ["ge-table-text-align-left"],
-    }),
-    ColumnDef.create({
-      property: "profile.age",
-      headerLabel: "Profile Age",
-      width: new Size(200, "px"),
-      bodyClasses: ["ge-table-text-align-right"],
-      headerClasses: ["ge-table-text-align-right"],
-      bodyRenderer: new NumberCellRenderer()
-    }),
-    ColumnDef.create({
-      property: "profile.location",
-      headerLabel: "Profile Location",
-      width: px300,
+      width: new Size(100, "px"),
       bodyClasses: ["ge-table-text-align-left"],
       headerClasses: ["ge-table-text-align-left"],
     }),
     ColumnDef.create({
       property: "preferences",
       headerLabel: "Preferences",
-      width: px300,
+      width: new Size(250, "px"),
+      bodyClasses: ["ge-table-text-align-left"],
+      headerClasses: ["ge-table-text-align-left"],
+      bodyRenderer: new SimpleArrayCellRenderer(),
+    }),
+    ColumnDef.create({
+      property: "profile.age",
+      headerLabel: "Profile Age",
+      width: new Size(100, "px"),
+      bodyClasses: ["ge-table-text-align-right"],
+      headerClasses: ["ge-table-text-align-right"],
+      bodyRenderer: new NumberCellRenderer(),
+    }),
+    ColumnDef.create({
+      property: "profile.location",
+      headerLabel: "Profile Location",
+      width: new Size(100, "px"),
       bodyClasses: ["ge-table-text-align-left"],
       headerClasses: ["ge-table-text-align-left"],
     }),
+    ColumnDef.create({
+      property: "scripts",
+      headerLabel: "Scripts",
+      width: new Size(250, "px"),
+      bodyClasses: ["ge-table-text-align-left"],
+      headerClasses: ["ge-table-text-align-left"],
+      bodyRenderer: new SimpleArrayCellRenderer(),
+    }),
+    ColumnDef.create({
+      property: "tags",
+      headerLabel: "Tags",
+      width: new Size(250, "px"),
+      bodyClasses: ["ge-table-text-align-left"],
+      headerClasses: ["ge-table-text-align-left"],
+      bodyRenderer: new SimpleArrayCellRenderer(),
+    }),
   ];
+
 
   const tableOptions: TableOptionsIf = {
     ...new TableOptions(),

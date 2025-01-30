@@ -11,41 +11,46 @@ export const UNIMPORTANT_TYPES = [PROPERTY_TYPE_KEY_NULL, PROPERTY_TYPE_KEY_UNDE
 
 export interface PropertyType {
   type: string;
+  propertyName: string;
 }
 
-export interface PropertyTypeNamable extends PropertyType {
-  name: string;
-}
+
 
 export class AnyPropertyType implements PropertyType {
   public type: string = PROPERTY_TYPE_KEY_ANY;
+  constructor(public propertyName:string) {}
 }
 
 export class UndefinedPropertyType implements PropertyType {
   public type: string = PROPERTY_TYPE_KEY_UNDEFINED;
+  constructor(public propertyName:string) {}
 }
 
 export class NullPropertyType implements PropertyType {
   public type: string = PROPERTY_TYPE_KEY_NULL;
+  constructor(public propertyName:string) {}
 }
 
 export class StringPropertyType implements PropertyType {
   public type: string = PROPERTY_TYPE_KEY_STRING;
+  constructor(public propertyName:string) {}
 }
 
 export class NumberPropertyType implements PropertyType {
   public type: string = PROPERTY_TYPE_KEY_NUMBER;
+  constructor(public propertyName:string) {}
 }
 
 export class BooleanPropertyType implements PropertyType {
   public type: string = PROPERTY_TYPE_KEY_BOOLEAN;
+  constructor(public propertyName:string) {}
 }
 
-export class ArrayPropertyType implements PropertyType, PropertyTypeNamable {
+export class ArrayPropertyType implements PropertyType {
   public type: string = PROPERTY_TYPE_KEY_ARRAY;
-  public name: string = '';
 
   constructor(
+    public propertyName:string,
     public items: PropertyType[] = []
   ) {
   }
@@ -53,21 +58,22 @@ export class ArrayPropertyType implements PropertyType, PropertyTypeNamable {
 
 export class PropertyItem {
   constructor(
-    public name: string,
+    public propertyName: string,
     public types: PropertyType[] = []
   ) {
   }
 
   public toString(): string {
-    return `PropertyItem(name: ${this.name}, types: [${this.types.map(type => type.type).join(', ')}])`;
+    return `PropertyItem(propertyName: ${this.propertyName}, types: [${this.types.map(type => type.type).join(', ')}])`;
   }
 }
 
-export class ObjectPropertyType implements PropertyTypeNamable {
+export class ObjectPropertyType implements PropertyType{
   public type: string = PROPERTY_TYPE_KEY_OBJECT;
 
   constructor(
-    public name: string,
+    public propertyName:string,
+    public className: string,
     public properties: PropertyItem[] = []
   ) {
   }

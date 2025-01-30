@@ -10,7 +10,7 @@ import {
   PROPERTY_TYPE_KEY_STRING,
   PROPERTY_TYPE_KEY_UNDEFINED,
   PropertyItem,
-  PropertyType, PropertyTypeNamable,
+  PropertyType,
   StringPropertyType,
   UndefinedPropertyType,
   UNIMPORTANT_TYPES
@@ -20,9 +20,10 @@ import { getEntityName } from './string-util';
 import { JsonService } from './json-service';
 
 
-const debugging = false;
 
 export class PropertyTypeService {
+
+  public debugging = false;
 
   /**
    *
@@ -225,19 +226,42 @@ export class PropertyTypeService {
     parsedObject: Object,
     rootName: string = ''
   ): PropertyType {
-
-    const valueInfos: ValueInfo[] = this.extractValueInfos(parsedObject, rootName);
-    const mergedValueInfos: ValueInfo[] = this.mergeValueInfos(valueInfos);
-    if (mergedValueInfos.length > 0) {
-      mergedValueInfos[0].propertyItem.name = rootName;
-    }
-    if (debugging) this.logValueInfos(mergedValueInfos);
+    const mergedValueInfos: ValueInfo[] = this.object2ValueInfos(parsedObject, rootName);
+    if (this.debugging) this.logValueInfos(mergedValueInfos);
 
     const propertyType = this.valueInfos2PropertyType(mergedValueInfos);
     if ('name' in propertyType) {
       propertyType['name'] = rootName;
     }
     return propertyType;
+  }
+
+  public json2ValueInfos(
+    json: string | object,
+    rootName: string = ''
+  ): ValueInfo[] {
+    let parsedObject: object;
+    if (typeof json === 'string') {
+      const fixedJson = new JsonService().fixJSON(json)
+      parsedObject = this.json2Object(fixedJson);
+    } else {
+      parsedObject = json;
+    }
+    return this.object2ValueInfos(parsedObject, rootName);
+  }
+
+  public object2ValueInfos(
+    parsedObject: Object,
+    rootName: string = ''
+  ): ValueInfo[] {
+
+    const valueInfos: ValueInfo[] = this.extractValueInfos(parsedObject, rootName);
+    const mergedValueInfos: ValueInfo[] = this.mergeValueInfos(valueInfos);
+    if (mergedValueInfos.length > 0) {
+      mergedValueInfos[0].propertyItem.propertyName = rootName;
+    }
+    if (this.debugging) this.logValueInfos(mergedValueInfos);
+    return mergedValueInfos;
   }
 
   getParentPath(path: string): string {
@@ -284,7 +308,7 @@ export class PropertyTypeService {
       }
     }
     if (root) return root;
-    return new AnyPropertyType();
+    return new AnyPropertyType('');
   }
 
   private logValueInfos(mergedValueInfos: ValueInfo[]) {
@@ -328,7 +352,7 @@ export class PropertyTypeService {
             const propertyCount = this.countPath(valueInfos, valueInfo.path);
             if (arrayLength > propertyCount) {
               if (!valueInfo.propertyItem.types.some(type => type.type === PROPERTY_TYPE_KEY_UNDEFINED)) {
-                valueInfo.propertyItem.types.push(new UndefinedPropertyType());
+                valueInfo.propertyItem.types.push(new UndefinedPropertyType(valueInfo.property));
               }
             }
           }
@@ -370,7 +394,7 @@ export class PropertyTypeService {
       const valueInfo = new ValueInfo();
       let property = currentPath.split('/').pop() || '';
       if (property === '[]') {
-        property = getEntityName(parentName);
+        property = parentName; //getEntityName(parentName);
       } else if (property === 'root') {
         property = rootName;
       }
@@ -404,26 +428,26 @@ export class PropertyTypeService {
 
   private createPropertyItem(
     val: any,
-    name: string
+    propertyName: string
   ): PropertyItem {
-    return new PropertyItem(name, [
-      this.createPropertyType(val, name)
+    return new PropertyItem(propertyName, [
+      this.createPropertyType(val, propertyName)
     ]);
   }
 
   private createPropertyType(
     val: any,
-    name: string
+    propertyName: string
   ): PropertyType {
-    if (val === null) return new NullPropertyType();
-    if (val === undefined) return new UndefinedPropertyType();
-    if (typeof val === PROPERTY_TYPE_KEY_STRING) return new StringPropertyType();
-    if (typeof val === PROPERTY_TYPE_KEY_NUMBER && !isNaN(val)) return new NumberPropertyType();
-    if (typeof val === PROPERTY_TYPE_KEY_BOOLEAN) return new BooleanPropertyType();
-    if (Array.isArray(val)) return new ArrayPropertyType();
-    if (typeof val === PROPERTY_TYPE_KEY_OBJECT) return new ObjectPropertyType(name);
+    if (val === null) return new NullPropertyType(propertyName);
+    if (val === undefined) return new UndefinedPropertyType(propertyName);
+    if (typeof val === PROPERTY_TYPE_KEY_STRING) return new StringPropertyType(propertyName);
+    if (typeof val === PROPERTY_TYPE_KEY_NUMBER && !isNaN(val)) return new NumberPropertyType(propertyName);
+    if (typeof val === PROPERTY_TYPE_KEY_BOOLEAN) return new BooleanPropertyType(propertyName);
+    if (Array.isArray(val)) return new ArrayPropertyType(propertyName);
+    if (typeof val === PROPERTY_TYPE_KEY_OBJECT) return new ObjectPropertyType(propertyName, getEntityName(propertyName));
 
-    return new UndefinedPropertyType();
+    return new UndefinedPropertyType(propertyName);
   }
 
 

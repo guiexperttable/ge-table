@@ -163,6 +163,7 @@ export * from "./lib/table/renderer/date-to-tec-cell-renderer";
 export * from "./lib/table/renderer/renderer-cleanup-fn.type";
 export * from "./lib/table/renderer/number-cell-renderer";
 export * from "./lib/table/renderer/star-rating-cell-renderer";
+export * from "./lib/table/renderer/simple-array-cell-renderer";
 export * from "./lib/table/renderer/progress-bar-cell-renderer";
 export * from "./lib/table/renderer/positive-and-negative-number-renderer";
 

@@ -4,10 +4,8 @@ import {
   PROPERTY_TYPE_KEY_UNDEFINED,
   PropertyItem,
   PropertyType,
-  PropertyTypeNamable,
   UNIMPORTANT_TYPES
 } from './domain/property-type';
-import { getEntityName } from './string-util';
 
 /**
  *
@@ -103,9 +101,9 @@ export class SchemeGenerator {
 
   private renderTypeScriptInterfacesFifoNext(buf: string[]) {
     while (this.renderTypeScriptInterfacesFifo?.length) {
-      const pt: PropertyTypeNamable | undefined = this.renderTypeScriptInterfacesFifo.shift();
+      const pt: ObjectPropertyType | undefined = this.renderTypeScriptInterfacesFifo.shift();
       if (pt) {
-        this.renderTypeScriptInterfacesRecursive(pt, buf, pt.name);
+        this.renderTypeScriptInterfacesRecursive(pt, buf, pt.propertyName);
       }
     }
   }
@@ -131,7 +129,7 @@ export class SchemeGenerator {
 
     } else if (pt instanceof ObjectPropertyType) {
       const od: ObjectPropertyType = pt;
-      const entityName = getEntityName(name);
+      const entityName = od.className;
 
       if (!this.renderTypeScriptInterfacesDone.includes(entityName)) {
         this.renderTypeScriptInterfacesDone.push(entityName);
@@ -146,7 +144,7 @@ export class SchemeGenerator {
           }
           const questionMark: string = this.containsUndefinedPropertyType(property) ? '?' : '';
 
-          buf.push('  ' + property.name + questionMark + ': ' + typeStr + ';');
+          buf.push('  ' + property.propertyName + questionMark + ': ' + typeStr + ';');
 
           for (const type of property.types) {
             if (type instanceof ObjectPropertyType) {
@@ -200,7 +198,8 @@ export class SchemeGenerator {
       return `${s}[]`;
     }
     if (propertyType instanceof ObjectPropertyType) {
-      return getEntityName(propertyItem.name);
+      const ot: ObjectPropertyType = propertyType;
+      return ot.className;
     }
     return propertyType.type;
   }
