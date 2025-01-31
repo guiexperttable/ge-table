@@ -11,11 +11,17 @@ import {
 export class ColumnDefGenerator {
 
   public rootPropertyType: PropertyType | null = null;
+  private allowCustomRenderer: boolean = true;
+  private bufCustomRenderer: string[] = [];
 
   public renderColumnDefs(
-    rootPropertyType: PropertyType
+    rootPropertyType: PropertyType,
+    allowCustomRenderer: boolean = true,
   ) {
+    this.allowCustomRenderer = allowCustomRenderer;
     this.rootPropertyType = rootPropertyType;
+    this.bufCustomRenderer = [];
+
     const buf: string[] = [];
     if (!this.rootPropertyType) {
       return buf;
@@ -31,7 +37,7 @@ export class ColumnDefGenerator {
       }
     }
 
-    return buf;
+    return [...buf, ...this.bufCustomRenderer];
   }
 
   private iteratePropertyItems(buf: string[], props: PropertyItem[], parentProperty: string = '') {
@@ -68,9 +74,11 @@ export class ColumnDefGenerator {
           let bodyRenderer = '';
           let cssClass = 'ge-table-text-align-left';
           if (propertyType.type===PROPERTY_TYPE_KEY_ARRAY) {
-            if (arrayItemClassName){
-              bodyRenderer = `      bodyRenderer: new ${arrayItemClassName}ArrayCellRenderer(),`;
+            if (this.allowCustomRenderer && arrayItemClassName){
+              const customRenderer = `${arrayItemClassName}ArrayCellRenderer`;
+              bodyRenderer = `      bodyRenderer: new ${customRenderer}(),`;
               cssClass = '';
+              this.renderCumstomCellRenderer(arrayItemClassName, customRenderer)
             } else {
               bodyRenderer = '      bodyRenderer: new SimpleArrayCellRenderer(),';
             }
@@ -100,6 +108,29 @@ export class ColumnDefGenerator {
     }
   }
 
+  private LABEL_MAPPINGS: { [key: string]: string } = {
+    Id: 'ID',
+    In: 'in',
+    At: 'at',
+    Of: 'of',
+    From: 'from',
+    And: 'and',
+    The: 'the',
+    On: 'on',
+    By: 'by',
+    To: 'to',
+    With: 'with',
+    For: 'for',
+    As: 'as',
+    Or: 'or',
+    But: 'but',
+    Nor: 'nor',
+  };
+
+  private transformLabel(label: string): string {
+    return this.LABEL_MAPPINGS[label] || label;
+  }
+
   private getReadableColumnLabel(columnId: string): string {
     const components = columnId.split('.');
     const labels = components
@@ -108,8 +139,44 @@ export class ColumnDefGenerator {
           .replace(/([a-z])([A-Z])/g, '$1 $2');
         return words.charAt(0).toUpperCase() + words.slice(1);
       });
+    for (let i = 0; i < labels.length; i++) {
+      labels[i] = this.transformLabel(labels[i]);
+    }
+
     return labels.join(' ');
   }
 
 
+  private renderCumstomCellRenderer(arrayItemClassName: string, customRendererName:string){
+    this.bufCustomRenderer.push(`
+// --------------------------------------------------------------
+
+import { AreaModelIf, CellRendererIf, DomServiceIf, AreaIdent, RendererCleanupFnType } from "@guiexpert/table";
+// import { ${arrayItemClassName} } from "./";
+
+export class ${customRendererName} implements CellRendererIf {
+
+  render(
+    cellDiv: HTMLDivElement,
+    _rowIndex: number,
+    _columnIndex: number,
+    _areaIdent: AreaIdent,
+    _areaModel: AreaModelIf,
+    cellValue: ${arrayItemClassName}[],
+    _domService: DomServiceIf): RendererCleanupFnType | undefined {
+    if (cellValue?.length) {
+      cellDiv.innerHTML = \`
+<div class="ge-table-label-div">
+  <div class="ge-table-label">\${cellValue.join(', ')}</div> /* add your render logic here */
+</div>\`;
+    } else {
+      cellDiv.innerText = "";
+    }
+    return undefined;
+  }
+
+}    
+    
+    `);
+  }
 }

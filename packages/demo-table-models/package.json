@@ -1,6 +1,6 @@
 {
   "name": "@guiexpert/demo-table-models",
-  "version": "1.0.40",
+  "version": "1.0.41",
   "type": "module",
   "main": "./index.js",
   "types": "./index.d.ts",
