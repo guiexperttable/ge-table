@@ -5,15 +5,12 @@ import { SelectionModel } from './selection/selection-model';
 import { ActionId } from './action/action-id.type';
 import { ShortcutActionIdMapping } from './action/shortcut-actionid-mapping.type';
 import { SelectionModelIf } from './selection/selection-model.if';
+import { TableModelIf } from './data/tablemodel/table-model.if';
 /**
-* TableApi Class
-*
-* A class for interfacing with a table within the application.
-* It includes features for scrolling, updating cells, handling visibility of elements like header and footer,
-* and dealing with selections within the table.
-*
-* An instance of this class is automatically created for each table component.
-*/
+ * The TableApi class provides a set of methods to interact with a table's functionality.
+ * It enables actions such as updating cells, scrolling, managing visibility, handling selection,
+ * copying to the clipboard, downloading data, and triggering specific actions programmatically.
+ */
 export declare class TableApi {
     readonly tableScope: TableScope;
     constructor(tableScope: TableScope);
@@ -154,12 +151,13 @@ export declare class TableApi {
      */
     copyToClipboard(): Promise<string>;
     /**
-     * Downloads an Excel file containing data from the table's header, body, and footer areas.
-     * Extracts the table data into a 2D matrix and uses the Excel service to generate and download the file.
+     * Generates and downloads an Excel file based on the table data.
      *
-     * @return {void} No return value, downloads the Excel file directly.
+     * @param {string} fileName - The name of the Excel file to be downloaded. Defaults to 'table.xlsx'.
+     * @param {string} author - The author of the Excel file. If not provided, it will remain empty.
+     * @return {void} No return value. Initiates a file download of the Excel document.
      */
-    downloadExcel(): void;
+    downloadExcel(fileName?: string, author?: string): void;
     /**
      * Retrieves the current scope of the table.
      *
@@ -173,4 +171,8 @@ export declare class TableApi {
      * or undefined if no selection model is available.
      */
     getSelectionModel(): SelectionModelIf | undefined;
+    autoResizeColumns(recalcWrappers?: boolean): void;
+    recalcWrappers(): void;
+    setColumnWidth(columnIndex: number, width: number): void;
+    getTableModel(): TableModelIf;
 }

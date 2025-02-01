@@ -1,4 +1,6 @@
 import { Size } from "./size";
+export declare const px500: Size;
+export declare const px400: Size;
 export declare const px300: Size;
 export declare const px290: Size;
 export declare const px280: Size;

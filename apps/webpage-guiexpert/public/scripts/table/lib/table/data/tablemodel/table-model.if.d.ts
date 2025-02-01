@@ -5,6 +5,7 @@ import { AreaModelIf } from "./areamodel/area-model.if";
 import { FilterFunction } from "../common/filter-function";
 import { SortItem } from "../common/sort-item";
 import { SelectionModelIf } from "../../selection/selection-model.if";
+import { TableScope } from '../../table-scope';
 /**
  * The TableModelIf is on one hand a container for the header, body, and footer models
  * (see : #getAreaModel, and #AreaModelIf), and on the other hand the master of
@@ -226,4 +227,6 @@ export interface TableModelIf {
      * @returns {SelectionModelIf|undefined} The selection model instance if available, or undefined if none is found.
      */
     getSelectionModel(): SelectionModelIf | undefined;
+    setTableScope(tableScope: TableScope): void;
+    getTableScope(): TableScope | undefined;
 }

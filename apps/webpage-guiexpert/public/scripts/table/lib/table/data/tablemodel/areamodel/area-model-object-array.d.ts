@@ -19,6 +19,7 @@ export declare class AreaModelObjectArray<T> extends AbstractAreaModel<T> implem
     protected sorterService: SorterService;
     constructor(areaIdent: AreaIdent, rows: T[], defaultRowHeight: number, columnDefs?: ColumnDefIf[]);
     setRows(rows: T[]): void;
+    filterRowsByPredict(predict: (row: T) => boolean): void;
     getRowCount(): number;
     getValueAt(rowIndex: number, columnIndex: number): any;
     getFilteredRows(): T[];

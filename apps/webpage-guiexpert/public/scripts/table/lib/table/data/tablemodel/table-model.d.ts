@@ -9,6 +9,7 @@ import { FilterFunction } from "../common/filter-function";
 import { SortItem } from "../common/sort-item";
 import { SelectionModelIf } from "../../selection/selection-model.if";
 import { GetT } from "../common/get-t";
+import { TableScope } from '../../table-scope';
 /**
  * This is a default implementation of TableModelIf.
  * Ths TableModel is on one hand a container for the header, body, and footer models
@@ -42,7 +43,7 @@ export declare class TableModel implements TableModelIf {
     protected overridingColumnWidth: number;
     protected columnCount: number;
     protected parentSize: number;
-    readonly getSelectionModel: GetT<SelectionModelIf>;
+    getSelectionModel: GetT<SelectionModelIf>;
     protected rowCount: number;
     protected contentHeightInPx: number;
     protected contentWidthInPx: number;
@@ -281,4 +282,7 @@ export declare class TableModel implements TableModelIf {
     private arrayMove;
     private recalcContentWidthInPx;
     private calcXPositions;
+    private tableScope;
+    setTableScope(tableScope: TableScope): void;
+    getTableScope(): TableScope | undefined;
 }

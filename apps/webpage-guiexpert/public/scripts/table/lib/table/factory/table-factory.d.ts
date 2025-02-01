@@ -6,6 +6,27 @@ import { TableOptionsIf } from "../data/options/table-options.if";
 import { TableModelIf } from "../data/tablemodel/table-model.if";
 import { TableModel } from "../data/tablemodel/table-model";
 import { SelectionModelIf } from "../selection/selection-model.if";
+export type CreateTableModelPara = {
+    headerAreaModel: AreaModelIf;
+    bodyAreaModel: AreaModelIf;
+    footerAreaModel: AreaModelIf;
+    fixedLeftColumnCount: number;
+    fixedRightColumnCount: number;
+    rowCheckboxVisible: boolean;
+    defaultRowHeights: DefaultRowHeightsIf;
+    columnDefs: ColumnDefIf[];
+    columnSizes: number[];
+    overridingColumnWidth: number;
+    columnCount: number;
+    parentSize: number;
+    getSelectionModel: GetT<SelectionModelIf>;
+    rows: any[];
+    properties: string[];
+    bodyData: any[][];
+    headerData: string[][];
+    footerData: string[][];
+    tableOptions: TableOptionsIf;
+};
 export declare class TableFactory {
     /**
      * TableFactory
@@ -43,27 +64,7 @@ export declare class TableFactory {
      * Allows to create a table model utilizing object array data for rows, header, and footer along with the specified configurations.
      * Please consult each method's documentation for detailed explanation of their functionality.
      */
-    static createTableModel(p: Partial<{
-        headerAreaModel: AreaModelIf;
-        bodyAreaModel: AreaModelIf;
-        footerAreaModel: AreaModelIf;
-        fixedLeftColumnCount: number;
-        fixedRightColumnCount: number;
-        rowCheckboxVisible: boolean;
-        defaultRowHeights: DefaultRowHeightsIf;
-        columnDefs: ColumnDefIf[];
-        columnSizes: number[];
-        overridingColumnWidth: number;
-        columnCount: number;
-        parentSize: number;
-        getSelectionModel: GetT<SelectionModelIf>;
-        rows: any[];
-        properties: string[];
-        bodyData: any[][];
-        headerData: string[][];
-        footerData: string[][];
-        tableOptions: TableOptionsIf;
-    }>): TableModelIf;
+    static createTableModel(p: Partial<CreateTableModelPara>): TableModelIf;
     /**
      * Constructs a table model (an instance of `TableModelIf`) by using provided parameters.
      *

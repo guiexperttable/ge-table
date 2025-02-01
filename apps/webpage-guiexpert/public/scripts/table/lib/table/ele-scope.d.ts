@@ -4,7 +4,7 @@ import { TableModelIf } from "./data/tablemodel/table-model.if";
 import { TableOptionsIf } from "./data/options/table-options.if";
 import { GeoData } from "./data/geo-data";
 /**
- * Represents an store for HTML elements.
+ * Represents a store for HTML elements.
  * @class
  */
 export declare class EleScope {

@@ -1,0 +1,91 @@
+---
+const idIn = Math.random().toString(36).slice(2, 11);
+const idOut = Math.random().toString(36).slice(2, 11);
+---
+
+<div class="w-full flex mb-4 h-1/1 container-div">
+  <div class="relative border border-default bg-offset pl-6 pb-1 pt-4 w-1/2">
+    <div class="label pb-3 font-bold">Enter your JSON array below:</div>
+    <textarea class="w-full h-full" id={idIn}></textarea>
+  </div>
+  <div class="relative border border-default bg-offset pl-6 pb-1 pt-4 w-1/2">
+    <div class="label pb-3 font-bold">TypeScript Output:</div>
+    <textarea class="w-full h-full" id={idOut}></textarea>
+  </div>
+</div>
+
+
+<script is:inline define:vars={{idIn, idOut}} type="module">
+
+  import { SchemeGenerator, ColumnDefGenerator, PropertyTypeService } from '/scripts/table/index.js';
+
+  const textareaIn = document.getElementById(idIn);
+  const textareaOut = document.getElementById(idOut);
+
+  const demoData = [
+    {
+      id: 1,
+      name: 'Alice',
+      description: 'Lorem ipsum dolor',
+      isActive: true,
+      tags: ['typescript', 'javascript'],
+      scripts: [],
+      profile: { age: 30, location: 'Berlin' },
+      preferences: [{ key: 'theme', value: 'dark' }]
+    },
+    {
+      id: 2,
+      name: 'Marc',
+      description: 'Lorem ipsum dolor 2',
+      isActive: false,
+      tags: ['java', 'javascript'],
+      scripts: [],
+      profile: { age: 55, location: 'Frankfurt' },
+      preferences: [{ key: 'theme', value: 'light' }]
+    },
+    {
+      id: null,
+      name: 'Bob',
+      isActive: false,
+      tags: null,
+      scripts: [],
+      profile: { age: 25, location: 'Frankfurt' },
+      preferences: [{ key: 'language', value: 'de' }]
+    }
+  ];
+
+  textareaIn.value = JSON.stringify(demoData, null, 4);
+
+  function generate() {
+    const rootPropertyType = new PropertyTypeService().json2PropertyType(textareaIn.value, 'XyzRows');
+    const s = new SchemeGenerator().renderTypeScriptInterfaces(rootPropertyType).join('\n') +
+      '\n// ------------------------------------------\n\n' +
+      new ColumnDefGenerator().renderColumnDefs(rootPropertyType, true).join('\n');
+    textareaOut.value = s;
+  }
+
+  textareaIn.addEventListener('input', (event) => {
+    generate();
+  });
+
+
+  generate();
+</script>
+
+<style>
+  div {
+    font-size:14px;
+    font-family: monospace, monospace;
+  }
+  .container-div {
+    height: calc(100vh - 80px);
+  }
+  .container-div > div {
+    display: grid;
+    grid-template-rows: auto 1fr
+  }
+  textarea {
+    background-color: var(--color-background-offset);
+    color: var(--color-text);
+  }
+</style>

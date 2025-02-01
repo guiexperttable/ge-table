@@ -291,4 +291,8 @@ export declare class TableScope extends RenderScope implements OnActionTriggered
      * @private
      */
     private autoRestoreCollapsedExpandedState;
+    calcAutoColumnWidths(): number[];
+    setColumnWidth(columnIndex: number, width: number): void;
+    autoResizeColumns(recalcWrappers?: boolean): void;
+    recalcWrappers(): void;
 }
