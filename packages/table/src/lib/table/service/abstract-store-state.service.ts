@@ -15,15 +15,10 @@ export abstract class AbstractStoreStateService {
     const obj = {};
     if (item instanceof Map) {
       const map = item as Map<string, any>;
-
-      for (const item of [...map]) {
-        const [
-          key,
-          value
-        ] = item;
+      map.forEach((key,value) => {
         // @ts-ignore
         obj[key] = value;
-      }
+      });
     }
     return obj;
   }

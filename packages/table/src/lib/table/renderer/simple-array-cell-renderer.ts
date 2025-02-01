@@ -14,14 +14,20 @@ export class SimpleArrayCellRenderer implements CellRendererIf {
     _areaIdent: AreaIdent,
     _areaModel: AreaModelIf,
     cellValue: any[],
-    _domService: DomServiceIf): RendererCleanupFnType | undefined {
+    domService: DomServiceIf): RendererCleanupFnType | undefined {
     if (cellValue?.length) {
-      cellDiv.innerHTML = `
-<div class="ge-table-label-div">
-  <div class="ge-table-label">${cellValue.join(', ')}</div>
-</div>`;
+      const div = domService.createElement<HTMLDivElement>("div");
+      domService.addClass(div, 'ge-table-label-div');
+      domService.appendChild(cellDiv, div);
+
+      const divInner = domService.createElement<HTMLDivElement>("div");
+      domService.addClass(divInner, 'ge-table-label');
+      domService.appendChild(div, divInner);
+
+      const textElement = domService.createText(cellValue.join(', '));
+      domService.appendChild(divInner, textElement);
     } else {
-      cellDiv.innerText = "";
+      cellDiv.innerText = '';
     }
     return undefined;
   }

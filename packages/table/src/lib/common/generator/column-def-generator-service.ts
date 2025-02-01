@@ -1,6 +1,9 @@
 import {
   ArrayPropertyType,
-  ObjectPropertyType, PROPERTY_TYPE_KEY_ARRAY, PROPERTY_TYPE_KEY_BOOLEAN, PROPERTY_TYPE_KEY_NUMBER,
+  ObjectPropertyType,
+  PROPERTY_TYPE_KEY_ARRAY,
+  PROPERTY_TYPE_KEY_BOOLEAN,
+  PROPERTY_TYPE_KEY_NUMBER,
   PROPERTY_TYPE_KEY_OBJECT,
   PropertyItem,
   PropertyType,
@@ -60,14 +63,9 @@ export class ColumnDefGenerator {
           if (propertyType instanceof ArrayPropertyType) {
             const item = propertyType.items.find(pt => pt.type === PROPERTY_TYPE_KEY_OBJECT);
             if (item && item instanceof ObjectPropertyType) {
-              const op: ObjectPropertyType = item;
-              arrayItemClassName = op.className;
+              arrayItemClassName = item.className;
             }
           }
-
-          if (arrayItemClassName) console.info(`*** TODO export class ${arrayItemClassName}ArrayCellRenderer implements CellRendererIf {...`);
-          // console.info(concatinatedPropertyName + ' > ' + propertyType.type);
-          // TODO render columnDef for  propertyType -> buf
 
           const headerLabel = this.getReadableColumnLabel(concatinatedPropertyName);
           let width = 100;
@@ -152,7 +150,7 @@ export class ColumnDefGenerator {
 // --------------------------------------------------------------
 
 import { AreaModelIf, CellRendererIf, DomServiceIf, AreaIdent, RendererCleanupFnType } from "@guiexpert/table";
-// import { ${arrayItemClassName} } from "./";
+// TODO  import { ${arrayItemClassName} } from "...";
 
 export class ${customRendererName} implements CellRendererIf {
 
@@ -165,12 +163,18 @@ export class ${customRendererName} implements CellRendererIf {
     cellValue: ${arrayItemClassName}[],
     _domService: DomServiceIf): RendererCleanupFnType | undefined {
     if (cellValue?.length) {
-      cellDiv.innerHTML = \`
-<div class="ge-table-label-div">
-  <div class="ge-table-label">\${cellValue.join(', ')}</div> /* add your render logic here */
-</div>\`;
+      const div = domService.createElement<HTMLDivElement>("div");
+      domService.addClass(div, 'ge-table-label-div');
+      domService.appendChild(cellDiv, div);
+
+      const divInner = domService.createElement<HTMLDivElement>("div");
+      domService.addClass(divInner, 'ge-table-label');
+      domService.appendChild(div, divInner);
+
+      const textElement = domService.createText(cellValue.join(', ')); // TODO implement your render logic for ${arrayItemClassName}[] here
+      domService.appendChild(divInner, textElement);
     } else {
-      cellDiv.innerText = "";
+      cellDiv.innerText = '';
     }
     return undefined;
   }

@@ -1,4 +1,4 @@
-function Ot(h, e = 500) {
+function $t(h, e = 500) {
   let t = null, s = 0;
   return function(...o) {
     const i = Date.now(), r = e - (i - s);
@@ -123,7 +123,6 @@ class Bt {
             const p = n.items.find((m) => m.type === j);
             p && p instanceof D && (a = p.className);
           }
-          a && console.info(`*** TODO export class ${a}ArrayCellRenderer implements CellRendererIf {...`);
           const c = this.getReadableColumnLabel(l);
           let d = 100, u = "", f = "ge-table-text-align-left";
           if (n.type === Pe) {
@@ -162,7 +161,7 @@ class Bt {
 // --------------------------------------------------------------
 
 import { AreaModelIf, CellRendererIf, DomServiceIf, AreaIdent, RendererCleanupFnType } from "@guiexpert/table";
-// import { ${e} } from "./";
+// TODO  import { ${e} } from "...";
 
 export class ${t} implements CellRendererIf {
 
@@ -175,12 +174,18 @@ export class ${t} implements CellRendererIf {
     cellValue: ${e}[],
     _domService: DomServiceIf): RendererCleanupFnType | undefined {
     if (cellValue?.length) {
-      cellDiv.innerHTML = \`
-<div class="ge-table-label-div">
-  <div class="ge-table-label">\${cellValue.join(', ')}</div> /* add your render logic here */
-</div>\`;
+      const div = domService.createElement<HTMLDivElement>("div");
+      domService.addClass(div, 'ge-table-label-div');
+      domService.appendChild(cellDiv, div);
+
+      const divInner = domService.createElement<HTMLDivElement>("div");
+      domService.addClass(divInner, 'ge-table-label');
+      domService.appendChild(div, divInner);
+
+      const textElement = domService.createText(cellValue.join(', ')); // TODO implement your render logic for ${e}[] here
+      domService.appendChild(divInner, textElement);
     } else {
-      cellDiv.innerText = "";
+      cellDiv.innerText = '';
     }
     return undefined;
   }
@@ -724,25 +729,25 @@ class ce {
     );
   }
 }
-class $ {
+class O {
   constructor(e = ">", t = "", s = []) {
     this.content = e, this.style = t, this.classes = s;
   }
 }
-class $e {
-  constructor(e = new $(
+class Oe {
+  constructor(e = new O(
     ">",
     "transform: rotate(90deg) translate(66%, -66%); transform-origin: 0 0;",
     ["gt-table-tree-arrow-expanded"]
-  ), t = new $(
+  ), t = new O(
     ">",
     "",
     ["ge-table-tree-arrow-collapsed"]
-  ), s = new $(
+  ), s = new O(
     ">",
     "color:transparent;",
     ["gt-table-tree-arrow-hidden"]
-  ), o = new $(
+  ), o = new O(
     "↕",
     "",
     ["gt-table-tree-arrow-expanded-all"]
@@ -750,8 +755,8 @@ class $e {
     this.arrowExpanded = e, this.arrowCollapsed = t, this.arrowPlaceholder = s, this.arrowExpandCollapseAll = o;
   }
 }
-class Oe {
-  constructor(e = new $("↑", "", ["ge-header-sorted-asc"]), t = new $("↓", "", ["ge-header-sorted-desc"]), s = new $("↑", "color:transparent;", [])) {
+class $e {
+  constructor(e = new O("↑", "", ["ge-header-sorted-asc"]), t = new O("↓", "", ["ge-header-sorted-desc"]), s = new O("↑", "color:transparent;", [])) {
     this.iconAsc = e, this.iconDesc = t, this.iconPlaceholder = s;
   }
 }
@@ -875,7 +880,7 @@ class qe {
       }
     return this.domService.appendChild(e, n), n;
   }
-  addSortedIcon(e, t = "", s = new Oe(), o = -1) {
+  addSortedIcon(e, t = "", s = new $e(), o = -1) {
     const i = this.domService.createElement("div");
     this.domService.addClass(i, "ge-table-sorted-icon-div"), this.domService.setStyle(i, "position", "absolute"), this.domService.setStyle(i, "top", "0"), this.domService.setStyle(i, "right", "0"), this.domService.setStyle(i, "width", "20px"), this.domService.setStyle(i, "background", "transparent"), this.domService.setStyle(i, "cursor", "pointer"), this.domService.setAttribute(i, "data-col-index", `${o}`), this.domService.setAttribute(i, "data-area", "header");
     let r;
@@ -886,7 +891,7 @@ class qe {
       this.domService.addClass(i, a);
     return this.domService.appendChild(e, i), i;
   }
-  addArrowDiv(e, t = "none", s = new $e(), o = -1, i = -1, r = "body") {
+  addArrowDiv(e, t = "none", s = new Oe(), o = -1, i = -1, r = "body") {
     const n = this.domService.createElement("div");
     this.domService.addClass(n, "ge-table-tree-arrow-div"), this.domService.setStyle(n, "display", "inline-block"), this.domService.setStyle(n, "position", ""), this.domService.setStyle(n, "width", "20px"), this.domService.setStyle(n, "background", "transparent"), this.domService.setStyle(n, "cursor", "pointer"), this.domService.setAttribute(n, "data-row-index", `${o}`), this.domService.setAttribute(n, "data-col-index", `${i}`), this.domService.setAttribute(n, "data-area", `${r}`);
     let l;
@@ -1315,17 +1320,9 @@ class de {
   }
   autoConvertMapToObject(e) {
     const t = {};
-    if (e instanceof Map) {
-      const s = e;
-      for (const o of [...s]) {
-        const [
-          i,
-          r
-        ] = o;
-        t[i] = r;
-      }
-    }
-    return t;
+    return e instanceof Map && e.forEach((o, i) => {
+      t[o] = i;
+    }), t;
   }
   checkAndPersistItem(e, t) {
     const s = this.getStorageKeyFn;
@@ -2989,11 +2986,11 @@ class bt {
   }
 }
 class pe {
-  constructor(e = new $(
+  constructor(e = new O(
     "❯",
     "",
     ["gt-table-icon-expanded"]
-  ), t = new $(
+  ), t = new O(
     "❯",
     "transform: rotate(180deg) translate(-100%, -100%); transform-origin: 0 0;",
     ["ge-table-icon-collapsed"]
@@ -3009,7 +3006,7 @@ class X {
       header: 34,
       body: 34,
       footer: 34
-    }, this.footerVerticalSeparator = !1, this.headerToggleExpandCollapseIcons = !1, this.headerVerticalSeparator = !1, this.treeOptions = new $e(), this.headerGroupOptions = new pe(), this.showCheckboxWihoutExtraColumn = !1, this.externalFilterFunction = void 0, this.sortedOptions = new Oe(), this.sortOrder = ["asc", "desc"], this.resizeEventDebounceDelay = 500, this.getEditRenderer = (e, t) => new mt(), this.getSelectionModel = () => yt, this.getFocusModel = () => xt;
+    }, this.footerVerticalSeparator = !1, this.headerToggleExpandCollapseIcons = !1, this.headerVerticalSeparator = !1, this.treeOptions = new Oe(), this.headerGroupOptions = new pe(), this.showCheckboxWihoutExtraColumn = !1, this.externalFilterFunction = void 0, this.sortedOptions = new $e(), this.sortOrder = ["asc", "desc"], this.resizeEventDebounceDelay = 500, this.getEditRenderer = (e, t) => new mt(), this.getSelectionModel = () => yt, this.getFocusModel = () => xt;
   }
 }
 const W = class W {
@@ -5842,12 +5839,12 @@ class Ls {
     return t.join(" ").toLowerCase();
   }
 }
-class $s {
+class Os {
   static bodyRenderer(e) {
     return new I(void 0, e, void 0);
   }
 }
-class Os {
+class $s {
   constructor(e, t = !0, s = !1) {
     this.property = e, this.skipCheckableCheck = t, this.readonly = s;
   }
@@ -5982,10 +5979,15 @@ class js {
 }
 class Us {
   render(e, t, s, o, i, r, n) {
-    r != null && r.length ? e.innerHTML = `
-<div class="ge-table-label-div">
-  <div class="ge-table-label">${r.join(", ")}</div>
-</div>` : e.innerText = "";
+    if (r != null && r.length) {
+      const l = n.createElement("div");
+      n.addClass(l, "ge-table-label-div"), n.appendChild(e, l);
+      const a = n.createElement("div");
+      n.addClass(a, "ge-table-label"), n.appendChild(l, a);
+      const c = n.createText(r.join(", "));
+      n.appendChild(a, c);
+    } else
+      e.innerText = "";
   }
 }
 class Ys {
@@ -6045,7 +6047,7 @@ class He {
     this.action = e, this.area = t, this.areaModel = s, this.rowIndex = o, this.columnIndex = i, this.id = r;
   }
 }
-class O {
+class $ {
   constructor(e, t, s = "", o = "", i = "button", r = !0) {
     this.action = e, this.label = t, this.icon = s, this.elementClass = o, this.elementType = i, this.enabled = r;
   }
@@ -6112,7 +6114,7 @@ class Pt {
     return null;
   }
   getCrudActions(e) {
-    return Array.isArray(e) && e.every((t) => t instanceof O) ? e : this.crudActions;
+    return Array.isArray(e) && e.every((t) => t instanceof $) ? e : this.crudActions;
   }
 }
 const Xs = function(h, e, t) {
@@ -6401,7 +6403,7 @@ class oe {
     return e.replace(/\./g, " ");
   }
 }
-class $t {
+class Ot {
   constructor() {
     this.urls = {
       list: {
@@ -6409,14 +6411,14 @@ class $t {
         method: "GET"
       }
     }, this.singleRowActions = [
-      new O("VIEW", "View", "", "", "link"),
-      new O("EDIT", "Edit", "", "", "link"),
-      new O("CLONE", "Clone", "", "", "link"),
-      new O("DELETE", "Delete", "", "", "link")
+      new $("VIEW", "View", "", "", "link"),
+      new $("EDIT", "Edit", "", "", "link"),
+      new $("CLONE", "Clone", "", "", "link"),
+      new $("DELETE", "Delete", "", "", "link")
       // new CrudAction('CREATE', 'Create', '', '', 'link'),
     ], this.tableActions = [
-      new O("CREATE", "Create", "", "", "button"),
-      new O("DELETE_SELECTED", "Delete Selected", "", "", "button")
+      new $("CREATE", "Create", "", "", "button"),
+      new $("DELETE_SELECTED", "Delete Selected", "", "", "button")
     ], this.autoAddActionColumn = !0, this.columnWidths = new Ft(), this.calcFixedRightColumnCount = (e) => e > 6 ? 1 : 0, this.getHeadersInit = () => ({}), this.getIdKey = () => "id", this.getIdByObject = (e) => (this.getIdKey() ?? "id") in e ? e.id : e, this.fetchList = (e) => {
       const t = e.getHeadersInit ? e.getHeadersInit() : {};
       let s = e.urls.list.url, o = e.urls.list.method ?? "GET";
@@ -6470,7 +6472,7 @@ class $t {
 }
 class Qs {
   constructor() {
-    this.crudOptions = new $t(), this.listenActionEvent = (e) => {
+    this.crudOptions = new Ot(), this.listenActionEvent = (e) => {
     };
   }
   createTableModel(e, t, s = (i) => {
@@ -6637,7 +6639,7 @@ export {
   ne as CellGroupExtCellRenderer,
   R as CellRange,
   T as CellgroupFactory,
-  Os as CheckboxBooleanPropertyCellRenderer,
+  $s as CheckboxBooleanPropertyCellRenderer,
   Me as CheckboxCellRenderer,
   Ms as CheckboxColumnDef,
   Rt as CheckboxModel,
@@ -6650,10 +6652,10 @@ export {
   Ft as ColumnWidths,
   qe as ConvenienceDomService,
   J as CopyService,
-  O as CrudAction,
+  $ as CrudAction,
   oe as CrudObjectEdit,
   Lt as CrudObjectView,
-  $t as CrudOptions,
+  Ot as CrudOptions,
   Qs as CrudTableModelFactory,
   xe as CssVars,
   Bs as DateToIntlDDMMYYYYCellRenderer,
@@ -6673,7 +6675,7 @@ export {
   he as GeModelChangeEvent,
   ce as GeMouseEvent,
   L as GeoData,
-  $ as Icon,
+  O as Icon,
   ws as IndexAndPx,
   mt as InputCellRenderer,
   ct as InputHandler,
@@ -6703,7 +6705,7 @@ export {
   Le as PropertyItem,
   Ht as PropertyTypeService,
   lt as RenderScope,
-  $s as Renderer,
+  Os as Renderer,
   Tt as RequestChunk,
   wt as ResizeHandler,
   Vt as SchemeGenerator,
@@ -6715,7 +6717,7 @@ export {
   ft as SimpleDomService,
   y as Size,
   at as SortItem,
-  Oe as SortedOptions,
+  $e as SortedOptions,
   js as StarRatingCellRenderer,
   ot as StoreStateCollapsedExpandService,
   tt as StoreStateScrollPosService,
@@ -6731,7 +6733,7 @@ export {
   Zs as ThreeColorGradientArg,
   Ae as TreeCheckboxModel,
   re as TreeFactory,
-  $e as TreeOptions,
+  Oe as TreeOptions,
   we as TreeRow,
   At as TreeRowService,
   Ns as TrueFalseCellRenderer,
@@ -6792,6 +6794,6 @@ export {
   ds as px70,
   cs as px80,
   as as px90,
-  Ot as throttle,
+  $t as throttle,
   Ke as trimArraySuffixes
 };
