@@ -172,7 +172,7 @@ export class ${t} implements CellRendererIf {
     _areaIdent: AreaIdent,
     _areaModel: AreaModelIf,
     cellValue: ${e}[],
-    _domService: DomServiceIf): RendererCleanupFnType | undefined {
+    domService: DomServiceIf): RendererCleanupFnType | undefined {
     if (cellValue?.length) {
       const div = domService.createElement<HTMLDivElement>("div");
       domService.addClass(div, 'ge-table-label-div');

@@ -161,7 +161,7 @@ export class ${customRendererName} implements CellRendererIf {
     _areaIdent: AreaIdent,
     _areaModel: AreaModelIf,
     cellValue: ${arrayItemClassName}[],
-    _domService: DomServiceIf): RendererCleanupFnType | undefined {
+    domService: DomServiceIf): RendererCleanupFnType | undefined {
     if (cellValue?.length) {
       const div = domService.createElement<HTMLDivElement>("div");
       domService.addClass(div, 'ge-table-label-div');
