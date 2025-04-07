@@ -81,6 +81,11 @@ html[data-theme= "light"] {
   --ge-table-color-drop-zone-bg: #fafafa;
   --ge-table-color-drop-zone: #fafafa;
   --ge-table-color-tree-arrow-collapsed-color: var(--ge-table-body-west-text);
+
+  --ge-positive-text-color: #16c784;
+  --ge-negative-text-color: #ea3943;
+  --ge-positive-bg: rgba(22, 199, 132, 0.05);
+  --ge-negative-bg: rgba(234, 57, 67, 0.05);
 }
 
 
@@ -150,6 +155,11 @@ html[data-theme= "dark"] {
   --ge-table-color-drop-zone-bg: #fafafa;
   --ge-table-color-drop-zone: #fafafa;
   --ge-table-color-tree-arrow-collapsed-color: var(--ge-table-body-west-text);
+
+  --ge-positive-text-color: #16c784;
+  --ge-negative-text-color: #ea3943;
+  --ge-positive-bg: rgba(22, 199, 132, 0.05);
+  --ge-negative-bg: rgba(234, 57, 67, 0.05);
 }
 
 

@@ -37,12 +37,20 @@ header:not(.fixed-header) .logo-fill-color-3 {
 }
 
 .ge-positive-text-color {
-  color: #16c784;
+  color: var(--ge-positive-text-color);
 }
 
 .ge-negative-text-color {
-  color: #ea3943;
+  color: var(--ge-negative-text-color);
 }
+.ge-positive-bg {
+  background-color: var(--ge-positive-bg) !important;
+}
+
+.ge-negative-bg {
+  background-color: var(--ge-negative-bg) !important;
+}
+
 
 .demo-content-div a {
   text-decoration: underline;

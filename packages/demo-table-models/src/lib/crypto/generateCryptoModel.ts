@@ -35,12 +35,12 @@ export function createCryptoModelAndOptions(): TableModelAndOptionsIf {
 
   const columnDefs: ColumnDefIf[] = [
     ColumnDef.create({
-    property: "symbol",
-    headerLabel: "",
-    width: px60,
-    bodyClasses: ["ge-table-text-align-left"],
-    bodyRenderer: coinIconRenderer
-  }),
+      property: "symbol",
+      headerLabel: "",
+      width: px60,
+      bodyClasses: ["ge-table-text-align-left"],
+      bodyRenderer: coinIconRenderer
+    }),
     ColumnDef.create({
       property: "symbol",
       headerLabel: "Name",
