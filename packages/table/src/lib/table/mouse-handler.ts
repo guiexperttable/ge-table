@@ -203,7 +203,7 @@ export class MouseHandler {
     this.tableScope.onMouseClicked(this.geMouseEvent, this.geMouseEventOld);
     this.tableScope.publishGeMouseEvent(this.geMouseEvent);
     if (clickCount===1) {
-      this.tableScope.debounceRepaint();
+      // this.tableScope.debounceRepaint();
     }
   }
 

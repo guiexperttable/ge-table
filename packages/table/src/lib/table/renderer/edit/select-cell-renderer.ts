@@ -11,8 +11,7 @@ export class SelectCellRenderer implements CellRendererIf {
 
   constructor(
     protected options: ValueLabelIf[]
-  ) {
-  }
+  ) {}
 
   static create(values: string[]) {
     return new SelectCellRenderer(
@@ -43,8 +42,6 @@ export class SelectCellRenderer implements CellRendererIf {
 
       cellDiv.innerHTML = `
             <select
-                type="text"
-                value="${val}"
                 autofocus
                 data-listen="change"
                 data-area="${areaIdent}"

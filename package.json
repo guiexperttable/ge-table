@@ -23,6 +23,8 @@
     "serve:svelte-table-demo": "pnpm --filter svelte-table-demo dev",
     "build:table-demo": "pnpm --filter table-demo build",
     "serve:table-demo": "pnpm --filter table-demo dev",
+    "build:ts-todo-demo": "pnpm --filter ts-todo-demo build",
+    "serve:ts-todo-demo": "pnpm --filter ts-todo-demo dev",
     "build:vue3-table-demo": "pnpm --filter vue3-table-demo build",
     "serve:vue3-table-demo": "pnpm --filter vue3-table-demo dev",
     "build:vue3-multi-demo": "pnpm --filter vue3-multi-demo build",

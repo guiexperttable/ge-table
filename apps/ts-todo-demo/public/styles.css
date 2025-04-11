@@ -1,0 +1,276 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+guiexpert-root {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* --------------------------------------------------------- */
+
+.ge-table-col-div {
+  text-align: center;
+  line-height: 2.5;
+  user-select: none;
+}
+
+.ge-table-label-div {
+  padding: 0;
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+
+.ge-table-label-div .ge-table-label {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.ge-table-text-align-left {
+  text-align: left;
+}
+
+.ge-table-text-align-right {
+  text-align: right;
+}
+
+.ge-table-text-align-center {
+  text-align: center;
+}
+
+/* Row checkbox */
+.ge-table-row-checkbox-div {
+  padding-left: 14px;
+}
+.ge-table-body-east {
+  z-index: 999;
+}
+
+
+
+/* Tree table */
+
+.ge-table-col-div.ge-table-col-div-0.ge-table-tree-cell {
+  text-align: left;
+}
+
+.ge-table-tree-cell .ge-table-label-div {
+  padding-left: 0;
+  padding-right: 10px;
+  display: inline;
+}
+
+
+.ge-table-col-tree {
+  text-align: left;
+}
+
+.ge-padding-property-checkbox {
+  padding-left: 0;
+}
+
+.ge-table-col-tree.ge-table-tree-deep-0 {
+  padding-left: 16px;
+}
+
+.ge-table-col-tree.ge-table-tree-deep-1 {
+  padding-left: 36px;
+}
+
+.ge-table-col-tree.ge-table-tree-deep-2 {
+  padding-left: 56px;
+}
+
+.ge-table-col-tree.ge-table-tree-deep-3 {
+  padding-left: 76px;
+}
+
+.ge-table-col-tree.ge-table-tree-deep-4 {
+  padding-left: 96px;
+}
+
+.ge-table-col-tree.ge-table-tree-deep-5 {
+  padding-left: 116px;
+}
+
+.ge-table-col-tree.ge-table-tree-deep-5 {
+  padding-left: 136px;
+}
+
+
+
+/* --------------------------------------------------------- */
+
+html[data-theme= "light"] {
+
+  --ge-table-header-west-bg: var(--ge-table-header-center-bg);
+  --ge-table-header-center-bg: rgba(233, 233, 233, 0.5);
+  --ge-table-header-east-bg: var(--ge-table-header-center-bg);
+  --ge-table-header-west-text: var(--ge-table-header-center-text);
+  --ge-table-header-center-text: #000;
+  --ge-table-header-east-text: var(--ge-table-header-center-text);
+
+  --ge-table-header-west-horizontal-border: var(--ge-table-header-center-horizontal-border);
+  --ge-table-header-west-vertical-border: var(--ge-table-header-center-vertical-border);
+  --ge-table-header-center-horizontal-border: #ddd;
+  --ge-table-header-center-vertical-border: #ccc;
+  --ge-table-header-east-horizontal-border: var(--ge-table-header-center-horizontal-border);
+  --ge-table-header-east-vertical-border: var(--ge-table-header-center-vertical-border);
+
+
+
+
+  --ge-table-body-west-bg: var(--ge-table-header-center-bg);
+  --ge-table-body-center-bg: rgba(255,255,255, 0.5);
+  --ge-table-body-east-bg: var(--ge-table-header-center-bg);
+
+  --ge-table-body-west-text: var(--ge-table-header-center-text);
+  --ge-table-body-center-text: var(--ge-table-header-center-text);
+  --ge-table-body-east-text: var(--ge-table-header-center-text);
+
+  --ge-table-body-west-horizontal-border: var(--ge-table-header-west-horizontal-border);
+  --ge-table-body-west-vertical-border: var(--ge-table-header-west-vertical-border);
+  --ge-table-body-center-horizontal-border: #bbb;
+  --ge-table-body-center-vertical-border: #ddd;
+  --ge-table-body-east-horizontal-border: var(--ge-table-header-east-horizontal-border);
+  --ge-table-body-east-vertical-border: var(--ge-table-header-east-vertical-border);;
+
+  --ge-table-body-west-selected-range-bg: rgba(0, 152, 219, 0.4);
+  --ge-table-body-center-selected-range-bg: rgba(0, 152, 219, 0.4);
+  --ge-table-body-east-selected-range-bg: rgba(0, 152, 219, 0.4);
+  --ge-table-body-west-selected-range-text: #fff;
+  --ge-table-body-center-selected-range-text: #fff;
+  --ge-table-body-east-selected-range-text: #fff;
+
+
+
+
+  --ge-table-footer-west-bg: var(--ge-table-header-center-bg);
+  --ge-table-footer-center-bg: var(--ge-table-header-center-bg);
+  --ge-table-footer-east-bg: var(--ge-table-header-center-bg);
+
+  --ge-table-footer-west-text: var(--ge-table-header-center-text);
+  --ge-table-footer-center-text: var(--ge-table-header-center-text);
+  --ge-table-footer-east-text: var(--ge-table-header-center-text);
+
+  --ge-table-footer-west-horizontal-border: var(--ge-table-header-west-horizontal-border);
+  --ge-table-footer-west-vertical-border: var(--ge-table-header-west-vertical-border);
+  --ge-table-footer-center-horizontal-border: var(--ge-table-header-center-horizontal-border);
+  --ge-table-footer-center-vertical-border: var(--ge-table-header-center-vertical-border);
+  --ge-table-footer-east-horizontal-border: var(--ge-table-header-east-horizontal-border);
+  --ge-table-footer-east-vertical-border: var(--ge-table-header-east-vertical-border);
+
+
+  --ge-table-border : #ccc;
+
+  --ge-table-row-odd-bg: transparent;
+  --ge-table-row-even-bg: transparent;
+  --ge-table-column-odd-bg: transparent;
+  --ge-table-column-even-bg: transparent;
+
+  --ge-table-hover-column-bg: rgba(0, 224, 255, 0.27);
+  --ge-table-hover-row-bg: rgba(0, 224, 255, 0.27);
+  --ge-table-focus-border: rgb(0, 255, 255);
+
+  --ge-table-color-error-text: #e00034;
+  --ge-table-tree-arrow-collapsed-color: #e00034;
+  --ge-table-column-resize-handle-border: rgb(0, 255, 255);
+
+  --ge-table-dragged-col-div-bg: lightcyan;
+  --ge-table-drop-zone-bg: rgba(244, 255, 242, 0.6);
+}
+
+
+/* --------------------------------------------------------- */
+
+
+.ge-table-header-west { background-color: var(--ge-table-header-west-bg); }
+.ge-table-header-center { background-color: var(--ge-table-header-center-bg); }
+.ge-table-header-east { background-color: var(--ge-table-header-east-bg); }
+.ge-table-header-west { color: var(--ge-table-header-west-text); }
+.ge-table-header-center { color: var(--ge-table-header-center-text); }
+.ge-table-header-east { color: var(--ge-table-header-east-text); }
+
+.ge-table-header-west-horizontal-border { background-color: var(--ge-table-header-west-horizontal-border); }
+.ge-table-header-west-vertical-border { background-color: var(--ge-table-header-west-vertical-border); }
+.ge-table-header-center-horizontal-border { background-color: var(--ge-table-header-center-horizontal-border); }
+.ge-table-header-center-vertical-border { background-color: var(--ge-table-header-center-vertical-border); }
+.ge-table-header-east-horizontal-border { background-color: var(--ge-table-header-east-horizontal-border); }
+.ge-table-header-east-vertical-border { background-color: var(--ge-table-header-east-vertical-border); }
+
+
+
+
+.ge-table-body-west { background-color: var(--ge-table-body-west-bg); }
+.ge-table-body-center { background-color: var(--ge-table-body-center-bg); }
+.ge-table-body-east { background-color: var(--ge-table-body-east-bg); }
+.ge-table-body-west { color: var(--ge-table-body-west-text); }
+.ge-table-body-center { color: var(--ge-table-body-center-text); }
+.ge-table-body-east { color: var(--ge-table-body-east-text); }
+
+.ge-table-body-west-horizontal-border { background-color: var(--ge-table-body-west-horizontal-border); }
+.ge-table-body-west-vertical-border { background-color: var(--ge-table-body-west-vertical-border); }
+.ge-table-body-center-horizontal-border { background-color: var(--ge-table-body-center-horizontal-border); }
+.ge-table-body-center-vertical-border { background-color: var(--ge-table-body-center-vertical-border); }
+.ge-table-body-east-horizontal-border { background-color: var(--ge-table-body-east-horizontal-border); }
+.ge-table-body-east-vertical-border { background-color: var(--ge-table-body-east-vertical-border); }
+
+.ge-table-body-west-selected-range { background-color: var(--ge-table-body-west-selected-range-bg); }
+.ge-table-body-center-selected-range { background-color: var(--ge-table-body-center-selected-range-bg); }
+.ge-table-body-east-selected-range { background-color: var(--ge-table-body-east-selected-range-bg); }
+.ge-table-body-west-selected-range { color: var(--ge-table-body-west-selected-range-text); }
+.ge-table-body-center-selected-range { color: var(--ge-table-body-center-selected-range-text); }
+.ge-table-body-east-selected-range { color: var(--ge-table-body-east-selected-range-text); }
+
+
+
+
+
+
+.ge-table-footer-west { background-color: var(--ge-table-footer-west-bg); }
+.ge-table-footer-center { background-color: var(--ge-table-footer-center-bg); }
+.ge-table-footer-east { background-color: var(--ge-table-footer-east-bg); }
+
+.ge-table-footer-west { color: var(--ge-table-footer-west-text); }
+.ge-table-footer-center { color: var(--ge-table-footer-center-text); }
+.ge-table-footer-east { color: var(--ge-table-footer-east-text); }
+
+.ge-table-footer-west-horizontal-border { background-color: var(--ge-table-footer-west-horizontal-border); }
+.ge-table-footer-west-vertical-border { background-color: var(--ge-table-footer-west-vertical-border); }
+.ge-table-footer-center-horizontal-border { background-color: var(--ge-table-footer-center-horizontal-border); }
+.ge-table-footer-center-vertical-border { background-color: var(--ge-table-footer-center-vertical-border); }
+.ge-table-footer-east-horizontal-border { background-color: var(--ge-table-footer-east-horizontal-border); }
+.ge-table-footer-east-vertical-border { background-color: var(--ge-table-footer-east-vertical-border); }
+
+
+
+
+
+.ge-table-border { background-color: var(--ge-table-border); }
+.ge-table-row-odd {background-color: var(--ge-table-row-odd-bg); }
+.ge-table-row-even {background-color: var(--ge-table-row-even-bg); }
+.ge-table-column-odd {background-color: var(--ge-table-column-odd-bg); }
+.ge-table-column-even {background-color: var(--ge-table-column-even-bg); }
+
+.ge-table-hover-column { background-color: var(--ge-table-hover-column-bg); }
+.ge-table-hover-row { background-color: var(--ge-table-hover-row-bg); }
+
+.ge-table-focus-border { background-color: var(--ge-table-focus-border); }
+.ge-table-color-col-resize-handle-hover { background-color: var(--ge-table-color-col-resize-handle-hover-bg); }
+.ge-table-color-dragged-col-div { background-color: var(--ge-table-color-dragged-col-div-bg); }
+.ge-table-color-drop-zone { background-color: var(--ge-table-color-drop-zone-bg); }
+.ge-table-color-drop-zone { background-color: var(--ge-table-color-drop-zone); }
+.ge-table-color-tree-arrow-collapsed-color { background-color: var(--ge-table-color-tree-arrow-collapsed-color); }
+.ge-table-color-error { color: var(--ge-table-color-error-text); }
+.ge-table-tree-arrow-collapsed { color: var(--ge-table-tree-arrow-collapsed-color);}
+.ge-table-column-resize-handle:hover { background-color: var(--ge-table-column-resize-handle-border) }
+
+.ge-table-drop-zone { background-color: var(--ge-table-drop-zone-bg); }
+.ge-table-dragged-col-div { background-color: var(--ge-table-dragged-col-div-bg); }
