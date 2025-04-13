@@ -1038,7 +1038,7 @@ class Qe {
    */
   publishGeMouseEvent(e, t) {
     var s;
-    this.mouseEvent = e, this.geMouseEventOld = (s = this.geMouseEvent) == null ? void 0 : s.clone(), this.geMouseEvent = this.tableScope.createGeMouseEvent(e), this.geMouseEvent && (this.geMouseEvent.clickCount = t), this.tableScope.onMouseClicked(this.geMouseEvent, this.geMouseEventOld), this.tableScope.publishGeMouseEvent(this.geMouseEvent), t === 1 && this.tableScope.debounceRepaint();
+    this.mouseEvent = e, this.geMouseEventOld = (s = this.geMouseEvent) == null ? void 0 : s.clone(), this.geMouseEvent = this.tableScope.createGeMouseEvent(e), this.geMouseEvent && (this.geMouseEvent.clickCount = t), this.tableScope.onMouseClicked(this.geMouseEvent, this.geMouseEventOld), this.tableScope.publishGeMouseEvent(this.geMouseEvent);
   }
   /**
    * Update the collapsed/expanded state of a tree row.
@@ -6141,8 +6141,6 @@ class Ve {
       const c = a.join("");
       e.innerHTML = `
             <select
-                type="text"
-                value="${l}"
                 autofocus
                 data-listen="change"
                 data-area="${o}"

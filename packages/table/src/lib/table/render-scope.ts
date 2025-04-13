@@ -220,6 +220,7 @@ export class RenderScope extends EleScope {
    * @return {void} This method does not return any value.
    */
   repaintHard() {
+    this.tableModel.recalcHeightAndPadding();
     this.resetSizeOfWrapperDiv();
     this.adjustContainersAndRows();
     this.adjustAfterScrolling();
