@@ -8,10 +8,9 @@ import {
   editInputPipeForNumber,
   EventAdapter,
   EventListenerIf,
-  px200,
-  px50,
   SelectCellRenderer,
   SimpleDomService,
+  Size,
   TableFactory,
   TableOptions,
   TableOptionsIf,
@@ -24,48 +23,104 @@ import { TodoIf } from './todo.if';
 export class AppElement extends HTMLElement {
 
 
-  connectedCallback() {
+  private tableScope: TableScope | null = null;
+  private bodyModel: AreaModelObjectArray<TodoIf> | null = null;
 
-    this.innerHTML = `
+  private containerDiv: HTMLDivElement | null = null;
+  private deleteButton: HTMLDivElement | null = null;
+  private addButton: HTMLDivElement | null = null;
+  private rowCountLabel: HTMLDivElement | null = null;
+
+
+  connectedCallback() {
+    this.innerHTML = this.getTemplateHtml();
+
+    this.containerDiv = document.querySelector('.container-div') as HTMLDivElement;
+    this.deleteButton = document.querySelector('.delete-btn') as HTMLDivElement;
+    this.addButton = document.querySelector('.add-btn') as HTMLDivElement;
+    this.rowCountLabel = document.querySelector('.rowcount-label') as HTMLDivElement;
+
+    // Attach event listeners
+    this.deleteButton.addEventListener('click', () => this.handleDelete());
+    this.addButton.addEventListener('click', () => this.handleAdd());
+
+    const columnDefs = this.getColumnDefinitions();
+    const tableOptions = this.getTableOptions();
+
+    const initialRows: TodoIf[] = this.getDefaultRows();
+    const tableModel = TableFactory.createTableModel({
+      rows: initialRows,
+      columnDefs,
+      tableOptions
+    });
+
+    const eventListener: EventListenerIf = new EventAdapter();
+    eventListener.onCheckboxChanged = () => this.syncDeleteButtonLabel();
+
+    this.tableScope = new TableScope(
+      this.containerDiv,
+      tableModel,
+      new SimpleDomService(),
+      tableOptions,
+      eventListener
+    );
+
+    this.tableScope.firstInit();
+    this.bodyModel = this.tableScope.getApi().getTableModel().getBodyModel() as AreaModelObjectArray<TodoIf>;
+
+    // Initial sync of buttons and labels
+    this.syncDeleteButtonLabel();
+    this.syncRowCountLabel();
+  }
+
+  private handleDelete(): void {
+    if (confirm('Are you sure you want to delete?')) {
+      const rows = this.bodyModel?.getAllRows() ?? [];
+      const remainingRows = rows.filter(row => !row.checked);
+      this.bodyModel?.setRows(remainingRows);
+      this.tableScope?.repaintHard();
+      this.syncRowCountLabel();
+    }
+  }
+
+  private handleAdd(): void {
+    const rows = this.bodyModel?.getAllRows() ?? [];
+    const nextId = 1 + rows.reduce((maxId, row) => Math.max(maxId, row.id), 0);
+    const newTodo = new Todo(false, nextId, `Title ${nextId}`, 'Lorem ipsum', 0, new Date(), 'medium');
+    this.bodyModel?.setRows([newTodo, ...rows]);
+    this.tableScope?.repaintHard();
+    this.syncRowCountLabel();
+  }
+
+  private syncDeleteButtonLabel(): void {
+    const checkedCount = this.bodyModel?.getAllRows().filter(row => row.checked).length;
+    if (this.deleteButton) {
+      this.deleteButton.innerText = `Delete (${checkedCount})`;
+    }
+  }
+
+  private syncRowCountLabel(): void {
+    const count = this.bodyModel?.getAllRows().length;
+    if (this.rowCountLabel) {
+      this.rowCountLabel.innerText = `Rows: ${count}`;
+    }
+  }
+
+  private getTemplateHtml(): string {
+    return `
       <div class="button-div">
         <button class="add-btn">Add</button>
         <button class="delete-btn">Delete</button>
         <label class="rowcount-label"></label>
       </div>
       <div class="container-div"></div>`;
+  }
 
-    const ele = document.querySelector('.container-div') as HTMLDivElement;
-    const deleteBtnEle = document.querySelector('.delete-btn') as HTMLDivElement;
-    const addBtnEle = document.querySelector('.add-btn') as HTMLDivElement;
-    const rowCountEle = document.querySelector('.rowcount-label') as HTMLDivElement;
+  private getColumnDefinitions(): ColumnDefIf[] {
+    const px50 = new Size(50, 'px');
+    const px200 = new Size(200, 'px');
 
-    deleteBtnEle.addEventListener('click', (_e) => {
-      if (confirm('Are you sure you want to delete?')) {
-        const rows = bodyModel.getAllRows();
-        // Get array of checked rows:
-        const checkedRows = rows.filter(row => row.checked);
-        // Remove checked rows from rows:
-        const rows2 = rows.filter(row => !checkedRows.includes(row));
-        // update the model
-        bodyModel.setRows(rows2);
-        // trigger repaint:
-        tableScope.repaintHard();
-        syncRowCountLabel();
-      }
-    });
-
-    addBtnEle.addEventListener('click', (_e) => {
-      const rows = bodyModel.getAllRows();
-      const id = 1 + rows.reduce((id, todo)=> Math.max(id, todo.id), 0);
-      const todo = new Todo(false, id, 'Title ' + id, 'Lorem ipsum', 0, new Date(), 'medium');
-
-      bodyModel.setRows([todo, ...rows]);
-      tableScope.repaintHard();
-      syncRowCountLabel();
-    });
-
-
-    const columnDefs: ColumnDefIf[] = [
+    const defs: ColumnDefIf[] = [
       ColumnDef.create({
         property: 'checked',
         headerLabel: ' ',
@@ -90,8 +145,11 @@ export class AppElement extends HTMLElement {
         bodyRenderer: new DateToLocaleDateCellRenderer()
       }),
       ColumnDef.create({
-        property: 'priority', headerLabel: 'Priority', width: px200, editable: () => true,
-        getEditRenderer: (_rowIndex: number, _columnIndex: number) => new SelectCellRenderer([
+        property: 'priority',
+        headerLabel: 'Priority',
+        width: px200,
+        editable: () => true,
+        getEditRenderer: () => new SelectCellRenderer([
           new ValueLabel('low', 'Low'),
           new ValueLabel('medium', 'Medium'),
           new ValueLabel('high', 'High'),
@@ -99,15 +157,18 @@ export class AppElement extends HTMLElement {
         ])
       })
     ];
-    columnDefs.forEach(cd => {
-      cd.sortable = () => true;
-      cd.sortIconVisible = () => true;
+
+    defs.forEach(def => {
+      def.sortable = () => true;
+      def.sortIconVisible = () => true;
     });
 
+    return defs;
+  }
 
-    const tableOptions: TableOptionsIf = {
+  private getTableOptions(): TableOptionsIf {
+    return {
       ...new TableOptions(),
-      //getSelectionModel: ()=> multiRowsSelectionModel, // don't use 'new instance' here! It must be a fixed reference!
       hoverColumnVisible: false,
       defaultRowHeights: {
         header: 34,
@@ -115,8 +176,10 @@ export class AppElement extends HTMLElement {
         footer: 0
       }
     };
+  }
 
-    const rows: TodoIf[] = [
+  private getDefaultRows(): TodoIf[] {
+    return [
       new Todo(false, 1, 'Dentist Appointment', ':-(', 12, new Date(), 'medium'),
       new Todo(true, 2, 'Grocery Shopping', 'Buy milk, eggs, and bread', 24, new Date(), 'high'),
       new Todo(false, 3, 'Team Meeting', 'Discuss project progress', 36, new Date(), 'low'),
@@ -128,47 +191,8 @@ export class AppElement extends HTMLElement {
       new Todo(true, 9, 'Office Presentation', 'Prepare slides for client meeting', 108, new Date(), 'urgent'),
       new Todo(false, 10, 'Plan Vacation', 'Research and book tickets', 120, new Date(), 'medium')
     ];
-    const tableModel = TableFactory.createTableModel({
-      rows,
-      columnDefs,
-      tableOptions
-    });
-
-
-    const eventListener: EventListenerIf = new EventAdapter();
-    eventListener.onCheckboxChanged = (_sm: any[]) => {
-      syncDeleteBtnLabel();
-    };
-
-
-    //const multiRowsSelectionModel = new MultiRowsSelectionModel(tableModel.getBodyModel() as AreaModelObjectArray<TodoIf>);
-
-
-    const tableScope = new TableScope(
-      ele,
-      tableModel,
-      new SimpleDomService(),
-      tableOptions,
-      eventListener
-    );
-    tableScope.firstInit();
-    const bodyModel: AreaModelObjectArray<TodoIf> = tableScope.getApi().getTableModel().getBodyModel() as AreaModelObjectArray<TodoIf>;
-
-    syncDeleteBtnLabel();
-    syncRowCountLabel();
-
-    function syncDeleteBtnLabel() {
-      const checkedCount = bodyModel.getAllRows().filter(row => row.checked).length;
-      deleteBtnEle.innerText = `Delete (${checkedCount})`;
-    }
-    function syncRowCountLabel() {
-      const count = bodyModel.getAllRows().length;
-      rowCountEle.innerText = `Rows: ${count}`;
-    }
-
   }
-
-
 }
+
 
 customElements.define('ts-todo-demo-root', AppElement);
