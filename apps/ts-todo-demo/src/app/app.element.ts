@@ -6,7 +6,7 @@ import {
   ColumnDefIf,
   DateToLocaleDateCellRenderer,
   editInputPipeForNumber,
-  EventAdapter,
+  EventCheckboxChangedHandler,
   EventListenerIf,
   SelectCellRenderer,
   SimpleDomService,
@@ -46,16 +46,20 @@ export class AppElement extends HTMLElement {
 
     const columnDefs = this.getColumnDefinitions();
     const tableOptions = this.getTableOptions();
-
     const initialRows: TodoIf[] = this.getDefaultRows();
+
     const tableModel = TableFactory.createTableModel({
       rows: initialRows,
       columnDefs,
       tableOptions
     });
 
-    const eventListener: EventListenerIf = new EventAdapter();
-    eventListener.onCheckboxChanged = () => this.syncDeleteButtonLabel();
+    const eventListener: EventListenerIf = new EventCheckboxChangedHandler(
+      (_evt: any[]) => this.syncDeleteButtonLabel()
+    );
+    // Alternate:
+    // const eventListener: EventListenerIf = new EventAdapter();
+    // eventListener.onCheckboxChanged = () => this.syncDeleteButtonLabel();
 
     this.tableScope = new TableScope(
       this.containerDiv,
@@ -79,6 +83,7 @@ export class AppElement extends HTMLElement {
       const remainingRows = rows.filter(row => !row.checked);
       this.bodyModel?.setRows(remainingRows);
       this.tableScope?.repaintHard();
+      this.syncDeleteButtonLabel();
       this.syncRowCountLabel();
     }
   }
