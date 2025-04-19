@@ -25,7 +25,7 @@ function _t(h = 500) {
     }, s;
   };
 }
-const Ie = "any", z = "undefined", ke = "null", De = "string", le = "number", ae = "boolean", Pe = "Array", j = "object", K = [ke, z, Ie];
+const Ie = "any", z = "undefined", ke = "null", De = "string", ae = "number", ce = "boolean", Pe = "Array", j = "object", K = [ke, z, Ie];
 class Fe {
   constructor(e) {
     this.propertyName = e, this.type = Ie;
@@ -48,12 +48,12 @@ class Ge {
 }
 class ze {
   constructor(e) {
-    this.propertyName = e, this.type = le;
+    this.propertyName = e, this.type = ae;
   }
 }
 class je {
   constructor(e) {
-    this.propertyName = e, this.type = ae;
+    this.propertyName = e, this.type = ce;
   }
 }
 class B {
@@ -133,7 +133,7 @@ class Bt {
               u = "      bodyRenderer: new SimpleArrayCellRenderer(),";
             d = 250;
           } else
-            n.type === le ? (u = "      bodyRenderer: new NumberCellRenderer(),", f = "ge-table-text-align-right") : n.type === ae && (u = "      bodyRenderer: new TrueFalseCellRenderer(),", f = "ge-table-text-align-center", d = 80);
+            n.type === ae ? (u = "      bodyRenderer: new NumberCellRenderer(),", f = "ge-table-text-align-right") : n.type === ce && (u = "      bodyRenderer: new TrueFalseCellRenderer(),", f = "ge-table-text-align-center", d = 80);
           e.push(`    ColumnDef.create({
       property: "${l}",
       headerLabel: "${c}",
@@ -195,7 +195,7 @@ export class ${t} implements CellRendererIf {
     `);
   }
 }
-class me {
+class be {
   /**
    *
    *  Fixes an invalid json like this:
@@ -270,10 +270,10 @@ class Ue {
     return `${this.path} -> : ${((e = this.propertyItem) == null ? void 0 : e.toString()) ?? ""}`;
   }
 }
-const be = "Entity";
+const ye = "Entity";
 function Ye(h) {
   let e = Ke(Xe(h));
-  return e.includes(be) || (e = e + be), e;
+  return e.includes(ye) || (e = e + ye), e;
 }
 function Ke(h) {
   if (!h || h.length === 0)
@@ -374,7 +374,7 @@ class Ht {
   json2PropertyType(e, t = "") {
     let s;
     if (typeof e == "string") {
-      const o = new me().fixJSON(e);
+      const o = new be().fixJSON(e);
       s = this.json2Object(o);
     } else
       s = e;
@@ -490,7 +490,7 @@ class Ht {
   json2ValueInfos(e, t = "") {
     let s;
     if (typeof e == "string") {
-      const o = new me().fixJSON(e);
+      const o = new be().fixJSON(e);
       s = this.json2Object(o);
     } else
       s = e;
@@ -603,7 +603,7 @@ class Ht {
     ]);
   }
   createPropertyType(e, t) {
-    return e === null ? new Ne(t) : e === void 0 ? new te(t) : typeof e === De ? new Ge(t) : typeof e === le && !isNaN(e) ? new ze(t) : typeof e === ae ? new je(t) : Array.isArray(e) ? new B(t) : typeof e === j ? new D(t, Ye(t)) : new te(t);
+    return e === null ? new Ne(t) : e === void 0 ? new te(t) : typeof e === De ? new Ge(t) : typeof e === ae && !isNaN(e) ? new ze(t) : typeof e === ce ? new je(t) : Array.isArray(e) ? new B(t) : typeof e === j ? new D(t, Ye(t)) : new te(t);
   }
 }
 class Vt {
@@ -709,12 +709,12 @@ function ie(h) {
 function Je(h) {
   return h && h.type === "CheckboxColumnDef";
 }
-class ce {
+class de {
   constructor(e = -1, t = -1, s = -1, o = -1, i, r, n, l = 0, a = 0, c = 0, d = "") {
     this.rowIndex = e, this.rowTop = t, this.columnIndex = s, this.columnLeft = o, this.areaIdent = i, this.sideIdent = r, this.originalEvent = n, this.clickCount = l, this.draggingX = a, this.draggingY = c, this.action = d;
   }
   clone() {
-    return new ce(
+    return new de(
       this.rowIndex,
       this.rowTop,
       this.columnIndex,
@@ -1314,7 +1314,7 @@ class et {
     return this.tableScope.tableModel;
   }
 }
-class de {
+class he {
   constructor(e) {
     this.getStorageKeyFn = e;
   }
@@ -1381,7 +1381,7 @@ class de {
   //   }
   // }
 }
-class tt extends de {
+class tt extends he {
   constructor(e) {
     super(e), this.SCROLL_STATE = "scrollState", this.scrollOffset = [0, 0], this.load();
   }
@@ -1408,7 +1408,7 @@ class st {
     this.mode = e, this.rowIds = t, this.allCollapsed = s, this.allExpanded = o;
   }
 }
-class ot extends de {
+class ot extends he {
   constructor(e) {
     super(e), this.COLLAPSED_EXPANDED_STATE = "collapsedExpandedState", this.collapsedExpandedState = new st(), this.load();
   }
@@ -1442,7 +1442,7 @@ class ot extends de {
     this.checkAndPersistItem(this.COLLAPSED_EXPANDED_STATE, this.collapsedExpandedState);
   }
 }
-class it extends de {
+class it extends he {
   constructor(e) {
     super(e), this.SORTING_STATE = "sortingState", this.sortItems = [], this.load();
   }
@@ -1786,7 +1786,7 @@ class lt extends rt {
    * @return {void} This method does not return any value.
    */
   repaintHard() {
-    this.resetSizeOfWrapperDiv(), this.adjustContainersAndRows(), this.adjustAfterScrolling();
+    this.tableModel.recalcHeightAndPadding(), this.resetSizeOfWrapperDiv(), this.adjustContainersAndRows(), this.adjustAfterScrolling();
   }
   /**
    * Recalculates the column widths of the table.
@@ -2241,12 +2241,12 @@ class lt extends rt {
     parent: c,
     lastRowOfModel: d
   }) {
-    var fe;
+    var me;
     const f = this.editorRenderer && this.editorRendererRow === o && this.editorRendererColumn === i ? this.editorRenderer : e.getCellRenderer(o, i), p = { left: r, width: n, height: l, top: a, index: i }, m = e.getRowByIndex(o);
     let g = "none";
     if (i === this.getTreeArrowColumnIndex() && N(m)) {
       const v = m;
-      (fe = v.children) != null && fe.length ? v.expanded ? g = "expanded" : g = "collapsed" : g = "hidden";
+      (me = v.children) != null && me.length ? v.expanded ? g = "expanded" : g = "collapsed" : g = "hidden";
     }
     let x;
     if (t === "header") {
@@ -2634,12 +2634,12 @@ class dt {
     this.rowIndex = e, this.columnIndex = t;
   }
 }
-class he {
+class ue {
   constructor(e) {
     this.cells = e;
   }
   static createSingle(e, t) {
-    return new he([new dt(e, t)]);
+    return new ue([new dt(e, t)]);
   }
 }
 class ht {
@@ -2798,7 +2798,7 @@ class gt {
     return this.shortcutActionIdMapping;
   }
 }
-class ye {
+class re {
   onCheckboxChanged(e) {
   }
   onContextmenu(e) {
@@ -2866,7 +2866,7 @@ class mt {
     }
   }
 }
-class ue {
+class pe {
   constructor(e = "none", t = "single") {
     this.selectionType = e, this.selectionMode = t, this.ranges = [], this.negativeRanges = [], this.allSelected = !1, this.silent = !1, this.listenerArr = [];
   }
@@ -2985,7 +2985,7 @@ class bt {
     return [this.rowIndex, this.columnIndex];
   }
 }
-class pe {
+class ge {
   constructor(e = new O(
     "❯",
     "",
@@ -2999,14 +2999,14 @@ class pe {
   }
   // `⊖ `,  `⊕ `;
 }
-const yt = new ue(), xt = new bt("cell");
+const yt = new pe(), xt = new bt("cell");
 class X {
   constructor() {
     this.overflowX = "auto", this.overflowY = "auto", this.horizontalBorderVisible = !0, this.verticalBorderVisible = !0, this.footerSeparatorBorderVisible = !0, this.headerSeparatorBorderVisible = !0, this.fixedEastSeparatorBorderVisible = !0, this.fixedWestSeparatorBorderVisible = !0, this.tableTopBorderVisible = !0, this.tableBottomBorderVisible = !0, this.hoverRowVisible = !0, this.hoverColumnVisible = !0, this.columnsResizable = !0, this.columnsDraggable = !0, this.columnResizeHandleWidthInPx = 4, this.defaultRowHeights = {
       header: 34,
       body: 34,
       footer: 34
-    }, this.footerVerticalSeparator = !1, this.headerToggleExpandCollapseIcons = !1, this.headerVerticalSeparator = !1, this.treeOptions = new Oe(), this.headerGroupOptions = new pe(), this.showCheckboxWihoutExtraColumn = !1, this.externalFilterFunction = void 0, this.sortedOptions = new $e(), this.sortOrder = ["asc", "desc"], this.resizeEventDebounceDelay = 500, this.getEditRenderer = (e, t) => new mt(), this.getSelectionModel = () => yt, this.getFocusModel = () => xt;
+    }, this.footerVerticalSeparator = !1, this.headerToggleExpandCollapseIcons = !1, this.headerVerticalSeparator = !1, this.treeOptions = new Oe(), this.headerGroupOptions = new ge(), this.showCheckboxWihoutExtraColumn = !1, this.externalFilterFunction = void 0, this.sortedOptions = new $e(), this.sortOrder = ["asc", "desc"], this.resizeEventDebounceDelay = 500, this.getEditRenderer = (e, t) => new mt(), this.getSelectionModel = () => yt, this.getFocusModel = () => xt;
   }
 }
 const W = class W {
@@ -3212,7 +3212,7 @@ class St {
 class _e extends lt {
   constructor(e, t, s, o, i, r = new J(), n = new St()) {
     var c;
-    if (super(e, t, new qe(s), o), this.eventListener = i, this.copyService = r, this.excelService = n, this.licenseManager = V.getInstance(), this.selectionService = new ht(this), this.api = new et(this), this.mouseStartAction = "", this.mouseStartWidth = -1, this.mouseStartColumnIndex = -1, this.dragFrom = -1, this.dragTo = -1, this.lastDragFrom = -1, this.lastDragTo = -1, this.firstDraggingRendering = !0, t.setTableScope(this), i || (this.eventListener = new ye()), (c = this.tableOptions) != null && c.autoRestoreOptions) {
+    if (super(e, t, new qe(s), o), this.eventListener = i, this.copyService = r, this.excelService = n, this.licenseManager = V.getInstance(), this.selectionService = new ht(this), this.api = new et(this), this.mouseStartAction = "", this.mouseStartWidth = -1, this.mouseStartColumnIndex = -1, this.dragFrom = -1, this.dragTo = -1, this.lastDragFrom = -1, this.lastDragTo = -1, this.firstDraggingRendering = !0, t.setTableScope(this), i || (this.eventListener = new re()), (c = this.tableOptions) != null && c.autoRestoreOptions) {
       const d = this.tableOptions.autoRestoreOptions, u = d.getStorageKeyFn;
       u && (d.autoRestoreScrollPosition && (this.storeScrollPosStateService = new tt(u)), d.autoRestoreCollapsedExpandedState && (this.storeStateCollapsedExpandService = new ot(u)), d.autoRestoreSortingState && (this.storeSortingService = new it(u)));
     }
@@ -3234,7 +3234,7 @@ class _e extends lt {
    *
    * @return {TableScope} - The newly created TableScope instance.
    */
-  static create(e, t, s = new X(), o = new ye(), i = new ft(), r = new J()) {
+  static create(e, t, s = new X(), o = new re(), i = new ft(), r = new J()) {
     return new _e(e, t, i, s, o, r);
   }
   /**
@@ -3263,7 +3263,7 @@ class _e extends lt {
     return !1;
   }
   updateModelValueAfterEdit(e, t, s, o) {
-    e === "body" && this.tableModel.getAreaModel(e).setValue(t, s, o) && (this.resetEditorRenderer(), this.repaint(), this.eventListener.onModelChanged(he.createSingle(t, s)), this.hostElement.focus());
+    e === "body" && this.tableModel.getAreaModel(e).setValue(t, s, o) && (this.resetEditorRenderer(), this.repaint(), this.eventListener.onModelChanged(ue.createSingle(t, s)), this.hostElement.focus());
   }
   /**
    * Retrieves the TableApi object.
@@ -3292,7 +3292,7 @@ class _e extends lt {
    * @return {GeMouseEvent} - The created GeMouseEvent object.
    */
   createGeMouseEvent(e) {
-    const t = new ce();
+    const t = new de();
     if (t.originalEvent = e, e) {
       const s = e.target;
       if ([t.areaIdent, t.sideIdent] = this.getAreaAndSideIdentByAttr(s), t.rowIndex = this.getNumberByAttr(s, "data-row-index"), t.columnIndex = this.getNumberByAttr(s, "data-col-index"), t.action = this.getStringByAttr(s, "data-ge-action"), t.areaIdent) {
@@ -3624,6 +3624,13 @@ class _e extends lt {
     this.tableModel.recalcPadding(), this.resetSizeOfWrapperDiv(), this.adjustContainersAndRows();
   }
 }
+class Wt extends re {
+  constructor(e) {
+    super(), this.onCheckboxChangedCallback = e, super.onCheckboxChanged = (t) => {
+      this.onCheckboxChangedCallback(t);
+    };
+  }
+}
 const q = class q {
 };
 q.themes = ["light", "combat", "paper", "blackboard"], q.vars = {
@@ -3866,11 +3873,11 @@ class we {
     this.data = e, this.expanded = t, this.children = s, this.parent = o, this.deep = i, this.checked = r, this.keep = n, this.type = "TreeRow";
   }
 }
-class re {
+class ne {
   static buildTreeRows(e, t = "children", s = 12) {
     const o = [];
     for (const i of e)
-      o.push(re.buildTreeRow(i, t, void 0, 0, s));
+      o.push(ne.buildTreeRow(i, t, void 0, 0, s));
     return o;
   }
   static buildTreeRow(e, t = "children", s = new we(e, !0, [], void 0, 0), o = 0, i = 12) {
@@ -3881,7 +3888,7 @@ class re {
     if (r)
       for (const l of r) {
         const a = new we(l, !0, [], s, o + 1);
-        if ((n = s.children) == null || n.push(a), re.buildTreeRow(
+        if ((n = s.children) == null || n.push(a), ne.buildTreeRow(
           l,
           t,
           a,
@@ -3944,8 +3951,8 @@ class H {
     );
   }
 }
-const Wt = new y(500, "px"), Nt = new y(400, "px"), vt = new y(300, "px"), Gt = new y(290, "px"), zt = new y(280, "px"), jt = new y(270, "px"), Ut = new y(260, "px"), Yt = new y(250, "px"), Kt = new y(240, "px"), Xt = new y(230, "px"), Jt = new y(220, "px"), qt = new y(210, "px"), Ce = new y(200, "px"), Zt = new y(190, "px"), Qt = new y(180, "px"), es = new y(170, "px"), ts = new y(160, "px"), ss = new y(150, "px"), os = new y(140, "px"), is = new y(130, "px"), rs = new y(120, "px"), ns = new y(110, "px"), ls = new y(100, "px"), as = new y(90, "px"), cs = new y(80, "px"), ds = new y(70, "px"), hs = new y(60, "px"), us = new y(50, "px"), ps = new y(40, "px"), gs = new y(30, "px"), fs = new y(20, "px"), ms = new y(10, "px"), bs = new y(0, "px");
-class ge {
+const Nt = new y(500, "px"), Gt = new y(400, "px"), vt = new y(300, "px"), zt = new y(290, "px"), jt = new y(280, "px"), Ut = new y(270, "px"), Yt = new y(260, "px"), Kt = new y(250, "px"), Xt = new y(240, "px"), Jt = new y(230, "px"), qt = new y(220, "px"), Zt = new y(210, "px"), Ce = new y(200, "px"), Qt = new y(190, "px"), es = new y(180, "px"), ts = new y(170, "px"), ss = new y(160, "px"), os = new y(150, "px"), is = new y(140, "px"), rs = new y(130, "px"), ns = new y(120, "px"), ls = new y(110, "px"), as = new y(100, "px"), cs = new y(90, "px"), ds = new y(80, "px"), hs = new y(70, "px"), us = new y(60, "px"), ps = new y(50, "px"), gs = new y(40, "px"), fs = new y(30, "px"), ms = new y(20, "px"), bs = new y(10, "px"), ys = new y(0, "px");
+class fe {
   constructor(e, t = [], s = -1) {
     this.areaIdent = e, this.columnDefs = t, this.defaultRowHeight = s, this.rowSelectionModel = void 0, this.yPositions = [], this.cellRenderers = t.map((o) => o.rendererMap[e]);
   }
@@ -4041,7 +4048,7 @@ class ge {
       this.yPositions[t + 1] = this.getRowHeight(t) + this.yPositions[t];
   }
 }
-class P extends ge {
+class P extends fe {
   constructor(e, t, s, o = []) {
     super(e, o, s), this.areaIdent = e, this.arr = t, this.defaultRowHeight = s, this.columnDefs = o, this.filteredArr = [...t];
   }
@@ -4170,7 +4177,7 @@ class Be {
     return s * ("" + e).localeCompare("" + t);
   }
 }
-class ve extends ge {
+class ve extends fe {
   constructor(e, t, s, o = []) {
     super(e, o, s), this.areaIdent = e, this.rows = t, this.defaultRowHeight = s, this.columnDefs = o, this.type = "AreaModelTree", this.sorterService = new Be(), this.service = new At(), this.properties = o.map((i) => i.property), this.flattenRows = this.service.flattenTree(t), this.filteredFlattenRows = [...this.flattenRows];
   }
@@ -4760,7 +4767,7 @@ class se {
     return this.tableScope;
   }
 }
-class Et extends ge {
+class Et extends fe {
   constructor(e, t, s, o = []) {
     super(e, o, s), this.areaIdent = e, this.rows = t, this.defaultRowHeight = s, this.columnDefs = o, this.sorterService = new Be(), this.filteredRows = [...t], this.properties = o.map((i) => i.property);
   }
@@ -5261,7 +5268,7 @@ class _ {
     );
   }
 }
-const ys = [
+const xs = [
   "COPY_2_CLIPBOARD",
   "START_EDITING",
   "TOGGLE_SELECTION",
@@ -5289,7 +5296,7 @@ class Tt {
     this.emmitDataKey = e, this.emmitCancelKey = t, this.queryId = s, this.filter = o, this.sorting = i, this.startIndex = r, this.endIndex = n;
   }
 }
-class xs extends Tt {
+class ws extends Tt {
   constructor(e, t, s, o, i, r, n, l) {
     super(
       e,
@@ -5307,20 +5314,20 @@ class It {
     this.value = e, this.label = t;
   }
 }
-class ws {
+class Ss {
   constructor(e, t) {
     this.index = e, this.px = t;
   }
 }
-const Ss = { body: ["ge-table-text-align-left"] }, Cs = { body: ["ge-table-text-align-center"] }, vs = { body: ["ge-table-text-align-right"] }, As = {
+const Cs = { body: ["ge-table-text-align-left"] }, vs = { body: ["ge-table-text-align-center"] }, As = { body: ["ge-table-text-align-right"] }, Rs = {
   header: ["ge-table-text-align-left"],
   body: ["ge-table-text-align-left"],
   footer: ["ge-table-text-align-left"]
-}, Rs = {
+}, Es = {
   header: ["ge-table-text-align-center"],
   body: ["ge-table-text-align-center"],
   footer: ["ge-table-text-align-center"]
-}, Es = {
+}, Ms = {
   header: ["ge-table-text-align-right"],
   body: ["ge-table-text-align-right"],
   footer: ["ge-table-text-align-right"]
@@ -5343,7 +5350,7 @@ class Me {
     }
   }
 }
-class Ms {
+class Ts {
   constructor() {
     this.type = "CheckboxColumnDef", this.property = "CheckboxColumn", this.headerLabel = "", this.width = new y(50, "px"), this.minWidth = new y(50, "px"), this.maxWidth = new y(100, "px"), this.rendererMap = new I(new Me(), new Me(), void 0), this.classes = new I(
       [],
@@ -5352,7 +5359,7 @@ class Ms {
     );
   }
 }
-class Ts {
+class Is {
   /**
    * A factory that creates a new AreaObjectMap with the given body renderer.
    *
@@ -5367,17 +5374,17 @@ class Ts {
     );
   }
 }
-class Is {
+class ks {
   constructor(e = "down", t) {
     this.status = e, this.originalEvent = t;
   }
 }
-class ks {
+class Ds {
   constructor(e, t, s, o, i = {}) {
     this.area = e, this.rowIndex = t, this.columnIndex = s, this.value = o, this.cssClasses = i;
   }
 }
-class Ds {
+class Ps {
   constructor() {
     this.autoRestoreSortingState = !1, this.autoRestoreCollapsedExpandedState = !1, this.autoRestoreScrollPosition = !1, this.autoRestoreCheckedState = !1, this.autoRestoreSelectedState = !1, this.getStorageKeyFn = void 0, this.isSame = (e, t, s) => {
       if (e && t && s.getRowId) {
@@ -5574,7 +5581,7 @@ class T {
       e.push(o.data + "    rowIndex:" + o.rowIndex), (s = o.children) != null && s.length && T.iterateThrowColumns(e, o.children);
   }
 }
-class Ps {
+class Fs {
   constructor() {
     this.areaIdent = "body", this.rowSelectionModel = void 0;
   }
@@ -5645,7 +5652,7 @@ class Ps {
   }
 }
 const Z = class Z {
-  constructor(e = new pe()) {
+  constructor(e = new ge()) {
     this.headerGroupOptions = e;
   }
   render(e, t, s, o, i, r, n) {
@@ -5684,10 +5691,10 @@ const Z = class Z {
   }
 };
 Z.toggleHeaderGroup = "toggleHeaderGroup";
-let ne = Z;
-class Fs {
-  constructor(e = "header", t, s = [], o, i = new pe()) {
-    this.areaIdent = e, this.groups = t, this.columnDefs = s, this.defaultRowHeight = o, this.headerGroupOptions = i, this.gammaCells = !0, this.arr = [], this.groupExts = [], this.cellGroupExtCellRenderer = new ne(this.headerGroupOptions), this.groupExts = T.buildGroupExts(t), this.init();
+let le = Z;
+class Ls {
+  constructor(e = "header", t, s = [], o, i = new ge()) {
+    this.areaIdent = e, this.groups = t, this.columnDefs = s, this.defaultRowHeight = o, this.headerGroupOptions = i, this.gammaCells = !0, this.arr = [], this.groupExts = [], this.cellGroupExtCellRenderer = new le(this.headerGroupOptions), this.groupExts = T.buildGroupExts(t), this.init();
   }
   init() {
     var e;
@@ -5785,7 +5792,7 @@ class Fs {
     return t != null && t.toggle && t.visibility !== "always" && (t.closed = !t.closed, this.init()), T.buildColumnDefs(this.groupExts);
   }
 }
-class Ls {
+class Os {
   filterPredict(e, t, s = this.objectToString.bind(this)) {
     if (!e)
       return !1;
@@ -5839,12 +5846,12 @@ class Ls {
     return t.join(" ").toLowerCase();
   }
 }
-class Os {
+class $s {
   static bodyRenderer(e) {
     return new I(void 0, e, void 0);
   }
 }
-class $s {
+class _s {
   constructor(e, t = !0, s = !1) {
     this.property = e, this.skipCheckableCheck = t, this.readonly = s;
   }
@@ -5869,12 +5876,12 @@ class $s {
     }
   }
 }
-class _s {
+class Bs {
   render(e, t, s, o, i, r, n) {
     r && (e.innerText = new Date(r).toISOString());
   }
 }
-class Bs {
+class Hs {
   constructor() {
     this.formatter = new Intl.DateTimeFormat("de-DE", {
       year: "numeric",
@@ -5897,17 +5904,17 @@ class Bs {
     }
   }
 }
-class Hs {
+class Vs {
   render(e, t, s, o, i, r, n) {
     r && (e.innerText = new Date(r).toLocaleDateString());
   }
 }
-class Vs {
+class Ws {
   render(e, t, s, o, i, r, n) {
     r === "male" || r === "m" ? e.innerText = "♂" : (r === "female" || r === "f") && (e.innerText = "♀");
   }
 }
-class Ws {
+class Ns {
   constructor(e = 100, t = !1) {
     this.maxValue = e, this.labelVisible = t;
   }
@@ -5937,17 +5944,17 @@ class Ws {
     }
   }
 }
-class Ns {
+class Gs {
   render(e, t, s, o, i, r, n) {
     r === "true" || r === !0 ? e.innerHTML = '<span class="ge-true-text-color">✅</span>' : r === "false" || r === !1 ? e.innerHTML = '<span class="ge-false-text-color">❌</span>' : e.innerText = "";
   }
 }
-class Gs {
+class zs {
   render(e, t, s, o, i, r, n) {
     r && (e.innerText = new Date(r).toISOString().replace(/T/g, " ").replace(/\..*/g, ""));
   }
 }
-class zs {
+class js {
   constructor(e = Number.MIN_SAFE_INTEGER, t = Number.MAX_SAFE_INTEGER) {
     this.min = e, this.max = t;
   }
@@ -5958,7 +5965,7 @@ class zs {
 </div>`, (typeof r == "string" || isNaN(r) || r < this.min || r > this.max) && n.addClass(e, "ge-cell-error"));
   }
 }
-class js {
+class Us {
   constructor(e) {
     this.property = e;
   }
@@ -5977,7 +5984,7 @@ class js {
     }
   }
 }
-class Us {
+class Ys {
   render(e, t, s, o, i, r, n) {
     if (r != null && r.length) {
       const l = n.createElement("div");
@@ -5990,7 +5997,7 @@ class Us {
       e.innerText = "";
   }
 }
-class Ys {
+class Ks {
   constructor(e, t = 100, s = !1) {
     this.property = e, this.maxValue = t, this.labelVisible = s;
   }
@@ -6022,7 +6029,7 @@ class Ys {
     }
   }
 }
-class Ks {
+class Xs {
   render(e, t, s, o, i, r, n) {
     if (r) {
       e.innerHTML = `
@@ -6117,7 +6124,7 @@ class Pt {
     return Array.isArray(e) && e.every((t) => t instanceof $) ? e : this.crudActions;
   }
 }
-const Xs = function(h, e, t) {
+const Js = function(h, e, t) {
   return h ? Number(h) : "";
 };
 class Ve {
@@ -6152,7 +6159,7 @@ class Ve {
     }
   }
 }
-class Js extends ue {
+class qs extends pe {
   constructor(e) {
     super("row", "multi"), this.model = e;
   }
@@ -6235,7 +6242,7 @@ class Js extends ue {
     this.isSelected(e, 0) ? this.unselectRow(e) : this.selectRow(e);
   }
 }
-class qs {
+class Zs {
   constructor(e, t, s) {
     this.r = e, this.g = t, this.b = s;
   }
@@ -6257,7 +6264,7 @@ class Y {
     return e < t.middleValue ? Y.getTwoColorGradientRGB(e, new Te(t.minValue, t.minColor, t.middleValue, t.middleColor)) : e > t.middleValue ? Y.getTwoColorGradientRGB(e, new Te(t.middleValue, t.middleColor, t.maxValue, t.maxColor)) : `rgb(${t.middleColor.r}, ${t.middleColor.g}, ${t.middleColor.b})`;
   }
 }
-class Zs {
+class Qs {
   constructor(e, t, s, o, i, r) {
     this.minValue = e, this.minColor = t, this.middleValue = s, this.middleColor = o, this.maxValue = i, this.maxColor = r;
   }
@@ -6468,7 +6475,7 @@ class Ot {
     };
   }
 }
-class Qs {
+class eo {
   constructor() {
     this.crudOptions = new Ot(), this.listenActionEvent = (e) => {
     };
@@ -6479,7 +6486,7 @@ class Qs {
     this.crudOptions = e, this.listenActionEvent = o, e.fetchList(e).then((i) => {
       var r, n, l, a;
       if (t.rows = i, i != null && i.length) {
-        const c = (r = t.columnDefs) != null && r.length ? t.columnDefs.map((x) => x.property) : this.extractProperties(i[0]), d = new ue("row", "multi"), u = () => d;
+        const c = (r = t.columnDefs) != null && r.length ? t.columnDefs.map((x) => x.property) : this.extractProperties(i[0]), d = new pe("row", "multi"), u = () => d;
         this.tableOptions = {
           ...new X(),
           ...t.tableOptions,
@@ -6609,42 +6616,42 @@ class Qs {
     return s;
   }
 }
-class eo {
+class to {
   constructor(e, t) {
     this.method = e, this.url = t;
   }
 }
 export {
-  ge as AbstractAreaModel,
+  fe as AbstractAreaModel,
   He as ActionEvent,
   Pt as ActionsCellRenderer,
   Fe as AnyPropertyType,
-  Ts as AreaMapFactory,
-  Ps as AreaModel,
+  Is as AreaMapFactory,
+  Fs as AreaModel,
   P as AreaModelArrayOfArrays,
-  Fs as AreaModelCellGroups,
+  Ls as AreaModelCellGroups,
   F as AreaModelHidden,
   Et as AreaModelObjectArray,
   Ee as AreaModelObjectArrayWithColumndefs,
   ve as AreaModelTree,
   I as AreaObjectMap,
   B as ArrayPropertyType,
-  Ds as AutoRestoreOptions,
+  Ps as AutoRestoreOptions,
   _t as AvoidDoubleExecution,
   je as BooleanPropertyType,
   kt as CellGroup,
   Dt as CellGroupExt,
-  ne as CellGroupExtCellRenderer,
+  le as CellGroupExtCellRenderer,
   R as CellRange,
   T as CellgroupFactory,
-  $s as CheckboxBooleanPropertyCellRenderer,
+  _s as CheckboxBooleanPropertyCellRenderer,
   Me as CheckboxCellRenderer,
-  Ms as CheckboxColumnDef,
+  Ts as CheckboxColumnDef,
   Rt as CheckboxModel,
-  xs as ChunkData,
+  ws as ChunkData,
   nt as ColAndRowspanModel,
   st as CollapsedExpandedData,
-  qs as ColorRgb,
+  Zs as ColorRgb,
   H as ColumnDef,
   Bt as ColumnDefGenerator,
   Ft as ColumnWidths,
@@ -6654,144 +6661,145 @@ export {
   oe as CrudObjectEdit,
   Lt as CrudObjectView,
   Ot as CrudOptions,
-  Qs as CrudTableModelFactory,
+  eo as CrudTableModelFactory,
   xe as CssVars,
-  Bs as DateToIntlDDMMYYYYCellRenderer,
-  _s as DateToIsoCellRenderer,
-  Hs as DateToLocaleDateCellRenderer,
-  Gs as DateToTecCellRenderer,
+  Hs as DateToIntlDDMMYYYYCellRenderer,
+  Bs as DateToIsoCellRenderer,
+  Vs as DateToLocaleDateCellRenderer,
+  zs as DateToTecCellRenderer,
   G as DefaultRowHeights,
   rt as EleScope,
-  ye as EventAdapter,
+  re as EventAdapter,
+  Wt as EventCheckboxChangedHandler,
   St as ExcelService,
   Se as FalseFn,
   bt as FocusModel,
   dt as GeCellIndices,
   Y as GeCssColorUtil,
-  Ls as GeFilterService,
-  Is as GeKeyEvent,
-  he as GeModelChangeEvent,
-  ce as GeMouseEvent,
+  Os as GeFilterService,
+  ks as GeKeyEvent,
+  ue as GeModelChangeEvent,
+  de as GeMouseEvent,
   L as GeoData,
   O as Icon,
-  ws as IndexAndPx,
+  Ss as IndexAndPx,
   mt as InputCellRenderer,
   ct as InputHandler,
-  me as JsonService,
+  be as JsonService,
   V as LicenseManager,
-  Vs as MaleFemaleToIconCellRenderer,
+  Ws as MaleFemaleToIconCellRenderer,
   Qe as MouseHandler,
   Ze as MouseTargetData,
-  Js as MultiRowsSelectionModel,
+  qs as MultiRowsSelectionModel,
   Ne as NullPropertyType,
-  Ws as NumberCellProgressBarCellRenderer,
-  zs as NumberCellRenderer,
+  Ns as NumberCellProgressBarCellRenderer,
+  js as NumberCellRenderer,
   ze as NumberPropertyType,
   D as ObjectPropertyType,
   pt as OsxShortcutActionIdMapping,
   Ie as PROPERTY_TYPE_KEY_ANY,
   Pe as PROPERTY_TYPE_KEY_ARRAY,
-  ae as PROPERTY_TYPE_KEY_BOOLEAN,
+  ce as PROPERTY_TYPE_KEY_BOOLEAN,
   ke as PROPERTY_TYPE_KEY_NULL,
-  le as PROPERTY_TYPE_KEY_NUMBER,
+  ae as PROPERTY_TYPE_KEY_NUMBER,
   j as PROPERTY_TYPE_KEY_OBJECT,
   De as PROPERTY_TYPE_KEY_STRING,
   z as PROPERTY_TYPE_KEY_UNDEFINED,
   Re as Padding,
-  Ks as PositiveAndNegativeNumberRenderer,
-  Ys as ProgressBarCellRenderer,
+  Xs as PositiveAndNegativeNumberRenderer,
+  Ks as ProgressBarCellRenderer,
   Le as PropertyItem,
   Ht as PropertyTypeService,
   lt as RenderScope,
-  Os as Renderer,
+  $s as Renderer,
   Tt as RequestChunk,
   wt as ResizeHandler,
   Vt as SchemeGenerator,
   Ve as SelectCellRenderer,
-  ue as SelectionModel,
+  pe as SelectionModel,
   ht as SelectionService,
   gt as ShortcutService,
-  Us as SimpleArrayCellRenderer,
+  Ys as SimpleArrayCellRenderer,
   ft as SimpleDomService,
   y as Size,
   at as SortItem,
   $e as SortedOptions,
-  js as StarRatingCellRenderer,
+  Us as StarRatingCellRenderer,
   ot as StoreStateCollapsedExpandService,
   tt as StoreStateScrollPosService,
   it as StoreStateSortingService,
   Ge as StringPropertyType,
   et as TableApi,
-  ks as TableCellUpdateEvent,
+  Ds as TableCellUpdateEvent,
   _ as TableFactory,
   se as TableModel,
   Mt as TableModelAndOptions,
   X as TableOptions,
   _e as TableScope,
-  Zs as ThreeColorGradientArg,
+  Qs as ThreeColorGradientArg,
   Ae as TreeCheckboxModel,
-  re as TreeFactory,
+  ne as TreeFactory,
   Oe as TreeOptions,
   we as TreeRow,
   At as TreeRowService,
-  Ns as TrueFalseCellRenderer,
+  Gs as TrueFalseCellRenderer,
   Ct as TrueFn,
   Te as TwoColorGradientArg,
   K as UNIMPORTANT_TYPES,
   te as UndefinedPropertyType,
-  eo as UrlInfo,
+  to as UrlInfo,
   Ue as ValueInfo,
   It as ValueLabel,
   ut as WindowsShortcutActionIdMapping,
-  ys as actionIds,
-  Rs as allCenter,
-  As as allLeft,
-  Es as allRight,
-  Cs as bodyCenter,
-  Ss as bodyLeft,
-  vs as bodyRight,
+  xs as actionIds,
+  Es as allCenter,
+  Rs as allLeft,
+  Ms as allRight,
+  vs as bodyCenter,
+  Cs as bodyLeft,
+  As as bodyRight,
   We as debounce,
-  Xs as editInputPipeForNumber,
-  be as entitySuffix,
+  Js as editInputPipeForNumber,
+  ye as entitySuffix,
   Xe as firstLetterUppercase,
   Q as getAreaIdentByString,
   Ye as getEntityName,
   ie as isAreaModelTree,
   Je as isCheckboxColumnDef,
   N as isTreeRow,
-  bs as px0,
-  ms as px10,
-  ls as px100,
-  ns as px110,
-  rs as px120,
-  is as px130,
-  os as px140,
-  ss as px150,
-  ts as px160,
-  es as px170,
-  Qt as px180,
-  Zt as px190,
-  fs as px20,
+  ys as px0,
+  bs as px10,
+  as as px100,
+  ls as px110,
+  ns as px120,
+  rs as px130,
+  is as px140,
+  os as px150,
+  ss as px160,
+  ts as px170,
+  es as px180,
+  Qt as px190,
+  ms as px20,
   Ce as px200,
-  qt as px210,
-  Jt as px220,
-  Xt as px230,
-  Kt as px240,
-  Yt as px250,
-  Ut as px260,
-  jt as px270,
-  zt as px280,
-  Gt as px290,
-  gs as px30,
+  Zt as px210,
+  qt as px220,
+  Jt as px230,
+  Xt as px240,
+  Kt as px250,
+  Yt as px260,
+  Ut as px270,
+  jt as px280,
+  zt as px290,
+  fs as px30,
   vt as px300,
-  ps as px40,
-  Nt as px400,
-  us as px50,
-  Wt as px500,
-  hs as px60,
-  ds as px70,
-  cs as px80,
-  as as px90,
+  gs as px40,
+  Gt as px400,
+  ps as px50,
+  Nt as px500,
+  us as px60,
+  hs as px70,
+  ds as px80,
+  cs as px90,
   $t as throttle,
   Ke as trimArraySuffixes
 };

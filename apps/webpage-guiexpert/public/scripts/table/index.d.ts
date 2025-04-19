@@ -18,6 +18,7 @@ export * from './lib/table/mouse-handler';
 export * from './lib/table/input-handler';
 export * from './lib/table/event-listener.if';
 export * from './lib/table/event-adapter';
+export * from './lib/table/event-checkbox-changed-handler';
 export * from './lib/table/resize-handler';
 export * from './lib/table/css-vars';
 export * from './lib/table/selection/event-selection-changed-listener.if';

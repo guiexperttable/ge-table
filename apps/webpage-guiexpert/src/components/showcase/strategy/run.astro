@@ -377,14 +377,25 @@ const idOut = 'out' + Math.random().toString(36).slice(2, 11);
       console.info(rows);
     }
     tableApi.updateCells([], true);
-    requestAnimationFrame(() => sendUpdateTableModelEvents());
+    triggerUpdate();
   }
 
   function requestUpdateIfFrozen(){
     if (freeze){
       freeze = false;
-      requestAnimationFrame(() => sendUpdateTableModelEvents());
+        triggerUpdate();
     }
+  }
+
+  let animationFrameHandle = null;
+
+  function triggerUpdate() {
+      setTimeout(()=>{
+          if (animationFrameHandle) {
+              cancelAnimationFrame(animationFrameHandle);
+          }
+          animationFrameHandle = requestAnimationFrame(() => sendUpdateTableModelEvents());
+      }, 8);
   }
 
 </script>
