@@ -3,11 +3,19 @@ import { Icon } from "astro-icon";
 import ContentSection from "~/components/content-section.astro";
 import GetStartedFooter from "~/components/getstarted/common/get-started-footer.astro";
 import Glogo from "./glogo.astro";
+
+const id = 'div' + Math.random().toString(36).slice(2, 11);
+
+
 ---
 
 <ContentSection title="HTML Data Table" id="intro">
   <Glogo slot="eyebrow" class="h-24 text-white md:h-32" size="100" />
   <Fragment slot="lead">
+
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-1 lg:grid-cols-1">
+      <div class:list={[id, 'table-div', 'cpu-table']}></div>
+    </div>
 
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
       <p>
@@ -32,3 +40,368 @@ import Glogo from "./glogo.astro";
   <GetStartedFooter />
 
 </ContentSection>
+
+<script
+  is:inline
+  define:vars={{id}}
+  type="module">
+
+  import {
+    TableOptions,
+    TableFactory,
+    TableScope,
+    EventAdapter,
+    SimpleDomService,
+    FocusModel,
+    ColumnDef,
+    px50,
+    px60,
+    px100,
+    px200
+  } from '/scripts/table/index.js';
+
+  // This example takes inspiration from: https://spread-grid.tomasz-rewak.com/examples/plotter
+
+  const boxChartRenderer = {
+    render: (
+      cellDiv,
+      rowIndex,
+      columnIndex,
+      areaIdent,
+      areaModel,
+      _cellValue,
+      _domService) => {
+
+      const row = areaModel.getRowByIndex(rowIndex);
+      const { perc25, perc75, min, max, median } = row;
+
+      const width = 200;
+      const height = 32;
+
+      const lineHeight = 8;
+      const h0 = height / 2;
+      const baseLinePoints = [
+        [min * 2, h0], [max * 2, h0]
+      ];
+      const baseLinePointsPath = baseLinePoints.map((p, i) => `${i === 0 ? 'M' : 'L'}${p[0]},${p[1]}`).join(' ');
+
+      const minLinePath = [
+        [min * 2, h0 - lineHeight], [min * 2, h0 + lineHeight]
+      ].map((p, i) => `${i === 0 ? 'M' : 'L'}${p[0]},${p[1]}`).join(' ');
+
+      const maxLinePath = [
+        [max * 2, h0 - lineHeight], [max * 2, h0 + lineHeight]
+      ].map((p, i) => `${i === 0 ? 'M' : 'L'}${p[0]},${p[1]}`).join(' ');
+
+      const medianLinePath = [
+        [median * 2, h0 - lineHeight], [median * 2, h0 + lineHeight]
+      ].map((p, i) => `${i === 0 ? 'M' : 'L'}${p[0]},${p[1]}`).join(' ');
+
+      const boxLinePath = [
+        [perc25 * 2, h0 - lineHeight], [perc75 * 2, h0 - lineHeight], [perc75 * 2, h0 + lineHeight], [perc25 * 2, h0 + lineHeight], [perc25 * 2, h0 - lineHeight]
+      ].map((p, i) => `${i === 0 ? 'M' : 'L'}${p[0]},${p[1]}`).join(' ');
+
+      const boxAreaPath = `${boxLinePath} Z`;
+      if (boxAreaPath.includes('NaN')) return; // skip
+
+      cellDiv.innerHTML = `
+          <div class="ge-table-label-div"
+          data-row-index="${rowIndex}"
+          data-col-index="${columnIndex}"
+          data-area="${areaIdent}"
+          style="position: relative; background: transparent; width: 100%; height: 100%;">
+              <svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg">
+                <path d="${boxAreaPath}" fill="#0098db11" />
+                <path d="${baseLinePointsPath}" fill="none" stroke="#0098db" stroke-width="1" />
+                <path d="${minLinePath}" fill="none" stroke="#0098db" stroke-width="1" />
+                <path d="${maxLinePath}" fill="none" stroke="#0098db" stroke-width="1" />
+                <path d="${medianLinePath}" fill="none" stroke="#e00034" stroke-width="1" />
+                <path d="${boxLinePath}" fill="none" stroke="#0098db" stroke-width="1" />
+              </svg>
+          </div>`;
+
+      return undefined;
+    }
+  };
+
+  const lineChartRenderer = {
+    render: (
+      cellDiv,
+      rowIndex,
+      columnIndex,
+      areaIdent,
+      areaModel,
+      _cellValue,
+      _domService) => {
+
+      const row = areaModel.getRowByIndex(rowIndex);
+      const data = row.data;
+
+      const width = 200;
+      const height = 32;
+      const maxVal = 100;
+      const points = data.map((val, i) => {
+        const x = (i / (data.length - 1)) * width;
+        const y = height - (val / maxVal) * height;
+        return [x, y];
+      });
+
+      const linePath = points.map((p, i) => `${i === 0 ? 'M' : 'L'}${p[0]},${p[1]}`).join(' ');
+      const areaPath = `${linePath} L${width},${height} L0,${height} Z`;
+
+      if (areaPath.includes('NaN')) return; // skip
+
+      cellDiv.innerHTML = `
+          <div class="ge-table-label-div"
+          data-row-index="${rowIndex}"
+          data-col-index="${columnIndex}"
+          data-area="${areaIdent}"
+          style="position: relative; background: transparent; width: 100%; height: 100%;">
+              <svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg">
+                <path d="${areaPath}" fill="#e00034aa" />
+                <path d="${linePath}" fill="none" stroke="#800" stroke-width="1" />
+              </svg>
+          </div>`;
+
+      return undefined;
+    }
+  };
+
+  const upDownRenderer = {
+    render: (
+      cellDiv,
+      rowIndex,
+      columnIndex,
+      areaIdent,
+      areaModel,
+      _cellValue,
+      domService) => {
+
+      domService.addClass(cellDiv, 'ge-star-rating-div');
+      const row = areaModel.getRowByIndex(rowIndex);
+      const cellValue = row.direction;
+
+      if (cellValue) {
+        let chr = '↑';
+        if (cellValue > 0) {
+          domService.addClass(cellDiv, 'ge-positive-text-color');
+          domService.addClass(cellDiv, 'ge-positive-bg');
+
+        } else if (cellValue < 0) {
+          domService.addClass(cellDiv, 'ge-negative-text-color');
+          domService.addClass(cellDiv, 'ge-negative-bg');
+          chr = '↓';
+        }
+        cellDiv.innerHTML = `
+          <div 
+            class="ge-table-label-div" 
+            data-row-index=${rowIndex}" 
+            data-col-index="${columnIndex}" 
+            data-area="${areaIdent}" 
+            style="position: relative; background: transparent; width: 100%; height: 100%;">
+            <div 
+              class="ge-table-label"  
+              data-row-index="${rowIndex}" 
+              data-col-index="${columnIndex}" 
+              data-area="${areaIdent}">${chr}</div></div>`;
+      }
+
+      return undefined;
+    }
+  };
+
+  const columnDefs = [
+    ColumnDef.create({
+      property: 'name',
+      headerLabel: 'AMD Ryzen',
+      width: px100,
+      bodyClasses: ['ge-table-text-align-left'],
+      headerClasses: ['ge-table-text-align-left']
+    }),
+    new ColumnDef('boxPlot', '', px200, undefined, ColumnDef.bodyRenderer(boxChartRenderer)),
+    new ColumnDef('linePlot', '', px200, undefined, ColumnDef.bodyRenderer(lineChartRenderer)),
+    new ColumnDef('current', '', px60, undefined),
+    new ColumnDef('direction', '', px50, undefined, ColumnDef.bodyRenderer(upDownRenderer)),
+    ColumnDef.create({
+      property: 'min',
+      headerLabel: 'Min',
+      width: px60,
+      bodyClasses: ['ge-table-text-align-right'],
+      headerClasses: ['ge-table-text-align-right']
+    }),
+    ColumnDef.create({
+      property: 'perc25',
+      headerLabel: '25%',
+      width: px60,
+      bodyClasses: ['ge-table-text-align-right'],
+      headerClasses: ['ge-table-text-align-right']
+    }),
+    ColumnDef.create({
+      property: 'median',
+      headerLabel: 'Median',
+      width: px60,
+      bodyClasses: ['ge-table-text-align-right'],
+      headerClasses: ['ge-table-text-align-right']
+    }),
+    ColumnDef.create({
+      property: 'perc75',
+      headerLabel: '75%',
+      width: px60,
+      bodyClasses: ['ge-table-text-align-right'],
+      headerClasses: ['ge-table-text-align-right']
+    }),
+    ColumnDef.create({
+      property: 'max',
+      headerLabel: 'Max',
+      width: px60,
+      bodyClasses: ['ge-table-text-align-right'],
+      headerClasses: ['ge-table-text-align-right']
+    })
+  ];
+
+  const tableOptions = {
+    ...new TableOptions(),
+    verticalBorderVisible: false,
+    defaultRowHeights: {
+      header: 34, body: 34, footer: 0
+    },
+    hoverColumnVisible: false,
+    hoverRowVisible: false,
+    columnsDraggable: false,
+    columnsResizable: false,
+    getFocusModel: () => new FocusModel('none')
+  };
+
+  const maxDataPoints = 50;
+
+  const rows = [
+    { name: 'CPU 1', data: [0] },
+    { name: 'CPU 2', data: [10] },
+    { name: 'CPU 3', data: [75] },
+    { name: 'CPU 4', data: [7] },
+    { name: 'CPU 5', data: [0] },
+    { name: 'CPU 6', data: [0] },
+    { name: 'CPU 7', data: [21] },
+    { name: 'CPU 8', data: [33] },
+    { name: 'CPU 9', data: [0] }
+  ];
+
+
+  const tableModel = TableFactory.createTableModel({
+    rows, columnDefs, tableOptions
+  });
+
+
+  const ele = document.querySelector('.' + id);
+
+  ele.style.width = `920px`;
+  ele.style.height = `350px`;
+  ele.style.fontSize = `14px`;
+  ele.style.border = `0`;
+
+  const tableScope = new TableScope(
+    ele,
+    tableModel,
+    new SimpleDomService(),
+    tableOptions,
+    new EventAdapter()
+  );
+  tableScope.firstInit();
+
+  const tableApi = tableScope.getApi();
+
+  // Start fake realtime updates:
+  sendUpdateTableModelEvents();
+
+  function updateData() {
+    for (let i = 0; i < rows.length; i++) {
+      const strategy = rows[i];
+      const data = [...strategy.data];
+
+      if (data.length >= maxDataPoints) {
+        data.shift();
+      }
+
+      while (data.length < maxDataPoints) {
+        const newPoint = data[data.length - 1] + Math.random() * 10 - 5;
+        data.push(Math.max(0, Math.min(100, newPoint)));
+      }
+
+      const sortedData = [...data].sort((a, b) => a - b);
+      strategy.data = data;
+      strategy.min = Math.min(...data).toFixed(2);
+      strategy.max = Math.max(...data).toFixed(2);
+      strategy.perc25 = sortedData[Math.floor(sortedData.length * 0.25)].toFixed(2);
+      strategy.median = sortedData[Math.floor(sortedData.length * 0.5)].toFixed(2);
+      strategy.perc75 = sortedData[Math.floor(sortedData.length * 0.75)].toFixed(2);
+
+      strategy.current = data[data.length - 1].toFixed(2);
+
+      // const direction =  strategy.current - data[data.length - 2];
+      const direction = strategy.current - data[0];
+      strategy.direction = direction < 0 ? -1 : direction > 0 ? 1 : 0;
+    }
+  }
+
+  function sendUpdateTableModelEvents() {
+    updateData();
+    tableApi.updateCells([], true);
+    triggerUpdate();
+  }
+
+  let animationFrameHandle = null;
+
+  function triggerUpdate() {
+    setTimeout(()=>{
+      if (animationFrameHandle) {
+        cancelAnimationFrame(animationFrameHandle);
+      }
+      animationFrameHandle = requestAnimationFrame(() => sendUpdateTableModelEvents());
+    }, 16);
+  }
+
+</script>
+
+<style is:global>
+
+  .cpu-table .ge-table-border {
+    display: none !important;
+  }
+
+    @keyframes color-green {
+        0%, 100% {
+            background: transparent;
+        }
+        10% {
+            background: #33CC3644;
+        }
+    }
+
+    .bg-green-0,
+    .bg-green-1,
+    .bg-green-0 > div,
+    .bg-green-1 > div,
+    .bg-green-0 > div > div,
+    .bg-green-1 > div > div {
+        animation: color-green 1s ease-in-out;
+    }
+
+
+    @keyframes color-red {
+        0%, 100% {
+            background: transparent;
+        }
+        10% {
+            background: #cc333344;
+        }
+    }
+
+    .bg-red-0,
+    .bg-red-1,
+    .bg-red-0 > div,
+    .bg-red-1 > div,
+    .bg-red-0 > div > div,
+    .bg-red-1 > div > div {
+        animation: color-red 1s ease-in-out;
+    }
+</style>
