@@ -13,7 +13,7 @@ const id = 'div' + Math.random().toString(36).slice(2, 11);
   <Glogo slot="eyebrow" class="h-24 text-white md:h-32" size="100" />
   <Fragment slot="lead">
 
-    <div class="grid grid-cols-1 gap-4 md:grid-cols-1 lg:grid-cols-1">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-1 lg:grid-cols-1" style="overflow-x: clip;">
       <div class:list={[id, 'table-div', 'cpu-table']}></div>
     </div>
 
