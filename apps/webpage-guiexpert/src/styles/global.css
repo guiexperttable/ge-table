@@ -82,7 +82,8 @@ html {
   line-height: var(--line-height);
 
   text-align: left;
-  overflow: hidden;
+  overflow-y: hidden;
+  overflow-x: clip;
 
   .text-switcher-word {
     align-items: flex-start;
