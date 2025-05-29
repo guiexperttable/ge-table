@@ -1,6 +1,6 @@
 import { Size } from "../../common/size";
 import { SizeIf } from "../../common/size.if";
-import { ColumnDefIf } from "./column-def.if";
+import { ColumnDefIf, ValueRowSortComparator } from "./column-def.if";
 import { CellRendererIf } from "../../../renderer/cell-render.if";
 import { AreaObjectMapType } from "../../common/area-map.type";
 import { AreaObjectMap } from "../../common/area-map";
@@ -27,7 +27,7 @@ export class ColumnDef implements ColumnDefIf {
     public minWidth: SizeIf = new Size(100, "px"),
     public maxWidth: SizeIf = new Size(100, "px"),
     public sortable?: BooleanFunction,
-    public sortComparator?: <T>(a: T, b: T) => number,
+    public sortComparator?: ValueRowSortComparator,
     public sortState?: SortState,
     public sortStatesOrder?: SortState[],
     public sortIconVisible?: BooleanFunction,
@@ -64,7 +64,7 @@ export class ColumnDef implements ColumnDefIf {
     footerClasses?: string[],
     sortable?: BooleanFunction,
     sortIconVisible?: BooleanFunction,
-    sortComparator?: <T>(a: T, b: T) => number,
+    sortComparator?: ValueRowSortComparator,
     sortState?: SortState,
     sortStatesOrder?: SortState[],
     editable?: BooleanFunction,

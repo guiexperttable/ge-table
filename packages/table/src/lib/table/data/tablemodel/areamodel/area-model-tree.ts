@@ -151,7 +151,18 @@ export class AreaModelTree<S> extends AbstractAreaModel<TreeRow<S>> {
   }
 
   protected genericTreeTableSortComparator(property: string, f: number) {
+    // Find the column definition for the property
+    const columnDef = this.columnDefs.find(def => def.property === property);
+
     return (a: TreeRowIf<S>, b: TreeRowIf<S>) => {
+      // If the column has a custom sortComparator, use it
+      if (columnDef?.sortComparator) {
+        const va = this.getValueByT(a.data, property);
+        const vb = this.getValueByT(b.data, property);
+        return f * columnDef.sortComparator(va, vb, a.data, b.data);
+      }
+
+      // Otherwise, use the default generic comparator
       const va = this.getValueByT(a.data, property);
       const vb = this.getValueByT(b.data, property);
       return this.sorterService.genericSortComparator(va, vb, f);

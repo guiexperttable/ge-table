@@ -6,6 +6,26 @@ import { SortState } from "../../common/sort-state.type";
 import { GetEditRenderer } from "../../../renderer/edit/edit-cell-renderer.type";
 import { editInputPipe } from "../../../renderer/edit/edit-input-pipe.if";
 
+/**
+ * Represents a function that compares two values for sorting purposes.
+ * The function takes two values of type T and optionally their corresponding row objects of type U,
+ * compares them, and returns a number.
+ * If the result is negative, it means 'valueA' comes before 'valueB' in the sorted order.
+ * If the result is positive, it means 'valueB' comes before 'valueA' in the sorted order.
+ * If the result is zero, it means the two values are considered equal for sorting purposes.
+ *
+ * @typeparam T The type of values being compared.
+ * @typeparam U The type of row objects that contain the values.
+ *
+ * @param valueA The first value to be compared.
+ * @param valueB The second value to be compared.
+ * @param rowA Optional. The row object containing valueA.
+ * @param rowB Optional. The row object containing valueB.
+ *
+ * @returns A number indicating the relative order of 'valueA' and 'valueB'.
+ */
+export type ValueRowSortComparator = <T, U>(valueA: T, valueB: T, rowA?: U, rowB?: U) => number;
+
 
 /**
  * Represents a column definition of one table column.
@@ -71,19 +91,15 @@ export interface ColumnDefIf {
   sortIconVisible?: BooleanFunction,
   /**
    * Represents a function that compares two values for sorting purposes.
-   * The function takes two arguments of type T, compares them, and returns a number.
-   * If the result is negative, it means 'a' comes before 'b' in the sorted order.
-   * If the result is positive, it means 'b' comes before 'a' in the sorted order.
+   * The function takes two values and optionally their corresponding row objects,
+   * compares them, and returns a number.
+   * If the result is negative, it means 'valueA' comes before 'valueB' in the sorted order.
+   * If the result is positive, it means 'valueB' comes before 'valueA' in the sorted order.
    * If the result is zero, it means the two values are considered equal for sorting purposes.
    *
-   * @typeparam T The type of values being compared.
-   *
-   * @param a The first value to be compared.
-   * @param b The second value to be compared.
-   *
-   * @returns A number indicating the relative order of 'a' and 'b'.
+   * @see ValueRowSortComparator
    */
-  sortComparator?: <T>(a: T, b: T) => number,
+  sortComparator?: ValueRowSortComparator,
   /**
    * Represents the state of sorting for a list.
    *
@@ -138,4 +154,3 @@ export interface ColumnDefIf {
    */
   editInputPipe?: editInputPipe
 }
-

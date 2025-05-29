@@ -35,7 +35,7 @@ export class AreaModelObjectArray<T>
     this.rows = rows;
     this.filteredRows = [...rows];
   }
-  
+
   filterRowsByPredict(predict:(row: T)=>boolean) {
     this.rows = this.rows.filter(predict);
     this.filteredRows = this.filteredRows.filter(predict);
@@ -104,7 +104,18 @@ export class AreaModelObjectArray<T>
   }
 
   protected genericFlatTableSortComparator(property: string, f: number) {
+    // Find the column definition for the property
+    const columnDef = this.columnDefs.find(def => def.property === property);
+
     return (a: T, b: T) => {
+      // If the column has a custom sortComparator, use it
+      if (columnDef?.sortComparator) {
+        const va = this.getValueByT(a, property);
+        const vb = this.getValueByT(b, property);
+        return f * columnDef.sortComparator(va, vb, a, b);
+      }
+
+      // Otherwise, use the default generic comparator
       const va = this.getValueByT(a, property);
       const vb = this.getValueByT(b, property);
       return this.sorterService.genericSortComparator(va, vb, f);
@@ -122,4 +133,3 @@ export class AreaModelObjectArray<T>
     return o2;
   }
 }
-
