@@ -1,6 +1,6 @@
 {
   "name": "ts-todo-demo",
-  "version": "1.1.56",
+  "version": "1.1.57",
   "type": "commonjs",
   "main": "./index.js",
   "types": "./index.d.ts",

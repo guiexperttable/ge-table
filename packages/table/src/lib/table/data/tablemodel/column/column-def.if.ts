@@ -18,10 +18,11 @@ import { editInputPipe } from "../../../renderer/edit/edit-input-pipe.if";
  * @param valueB The second value to be compared.
  * @param rowA Optional. The row object containing valueA.
  * @param rowB Optional. The row object containing valueB.
+ * @param f Optional. The direction. It is not necessary to use this value in the comparator, as this number is used as a factor (1 or -1) in the outer sort method.
  *
  * @returns A number indicating the relative order of 'valueA' and 'valueB'.
  */
-export type ValueRowSortComparator = (valueA: any, valueB: any, rowA?: any, rowB?: any) => number;
+export type ValueRowSortComparator = (valueA: any, valueB: any, rowA?: any, rowB?: any, f?: number) => number;
 
 
 /**

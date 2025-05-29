@@ -1,6 +1,6 @@
 {
   "name": "@guiexpert/react-table",
-  "version": "18.1.56",
+  "version": "18.1.57",
   "type": "module",
   "main": "./index.js",
   "types": "./index.d.ts",
