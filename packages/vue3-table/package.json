@@ -1,6 +1,6 @@
 {
   "name": "@guiexpert/vue3-table",
-  "version": "3.0.28",
+  "version": "3.1.55",
   "type": "commonjs",
   "main": "./index.js",
   "types": "./index.d.ts",
@@ -26,7 +26,7 @@
     "tslib": "^2.3.0",
     "@guiexpert/table": "workspace:^",
     "vue": "^3.2.47",
-    "vue-i18n": "^9.2.2",
+    "vue-i18n": "11.1.2",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
@@ -39,7 +39,7 @@
     "unplugin-vue-components": "^0.24.0",
     "vue-eslint-parser": "^9.1.0",
     "@types/node": "^20.11.17",
-    "vite": "^5.1.1",
+    "vite": "6.3.4",
     "vite-plugin-dts": "^3.7.2",
     "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-static-copy": "^0.17.0",
