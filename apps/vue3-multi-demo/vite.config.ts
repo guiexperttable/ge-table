@@ -12,7 +12,7 @@ export default defineConfig({
     // @quasar/plugin-vite options list:
     // https://github.com/quasarframework/quasar/blob/dev/vite-plugin/index.d.ts
     quasar({
-      sassVariables: 'src/quasar-variables.sass'
+      sassVariables: join(__dirname, 'src/quasar-variables.sass')
     })
   ],
 
@@ -29,6 +29,14 @@ export default defineConfig({
       {
         find: /@guiexpert\/demo-table-models/,
         replacement: join(__dirname, '../..', 'packages', 'demo-table-models', 'src'),
+      },
+      {
+        find: /^quasar$/,
+        replacement: join(__dirname, '../../../node_modules/.pnpm/quasar@2.18.1/node_modules/quasar/dist/quasar.esm.js'),
+      },
+      {
+        find: /^@quasar\/extras\/material-icons\/material-icons\.css$/,
+        replacement: '../../../node_modules/.pnpm/@quasar+extras@1.17.0/node_modules/@quasar/extras/material-icons/material-icons.css',
       },
     ],
   }

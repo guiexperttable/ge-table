@@ -14,9 +14,6 @@ import { editInputPipe } from "../../../renderer/edit/edit-input-pipe.if";
  * If the result is positive, it means 'valueB' comes before 'valueA' in the sorted order.
  * If the result is zero, it means the two values are considered equal for sorting purposes.
  *
- * @typeparam T The type of values being compared.
- * @typeparam U The type of row objects that contain the values.
- *
  * @param valueA The first value to be compared.
  * @param valueB The second value to be compared.
  * @param rowA Optional. The row object containing valueA.
@@ -24,7 +21,7 @@ import { editInputPipe } from "../../../renderer/edit/edit-input-pipe.if";
  *
  * @returns A number indicating the relative order of 'valueA' and 'valueB'.
  */
-export type ValueRowSortComparator = <T, U>(valueA: T, valueB: T, rowA?: U, rowB?: U) => number;
+export type ValueRowSortComparator = (valueA: any, valueB: any, rowA?: any, rowB?: any) => number;
 
 
 /**
