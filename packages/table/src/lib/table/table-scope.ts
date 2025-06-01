@@ -826,6 +826,10 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf, Even
     this.adjustContainersAndRows();
   }
 
+  reSort() {
+    let sortItems = this.storeSortingService?.getSortItems()??[];
+    this.tableModel.doSort(sortItems);
+  }
 }
 
 

@@ -58,14 +58,14 @@ export * from './lib/table/data/common/index-and-px';
 export * from './lib/table/data/common/cell-range';
 export * from './lib/table/data/common/checked-type';
 export * from './lib/table/data/common/sizes';
+
 export * from './lib/table/data/common/aligns';
 export * from './lib/table/data/common/boolean-function';
 export * from './lib/table/data/common/checkbox-column-def';
 export * from './lib/table/data/common/size';
 export * from './lib/table/data/common/size.if';
 export * from './lib/table/data/common/size-unit.type';
-export * from './lib/table/data/common/sort-item';
-export * from './lib/table/data/common/sort-state.type';
+
 export * from './lib/table/data/common/area-map';
 export * from './lib/table/data/common/area-map.type';
 export * from "./lib/table/data/common/area-map-factory";

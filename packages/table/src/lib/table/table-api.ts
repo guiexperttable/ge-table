@@ -294,4 +294,8 @@ export class TableApi {
   getTableModel() :TableModelIf{
     return this.tableScope.tableModel;
   }
+
+  reSort(){
+    this.tableScope.reSort();
+  }
 }

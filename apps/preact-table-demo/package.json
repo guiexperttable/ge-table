@@ -1,6 +1,6 @@
 {
   "name": "preact-table-demo",
-  "version": "10.1.57",
+  "version": "10.1.58",
   "type": "commonjs",
   "main": "./index.js",
   "types": "./index.d.ts",
