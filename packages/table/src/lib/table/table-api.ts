@@ -7,6 +7,8 @@ import { ShortcutActionIdMapping } from './action/shortcut-actionid-mapping.type
 import { SelectionModelIf } from './selection/selection-model.if';
 import { AreaIdent } from './data/tablemodel/area-ident.type';
 import { TableModelIf } from './data/tablemodel/table-model.if';
+import { AreaModelIf } from './data/tablemodel/areamodel/area-model.if';
+import { AreaModelObjectArray } from './data/tablemodel/areamodel/area-model-object-array';
 
 
 /**
@@ -293,6 +295,21 @@ export class TableApi {
 
   getTableModel() :TableModelIf{
     return this.tableScope.tableModel;
+  }
+
+  getBodyModel() :AreaModelIf {
+    return this.tableScope.tableModel.getBodyModel();
+  }
+
+  setRows<T>(rows: T[]){
+    const bodyModel = this.getBodyModel();
+    if (bodyModel instanceof AreaModelObjectArray){
+      // Type assertion with unknown as intermediate step for type safety
+      const am = bodyModel as unknown as AreaModelObjectArray<T>;
+      am.setRows(rows); 
+    } else {
+      console.warn('setRows<T>(rows: T[]) only works with AreaModelObjectArray<T>, but this body area model is ', (typeof bodyModel))
+    }
   }
 
   reSort(){
