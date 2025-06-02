@@ -36,5 +36,6 @@
     <orderEntry type="module" module-name="angular-table-demo" />
     <orderEntry type="module" module-name="angular-18-table" />
     <orderEntry type="module" module-name="angular-19-table" />
+    <orderEntry type="module" module-name="angular-20-table" />
   </component>
 </module>
