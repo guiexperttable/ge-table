@@ -34,6 +34,7 @@ export * from './lib/table/factory/table-factory';
 
 export * from './lib/table/action/action-id.type';
 export * from './lib/table/action/shortcut.service';
+export * from './lib/table/action/shortcut-util';
 export * from './lib/table/action/shortcut-actionid-mapping.type';
 export * from './lib/table/action/windows-shortcut-actionId-mapping';
 export * from './lib/table/action/osx-shortcut-actionId-mapping';

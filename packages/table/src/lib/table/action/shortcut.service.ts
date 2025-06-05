@@ -4,6 +4,7 @@ import { ShortcutActionIdMapping } from "./shortcut-actionid-mapping.type";
 import { WindowsShortcutActionIdMapping } from "./windows-shortcut-actionId-mapping";
 import { OsxShortcutActionIdMapping } from "./osx-shortcut-actionId-mapping";
 import { OnActionTriggeredIf } from "./on-action-triggered.if";
+import { createHarmonizedShortcutByKeyboardEvent } from './shortcut-util';
 
 
 /**
@@ -50,6 +51,8 @@ export class ShortcutService {
     // add key down listener:
     this.tableScope.hostElement.addEventListener("keydown", this.onKeyDown.bind(this));
   }
+
+
 
   private assignPredefinedSystemShortcutMappings(){
     if (this.isMacintosh()) {
@@ -98,58 +101,58 @@ export class ShortcutService {
   }
 
   private findEntity(evt: KeyboardEvent): ActionId | undefined {
-    const tokens = this.getTokenByEvent(evt);
+    const shortcut = createHarmonizedShortcutByKeyboardEvent(evt);
+
     if (this.isDebug()) {
-      console.debug("ShortcutService tokens    :", tokens);
+      console.debug("ShortcutService shortcut  :",  shortcut);
     }
     for (const key in this.shortcutActionIdMapping) {
-      const shortcutTokens = key
-        .replace(/opt/g, "alt")
-        .replace(/cmd/g, "meta")
-        .split(/[+ ]/g).sort();
-
-      if (this.areTokensEquals(tokens, shortcutTokens)) {
+      const k = createHarmonizedShortcutByKeyboardEvent(evt);
+      if (k === shortcut) {
+        if (this.isDebug()) {
+          console.debug("ShortcutService action    :", this.shortcutActionIdMapping[key]);
+        }
         return this.shortcutActionIdMapping[key] as ActionId;
       }
     }
     return undefined;
   }
 
-  private areTokensEquals(tokens1: string[], tokens2: string[]): boolean {
-    if (tokens1.length !== tokens2.length) {
-      return false;
-    }
-    if (tokens1.length === 0) {
-      return false;
-    }
-    for (let i = 0; i < tokens1.length; i++) {
-      if (tokens1[i] !== tokens2[i]) {
-        return false;
-      }
-    }
-
-    return true;
-  }
-
-  private getTokenByEvent(evt: KeyboardEvent): string[] {
-    const tokens: string[] = [];
-    if (evt.altKey) {
-      tokens.push("alt");
-    }
-    if (evt.shiftKey) {
-      tokens.push("shift");
-    }
-    if (evt.ctrlKey) {
-      tokens.push("ctrl");
-    }
-    if (evt.metaKey) {
-      tokens.push("meta");
-    }
-    if (evt.code) {
-      tokens.push(evt.code.toLowerCase().replace(/key/g, ""));
-    }
-    return tokens.sort();
-  }
+  // private areTokensEquals(tokens1: string[], tokens2: string[]): boolean {
+  //   if (tokens1.length !== tokens2.length) {
+  //     return false;
+  //   }
+  //   if (tokens1.length === 0) {
+  //     return false;
+  //   }
+  //   for (let i = 0; i < tokens1.length; i++) {
+  //     if (tokens1[i] !== tokens2[i]) {
+  //       return false;
+  //     }
+  //   }
+  //
+  //   return true;
+  // }
+  //
+  // private getTokenByEvent(evt: KeyboardEvent): string[] {
+  //   const tokens: string[] = [];
+  //   if (evt.altKey) {
+  //     tokens.push("alt");
+  //   }
+  //   if (evt.shiftKey) {
+  //     tokens.push("shift");
+  //   }
+  //   if (evt.ctrlKey) {
+  //     tokens.push("ctrl");
+  //   }
+  //   if (evt.metaKey) {
+  //     tokens.push("meta");
+  //   }
+  //   if (evt.code) {
+  //     tokens.push(evt.code.toLowerCase().replace(/key/g, ""));
+  //   }
+  //   return tokens.sort();
+  // }
 
   /**
    * Retrieves the shortcut action mapping object.

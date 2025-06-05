@@ -383,6 +383,7 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf, Even
     this.adjustHoverColumns(mouseMoveEvent);
   }
 
+  private lastContextmenu = Date.now();
   /**
    * Triggers the context menu event based on the mouse move event.
    *
@@ -390,6 +391,16 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf, Even
    * @return {void}
    */
   contextmenu(mouseMoveEvent: GeMouseEvent) {
+    const now = Date.now();
+
+    if ((now - this.lastContextmenu) < 50) {
+      this.lastContextmenu = now;
+      mouseMoveEvent.originalEvent?.preventDefault();
+      mouseMoveEvent.originalEvent?.stopImmediatePropagation();
+      return; // skipped
+    }
+
+    this.lastContextmenu = now;
     this.eventListener.onContextmenu(mouseMoveEvent);
   }
 
