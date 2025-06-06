@@ -841,6 +841,10 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf, Even
     let sortItems = this.storeSortingService?.getSortItems()??[];
     this.tableModel.doSort(sortItems);
   }
+
+  getDisplayedRowCount() {
+    return this.displayedRowCount;
+  }
 }
 
 

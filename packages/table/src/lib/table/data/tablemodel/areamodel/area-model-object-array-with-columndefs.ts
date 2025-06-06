@@ -14,13 +14,17 @@ export class AreaModelObjectArrayWithColumndefs<T> extends AreaModelObjectArray<
     public override areaIdent: AreaIdent,
     protected override rows: T[],
     protected override readonly columnDefs: ColumnDefIf[],
-    public override defaultRowHeight: number
+    public override defaultRowHeight: number,
+    selectedRowClass: string = 'ge-selected-row',
+    focusedRowClass: string = 'ge-focused-row'
   ) {
     super(
       areaIdent,
       rows,
       defaultRowHeight,
-      columnDefs
+      columnDefs,
+      selectedRowClass,
+      focusedRowClass
     );
   }
 

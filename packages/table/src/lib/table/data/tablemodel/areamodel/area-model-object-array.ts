@@ -1,11 +1,11 @@
 /* eslint @typescript-eslint/no-explicit-any: "off" */
-import { AbstractAreaModel } from "./abstract-area-model";
-import { ColumnDefIf } from "../column/column-def.if";
-import { AreaIdent } from "../area-ident.type";
-import { FilterFunction } from "../../common/filter-function";
-import { SorterService } from "../../../service/sorter.service";
-import { SortItem } from "../../common/sort-item";
-import {isTreeRow} from "../../../instanceof-workaround";
+import { AbstractAreaModel } from './abstract-area-model';
+import { ColumnDefIf } from '../column/column-def.if';
+import { AreaIdent } from '../area-ident.type';
+import { FilterFunction } from '../../common/filter-function';
+import { SorterService } from '../../../service/sorter.service';
+import { SortItem } from '../../common/sort-item';
+import { isTreeRow } from '../../../instanceof-workaround';
 import { ObjectArrayHolderIf } from './object-array-holder.if';
 
 /**
@@ -26,7 +26,9 @@ export class AreaModelObjectArray<T>
     public override areaIdent: AreaIdent,
     protected rows: T[],
     public override defaultRowHeight: number,
-    protected override columnDefs: ColumnDefIf[] = []
+    protected override columnDefs: ColumnDefIf[] = [],
+    public selectedRowClass: string = 'ge-selected-row',
+    public focusedRowClass: string = 'ge-focused-row'
   ) {
     super(areaIdent, columnDefs, defaultRowHeight);
     this.filteredRows = [...rows];
@@ -38,11 +40,14 @@ export class AreaModelObjectArray<T>
     this.filteredRows = [...rows];
   }
 
-  filterRowsByPredict(predict:(row: T)=>boolean) {
+  filterRowsByPredict(predict: (row: T) => boolean) {
     this.rows = this.rows.filter(predict);
     this.filteredRows = this.filteredRows.filter(predict);
   }
 
+  /**
+   * return row count of filtered rows
+   */
   getRowCount(): number {
     return this.filteredRows?.length ?? 0;
   }
@@ -58,7 +63,7 @@ export class AreaModelObjectArray<T>
     if (t) {
       return this.getValueByT(t, property);
     }
-    return "";
+    return '';
   }
 
 
@@ -91,8 +96,8 @@ export class AreaModelObjectArray<T>
   override doSort(sortItems: SortItem[]): boolean {
     for (const sortItem of sortItems) {
       const { columnIndex, sortState } = sortItem;
-      const f = sortState === "asc" ? 1 :
-        sortState === "desc" ? -1 : 0;
+      const f = sortState === 'asc' ? 1 :
+        sortState === 'desc' ? -1 : 0;
       const property = this.properties[columnIndex];
       this.filteredRows = this.filteredRows.sort(this.genericFlatTableSortComparator(property, f));
     }
@@ -100,8 +105,8 @@ export class AreaModelObjectArray<T>
   }
 
   getValueByT(t: T, property: string) {
-    if (property.includes(".")) {
-      return this.getPropertyValue(t, property.split("."));
+    if (property.includes('.')) {
+      return this.getPropertyValue(t, property.split('.'));
     }
     // @ts-expect-error: we access an unknown property name:
     return t[property];
@@ -117,15 +122,15 @@ export class AreaModelObjectArray<T>
 
     const row = this.getRowByIndex(rowIndex);
     if (row.selected) {
-      ret.push('ge-selected-row');
+      ret.push(this.selectedRowClass);
     }
     if (this.focusedRowIndex === rowIndex) {
-      ret.push('ge-focused-row');
+      ret.push(this.focusedRowClass);
     }
     return ret;
   }
 
-  protected genericFlatTableSortComparator(property: string, f: number): (a:T,b:T)=>number {
+  protected genericFlatTableSortComparator(property: string, f: number): (a: T, b: T) => number {
     // Find the column definition for the property
     const columnDef = this.columnDefs.find(def => def.property === property);
 

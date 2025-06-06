@@ -315,4 +315,8 @@ export class TableApi {
   reSort(){
     this.tableScope.reSort();
   }
+
+  getDisplayedRowCount():number {
+    return this.tableScope.getDisplayedRowCount();
+  }
 }

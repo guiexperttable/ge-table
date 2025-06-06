@@ -487,6 +487,7 @@ export class RenderScope extends EleScope {
     return '';
   }
 
+  public displayedRowCount = 0;
 
   /**
    * Adjusts the layout and positioning of the specified area in the table.
@@ -610,7 +611,10 @@ export class RenderScope extends EleScope {
       }
       y = y + height;
       // lastVisibleRowIndex = index;
-      if (y > divHeight) { // + 1000) {
+      if (y > divHeight) {
+        if (areaIdent === 'body'){
+          this.displayedRowCount = this.firstVisibleRowIndex - index;
+        }
         break;
       }
     } // for
