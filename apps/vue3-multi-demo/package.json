@@ -1,7 +1,7 @@
 {
   "name": "vue3-multi-demo",
   "private": true,
-  "version": "1.1.61",
+  "version": "1.1.62",
   "type": "module",
   "scripts": {
     "i": "pnpm i",

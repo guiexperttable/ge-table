@@ -16,6 +16,8 @@ export class AreaModelObjectArray<T>
   extends AbstractAreaModel<T>
   implements ObjectArrayHolderIf<T> {
 
+  public focusedRowIndex: number = 0;
+
   protected readonly properties: string[];
   protected filteredRows: T[];
   protected sorterService: SorterService = new SorterService();
@@ -59,6 +61,13 @@ export class AreaModelObjectArray<T>
     return "";
   }
 
+
+  /**
+   * Retrieves the filtered and sorted rows from the dataset.
+   * These rows are used for rendering the table.
+   *
+   * @return {T[]} An array containing the filtered (and sorted) rows.
+   */
   getFilteredRows(): T[] {
     return this.filteredRows;
   }
@@ -103,7 +112,20 @@ export class AreaModelObjectArray<T>
     super.changeColumnOrder(sourceColumnIndex, targetColumnIndex);
   }
 
-  protected genericFlatTableSortComparator(property: string, f: number) {
+  override getCustomClassesAt(rowIndex: number, _columnIndex: number): string[] {
+    const ret: string[] = super.getCustomClassesAt(rowIndex, _columnIndex);
+
+    const row = this.getRowByIndex(rowIndex);
+    if (row.selected) {
+      ret.push('ge-selected-row');
+    }
+    if (this.focusedRowIndex === rowIndex) {
+      ret.push('ge-focused-row');
+    }
+    return ret;
+  }
+
+  protected genericFlatTableSortComparator(property: string, f: number): (a:T,b:T)=>number {
     // Find the column definition for the property
     const columnDef = this.columnDefs.find(def => def.property === property);
 

@@ -246,4 +246,6 @@ export interface TableOptionsIf {
    * @property {string} [actionId] - The ID of the action associated with the shortcut.
    */
   shortcutActionIdMapping?: ShortcutActionIdMapping;
+
+  shortcutActionsDisabled: boolean;
 }

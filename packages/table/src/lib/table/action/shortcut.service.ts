@@ -40,16 +40,23 @@ export class ShortcutService {
    * Also adds key down event listener to the table host element.
    */
   init() {
-    this.assignPredefinedSystemShortcutMappings();
+    if (this.tableScope?.tableOptions?.shortcutActionsDisabled) {
+      if (this.isDebug()) {
+        console.debug("ShortcutService skipped.");
+      }
 
-    // Overwrite predefined mapping with mapping from the table options:
-    Object.assign(this.shortcutActionIdMapping, this.tableScope.tableOptions.shortcutActionIdMapping);
+    } else {
+      this.assignPredefinedSystemShortcutMappings();
 
-    if (this.isDebug()) {
-      console.debug("ShortcutService", this.shortcutActionIdMapping);
+      // Overwrite predefined mapping with mapping from the table options:
+      Object.assign(this.shortcutActionIdMapping, this.tableScope.tableOptions.shortcutActionIdMapping);
+
+      if (this.isDebug()) {
+        console.debug("ShortcutService", this.shortcutActionIdMapping);
+      }
+      // add key down listener:
+      this.tableScope.hostElement.addEventListener("keydown", this.onKeyDown.bind(this));
     }
-    // add key down listener:
-    this.tableScope.hostElement.addEventListener("keydown", this.onKeyDown.bind(this));
   }
 
 

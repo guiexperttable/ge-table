@@ -62,6 +62,7 @@ export class TableOptions implements TableOptionsIf {
   sortedOptions = new SortedOptions();
   sortOrder: SortState[] = ["asc", "desc"];
   shortcutActionIdMapping?: ShortcutActionIdMapping;
+  shortcutActionsDisabled: boolean = false;
 
   resizeEventDebounceDelay = 500;
 
