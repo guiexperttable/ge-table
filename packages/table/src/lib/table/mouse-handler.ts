@@ -72,8 +72,11 @@ export class MouseHandler {
    * @return {void}
    */
   private onHostElementClicked(event: MouseEvent) {
-    const now = Date.now();
+    const now = Date.now();.
+    // console.log('onHostElementClicked', (now - this.lastClicked < this.doubleClickDelay));
     if (now - this.lastClicked < this.doubleClickDelay) {
+      this.lastClicked = now;
+      this.publishGeMouseEvent(event, 2);
       return; // skipped
     }
     this.lastClicked = now;
@@ -133,6 +136,7 @@ export class MouseHandler {
    * @param {MouseEvent} event - The double click event.
    */
   private onHostElementDblClicked(event: MouseEvent) {
+    // console.log('ONHOSTELEMENTDBLCLICKED', event);
     this.lastClicked = Date.now();
 
     if (event.target instanceof HTMLElement) {
