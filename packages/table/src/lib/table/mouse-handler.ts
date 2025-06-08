@@ -72,7 +72,7 @@ export class MouseHandler {
    * @return {void}
    */
   private onHostElementClicked(event: MouseEvent) {
-    const now = Date.now();.
+    const now = Date.now();
     // console.log('onHostElementClicked', (now - this.lastClicked < this.doubleClickDelay));
     if (now - this.lastClicked < this.doubleClickDelay) {
       this.lastClicked = now;
