@@ -32,6 +32,8 @@
     "build:webcomponent-table-demo": "pnpm --filter webcomponent-table-demo build",
     "serve:webcomponent-table-demo": "pnpm --filter webcomponent-table-demo dev",
 
+
+
     "build:webpage-guiexpert": "pnpm --filter webpage-guiexpert build",
     "serve:webpage-guiexpert": "pnpm --filter webpage-guiexpert dev",
 
