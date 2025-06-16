@@ -113,6 +113,8 @@ export class MouseHandler {
           // @ts-ignore
           mouseTargetData.areaModel.recalcVisibleTreeRows();
         }
+        console.info('this.tableScope.hostElement', this.tableScope.hostElement); // TODO del
+        console.info('this.tableScope.hostElement.clientWidth', this.tableScope.hostElement.clientWidth); // TODO del
         this.tableScope.tableModel.recalcSize(this.tableScope.hostElement.clientWidth);
         this.tableScope.adjustContainersAndRows();
         this.updateCollapsedExpandedState(tr);

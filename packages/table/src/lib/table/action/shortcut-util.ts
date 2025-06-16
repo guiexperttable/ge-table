@@ -18,6 +18,7 @@ export function harmonizeShortcut(shortcut: string): string {
     .replace(/\*/g, 'multiply')
     .split(' ')
     .filter(s => s)
+    .filter((s, i, arr) => arr.indexOf(s) === i) // remove double entries
     .sort((a: string, b: string) => {
       const modifierOrder: { [key: string]: number } = { 'cmd': 1, 'ctrl': 2, 'alt': 3, 'shift': 4 };
       const aOrder = modifierOrder[a] || 5;

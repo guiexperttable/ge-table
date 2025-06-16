@@ -234,11 +234,16 @@ export class RenderScope extends EleScope {
    * @return {undefined}
    */
   recalcColumnWidths(clientWidth?: number) {
-    let widthInPixel = clientWidth ? clientWidth : this.scrollViewport.clientWidth;
+    let widthInPixel =
+      (
+        (!clientWidth || clientWidth > this.scrollViewport.offsetWidth)
+          && this.scrollViewport.offsetWidth > 100
+      ) ? this.scrollViewport.offsetWidth : this.scrollViewport.clientWidth;
     this.tableModel.setParentWidth(widthInPixel);
     this.tableModel.init();
     this.repaintHard();
   }
+
 
 
   /**
