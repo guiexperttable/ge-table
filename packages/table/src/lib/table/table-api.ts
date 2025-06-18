@@ -308,7 +308,72 @@ export class TableApi {
       const am = bodyModel as unknown as AreaModelObjectArray<T>;
       am.setRows(rows); 
     } else {
-      console.warn('setRows<T>(rows: T[]) only works with AreaModelObjectArray<T>, but this body area model is ', (typeof bodyModel))
+      console.warn('setRows<T>(rows: T[]) only works with AreaModelObjectArray<T>, but this body area model is ', (typeof bodyModel), bodyModel)
+    }
+  }
+
+  addRows<T>(rows: T[]){
+    const bodyModel = this.getBodyModel();
+    if (bodyModel instanceof AreaModelObjectArray){
+      const am = bodyModel as unknown as AreaModelObjectArray<T>;
+      let allRows = am.getAllRows();
+      am.setRows([...allRows, ...rows]);
+    } else {
+      console.warn('addRows<T>(rows: T[]) only works with AreaModelObjectArray<T>, but this body area model is ', (typeof bodyModel), bodyModel)
+    }
+  }
+
+  addRowsAt<T>(rows: T[], rowIndex: number){
+    const bodyModel = this.getBodyModel();
+    if (bodyModel instanceof AreaModelObjectArray){
+      const am = bodyModel as unknown as AreaModelObjectArray<T>;
+      let allRows = am.getAllRows();
+      am.setRows([...allRows.slice(0,rowIndex), ...rows, ...allRows.slice(rowIndex)]);
+    }else {
+      console.warn('addRowsAt<T>(rows: T[]) only works with AreaModelObjectArray<T>, but this body area model is ', (typeof bodyModel), bodyModel)
+    }
+  }
+
+  removeRows<T>(rows: T[], predicate: (a: T, b: T) => boolean = (a, b) => a === b){
+    const bodyModel = this.getBodyModel();
+    if (bodyModel instanceof AreaModelObjectArray){
+      const am = bodyModel as unknown as AreaModelObjectArray<T>;
+      const allRows = am.getAllRows().filter(r => !rows.some(rr => predicate(r, rr)));
+      am.setRows(allRows);
+    } else {
+      console.warn('removeRows<T>(rows: T[]) only works with AreaModelObjectArray<T>, but this body area model is ', (typeof bodyModel), bodyModel)
+    }
+  }
+
+  findRows<T>(rows: T[], predicate: (a: T, b: T) => boolean = (a, b) => a === b): T[] {
+    const bodyModel = this.getBodyModel();
+    if (bodyModel instanceof AreaModelObjectArray){
+      const am = bodyModel as unknown as AreaModelObjectArray<T>;
+      return am.getAllRows().filter(r => !rows.some(rr => predicate(r, rr)));
+
+    } else {
+      console.warn('findRows<T>(rows: T[], predicate: (a: T, b: T) => boolean) only works with AreaModelObjectArray<T>, but this body area model is ', (typeof bodyModel), bodyModel)
+    }
+    return [];
+  }
+
+  updateRows<T>(rows: T[], predicate: (a: T, b: T) => boolean = (a, b) => a === b): void {
+    const bodyModel = this.getBodyModel();
+    if (bodyModel instanceof AreaModelObjectArray){
+      const am = bodyModel as unknown as AreaModelObjectArray<T>;
+      let allRows = am.getAllRows();
+      for (const allRow of allRows) {
+        for (const row of rows) {
+          if (predicate(allRow, row)) {
+            for (const key of Object.keys(row as any)) {
+              (allRow as any)[key] = (row as any)[key];
+            }
+          }
+        }     
+      }
+
+    } else {
+      console.warn('updateRows<T>(rows: T[], predicate: (a: T, b: T) => boolean) only works with AreaModelObjectArray<T>, but this body area model is ', (typeof bodyModel), bodyModel)
     }
   }
 
