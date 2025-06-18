@@ -349,7 +349,7 @@ export class TableApi {
     const bodyModel = this.getBodyModel();
     if (bodyModel instanceof AreaModelObjectArray){
       const am = bodyModel as unknown as AreaModelObjectArray<T>;
-      return am.getAllRows().filter(r => !rows.some(rr => predicate(r, rr)));
+      return am.getAllRows().filter(r => rows.some(rr => predicate(r, rr)));
 
     } else {
       console.warn('findRows<T>(rows: T[], predicate: (a: T, b: T) => boolean) only works with AreaModelObjectArray<T>, but this body area model is ', (typeof bodyModel), bodyModel)
