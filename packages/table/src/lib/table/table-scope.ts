@@ -139,7 +139,6 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf, Even
     if (fm) {
       fm.addEventFocusChangedListener(this);
     }
-    console.log('TableScope created'); // TODO del
   }
 
   /**
