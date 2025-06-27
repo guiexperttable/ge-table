@@ -104,7 +104,10 @@ export class AreaModelObjectArray<T>
     return true;
   }
 
-  getValueByT(t: T, property: string) {
+  getValueByT(t: T, property: string):any {
+    if (!t) return undefined;
+    if (!property) return undefined;
+
     if (property.includes('.')) {
       return this.getPropertyValue(t, property.split('.'));
     }

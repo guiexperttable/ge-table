@@ -90,7 +90,10 @@ export class AreaModelTree<S> extends AbstractAreaModel<TreeRow<S>> {
     return this.filteredFlattenRows[idx];
   }
 
-  getValueByT(t: S, property: string) {
+  getValueByT(t: S, property: string):any {
+    if (!t) return undefined;
+    if (!property) return undefined;
+
     if (property.includes(".")) {
       return this.getPropertyValue(t, property.split("."));
     }

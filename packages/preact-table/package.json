@@ -1,6 +1,6 @@
 {
   "name": "@guiexpert/preact-table",
-  "version": "10.1.72",
+  "version": "10.1.74",
   "type": "module",
   "main": "./index.js",
   "types": "./index.d.ts",

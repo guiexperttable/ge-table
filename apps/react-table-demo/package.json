@@ -1,6 +1,6 @@
 {
   "name": "react-table-demo",
-  "version": "18.1.72",
+  "version": "18.1.74",
   "type": "commonjs",
   "main": "./index.js",
   "types": "./index.d.ts",
