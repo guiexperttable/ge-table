@@ -281,26 +281,77 @@ export class TableApi {
   }
 
 
+  /**
+   * Automatically resizes all columns to fit their content.
+   *
+   * @param {boolean} recalcWrappers - Determines whether to recalculate wrapper dimensions after resizing columns.
+   *                                   Default value is true.
+   * 
+   * @return {void} - This method doesn't return anything.
+   */
   autoResizeColumns(recalcWrappers: boolean= true) {
     this.tableScope.autoResizeColumns(recalcWrappers);
   }
 
+  /**
+   * Recalculates the dimensions of all wrapper elements in the table.
+   * 
+   * This method is typically called after changes to the table structure or content
+   * that might affect the layout, such as resizing columns or changing row heights.
+   * It ensures that all wrapper elements are properly sized to match their content.
+   *
+   * @return {void} - This method doesn't return anything.
+   */
   recalcWrappers() {
     this.tableScope.recalcWrappers();
   }
 
+  /**
+   * Sets the width of a specific column in the table.
+   *
+   * @param {number} columnIndex - The index of the column to resize.
+   * @param {number} width - The new width to set for the column, in pixels.
+   * 
+   * @return {void} - This method doesn't return anything.
+   */
   setColumnWidth(columnIndex: number, width: number): void{
     this.tableScope.setColumnWidth(columnIndex, width);
   }
 
+  /**
+   * Retrieves the table model that contains all data and structure information for the table.
+   *
+   * @return {TableModelIf} The table model interface that provides access to the table's data structure,
+   *                        including header, body, and footer area models.
+   */
   getTableModel() :TableModelIf{
     return this.tableScope.tableModel;
   }
 
+  /**
+   * Retrieves the area model for the body section of the table.
+   *
+   * @return {AreaModelIf} The area model interface that provides access to the table's body data,
+   *                       including rows, cells, and their values.
+   */
   getBodyModel() :AreaModelIf {
     return this.tableScope.tableModel.getBodyModel();
   }
 
+  /**
+   * Sets the rows data for the table body, replacing any existing rows.
+   *
+   * @template T - The type of elements in the rows array
+   * @param {T[]} rows - An array of data objects to set as the table's rows
+   * 
+   * @description
+   * This method replaces all existing rows in the table body with the provided array of data objects.
+   * It only works with tables that use AreaModelObjectArray as their body model.
+   * 
+   * @return {void} - This method doesn't return anything.
+   * 
+   * @throws {Warning} Logs a console warning if the table's body model is not an AreaModelObjectArray
+   */
   setRows<T>(rows: T[]){
     const bodyModel = this.getBodyModel();
     if (bodyModel instanceof AreaModelObjectArray){
@@ -312,6 +363,20 @@ export class TableApi {
     }
   }
 
+  /**
+   * Adds new rows to the end of the table body.
+   *
+   * @template T - The type of elements in the rows array
+   * @param {T[]} rows - An array of data objects to append to the table's existing rows
+   * 
+   * @description
+   * This method appends the provided array of data objects to the end of the existing rows in the table body.
+   * It only works with tables that use AreaModelObjectArray as their body model.
+   * 
+   * @return {void} - This method doesn't return anything.
+   * 
+   * @throws {Warning} Logs a console warning if the table's body model is not an AreaModelObjectArray
+   */
   addRows<T>(rows: T[]){
     const bodyModel = this.getBodyModel();
     if (bodyModel instanceof AreaModelObjectArray){
@@ -323,6 +388,22 @@ export class TableApi {
     }
   }
 
+  /**
+   * Inserts new rows at a specific position in the table body.
+   *
+   * @template T - The type of elements in the rows array
+   * @param {T[]} rows - An array of data objects to insert into the table
+   * @param {number} rowIndex - The index position where the new rows should be inserted
+   * 
+   * @description
+   * This method inserts the provided array of data objects at the specified index position in the table body.
+   * Existing rows at or after the specified index will be shifted down.
+   * It only works with tables that use AreaModelObjectArray as their body model.
+   * 
+   * @return {void} - This method doesn't return anything.
+   * 
+   * @throws {Warning} Logs a console warning if the table's body model is not an AreaModelObjectArray
+   */
   addRowsAt<T>(rows: T[], rowIndex: number){
     const bodyModel = this.getBodyModel();
     if (bodyModel instanceof AreaModelObjectArray){
@@ -334,6 +415,23 @@ export class TableApi {
     }
   }
 
+  /**
+   * Removes specified rows from the table body.
+   *
+   * @template T - The type of elements in the rows array
+   * @param {T[]} rows - An array of data objects to remove from the table
+   * @param {(a: T, b: T) => boolean} predicate - A comparison function that determines if two rows match
+   *   - Default predicate uses strict equality (===)
+   *   - The function should return true if the rows are considered a match
+   * 
+   * @description
+   * This method removes rows from the table body that match any of the provided rows based on the predicate function.
+   * It only works with tables that use AreaModelObjectArray as their body model.
+   * 
+   * @return {void} - This method doesn't return anything.
+   * 
+   * @throws {Warning} Logs a console warning if the table's body model is not an AreaModelObjectArray
+   */
   removeRows<T>(rows: T[], predicate: (a: T, b: T) => boolean = (a, b) => a === b){
     const bodyModel = this.getBodyModel();
     if (bodyModel instanceof AreaModelObjectArray){
@@ -345,18 +443,69 @@ export class TableApi {
     }
   }
 
+  /**
+   * Searches for and returns rows from the table body that match the given criteria.
+   *
+   * @template T - The type of elements in the rows array
+   * 
+   * @description
+   * This method searches through the table body model for rows that match the provided criteria.
+   * It only works with tables that use AreaModelObjectArray as their body model.
+   * The method uses a predicate function to determine matches between rows.
+   *
+   * @param {T[]} rows - An array of rows to search for in the table body
+   * @param {(a: T, b: T) => boolean} predicate - A comparison function that determines if two rows match
+   *   - Default predicate uses strict equality (===)
+   *   - The function should return true if the rows are considered a match
+   *   - Parameters:
+   *     - a: The row from the table body being checked
+   *     - b: The row from the input array being searched for
+   *
+   * @returns {T[]} An array containing all matching rows found in the table body
+   *   - Returns an empty array if:
+   *     - The body model is not an instance of AreaModelObjectArray
+   *     - No matches are found
+   *
+   * @example
+   * // Find rows with simple equality comparison
+   * const matchingRows = table.findRows([row1, row2]);
+   *
+   * @example
+   * // Find rows with custom comparison logic
+   * const matchingRows = table.findRows([row1, row2], (a, b) => a.id === b.id);
+   *
+   * @throws {Warning} Logs a console warning if the table's body model is not an AreaModelObjectArray
+   */
   findRows<T>(rows: T[], predicate: (a: T, b: T) => boolean = (a, b) => a === b): T[] {
     const bodyModel = this.getBodyModel();
     if (bodyModel instanceof AreaModelObjectArray){
       const am = bodyModel as unknown as AreaModelObjectArray<T>;
       return am.getAllRows().filter(r => rows.some(rr => predicate(r, rr)));
-
     } else {
       console.warn('findRows<T>(rows: T[], predicate: (a: T, b: T) => boolean) only works with AreaModelObjectArray<T>, but this body area model is ', (typeof bodyModel), bodyModel)
     }
     return [];
   }
 
+  /**
+   * Updates existing rows in the table body with new data.
+   *
+   * @template T - The type of elements in the rows array
+   * @param {T[]} rows - An array of data objects containing the updated values
+   * @param {(a: T, b: T) => boolean} predicate - A comparison function that determines which rows to update
+   *   - Default predicate uses strict equality (===)
+   *   - The function should return true if the row should be updated
+   * 
+   * @description
+   * This method updates existing rows in the table body with new values from the provided rows array.
+   * For each row in the table, if the predicate returns true when compared with any row in the provided array,
+   * all properties from the provided row will be copied to the existing row.
+   * It only works with tables that use AreaModelObjectArray as their body model.
+   * 
+   * @return {void} - This method doesn't return anything.
+   * 
+   * @throws {Warning} Logs a console warning if the table's body model is not an AreaModelObjectArray
+   */
   updateRows<T>(rows: T[], predicate: (a: T, b: T) => boolean = (a, b) => a === b): void {
     const bodyModel = this.getBodyModel();
     if (bodyModel instanceof AreaModelObjectArray){
@@ -377,10 +526,29 @@ export class TableApi {
     }
   }
 
+  /**
+   * Re-applies the current sorting configuration to the table data.
+   *
+   * @description
+   * This method triggers a re-sort of the table data using the current sorting configuration.
+   * It's useful when the underlying data has changed and needs to be re-sorted without changing
+   * the sort columns or direction.
+   * 
+   * @return {void} - This method doesn't return anything.
+   */
   reSort(){
     this.tableScope.reSort();
   }
 
+  /**
+   * Retrieves the number of rows currently displayed in the table.
+   *
+   * @description
+   * This method returns the count of rows that are currently visible in the table after
+   * applying any filtering, pagination, or other visibility constraints.
+   * 
+   * @return {number} The number of rows currently displayed in the table.
+   */
   getDisplayedRowCount():number {
     return this.tableScope.getDisplayedRowCount();
   }
