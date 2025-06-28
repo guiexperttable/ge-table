@@ -81,6 +81,35 @@ export class AreaModelObjectArray<T>
     return this.rows;
   }
 
+
+  /**
+   * Returns the first row from the filtered rows that matches the given criteria based on the provided predicate function.
+   *
+   * @param {Partial<T>} criteria - A partial object containing the search criteria
+   * @param {(criteria: Partial<T>, row: T) => boolean} predicate - A function that takes the search criteria and a row,
+   *        and returns true if the row matches the criteria
+   * @returns {T | undefined} The first matching row, or undefined if no match is found
+   */
+  findRowFromFilteredRowsByAllCriteria(
+    criteria: Partial<T>,
+    predicate: (criteria: Partial<T>, row: T) => boolean): T | undefined {
+    return this.getFilteredRows().find(row => predicate(criteria, row));
+  }
+
+  /**
+   * Searches through all rows to find a row that matches the given criteria based on the predicate function.
+   *
+   * @param {Partial<T>} criteria - A partial object containing the search criteria
+   * @param {(criteria: Partial<T>, row: T) => boolean} predicate - A function that takes the search criteria and a row,
+   *        and returns true if the row matches the criteria
+   * @returns {T | undefined} The first matching row from all rows, or undefined if no match is found
+   */
+  findRowFromAllRowsByAllCriteria(
+    criteria: Partial<T>,
+    predicate: (criteria: Partial<T>, row: T) => boolean): T | undefined {
+    return this.getAllRows().find(row => predicate(criteria, row));
+  }
+
   getRowHeight(_rowIndex: number): number {
     return this.defaultRowHeight;
   }

@@ -488,6 +488,126 @@ export class TableApi {
   }
 
   /**
+   * Searches through the filtered rows of the table to find a row that matches specific criteria.
+   * This method only works with tables that use AreaModelObjectArray as their body model.
+   *
+   * @template T - The type of the row objects in the table
+   * 
+   * @param {Partial<T>} criteria - A partial object containing the search criteria.
+   *                               Only needs to include the properties you want to match against.
+   * 
+   * @param {(criteria: Partial<T>, row: T) => boolean} predicate - A function that defines how to match rows against the criteria.
+   *                                                               Returns true if the row matches the criteria, false otherwise.
+   * 
+   * @returns {T | undefined} The first matching row from the filtered rows, or undefined if no match is found
+   *                         or if the body model is not an instance of AreaModelObjectArray.
+   * 
+   * @example
+   * ```typescript
+   * interface Person {
+   *   id: number;
+   *   name: string;
+   *   age: number;
+   * }
+   * 
+   * // Find a person by exact match
+   * const criteria = { name: "John", age: 30 };
+   * const person = tableApi.findRowFromFilteredRowsByAllCriteria<Person>(
+   *   criteria,
+   *   (criteria, row) => row.name === criteria.name && row.age === criteria.age
+   * );
+   * 
+   * // Find a person by partial name match
+   * const searchCriteria = { name: "Jo" };
+   * const person2 = tableApi.findRowFromFilteredRowsByAllCriteria<Person>(
+   *   searchCriteria,
+   *   (criteria, row) => row.name.toLowerCase().includes(criteria.name!.toLowerCase())
+   * );
+   * 
+   * // Find a person within age range
+   * const ageCriteria = { minAge: 25, maxAge: 35 };
+   * const person3 = tableApi.findRowFromFilteredRowsByAllCriteria<Person>(
+   *   ageCriteria,
+   *   (criteria, row) => row.age >= criteria.minAge! && row.age <= criteria.maxAge!
+   * );
+   * ```
+   * 
+   * @throws {Warning} Logs a warning to console if the body model is not an instance of AreaModelObjectArray
+   * 
+   * @remarks
+   * - This method only searches through filtered rows (rows that are currently visible in the table)
+   * - If you need to search through all rows (including filtered out ones), use findRowFromAllRowsByAllCriteria instead
+   * - The predicate function gives you full control over how to match rows against your criteria
+   * - Returns undefined if either no match is found or if the table's body model is not compatible
+   */
+  findRowFromFilteredRowsByAllCriteria<T>(
+    criteria: Partial<T>,
+    predicate: (criteria: Partial<T>, row: T) => boolean): T | undefined {
+    const bodyModel = this.getBodyModel();
+    if (bodyModel instanceof AreaModelObjectArray){
+      const am = bodyModel as unknown as AreaModelObjectArray<T>;
+      return am.getFilteredRows().find(row => predicate(criteria, row));
+    } else {
+      console.warn('findRowFromFilteredRowsByAllCriteria(...) only works with AreaModelObjectArray<T>, but this body area model is ', (typeof bodyModel), bodyModel)
+    }
+    return undefined;
+  }
+
+  /**
+   * Searches through all rows in the table's body model to find a row that matches specified criteria.
+   * This method works only with AreaModelObjectArray<T> body models.
+   *
+   * @template T - The type of objects/rows in the table
+   * 
+   * @param {Partial<T>} criteria - A partial object containing the search criteria.
+   *                               Only needs to include the properties you want to match against.
+   * 
+   * @param {(criteria: Partial<T>, row: T) => boolean} predicate - A function that defines how to match rows against the criteria.
+   *                                                               Returns true if the row matches the criteria, false otherwise.
+   * 
+   * @returns {T | undefined} The first matching row, or undefined if no match is found or if the body model is not AreaModelObjectArray.
+   * 
+   * @example
+   * // Find a user row by id and name
+   * const criteria = { id: 1, name: "John" };
+   * const user = tableApi.findRowFromAllRowsByAllCriteria(criteria, 
+   *   (criteria, row) => row.id === criteria.id && row.name === criteria.name
+   * );
+   * 
+   * @example
+   * // Find a product row with partial match on name
+   * const criteria = { name: "Phone" };
+   * const product = tableApi.findRowFromAllRowsByAllCriteria(criteria,
+   *   (criteria, row) => row.name.includes(criteria.name)
+   * );
+   * 
+   * @example
+   * // Find an order with complex matching logic
+   * const criteria = { total: 100, status: "pending" };
+   * const order = tableApi.findRowFromAllRowsByAllCriteria(criteria,
+   *   (criteria, row) => {
+   *     return row.total > criteria.total && 
+   *            row.status === criteria.status &&
+   *            row.items.length > 0;
+   *   }
+   * );
+   * 
+   * @throws {Warning} Logs a warning to console if the body model is not an instance of AreaModelObjectArray
+   */
+  findRowFromAllRowsByAllCriteria<T>(
+    criteria: Partial<T>,
+    predicate: (criteria: Partial<T>, row: T) => boolean): T | undefined {
+      const bodyModel = this.getBodyModel();
+      if (bodyModel instanceof AreaModelObjectArray){
+        const am = bodyModel as unknown as AreaModelObjectArray<T>;
+        return am.getAllRows().find(row => predicate(criteria, row));
+      } else {
+        console.warn('findRowFromAllRowsByAllCriteria(...) only works with AreaModelObjectArray<T>, but this body area model is ', (typeof bodyModel), bodyModel)
+      }
+    return undefined;
+  }
+
+  /**
    * Updates existing rows in the table body with new data.
    *
    * @template T - The type of elements in the rows array
