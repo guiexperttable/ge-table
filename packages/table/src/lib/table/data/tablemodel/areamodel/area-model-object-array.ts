@@ -35,13 +35,13 @@ export class AreaModelObjectArray<T>
     this.properties = columnDefs.map(def => def.property);
   }
 
-  private _focusedRowIndex: number = 0;
+  public _focusedRowIndex: number = 0;
 
-  get focusedRowIndex(): number {
+  getFocusedRowIndex(): number {
     return this._focusedRowIndex;
   }
 
-  set focusedRowIndex(value: number) {
+  setFocusedRowIndex(value: number) {
     this._focusedRowIndex = value;
   }
 
