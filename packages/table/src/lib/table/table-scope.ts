@@ -910,7 +910,7 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf, Even
       return true;
     }
     if (rowIndex > lastVisibleRowIndex) {
-      this.scrollToIndex(0, rowIndex - 2);
+      this.scrollToIndex(0, rowIndex + this.displayedRowCount - 3);
       return true;
     }
     return false;
