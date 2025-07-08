@@ -14,6 +14,8 @@ export class StarRatingCellRenderer<T> implements CellRendererIf {
   ) {
   }
 
+
+
   render(
     cellDiv: HTMLDivElement,
     rowIndex: number,

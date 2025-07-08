@@ -16,11 +16,11 @@ export class AreaModelObjectArray<T>
   extends AbstractAreaModel<T>
   implements ObjectArrayHolderIf<T> {
 
-  public focusedRowIndex: number = 0;
 
   protected readonly properties: string[];
   protected filteredRows: T[];
   protected sorterService: SorterService = new SorterService();
+
 
   constructor(
     public override areaIdent: AreaIdent,
@@ -33,6 +33,16 @@ export class AreaModelObjectArray<T>
     super(areaIdent, columnDefs, defaultRowHeight);
     this.filteredRows = [...rows];
     this.properties = columnDefs.map(def => def.property);
+  }
+
+  private _focusedRowIndex: number = 0;
+
+  get focusedRowIndex(): number {
+    return this._focusedRowIndex;
+  }
+
+  set focusedRowIndex(value: number) {
+    this._focusedRowIndex = value;
   }
 
   setRows(rows: T[]) {
@@ -66,7 +76,6 @@ export class AreaModelObjectArray<T>
     return '';
   }
 
-
   /**
    * Retrieves the filtered and sorted rows from the dataset.
    * These rows are used for rendering the table.
@@ -80,7 +89,6 @@ export class AreaModelObjectArray<T>
   getAllRows(): T[] {
     return this.rows;
   }
-
 
   /**
    * Returns the first row from the filtered rows that matches the given criteria based on the provided predicate function.
@@ -133,7 +141,11 @@ export class AreaModelObjectArray<T>
     return true;
   }
 
-  getValueByT(t: T, property: string):any {
+  override sort(compareFn: (a: T, b: T) => number): void {
+    this.filteredRows = this.filteredRows.sort(compareFn);
+  }
+
+  getValueByT(t: T, property: string): any {
     if (!t) return undefined;
     if (!property) return undefined;
 
@@ -156,7 +168,7 @@ export class AreaModelObjectArray<T>
     if (row.selected) {
       ret.push(this.selectedRowClass);
     }
-    if (this.focusedRowIndex === rowIndex) {
+    if (this._focusedRowIndex === rowIndex) {
       ret.push(this.focusedRowClass);
     }
     return ret;
@@ -179,7 +191,6 @@ export class AreaModelObjectArray<T>
       return this.sorterService.genericSortComparator(va, vb, f);
     };
   }
-
 
   private getPropertyValue(o: any, props: string[]): any {
     const prop = props.shift();

@@ -842,9 +842,84 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf, Even
     this.tableModel.doSort(sortItems);
   }
 
+  sort(compareFn: (a: any, b: any) => number) {
+    this.tableModel.sort(compareFn);
+  }
+
   getDisplayedRowCount() {
     return this.displayedRowCount;
   }
+
+
+  /**
+   * Ensures that a specific row is visible in the viewport by scrolling if necessary.
+   * This method checks if the target row is within the currently visible range and
+   * adjusts the scroll position if it's not visible.
+   *
+   * The method performs the following:
+   * 1. Checks if the row is above the current viewport (before first visible row)
+   * 2. Checks if the row is below the current viewport (after last visible row)
+   * 3. Scrolls to make the row visible if needed
+   *
+   * @param {number} rowIndex - The index of the row to make visible
+   * @returns {boolean} Returns true if scrolling was needed and performed, false if the row was already visible
+   *
+   * @example
+   * // Ensure row 5 is visible in the viewport
+   * tableScope.ensureRowIsVisible(5);
+   *
+   * @example
+   * // Example usage in a component
+   * class MyTableComponent {
+   *   private tableScope: TableScope;
+   *
+   *   scrollToSpecificRow(rowIndex: number) {
+   *     // This will scroll the row into view if it's not visible
+   *     const didScroll = this.tableScope.ensureRowIsVisible(rowIndex);
+   *
+   *     if (didScroll) {
+   *       console.log(`Table scrolled to show row ${rowIndex}`);
+   *     } else {
+   *       console.log(`Row ${rowIndex} was already visible`);
+   *     }
+   *   }
+   * }
+   *
+   * @example
+   * // Example with row selection
+   * class TableHandler {
+   *   selectAndShowRow(rowIndex: number) {
+   *     // First ensure the row is visible
+   *     this.tableScope.ensureRowIsVisible(rowIndex);
+   *
+   *     // Then perform selection
+   *     this.selectionModel.selectRow(rowIndex);
+   *   }
+   * }
+   *
+   * @throws {Error} Implicitly may throw if rowIndex is not a number or if required properties are undefined
+   *
+   * @see {@link scrollToIndex} - The underlying method used for scrolling
+   * @see {@link getDisplayedRowCount} - Related method for getting visible row count
+   */
+  ensureRowIsVisible(rowIndex:number):boolean {
+    const firstVisibleRowIndex = this.firstVisibleRowIndex;
+    const lastVisibleRowIndex = this.firstVisibleRowIndex + this.displayedRowCount -1;
+    if (rowIndex < firstVisibleRowIndex) {
+      this.scrollToIndex(0, rowIndex);
+      return true;
+    }
+    if (rowIndex > lastVisibleRowIndex) {
+      this.scrollToIndex(0, rowIndex - this.displayedRowCount + 1);
+      return true;
+    }
+    return false;
+  }
+
+  getFirstVisibleRowIndex(): number {
+    return this.firstVisibleRowIndex;
+  }
+
 }
 
 

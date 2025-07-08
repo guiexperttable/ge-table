@@ -188,5 +188,8 @@ export interface AreaModelIf {
    * @param sortItems
    */
   doSort(sortItems: SortItem[]): boolean;
+
+
+  sort(compareFn?: (a: any, b: any) => number):void;
 }
 

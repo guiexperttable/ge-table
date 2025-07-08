@@ -118,6 +118,10 @@ export abstract class AbstractAreaModel<T> implements AreaModelIf, HasDefaultRow
     return false;
   }
 
+  sort(_compareFn?: (a: any, b: any) => number):void {
+    // ignore
+  }
+
 
   isEditable(_rowIndex: number, columnIndex: number): boolean {
     const columnDef = this.columnDefs?.[columnIndex];

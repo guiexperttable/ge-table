@@ -429,6 +429,12 @@ export class TableModel implements TableModelIf {
     return this.getAreaModel("body").doSort(sortItems);
   }
 
+
+  sort(compareFn: (a: any, b: any) => number){
+    return this.getAreaModel("body").sort(compareFn);
+  }
+
+
   /**
    * Returns an array of ColumnDefIf objects or undefined.
    *

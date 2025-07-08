@@ -23,6 +23,10 @@ export class AreaModel implements AreaModelIf {
     return false;
   }
 
+  sort(_compareFn?: (a: any, b: any) => number):void {
+    // ignore
+  }
+
   externalFilterChanged<T>(_predictFn: FilterFunction<T>): void {
     // ignore
   }

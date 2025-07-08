@@ -18,6 +18,10 @@ export class AreaModelHidden implements AreaModelIf {
   ) {
   }
 
+  sort<T>(_compareFn?: (a: T, b: T) => number): void {
+    //
+  }
+
   getRowCount(): number {
     return 0;
   }

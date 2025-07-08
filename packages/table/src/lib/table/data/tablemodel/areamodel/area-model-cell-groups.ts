@@ -37,6 +37,10 @@ export class AreaModelCellGroups implements AreaModelIf {
     this.init();
   }
 
+  sort<T>(_compareFn?: (a: T, b: T) => number): void {
+      //
+  }
+
   init(){
     // console.info(this.groupExts);
     // console.info(this.getAllLeafs());

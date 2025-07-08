@@ -258,6 +258,8 @@ export interface TableModelIf {
    */
   doSort(sortItems: SortItem[]): boolean;
 
+  sort(compareFn: (a: any, b: any) => number): void;
+
   /**
    * Retrieves the selection model associated with the component.
    *

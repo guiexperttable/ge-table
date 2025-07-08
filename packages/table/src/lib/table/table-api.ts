@@ -661,6 +661,110 @@ export class TableApi {
   }
 
   /**
+   * Sorts the table data using a custom comparison function.
+   * 
+   * This method allows sorting of table rows by providing a custom comparison function. The comparison function
+   * should follow the standard JavaScript array sort comparator pattern, returning:
+   * - A negative number if the first element should be sorted before the second
+   * - A positive number if the first element should be sorted after the second
+   * - Zero if the elements are equal
+   * 
+   * @param compareFn - A function that defines the sort order. The function should accept two arguments
+   *                   and return a number indicating their relative order:
+   *                   - Negative number: first argument should come before second
+   *                   - Positive number: second argument should come before first
+   *                   - Zero: elements are equal
+   * 
+   * @example
+   * // Sort table rows by a specific property in ascending order
+   * table.api.sort((a, b) => {
+   *   if (a.name < b.name) return -1;
+   *   if (a.name > b.name) return 1;
+   *   return 0;
+   * });
+   * 
+   * @example
+   * // Sort numbers in descending order
+   * table.api.sort((a, b) => b.value - a.value);
+   * 
+   * @example
+   * // Sort with multiple criteria
+   * table.api.sort((a, b) => {
+   *   // First sort by status
+   *   const statusCompare = a.status.localeCompare(b.status);
+   *   if (statusCompare !== 0) return statusCompare;
+   *   
+   *   // Then sort by name if status is equal
+   *   return a.name.localeCompare(b.name);
+   * });
+   * 
+   * @example
+   * // Case-insensitive string sorting
+   * table.api.sort((a, b) => 
+   *   a.name.toLowerCase().localeCompare(b.name.toLowerCase())
+   * );
+   */
+  sort(compareFn: (a: any, b: any) => number): void {
+    this.tableScope.sort(compareFn);
+  }
+
+
+  /**
+   * Ensures that a specific row is visible in the viewport by scrolling if necessary.
+   * This method checks if the target row is within the currently visible range and
+   * adjusts the scroll position if it's not visible.
+   *
+   * The method performs the following:
+   * 1. Checks if the row is above the current viewport (before first visible row)
+   * 2. Checks if the row is below the current viewport (after last visible row)
+   * 3. Scrolls to make the row visible if needed
+   *
+   * @param {number} rowIndex - The index of the row to make visible
+   * @returns {boolean} Returns true if scrolling was needed and performed, false if the row was already visible
+   *
+   * @example
+   * // Ensure row 5 is visible in the viewport
+   * tableApi.ensureRowIsVisible(5);
+   *
+   * @example
+   * // Example usage in a component
+   * class MyTableComponent {
+   *   private tableApi: TableApi;
+   *
+   *   scrollToSpecificRow(rowIndex: number) {
+   *     // This will scroll the row into view if it's not visible
+   *     const didScroll = this.tableApi.ensureRowIsVisible(rowIndex);
+   *
+   *     if (didScroll) {
+   *       console.log(`Table scrolled to show row ${rowIndex}`);
+   *     } else {
+   *       console.log(`Row ${rowIndex} was already visible`);
+   *     }
+   *   }
+   * }
+   *
+   * @example
+   * // Example with row selection
+   * class TableHandler {
+   *   selectAndShowRow(rowIndex: number) {
+   *     // First ensure the row is visible
+   *     this.tableApi.ensureRowIsVisible(rowIndex);
+   *
+   *     // Then perform selection
+   *     this.selectionModel.selectRow(rowIndex);
+   *   }
+   * }
+   *
+   * @throws {Error} Implicitly may throw if rowIndex is not a number or if required properties are undefined
+   *
+   * @see {@link scrollToIndex} - The underlying method used for scrolling
+   * @see {@link getDisplayedRowCount} - Related method for getting visible row count
+   */
+  ensureRowIsVisible(rowIndex:number):boolean{
+    return this.tableScope.ensureRowIsVisible(rowIndex);
+  }
+
+  /**
    * Retrieves the number of rows currently displayed in the table.
    *
    * @description
@@ -672,4 +776,41 @@ export class TableApi {
   getDisplayedRowCount():number {
     return this.tableScope.getDisplayedRowCount();
   }
+
+
+  /**
+   * Returns the index of the first visible row in the table's viewport.
+   *
+   * This method retrieves the first visible row index from the table's scope, which is useful
+   * for virtual scrolling and viewport-related calculations. The index represents the topmost
+   * visible row in the current scroll position of the table.
+   *
+   * This value is maintained internally by the table and updated during scrolling operations.
+   * It's particularly important for:
+   * - Virtual scrolling optimization
+   * - Calculating visible range of rows
+   * - Viewport-related operations
+   * - Scroll position restoration
+   *
+   * @returns {number} The index of the first visible row in the table's viewport.
+   *                   Returns -1 if no rows are visible or if the table is not yet rendered.
+   *
+   * @example
+   * ```typescript
+   * // Get the first visible row index
+   * const tableApi = new TableApi(tableScope);
+   * const firstVisibleIndex = tableApi.getFirstVisibleRowIndex();
+   *
+   * // Use the index for scroll position calculations
+   * if (firstVisibleIndex >= 0) {
+   *   // Perform operations with the first visible row
+   *   console.log(`First visible row index: ${firstVisibleIndex}`);
+   * }
+   * ```
+   */
+  getFirstVisibleRowIndex(): number {
+    return this.tableScope.getFirstVisibleRowIndex();
+  }
+
+
 }
