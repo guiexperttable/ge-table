@@ -846,9 +846,7 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf, Even
     this.tableModel.sort(compareFn);
   }
 
-  getDisplayedRowCount() {
-    return this.displayedRowCount;
-  }
+
 
 
   /**
@@ -903,22 +901,21 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf, Even
    * @see {@link getDisplayedRowCount} - Related method for getting visible row count
    */
   ensureRowIsVisible(rowIndex:number):boolean {
-    const firstVisibleRowIndex = this.firstVisibleRowIndex;
-    const lastVisibleRowIndex = this.firstVisibleRowIndex + this.displayedRowCount -1;
+    const firstVisibleRowIndex = this.getFirstFullVisibleRowIndex();
+    const lastVisibleRowIndex = this.getLastFullVisibleRowIndex();
+
+    console.log('rowIndex: ', rowIndex + ', firstVisibleRowIndex: ' + firstVisibleRowIndex + ', lastVisibleRowIndex: ' + lastVisibleRowIndex); // TODO del
     if (rowIndex < firstVisibleRowIndex) {
-      this.scrollToIndex(0, rowIndex + 2);
+      this.scrollToIndex(0, rowIndex - 3);
       return true;
     }
-    if (rowIndex > lastVisibleRowIndex) {
-      this.scrollToIndex(0, rowIndex + this.displayedRowCount - 3);
-      return true;
-    }
+    // if (rowIndex > lastVisibleRowIndex) {
+    //   this.scrollToIndex(0, rowIndex - this.displayedRowCount + 1);
+    //   return true;
+    // }
     return false;
   }
 
-  getFirstVisibleRowIndex(): number {
-    return this.firstVisibleRowIndex;
-  }
 
 }
 

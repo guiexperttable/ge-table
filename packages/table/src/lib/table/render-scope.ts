@@ -61,14 +61,19 @@ interface ArgsRenderHeaderCellResizeHandle {
 }
 
 
-
-
 export class RenderScope extends EleScope {
+
+  public firstVisibleRowIndex = -1;
+  public lastVisibleRowIndex = -1;
+  public firstFullVisibleRowIndex = -1;
+  public lastFullVisibleRowIndex = -1;
+  public displayedRowCount = 0;
+
+  public pixelLimitForFullVisible = 5;
 
   protected dragging = false;
   protected editing = false;
   protected storedColumnWidths: number[] = [];
-
   protected storeScrollPosStateService?: StoreStateScrollPosService;
   protected getSelectionModel?: GetT<SelectionModelIf>;
   protected getFocusModel?: GetT<FocusModelIf>;
@@ -76,7 +81,6 @@ export class RenderScope extends EleScope {
   protected scrollViewportLeft = 0;
   protected scrollFactorY = 0;
   protected scrollFactorX = 0;
-
   protected readonly cleanupFunctions: {
     header: (RendererCleanupFnType)[],
     body: (RendererCleanupFnType)[],
@@ -87,10 +91,7 @@ export class RenderScope extends EleScope {
     footer: []
   };
   protected tree = false;
-
   protected colAndRowspanModels: AreaObjectMapType<ColAndRowspanModel> = new AreaObjectMap<ColAndRowspanModel>();
-  protected firstVisibleRowIndex = -1;
-
   protected draggingTargetColumnIndex = -1;
   protected mouseEvent?: GeMouseEvent;
 
@@ -237,13 +238,12 @@ export class RenderScope extends EleScope {
     let widthInPixel =
       (
         (!clientWidth || clientWidth > this.scrollViewport.offsetWidth)
-          && this.scrollViewport.offsetWidth > 100
+        && this.scrollViewport.offsetWidth > 100
       ) ? this.scrollViewport.offsetWidth : this.scrollViewport.clientWidth;
     this.tableModel.setParentWidth(widthInPixel);
     this.tableModel.init();
     this.repaintHard();
   }
-
 
 
   /**
@@ -392,6 +392,26 @@ export class RenderScope extends EleScope {
     }
   }
 
+  public getFirstVisibleRowIndex() {
+    return this.firstVisibleRowIndex;
+  }
+
+  public getLastVisibleRowIndex() {
+    return this.lastVisibleRowIndex;
+  }
+
+  public getFirstFullVisibleRowIndex() {
+    return this.firstFullVisibleRowIndex;
+  }
+
+  public getLastFullVisibleRowIndex() {
+    return this.lastFullVisibleRowIndex;
+  }
+
+  public getDisplayedRowCount() {
+    return this.displayedRowCount;
+  }
+
   /**
    * Stores the widths of all columns in the table.
    *
@@ -492,7 +512,6 @@ export class RenderScope extends EleScope {
     return '';
   }
 
-  public displayedRowCount = 0;
 
   /**
    * Adjusts the layout and positioning of the specified area in the table.
@@ -529,15 +548,25 @@ export class RenderScope extends EleScope {
     const fixedRightColumnCount = this.tableModel.getFixedRightColumnCount();
     const fixedLeftColumnCount = this.tableModel.getFixedLeftColumnCount();
 
+    this.firstVisibleRowIndex = -1;
+    this.firstFullVisibleRowIndex = -1;
+    this.lastVisibleRowIndex = -1;
+    this.lastFullVisibleRowIndex = -1;
+
     for (let index = 0; index < rowCount; index++) {
       const top = y;
       const lastRowOfModel = index === rowCount - 1;
       const height = this.tableModel.getRowHeight(areaIdent, index);
 
       if (top + height > 0) {
-        // It's not scrolled out on top:
-        // Visible!
-        this.firstVisibleRowIndex = index;
+
+        // It's not scrolled out on top. Visible!
+        if (areaIdent === 'body') {
+          if (this.firstVisibleRowIndex === -1) {
+            this.firstVisibleRowIndex = index;
+            this.firstFullVisibleRowIndex = top < -this.pixelLimitForFullVisible ? (this.firstVisibleRowIndex + 1) : this.firstVisibleRowIndex;
+          }
+        }
 
         // center -------------------------------------------
         let geo = { left, width, height, top, index };
@@ -615,14 +644,23 @@ export class RenderScope extends EleScope {
 
       }
       y = y + height;
-      // lastVisibleRowIndex = index;
+
       if (y > divHeight) {
-        if (areaIdent === 'body'){
-          this.displayedRowCount = this.firstVisibleRowIndex - index;
+        if (areaIdent === 'body') {
+          this.lastVisibleRowIndex = index;
+          this.lastFullVisibleRowIndex = ((divHeight - y) < -this.pixelLimitForFullVisible) ? index - 1 : index;
+          this.displayedRowCount = this.lastFullVisibleRowIndex - this.firstFullVisibleRowIndex + 1;
         }
         break;
       }
     } // for
+
+    if (areaIdent === 'body') {
+      console.log('render scope: this.firstVisibleRowIndex <- ' + this.firstVisibleRowIndex
+        + '\nrender scope: this.firstFullVisibleRowIndex <- ' + this.firstFullVisibleRowIndex
+        + '\nrender scope: this.lastVisibleRowIndex <- ' + this.lastVisibleRowIndex
+        + '\nrender scope: this.lastFullVisibleRowIndex <- ' + this.lastFullVisibleRowIndex); // TODO del
+    }
 
     // We draw the big colspan and rowspan cells at the end.
     // This fixes the 'half cutted big cell' problem:
@@ -1188,7 +1226,7 @@ export class RenderScope extends EleScope {
         this.dom.applyStyle(this.draggingColumn, {
           'background': 'rgba(128,128,128,0.2)',
           'display': 'block',
-          'overfllow': 'clip',
+          'overfllow': 'clip'
         });
         this.dom.applyStyleInPx(this.draggingColumn, geo);
         if (firstDraggingRendering) {
@@ -1209,8 +1247,8 @@ export class RenderScope extends EleScope {
    * @returns {number} The y-coordinate of the rendered content.
    */
   protected renderContentOfDraggingColumn(columnGeo: GeoData) {
-    const y = this. renderContentOfDraggingColumnForArea(columnGeo, 'header', 0);
-    this. renderContentOfDraggingColumnForArea(columnGeo, 'body', y);
+    const y = this.renderContentOfDraggingColumnForArea(columnGeo, 'header', 0);
+    this.renderContentOfDraggingColumnForArea(columnGeo, 'body', y);
     // we refrain from rendering the footer:
     // y = this. renderContentOfDraggingColumnForArea(columnGeo, 'footer', y);
   }
@@ -1239,7 +1277,7 @@ export class RenderScope extends EleScope {
       for (let rowIndex = 0; rowIndex < rowCount; rowIndex++) {
         const top = y;
         const height = areaModel.getRowHeight(rowIndex);
-        const geo = { left:0, width: columnGeo.width, height, top, index: rowIndex };
+        const geo = { left: 0, width: columnGeo.width, height, top, index: rowIndex };
         const val = areaModel.getValueAt(rowIndex, columnIndex);
         const cellRenderer = areaModel.getCellRenderer(rowIndex, columnIndex);
         const text = cellRenderer ? '' : `${val}`;

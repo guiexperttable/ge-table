@@ -812,5 +812,17 @@ export class TableApi {
     return this.tableScope.getFirstVisibleRowIndex();
   }
 
+  getFirstFullVisibleRowIndex(): number {
+    return this.tableScope.getFirstFullVisibleRowIndex();
+  }
+
+  getLastVisibleRowIndex(): number {
+    return this.tableScope.getLastVisibleRowIndex();
+  }
+
+  getLastFullVisibleRowIndex(): number {
+    return this.tableScope.getLastFullVisibleRowIndex();
+  }
+
 
 }
