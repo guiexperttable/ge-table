@@ -821,6 +821,7 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf, Even
   setColumnWidth(columnIndex: number, width: number): void{
     this.tableModel.setColumnWidth(columnIndex, width);
   }
+
   autoResizeColumns(recalcWrappers: boolean= true) {
     // Resize columns
     const columnWidthes = this.calcAutoColumnWidths();
@@ -903,16 +904,16 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf, Even
   ensureRowIsVisible(rowIndex:number):boolean {
     const firstVisibleRowIndex = this.getFirstFullVisibleRowIndex();
     const lastVisibleRowIndex = this.getLastFullVisibleRowIndex();
+    const displayedRowCount = this.getDisplayedRowCount();
 
-    console.log('rowIndex: ', rowIndex + ', firstVisibleRowIndex: ' + firstVisibleRowIndex + ', lastVisibleRowIndex: ' + lastVisibleRowIndex); // TODO del
     if (rowIndex < firstVisibleRowIndex) {
-      this.scrollToIndex(0, rowIndex - 3);
+      this.scrollToIndex(0, rowIndex);
       return true;
     }
-    // if (rowIndex > lastVisibleRowIndex) {
-    //   this.scrollToIndex(0, rowIndex - this.displayedRowCount + 1);
-    //   return true;
-    // }
+    if (rowIndex > lastVisibleRowIndex) {
+      this.scrollToIndex(0, rowIndex - displayedRowCount + 1);
+      return true;
+    }
     return false;
   }
 

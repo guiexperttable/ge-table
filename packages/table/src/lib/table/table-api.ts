@@ -824,5 +824,13 @@ export class TableApi {
     return this.tableScope.getLastFullVisibleRowIndex();
   }
 
+  setLoggingActive(active:boolean): void {
+    this.tableScope.loggingActive = active;
+  }
+
+  isLoggingActive(): boolean {
+    return this.tableScope.loggingActive;
+  }
+
 
 }

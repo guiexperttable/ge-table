@@ -45,9 +45,7 @@ const onTableReady = (api: TableApi) => {
 const numberChanged = () => {
   if (state.tableModel && tableApiRef.value && rowIndex.value >= 0) {
     console.info('ensureRowIsVisible  rowIndex:', rowIndex.value);
-    console.info('tableApi.ensureRowIsVisible:', tableApiRef.value.ensureRowIsVisible);
     tableApiRef.value.ensureRowIsVisible(rowIndex.value);
-    console.info('tableApi.ensureRowIsVisible done.');
   }
 };
 

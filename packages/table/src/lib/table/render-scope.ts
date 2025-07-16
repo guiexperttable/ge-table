@@ -70,6 +70,7 @@ export class RenderScope extends EleScope {
   public displayedRowCount = 0;
 
   public pixelLimitForFullVisible = 5;
+  public loggingActive = false;
 
   protected dragging = false;
   protected editing = false;
@@ -548,10 +549,13 @@ export class RenderScope extends EleScope {
     const fixedRightColumnCount = this.tableModel.getFixedRightColumnCount();
     const fixedLeftColumnCount = this.tableModel.getFixedLeftColumnCount();
 
-    this.firstVisibleRowIndex = -1;
-    this.firstFullVisibleRowIndex = -1;
-    this.lastVisibleRowIndex = -1;
-    this.lastFullVisibleRowIndex = -1;
+    if (areaIdent === 'body') {
+      this.firstVisibleRowIndex = -1;
+      this.firstFullVisibleRowIndex = -1;
+      this.lastVisibleRowIndex = -1;
+      this.lastFullVisibleRowIndex = -1;
+    }
+
 
     for (let index = 0; index < rowCount; index++) {
       const top = y;
@@ -655,7 +659,7 @@ export class RenderScope extends EleScope {
       }
     } // for
 
-    if (areaIdent === 'body') {
+    if (this.loggingActive && areaIdent === 'body') {
       console.log('render scope: this.firstVisibleRowIndex <- ' + this.firstVisibleRowIndex
         + '\nrender scope: this.firstFullVisibleRowIndex <- ' + this.firstFullVisibleRowIndex
         + '\nrender scope: this.lastVisibleRowIndex <- ' + this.lastVisibleRowIndex
