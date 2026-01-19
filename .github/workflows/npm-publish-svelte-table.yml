@@ -27,9 +27,9 @@ jobs:
       - run: pnpm install
 
       - name: Build package
-        run: pnpm --filter svelte-table build
+        run: pnpm --filter svelte-table... build
 
       - name: Publish package
-        run: pnpm --filter svelte-table npm-pub
+        run: pnpm -r --filter svelte-table publish --no-git-checks --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}

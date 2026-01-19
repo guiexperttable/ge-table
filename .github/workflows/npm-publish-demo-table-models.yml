@@ -27,9 +27,9 @@ jobs:
       - run: pnpm install
 
       - name: Build package
-        run: pnpm --filter demo-table-models build
+        run: pnpm --filter demo-table-models... build
 
       - name: Publish package
-        run: pnpm --filter demo-table-models npm-pub
+        run: pnpm -r --filter demo-table-models publish --no-git-checks --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}

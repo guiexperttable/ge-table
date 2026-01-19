@@ -27,9 +27,9 @@ jobs:
       - run: pnpm install
 
       - name: Build package
-        run: pnpm --filter table build
+        run: pnpm --filter table... build
 
       - name: Publish package
-        run: pnpm --filter table npm-pub
+        run: pnpm -r --filter table publish --no-git-checks --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
