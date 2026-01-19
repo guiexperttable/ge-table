@@ -16,21 +16,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v3
+      - uses: pnpm/action-setup@v4
         with:
           version: 9
 
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+          registry-url: 'https://registry.npmjs.org'
           cache: 'pnpm'
 
       - run: pnpm install
 
       - name: Build package
-        run: pnpm --filter demo-table-models... build
+        run: pnpm --filter @guiexpert/demo-table-models... build
 
       - name: Publish package
-        run: pnpm -r --filter demo-table-models publish --no-git-checks --access public
+        run: pnpm -r --filter @guiexpert/demo-table-models publish --no-git-checks --access public --registry https://registry.npmjs.org/
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
