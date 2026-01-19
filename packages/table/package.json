@@ -21,7 +21,9 @@
     "npm-pub": "pnpm publish --no-git-checks --access public"
   },
   "publishConfig": {
-    "directory": "dist"
+    "directory": "dist",
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "exports": {
     ".": {
