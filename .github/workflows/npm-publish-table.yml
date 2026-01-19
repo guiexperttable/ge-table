@@ -11,6 +11,8 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    env:
+      NODE_AUTH_TOKEN: ${{secrets.npm_token}}
     steps:
       - uses: actions/checkout@v4
 
@@ -31,5 +33,3 @@ jobs:
 
       - name: Publish package
         run: pnpm -r --filter table publish --no-git-checks --access public
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
