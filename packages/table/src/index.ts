@@ -30,6 +30,7 @@ export * from './lib/table/focus/event-focus-changed-listener.if';
 
 export * from './lib/table/factory/tree-factory';
 export * from './lib/table/factory/table-factory';
+export * from './lib/table/factory/cover-grid-factory';
 
 
 export * from './lib/table/action/action-id.type';
@@ -109,6 +110,7 @@ export * from './lib/table/data/tablemodel/padding';
 export * from './lib/table/data/tablemodel/table-model.if';
 export * from './lib/table/data/tablemodel/table-model';
 export * from './lib/table/data/tablemodel/area-ident.type';
+export * from './lib/table/data/tablemodel/cover-grid-table-model';
 
 export * from './lib/table/data/tablemodel/column/column-def';
 export * from './lib/table/data/tablemodel/column/column-def.if';
@@ -129,6 +131,7 @@ export * from './lib/table/data/tablemodel/areamodel/area-model-tree';
 export * from './lib/table/data/tablemodel/areamodel/col-and-rowspan-model';
 export * from './lib/table/data/tablemodel/areamodel/has-default-row-height-if';
 export * from './lib/table/data/tablemodel/areamodel/object-array-holder.if';
+export * from './lib/table/data/tablemodel/areamodel/cover-grid-body-model';
 
 export * from './lib/table/data/common/tree-row';
 export * from './lib/table/data/common/tree-row-if';
