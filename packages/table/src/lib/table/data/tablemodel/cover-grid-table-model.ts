@@ -35,8 +35,8 @@ export class CoverGridTableModel<T> implements TableModelIf {
     // ignore
   }
 
-  setParentWidth(_widthInPixel: number): void {
-    // ignore
+  setParentWidth(widthInPixel: number): void {
+    this.bodyModel.width = widthInPixel;
   }
 
   getColumnCount(): number {
@@ -101,8 +101,8 @@ export class CoverGridTableModel<T> implements TableModelIf {
     return this.bodyModel.coverWidth;
   }
 
-  setColumnWidth(_columnIndex: number, _width: number): void {
-    // ignore
+  setColumnWidth(_columnIndex: number, width: number): void {
+    this.bodyModel.coverWidth = width;
   }
 
   recalcSize(_clientWidth: number): void {

@@ -19,6 +19,7 @@
             <path value="file://$PROJECT_DIR$/apps/preact-table-demo/src" />
             <path value="file://$PROJECT_DIR$/libs/table/css" />
             <path value="file://$PROJECT_DIR$/apps/table-website/src" />
+            <path value="file://$PROJECT_DIR$/packages/table/src" />
           </resourceRoots>
         </entryData>
       </entry>

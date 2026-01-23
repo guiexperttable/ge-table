@@ -29,6 +29,9 @@ export class CoverGridBodyModel<T> implements AreaModelIf {
     this.filteredItems = items;
   }
 
+  setParentWidth(widthInPixel: number): void {
+    this.width = widthInPixel;
+  }
 
   getRowCount(): number {
     if (!this.filteredItems?.length) return 0;
@@ -117,7 +120,7 @@ export class CoverGridBodyModel<T> implements AreaModelIf {
   }
 
   isFilterable(): boolean {
-    return false;
+    return true;
   }
 
   doSort(sortItems: SortItem[]): boolean {
