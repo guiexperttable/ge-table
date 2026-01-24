@@ -2,7 +2,7 @@ import {
   EventListenerIf,
   FocusModelIf,
   GeModelChangeEvent,
-  GeMouseEvent, LicenseManager, SelectionModelIf,
+  GeMouseEvent, GeScrollEvent, LicenseManager, SelectionModelIf,
   SimpleDomService,
   TableApi,
   TableModelIf,
@@ -136,6 +136,10 @@ export function GuiexpertTable(
         if (mouseMoved) {
           mouseMoved(evt);
         }
+      },
+
+      onScroll(evt: GeScrollEvent) {
+        // ignored
       }
     };
 

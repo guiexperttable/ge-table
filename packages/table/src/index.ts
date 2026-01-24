@@ -77,6 +77,7 @@ export * from "./lib/table/data/common/args-adjust-columns-to-row-parent-params"
 
 export * from "./lib/table/data/common/event/ge-mouse-event";
 export * from "./lib/table/data/common/event/ge-model-change-event";
+export * from "./lib/table/data/common/event/ge-scroll-event";
 export * from "./lib/table/data/common/event/ge-cell-indices";
 export * from "./lib/table/data/common/event/ge-key-event";
 

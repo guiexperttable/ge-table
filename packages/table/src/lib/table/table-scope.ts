@@ -18,6 +18,7 @@ import { RenderScope } from './render-scope';
 import { SortItem } from './data/common/sort-item';
 import { InputHandler } from './input-handler';
 import { GeModelChangeEvent } from './data/common/event/ge-model-change-event';
+import { GeScrollEvent } from './data/common/event/ge-scroll-event';
 import { SelectionService } from './selection/selection-service';
 import { GeKeyEvent } from './data/common/event/ge-key-event';
 import { OnActionTriggeredIf } from './action/on-action-triggered.if';
@@ -552,6 +553,21 @@ export class TableScope extends RenderScope implements OnActionTriggeredIf, Even
     const bodyAreaModel = this.tableModel.getAreaModel('body');
     const py = bodyAreaModel.getYPosByRowIndex(indexY);
     this.scrollToPixel(0, py); // TODO calc indexX -> px
+  }
+
+  override adjustAfterScrolling() {
+    super.adjustAfterScrolling();
+    const viewport = this.scrollViewport;
+    this.eventListener.onScroll(new GeScrollEvent(
+      this.scrollTop,
+      this.scrollLeft,
+      viewport.scrollHeight,
+      viewport.scrollWidth,
+      viewport.clientHeight,
+      viewport.clientWidth,
+      this.scrollFactorY,
+      this.scrollFactorX,
+    ));
   }
 
   /**

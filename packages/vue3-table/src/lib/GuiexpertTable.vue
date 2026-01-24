@@ -15,7 +15,8 @@ import {
   SimpleDomService,
   TableOptions,
   TableScope,
-  TableModelIf, TableOptionsIf
+  TableModelIf, TableOptionsIf,
+  GeScrollEvent
 } from '@guiexpert/table';
 import { defineComponent, onMounted, PropType, ref } from 'vue';
 
@@ -51,7 +52,8 @@ export default defineComponent({
     "focusChanged",
     "selectionChanged",
     "mouseDraggingEnd",
-    "mouseMoved"
+    "mouseMoved",
+    "scroll"
   ],
 
   setup(props, { emit }) {
@@ -95,7 +97,11 @@ export default defineComponent({
 
         onMouseMoved: (evt: GeMouseEvent) => {
           emit("mouseMoved", evt);
-        }
+        },
+
+        onScroll: (evt: GeScrollEvent) => {
+          emit("scroll", evt);
+        },
       };
 
       const tableScope = new TableScope(

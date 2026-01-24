@@ -1,5 +1,6 @@
 import { GeMouseEvent } from "./data/common/event/ge-mouse-event";
 import { GeModelChangeEvent } from "./data/common/event/ge-model-change-event";
+import { GeScrollEvent } from "./data/common/event/ge-scroll-event";
 import { SelectionModelIf } from './selection/selection-model.if';
 import { FocusModelIf } from './focus/focus-model.if';
 import { EventFocusChangedListenerIf } from './focus/event-focus-changed-listener.if';
@@ -25,6 +26,8 @@ export interface EventListenerIf extends EventFocusChangedListenerIf, EventSelec
   onCheckboxChanged(evt: any[]): void;
 
   onModelChanged(evt: GeModelChangeEvent): void;
+
+  onScroll(evt: GeScrollEvent): void;
 
   onSelectionChanged(model: SelectionModelIf): void;
 

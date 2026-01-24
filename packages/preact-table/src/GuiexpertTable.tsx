@@ -2,7 +2,7 @@ import { Component, createRef } from "preact";
 import {
   EventListenerIf, FocusModelIf,
   GeModelChangeEvent,
-  GeMouseEvent, LicenseManager, SelectionModelIf,
+  GeMouseEvent, GeScrollEvent, LicenseManager, SelectionModelIf,
   SimpleDomService, TableApi,
   TableModelIf,
   TableOptions,
@@ -107,6 +107,10 @@ export class GuiexpertTable extends Component<GuiexpertTableProps>  {
       },
 
       onMouseMoved: (evt: GeMouseEvent) => {
+        // ignored
+      },
+
+      onScroll(evt: GeScrollEvent) {
         // ignored
       }
     };
