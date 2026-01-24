@@ -15,11 +15,12 @@ export type GeTableReadyEventFn = (evt: TableApi) => {};
 export type GeModelChangeEventFn = (evt: GeModelChangeEvent) => {};
 export type GeSelectionChangeEventFn = (evt: SelectionModelIf) => {};
 export type GeFocusChangeEventFn = (evt: FocusModelIf) => {};
-
+export type GeScrollEventFn = (evt: GeScrollEvent) => {};
 
 export interface GuiexpertTableProps {
   tableModel: TableModelIf,
   tableOptions?: TableOptions,
+  scroll?: GeScrollEventFn,
   mouseMoved?: GeMouseEventFn,
   contextmenu?: GeMouseEventFn,
   mouseClicked?: GeMouseEventFn,

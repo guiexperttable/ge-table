@@ -44,6 +44,10 @@
 
       onMouseMoved: (evt: any) => {
         dispatch('mouseMoved', evt);
+      },
+
+      onScroll: (evt: any) => {
+        dispatch('scroll', evt);
       }
     };
 

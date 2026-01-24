@@ -28,7 +28,7 @@ export class ExcelService implements ExcelServiceIf {
     try {
       const workbook = this.generateBuffer(matrix, author)
 
-      const blob = new Blob([workbook], {
+      const blob = new Blob([workbook as any], {
         type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
       });
 

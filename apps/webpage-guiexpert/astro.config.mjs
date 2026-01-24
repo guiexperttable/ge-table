@@ -1,6 +1,7 @@
 import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
 import astroExpressiveCode from 'astro-expressive-code';
+import icon from "astro-icon";
 
 /** @type {import('astro-expressive-code').AstroExpressiveCodeOptions} */
 import sitemap from "@astrojs/sitemap";
@@ -19,7 +20,8 @@ export default defineConfig({
   integrations: [
     tailwind(),
     astroExpressiveCode(astroExpressiveCodeOptions),
-    sitemap()
+    sitemap(),
+    icon()
   ],
   vite: {
     ssr: {

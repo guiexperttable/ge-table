@@ -1,7 +1,7 @@
 import {
   EventListenerIf, FocusModelIf,
   GeModelChangeEvent,
-  GeMouseEvent, LicenseManager, SelectionModelIf,
+  GeMouseEvent, GeScrollEvent, LicenseManager, SelectionModelIf,
   SimpleDomService,
   TableModelAndOptionsIf,
   TableScope
@@ -84,6 +84,11 @@ export class GuiexpertTable extends HTMLElement {
 
         onMouseMoved: (evt: GeMouseEvent) => {
           const e = new CustomEvent("mouseMoved", { detail: evt, bubbles: true });
+          ele.dispatchEvent(e);
+        },
+
+        onScroll: (evt: GeScrollEvent) => {
+          const e = new CustomEvent("scroll", { detail: evt, bubbles: true });
           ele.dispatchEvent(e);
         }
       };

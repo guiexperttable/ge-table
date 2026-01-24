@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 import ThemeSwitcher from "~/components/theme-switcher.astro";
 import type { NavItem } from "~/types";
 import Glogo from "./glogo.astro";
@@ -55,7 +55,7 @@ const navItems: Array<NavItem> = [
         class="btn sm:hidden"
         aria-label="Navigation"
       >
-        <Icon pack="mdi" name="menu" class="h-8" />
+        <Icon name="mdi:menu" class="h-8" />
       </button>
       <ThemeSwitcher />
     </div>
@@ -68,7 +68,7 @@ const navItems: Array<NavItem> = [
               type="button"
               class="btn"
               aria-label="Close navigation">
-              <Icon pack="mdi" name="close" class="h-8" />
+              <Icon name="mdi:close" class="h-8" />
             </button>
           </header>
           <div class="flex justify-center">
