@@ -1,6 +1,6 @@
 {
   "name": "@guiexpert/react-table",
-  "version": "18.1.83",
+  "version": "18.1.84",
   "type": "module",
   "main": "./index.js",
   "types": "./index.d.ts",
@@ -26,11 +26,11 @@
   },
   "dependencies": {
     "tslib": "^2.3.0",
-    "@guiexpert/table": "workspace:^",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "@guiexpert/table": "workspace:^"
   },
   "devDependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "@vitejs/plugin-react": "^4.1.1",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",

@@ -1,6 +1,6 @@
 {
   "name": "webcomponent-table-demo",
-  "version": "1.1.83",
+  "version": "1.1.84",
   "type": "commonjs",
   "main": "./index.js",
   "types": "./index.d.ts",
