@@ -64,19 +64,19 @@ importers:
         version: 5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)
       vite-plugin-babel:
         specifier: ^1.2.0
-        version: 1.4.1(@babel/core@7.28.6)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0))
+        version: 1.4.1(@babel/core@7.28.6)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0))
       vite-plugin-dts:
         specifier: ^3.7.2
-        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0))
+        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0))
       vite-plugin-eslint:
         specifier: ^1.8.1
-        version: 1.8.1(eslint@8.57.1)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0))
+        version: 1.8.1(eslint@8.57.1)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0))
       vite-plugin-static-copy:
         specifier: ^0.17.0
-        version: 0.17.1(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0))
+        version: 0.17.1(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0))
       vite-tsconfig-paths:
         specifier: ^4.2.1
-        version: 4.3.2(typescript@5.2.2)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0))
+        version: 4.3.2(typescript@5.2.2)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0))
 
   apps/react-table-demo:
     dependencies:
@@ -113,7 +113,7 @@ importers:
         version: 18.3.7(@types/react@18.3.27)
       '@vitejs/plugin-react':
         specifier: ^4.1.1
-        version: 4.7.0(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 4.7.0(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       react-test-renderer:
         specifier: ^18.2.0
         version: 18.3.1(react@18.2.0)
@@ -131,19 +131,19 @@ importers:
         version: 6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2)
       vite-plugin-babel:
         specifier: ^1.2.0
-        version: 1.4.1(@babel/core@7.28.6)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 1.4.1(@babel/core@7.28.6)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-dts:
         specifier: ^3.7.2
-        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-eslint:
         specifier: ^1.8.1
-        version: 1.8.1(eslint@8.57.1)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 1.8.1(eslint@8.57.1)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-static-copy:
         specifier: ^0.17.0
-        version: 0.17.1(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 0.17.1(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-tsconfig-paths:
         specifier: ^4.2.1
-        version: 4.3.2(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 4.3.2(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
 
   apps/solid-table-demo:
     dependencies:
@@ -183,22 +183,22 @@ importers:
         version: 5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)
       vite-plugin-babel:
         specifier: ^1.2.0
-        version: 1.4.1(@babel/core@7.28.6)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0))
+        version: 1.4.1(@babel/core@7.28.6)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0))
       vite-plugin-dts:
         specifier: ^3.7.2
-        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0))
+        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0))
       vite-plugin-eslint:
         specifier: ^1.8.1
-        version: 1.8.1(eslint@8.57.1)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0))
+        version: 1.8.1(eslint@8.57.1)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0))
       vite-plugin-solid:
         specifier: ^2.7.2
         version: 2.11.10(solid-js@1.9.4)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0))
       vite-plugin-static-copy:
         specifier: ^0.17.0
-        version: 0.17.1(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0))
+        version: 0.17.1(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0))
       vite-tsconfig-paths:
         specifier: ^4.2.1
-        version: 4.3.2(typescript@5.2.2)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0))
+        version: 4.3.2(typescript@5.2.2)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0))
 
   apps/svelte-table-demo:
     dependencies:
@@ -256,19 +256,19 @@ importers:
         version: 5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)
       vite-plugin-babel:
         specifier: ^1.2.0
-        version: 1.4.1(@babel/core@7.28.6)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0))
+        version: 1.4.1(@babel/core@7.28.6)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0))
       vite-plugin-dts:
         specifier: ^3.7.2
-        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0))
+        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0))
       vite-plugin-eslint:
         specifier: ^1.8.1
-        version: 1.8.1(eslint@8.57.1)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0))
+        version: 1.8.1(eslint@8.57.1)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0))
       vite-plugin-static-copy:
         specifier: ^0.17.0
-        version: 0.17.1(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0))
+        version: 0.17.1(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0))
       vite-tsconfig-paths:
         specifier: ^4.2.1
-        version: 4.3.2(typescript@5.2.2)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0))
+        version: 4.3.2(typescript@5.2.2)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0))
 
   apps/table-demo:
     dependencies:
@@ -299,19 +299,19 @@ importers:
         version: 6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2)
       vite-plugin-babel:
         specifier: ^1.2.0
-        version: 1.4.1(@babel/core@7.28.6)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 1.4.1(@babel/core@7.28.6)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-dts:
         specifier: ^3.7.2
-        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-eslint:
         specifier: ^1.8.1
-        version: 1.8.1(eslint@8.57.1)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 1.8.1(eslint@8.57.1)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-static-copy:
         specifier: ^0.17.0
-        version: 0.17.1(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 0.17.1(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-tsconfig-paths:
         specifier: ^4.2.1
-        version: 4.3.2(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 4.3.2(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
 
   apps/ts-todo-demo:
     dependencies:
@@ -485,19 +485,19 @@ importers:
         version: 6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2)
       vite-plugin-babel:
         specifier: ^1.2.0
-        version: 1.4.1(@babel/core@7.28.6)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 1.4.1(@babel/core@7.28.6)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-dts:
         specifier: ^3.7.2
-        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-eslint:
         specifier: ^1.8.1
-        version: 1.8.1(eslint@8.57.1)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 1.8.1(eslint@8.57.1)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-static-copy:
         specifier: ^0.17.0
-        version: 0.17.1(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 0.17.1(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-tsconfig-paths:
         specifier: ^4.2.1
-        version: 4.3.2(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 4.3.2(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vue-eslint-parser:
         specifier: ^9.1.0
         version: 9.4.3(eslint@8.57.1)
@@ -534,19 +534,19 @@ importers:
         version: 6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2)
       vite-plugin-babel:
         specifier: ^1.2.0
-        version: 1.4.1(@babel/core@7.28.6)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 1.4.1(@babel/core@7.28.6)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-dts:
         specifier: ^3.7.2
-        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-eslint:
         specifier: ^1.8.1
-        version: 1.8.1(eslint@8.57.1)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 1.8.1(eslint@8.57.1)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-static-copy:
         specifier: ^0.17.0
-        version: 0.17.1(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 0.17.1(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-tsconfig-paths:
         specifier: ^4.2.1
-        version: 4.3.2(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 4.3.2(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
 
   apps/webpage-guiexpert:
     dependencies:
@@ -656,19 +656,19 @@ importers:
         version: 6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2)
       vite-plugin-babel:
         specifier: ^1.2.0
-        version: 1.4.1(@babel/core@7.28.6)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 1.4.1(@babel/core@7.28.6)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-dts:
         specifier: ^3.7.2
-        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-eslint:
         specifier: ^1.8.1
-        version: 1.8.1(eslint@8.57.1)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 1.8.1(eslint@8.57.1)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-static-copy:
         specifier: ^0.17.0
-        version: 0.17.1(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 0.17.1(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-tsconfig-paths:
         specifier: ^4.2.1
-        version: 4.3.2(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 4.3.2(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
     publishDirectory: dist
 
   packages/preact-table:
@@ -676,9 +676,6 @@ importers:
       '@guiexpert/table':
         specifier: workspace:^
         version: link:../table/dist
-      preact:
-        specifier: ^10.19.4
-        version: 10.28.2
       tslib:
         specifier: ^2.3.0
         version: 2.8.1
@@ -690,14 +687,17 @@ importers:
         specifier: ^20.11.17
         version: 20.19.30
       '@types/react':
-        specifier: ^18.2.37
+        specifier: ^18.2.37 || ^19.0.0
         version: 18.3.27
       '@types/react-dom':
-        specifier: ^18.2.15
+        specifier: ^18.2.15 || ^19.0.0
         version: 18.3.7(@types/react@18.3.27)
       '@vitejs/plugin-react':
         specifier: ^4.1.1
-        version: 4.7.0(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 4.7.0(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
+      preact:
+        specifier: ^10.19.4
+        version: 10.28.2
       react-scripts-ts:
         specifier: ^3.1.0
         version: 3.1.0(babel-core@6.26.3)(babel-runtime@6.26.0)(eslint@8.57.1)(typescript@5.2.2)(vue-template-compiler@2.7.16)
@@ -715,19 +715,19 @@ importers:
         version: 6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2)
       vite-plugin-babel:
         specifier: ^1.2.0
-        version: 1.4.1(@babel/core@7.28.6)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 1.4.1(@babel/core@7.28.6)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-dts:
         specifier: ^3.7.2
-        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-eslint:
         specifier: ^1.8.1
-        version: 1.8.1(eslint@8.57.1)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 1.8.1(eslint@8.57.1)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-static-copy:
         specifier: ^0.17.0
-        version: 0.17.1(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 0.17.1(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-tsconfig-paths:
         specifier: ^4.2.1
-        version: 4.3.2(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 4.3.2(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
     publishDirectory: dist
 
   packages/react-table:
@@ -735,12 +735,6 @@ importers:
       '@guiexpert/table':
         specifier: workspace:^
         version: link:../table/dist
-      react:
-        specifier: 18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: 18.2.0
-        version: 18.2.0(react@18.2.0)
       tslib:
         specifier: ^2.3.0
         version: 2.8.1
@@ -752,14 +746,20 @@ importers:
         specifier: ^20.11.17
         version: 20.19.30
       '@types/react':
-        specifier: ^18.2.37
+        specifier: ^18.2.37 || ^19.0.0
         version: 18.3.27
       '@types/react-dom':
-        specifier: ^18.2.15
+        specifier: ^18.2.15 || ^19.0.0
         version: 18.3.7(@types/react@18.3.27)
       '@vitejs/plugin-react':
         specifier: ^4.1.1
-        version: 4.7.0(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 4.7.0(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
       react-test-renderer:
         specifier: ^18.2.0
         version: 18.3.1(react@18.2.0)
@@ -777,19 +777,19 @@ importers:
         version: 6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2)
       vite-plugin-babel:
         specifier: ^1.2.0
-        version: 1.4.1(@babel/core@7.28.6)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 1.4.1(@babel/core@7.28.6)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-dts:
         specifier: ^3.7.2
-        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-eslint:
         specifier: ^1.8.1
-        version: 1.8.1(eslint@8.57.1)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 1.8.1(eslint@8.57.1)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-static-copy:
         specifier: ^0.17.0
-        version: 0.17.1(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 0.17.1(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-tsconfig-paths:
         specifier: ^4.2.1
-        version: 4.3.2(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 4.3.2(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
     publishDirectory: dist
 
   packages/solid-table:
@@ -805,19 +805,19 @@ importers:
         specifier: ^20.11.17
         version: 20.19.30
       '@types/react':
-        specifier: ^18.2.37
+        specifier: ^18.2.37 || ^19.0.0
         version: 18.3.27
       '@types/react-dom':
-        specifier: ^18.2.15
+        specifier: ^18.2.15 || ^19.0.0
         version: 18.3.7(@types/react@18.3.27)
       '@vitejs/plugin-react':
         specifier: ^4.1.1
-        version: 4.7.0(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 4.7.0(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       solid-jest:
         specifier: ^0.2.0
         version: 0.2.0(@babel/core@7.28.6)(babel-preset-solid@1.9.10(@babel/core@7.28.6)(solid-js@1.9.4))
       solid-js:
-        specifier: 1.9.4
+        specifier: ^1.9.4
         version: 1.9.4
       ts-node:
         specifier: 10.9.1
@@ -833,22 +833,22 @@ importers:
         version: 6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2)
       vite-plugin-babel:
         specifier: ^1.2.0
-        version: 1.4.1(@babel/core@7.28.6)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 1.4.1(@babel/core@7.28.6)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-dts:
         specifier: ^3.7.2
-        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-eslint:
         specifier: ^1.8.1
-        version: 1.8.1(eslint@8.57.1)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 1.8.1(eslint@8.57.1)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-solid:
         specifier: ^2.7.2
         version: 2.11.10(solid-js@1.9.4)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-static-copy:
         specifier: ^0.17.0
-        version: 0.17.1(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 0.17.1(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-tsconfig-paths:
         specifier: ^4.2.1
-        version: 4.3.2(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 4.3.2(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
     publishDirectory: dist
 
   packages/svelte-table:
@@ -856,9 +856,6 @@ importers:
       '@guiexpert/table':
         specifier: workspace:^
         version: link:../table/dist
-      preact:
-        specifier: ^10.19.4
-        version: 10.28.2
       tslib:
         specifier: ^2.3.0
         version: 2.8.1
@@ -876,19 +873,19 @@ importers:
         specifier: ^20.11.17
         version: 20.19.30
       '@types/react':
-        specifier: ^18.2.37
+        specifier: ^18.2.37 || ^19.0.0
         version: 18.3.27
       '@types/react-dom':
-        specifier: ^18.2.15
+        specifier: ^18.2.15 || ^19.0.0
         version: 18.3.7(@types/react@18.3.27)
       '@vitejs/plugin-react':
         specifier: ^4.1.1
-        version: 4.7.0(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 4.7.0(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       eslint-plugin-svelte3:
         specifier: ^4.0.0
         version: 4.0.0(eslint@8.57.1)(svelte@4.2.19)
       svelte:
-        specifier: 4.2.19
+        specifier: ^4.2.19
         version: 4.2.19
       svelte-check:
         specifier: ^2.10.2
@@ -913,19 +910,19 @@ importers:
         version: 6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2)
       vite-plugin-babel:
         specifier: ^1.2.0
-        version: 1.4.1(@babel/core@7.28.6)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 1.4.1(@babel/core@7.28.6)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-dts:
         specifier: ^3.7.2
-        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-eslint:
         specifier: ^1.8.1
-        version: 1.8.1(eslint@8.57.1)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 1.8.1(eslint@8.57.1)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-static-copy:
         specifier: ^0.17.0
-        version: 0.17.1(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 0.17.1(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-tsconfig-paths:
         specifier: ^4.2.1
-        version: 4.3.2(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 4.3.2(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
     publishDirectory: dist
 
   packages/table:
@@ -960,19 +957,19 @@ importers:
         version: 6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2)
       vite-plugin-babel:
         specifier: ^1.2.0
-        version: 1.4.1(@babel/core@7.28.6)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 1.4.1(@babel/core@7.28.6)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-dts:
         specifier: ^3.7.2
-        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-eslint:
         specifier: ^1.8.1
-        version: 1.8.1(eslint@8.57.1)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 1.8.1(eslint@8.57.1)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-static-copy:
         specifier: ^0.17.0
-        version: 0.17.1(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 0.17.1(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-tsconfig-paths:
         specifier: ^4.2.1
-        version: 4.3.2(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 4.3.2(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
     publishDirectory: dist
 
   packages/vue3-table:
@@ -983,9 +980,6 @@ importers:
       tslib:
         specifier: ^2.3.0
         version: 2.8.1
-      vue:
-        specifier: ^3.2.47
-        version: 3.5.27(typescript@5.2.2)
       vue-i18n:
         specifier: 11.1.2
         version: 11.1.2(vue@3.5.27(typescript@5.2.2))
@@ -999,12 +993,15 @@ importers:
       '@intlify/eslint-plugin-vue-i18n':
         specifier: ^2.0.0
         version: 2.0.0(eslint@8.57.1)
-      '@types/node':
-        specifier: ^20.11.17
-        version: 20.19.30
+      '@types/react':
+        specifier: ^18.2.37 || ^19.0.0
+        version: 18.3.27
+      '@types/react-dom':
+        specifier: ^18.2.15 || ^19.0.0
+        version: 18.3.7(@types/react@18.3.27)
       '@vitejs/plugin-react':
         specifier: ^4.1.1
-        version: 4.7.0(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 4.7.0(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       '@vitejs/plugin-vue':
         specifier: ^4.4.1
         version: 4.6.2(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))(vue@3.5.27(typescript@5.2.2))
@@ -1034,19 +1031,22 @@ importers:
         version: 6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2)
       vite-plugin-babel:
         specifier: ^1.2.0
-        version: 1.4.1(@babel/core@7.28.6)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 1.4.1(@babel/core@7.28.6)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-dts:
         specifier: ^3.7.2
-        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-eslint:
         specifier: ^1.8.1
-        version: 1.8.1(eslint@8.57.1)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 1.8.1(eslint@8.57.1)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-static-copy:
         specifier: ^0.17.0
-        version: 0.17.1(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 0.17.1(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-tsconfig-paths:
         specifier: ^4.2.1
-        version: 4.3.2(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 4.3.2(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
+      vue:
+        specifier: ^3.2.47
+        version: 3.5.27(typescript@5.2.2)
       vue-eslint-parser:
         specifier: ^9.1.0
         version: 9.4.3(eslint@8.57.1)
@@ -1078,19 +1078,19 @@ importers:
         version: 6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2)
       vite-plugin-babel:
         specifier: ^1.2.0
-        version: 1.4.1(@babel/core@7.28.6)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 1.4.1(@babel/core@7.28.6)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-dts:
         specifier: ^3.7.2
-        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-eslint:
         specifier: ^1.8.1
-        version: 1.8.1(eslint@8.57.1)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 1.8.1(eslint@8.57.1)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-plugin-static-copy:
         specifier: ^0.17.0
-        version: 0.17.1(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 0.17.1(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
       vite-tsconfig-paths:
         specifier: ^4.2.1
-        version: 4.3.2(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
+        version: 4.3.2(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
     publishDirectory: dist
 
 packages:
@@ -11928,7 +11928,7 @@ snapshots:
   '@astrojs/telemetry@3.2.0':
     dependencies:
       ci-info: 4.3.1
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       dlv: 1.1.3
       dset: 3.1.4
       is-docker: 3.0.0
@@ -11972,7 +11972,7 @@ snapshots:
       '@babel/types': 7.28.6
       '@jridgewell/remapping': 2.3.5
       convert-source-map: 2.0.0
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       gensync: 1.0.0-beta.2
       json5: 2.2.3
       semver: 6.3.1
@@ -12032,7 +12032,7 @@ snapshots:
       '@babel/core': 7.28.6
       '@babel/helper-compilation-targets': 7.28.6
       '@babel/helper-plugin-utils': 7.28.6
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       lodash.debounce: 4.0.8
       resolve: 1.22.11
     transitivePeerDependencies:
@@ -12711,7 +12711,7 @@ snapshots:
       '@babel/parser': 7.28.6
       '@babel/template': 7.28.6
       '@babel/types': 7.28.6
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -13223,7 +13223,7 @@ snapshots:
   '@eslint/eslintrc@1.4.1':
     dependencies:
       ajv: 6.12.6
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       espree: 9.6.1
       globals: 13.24.0
       ignore: 5.3.2
@@ -13237,7 +13237,7 @@ snapshots:
   '@eslint/eslintrc@2.1.4':
     dependencies:
       ajv: 6.12.6
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       espree: 9.6.1
       globals: 13.24.0
       ignore: 5.3.2
@@ -13279,7 +13279,7 @@ snapshots:
   '@humanwhocodes/config-array@0.13.0':
     dependencies:
       '@humanwhocodes/object-schema': 2.0.3
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       minimatch: 3.1.2
     transitivePeerDependencies:
       - supports-color
@@ -13307,7 +13307,7 @@ snapshots:
       '@iconify/utils': 2.3.0
       cheerio: 1.2.0
       domhandler: 5.0.3
-      extract-zip: 2.0.1(supports-color@8.1.1)
+      extract-zip: 2.0.1
       local-pkg: 1.1.2
       pathe: 2.0.3
       svgo: 3.3.2
@@ -13322,7 +13322,7 @@ snapshots:
       '@antfu/install-pkg': 1.1.0
       '@antfu/utils': 8.1.1
       '@iconify/types': 2.0.0
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       globals: 15.15.0
       kolorist: 1.8.0
       local-pkg: 1.1.2
@@ -13429,7 +13429,7 @@ snapshots:
       '@eslint/eslintrc': 1.4.1
       '@intlify/core-base': 9.14.5
       '@intlify/message-compiler': 9.14.5
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       eslint: 8.57.1
       glob: 8.1.0
       ignore: 5.3.2
@@ -13670,7 +13670,7 @@ snapshots:
       '@prefresh/vite': 2.4.11(preact@10.28.2)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0))
       '@rollup/pluginutils': 4.2.1
       babel-plugin-transform-hook-names: 1.0.2(@babel/core@7.28.6)
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       picocolors: 1.1.1
       vite: 5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)
       vite-prerender-plugin: 0.5.12(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0))
@@ -13686,7 +13686,7 @@ snapshots:
       '@prefresh/vite': 2.4.11(preact@10.28.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
       '@rollup/pluginutils': 4.2.1
       babel-plugin-transform-hook-names: 1.0.2(@babel/core@7.28.6)
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       picocolors: 1.1.1
       vite: 6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2)
       vite-prerender-plugin: 0.5.12(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))
@@ -13989,7 +13989,7 @@ snapshots:
   '@sveltejs/vite-plugin-svelte-inspector@1.0.4(@sveltejs/vite-plugin-svelte@2.5.3(svelte@4.2.19)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)))(svelte@4.2.19)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0))':
     dependencies:
       '@sveltejs/vite-plugin-svelte': 2.5.3(svelte@4.2.19)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0))
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       svelte: 4.2.19
       vite: 5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)
     transitivePeerDependencies:
@@ -13998,7 +13998,7 @@ snapshots:
   '@sveltejs/vite-plugin-svelte-inspector@1.0.4(@sveltejs/vite-plugin-svelte@2.5.3(svelte@4.2.19)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2)))(svelte@4.2.19)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))':
     dependencies:
       '@sveltejs/vite-plugin-svelte': 2.5.3(svelte@4.2.19)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       svelte: 4.2.19
       vite: 6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2)
     transitivePeerDependencies:
@@ -14007,7 +14007,7 @@ snapshots:
   '@sveltejs/vite-plugin-svelte@2.5.3(svelte@4.2.19)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0))':
     dependencies:
       '@sveltejs/vite-plugin-svelte-inspector': 1.0.4(@sveltejs/vite-plugin-svelte@2.5.3(svelte@4.2.19)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)))(svelte@4.2.19)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0))
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       deepmerge: 4.3.1
       kleur: 4.1.5
       magic-string: 0.30.21
@@ -14021,7 +14021,7 @@ snapshots:
   '@sveltejs/vite-plugin-svelte@2.5.3(svelte@4.2.19)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))':
     dependencies:
       '@sveltejs/vite-plugin-svelte-inspector': 1.0.4(@sveltejs/vite-plugin-svelte@2.5.3(svelte@4.2.19)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2)))(svelte@4.2.19)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       deepmerge: 4.3.1
       kleur: 4.1.5
       magic-string: 0.30.21
@@ -14304,7 +14304,7 @@ snapshots:
       '@typescript-eslint/type-utils': 6.21.0(eslint@8.57.1)(typescript@5.2.2)
       '@typescript-eslint/utils': 6.21.0(eslint@8.57.1)(typescript@5.2.2)
       '@typescript-eslint/visitor-keys': 6.21.0
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       eslint: 8.57.1
       graphemer: 1.4.0
       ignore: 5.3.2
@@ -14333,7 +14333,7 @@ snapshots:
       '@typescript-eslint/types': 6.21.0
       '@typescript-eslint/typescript-estree': 6.21.0(typescript@5.2.2)
       '@typescript-eslint/visitor-keys': 6.21.0
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       eslint: 8.57.1
     optionalDependencies:
       typescript: 5.2.2
@@ -14349,7 +14349,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/typescript-estree': 6.21.0(typescript@5.2.2)
       '@typescript-eslint/utils': 6.21.0(eslint@8.57.1)(typescript@5.2.2)
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       eslint: 8.57.1
       ts-api-utils: 1.4.3(typescript@5.2.2)
     optionalDependencies:
@@ -14361,7 +14361,7 @@ snapshots:
 
   '@typescript-eslint/typescript-estree@2.34.0(typescript@5.2.2)':
     dependencies:
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       eslint-visitor-keys: 1.3.0
       glob: 7.2.3
       is-glob: 4.0.3
@@ -14377,7 +14377,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 6.21.0
       '@typescript-eslint/visitor-keys': 6.21.0
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.3
@@ -14421,7 +14421,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@vitejs/plugin-react@4.7.0(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2))':
+  '@vitejs/plugin-react@4.7.0(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2))':
     dependencies:
       '@babel/core': 7.28.6
       '@babel/plugin-transform-react-jsx-self': 7.27.1(@babel/core@7.28.6)
@@ -14960,7 +14960,7 @@ snapshots:
       common-ancestor-path: 1.0.1
       cookie: 0.7.2
       cssesc: 3.0.0
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       deterministic-object-hash: 2.0.2
       devalue: 5.6.2
       diff: 5.2.2
@@ -17772,7 +17772,7 @@ snapshots:
       ajv: 6.12.6
       chalk: 4.1.2
       cross-spawn: 7.0.6
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       doctrine: 3.0.0
       escape-string-regexp: 4.0.0
       eslint-scope: 7.2.2
@@ -18053,6 +18053,16 @@ snapshots:
       schema-utils: 0.3.0
       webpack: 3.8.1
       webpack-sources: 1.4.3
+
+  extract-zip@2.0.1:
+    dependencies:
+      debug: 4.4.3(supports-color@5.5.0)
+      get-stream: 5.2.0
+      yauzl: 2.10.0
+    optionalDependencies:
+      '@types/yauzl': 2.10.3
+    transitivePeerDependencies:
+      - supports-color
 
   extract-zip@2.0.1(supports-color@8.1.1):
     dependencies:
@@ -19452,7 +19462,7 @@ snapshots:
 
   istanbul-lib-source-maps@1.2.6:
     dependencies:
-      debug: 3.2.7(supports-color@8.1.1)
+      debug: 3.2.7(supports-color@5.5.0)
       istanbul-lib-coverage: 1.2.1
       mkdirp: 0.5.6
       rimraf: 2.7.1
@@ -20603,7 +20613,7 @@ snapshots:
   micromark@4.0.2:
     dependencies:
       '@types/debug': 4.1.12
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       decode-named-character-reference: 1.3.0
       devlop: 1.1.0
       micromark-core-commonmark: 2.0.3
@@ -24459,7 +24469,7 @@ snapshots:
       '@antfu/utils': 0.7.10
       '@rollup/pluginutils': 5.3.0(rollup@4.56.0)
       chokidar: 3.6.0
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       fast-glob: 3.3.3
       local-pkg: 0.4.3
       magic-string: 0.30.21
@@ -24614,7 +24624,7 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.3
 
-  vite-plugin-babel@1.4.1(@babel/core@7.28.6)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)):
+  vite-plugin-babel@1.4.1(@babel/core@7.28.6)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)):
     dependencies:
       '@babel/core': 7.28.6
       vite: 5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)
@@ -24624,17 +24634,17 @@ snapshots:
       '@babel/core': 7.28.6
       vite: 6.2.6(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2)
 
-  vite-plugin-babel@1.4.1(@babel/core@7.28.6)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2)):
+  vite-plugin-babel@1.4.1(@babel/core@7.28.6)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2)):
     dependencies:
       '@babel/core': 7.28.6
       vite: 6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2)
 
-  vite-plugin-dts@3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)):
+  vite-plugin-dts@3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)):
     dependencies:
       '@microsoft/api-extractor': 7.43.0(@types/node@20.19.30)
       '@rollup/pluginutils': 5.3.0(rollup@4.56.0)
       '@vue/language-core': 1.8.27(typescript@5.2.2)
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       kolorist: 1.8.0
       magic-string: 0.30.21
       typescript: 5.2.2
@@ -24651,7 +24661,7 @@ snapshots:
       '@microsoft/api-extractor': 7.43.0(@types/node@20.19.30)
       '@rollup/pluginutils': 5.3.0(rollup@4.56.0)
       '@vue/language-core': 1.8.27(typescript@5.2.2)
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       kolorist: 1.8.0
       magic-string: 0.30.21
       typescript: 5.2.2
@@ -24663,12 +24673,12 @@ snapshots:
       - rollup
       - supports-color
 
-  vite-plugin-dts@3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2)):
+  vite-plugin-dts@3.9.1(@types/node@20.19.30)(rollup@4.56.0)(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2)):
     dependencies:
       '@microsoft/api-extractor': 7.43.0(@types/node@20.19.30)
       '@rollup/pluginutils': 5.3.0(rollup@4.56.0)
       '@vue/language-core': 1.8.27(typescript@5.2.2)
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       kolorist: 1.8.0
       magic-string: 0.30.21
       typescript: 5.2.2
@@ -24680,7 +24690,7 @@ snapshots:
       - rollup
       - supports-color
 
-  vite-plugin-eslint@1.8.1(eslint@8.57.1)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)):
+  vite-plugin-eslint@1.8.1(eslint@8.57.1)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)):
     dependencies:
       '@rollup/pluginutils': 4.2.1
       '@types/eslint': 8.56.12
@@ -24696,7 +24706,7 @@ snapshots:
       rollup: 2.79.2
       vite: 6.2.6(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2)
 
-  vite-plugin-eslint@1.8.1(eslint@8.57.1)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2)):
+  vite-plugin-eslint@1.8.1(eslint@8.57.1)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2)):
     dependencies:
       '@rollup/pluginutils': 4.2.1
       '@types/eslint': 8.56.12
@@ -24730,7 +24740,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vite-plugin-static-copy@0.17.1(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)):
+  vite-plugin-static-copy@0.17.1(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)):
     dependencies:
       chokidar: 3.6.0
       fast-glob: 3.3.3
@@ -24746,7 +24756,7 @@ snapshots:
       picocolors: 1.1.1
       vite: 6.2.6(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2)
 
-  vite-plugin-static-copy@0.17.1(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2)):
+  vite-plugin-static-copy@0.17.1(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2)):
     dependencies:
       chokidar: 3.6.0
       fast-glob: 3.3.3
@@ -24774,9 +24784,9 @@ snapshots:
       stack-trace: 1.0.0-pre2
       vite: 6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2)
 
-  vite-tsconfig-paths@4.3.2(typescript@5.2.2)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)):
+  vite-tsconfig-paths@4.3.2(typescript@5.2.2)(vite@5.4.21(@types/node@20.19.30)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)):
     dependencies:
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       globrex: 0.1.2
       tsconfck: 3.1.6(typescript@5.2.2)
     optionalDependencies:
@@ -24787,7 +24797,7 @@ snapshots:
 
   vite-tsconfig-paths@4.3.2(typescript@5.2.2)(vite@6.2.6(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2)):
     dependencies:
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       globrex: 0.1.2
       tsconfck: 3.1.6(typescript@5.2.2)
     optionalDependencies:
@@ -24796,9 +24806,9 @@ snapshots:
       - supports-color
       - typescript
 
-  vite-tsconfig-paths@4.3.2(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(sugarss@4.0.1(postcss@8.5.6))(terser@5.46.0)(yaml@2.8.2)):
+  vite-tsconfig-paths@4.3.2(typescript@5.2.2)(vite@6.3.4(@types/node@20.19.30)(jiti@1.21.7)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.46.0)(yaml@2.8.2)):
     dependencies:
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       globrex: 0.1.2
       tsconfck: 3.1.6(typescript@5.2.2)
     optionalDependencies:
@@ -24900,7 +24910,7 @@ snapshots:
 
   vue-eslint-parser@8.3.0(eslint@8.57.1):
     dependencies:
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       eslint: 8.57.1
       eslint-scope: 7.2.2
       eslint-visitor-keys: 3.4.3
@@ -24913,7 +24923,7 @@ snapshots:
 
   vue-eslint-parser@9.4.3(eslint@8.57.1):
     dependencies:
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@5.5.0)
       eslint: 8.57.1
       eslint-scope: 7.2.2
       eslint-visitor-keys: 3.4.3

@@ -64,6 +64,12 @@ export class GuiexpertTable extends Component<GuiexpertTableProps>  {
         }
       },
 
+      onScroll(model: GeScrollEvent): void {
+        if (props.scroll) {
+          props.scroll(model);
+        }
+      },
+
       onFocusChanged(model: FocusModelIf): void{
         if (props.focusChanged) {
           props.focusChanged(model);
@@ -108,10 +114,6 @@ export class GuiexpertTable extends Component<GuiexpertTableProps>  {
       },
 
       onMouseMoved: (evt: GeMouseEvent) => {
-        // ignored
-      },
-
-      onScroll(evt: GeScrollEvent) {
         // ignored
       }
     };

@@ -2,7 +2,7 @@ import {GuiexpertTableProps} from "./GuiexpertTableProps";
 import {mergeProps, onMount} from "solid-js";
 import {
   EventListenerIf,
-  FocusModelIf,
+  FocusModelIf, GeScrollEvent,
   LicenseManager,
   SelectionModelIf,
   SimpleDomService,
@@ -32,6 +32,11 @@ export default (props: GuiexpertTableProps) => {
     const listener: EventListenerIf = {
       onSelectionChanged(model: SelectionModelIf): void {
         const e = new CustomEvent("selectionChanged", { detail: model, bubbles: true });
+        if (ref) ref.dispatchEvent(e);
+      },
+
+      onScroll(model: GeScrollEvent): void {
+        const e = new CustomEvent("scroll", { detail: model, bubbles: true });
         if (ref) ref.dispatchEvent(e);
       },
 

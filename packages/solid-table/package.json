@@ -28,11 +28,14 @@
     "tslib": "^2.3.0",
     "@guiexpert/table": "workspace:^"
   },
+  "peerDependencies": {
+    "solid-js": "^1.0.0"
+  },
   "devDependencies": {
+    "solid-js": "^1.9.4",
     "solid-jest": "^0.2.0",
-    "solid-js": "1.9.4",
-    "@types/react": "^18.2.37",
-    "@types/react-dom": "^18.2.15",
+    "@types/react": "^18.2.37 || ^19.0.0",
+    "@types/react-dom": "^18.2.15 || ^19.0.0",
     "@types/node": "^20.11.17",
     "vite": "6.3.4",
     "vite-plugin-dts": "^3.7.2",

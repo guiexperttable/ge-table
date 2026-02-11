@@ -26,14 +26,17 @@
   },
   "dependencies": {
     "tslib": "^2.3.0",
-    "@guiexpert/table": "workspace:^",
-    "preact": "^10.19.4"
+    "@guiexpert/table": "workspace:^"
+  },
+  "peerDependencies": {
+    "preact": "^10.0.0"
   },
   "devDependencies": {
+    "preact": "^10.19.4",
     "react-scripts-ts": "^3.1.0",
     "@preact/preset-vite": "^2.6.0",
-    "@types/react": "^18.2.37",
-    "@types/react-dom": "^18.2.15",
+    "@types/react": "^18.2.37 || ^19.0.0",
+    "@types/react-dom": "^18.2.15 || ^19.0.0",
     "@types/node": "^20.11.17",
     "vite": "6.3.4",
     "vite-plugin-dts": "^3.7.2",
