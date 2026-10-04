@@ -36,6 +36,10 @@ export default defineConfig({
           dest: './'
         },
         {
+          src: 'LICENSE',
+          dest: './'
+        },
+        {
           src: 'css/*.css',
           dest: './css/'
         }

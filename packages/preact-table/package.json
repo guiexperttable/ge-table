@@ -1,6 +1,8 @@
 {
   "name": "@guiexpert/preact-table",
   "version": "10.1.84",
+  "license": "MIT",
+  "author": "Dr. Marc Kronberg <info@gui.expert> (https://gui.expert)",
   "type": "module",
   "main": "./index.js",
   "types": "./index.d.ts",

@@ -1,6 +1,8 @@
 {
   "name": "@guiexpert/vue3-table",
-  "version": "3.1.84",
+  "version": "3.1.85",
+  "license": "MIT",
+  "author": "Dr. Marc Kronberg <info@gui.expert> (https://gui.expert)",
   "type": "commonjs",
   "main": "./index.js",
   "types": "./index.d.ts",

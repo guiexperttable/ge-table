@@ -34,6 +34,10 @@ export default defineConfig({
         {
           src: 'README.md',
           dest: './'
+        },
+        {
+          src: 'LICENSE',
+          dest: './'
         }
       ]
     })

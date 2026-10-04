@@ -1,6 +1,8 @@
 {
   "name": "@guiexpert/svelte-table",
-  "version": "4.1.84",
+  "version": "4.1.85",
+  "license": "MIT",
+  "author": "Dr. Marc Kronberg <info@gui.expert> (https://gui.expert)",
   "type": "module",
   "main": "./index.js",
   "types": "./index.d.ts",

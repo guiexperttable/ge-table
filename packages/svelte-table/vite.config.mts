@@ -26,6 +26,10 @@ export default defineConfig({
           dest: './'
         },
         {
+          src: 'LICENSE',
+          dest: './'
+        },
+        {
           src: 'package.json',
           dest: './'
         }

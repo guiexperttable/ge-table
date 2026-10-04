@@ -66,5 +66,5 @@
     "pub:webcomponent-table": "pnpm --filter webcomponent-table npm-pub"
   },
   "keywords": [],
-  "author": ""
+  "author": "Dr. Marc Kronberg <info@gui.expert> (https://gui.expert)"
 }
